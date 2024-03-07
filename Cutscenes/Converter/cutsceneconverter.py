@@ -85,6 +85,9 @@ text = re.sub(r'units.UnitsAlive.append.+\n', '\n', text)
 # recruit unit command
 text = re.sub(r'units.UnitsRecruited.append\(units.(\w+)\)', r'/recruit \1', text)
 
+# instant level up command
+text = re.sub(r'select\.InstantLevelUp\(units\.(\w+),(\d+)\)', r'/instantlevelup \1 \2', text)
+
 # save command (could be removed to just save after every battle since this just appears after each battle)
 # DISABLED figure it out in the code, these are placed too randomly across the cutscenes, just save after a battle is won...
 # text = text.replace('SaveData()', '/save')
@@ -111,7 +114,7 @@ text = re.sub(r'if Recruit(\w+) == True:', r'/if ChoiceSelected 0', text)
 text = re.sub(r'(if|elif) units\.(\w+) in units\.UnitsAlive:?( and CutsceneIndex.*+)?\n', r'/\1 IsAlive \2\n', text)
 
 # convert any preceding IsAlives
-text = re.sub(r'and units\.(\w+) in units\.UnitsAlive', r'and IsAlive \1')
+text = re.sub(r'units\.(\w+) in units\.UnitsAlive', r'IsAlive \1', text)
 
 # check if certain amount of units are alive
 # syntax: /if UnitsAliveGreater {number}
@@ -129,6 +132,10 @@ text = text.replace('else:', '/else')
 # remove all tab indents that may still be lying around from python
 text = re.sub(r'\t+', '', text)
 text = re.sub(r'\n\s+', '\n', text)
+
+text = text.replace('\nif', '\n/if')
+text = text.replace('\nelif', '\n/elif')
+
 
 # OPTIONAL
 # remove the q/w choice lines that are written as line2 & line3. /choice can handle this

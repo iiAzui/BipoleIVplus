@@ -43,7 +43,7 @@ Proton: We should get going.
 Proton: Everyone get prepared, we should
 be reaching Sine soon.
 ==
-if units.Quest in units.UnitsAlive and units.Romra in units.UnitsAlive:
+/if IsAlive Quest and IsAlive Romra:
 [Bonus Conversation Unlocked]
 =
 /else
@@ -148,7 +148,7 @@ that I would fall to the temptation of trying out
 it's powers.
 ==
 [Quest and Romra leveled up!]
-select.InstantLevelUp(units.Quest,1)
-select.InstantLevelUp(units.Romra,1)
+/instantlevelup Quest 1
+/instantlevelup Romra 1
 /startchapter Chapter 04
 =
