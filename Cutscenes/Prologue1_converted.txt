@@ -123,3 +123,4 @@ Scien: If so, I will accept that fate as punishment.
 {portrait_left:DeathPepper}
 Death Pepper: They got away, what a waste of resources...
 /startchapter Prologue2
+=

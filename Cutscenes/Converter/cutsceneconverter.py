@@ -26,12 +26,16 @@ text = re.sub(r'BattleStarted = \S+\n', '', text)
 text = re.sub(r'UnitsToPlace = placeunits\.(\S+)Enemies\n', r'/battle \1\n', text)
 
 # remove cutsceneindex if/elif branches without important conditions
-text = re.sub(r'(el)?if CutsceneIndex == \d+:\n', '', text)
+# replace these with a = or == based on tabs
+text = re.sub(r'\t+(el)?if CutsceneIndex == \d+:\n', '=\n', text)
+text = re.sub(r'    +(el)?if CutsceneIndex == \d+:\n', '=\n', text)
+
+text = re.sub(r'(el)?if CutsceneIndex == \d+:\n', '==\n', text)
 
 # turn onkey listener into just a '==' which will signify to the interpreter to wait for input before next dialogue/battle
 # HOWEVER if it has 2 or more tabs in fornt if it, it is within a cutscene-specific conditional branch. this is marked by just = which will not reset ifelse branches
-text = re.sub(r'        +\(screensetup.BattleScreen\).onkey\(Cutscene, "space"\)', '=', text)
-text = re.sub(r'\t\t+\(screensetup.BattleScreen\).onkey\(Cutscene, "space"\)', '=', text)
+text = re.sub(r'    +\(screensetup.BattleScreen\).onkey\(Cutscene, "space"\)', '=', text)
+text = re.sub(r'\t+\(screensetup.BattleScreen\).onkey\(Cutscene, "space"\)', '=', text)
 
 text = text.replace('(screensetup.BattleScreen).onkey(Cutscene, "space")', '==')
 
@@ -82,7 +86,7 @@ text = text.replace('SaveData()\n', '')
 
 # recruitment choice
 recruit_choice_regex = r'\(screensetup\.BattleScreen\)\.onkey\((\w+)RecruitYes, "q"\)\n\s*\(screensetup\.BattleScreen\)\.onkey\((\w+)RecruitNo, "w"\)'
-text = re.sub(recruit_choice_regex, r'/choice Recruit\1', text)
+text = re.sub(recruit_choice_regex, r'/recruitchoice \1', text)
 
 # chapter level set command
 text = re.sub(r'ChapterLevel = (\d+)', r'/chapterlevel \1', text)
@@ -122,6 +126,11 @@ text = re.sub(r'\[Recruit ([^\]]+)?\]\s*\n', '', text)
 
 # [(unit) has joined your party] - the recruit function can take care of this emssage, dont want to clutter up the cutscene file with logic that can be automated
 text = re.sub(r'\[(\w+) has joined your party\]\n', '', text)
+
+# make sure that there aren't two lines in a row with just equal signs, that would create a gap with no information  in one dialogue
+# this kind of thing might happen when conditional branches start/end/idrk
+text = re.sub(r'(=+\n)+==\n', '==\n', text)
+text = re.sub(r'(=\n)+=\n', '=\n', text)
 
 directory, filename = os.path.split(filepath)
 name, extension = os.path.splitext(filename)

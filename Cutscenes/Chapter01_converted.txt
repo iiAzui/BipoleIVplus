@@ -1,4 +1,5 @@
 /chapterlevel 2
+==
 /bgcolor black
 [Chapter 01]
 [Static Path, Territory of Static]
@@ -12,7 +13,8 @@ Scien: We'll need to defeat them to continue
 onwards.
 /battle Chapter1
 ==
-/elif isAlive Scien
+/elif IsAlive Scien
+=
 {portrait_left:Scien}
 Scien: We've defeated the enemy slimes.
 =
@@ -24,6 +26,7 @@ more ahead.
 /elif UnitsAliveGreater 1
 /startchapter Chapter 02
 /elif UnitsAliveEqual 1
+=
 {portrait_left:Proton}
 Proton: It seems that all of the others have
 somehow died.
@@ -56,7 +59,8 @@ print(CutsceneIndex, "= 10")
 /recruit TnemecalperIII
 /recruit TnemecalperIV
 =
-/elif isAlive TnemecalperI
+/elif IsAlive TnemecalperI
+=
 {portrait_left:Proton}
 Proton: Hey, wait a second...
 =

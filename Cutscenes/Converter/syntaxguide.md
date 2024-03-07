@@ -50,6 +50,13 @@ example: /battle Chapter1
 
 /startchapter {chapter name}
 THIS is what will swap to a new cutscene file. Remove any current branches, change cutscene to the one specified, and start interpreting at the top of that cutscene file at index 0.
+example: /startchapter Chapter 01
+
+/recruit {unitName}
+
+
+/choice RecruitRomra
+This is NOT an if branch but will probably always be used directly before one. Prompt the user with a choice on the screen
 
 ---------- INLINE COMMANDS ----------
 These commands should ideally be able to be put anywhere outside of a slash command line and be evaluated as soon as the cursor reaches it, in case the dialogue system is changed to one where the text is written typewriter-style character per character. Assuming the game becomes something like that, as soon as a { character is reached, immediately parse everything up until the } and evaluate the command.
