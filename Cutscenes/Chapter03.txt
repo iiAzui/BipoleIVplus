@@ -1,0 +1,189 @@
+ChapterLevel = 4
+if CutsceneIndex == 0:
+    SaveData()
+    screensetup.BattleScreen.bgcolor("black")
+    Text3("[Chapter 03]")
+    line2("[Cos Castle Town, Territory of Cos]")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 1:
+    screensetup.BattleScreen.bgcolor("grey")
+    Text1("Proton: We've arrived at the town...",units.Proton.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 2:
+    Text2("???: Wha' suuup?",units.Proton.Portrait,units.Lacirtcele.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 3:
+    Text2("???: It's me, Lacirtcele Sus of the Elemental",units.Proton.Portrait,units.Lacirtcele.Portrait)
+    line2("Offense Squad.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 4:
+    Text2("Lacirtcele: I heard y'all might need some help.",units.Proton.Portrait,units.Lacirtcele.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 5:
+    Text3("[Recruit Lacirtcele?]")
+    line2("(Q) Recruit")
+    line3("(W) Do not recruit")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(LacirtceleRecruitYes, "q")
+    (screensetup.BattleScreen).onkey(LacirtceleRecruitNo, "w")
+elif CutsceneIndex == 6:
+    if RecruitLacirtcele == True:
+        Text2("Lacirtcele: Like... poggers, bruh.",units.Proton.Portrait, units.Lacirtcele.Portrait)
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    else:
+        Text2("Lacirtcele: No problem man, see y'all later.",units.Proton.Portrait, units.Lacirtcele.Portrait)
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 7:
+    if RecruitLacirtcele == True:
+        Text3("[Lacirtcele has joined your party]")
+        units.UnitsAlive.append(units.Lacirtcele)
+        units.UnitsRecruited.append(units.Lacirtcele)
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    else:
+        CutsceneIndex += 1
+        Cutscene()
+elif CutsceneIndex == 8:
+    Text1("Proton: We should get going.",units.Proton.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 9:
+    screensetup.BattleScreen.bgcolor("green")
+    Text3("[The group continues onwards]")
+    CutsceneIndex += 1
+    UnitsToPlace = placeunits.Chapter3Enemies
+    UnitFormation = placeunits.Chapter3Placement
+    BattleStarted = False
+    (screensetup.BattleScreen).onkey(BattleStart, "space")
+elif CutsceneIndex == 10:
+    Text1("Proton: Everyone get prepared, we should",units.Proton.Portrait)
+    line2("be reaching Sine soon.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 11:
+    if units.Quest in units.UnitsAlive and units.Romra in units.UnitsAlive:
+        Text3("[Bonus Conversation Unlocked]")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    else:
+        CutsceneIndex = 0
+        Chapter = "Chapter 04"
+        Cutscene()
+elif CutsceneIndex == 12:
+    Text2("Romra: Hey.",units.Romra.Portrait,units.Quest.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 13:
+    Text2("Quest: Hello.",units.Romra.Portrait,units.Quest.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 14:
+    Text2("Romra: Can I ask you a question?",units.Romra.Portrait,units.Quest.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 15:
+    Text2("Quest: Already have, but go ahead.",units.Romra.Portrait,units.Quest.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 16:
+    Text2("Romra: What are you?",units.Romra.Portrait,units.Quest.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 17:
+    Text2("Quest: What do you mean?",units.Romra.Portrait,units.Quest.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 18:
+    Text2("Romra: I know that Scien is the head of the",units.Romra.Portrait,units.Quest.Portrait)
+    line2("Knights of Static and that Lacirtcele is a")
+    line3("member of the Elemental Offense Sqaud...")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 19:
+    Text2("Romra: ...and I was wondering if you had",units.Romra.Portrait,units.Quest.Portrait)
+    line2("a special rank, since you were requested")
+    line3("by the king himself.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 20:
+    Text2("Quest: Of course I do!",units.Romra.Portrait,units.Quest.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 21:
+    Text2("Quest: I am the High Mage of the Castle Static!",units.Romra.Portrait,units.Quest.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 22:
+    Text2("Quest: And I am also the Head of Artifact Research",units.Romra.Portrait,units.Quest.Portrait)
+    line2("in the Territory of Static!")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 23:
+    Text2("Quest: I doubt anyone in the land of Bipole knows",units.Romra.Portrait,units.Quest.Portrait)
+    line2("more about the Artifacts than I do!")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 24:
+    Text2("Romra: Artifacts?",units.Romra.Portrait,units.Quest.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 25:
+    Text2("Quest: Yes, most of the general population",units.Romra.Portrait,units.Quest.Portrait)
+    line2("knows not of their existence.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 26:
+    Text2("Quest: They are powerful relics created by the",units.Romra.Portrait,units.Quest.Portrait)
+    line2("Gods to guide us mortals.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 27:
+    Text2("Quest: Though we do not know where any of them",units.Romra.Portrait,units.Quest.Portrait)
+    line2("are now, they are hiding somewhere, waiting for")
+    line3("someone to rediscover them!")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space") 
+elif CutsceneIndex == 28:
+    Text2("Quest: Surely you've heard of the legends about",units.Romra.Portrait,units.Quest.Portrait)
+    line2("the Holy Itucher?")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 29:
+    Text2("Romra: I have.",units.Romra.Portrait,units.Quest.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 30:
+    Text2("Quest: According to my research, the Holy Itucher",units.Romra.Portrait,units.Quest.Portrait)
+    line2("exists, and it is located somewhere on this")
+    line3("continent!")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 31:
+    Text2("Romra: What would you do if you ever found it?",units.Romra.Portrait,units.Quest.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 32:
+    Text2("Quest: Of course, I would analyze it to it's fullest",units.Romra.Portrait,units.Quest.Portrait)
+    line2("extent.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 33:
+    Text2("Quest: Though I believe that it would be inevidable",units.Romra.Portrait,units.Quest.Portrait)
+    line2("that I would fall to the temptation of trying out")
+    line3("it's powers.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 34:
+    Text3("[Quest and Romra leveled up!]")
+    select.InstantLevelUp(units.Quest,1)
+    select.InstantLevelUp(units.Romra,1)
+    CutsceneIndex = 0
+    Chapter = "Chapter 04"
+    (screensetup.BattleScreen).onkey(Cutscene, "space")

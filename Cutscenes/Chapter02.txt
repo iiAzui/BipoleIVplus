@@ -1,0 +1,28 @@
+ChapterLevel = 3
+if CutsceneIndex == 0:
+    SaveData()
+    screensetup.BattleScreen.bgcolor("black")
+    Text3("[Chapter 02]")
+    line2("[Outer Static, Territory of Static]")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 1:
+    screensetup.BattleScreen.bgcolor("green")
+    Text1("Proton: There's some slimes up ahead, prepare", units.Proton.Portrait)
+    line2("for battle!")
+    CutsceneIndex += 1
+    UnitsToPlace = placeunits.Chapter2Enemies
+    UnitFormation = placeunits.Chapter2Placement
+    BattleStarted = False
+    (screensetup.BattleScreen).onkey(BattleStart, "space")
+elif CutsceneIndex == 2:
+    Text1("Proton: We'll be reaching the Territory of Cos soon.", units.Proton.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 3:
+    Text1("Proton: If we need reinforcements, there will be a", units.Proton.Portrait)
+    line2("member of the Elemental Offense Squad at a nearby")
+    line3("town.")
+    CutsceneIndex = 0
+    Chapter = "Chapter 03"
+    (screensetup.BattleScreen).onkey(Cutscene, "space")

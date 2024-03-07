@@ -1,4 +1,4 @@
-==
+
 ...
 /recruit Quest
 /recruit Scien
@@ -84,7 +84,7 @@ partake in this mission along side you.
 ==
 /recruitchoice Romra
 ==
-/if RecruitRomra
+/if ChoiceSelected 0
 {portrait_left:Romra} {portrait_right:Proton}
 Romra: Yes! Thank you!
 =
@@ -92,7 +92,7 @@ Romra: Yes! Thank you!
 {portrait_left:Romra} {portrait_right:Proton}
 Romra: Oh, sorry for bothering you.
 ==
-/if RecruitRomra
+/if ChoiceSelected 0
 /recruit Romra
 =
 /else

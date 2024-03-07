@@ -1,5 +1,4 @@
 /chapterlevel 2
-==
 /bgcolor black
 [Chapter 01]
 [Static Path, Territory of Static]

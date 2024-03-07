@@ -1,5 +1,11 @@
 # Converts a cutscene from Bipole IV python format to bipole IV+ text format.
 
+# note:
+# the input files should be at the lowest indent level for the inner code
+# meaning two indent levels should be taken off each line
+# this can quickly be done with selecting all and shift+tab in VSC
+# this is just so the originals are more readable
+
 import sys
 import re
 import os
@@ -30,7 +36,8 @@ text = re.sub(r'UnitsToPlace = placeunits\.(\S+)Enemies\n', r'/battle \1\n', tex
 text = re.sub(r'\t+(el)?if CutsceneIndex == \d+:\n', '=\n', text)
 text = re.sub(r'    +(el)?if CutsceneIndex == \d+:\n', '=\n', text)
 
-text = re.sub(r'(el)?if CutsceneIndex == \d+:\n', '==\n', text)
+text = re.sub(r'elif CutsceneIndex == \d+:\n', '==\n', text)
+text = re.sub(r'if CutsceneIndex == \d+:\n', '\n', text)
 
 # turn onkey listener into just a '==' which will signify to the interpreter to wait for input before next dialogue/battle
 # HOWEVER if it has 2 or more tabs in fornt if it, it is within a cutscene-specific conditional branch. this is marked by just = which will not reset ifelse branches
@@ -91,15 +98,20 @@ text = re.sub(recruit_choice_regex, r'/recruitchoice \1', text)
 # chapter level set command
 text = re.sub(r'ChapterLevel = (\d+)', r'/chapterlevel \1', text)
 
-# reformat if statements just a little so theyre easier to interpret
-# in the game's cutscene interpreter there should be string flags that are set and read from for the current cutscene, or a similar system
-text = re.sub(r'if (\w+) == True:', r'/if \1', text)
+# For recruitment checks, these should always be right after a /recruitchoice command.. so just check the result.
+text = re.sub(r'if Recruit(\w+) == True:', r'/if ChoiceSelected 0', text)
+
+# for any other unexpected flags. gonna keep this dsiabled for now idk why i even wrote this.
+# text = re.sub(r'if (\w+) == True:', r'/if \1', text)
 
 # check if unit is alive
 # Will check for a flag called (unit)Alive to decide between true or false branch. This should be set and checked in the cutscene interpreter
 # ex. to check if Scien is alive, would be /if IsAlive Scien
 # (ignore cutsceneIndex checks)
 text = re.sub(r'(if|elif) units\.(\w+) in units\.UnitsAlive:?( and CutsceneIndex.*+)?\n', r'/\1 IsAlive \2\n', text)
+
+# convert any preceding IsAlives
+text = re.sub(r'and units\.(\w+) in units\.UnitsAlive', r'and IsAlive \1')
 
 # check if certain amount of units are alive
 # syntax: /if UnitsAliveGreater {number}

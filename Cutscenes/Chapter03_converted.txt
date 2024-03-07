@@ -1,0 +1,154 @@
+/chapterlevel 4
+/bgcolor black
+[Chapter 03]
+[Cos Castle Town, Territory of Cos]
+==
+/bgcolor grey
+{portrait_left:Proton}
+Proton: We've arrived at the town...
+==
+{portrait_left:Proton} {portrait_right:Lacirtcele}
+???: Wha' suuup?
+==
+{portrait_left:Proton} {portrait_right:Lacirtcele}
+???: It's me, Lacirtcele Sus of the Elemental
+Offense Squad.
+==
+{portrait_left:Proton} {portrait_right:Lacirtcele}
+Lacirtcele: I heard y'all might need some help.
+==
+/recruitchoice Lacirtcele
+==
+/if ChoiceSelected 0
+{portrait_left:Proton} {portrait_right:Lacirtcele}
+Lacirtcele: Like... poggers, bruh.
+=
+/else
+{portrait_left:Proton} {portrait_right:Lacirtcele}
+Lacirtcele: No problem man, see y'all later.
+==
+/if ChoiceSelected 0
+/recruit Lacirtcele
+=
+/else
+==
+{portrait_left:Proton}
+Proton: We should get going.
+==
+/bgcolor green
+[The group continues onwards]
+/battle Chapter3
+==
+{portrait_left:Proton}
+Proton: Everyone get prepared, we should
+be reaching Sine soon.
+==
+if units.Quest in units.UnitsAlive and units.Romra in units.UnitsAlive:
+[Bonus Conversation Unlocked]
+=
+/else
+/startchapter Chapter 04
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Romra: Hey.
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: Hello.
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Romra: Can I ask you a question?
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: Already have, but go ahead.
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Romra: What are you?
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: What do you mean?
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Romra: I know that Scien is the head of the
+Knights of Static and that Lacirtcele is a
+member of the Elemental Offense Sqaud...
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Romra: ...and I was wondering if you had
+a special rank, since you were requested
+by the king himself.
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: Of course I do!
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: I am the High Mage of the Castle Static!
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: And I am also the Head of Artifact Research
+in the Territory of Static!
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: I doubt anyone in the land of Bipole knows
+more about the Artifacts than I do!
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Romra: Artifacts?
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: Yes, most of the general population
+knows not of their existence.
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: They are powerful relics created by the
+Gods to guide us mortals.
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: Though we do not know where any of them
+are now, they are hiding somewhere, waiting for
+someone to rediscover them!
+= 
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: Surely you've heard of the legends about
+the Holy Itucher?
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Romra: I have.
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: According to my research, the Holy Itucher
+exists, and it is located somewhere on this
+continent!
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Romra: What would you do if you ever found it?
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: Of course, I would analyze it to it's fullest
+extent.
+==
+{portrait_left:Romra} {portrait_right:Quest}
+Quest: Though I believe that it would be inevidable
+that I would fall to the temptation of trying out
+it's powers.
+==
+[Quest and Romra leveled up!]
+select.InstantLevelUp(units.Quest,1)
+select.InstantLevelUp(units.Romra,1)
+/startchapter Chapter 04
+=

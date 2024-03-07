@@ -1,0 +1,20 @@
+/chapterlevel 3
+/bgcolor black
+[Chapter 02]
+[Outer Static, Territory of Static]
+==
+/bgcolor green
+{portrait_left:Proton}
+Proton: There's some slimes up ahead, prepare
+for battle!
+/battle Chapter2
+==
+{portrait_left:Proton}
+Proton: We'll be reaching the Territory of Cos soon.
+==
+{portrait_left:Proton}
+Proton: If we need reinforcements, there will be a
+member of the Elemental Offense Squad at a nearby
+town.
+/startchapter Chapter 03
+=

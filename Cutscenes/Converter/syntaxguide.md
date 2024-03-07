@@ -4,6 +4,7 @@ contains what each token should do
 ---------- GENERAL ----------
 =
 Wait for user input before moving to the next dialogue.
+(only do a wait for input after this if not currently within an ignored branch section)
 
 ==
 Same as ==, but also close any opened ifelse branches.
@@ -23,6 +24,12 @@ NOTE: this will show up even when there is not an if statement before it!! just 
 Only interpret below if previous if statement was not true. Inner code will only be ended by a. Equivalent to /elif True if that makes it easier to implement with less keywords.
 
 ---------- CONDITIONS ----------
+These conditions will appear after an /if or /elif statement.
+ALSO: something like this might showup: /if IsAlive Romra and IsAlive Scien
+make sure that in some way, check to see if there is an additional 'and' after all the arguments of a condition.
+if so, also check to see if the condition after the and is true as well.
+as far as I know, I havent seen any or operations yet. hopefully it stays that way..
+
 UnitsAliveGreater {number}
 If player has more than N units alive in their party, and false if equal or less.
 example: /elif UnitsAliveGreater 1
@@ -33,6 +40,12 @@ If player has exactly N units alive in the party.
 IsAlive {unitName}
 If the unit with the given name is alive in the party.
 example: /elif IsAlive Scien
+
+ChoiceSelected {index}
+If, on the last choice prompt, the player responded with choice index N.
+0 = Q ("Recruit" on most prompts)
+1 = W ("Do not recruit" on most prompts)
+2 = E? I think the only choice with a third option is the Fael/Erif/Neither choice.
 
 ---------- COMMANDS ----------
 If a line starts with a slash /, it contains a command, likely with some preceding arguments. Parse and evaluate this command immediately, and then move onto the next line.
@@ -53,10 +66,18 @@ THIS is what will swap to a new cutscene file. Remove any current branches, chan
 example: /startchapter Chapter 01
 
 /recruit {unitName}
+add the unit with the given name to the party as an alive unit.
+example: /recruit Romra - will add romra to the party.
 
-
-/choice RecruitRomra
-This is NOT an if branch but will probably always be used directly before one. Prompt the user with a choice on the screen
+/recruitchoice {unitName}
+This is NOT an if branch but will probably always be used directly before one. 
+In the original code, these 3 lines are repeated before each recruitment:
+"[Recruit {unitName}?]"
+"(Q) Recruit"
+"(W) Do not recruit"
+You may choose to follow this format or use a different format. I just made to so not all those lines are repeated for every recriutment so you may handle it as you with within the interpreter.
+Also, when this choice happens, when the next = or == is reached, listen for Q or W instead of space before moving on, or whatever the inputs are in the new project.
+After the player selects, store an internal integer for the choice they selected: 0 for Q/recruited, 1 for W/no recruited. This variable will be used by other instructions so make sure to store it somewhere outside the parse line loop.
 
 ---------- INLINE COMMANDS ----------
 These commands should ideally be able to be put anywhere outside of a slash command line and be evaluated as soon as the cursor reaches it, in case the dialogue system is changed to one where the text is written typewriter-style character per character. Assuming the game becomes something like that, as soon as a { character is reached, immediately parse everything up until the } and evaluate the command.
