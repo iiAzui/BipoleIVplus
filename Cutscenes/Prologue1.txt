@@ -1,0 +1,163 @@
+if CutsceneIndex == 0:
+            screensetup.BattleScreen.bgcolor("black")
+            Text3("[Year 1279 AN]")
+            line2("[Shadow Realm Research Center]")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 1:
+            Text1("Death Pepper: Scien!",units.DeathPepper.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 2:
+            turtle.register_shape(current_directory+"/Portraits/scien_big2.gif")
+            Text2("Scien: Yes?",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 3:
+            Text2("Death Pepper: Has the second protype awakened it's Xuir Arts yet?",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 4:
+            Text2("Scien: Not yet, sir.",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 5:
+            Text2("Death Pepper: Then it's likely another failure.",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 6:
+            Text2("Death Pepper: Prepare the new extraction room, I might as well get some",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            line2("life energy from this.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 7:
+            Text2("Death Pepper: And who knows, the torture might awaken one of it's arts.",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 8:
+            Text2("Scien: Sir...",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 9:
+            Text2("Scien: Sir... I will not.",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 10:
+            Text2("Death Pepper: You dare defy my orders?",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 11:
+            Text2("Scien: I've worked at this research center for the past seven years,",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            line2("but I can no longer handle this suffering.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 12:
+            Text2("Scien: I will likely die, but atleast this will reduce the suffering",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            line2("of others.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 13:
+            Text2("Death Pepper: ...",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 14:
+            Text2("Death Pepper: I've suspected that you'd betray me.",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 15:
+            Text2("Death Pepper: Don't think that I haven't noticed that the Forbidden",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            line2("Ritual you had given was fake.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 16:
+            Text2("Scien: You attempted the Forbidden Ritual of Nation!?",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 17:
+            Text2("Death Pepper: The only reason you're still alive is because of your",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            line2("of your efficiency, though it seems that you'll no longer")
+            line3("cooperate with us.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 18:
+            Text2("Death Pepper: It's a shame that I'll have to kill you now, the only",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            line2("other person that could replace you is Break, and let's say that I'm")
+            line3("not his biggest fan.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 19:
+            Text2("Scien: ...",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 20:
+            Text2("Scien: It's been eight painful years since you destroyed my town for",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            line2("the Forbidden Ritual...")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 21:
+            Text2("Scien: For these eight years, I've lacked the courage to stop the",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            line2("pain, to not continue to work with you...")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 22:
+            Text2("Scien: I should have done this earlier, but it is something I can",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            line2("no longer live with.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 23:
+            Text2("Scien: Though it will not make up for my past actions, I will do",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            line2("everything I can to save even one soul from this place.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 24:
+            Text2("(Scien grabs a young child)",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 25:
+            Text2("Death Pepper: What do you think you're doing!?",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 26:
+            Text2("Scien: If he stays here, he will die in three days when the",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            line2("extraction finishes. With this, he will have a chance of")
+            line3("surival.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 27:
+            Text2("(Scien activates a device)",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 28:
+            Text2("Death Pepper: BREAK! DEACTIVATE THE DEVICE!", units.DeathPepper.Portrait, current_directory+"/Portraits/scien_big2.gif")#units.DeathPepper.Portrait,units.Break.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 29:
+            Text2("Break: The device seems to be malfunctioning...", units.DeathPepper.Portrait, units.Break.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 30:
+            Text2("Death Pepper: Wait, does that mean...", units.DeathPepper.Portrait, units.Break.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 31:
+            Text2("Death Pepper: You fool! There's no way you'll survive with", units.DeathPepper.Portrait, units.Break.Portrait)
+            line2("a broken teleporter! Who knows where it'll take you.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 32:
+            Text2("Death Pepper: You'll probably starve in the middle of the ocean.", units.DeathPepper.Portrait, units.Break.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 33:
+            Text2("Scien: If so, I will accept that fate as punishment.",units.DeathPepper.Portrait,current_directory+"/Portraits/scien_big2.gif")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 34:
+            Text1("(The teleporter activates and Scien disappears with the child)",units.DeathPepper.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 35:
+            Text1("Death Pepper: They got away, what a waste of resources...",units.DeathPepper.Portrait)
+            CutsceneIndex = 0
+            Chapter = "Prologue2"
+            (screensetup.BattleScreen).onkey(Cutscene, "space")

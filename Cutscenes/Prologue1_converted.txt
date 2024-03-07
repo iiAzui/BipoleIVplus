@@ -1,0 +1,125 @@
+==
+/bgcolor black
+[Year 1279 AN]
+[Shadow Realm Research Center]
+==
+{portrait_left:DeathPepper}
+Death Pepper: Scien!
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: Yes?
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Death Pepper: Has the second protype awakened it's Xuir Arts yet?
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: Not yet, sir.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Death Pepper: Then it's likely another failure.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Death Pepper: Prepare the new extraction room, I might as well get some
+life energy from this.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Death Pepper: And who knows, the torture might awaken one of it's arts.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: Sir...
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: Sir... I will not.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Death Pepper: You dare defy my orders?
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: I've worked at this research center for the past seven years,
+but I can no longer handle this suffering.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: I will likely die, but atleast this will reduce the suffering
+of others.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Death Pepper: ...
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Death Pepper: I've suspected that you'd betray me.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Death Pepper: Don't think that I haven't noticed that the Forbidden
+Ritual you had given was fake.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: You attempted the Forbidden Ritual of Nation!?
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Death Pepper: The only reason you're still alive is because of your
+of your efficiency, though it seems that you'll no longer
+cooperate with us.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Death Pepper: It's a shame that I'll have to kill you now, the only
+other person that could replace you is Break, and let's say that I'm
+not his biggest fan.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: ...
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: It's been eight painful years since you destroyed my town for
+the Forbidden Ritual...
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: For these eight years, I've lacked the courage to stop the
+pain, to not continue to work with you...
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: I should have done this earlier, but it is something I can
+no longer live with.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: Though it will not make up for my past actions, I will do
+everything I can to save even one soul from this place.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+(Scien grabs a young child)
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Death Pepper: What do you think you're doing!?
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: If he stays here, he will die in three days when the
+extraction finishes. With this, he will have a chance of
+surival.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+(Scien activates a device)
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Death Pepper: BREAK! DEACTIVATE THE DEVICE!#units.DeathPepper.Portrait,units.Break.Portrait)
+==
+{portrait_left:DeathPepper} {portrait_right:Break}
+Break: The device seems to be malfunctioning...
+==
+{portrait_left:DeathPepper} {portrait_right:Break}
+Death Pepper: Wait, does that mean...
+==
+{portrait_left:DeathPepper} {portrait_right:Break}
+Death Pepper: You fool! There's no way you'll survive with
+a broken teleporter! Who knows where it'll take you.
+==
+{portrait_left:DeathPepper} {portrait_right:Break}
+Death Pepper: You'll probably starve in the middle of the ocean.
+==
+{portrait_left:DeathPepper} {portrait_right:scien_big2}
+Scien: If so, I will accept that fate as punishment.
+==
+{portrait_left:DeathPepper}
+(The teleporter activates and Scien disappears with the child)
+==
+{portrait_left:DeathPepper}
+Death Pepper: They got away, what a waste of resources...
+/startchapter Prologue2
