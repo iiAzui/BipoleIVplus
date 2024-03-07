@@ -1,0 +1,178 @@
+/chapterlevel 8
+/bgcolor black
+[Chapter 06]
+[Outer Static, Territory of Static]
+==
+/bgcolor dark green
+{portrait_left:Proton}
+Proton: It's getting dark, we'll stop by at
+nearby town soon.
+==
+/bgcolor dim grey
+[Outer Town, Territory of Static]
+==
+(The streets are full of people, shouting and
+moving chaotically)
+==
+{portrait_left:Proton}
+Proton: I did not expect the town to be so busy
+this late at night...
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+???: Hey, you just get here?
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+Proton: Yes, we have just arrived.
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+???: Then you probably haven't heard the news
+yet, have you?
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+Proton: News?
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+???: The Holy Itucher has been discovered at
+the Nation of Altar.
+=
+/if IsAlive Quest
+{portrait_left:Quest} {portrait_right:Bladen}
+Quest: The Holy Itucher!?
+=
+{portrait_left:Quest} {portrait_right:Bladen}
+Quest: You mean to tell me that an artifact
+was discovered while I was away on this mission!?
+=
+/else
+{portrait_left:Proton} {portrait_right:Bladen}
+Proton: The artifact of power?
+=
+{portrait_left:Proton} {portrait_right:Bladen}
+???: Yep, the artifact of power.
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+???: You all know the legends, right?
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+???: 'bout how the \"worthy one to wield the
+Holy Itucher will be granted the power of the
+Dimensionals\"?
+=
+/if IsAlive Quest
+{portrait_left:Quest} {portrait_right:Bladen}
+Quest: Of course I do, I'm the Head of Artifact
+Research in the Territory of Static!
+=
+/else
+{portrait_left:Proton} {portrait_right:Bladen}
+Proton: I have heard of such legends.
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+???: As you can tell, everyone in town is rushing
+to head to the Nation of Altar.
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+Proton: What about you?
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+???: I'm on my way to the Nation of Altar
+myself.
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+???: My cousin works there at the temple, so
+I'll know the way there better than the others.
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+???: I can help you guys get there if you
+have the gold, you know?
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+Proton: You'll do that and miss out on getting
+it for yourself?
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+???: Me? The chosen one? Don't make me laugh.
+==
+{portrait_left:Proton} {portrait_right:Bladen}
+???: If I'm not getting the power I might as
+well get some money.
+=
+/if IsAlive Quest
+{portrait_left:Proton} {portrait_right:Quest}
+Quest: Hiring him or not, we should head there
+immediately. Who knows what could happen if the
+Itucher got into the wrong hands.
+=
+/else
+{portrait_left:Proton}
+Proton: (Hiring him or not, we should head there
+immediately. Who knows what could happen if the
+Itucher got into the wrong hands...)
+==
+/recruitchoice Bladen
+==
+/if ChoiceSelected 0
+{portrait_left:Proton} {portrait_right:Bladen}
+???: You've made the right choice. My name's
+Bladen, by the way.
+=
+/else
+{portrait_left:Proton} {portrait_right:Bladen}
+???: Alright then, good luck getting to
+Altar.
+==
+/if ChoiceSelected 0
+/recruit Bladen
+==
+/bgcolor dark green
+{portrait_left:Proton}
+Proton: Even though it's nightime, will need to head
+to Altar immediately.
+==
+{portrait_left:Proton}
+Proton: The world will be in danger if the Holy Itucher
+is used for evil.
+/battle Chapter6
+/startbattlenextinput
+==
+/if IsAlive TnemecalperIV
+[Bonus Conversation Unlocked]
+=
+/else
+/startchapter Chapter 07
+==
+{portrait_left:Proton} {portrait_right:TnemecalperIV}
+Proton: Greetings.
+==
+{portrait_left:Proton} {portrait_right:TnemecalperIV}
+Tnemecalper IV: ...
+==
+{portrait_left:Proton} {portrait_right:TnemecalperIV}
+Proton: ...
+==
+{portrait_left:Proton} {portrait_right:TnemecalperIV}
+Tnemecalper IV: ...
+==
+{portrait_left:Proton} {portrait_right:TnemecalperIV}
+Tnemecalper IV: 360[N/A]SCOPE
+==
+{portrait_left:Proton} {portrait_right:TnemecalperIV}
+Tnemecalper IV: :pogchamp
+==
+{portrait_left:Proton} {portrait_right:TnemecalperIV}
+Proton: Okay I'm not doing this.
+==
+{portrait_left:TnemecalperIV}
+(Proton walks away)
+==
+{portrait_left:TnemecalperIV}
+Tnemecalper IV: ...
+==
+{portrait_left:TnemecalperIV}
+Tnemecalper IV: gg no re
+==
+[Proton and Tnemecalper IV leveled up!]
+/instantlevelup Proton 1
+/instantlevelup TnemecalperIV 1
+/startchapter Chapter 07
+=

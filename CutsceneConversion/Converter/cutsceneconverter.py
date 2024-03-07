@@ -79,10 +79,10 @@ text = re.sub(r'Text2\(\"(.*)\",\s*units.([^.]*).Portrait,\s*current_directory\+
               r'{portrait_left:\2} {portrait_right:\3}\n\1', text)
 
 # text3: no portraits, just top line
-text = re.sub(r'Text3\(\"([^"]*)\"\)', r'\1', text)
+text = re.sub(r'Text3\(\"(.*)\"\)', r'\1', text)
 
 # line2 & line 3 just convert to strings that will appear under the first line which is always Text1/2/3
-text = re.sub(r'line[23]\(\"([^"]*)\"\)', r'\1', text)
+text = re.sub(r'line[23]\(\"(.*)\"\)', r'\1', text)
 
 # ==== COMMANDS ====
 # set color command - sets bg color, may need to be integrated with godot a little better idk
