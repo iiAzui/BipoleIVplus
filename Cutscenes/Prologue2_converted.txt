@@ -1,0 +1,100 @@
+==
+...
+/recruit Quest
+/recruit Scien
+==
+[1298 AN, 19 years later]
+[Static Castle, The Territories of Bipole]
+==
+/bgcolor gray
+???: *knock* *knock* *knock*
+==
+???: Who is it?
+==
+{portrait_left:Proton}
+???: Greeetings, Quest.
+==
+{portrait_left:Proton}
+Proton: I am Proton Xurr of the Knights of Static.
+==
+{portrait_left:Proton} {portrait_right:Quest}
+Quest: Ah, the Nolavillian Knight.
+==
+{portrait_left:Proton} {portrait_right:Quest}
+Proton: Xuir, actually.
+==
+{portrait_left:Proton} {portrait_right:Quest}
+Quest: My apologies.
+==
+{portrait_left:Proton} {portrait_right:Quest}
+Quest: Anyway, why are you here?
+==
+{portrait_left:Proton} {portrait_right:Quest}
+Proton: There is a large band of bandits, known as the
+Guild of Retool, who have threatened the allied territory
+of Sine with an attack.
+==
+{portrait_left:Proton} {portrait_right:Quest}
+Proton: The King has request us, as well as the head of the
+knights, Sir Scien, to assist Sine against the forces.
+==
+{portrait_left:Proton} {portrait_right:Quest}
+Quest: I would decline, but I suppose this is an order
+from the King.
+==
+{portrait_left:Proton} {portrait_right:Quest}
+Quest: *sigh*
+==
+{portrait_left:Proton} {portrait_right:Quest}
+Quest: I'll meet you at the front gates in an hour,
+is that alright?
+==
+{portrait_left:Proton} {portrait_right:Quest}
+Proton: Yes, we will await you there.
+==
+/bgcolor black
+[1 hour later...]
+==
+/bgcolor green
+{portrait_left:Proton} {portrait_right:Quest}
+Proton: So you finally arrive...
+==
+{portrait_left:Proton} {portrait_right:Quest}
+Proton: Shall we get going?
+==
+{portrait_left:Proton} {portrait_right:Quest}
+Quest: Actually, there's this knight who has
+offered to aid us...
+==
+{portrait_left:Romra} {portrait_right:Proton}
+???: Hello, I'm Romra!
+==
+{portrait_left:Romra} {portrait_right:Proton}
+Romra: I'm a newly certified knight, and I wish
+to one day join the Static Elemental Offense
+Squad.
+==
+{portrait_left:Romra} {portrait_right:Proton}
+Romra: Of course, I'll need all of the training
+I can get to do so.
+==
+{portrait_left:Romra} {portrait_right:Proton}
+Romra: If you would allow it, I would like to
+partake in this mission along side you.
+==
+/choice RecruitRomra
+==
+/if RecruitRomra:
+{portrait_left:Romra} {portrait_right:Proton}
+Romra: Yes! Thank you!
+/else
+{portrait_left:Romra} {portrait_right:Proton}
+Romra: Oh, sorry for bothering you.
+==
+/if RecruitRomra:
+/recruit Romra
+/else
+==
+{portrait_left:Scien} {portrait_right:Proton}
+Scien: Let's get going.
+/startchapter Chapter 01

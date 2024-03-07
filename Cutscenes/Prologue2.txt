@@ -1,0 +1,146 @@
+if CutsceneIndex == 0:
+            Text3("...")
+            units.UnitsAlive.append(units.Proton)
+            units.UnitsAlive.append(units.Quest)
+            units.UnitsRecruited.append(units.Quest)
+            units.UnitsAlive.append(units.Scien)
+            units.UnitsRecruited.append(units.Scien)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 1:
+            Text3("[1298 AN, 19 years later]")
+            line2("[Static Castle, The Territories of Bipole]")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 2:
+            screensetup.BattleScreen.bgcolor("gray")
+            Text3("???: *knock* *knock* *knock*")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 3:
+            Text3("???: Who is it?")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 4:
+            Text1("???: Greeetings, Quest.",units.Proton.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 5:
+            Text1("Proton: I am Proton Xurr of the Knights of Static.",units.Proton.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 6:
+            Text2("Quest: Ah, the Nolavillian Knight.",units.Proton.Portrait, units.Quest.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 7:
+            Text2("Proton: Xuir, actually.",units.Proton.Portrait, units.Quest.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 8:
+            Text2("Quest: My apologies.",units.Proton.Portrait, units.Quest.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 9:
+            Text2("Quest: Anyway, why are you here?",units.Proton.Portrait, units.Quest.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 10:
+            Text2("Proton: There is a large band of bandits, known as the", units.Proton.Portrait, units.Quest.Portrait)
+            line2("Guild of Retool, who have threatened the allied territory")
+            line3("of Sine with an attack.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 11:
+            Text2("Proton: The King has request us, as well as the head of the",units.Proton.Portrait, units.Quest.Portrait)
+            line2("knights, Sir Scien, to assist Sine against the forces.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 12:
+            Text2("Quest: I would decline, but I suppose this is an order",units.Proton.Portrait, units.Quest.Portrait)
+            line2("from the King.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 13:
+            Text2("Quest: *sigh*",units.Proton.Portrait, units.Quest.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 14:
+            Text2("Quest: I'll meet you at the front gates in an hour,",units.Proton.Portrait, units.Quest.Portrait)
+            line2("is that alright?")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 15:
+            Text2("Proton: Yes, we will await you there.",units.Proton.Portrait, units.Quest.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 16:
+            screensetup.BattleScreen.bgcolor("black")
+            Text3("[1 hour later...]")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 17:
+            screensetup.BattleScreen.bgcolor("green")
+            Text2("Proton: So you finally arrive...",units.Proton.Portrait, units.Quest.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 18:
+            Text2("Proton: Shall we get going?",units.Proton.Portrait, units.Quest.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 19:
+            Text2("Quest: Actually, there's this knight who has",units.Proton.Portrait, units.Quest.Portrait)
+            line2("offered to aid us...")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 20:
+            Text2("???: Hello, I'm Romra!",units.Romra.Portrait, units.Proton.Portrait)
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 21:
+            Text2("Romra: I'm a newly certified knight, and I wish",units.Romra.Portrait, units.Proton.Portrait)
+            line2("to one day join the Static Elemental Offense")
+            line3("Squad.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 22:
+            Text2("Romra: Of course, I'll need all of the training",units.Romra.Portrait, units.Proton.Portrait)
+            line2("I can get to do so.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 23:
+            Text2("Romra: If you would allow it, I would like to",units.Romra.Portrait, units.Proton.Portrait)
+            line2("partake in this mission along side you.")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 24:
+            Text3("[Recruit Romra?]")
+            line2("(Q) Recruit")
+            line3("(W) Do not recruit")
+            CutsceneIndex += 1
+            (screensetup.BattleScreen).onkey(RomraRecruitYes, "q")
+            (screensetup.BattleScreen).onkey(RomraRecruitNo, "w")
+        elif CutsceneIndex == 25:
+            if RecruitRomra == True:
+                Text2("Romra: Yes! Thank you!",units.Romra.Portrait, units.Proton.Portrait)
+                CutsceneIndex += 1
+                (screensetup.BattleScreen).onkey(Cutscene, "space")
+            else:
+                Text2("Romra: Oh, sorry for bothering you.",units.Romra.Portrait, units.Proton.Portrait)
+                CutsceneIndex += 1
+                (screensetup.BattleScreen).onkey(Cutscene, "space")
+        elif CutsceneIndex == 26:
+            if RecruitRomra == True:
+                Text3("[Romra has joined your party]")
+                units.UnitsAlive.append(units.Romra)
+                units.UnitsRecruited.append(units.Romra)
+                CutsceneIndex += 1
+                (screensetup.BattleScreen).onkey(Cutscene, "space")
+            else:
+                CutsceneIndex += 1
+                Cutscene()
+        elif CutsceneIndex == 27:
+            Text2("Scien: Let's get going.",units.Scien.Portrait, units.Proton.Portrait)
+            CutsceneIndex = 0
+            Chapter = "Chapter 01"
+            (screensetup.BattleScreen).onkey(Cutscene, "space")
