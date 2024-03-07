@@ -64,15 +64,21 @@ Sets the current chapter level variable. (If there is some sort of chapter objec
 /enablebattlecontrol
 Used when a cutscnee happens during the setup of a battle, like in Ch. 4. When this is called, the cutscene should stop running for now and let the player play out the battle. Once the battle is done, resume playing the cutscene at the the index under this command.
 
+/instantlevelup {unitName} {levels}
+Instantly add N levels to the given unit. Called after bonus conversations typically
+
+/jump {line}
+Jump to the given line index in the current cutscene and parse from there.
+
 /hidedialogue
 Hides the dialogue box, BUT the cutscene system will keep running. Mainly used for when a cutscene happens during a battle and units are being placed but no dialogue is happening.
 
-/startbattlenextinput
-Set some sort of flag to let this interpreter know that on the next space input, instead of moving to the next line, start a battle: place player units, place enemy units, and so on. When that battle is finished, THEN go back to the cutscene and continue from where the cutscene left off.
+/placeplayerunits
+Sometimes, player and enemy units are placed during a cutscene. First example of this is in chapter 4 before the retool boss.
+in this example, place all the player's units down and then proceed with the cutscene.
 
-/startchapter {chapter name}
-THIS is what will swap to a new cutscene file. Remove any current branches, change cutscene to the one specified, and start interpreting at the top of that cutscene file at index 0.
-example: /startchapter Chapter 01
+/placeenemyunits
+Will retrieve the battle stored by /battle {battleName} and place the enemy units stored in that battle's formation. Called when a cutscene happens in the middle of placing units like in ch4.
 
 /recruit {unitName}
 add the unit with the given name to the party as an alive unit.
@@ -88,15 +94,12 @@ You may choose to follow this format or use a different format. I just made to s
 Also, when this choice happens, when the next = or == is reached, listen for Q or W instead of space before moving on, or whatever the inputs are in the new project.
 After the player selects, store an internal integer for the choice they selected: 0 for Q/recruited, 1 for W/no recruited. This variable will be used by other instructions so make sure to store it somewhere outside the parse line loop.
 
-/instantlevelup {unitName} {levels}
-Instantly add N levels to the given unit. Called after bonus conversations typically
+/startbattlenextinput
+Set some sort of flag to let this interpreter know that on the next space input, instead of moving to the next line, start a battle: place player units, place enemy units, and so on. When that battle is finished, THEN go back to the cutscene and continue from where the cutscene left off.
 
-/placeplayerunits
-Sometimes, player and enemy units are placed during a cutscene. First example of this is in chapter 4 before the retool boss.
-in this example, place all the player's units down and then proceed with the cutscene.
-
-/placeenemyunits
-Will retrieve the battle stored by /battle {battleName} and place the enemy units stored in that battle's formation. Called when a cutscene happens in the middle of placing units like in ch4.
+/startchapter {chapter name}
+THIS is what will swap to a new cutscene file. Remove any current branches, change cutscene to the one specified, and start interpreting at the top of that cutscene file at index 0.
+example: /startchapter Chapter 01
 
 /wait {seconds}
 Wait for N seconds before parsing the next line.

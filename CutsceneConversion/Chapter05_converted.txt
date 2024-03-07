@@ -1,0 +1,187 @@
+/chapterlevel 7
+/bgcolor black
+[Chapter 05]
+[Cos Path, Territory of Cos]
+==
+/bgcolor green
+{portrait_left:Proton}
+Proton: Looks like some bandits are in our way.
+==
+{portrait_left:Proton}
+Proton: We'll need to defeat them to go back to
+Static.
+/battle Chapter5
+/startbattlenextinput
+==
+/if IsAlive TnemecalperIII
+{portrait_left:TnemecalperIII} {portrait_right:Proton}
+Tnemecalper III: ALLY DETECTED!
+ALLY DETECTED!
+=
+/else
+CutsceneIndex = 34
+==
+{portrait_left:TnemecalperIII} {portrait_right:Proton}
+Proton: Huh?
+==
+{portrait_left:TnemecalperIII} {portrait_right:Proton}
+Tnemecalper III: ALLY DETECTED!
+ALLY DETECTED!
+==
+{portrait_left:TnemecalperIII} {portrait_right:Proton}
+Proton: Am I supposed to find a new ally?
+==
+{portrait_left:TnemecalperIII} {portrait_right:Proton}
+(Tnemecalper III points towards a village)
+==
+{portrait_left:TnemecalperIII} {portrait_right:Proton}
+Proton: I'm supposed to go there?
+==
+{portrait_left:TnemecalperIII} {portrait_right:Proton}
+Tnemecalper III: ALLY DETECTED!
+ALLY DETECTED!
+==
+{portrait_left:TnemecalperIII} {portrait_right:Proton}
+Proton: Sure.
+==
+/bgcolor grey
+[Obscure Village, Territory of Cos]
+==
+{portrait_left:Wob}
+???: I'm bored...
+==
+{portrait_left:Wob}
+???: Maybe I should walk to another random
+village...
+==
+{portrait_left:Wob}
+???: ...
+==
+{portrait_left:Wob}
+???: Oh, it looks like there's a group of people
+entering the village.
+==
+{portrait_left:Proton} {portrait_right:TnemecalperIII}
+Proton: So... what do I do now that
+I'm here at the village?
+==
+{portrait_left:Proton} {portrait_right:Wob}
+???: Hey! You there!
+==
+{portrait_left:Proton} {portrait_right:Wob}
+???: You guys are from the army, right?
+==
+{portrait_left:Proton} {portrait_right:Wob}
+Proton: Yeah.
+==
+{portrait_left:Proton} {portrait_right:Wob}
+???: Can I join you guys on your mission?
+==
+{portrait_left:Proton} {portrait_right:Wob}
+Proton: Aren't you just a kid?
+==
+{portrait_left:Proton} {portrait_right:Wob}
+???: I'm not a kid, I'm like... 12.
+==
+{portrait_left:Proton} {portrait_right:Wob}
+???: I'm Wob, and I'm going to be part of the Static
+army next year! But the wait is so boring that I started
+walking to random villages! So let me join you guys!
+==
+{portrait_left:Proton} {portrait_right:Wob}
+Wob: I feel like an NPC...
+==
+{portrait_left:Proton} {portrait_right:Wob}
+Proton: Wait, you're joining the Static army
+next year? Doesn't that mean you live in Static?
+==
+{portrait_left:Proton} {portrait_right:Wob}
+Wob: Yeah, but I got bored and walked to this
+random village.
+==
+{portrait_left:Proton} {portrait_right:Wob}
+Proton: These roads are dangerous, how are you
+unharmed?
+==
+{portrait_left:Proton} {portrait_right:Wob}
+Wob: I know how to defend myself, my sister
+taught me how to use a bow.
+==
+{portrait_left:Proton} {portrait_right:Wob}
+Proton: You seem more competent than I originally
+thought.
+==
+{portrait_left:Proton} {portrait_right:Wob}
+Wob: Yeah! Let me join your mission!
+==
+/recruitchoice Wob
+==
+/if ChoiceSelected 0
+{portrait_left:Proton} {portrait_right:Wob}
+Wob: Yes! Let's go!
+=
+/else
+{portrait_left:Proton} {portrait_right:Wob}
+Wob: C'mon...
+==
+/if ChoiceSelected 0
+/recruit Wob
+==
+/if IsAlive Proton and IsAlive TnemecalperII
+[Bonus Conversation Unlocked]
+=
+/else
+/startchapter Chapter 06
+==
+/bgcolor green
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Proton: ...
+==
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Proton: Hello?
+==
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Tnemecalper II: This is a greeting.
+==
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Tnemecalper II: This is a message.
+==
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Proton: Do you know how to... converse?
+==
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Tnemecalper II: This is a message
+==
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Tnemecalper II: This is a message
+Congratulations! Keep keeping your allies alive!
+-The Link
+==
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Proton: ...
+==
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Proton: Are you even alive?
+==
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Tnemecalper II: This is a explanation
+==
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Tnemecalper II: This is a explanation
+explanation
+==
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Proton: ...
+==
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Proton: This is
+==
+{portrait_left:Proton} {portrait_right:TnemecalperII}
+Proton: This is
+depressing.
+==
+[Proton and Tnemecalper II leveled up!]
+/instantlevelup Proton 1
+/instantlevelup TnemecalperII 1
+/startchapter Chapter 06
+=

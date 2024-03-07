@@ -1,0 +1,254 @@
+ChapterLevel = 7
+if CutsceneIndex == 0:
+    SaveData()
+    screensetup.BattleScreen.bgcolor("black")
+    Text3("[Chapter 05]")
+    line2("[Cos Path, Territory of Cos]")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 1:
+    screensetup.BattleScreen.bgcolor("green")
+    Text1("Proton: Looks like some bandits are in our way.",units.Proton.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 2:
+    Text1("Proton: We'll need to defeat them to go back to",units.Proton.Portrait)
+    line2("Static.")
+    CutsceneIndex += 1
+    UnitsToPlace = placeunits.Chapter5Enemies
+    UnitFormation = placeunits.Chapter5Placement
+    BattleStarted = False
+    (screensetup.BattleScreen).onkey(BattleStart, "space")
+elif CutsceneIndex == 3:
+    if units.TnemecalperIII in units.UnitsAlive:
+        Text2("Tnemecalper III: ALLY DETECTED!",units.TnemecalperIII.Portrait,units.Proton.Portrait)
+        line2("ALLY DETECTED!")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    else:
+        CutsceneIndex = 34
+        Cutscene()
+elif CutsceneIndex == 4:
+    Text2("Proton: Huh?",units.TnemecalperIII.Portrait,units.Proton.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 5:
+    Text2("Tnemecalper III: ALLY DETECTED!",units.TnemecalperIII.Portrait,units.Proton.Portrait)
+    line2("ALLY DETECTED!")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 6:
+    Text2("Proton: Am I supposed to find a new ally?",units.TnemecalperIII.Portrait,units.Proton.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 7:
+    Text2("(Tnemecalper III points towards a village)",units.TnemecalperIII.Portrait,units.Proton.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 8:
+    Text2("Proton: I'm supposed to go there?",units.TnemecalperIII.Portrait,units.Proton.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 9:
+    Text2("Tnemecalper III: ALLY DETECTED!",units.TnemecalperIII.Portrait,units.Proton.Portrait)
+    line2("ALLY DETECTED!")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 10:
+    Text2("Proton: Sure.",units.TnemecalperIII.Portrait,units.Proton.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 11:
+    screensetup.BattleScreen.bgcolor("grey")
+    Text3("[Obscure Village, Territory of Cos]")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 12:
+    Text1("???: I'm bored...",units.Wob.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 13:
+    Text1("???: Maybe I should walk to another random",units.Wob.Portrait)
+    line2("village...")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 14:
+    Text1("???: ...",units.Wob.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 15:
+    Text1("???: Oh, it looks like there's a group of people",units.Wob.Portrait)
+    line2("entering the village.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 16:
+    Text2("Proton: So... what do I do now that",units.Proton.Portrait,units.TnemecalperIII.Portrait)
+    line2("I'm here at the village?")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 17:
+    Text2("???: Hey! You there!",units.Proton.Portrait,units.Wob.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 18:
+    Text2("???: You guys are from the army, right?",units.Proton.Portrait,units.Wob.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 19:
+    Text2("Proton: Yeah.",units.Proton.Portrait,units.Wob.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 20:
+    Text2("???: Can I join you guys on your mission?",units.Proton.Portrait,units.Wob.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 21:
+    Text2("Proton: Aren't you just a kid?",units.Proton.Portrait,units.Wob.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 22:
+    Text2("???: I'm not a kid, I'm like... 12.",units.Proton.Portrait,units.Wob.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 23:
+    Text2("???: I'm Wob, and I'm going to be part of the Static",units.Proton.Portrait,units.Wob.Portrait)
+    line2("army next year! But the wait is so boring that I started")
+    line3("walking to random villages! So let me join you guys!")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 24:
+    Text2("Wob: I feel like an NPC...",units.Proton.Portrait,units.Wob.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 25:
+    Text2("Proton: Wait, you're joining the Static army",units.Proton.Portrait,units.Wob.Portrait)
+    line2("next year? Doesn't that mean you live in Static?")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 26:
+    Text2("Wob: Yeah, but I got bored and walked to this",units.Proton.Portrait,units.Wob.Portrait)
+    line2("random village.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 27:
+    Text2("Proton: These roads are dangerous, how are you",units.Proton.Portrait,units.Wob.Portrait)
+    line2("unharmed?")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 28:
+    Text2("Wob: I know how to defend myself, my sister",units.Proton.Portrait,units.Wob.Portrait)
+    line2("taught me how to use a bow.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 29:
+    Text2("Proton: You seem more competent than I originally",units.Proton.Portrait,units.Wob.Portrait)
+    line2("thought.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 30:
+    Text2("Wob: Yeah! Let me join your mission!",units.Proton.Portrait,units.Wob.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 31:
+    Text3("[Recruit Wob?]")
+    line2("(Q) Recruit")
+    line3("(W) Do not recruit")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(WobRecruitYes, "q")
+    (screensetup.BattleScreen).onkey(WobRecruitNo, "w")
+elif CutsceneIndex == 32:
+    if RecruitWob == True:
+        Text2("Wob: Yes! Let's go!",units.Proton.Portrait, units.Wob.Portrait)
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    else:
+        Text2("Wob: C'mon...",units.Proton.Portrait, units.Wob.Portrait)
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 33:
+    if RecruitWob == True:
+        Text3("[Wob has joined your party]")
+        units.UnitsAlive.append(units.Wob)
+        units.UnitsRecruited.append(units.Wob)
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    else:
+        CutsceneIndex += 1
+        Cutscene()
+elif CutsceneIndex == 34:
+    if units.Proton in units.UnitsAlive and units.TnemecalperII in units.UnitsAlive:
+        Text3("[Bonus Conversation Unlocked]")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    else:
+        Chapter = "Chapter 06"
+        CutsceneIndex = 0
+        Cutscene()
+elif CutsceneIndex == 35:
+    screensetup.BattleScreen.bgcolor("green")
+    Text2("Proton: ...",units.Proton.Portrait,units.TnemecalperII.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 36:
+    Text2("Proton: Hello?",units.Proton.Portrait,units.TnemecalperII.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 37:
+    Text2("Tnemecalper II: This is a greeting.",units.Proton.Portrait,units.TnemecalperII.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 38:
+    Text2("Tnemecalper II: This is a message.",units.Proton.Portrait,units.TnemecalperII.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 39:
+    Text2("Proton: Do you know how to... converse?",units.Proton.Portrait,units.TnemecalperII.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 40:
+    Text2("Tnemecalper II: This is a message:",units.Proton.Portrait,units.TnemecalperII.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 41:
+    Text2("Tnemecalper II: This is a message:",units.Proton.Portrait,units.TnemecalperII.Portrait)
+    line2("Congratulations! Keep keeping your allies alive!")
+    line3("                                   -The Link")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 42:
+    Text2("Proton: ...",units.Proton.Portrait,units.TnemecalperII.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 43:
+    Text2("Proton: Are you even alive?", units.Proton.Portrait,units.TnemecalperII.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 44:
+    Text2("Tnemecalper II: This is a explanation:",units.Proton.Portrait,units.TnemecalperII.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 45:
+    Text2("Tnemecalper II: This is a explanation:",units.Proton.Portrait,units.TnemecalperII.Portrait)
+    line2("   explanation")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 46:
+    Text2("Proton: ...",units.Proton.Portrait,units.TnemecalperII.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 47:
+    Text2("Proton: This is:", units.Proton.Portrait,units.TnemecalperII.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 48:
+    Text2("Proton: This is:", units.Proton.Portrait,units.TnemecalperII.Portrait)
+    line2("                 depressing.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 49:
+    Text3("[Proton and Tnemecalper II leveled up!]")
+    select.InstantLevelUp(units.Proton,1)
+    select.InstantLevelUp(units.TnemecalperII,1)
+    CutsceneIndex = 0
+    Chapter = "Chapter 06"
+    (screensetup.BattleScreen).onkey(Cutscene, "space")

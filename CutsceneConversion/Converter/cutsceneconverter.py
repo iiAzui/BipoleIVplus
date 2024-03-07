@@ -6,6 +6,12 @@
 # this can quickly be done with selecting all and shift+tab in VSC
 # this is just so the originals are more readable
 
+# Come things will need to be manually fixed.
+# One example is CutsceneIndex sets - replace then with /jump.
+# example: CutsceneIndex = 34 -> /jump 80, aka jump to line 80.
+
+# after manually resolving errors, cutscenes will be moved to the Cutscenes folder in the base directory
+
 import sys
 import re
 import os
@@ -16,11 +22,12 @@ if len(sys.argv) < 1:
 filepath = sys.argv[1]
 
 f = open(filepath, "r")
-text = f.read()
+original_text = f.read()
 f.close()
 
 # ==== remove lines that won't serve any purpose for the new cutscenes
-text = text.replace('CutsceneIndex += 1', '')
+text = original_text.replace('CutsceneIndex += 1', '')
+
 text = re.sub(r'turtle.+\n', '\n', text)
 text = text.replace('CutsceneIndex = 0', '')
 text = text.replace('Cutscene()', '') # usually used in if/else to skip a dialogue on some branch
@@ -158,6 +165,9 @@ text = text.replace('\nelif', '\n/elif')
 
 # remove else branches with no code
 text = text.replace('/else\n==', '==')
+
+# remove any possible colons at end of lines from if statements
+text = text.replace(':\n', '\n')
 
 # more unused, possibly relying on tabs being removed
 text = text.replace('units.EnemyUnitsAlive = UnitsToPlace\n', '')
