@@ -1,5 +1,4 @@
-==
-...
+            ...
 /recruit Quest
 /recruit Scien
 ==
@@ -83,18 +82,19 @@ Romra: If you would allow it, I would like to
 partake in this mission along side you.
 ==
 /choice RecruitRomra
-==
-/if RecruitRomra:
+/if RecruitRomra
 {portrait_left:Romra} {portrait_right:Proton}
 Romra: Yes! Thank you!
+==
 /else
 {portrait_left:Romra} {portrait_right:Proton}
 Romra: Oh, sorry for bothering you.
 ==
-/if RecruitRomra:
+/if RecruitRomra
 /recruit Romra
-/else
 ==
+/else
 {portrait_left:Scien} {portrait_right:Proton}
 Scien: Let's get going.
 /startchapter Chapter 01
+==

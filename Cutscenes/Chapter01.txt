@@ -1,0 +1,94 @@
+ChapterLevel = 2
+if CutsceneIndex == 0:
+    SaveData()
+    screensetup.BattleScreen.bgcolor("black")
+    Text3("[Chapter 01]")
+    line2("[Static Path, Territory of Static]")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 1:
+    screensetup.BattleScreen.bgcolor("green")
+    Text2("Scien: There are some Slimes blocking out way.",units.Scien.Portrait, units.Proton.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 2:
+    Text2("Scien: We'll need to defeat them to continue",units.Scien.Portrait, units.Proton.Portrait)
+    line2("onwards.")
+    CutsceneIndex += 1
+    UnitsToPlace = placeunits.Chapter1Enemies
+    UnitFormation = placeunits.Chapter1Placement
+    BattleStarted = False
+    (screensetup.BattleScreen).onkey(BattleStart, "space")
+elif units.Scien in units.UnitsAlive and CutsceneIndex > 2:
+    if CutsceneIndex == 3:
+        Text1("Scien: We've defeated the enemy slimes.",units.Scien.Portrait)
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    elif CutsceneIndex == 4:
+        Text1("Scien: We'll need to be careful, there will likely be",units.Scien.Portrait)
+        line2("more ahead.")
+        CutsceneIndex = 0
+        Chapter = "Chapter 02"
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+        SaveData()
+elif len(units.UnitsAlive) > 1 and CutsceneIndex == 3:
+    CutsceneIndex = 0
+    Chapter = "Chapter 02"
+    Cutscene()
+elif len(units.UnitsAlive) == 1 and CutsceneIndex > 2:
+    if CutsceneIndex == 3:
+        Text1("Proton: It seems that all of the others have",units.Proton.Portrait)
+        line2("somehow died.")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    elif CutsceneIndex == 4:
+        turtle.register_shape(current_directory+"/Portraits/azurehooded_big.gif")
+        Text2("???: ...",units.Proton.Portrait,current_directory+"/Portraits/azurehooded_big.gif")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    elif CutsceneIndex == 5:
+        Text2("Proton: Who's there!?",units.Proton.Portrait,current_directory+"/Portraits/azurehooded_big.gif")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    elif CutsceneIndex == 6:
+        Text2("???: I am The Link...",units.Proton.Portrait,current_directory+"/Portraits/azurehooded_big.gif")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    elif CutsceneIndex == 7:
+        Text2("The Link: All of your allies have fallen, this is obviously",units.Proton.Portrait,current_directory+"/Portraits/azurehooded_big.gif")
+        line2("not good.")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    elif CutsceneIndex == 8:
+        Text2("The Link: If you have done this by accident, please be",units.Proton.Portrait,current_directory+"/Portraits/azurehooded_big.gif")
+        line2("more careful.")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    elif CutsceneIndex == 9:
+        Text2("The Link: To make up for your lost allies, the",units.Proton.Portrait,current_directory+"/Portraits/azurehooded_big.gif")
+        line2("Tnemecalpers will be assisting you.")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    elif CutsceneIndex == 10:
+        print(CutsceneIndex, "= 10")
+        Text3("[The Tnemecalpers joined your party]")
+        units.UnitsAlive.append(units.TnemecalperI)
+        units.UnitsRecruited.append(units.TnemecalperI)
+        units.UnitsAlive.append(units.TnemecalperII)
+        units.UnitsRecruited.append(units.TnemecalperII)
+        units.UnitsAlive.append(units.TnemecalperIII)
+        units.UnitsRecruited.append(units.TnemecalperIII)
+        units.UnitsAlive.append(units.TnemecalperIV)
+        units.UnitsRecruited.append(units.TnemecalperIV)
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif units.TnemecalperI in units.UnitsAlive:
+    if CutsceneIndex == 11:
+        Text1("Proton: Hey, wait a second...",units.Proton.Portrait)
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    elif CutsceneIndex == 12:
+        Text1("Proton: ...he's gone.",units.Proton.Portrait)
+        CutsceneIndex = 0
+        Chapter = "Chapter 02"
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
