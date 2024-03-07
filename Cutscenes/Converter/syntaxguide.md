@@ -58,8 +58,11 @@ color - black, green, etc.
 set the cutscene background color to this color.
 
 /battle {battleName}
-After the current dialogue line, AkA the moment the next = or == is reached, start a battle. Is important that the current line index in the file is saved somewhere! When a battle is completed in the original game it does not call some kind of cutscene start function; rather, control is given back to the cutscene file and the cutscene function is called to resume the cutscene loop at the current index. SO store the current cutscene and index in the cutscene somewhere in memory.
+Set the battle that will be started next. Store this info somewhere. /startbattlenextinput, /placeenemyunits and /startbattlenow may use this stored value.
 example: /battle Chapter1
+
+/startbattlenextinput
+Set some sort of flag to let this interpreter know that on the next space input, instead of moving to the next line, start a battle: place player units, place enemy units, and so on. When that battle is finished, THEN go back to the cutscene and continue from where the cutscene left off.
 
 /startchapter {chapter name}
 THIS is what will swap to a new cutscene file. Remove any current branches, change cutscene to the one specified, and start interpreting at the top of that cutscene file at index 0.
@@ -78,6 +81,20 @@ In the original code, these 3 lines are repeated before each recruitment:
 You may choose to follow this format or use a different format. I just made to so not all those lines are repeated for every recriutment so you may handle it as you with within the interpreter.
 Also, when this choice happens, when the next = or == is reached, listen for Q or W instead of space before moving on, or whatever the inputs are in the new project.
 After the player selects, store an internal integer for the choice they selected: 0 for Q/recruited, 1 for W/no recruited. This variable will be used by other instructions so make sure to store it somewhere outside the parse line loop.
+
+/instantlevelup {unitName} {levels}
+Instantly add N levels to the given unit. Called after bonus conversations typically
+
+/placeplayerunits
+Sometimes, player and enemy units are placed during a cutscene. First example of this is in chapter 4 before the retool boss.
+in this example, place all the player's units down and then proceed with the cutscene.
+
+/placeenemyunits
+Will retrieve the battle stored by /battle {battleName} and place the enemy units stored in that battle's formation. Called when a cutscene happens in the middle of placing units like in ch4.
+
+/wait {seconds}
+Wait for N seconds before parsing the next line.
+example: /wait 2
 
 ---------- INLINE COMMANDS ----------
 These commands should ideally be able to be put anywhere outside of a slash command line and be evaluated as soon as the cursor reaches it, in case the dialogue system is changed to one where the text is written typewriter-style character per character. Assuming the game becomes something like that, as soon as a { character is reached, immediately parse everything up until the } and evaluate the command.

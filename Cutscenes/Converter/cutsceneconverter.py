@@ -44,9 +44,11 @@ text = re.sub(r'if CutsceneIndex == \d+:\n', '\n', text)
 text = re.sub(r'    +\(screensetup.BattleScreen\).onkey\(Cutscene, "space"\)', '=', text)
 text = re.sub(r'\t+\(screensetup.BattleScreen\).onkey\(Cutscene, "space"\)', '=', text)
 
+# replace waiting for input without tabs with a double equal ==. this should also clear any ifelse branches active.
 text = text.replace('(screensetup.BattleScreen).onkey(Cutscene, "space")', '==')
 
-text = text.replace('(screensetup.BattleScreen).onkey(BattleStart, "space")', '==')
+# Start battle command - meant to override the behavior of the == with this as starting the battle on next input.
+text = text.replace('(screensetup.BattleScreen).onkey(BattleStart, "space")', '/startbattlenextinput')
 
 # convert text calls to ust the inner string - inside the double quotes, match any amt of characters that is not a double quote
 
@@ -87,6 +89,15 @@ text = re.sub(r'units.UnitsRecruited.append\(units.(\w+)\)', r'/recruit \1', tex
 
 # instant level up command
 text = re.sub(r'select\.InstantLevelUp\(units\.(\w+),(\d+)\)', r'/instantlevelup \1 \2', text)
+
+# place player units command
+text = text.replace('placeunits.PlacePlayerUnits()', '/placeplayerunits')
+
+# place enemy units command
+text = text.replace('placeunits.PlaceEnemies(unitFormation)', '/placeenemyunits')
+
+# delay command
+text = re.sub(r'time\.sleep\(([\d\.]+)\)', r'/wait \1', text)
 
 # save command (could be removed to just save after every battle since this just appears after each battle)
 # DISABLED figure it out in the code, these are placed too randomly across the cutscenes, just save after a battle is won...

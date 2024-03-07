@@ -1,0 +1,159 @@
+/chapterlevel 5
+/bgcolor black
+[Chapter 04]
+[Sine Castle Town, Territory of Sine]
+==
+/bgcolor green
+{portrait_left:Proton}
+Proton: The Guild of Retool will be here any minute,
+stay on guard.
+/placeplayerunits
+==
+select.TextboxMaker.clear()
+/wait 1
+/battle Chapter4
+/placeplayerunits
+units.EnemyUnitsAlive = UnitsToPlace
+placeunits.PlaceEnemies(UnitFormation)
+/wait 2
+{portrait_left:Retool}
+Retool: Hah hah hah!,
+==
+{portrait_left:Retool}
+Retool: I heard they were getting reinforcements
+but this is nothing!
+==
+{portrait_left:Retool}
+Retool: Nothing to be afraid of, let's get 'em!
+==
+select.TextboxMaker.clear()
+statprint.SideSquare()
+select.Status = 0
+select.CancelAction()
+==
+{portrait_left:Retool}
+Retool: Ah... I'm not going to die here...
+==
+{portrait_left:Retool}
+Retool: It's time to retreat...
+==
+[The Guild of Retool retreats].
+==
+{portrait_left:Proton}
+Proton: We did it...
+==
+???: Hmm... that was a high amount of damage...
+==
+{portrait_left:Proton}
+Proton: Who's there!?
+==
+{portrait_left:Proton} {portrait_right:Damagein}
+???: It is I, the great Damagein Elite!
+==
+{portrait_left:Proton} {portrait_right:Damagein}
+Proton: ...
+==
+{portrait_left:Proton} {portrait_right:Damagein}
+Proton: ...who?
+==
+{portrait_left:Proton} {portrait_right:Damagein}
+Damagein: I, the great Damagein, have dedicated my life
+towards seeking one thing... DAMAGE!
+==
+{portrait_left:Proton} {portrait_right:Damagein}
+Damagein: And I have just witnessed YOU deal DAMAGE
+to those bandits!
+==
+{portrait_left:Proton} {portrait_right:Damagein}
+Damagein: So I will ask, might I join your army in order
+to witness more damage?
+==
+/recruitchoice Damagein
+==
+/if ChoiceSelected 0
+{portrait_left:Proton} {portrait_right:Damagein}
+Damagein: It's time for some damage!
+=
+/else
+{portrait_left:Proton} {portrait_right:Damagein}
+Damagein: Very well then, I will seek damage elsewhere.
+==
+/if ChoiceSelected 0
+/recruit Damagein
+[Damagein joined your party]
+=
+/else
+==
+???: Are you the people who protected this town?
+==
+{portrait_left:Proton} {portrait_right:Healia}
+???: I am Healia Aid, and I wish to join your army
+for saving my hometown.
+==
+/recruitchoice Healia
+==
+/if ChoiceSelected 0
+{portrait_left:Proton} {portrait_right:Healia}
+Healia: Thank you, I will make sure to do
+my part.
+=
+/else
+{portrait_left:Proton} {portrait_right:Healia}
+Healia: Understood, I wish you all a safe
+journey.
+==
+/if ChoiceSelected 0
+/recruit Healia
+[Healia joined your party]
+=
+/else
+/elif CutsceneIndex == 26: 
+/if IsAlive Scien and IsAlive Lacirtcele:
+[Bonus Conversation Unlocked]
+=
+/else
+/startchapter Chapter 05
+==
+{portrait_left:Scien} {portrait_right:Lacirtcele}
+Scien: Hello, Lacirtcele.
+==
+{portrait_left:Scien} {portrait_right:Lacirtcele}
+Lacirtcele: Sup.
+==
+{portrait_left:Scien} {portrait_right:Lacirtcele}
+Scien: Have you prepared our letter to send
+back to Static?
+==
+{portrait_left:Scien} {portrait_right:Lacirtcele}
+Lacirtcele: Nah.
+==
+{portrait_left:Scien} {portrait_right:Lacirtcele}
+Lacirtcele: I'll get to it later though trust
+me fam.
+==
+{portrait_left:Scien} {portrait_right:Lacirtcele}
+Scien: I would rather not trust you.
+==
+{portrait_left:Scien} {portrait_right:Lacirtcele}
+Scien: This is a very important letter, you know?
+==
+Text2("Lacirtcele: I do not \"know\".",units.Scien.Portrait,units.Lacirtcele.Portrait)
+==
+Text2("Lacirtcele: I may purposely choose not to \"know\".",units.Scien.Portrait,units.Lacirtcele.Portrait)
+==
+Text2("Scien: I may \"purposely\" remove you from the",units.Scien.Portrait,units.Lacirtcele.Portrait)
+Elemental Offense Sqaud.
+==
+{portrait_left:Scien} {portrait_right:Lacirtcele}
+Lacirtcele: That might be bad.
+==
+Text2("Scien: Yes, it would be \"bad\".",units.Scien.Portrait,units.Lacirtcele.Portrait)
+==
+{portrait_left:Scien} {portrait_right:Lacirtcele}
+Scien: Now prepare that letter.
+==
+[Scien and Lacirtcele leveled up!]
+/instantlevelup Scien 1
+/instantlevelup Lacirtcele 1
+/startchapter Chapter 05
+=

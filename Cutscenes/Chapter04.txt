@@ -1,0 +1,227 @@
+ChapterLevel = 5
+if CutsceneIndex == 0:
+    SaveData()
+    screensetup.BattleScreen.bgcolor("black")
+    Text3("[Chapter 04]")
+    line2("[Sine Castle Town, Territory of Sine]")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 1:
+    screensetup.BattleScreen.bgcolor("green")
+    Text1("Proton: The Guild of Retool will be here any minute,",units.Proton.Portrait)
+    line2("stay on guard.")
+    placeunits.PlacePlayerUnits()
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 2:
+    select.TextboxMaker.clear()
+    time.sleep(1)
+    UnitsToPlace = placeunits.Chapter4Enemies
+    UnitFormation = placeunits.Chapter4Placement
+    placeunits.PlacePlayerUnits()
+    units.EnemyUnitsAlive = UnitsToPlace
+    placeunits.PlaceEnemies(UnitFormation)
+    time.sleep(2)
+    Text1("Retool: Hah hah hah!,",units.Retool.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 3:
+    Text1("Retool: I heard they were getting reinforcements",units.Retool.Portrait)
+    line2("but this is nothing!")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 4:
+    Text1("Retool: Nothing to be afraid of, let's get 'em!",units.Retool.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 5:
+    CutsceneIndex += 1
+    select.TextboxMaker.clear()
+    statprint.SideSquare()
+    select.Status = 0
+    select.CancelAction()
+elif CutsceneIndex == 6:
+    Text1("Retool: Ah... I'm not going to die here...",units.Retool.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 7:
+    Text1("Retool: It's time to retreat...",units.Retool.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 8:
+    Text3("[The Guild of Retool retreats].")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 9:
+    Text1("Proton: We did it...",units.Proton.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 10:
+    Text3("???: Hmm... that was a high amount of damage...")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 11:
+    Text1("Proton: Who's there!?",units.Proton.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 12:
+    Text2("???: It is I, the great Damagein Elite!",units.Proton.Portrait,units.Damagein.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 13:
+    Text2("Proton: ...",units.Proton.Portrait,units.Damagein.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 14:
+    Text2("Proton: ...who?",units.Proton.Portrait,units.Damagein.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 15:
+    Text2("Damagein: I, the great Damagein, have dedicated my life",units.Proton.Portrait,units.Damagein.Portrait)
+    line2("towards seeking one thing... DAMAGE!")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 16:
+    Text2("Damagein: And I have just witnessed YOU deal DAMAGE",units.Proton.Portrait,units.Damagein.Portrait)
+    line2("to those bandits!")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 17:
+    Text2("Damagein: So I will ask, might I join your army in order",units.Proton.Portrait,units.Damagein.Portrait)
+    line2("to witness more damage?")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 18:
+    Text3("[Recruit Damagein?]")
+    line2("(Q) Recruit")
+    line3("(W) Do not recruit")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(DamageinRecruitYes, "q")
+    (screensetup.BattleScreen).onkey(DamageinRecruitNo, "w")
+elif CutsceneIndex == 19:
+    if RecruitDamagein == True:
+        Text2("Damagein: It's time for some damage!",units.Proton.Portrait, units.Damagein.Portrait)
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    else:
+        Text2("Damagein: Very well then, I will seek damage elsewhere.",units.Proton.Portrait, units.Damagein.Portrait)
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 20:
+    if RecruitDamagein == True:
+        units.UnitsRecruited.append(units.Damagein)
+        units.UnitsAlive.append(units.Damagein)
+        Text3("[Damagein joined your party]")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    else:
+        CutsceneIndex += 1
+        Cutscene()
+elif CutsceneIndex == 21:
+    Text3("???: Are you the people who protected this town?")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 22:
+    Text2("???: I am Healia Aid, and I wish to join your army",units.Proton.Portrait,units.Healia.Portrait)
+    line2("for saving my hometown.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 23:
+    Text3("[Recruit Healia?]")
+    line2("(Q) Recruit")
+    line3("(W) Do not recruit")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(HealiaRecruitYes, "q")
+    (screensetup.BattleScreen).onkey(HealiaRecruitNo, "w")
+elif CutsceneIndex == 24:
+    if RecruitHealia == True:
+        Text2("Healia: Thank you, I will make sure to do",units.Proton.Portrait, units.Healia.Portrait)
+        line2("my part.")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    else:
+        Text2("Healia: Understood, I wish you all a safe",units.Proton.Portrait, units.Healia.Portrait)
+        line2("journey.")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 25:
+    if RecruitHealia == True:
+        units.UnitsAlive.append(units.Healia)
+        units.UnitsRecruited.append(units.Healia)
+        Text3("[Healia joined your party]")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    else:
+        CutsceneIndex += 1
+        Cutscene()
+elif CutsceneIndex == 26: 
+    if units.Scien in units.UnitsAlive and units.Lacirtcele in units.UnitsAlive:
+        Text3("[Bonus Conversation Unlocked]")
+        CutsceneIndex += 1
+        (screensetup.BattleScreen).onkey(Cutscene, "space")
+    else:
+        Chapter = "Chapter 05"
+        CutsceneIndex = 0
+        Cutscene()
+elif CutsceneIndex == 27:
+    Text2("Scien: Hello, Lacirtcele.",units.Scien.Portrait,units.Lacirtcele.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 28:
+    Text2("Lacirtcele: Sup.",units.Scien.Portrait,units.Lacirtcele.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 29:
+    Text2("Scien: Have you prepared our letter to send",units.Scien.Portrait,units.Lacirtcele.Portrait)
+    line2("back to Static?")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 30:
+    Text2("Lacirtcele: Nah.",units.Scien.Portrait,units.Lacirtcele.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 31:
+    Text2("Lacirtcele: I'll get to it later though trust",units.Scien.Portrait,units.Lacirtcele.Portrait)
+    line2("me fam.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 32:
+    Text2("Scien: I would rather not trust you.",units.Scien.Portrait,units.Lacirtcele.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 33:
+    Text2("Scien: This is a very important letter, you know?",units.Scien.Portrait,units.Lacirtcele.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 34:
+    Text2("Lacirtcele: I do not \"know\".",units.Scien.Portrait,units.Lacirtcele.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 35:
+    Text2("Lacirtcele: I may purposely choose not to \"know\".",units.Scien.Portrait,units.Lacirtcele.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 36:
+    Text2("Scien: I may \"purposely\" remove you from the",units.Scien.Portrait,units.Lacirtcele.Portrait)
+    line2("Elemental Offense Sqaud.")
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 37:
+    Text2("Lacirtcele: That might be bad.",units.Scien.Portrait,units.Lacirtcele.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 38:
+    Text2("Scien: Yes, it would be \"bad\".",units.Scien.Portrait,units.Lacirtcele.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 39:
+    Text2("Scien: Now prepare that letter.",units.Scien.Portrait,units.Lacirtcele.Portrait)
+    CutsceneIndex += 1
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
+elif CutsceneIndex == 40:
+    Text3("[Scien and Lacirtcele leveled up!]")
+    select.InstantLevelUp(units.Scien,1)
+    select.InstantLevelUp(units.Lacirtcele,1)
+    CutsceneIndex = 0
+    Chapter = "Chapter 05"
+    (screensetup.BattleScreen).onkey(Cutscene, "space")
