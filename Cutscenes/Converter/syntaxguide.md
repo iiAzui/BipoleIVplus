@@ -50,16 +50,22 @@ If, on the last choice prompt, the player responded with choice index N.
 ---------- COMMANDS ----------
 If a line starts with a slash /, it contains a command, likely with some preceding arguments. Parse and evaluate this command immediately, and then move onto the next line.
 
-/chapterlevel
-Sets the current chapter level variable. (If there is some sort of chapter object, this could/should probably be taken out of the cutscene and moved there, for less global variable cluttering shenanigans)
+/battle {battleName}
+Set the battle that will be started next. Store this info somewhere. /startbattlenextinput, /placeenemyunits and /startbattlenow may use this stored value.
+example: /battle Chapter1
 
 /bgcolor {color}
 color - black, green, etc.
 set the cutscene background color to this color.
 
-/battle {battleName}
-Set the battle that will be started next. Store this info somewhere. /startbattlenextinput, /placeenemyunits and /startbattlenow may use this stored value.
-example: /battle Chapter1
+/chapterlevel
+Sets the current chapter level variable. (If there is some sort of chapter object, this could/should probably be taken out of the cutscene and moved there, for less global variable cluttering shenanigans)
+
+/enablebattlecontrol
+Used when a cutscnee happens during the setup of a battle, like in Ch. 4. When this is called, the cutscene should stop running for now and let the player play out the battle. Once the battle is done, resume playing the cutscene at the the index under this command.
+
+/hidedialogue
+Hides the dialogue box, BUT the cutscene system will keep running. Mainly used for when a cutscene happens during a battle and units are being placed but no dialogue is happening.
 
 /startbattlenextinput
 Set some sort of flag to let this interpreter know that on the next space input, instead of moving to the next line, start a battle: place player units, place enemy units, and so on. When that battle is finished, THEN go back to the cutscene and continue from where the cutscene left off.

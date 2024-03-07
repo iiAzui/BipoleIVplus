@@ -25,6 +25,9 @@ text = re.sub(r'turtle.+\n', '\n', text)
 text = text.replace('CutsceneIndex = 0', '')
 text = text.replace('Cutscene()', '') # usually used in if/else to skip a dialogue on some branch
 
+text = text.replace('statprint.SideSquare()', '')
+text = text.replace('select.CancelAction()', '')
+
 text = re.sub(r'UnitFormation = \S+\n', '', text)
 text = re.sub(r'BattleStarted = \S+\n', '', text)
 
@@ -33,11 +36,11 @@ text = re.sub(r'UnitsToPlace = placeunits\.(\S+)Enemies\n', r'/battle \1\n', tex
 
 # remove cutsceneindex if/elif branches without important conditions
 # replace these with a = or == based on tabs
-text = re.sub(r'\t+(el)?if CutsceneIndex == \d+:\n', '=\n', text)
-text = re.sub(r'    +(el)?if CutsceneIndex == \d+:\n', '=\n', text)
+text = re.sub(r'\t+(el)?if CutsceneIndex == \d+:\s*\n', '=\n', text)
+text = re.sub(r'    +(el)?if CutsceneIndex == \d+:\s*\n', '=\n', text)
 
-text = re.sub(r'elif CutsceneIndex == \d+:\n', '==\n', text)
-text = re.sub(r'if CutsceneIndex == \d+:\n', '\n', text)
+text = re.sub(r'elif CutsceneIndex == \d+:\s*\n', '==\n', text)
+text = re.sub(r'if CutsceneIndex == \d+:\s*\n', '\n', text)
 
 # turn onkey listener into just a '==' which will signify to the interpreter to wait for input before next dialogue/battle
 # HOWEVER if it has 2 or more tabs in fornt if it, it is within a cutscene-specific conditional branch. this is marked by just = which will not reset ifelse branches
@@ -63,9 +66,9 @@ text = re.sub(r'Text1\(\"([^"]*)\",\s*units.([^.]*).Portrait\)', r'{portrait_lef
 # desired txt format:
 # {portrait_left:Proton} {portrait_right:Scien}
 # dialogue...
-text = re.sub(r'Text2\(\"([^"]*)\",\s*units.([^.]*).Portrait,\s*units.([^.]*).Portrait\)', 
+text = re.sub(r'Text2\(\"(.*)\",\s*units.([^.]*).Portrait,\s*units.([^.]*).Portrait\)', 
               r'{portrait_left:\2} {portrait_right:\3}\n\1', text)
-text = re.sub(r'Text2\(\"([^"]*)\",\s*units.([^.]*).Portrait,\s*current_directory\+"\/Portraits\/([^.]*).gif"\)', 
+text = re.sub(r'Text2\(\"(.*)\",\s*units.([^.]*).Portrait,\s*current_directory\+"\/Portraits\/([^.]*).gif"\)', 
               r'{portrait_left:\2} {portrait_right:\3}\n\1', text)
 
 # text3: no portraits, just top line
@@ -94,7 +97,13 @@ text = re.sub(r'select\.InstantLevelUp\(units\.(\w+),(\d+)\)', r'/instantlevelup
 text = text.replace('placeunits.PlacePlayerUnits()', '/placeplayerunits')
 
 # place enemy units command
-text = text.replace('placeunits.PlaceEnemies(unitFormation)', '/placeenemyunits')
+text = text.replace('placeunits.PlaceEnemies(UnitFormation)', '/placeenemyunits')
+
+# place enemy units command
+text = text.replace('select.TextboxMaker.clear()', '/hidedialogue')
+
+# enable battle control cmd for when cutscene happens during battle setup
+text = text.replace('select.Status = 0', '/enablebattlecontrol')
 
 # delay command
 text = re.sub(r'time\.sleep\(([\d\.]+)\)', r'/wait \1', text)
@@ -147,6 +156,11 @@ text = re.sub(r'\n\s+', '\n', text)
 text = text.replace('\nif', '\n/if')
 text = text.replace('\nelif', '\n/elif')
 
+# remove else branches with no code
+text = text.replace('/else\n==', '==')
+
+# more unused, possibly relying on tabs being removed
+text = text.replace('units.EnemyUnitsAlive = UnitsToPlace\n', '')
 
 # OPTIONAL
 # remove the q/w choice lines that are written as line2 & line3. /choice can handle this
