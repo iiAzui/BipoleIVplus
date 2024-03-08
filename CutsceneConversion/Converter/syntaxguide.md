@@ -21,7 +21,7 @@ Same as an if branch, but only check to run this branch if the previous if state
 NOTE: this will show up even when there is not an if statement before it!! just treat it as a normal if statement if that's the case. I would try to somehow write some extra code to make sure an elif will always come after an if but I don't get paid enough to do this.
 
 /else
-Only interpret below if previous if statement was not true. Inner code will only be ended by a. Equivalent to /elif True if that makes it easier to implement with less keywords.
+Only interpret below if previous if statement was not true. Inner code will only be ended by a ==. Equivalent to /elif True if that makes it easier to implement with less keywords.
 
 ---------- CONDITIONS ----------
 These conditions will appear after an /if or /elif statement.
@@ -71,7 +71,8 @@ Instantly add N levels to the given unit. Called after bonus conversations typic
 Jump to the given line index in the current cutscene and parse from there.
 
 /hidedialogue
-Hides the dialogue box, BUT the cutscene system will keep running. Mainly used for when a cutscene happens during a battle and units are being placed but no dialogue is happening.
+Hides the dialogue box, BUT the cutscene system will keep running. Mainly used for when a cutscene happens during a battle and units are being placed but no dialogue is happening. 
+note: whenever a dialogue happens while hidden, the dialogue box should re-appear.
 
 /placeplayerunits
 Sometimes, player and enemy units are placed during a cutscene. First example of this is in chapter 4 before the retool boss.
@@ -82,7 +83,7 @@ Will retrieve the battle stored by /battle {battleName} and place the enemy unit
 
 /recruit {unitName}
 add the unit with the given name to the party as an alive unit.
-example: /recruit Romra - will add romra to the party.
+example: /recruit Romra
 
 /recruitchoice {unitName}
 This is NOT an if branch but will probably always be used directly before one. 
@@ -121,4 +122,7 @@ Proton: Hello, my name is {textsize:999}Proton Xurr!!!!
 ---------- DIALOGUE -----------
 If a line doesn't have any of the afforementioned tokens at the start, it is just an ordinary dialogue line. Display it to the screen.
 Note that the linecounts have been removed so if they are being displayed seperately for each line like the original than just increase the line count each time a new line is interpreted and reset that count to 0 when dialogue is cleared by a = or ==.
-example: Proton: Hey, wait a second...
+example---
+Proton: First line
+Second line
+Third line
