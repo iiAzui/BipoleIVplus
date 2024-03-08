@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hw30pfmhj84n"
-path="res://.godot/imported/genericarcher_small.png-0299a59011706de64f1c311be4ce8a27.ctex"
+path="res://.godot/imported/genericarcher_small.png-d59d0c9d04c8f97e7b2def191e073371.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/genericarcher_small.png"
-dest_files=["res://.godot/imported/genericarcher_small.png-0299a59011706de64f1c311be4ce8a27.ctex"]
+source_file="res://Sprites/genericarcher_small.png"
+dest_files=["res://.godot/imported/genericarcher_small.png-d59d0c9d04c8f97e7b2def191e073371.ctex"]
 
 [params]
 

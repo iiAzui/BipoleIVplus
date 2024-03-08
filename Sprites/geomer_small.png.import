@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://skc57y2v2mi0"
-path="res://.godot/imported/geomer_small.png-dc2777f5f9c1d31c79f58400ef1375a2.ctex"
+path="res://.godot/imported/geomer_small.png-931dc4b9be994ab4334e63406883b288.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/geomer_small.png"
-dest_files=["res://.godot/imported/geomer_small.png-dc2777f5f9c1d31c79f58400ef1375a2.ctex"]
+source_file="res://Sprites/geomer_small.png"
+dest_files=["res://.godot/imported/geomer_small.png-931dc4b9be994ab4334e63406883b288.ctex"]
 
 [params]
 

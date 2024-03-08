@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://36swlkvcfhye"
-path="res://.godot/imported/elif_small.png-fd93a439f43fbefab9fa61223573f49d.ctex"
+path="res://.godot/imported/elif_small.png-e422f2d8b8afe556a5208b33d4723ffb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/elif_small.png"
-dest_files=["res://.godot/imported/elif_small.png-fd93a439f43fbefab9fa61223573f49d.ctex"]
+source_file="res://Sprites/elif_small.png"
+dest_files=["res://.godot/imported/elif_small.png-e422f2d8b8afe556a5208b33d4723ffb.ctex"]
 
 [params]
 

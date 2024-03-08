@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjpeua581oxyl"
-path="res://.godot/imported/azure_small.png-a8fe4bed3bb516807db0948e42ad53c7.ctex"
+path="res://.godot/imported/azure_small.png-f12030c29123651123567520d3e10c35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/azure_small.png"
-dest_files=["res://.godot/imported/azure_small.png-a8fe4bed3bb516807db0948e42ad53c7.ctex"]
+source_file="res://Sprites/azure_small.png"
+dest_files=["res://.godot/imported/azure_small.png-f12030c29123651123567520d3e10c35.ctex"]
 
 [params]
 

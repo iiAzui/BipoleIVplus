@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wsg3gjmkiyeq"
-path="res://.godot/imported/cigam_small.png-7e572e148e5c3d39518950f5e14ba44f.ctex"
+path="res://.godot/imported/cigam_small.png-249ae4d4ae6617e87300b3f022dd88aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/cigam_small.png"
-dest_files=["res://.godot/imported/cigam_small.png-7e572e148e5c3d39518950f5e14ba44f.ctex"]
+source_file="res://Sprites/cigam_small.png"
+dest_files=["res://.godot/imported/cigam_small.png-249ae4d4ae6617e87300b3f022dd88aa.ctex"]
 
 [params]
 

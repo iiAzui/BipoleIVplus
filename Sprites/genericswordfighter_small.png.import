@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv6ignqn2ruqp"
-path="res://.godot/imported/genericswordfighter_small.png-68fe455ffc7a0b5210b6dd278f7d31fe.ctex"
+path="res://.godot/imported/genericswordfighter_small.png-7417872a14efc4934fd621b4a80ac04f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/genericswordfighter_small.png"
-dest_files=["res://.godot/imported/genericswordfighter_small.png-68fe455ffc7a0b5210b6dd278f7d31fe.ctex"]
+source_file="res://Sprites/genericswordfighter_small.png"
+dest_files=["res://.godot/imported/genericswordfighter_small.png-7417872a14efc4934fd621b4a80ac04f.ctex"]
 
 [params]
 

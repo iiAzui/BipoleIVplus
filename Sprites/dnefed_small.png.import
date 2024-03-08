@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://707hujjfii07"
-path="res://.godot/imported/dnefed_small.png-d003175f1384414dc34a8ee018abe244.ctex"
+path="res://.godot/imported/dnefed_small.png-2c01881c9d8b054ddbdac72de21fd9cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/dnefed_small.png"
-dest_files=["res://.godot/imported/dnefed_small.png-d003175f1384414dc34a8ee018abe244.ctex"]
+source_file="res://Sprites/dnefed_small.png"
+dest_files=["res://.godot/imported/dnefed_small.png-2c01881c9d8b054ddbdac72de21fd9cc.ctex"]
 
 [params]
 

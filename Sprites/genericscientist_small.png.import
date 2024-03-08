@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://djkioulj5jd58"
-path="res://.godot/imported/genericscientist_small.png-d9ed30093be0c32d778f7e7e787944f1.ctex"
+path="res://.godot/imported/genericscientist_small.png-52bf918d276ee54592edb3669464d53d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/genericscientist_small.png"
-dest_files=["res://.godot/imported/genericscientist_small.png-d9ed30093be0c32d778f7e7e787944f1.ctex"]
+source_file="res://Sprites/genericscientist_small.png"
+dest_files=["res://.godot/imported/genericscientist_small.png-52bf918d276ee54592edb3669464d53d.ctex"]
 
 [params]
 

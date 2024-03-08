@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btbl6nfrwn7yx"
-path="res://.godot/imported/playablebladeous_small copy.png-807b7955047f5e15b24bf2a759204316.ctex"
+path="res://.godot/imported/playablebladeous_small copy.png-db780ee9179b8e870b505878cb994d98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/playablebladeous_small copy.png"
-dest_files=["res://.godot/imported/playablebladeous_small copy.png-807b7955047f5e15b24bf2a759204316.ctex"]
+source_file="res://Sprites/playablebladeous_small copy.png"
+dest_files=["res://.godot/imported/playablebladeous_small copy.png-db780ee9179b8e870b505878cb994d98.ctex"]
 
 [params]
 

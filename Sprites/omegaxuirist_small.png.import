@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgn6aya3wk1as"
-path="res://.godot/imported/omegaxuirist_small.png-d2b2cc6936e1b48de39d63837411c1ca.ctex"
+path="res://.godot/imported/omegaxuirist_small.png-1d70de8be2b3b8176eb65baa439a4566.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/omegaxuirist_small.png"
-dest_files=["res://.godot/imported/omegaxuirist_small.png-d2b2cc6936e1b48de39d63837411c1ca.ctex"]
+source_file="res://Sprites/omegaxuirist_small.png"
+dest_files=["res://.godot/imported/omegaxuirist_small.png-1d70de8be2b3b8176eb65baa439a4566.ctex"]
 
 [params]
 

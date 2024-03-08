@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ptbtkted0jje"
-path="res://.godot/imported/healia_small.png-6b5cebf9073bbbeebb88d8191d8449de.ctex"
+path="res://.godot/imported/healia_small.png-6e6a3ea6c7ab6d5984059e44077d2fda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/healia_small.png"
-dest_files=["res://.godot/imported/healia_small.png-6b5cebf9073bbbeebb88d8191d8449de.ctex"]
+source_file="res://Sprites/healia_small.png"
+dest_files=["res://.godot/imported/healia_small.png-6e6a3ea6c7ab6d5984059e44077d2fda.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyghh3opgplrc"
-path="res://.godot/imported/fieht_small.png-7289e38a375c9e316116dd248f611556.ctex"
+path="res://.godot/imported/fieht_small.png-673e8a9634439f6993ee325ca43f75e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/fieht_small.png"
-dest_files=["res://.godot/imported/fieht_small.png-7289e38a375c9e316116dd248f611556.ctex"]
+source_file="res://Sprites/fieht_small.png"
+dest_files=["res://.godot/imported/fieht_small.png-673e8a9634439f6993ee325ca43f75e2.ctex"]
 
 [params]
 

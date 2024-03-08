@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvck802vnd8y1"
-path="res://.godot/imported/cayenne_small.png-018e763983e578361ad90d56dcee002a.ctex"
+path="res://.godot/imported/cayenne_small.png-3074d1e9c938b8d22fa06f4a7316fb9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/cayenne_small.png"
-dest_files=["res://.godot/imported/cayenne_small.png-018e763983e578361ad90d56dcee002a.ctex"]
+source_file="res://Sprites/cayenne_small.png"
+dest_files=["res://.godot/imported/cayenne_small.png-3074d1e9c938b8d22fa06f4a7316fb9f.ctex"]
 
 [params]
 

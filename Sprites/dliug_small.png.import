@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kytxqhjdp31x"
-path="res://.godot/imported/dliug_small.png-4c702300272f9842ce762ccc9f75f714.ctex"
+path="res://.godot/imported/dliug_small.png-d95960dfb7cda117d151d26b0cc91d23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/dliug_small.png"
-dest_files=["res://.godot/imported/dliug_small.png-4c702300272f9842ce762ccc9f75f714.ctex"]
+source_file="res://Sprites/dliug_small.png"
+dest_files=["res://.godot/imported/dliug_small.png-d95960dfb7cda117d151d26b0cc91d23.ctex"]
 
 [params]
 

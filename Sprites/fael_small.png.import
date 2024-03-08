@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dslb6vuio5rwm"
-path="res://.godot/imported/fael_small.png-fe2d5cc254c769362808d087b644d4fb.ctex"
+path="res://.godot/imported/fael_small.png-4a931e605f58a487317ba1d5e14017f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/fael_small.png"
-dest_files=["res://.godot/imported/fael_small.png-fe2d5cc254c769362808d087b644d4fb.ctex"]
+source_file="res://Sprites/fael_small.png"
+dest_files=["res://.godot/imported/fael_small.png-4a931e605f58a487317ba1d5e14017f7.ctex"]
 
 [params]
 

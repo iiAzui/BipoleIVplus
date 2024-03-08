@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1xtb30uomchj"
-path="res://.godot/imported/gnirif_small.png-b1113423e48a2e9ceba6afe9acadde8f.ctex"
+path="res://.godot/imported/gnirif_small.png-993b2cddf9755e16e5dc0e242a6bae7a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/gnirif_small.png"
-dest_files=["res://.godot/imported/gnirif_small.png-b1113423e48a2e9ceba6afe9acadde8f.ctex"]
+source_file="res://Sprites/gnirif_small.png"
+dest_files=["res://.godot/imported/gnirif_small.png-993b2cddf9755e16e5dc0e242a6bae7a.ctex"]
 
 [params]
 

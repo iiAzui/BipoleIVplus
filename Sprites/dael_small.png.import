@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lygjmdsol6sx"
-path="res://.godot/imported/dael_small.png-79a9333f61da2117ef69f026813d3444.ctex"
+path="res://.godot/imported/dael_small.png-62a129dd9c0dc3a5711ed0687738f08f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Spritespt1/dael_small.png"
-dest_files=["res://.godot/imported/dael_small.png-79a9333f61da2117ef69f026813d3444.ctex"]
+source_file="res://Sprites/dael_small.png"
+dest_files=["res://.godot/imported/dael_small.png-62a129dd9c0dc3a5711ed0687738f08f.ctex"]
 
 [params]
 
