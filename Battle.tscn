@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cnnvgayg74dqn"]
+[gd_scene load_steps=23 format=3 uid="uid://cnnvgayg74dqn"]
 
 [ext_resource type="Script" path="res://Cursor.gd" id="1_c021g"]
 [ext_resource type="Texture2D" uid="uid://pvptlf4122jo" path="res://Setup/Box.png" id="1_nqlky"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Texts.gd" id="5_qumxx"]
 [ext_resource type="Texture2D" uid="uid://q6s74u6bktan" path="res://Setup/Outsidebox.png" id="6_cst8o"]
 [ext_resource type="Texture2D" uid="uid://yw476j47tg4w" path="res://Sprites/proton_small.png" id="8_77wd3"]
+[ext_resource type="Script" path="res://Proton.gd" id="8_ghuua"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fs5lt"]
 size = Vector2(32, 32)
@@ -66,7 +67,7 @@ z_index = -99
 texture = ExtResource("4_njdq7")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Box"]
-position = Vector2(-304, -224)
+position = Vector2(304, 224)
 script = ExtResource("1_c021g")
 
 [node name="Cursor" type="Sprite2D" parent="Box/CharacterBody2D"]
@@ -81,6 +82,7 @@ texture = ExtResource("4_fo5yk")
 shape = SubResource("RectangleShape2D_fs5lt")
 
 [node name="Texts" type="Node2D" parent="."]
+unique_name_in_owner = true
 visible = false
 script = ExtResource("5_qumxx")
 
@@ -361,6 +363,7 @@ scale = Vector2(0.247742, 0.192)
 texture = ExtResource("4_fo5yk")
 
 [node name="TextsNormal" type="Node2D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("5_qumxx")
 
 [node name="Outsidebox" type="Sprite2D" parent="TextsNormal"]
@@ -378,6 +381,7 @@ text = "Person1"
 label_settings = SubResource("LabelSettings_32ikj")
 
 [node name="P1HP" type="Label" parent="TextsNormal/Label"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_top = 24.0
 offset_right = 63.0
@@ -385,7 +389,8 @@ offset_bottom = 47.0
 text = "P1HP"
 label_settings = SubResource("LabelSettings_puamo")
 
-[node name="P1HP2" type="Label" parent="TextsNormal/Label"]
+[node name="P1Class" type="Label" parent="TextsNormal/Label"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_top = 48.0
 offset_right = 63.0
@@ -393,7 +398,8 @@ offset_bottom = 71.0
 text = "P1Class"
 label_settings = SubResource("LabelSettings_puamo")
 
-[node name="P1HP3" type="Label" parent="TextsNormal/Label"]
+[node name="P1Level" type="Label" parent="TextsNormal/Label"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_top = 72.0
 offset_right = 63.0
@@ -401,7 +407,8 @@ offset_bottom = 95.0
 text = "P1Level"
 label_settings = SubResource("LabelSettings_puamo")
 
-[node name="P1HP4" type="Label" parent="TextsNormal/Label"]
+[node name="P1A1" type="Label" parent="TextsNormal/Label"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_top = 96.0
 offset_right = 63.0
@@ -409,12 +416,13 @@ offset_bottom = 119.0
 text = "P1A1"
 label_settings = SubResource("LabelSettings_puamo")
 
-[node name="P1HP5" type="Label" parent="TextsNormal/Label"]
+[node name="P1S1" type="Label" parent="TextsNormal/Label"]
+unique_name_in_owner = true
 layout_mode = 0
 offset_top = 120.0
 offset_right = 63.0
 offset_bottom = 143.0
-text = "P1A2"
+text = "P1S1"
 label_settings = SubResource("LabelSettings_puamo")
 
 [node name="p1Box" type="Sprite2D" parent="TextsNormal/Label"]
@@ -422,7 +430,8 @@ position = Vector2(96, -8)
 scale = Vector2(1.28, 1.28)
 texture = ExtResource("4_fo5yk")
 
-[node name="p1Sprite" type="Sprite2D" parent="TextsNormal/Label/p1Box"]
+[node name="P1Sprite" type="Sprite2D" parent="TextsNormal/Label/p1Box"]
+unique_name_in_owner = true
 position = Vector2(-1.52588e-05, 0)
 texture = ExtResource("8_77wd3")
 
@@ -469,6 +478,8 @@ label_settings = SubResource("LabelSettings_32ikj")
 [node name="Proton" type="CharacterBody2D" parent="."]
 position = Vector2(-568, 208)
 scale = Vector2(0.64, 0.64)
+script = ExtResource("8_ghuua")
+NumName = 1
 
 [node name="Proton" type="Sprite2D" parent="Proton"]
 position = Vector2(0, -3.05176e-05)
@@ -479,4 +490,7 @@ centered = false
 position = Vector2(25, 25)
 shape = SubResource("RectangleShape2D_ncoqg")
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="Box/CharacterBody2D/Area2D" to="Texts" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Box/CharacterBody2D/Area2D" to="Texts" method="_on_area_2d_body_exited"]
