@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://da2b80p3dhtok"]
+
+[ext_resource type="Texture2D" uid="uid://b5dxyrtb2nta1" path="res://Sprites/blueslime_small.png" id="1_fan6q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypyqh"]
+size = Vector2(16, 16)
+
+[node name="Enemy" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("1_fan6q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_ypyqh")
+disabled = true

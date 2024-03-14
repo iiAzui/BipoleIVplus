@@ -93,38 +93,39 @@ func _on_area_2d_body_entered(body):
 			#%Bio.text = "Proton is from Nolavillia, though he grew up in Bipole and was raised by Scien.\nHe now serves under the Territory of Static as a high-ranking knight alongside\n Scien and the Elemental Offense Squad."
 		#%EXPTHING.text = "Chapter EXP Level Determinant: 2"
 		#%Portrait.texture = load("res://Portraits/proton_big.png")
-	var num =  body.NumName
-	%Name.text = Globals.NAME[num]
-	%LVLEXP.text = "Level: " + str(Globals.LVLEXP[num][0]) + " EXP: " + str(Globals.LVLEXP[num][1])
-	%ATKDEFRES.text = "ATK: " + str(Globals.ATKDEFRES[num][0]) + " DEF: " + str(Globals.ATKDEFRES[num][1]) + " RES: " + str(Globals.ATKDEFRES[num][2])
-	%SPDAGLACR.text = "SPD: " + str(Globals.SPDAGLACR[num][0]) + " AGL: " + str(Globals.SPDAGLACR[num][1]) + " ACL: " + str(Globals.SPDAGLACR[num][2])
-	if true == true:
-		%A1.text = str(Globals.A1[num])
-		%A2.text = str(Globals.A2[num])
-		%A3.text = str(Globals.A3[num])
-		%A4.text = str(Globals.A4[num])
-	if true == true:
-		%S1.text = str(Globals.S1[num])
-		%S2.text = str(Globals.S2[num])
-		%S3.text = str(Globals.S3[num])
-		%S4.text = str(Globals.S4[num])
-	if true == true:
-		%T1.text = str(Globals.T1[num])
-		%T2.text = str(Globals.T2[num])
-		%T3.text = str(Globals.T3[num])
-		%T4.text = str(Globals.T4[num])
-	%Class.text = "Class: " + Globals.Class[num]
-	%HP.text = "HP: " + str(Globals.HP[num][0]) + "/" + str(Globals.HP[num][1])
-	if true == true:
-		%ATKHPDEF.text = "ATK: " + str(Globals.NAME[num])
-		%RESAGLACR.text = "RES: " + str(Globals.NAME[num])
-	if true == true:
-		%ATKHPDEF.text = "ATK: [" + str(Globals.ATKHPDEF[num][0][0]) +", "+str(Globals.ATKHPDEF[num][0][1]) + "] HP: [" + str(Globals.ATKHPDEF[num][1][0]) +", "+str(Globals.ATKHPDEF[num][1][1]) + "] DEF: []" + str(Globals.ATKHPDEF[num][2][0]) +", "+str(Globals.ATKHPDEF[num][2][1]) + "]"
-		%RESAGLACR.text = "RES: [" + str(Globals.RESAGLACR[num][0][0]) +", "+str(Globals.RESAGLACR[num][0][1]) + "] AGL: [" + str(Globals.RESAGLACR[num][1][0]) +", "+str(Globals.RESAGLACR[num][1][1]) + "] ACR: []" + str(Globals.RESAGLACR[num][2][0]) +", "+str(Globals.RESAGLACR[num][2][1]) + "]"
-	if true == true:
-		%Bio.text = str(Globals.Bio[num])
-	%EXPTHING.text = "Chapter EXP Level Determinant: " + str(Globals.EXPTHING[num])
-	%Portrait.texture = load(str(Globals.Portrait[num]))
+	if body.name != "Enemy":
+		var num =  body.NumName
+		%Name.text = Globals.NAME[num]
+		%LVLEXP.text = "Level: " + str(Globals.LVLEXP[num][0]) + " EXP: " + str(Globals.LVLEXP[num][1])
+		%ATKDEFRES.text = "ATK: " + str(Globals.ATKDEFRES[num][0]) + " DEF: " + str(Globals.ATKDEFRES[num][1]) + " RES: " + str(Globals.ATKDEFRES[num][2])
+		%SPDAGLACR.text = "SPD: " + str(Globals.SPDAGLACR[num][0]) + " AGL: " + str(Globals.SPDAGLACR[num][1]) + " ACL: " + str(Globals.SPDAGLACR[num][2])
+		if true == true:
+			%A1.text = str(Globals.A1[num])
+			%A2.text = str(Globals.A2[num])
+			%A3.text = str(Globals.A3[num])
+			%A4.text = str(Globals.A4[num])
+		if true == true:
+			%S1.text = str(Globals.S1[num])
+			%S2.text = str(Globals.S2[num])
+			%S3.text = str(Globals.S3[num])
+			%S4.text = str(Globals.S4[num])
+		if true == true:
+			%T1.text = str(Globals.T1[num])
+			%T2.text = str(Globals.T2[num])
+			%T3.text = str(Globals.T3[num])
+			%T4.text = str(Globals.T4[num])
+		%Class.text = "Class: " + Globals.Class[num]
+		%HP.text = "HP: " + str(Globals.HP[num][0]) + "/" + str(Globals.HP[num][1])
+		if true == true:
+			%ATKHPDEF.text = "ATK: " + str(Globals.NAME[num])
+			%RESAGLACR.text = "RES: " + str(Globals.NAME[num])
+		if true == true:
+			%ATKHPDEF.text = "ATK: [" + str(Globals.ATKHPDEF[num][0][0]) +", "+str(Globals.ATKHPDEF[num][0][1]) + "] HP: [" + str(Globals.ATKHPDEF[num][1][0]) +", "+str(Globals.ATKHPDEF[num][1][1]) + "] DEF: []" + str(Globals.ATKHPDEF[num][2][0]) +", "+str(Globals.ATKHPDEF[num][2][1]) + "]"
+			%RESAGLACR.text = "RES: [" + str(Globals.RESAGLACR[num][0][0]) +", "+str(Globals.RESAGLACR[num][0][1]) + "] AGL: [" + str(Globals.RESAGLACR[num][1][0]) +", "+str(Globals.RESAGLACR[num][1][1]) + "] ACR: []" + str(Globals.RESAGLACR[num][2][0]) +", "+str(Globals.RESAGLACR[num][2][1]) + "]"
+		if true == true:
+			%Bio.text = str(Globals.Bio[num])
+		%EXPTHING.text = "Chapter EXP Level Determinant: " + str(Globals.EXPTHING[num])
+		%Portrait.texture = load(str(Globals.Portrait[num]))
 
 func _on_area_2d_body_exited(body):
 	%Texts.visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cnnvgayg74dqn"]
+[gd_scene load_steps=24 format=3 uid="uid://cnnvgayg74dqn"]
 
 [ext_resource type="Script" path="res://Cursor.gd" id="1_c021g"]
 [ext_resource type="Texture2D" uid="uid://pvptlf4122jo" path="res://Setup/Box.png" id="1_nqlky"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://q6s74u6bktan" path="res://Setup/Outsidebox.png" id="6_cst8o"]
 [ext_resource type="Texture2D" uid="uid://yw476j47tg4w" path="res://Sprites/proton_small.png" id="8_77wd3"]
 [ext_resource type="Script" path="res://Proton.gd" id="8_ghuua"]
+[ext_resource type="PackedScene" uid="uid://da2b80p3dhtok" path="res://Enemy.tscn" id="9_xahdi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fs5lt"]
 size = Vector2(32, 32)
@@ -491,6 +492,9 @@ position = Vector2(25, 25)
 shape = SubResource("RectangleShape2D_ncoqg")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Enemy" parent="." instance=ExtResource("9_xahdi")]
+position = Vector2(-536, 208)
 
 [connection signal="body_entered" from="Box/CharacterBody2D/Area2D" to="Texts" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Box/CharacterBody2D/Area2D" to="Texts" method="_on_area_2d_body_exited"]
