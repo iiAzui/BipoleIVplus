@@ -372,7 +372,7 @@ position = Vector2(328, 0)
 scale = Vector2(15.5, 20)
 texture = ExtResource("6_cst8o")
 
-[node name="Label" type="Label" parent="TextsNormal"]
+[node name="P1" type="Label" parent="TextsNormal"]
 offset_left = 128.0
 offset_top = -280.0
 offset_right = 191.0
@@ -380,7 +380,7 @@ offset_bottom = -257.0
 text = "Person1"
 label_settings = SubResource("LabelSettings_32ikj")
 
-[node name="P1HP" type="Label" parent="TextsNormal/Label"]
+[node name="P1HP" type="Label" parent="TextsNormal/P1"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_top = 24.0
@@ -389,7 +389,7 @@ offset_bottom = 47.0
 text = "P1HP"
 label_settings = SubResource("LabelSettings_puamo")
 
-[node name="P1Class" type="Label" parent="TextsNormal/Label"]
+[node name="P1Class" type="Label" parent="TextsNormal/P1"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_top = 48.0
@@ -398,7 +398,7 @@ offset_bottom = 71.0
 text = "P1Class"
 label_settings = SubResource("LabelSettings_puamo")
 
-[node name="P1Level" type="Label" parent="TextsNormal/Label"]
+[node name="P1Level" type="Label" parent="TextsNormal/P1"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_top = 72.0
@@ -407,7 +407,7 @@ offset_bottom = 95.0
 text = "P1Level"
 label_settings = SubResource("LabelSettings_puamo")
 
-[node name="P1A1" type="Label" parent="TextsNormal/Label"]
+[node name="P1A1" type="Label" parent="TextsNormal/P1"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_top = 96.0
@@ -416,7 +416,7 @@ offset_bottom = 119.0
 text = "P1A1"
 label_settings = SubResource("LabelSettings_puamo")
 
-[node name="P1S1" type="Label" parent="TextsNormal/Label"]
+[node name="P1S1" type="Label" parent="TextsNormal/P1"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_top = 120.0
@@ -425,17 +425,17 @@ offset_bottom = 143.0
 text = "P1S1"
 label_settings = SubResource("LabelSettings_puamo")
 
-[node name="p1Box" type="Sprite2D" parent="TextsNormal/Label"]
+[node name="p1Box" type="Sprite2D" parent="TextsNormal/P1"]
 position = Vector2(96, -8)
 scale = Vector2(1.28, 1.28)
 texture = ExtResource("4_fo5yk")
 
-[node name="P1Sprite" type="Sprite2D" parent="TextsNormal/Label/p1Box"]
+[node name="P1Sprite" type="Sprite2D" parent="TextsNormal/P1/p1Box"]
 unique_name_in_owner = true
 position = Vector2(-1.52588e-05, 0)
 texture = ExtResource("8_77wd3")
 
-[node name="Label2" type="Label" parent="TextsNormal"]
+[node name="P2" type="Label" parent="TextsNormal"]
 offset_left = 128.0
 offset_top = -88.0
 offset_right = 191.0
@@ -443,7 +443,7 @@ offset_bottom = -65.0
 text = "Person2"
 label_settings = SubResource("LabelSettings_32ikj")
 
-[node name="Label3" type="Label" parent="TextsNormal"]
+[node name="P3" type="Label" parent="TextsNormal"]
 offset_left = 128.0
 offset_top = 104.0
 offset_right = 191.0
@@ -451,7 +451,7 @@ offset_bottom = 127.0
 text = "Person3"
 label_settings = SubResource("LabelSettings_32ikj")
 
-[node name="Label4" type="Label" parent="TextsNormal"]
+[node name="P4" type="Label" parent="TextsNormal"]
 offset_left = 320.0
 offset_top = -280.0
 offset_right = 383.0
@@ -459,7 +459,7 @@ offset_bottom = -257.0
 text = "Person4"
 label_settings = SubResource("LabelSettings_32ikj")
 
-[node name="Label5" type="Label" parent="TextsNormal"]
+[node name="P5" type="Label" parent="TextsNormal"]
 offset_left = 320.0
 offset_top = -88.0
 offset_right = 383.0
@@ -467,7 +467,7 @@ offset_bottom = -65.0
 text = "Person5"
 label_settings = SubResource("LabelSettings_32ikj")
 
-[node name="Label6" type="Label" parent="TextsNormal"]
+[node name="P6" type="Label" parent="TextsNormal"]
 offset_left = 320.0
 offset_top = 104.0
 offset_right = 383.0
