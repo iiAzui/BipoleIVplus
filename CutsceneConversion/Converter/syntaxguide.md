@@ -7,7 +7,7 @@ This document contains what each token should do in Converted Cutscene language,
 ### `=`
 
 Wait for user input before moving to the next dialogue.
-It'll only wait for input after this, if it's not currently within an ignored branch section.
+It'll only wait for input after this if it's not currently within an ignored branch section.
 
 ### `==`
 
