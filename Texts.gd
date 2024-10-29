@@ -14,7 +14,7 @@ extends Node2D
 		#if true == true:
 			#%S1.text = "N/A"
 			#%S2.text = ""
-			#%S3.text = ""
+			#%S3.text = "" d
 			#%S4.text = ""
 		#if true == true:
 			#%T1.text = "Physical Primary"
