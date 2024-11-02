@@ -14,7 +14,7 @@ const TILE_SIZE: float = 64.0
 func _ready() -> void:
 	# Setup the grid
 	grid = []
-	grid.resize(width*height)
+	grid.resize(width * height)
 	
 	# Get all units already in this scene and initialize them in the grid array based on their node position
 	for unit: Unit in get_children():
