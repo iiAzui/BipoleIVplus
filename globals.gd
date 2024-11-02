@@ -50,3 +50,36 @@ var Sprite = ["0",str(ProtonPathS),"Quest","Scien","Romra"]
 
 
 
+
+
+var Party = ["Proton","Justin","NULL","NULL","NULL","NULL"]
+
+var Names = ["Proton","Justin"]
+
+var ClassBioTraits = [
+	#[Class, Bio, [Trait1, Trait2, 0]]
+	["N/A", "N/A",["N/A",0]],
+	["Xuir Knight", "Proton is from Nolavillia, though he grew up in Bipole and was raised by Scien.\nHe now serves under the Territory of Static as a high-ranking knight alongside \nScien and the Elemental Offense Squad.", ["Xuir","Knight","Physical Primary",0] ]
+]
+
+var LevelExpExpNeeded = [
+	# [Level, [Exp, neededExp]]
+	[0,[0,0]],
+	[1, [0,2]] #Proton
+]
+
+var MovesNums = [
+	#[[atc1, atc2], [sup1, sup2]]
+	[[0],[0]],
+	[[1],[0]]
+]
+
+var Attacks = [
+	#[Name, Range, Damage / Healing (-), effect]
+	["N/A",0,0,0]
+]
+
+var Supports = [
+	#[Name, Range, Damage / Healing (-), effect]
+	["N/A",0,0,0]
+]

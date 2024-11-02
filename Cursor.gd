@@ -13,3 +13,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Down"):
 		if self.position.y < 224:
 			self.position.y += 32
+	
+	if Input.is_action_just_pressed("Select"):
+		pass
+			
