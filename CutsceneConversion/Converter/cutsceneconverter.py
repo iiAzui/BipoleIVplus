@@ -38,35 +38,29 @@ text = text.replace('select.CancelAction()', '')
 text = re.sub(r'UnitFormation = \S+\n', '', text)
 text = re.sub(r'BattleStarted = \S+\n', '', text)
 
+text = re.sub(r'\t+(el)?if CutsceneIndex == \d+:\s*\n', '', text)
+text = re.sub(r'    +(el)?if CutsceneIndex == \d+:\s*\n', '', text)
+
+text = re.sub(r'elif CutsceneIndex == \d+:\s*\n', '', text)
+text = re.sub(r'if CutsceneIndex == \d+:\s*\n', '', text)
+
+text = text.replace('(screensetup.BattleScreen).onkey(Cutscene, "space")', '')
+
+# Divisions between dialogue lines
+text = re.sub(r'    +\(screensetup.BattleScreen\).onkey\(Cutscene, "space"\)', '},\n{', text)
+text = re.sub(r'\t+\(screensetup.BattleScreen\).onkey\(Cutscene, "space"\)', '}\n{', text)
+
 # use this line to determine the battle that should be started after the current dialogue
-text = re.sub(r'UnitsToPlace = placeunits\.(\S+)Enemies\n', r'/battle \1\n', text)
-
-# remove cutsceneindex if/elif branches without important conditions
-# replace these with a = or == based on tabs
-text = re.sub(r'\t+(el)?if CutsceneIndex == \d+:\s*\n', '=\n', text)
-text = re.sub(r'    +(el)?if CutsceneIndex == \d+:\s*\n', '=\n', text)
-
-text = re.sub(r'elif CutsceneIndex == \d+:\s*\n', '==\n', text)
-text = re.sub(r'if CutsceneIndex == \d+:\s*\n', '\n', text)
-
-# turn onkey listener into just a '==' which will signify to the interpreter to wait for input before next dialogue/battle
-# HOWEVER if it has 2 or more tabs in fornt if it, it is within a cutscene-specific conditional branch. this is marked by just = which will not reset ifelse branches
-text = re.sub(r'    +\(screensetup.BattleScreen\).onkey\(Cutscene, "space"\)', '=', text)
-text = re.sub(r'\t+\(screensetup.BattleScreen\).onkey\(Cutscene, "space"\)', '=', text)
-
-# replace waiting for input without tabs with a double equal ==. this should also clear any ifelse branches active.
-text = text.replace('(screensetup.BattleScreen).onkey(Cutscene, "space")', '==')
+text = re.sub(r'UnitsToPlace = placeunits\.(\S+)Enemies\n', r'"battle": "\1",\n', text)
 
 # Start battle command - meant to override the behavior of the == with this as starting the battle on next input.
-text = text.replace('(screensetup.BattleScreen).onkey(BattleStart, "space")', '/startbattlenextinput')
-
-# convert text calls to ust the inner string - inside the double quotes, match any amt of characters that is not a double quote
+text = text.replace('(screensetup.BattleScreen).onkey(BattleStart, "space")', '"startbattlenextinput": true')
 
 # text1: one portrait + top line
 # desired txt format: 
 # {portrait_left:Proton}
 # dialogue...
-text = re.sub(r'Text1\(\"([^"]*)\",\s*units.([^.]*).Portrait\)', r'{portrait_left:\2}\n\1', text)
+text = re.sub(r'Text1\(\"([^"]*)\",\s*units.([^.]*).Portrait\)', r'\n},\n{\n\t"portrait_left": "\2", "text": "\1"', text)
 
 # text2: two portraits + top line
 # for some reason this shows up in 2 different formats in the bipole iv cutscene code...
@@ -74,46 +68,46 @@ text = re.sub(r'Text1\(\"([^"]*)\",\s*units.([^.]*).Portrait\)', r'{portrait_lef
 # {portrait_left:Proton} {portrait_right:Scien}
 # dialogue...
 text = re.sub(r'Text2\(\"(.*)\",\s*units.([^.]*).Portrait,\s*units.([^.]*).Portrait\)', 
-              r'{portrait_left:\2} {portrait_right:\3}\n\1', text)
+    r'\n},\n{\n\t"portrait_left": "\2", \n"portrait_right": "\3", \n"text": "\1"', text)
 text = re.sub(r'Text2\(\"(.*)\",\s*units.([^.]*).Portrait,\s*current_directory\+"\/Portraits\/([^.]*).gif"\)', 
-              r'{portrait_left:\2} {portrait_right:\3}\n\1', text)
+    r'\n},\n{\n\t"portrait_left": "\2", \n"portrait_right": "\3", \n"text": "\1"', text)
 
 # text3: no portraits, just top line
-text = re.sub(r'Text3\(\"(.*)\"\)', r'\1', text)
+text = re.sub(r'Text3\(\"(.*)\"\)', r'"text": "\1",', text)
 
 # line2 & line 3 just convert to strings that will appear under the first line which is always Text1/2/3
-text = re.sub(r'line[23]\(\"(.*)\"\)', r'\1', text)
+text = re.sub(r'line[23]\(\"(.*)\"\)', r'"text": "\1",', text)
 
 # ==== COMMANDS ====
 # set color command - sets bg color, may need to be integrated with godot a little better idk
-text = re.sub(r'screensetup.BattleScreen.bgcolor\("([^"]+)"\)', r'/bgcolor \1', text)
+text = re.sub(r'screensetup.BattleScreen.bgcolor\("([^"]+)"\)', r'"bgcolor": "\1",', text)
 
 # set chapter - will define the next chapter to run in the game
-text = re.sub(r'Chapter = "([^"]+)"', r'/startchapter \1', text)
+text = re.sub(r'Chapter = "([^"]+)"', r'"startchapter": "\1",', text)
 
-# add alive unit - this can probably be handled automatically... so ima just replace with nothing for now
+# add alive unit - this can be done automatically by looping over party in save file... so replace with nothing
 text = re.sub(r'units.UnitsAlive.append.+\n', '\n', text)
 
 # recruit unit command
-text = re.sub(r'units.UnitsRecruited.append\(units.(\w+)\)', r'/recruit \1', text)
+text = re.sub(r'units.UnitsRecruited.append\(units.(\w+)\)', r'"recruit": "\1",', text)
 
 # instant level up command
-text = re.sub(r'select\.InstantLevelUp\(units\.(\w+),(\d+)\)', r'/instantlevelup \1 \2', text)
+text = re.sub(r'select\.InstantLevelUp\(units\.(\w+),(\d+)\)', r'"instantlevelup": \["\1", "\2"\],', text)
 
 # place player units command
-text = text.replace('placeunits.PlacePlayerUnits()', '/placeplayerunits')
+text = text.replace('placeunits.PlacePlayerUnits()', '"placeplayerunits": true,')
 
 # place enemy units command
-text = text.replace('placeunits.PlaceEnemies(UnitFormation)', '/placeenemyunits')
+text = text.replace('placeunits.PlaceEnemies(UnitFormation)', '"placeenemyunits": true,')
 
 # place enemy units command
-text = text.replace('select.TextboxMaker.clear()', '/hidedialogue')
+text = text.replace('select.TextboxMaker.clear()', '"hidedialogue": true,')
 
 # enable battle control cmd for when cutscene happens during battle setup
-text = text.replace('select.Status = 0', '/enablebattlecontrol')
+text = text.replace('select.Status = 0', '"enablebattlecontrol": true,')
 
 # delay command
-text = re.sub(r'time\.sleep\(([\d\.]+)\)', r'/wait \1', text)
+text = re.sub(r'time\.sleep\(([\d\.]+)\)', r'"wait": \1,', text)
 
 # save command (could be removed to just save after every battle since this just appears after each battle)
 # DISABLED figure it out in the code, these are placed too randomly across the cutscenes, just save after a battle is won...
@@ -123,13 +117,13 @@ text = text.replace('SaveData()\n', '')
 
 # recruitment choice
 recruit_choice_regex = r'\(screensetup\.BattleScreen\)\.onkey\((\w+)RecruitYes, "q"\)\n\s*\(screensetup\.BattleScreen\)\.onkey\((\w+)RecruitNo, "w"\)'
-text = re.sub(recruit_choice_regex, r'/recruitchoice \1', text)
+text = re.sub(recruit_choice_regex, r'"recruitchoice": "\1",', text)
 
 # chapter level set command
-text = re.sub(r'ChapterLevel = (\d+)', r'/chapterlevel \1', text)
+text = re.sub(r'ChapterLevel = (\d+)', r'"chapterlevel": "\1"', text)
 
 # For recruitment checks, these should always be right after a /recruitchoice command.. so just check the result.
-text = re.sub(r'if Recruit(\w+) == True:', r'/if ChoiceSelected 0', text)
+text = re.sub(r'if Recruit(\w+) == True:', r' ChoiceSelected 0', text)
 
 # for any other unexpected flags. gonna keep this dsiabled for now idk why i even wrote this.
 # text = re.sub(r'if (\w+) == True:', r'/if \1', text)
@@ -186,9 +180,12 @@ text = re.sub(r'\[(\w+) has joined your party\]\n', '', text)
 text = re.sub(r'(=+\n)+==\n', '==\n', text)
 text = re.sub(r'(=\n)+=\n', '=\n', text)
 
+# wrap the whole thing inn json curly brackets
+text = "{\n{\n" + text + "\n}\n}"
+
 directory, filename = os.path.split(filepath)
 name, extension = os.path.splitext(filename)
-new_filepath = os.path.join(directory, name + '_converted.txt')
+new_filepath = os.path.join(directory, name + '_converted.json')
 print("new file: "+new_filepath)
 
 wf = open(new_filepath, "w")

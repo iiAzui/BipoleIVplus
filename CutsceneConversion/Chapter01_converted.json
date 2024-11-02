@@ -1,8 +1,10 @@
-/chapterlevel 2
-/bgcolor black
-[Chapter 01]
-"[Static Path, Territory of Static]"
-/bgcolor green
+{
+{
+"chapterlevel": "2"
+"bgcolor": "black",
+"text": "[Chapter 01]",
+"text": "[Static Path, Territory of Static]",
+"bgcolor": "green",
 },
 {
 "portrait_left": "Scien", 
@@ -12,9 +14,8 @@
 {
 "portrait_left": "Scien", 
 "portrait_right": "Proton", 
-"text": "Scien: We'll need to defeat them to continue"
-"onwards."
-"battle": Chapter1,
+"text": "Scien: We'll need to defeat them to continue onwards.",
+"battle": "Chapter1",
 "startbattlenextinput": true
 /elif IsAlive Scien
 },
@@ -23,15 +24,15 @@
 },
 {
 "portrait_left": Scien, "text": "Scien: We'll need to be careful, there will likely be"
-"more ahead."
-/startchapter Chapter 02
+"text": "more ahead.",
+"startchapter": "Chapter 02",
 /elif UnitsAliveGreater 1
-/startchapter Chapter 02
+"startchapter": "Chapter 02",
 /elif UnitsAliveEqual 1
 },
 {
 "portrait_left": Proton, "text": "Proton: It seems that all of the others have"
-"somehow died."
+"text": "somehow died.",
 },
 {
 "portrait_left": "Proton", 
@@ -52,25 +53,25 @@
 "portrait_left": "Proton", 
 "portrait_right": "azurehooded_big", 
 "text": "The Link: All of your allies have fallen, this is obviously"
-"not good."
+"text": "not good.",
 },
 {
 "portrait_left": "Proton", 
 "portrait_right": "azurehooded_big", 
 "text": "The Link: If you have done this by accident, please be"
-"more careful."
+"text": "more careful.",
 },
 {
 "portrait_left": "Proton", 
 "portrait_right": "azurehooded_big", 
 "text": "The Link: To make up for your lost allies, the"
-"Tnemecalpers will be assisting you."
+"text": "Tnemecalpers will be assisting you.",
 print(CutsceneIndex, "= 10")
-[The Tnemecalpers joined your party]
-/recruit TnemecalperI
-/recruit TnemecalperII
-/recruit TnemecalperIII
-/recruit TnemecalperIV
+"text": "[The Tnemecalpers joined your party]",
+"recruit", "TnemecalperI",
+"recruit", "TnemecalperII",
+"recruit", "TnemecalperIII",
+"recruit", "TnemecalperIV",
 /elif IsAlive TnemecalperI
 },
 {
@@ -78,4 +79,7 @@ print(CutsceneIndex, "= 10")
 },
 {
 "portrait_left": Proton, "text": "Proton: ...he's gone."
-/startchapter Chapter 02
+"startchapter": "Chapter 02",
+
+}
+}
