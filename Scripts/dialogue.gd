@@ -46,8 +46,23 @@ func _process(delta: float) -> void:
 func display_next_line() -> void:
 	line_index += 1
 	if line_index >= len(current_branch):
-		# TODO: go back a branhc if possible
-		printerr("end of dialogue reached. this probably isnt intended, a new chapter or battle should have started by now")
+		if line_index_stack.is_empty():
+			printerr("end of dialogue reached. this probably isnt intended, a new chapter or battle should have started by now")
+			return
+	
+		# retrace the steps to get back to the dialogue before the last branch was taken
+		current_branch = dialogue
+		for i in len(line_index_stack)-1:
+			var index_of_next_branch = line_index_stack[i]
+			var branch_name := line_branch_stack[i]
+			var branch: Dictionary = current_branch[index_of_next_branch]
+			current_branch = branch[branch_name]
+			
+		# go to the next line after the lbranch that is being exited
+		# and remove the index and branch name from the branch path stack
+		line_index = line_index_stack.pop_back() + 1
+		line_branch_stack.pop_back()
+		display_next_line()
 		return
 		
 	var line: Dictionary = current_branch[line_index]
@@ -68,6 +83,12 @@ func display_next_line() -> void:
 		dialogue_text.text = line["text"] if line.has("text") else ""
 		name_left.text = line["left"] if line.has("left") else ""
 		name_right.text = line["right"] if line.has("right") else ""
+		
+		if not line.has("text"):
+			display_next_line()
+			return
+		
+	print("index stack: ", line_index_stack, ", branch stack: ", line_branch_stack, ", current line: ", line_index)
 
 # Check if a condition is true. 
 # If none of the checks fail, condition returns true.
