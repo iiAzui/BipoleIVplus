@@ -1,3 +1,13 @@
-[gd_resource type="TileSet" format=3 uid="uid://dhpm4aemdlwfi"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dhpm4aemdlwfi"]
+
+[ext_resource type="Texture2D" uid="uid://dqw2mdnpc4s3y" path="res://Tilesets/forest.png" id="1_e7bpw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5a3hx"]
+texture = ExtResource("1_e7bpw")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
 
 [resource]
+tile_size = Vector2i(64, 64)
+sources/2 = SubResource("TileSetAtlasSource_5a3hx")
