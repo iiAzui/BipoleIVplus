@@ -8,13 +8,13 @@
         "text": "[Static Path, Territory of Static]"
     },
     {
-        "portrait_left": "Scien", 
-        "portrait_right": "Proton", 
+        "left": "Scien", 
+        "right": "Proton", 
         "text": "There are some Slimes blocking out way."
     },
     {
-        "portrait_left": "Scien", 
-        "portrait_right": "Proton", 
+        "left": "Scien", 
+        "right": "Proton", 
         "text": "We'll need to defeat them to continue onwards.",
         "battle": "Chapter1"
     },
@@ -24,11 +24,11 @@
         },
         "true": [
             {
-                "portrait_left": "Scien", 
+                "left": "Scien", 
                 "text": "We've defeated the enemy slimes."
             },
             {
-                "portrait_left": "Scien", 
+                "left": "Scien", 
                 "text": "We'll need to be careful, there will likely be more ahead.",
                 "startchapter": "Chapter 02"
             }
@@ -50,45 +50,45 @@
         },
         "true": [
             {
-                "portrait_left": "Proton", 
+                "left": "Proton", 
                 "text": "It seems that all of the others have somehow died."
             },
             {
-                "portrait_left": "Proton", 
-                "portrait_right": "azurehooded_big",
+                "left": "Proton", 
+                "right": "azurehooded_big",
                 "speaker": "right",
                 "name_right": "???",
                 "text": "..."
             },
             {
-                "portrait_left": "Proton", 
-                "portrait_right": "azurehooded_big", 
+                "left": "Proton", 
+                "right": "azurehooded_big", 
                 "text": "Proton: Who's there!?"
             },
             {
-                "portrait_left": "Proton", 
-                "portrait_right": "azurehooded_big", 
+                "left": "Proton", 
+                "right": "azurehooded_big", 
                 "speaker": "right",
                 "name_right": "???",
                 "text": "I am The Link..."
             },
             {
-                "portrait_left": "Proton", 
-                "portrait_right": "azurehooded_big",
+                "left": "Proton", 
+                "right": "azurehooded_big",
                 "speaker": "right",
                 "name_right": "New Link",
                 "text": "All of your allies have fallen, this is obviously not good."
             },
             {
-                "portrait_left": "Proton", 
-                "portrait_right": "azurehooded_big",
+                "left": "Proton", 
+                "right": "azurehooded_big",
                 "speaker": "right",
                 "name_right": "New Link",
                 "text": "If you have done this by accident, please be more careful."
             },
             {
-                "portrait_left": "Proton", 
-                "portrait_right": "azurehooded_big", 
+                "left": "Proton", 
+                "right": "azurehooded_big", 
                 "speaker": "right",
                 "name_right": "New Link",
                 "text": "To make up for your lost allies, the Tnemecalpers will be assisting you."
@@ -98,11 +98,11 @@
                 "recruit": ["TnemecalperI", "TnemecalperII", "TnemecalperIII", "TnemecalperIV"]
             },
             {
-                "portrait_left": "Proton",
+                "left": "Proton",
                 "text": "Proton: Hey, wait a second..."
             },
             {
-                "portrait_left": "Proton", 
+                "left": "Proton", 
                 "text": "Proton: ...he's gone.",
                 "startchapter": "Chapter 02"
             }
