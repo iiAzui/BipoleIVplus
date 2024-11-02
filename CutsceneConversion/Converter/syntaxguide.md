@@ -1,5 +1,5 @@
 Anytime there is an array of {} objects in the JSON file, this is a list of dialogue lines.
-The root list is a list of dialogue lines.
+The root list is a list of dialogue lines, as well as the "true" and "false" values in branch dialogue lines.
 
 ======== DIALOGUE LINE KEYS ========
 "battle"
@@ -24,7 +24,7 @@ The root list is a list of dialogue lines.
     The character on this side will be highlighted, and their name is displayed above the dialogue text, unless name is overridden.
 
 "startchapter"
-    After the current dialogue line, end the current dialogue and begin the next chapter's dialogue. The game should also probably auto-save here.
+    After the current dialogue line, end the current dialogue and begin the next chapter's dialogue with the given id. The game should also probably auto-save here.
 
 "text"
     The text that will show up. Unlike in the original Bipole IV, this should be all in 1 string instead of split between 3 lines.
@@ -39,8 +39,11 @@ After either of these dialogue lists are played all the way through or neither, 
 ========= CONDITIONS ==========
 The "condition" key's value will be a list of conditions. Here are the conditions:
 
-"is_alive": []. All units in the passed list must be alive.
+"is_alive": []
+    All units in the passed list must be alive.
 
-"units_alive_greater": #. Total amount of living units must be greater than this number.
+"units_alive_greater": #
+    Total amount of living units must be greater than this number.
 
-"units_alive_equal": #. Must have exactly this many units alive in the party.
+"units_alive_equal": #
+    Must have exactly this many units alive in the party.

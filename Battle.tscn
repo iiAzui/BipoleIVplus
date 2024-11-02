@@ -122,7 +122,6 @@ position = Vector2(-256, 0)
 zoom = Vector2(1.286, 1.307)
 
 [node name="RetroBox" type="Sprite2D" parent="."]
-position = Vector2(-248, 0)
 texture = ExtResource("1_nqlky")
 
 [node name="Insidebox" type="Sprite2D" parent="RetroBox"]
