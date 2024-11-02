@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cnnvgayg74dqn"]
+[gd_scene load_steps=44 format=3 uid="uid://cnnvgayg74dqn"]
 
 [ext_resource type="Script" path="res://Cursor.gd" id="1_c021g"]
 [ext_resource type="Script" path="res://Level.gd" id="1_fdsf4"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Proton.gd" id="8_ghuua"]
 [ext_resource type="PackedScene" uid="uid://da2b80p3dhtok" path="res://Enemy.tscn" id="9_xahdi"]
 [ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Portraits/proton_big.png" id="11_1rnof"]
+[ext_resource type="Texture2D" uid="uid://cg86jxdb07gtx" path="res://icon.svg" id="12_dkmyn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fs5lt"]
 size = Vector2(32, 32)
@@ -88,6 +89,37 @@ font_size = 10
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_j1hsf"]
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3gblg"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3rket"]
+font_size = 12
+font_color = Color(0, 0.560784, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_da464"]
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b0mk2"]
+font_size = 64
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_571py"]
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mn8kj"]
+font_size = 5
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ws7th"]
+size = Vector2(112, 23)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gyq0d"]
 font_size = 8
 font_color = Color(0, 0, 0, 1)
 
@@ -561,6 +593,7 @@ visible = false
 position = Vector2(-536, 208)
 
 [node name="SelectMenu" type="Node2D" parent="."]
+visible = false
 position = Vector2(59, 8)
 scale = Vector2(1.2, 1.2)
 
@@ -752,6 +785,320 @@ offset_bottom = 60.8333
 theme_override_font_sizes/font_size = 7
 text = "Cast"
 alignment = 0
+
+[node name="LeftPlayerRightEnemy" type="Node2D" parent="."]
+
+[node name="LeftOnHover" type="Node2D" parent="LeftPlayerRightEnemy"]
+
+[node name="Background" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
+position = Vector2(-640, 116)
+scale = Vector2(4, 8.25)
+texture = ExtResource("6_cst8o")
+
+[node name="Por" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
+position = Vector2(-640, 40)
+scale = Vector2(0.096, 0.096)
+texture = ExtResource("11_1rnof")
+
+[node name="PorFrame" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
+position = Vector2(-640, 40)
+scale = Vector2(1.92, 1.92)
+texture = ExtResource("4_fo5yk")
+
+[node name="Name" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover"]
+offset_left = -696.0
+offset_top = 88.0
+offset_right = -584.0
+offset_bottom = 111.0
+text = "Proton"
+label_settings = SubResource("LabelSettings_3gblg")
+horizontal_alignment = 1
+
+[node name="HP" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover"]
+offset_left = -664.0
+offset_top = 136.0
+offset_right = -612.0
+offset_bottom = 159.0
+text = "30 / 30"
+label_settings = SubResource("LabelSettings_3rket")
+horizontal_alignment = 1
+
+[node name="AttackBTN" type="Button" parent="LeftPlayerRightEnemy/LeftOnHover"]
+offset_left = -696.0
+offset_top = 160.0
+offset_right = -650.0
+offset_bottom = 185.0
+theme_override_font_sizes/font_size = 12
+text = "Attack"
+
+[node name="SupportBTN" type="Button" parent="LeftPlayerRightEnemy/LeftOnHover"]
+offset_left = -636.0
+offset_top = 160.0
+offset_right = -581.0
+offset_bottom = 185.0
+theme_override_font_sizes/font_size = 12
+text = "Support"
+
+[node name="LoreBTN" type="Button" parent="LeftPlayerRightEnemy/LeftOnHover"]
+offset_left = -632.0
+offset_top = 193.0
+offset_right = -586.0
+offset_bottom = 218.0
+theme_override_font_sizes/font_size = 12
+text = "Info"
+
+[node name="MoveBTN" type="Button" parent="LeftPlayerRightEnemy/LeftOnHover"]
+offset_left = -696.0
+offset_top = 193.0
+offset_right = -650.0
+offset_bottom = 218.0
+theme_override_font_sizes/font_size = 12
+text = "Move"
+
+[node name="Label" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover"]
+offset_left = -696.0
+offset_top = 217.0
+offset_right = -648.0
+offset_bottom = 229.0
+text = "SPD: 4"
+label_settings = SubResource("LabelSettings_da464")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Effect1" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
+position = Vector2(-688, 120)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("12_dkmyn")
+
+[node name="Label" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover/Effect1"]
+offset_left = -96.0
+offset_top = -120.0
+offset_right = -56.0
+offset_bottom = -32.0
+text = "1"
+label_settings = SubResource("LabelSettings_b0mk2")
+
+[node name="Effect2" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
+position = Vector2(-664, 120)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("12_dkmyn")
+
+[node name="Label" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover/Effect2"]
+offset_left = -96.0
+offset_top = -120.0
+offset_right = -56.0
+offset_bottom = -32.0
+text = "3"
+label_settings = SubResource("LabelSettings_b0mk2")
+
+[node name="Effect3" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
+position = Vector2(-640, 120)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("12_dkmyn")
+
+[node name="Label" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover/Effect3"]
+offset_left = -96.0
+offset_top = -120.0
+offset_right = -56.0
+offset_bottom = -32.0
+text = "1"
+label_settings = SubResource("LabelSettings_b0mk2")
+
+[node name="Effect4" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
+position = Vector2(-616, 120)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("12_dkmyn")
+
+[node name="Label" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover/Effect4"]
+offset_left = -96.0
+offset_top = -120.0
+offset_right = -56.0
+offset_bottom = -32.0
+text = "9"
+label_settings = SubResource("LabelSettings_b0mk2")
+
+[node name="Effect5" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
+position = Vector2(-592, 120)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("12_dkmyn")
+
+[node name="Label" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover/Effect5"]
+offset_left = -96.0
+offset_top = -120.0
+offset_right = -56.0
+offset_bottom = -32.0
+text = "20"
+label_settings = SubResource("LabelSettings_b0mk2")
+
+[node name="LeftAS" type="Node2D" parent="LeftPlayerRightEnemy"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftAS"]
+position = Vector2(-640, 80)
+scale = Vector2(4, 10.5)
+texture = ExtResource("6_cst8o")
+
+[node name="Por" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftAS"]
+position = Vector2(-640, 0)
+scale = Vector2(0.096, 0.096)
+texture = ExtResource("11_1rnof")
+
+[node name="PorFrame" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftAS"]
+position = Vector2(-640, 0)
+scale = Vector2(1.92, 1.92)
+texture = ExtResource("4_fo5yk")
+
+[node name="Name" type="Label" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -696.0
+offset_top = 48.0
+offset_right = -580.0
+offset_bottom = 71.0
+text = "Proton"
+label_settings = SubResource("LabelSettings_3gblg")
+horizontal_alignment = 1
+
+[node name="HP" type="Label" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -664.0
+offset_top = 72.0
+offset_right = -612.0
+offset_bottom = 95.0
+text = "30 / 30"
+label_settings = SubResource("LabelSettings_3rket")
+horizontal_alignment = 1
+
+[node name="ASLabel" type="Label" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -696.0
+offset_top = 88.0
+offset_right = -634.0
+offset_bottom = 111.0
+text = "Attacks:"
+label_settings = SubResource("LabelSettings_571py")
+
+[node name="RDT" type="Label" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -664.0
+offset_top = 112.0
+offset_right = -592.0
+offset_bottom = 120.0
+text = "Range, Damage, Type"
+label_settings = SubResource("LabelSettings_mn8kj")
+
+[node name="BTN1" type="Button" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -696.0
+offset_top = 120.0
+offset_right = -666.0
+offset_bottom = 142.0
+theme_override_font_sizes/font_size = 10
+text = "Slice"
+
+[node name="Area2D" type="Area2D" parent="LeftPlayerRightEnemy/LeftAS/BTN1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftPlayerRightEnemy/LeftAS/BTN1/Area2D"]
+position = Vector2(56, 11.5)
+shape = SubResource("RectangleShape2D_ws7th")
+
+[node name="BTN2" type="Button" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -696.0
+offset_top = 144.0
+offset_right = -666.0
+offset_bottom = 166.0
+theme_override_font_sizes/font_size = 10
+text = "Slice"
+
+[node name="Area2D" type="Area2D" parent="LeftPlayerRightEnemy/LeftAS/BTN2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftPlayerRightEnemy/LeftAS/BTN2/Area2D"]
+position = Vector2(56, 11.5)
+shape = SubResource("RectangleShape2D_ws7th")
+
+[node name="BTN3" type="Button" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -696.0
+offset_top = 168.0
+offset_right = -666.0
+offset_bottom = 190.0
+theme_override_font_sizes/font_size = 10
+text = "Slice"
+
+[node name="Area2D" type="Area2D" parent="LeftPlayerRightEnemy/LeftAS/BTN3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftPlayerRightEnemy/LeftAS/BTN3/Area2D"]
+position = Vector2(56, 11.5)
+shape = SubResource("RectangleShape2D_ws7th")
+
+[node name="BTN4" type="Button" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -696.0
+offset_top = 192.0
+offset_right = -666.0
+offset_bottom = 214.0
+theme_override_font_sizes/font_size = 10
+text = "Slice"
+
+[node name="Area2D" type="Area2D" parent="LeftPlayerRightEnemy/LeftAS/BTN4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftPlayerRightEnemy/LeftAS/BTN4/Area2D"]
+position = Vector2(56, 11.5)
+shape = SubResource("RectangleShape2D_ws7th")
+
+[node name="BTN5" type="Button" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -696.0
+offset_top = 216.0
+offset_right = -666.0
+offset_bottom = 238.0
+theme_override_font_sizes/font_size = 10
+text = "Slice"
+
+[node name="Area2D" type="Area2D" parent="LeftPlayerRightEnemy/LeftAS/BTN5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftPlayerRightEnemy/LeftAS/BTN5/Area2D"]
+position = Vector2(56, 11.5)
+shape = SubResource("RectangleShape2D_ws7th")
+
+[node name="A1RDT" type="Label" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -664.0
+offset_top = 124.0
+offset_right = -591.0
+offset_bottom = 140.0
+text = "1, 10d, Physical"
+label_settings = SubResource("LabelSettings_gyq0d")
+
+[node name="A2RDT" type="Label" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -664.0
+offset_top = 150.0
+offset_right = -591.0
+offset_bottom = 166.0
+text = "1, 10d, Physical"
+label_settings = SubResource("LabelSettings_gyq0d")
+
+[node name="A3RDT" type="Label" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -664.0
+offset_top = 174.0
+offset_right = -591.0
+offset_bottom = 190.0
+text = "1, 10d, Physical"
+label_settings = SubResource("LabelSettings_gyq0d")
+
+[node name="A4RDT" type="Label" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -664.0
+offset_top = 198.0
+offset_right = -591.0
+offset_bottom = 214.0
+text = "1, 10d, Physical"
+label_settings = SubResource("LabelSettings_gyq0d")
+
+[node name="A5RDT" type="Label" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -664.0
+offset_top = 222.0
+offset_right = -591.0
+offset_bottom = 238.0
+text = "1, 10d, Physical"
+label_settings = SubResource("LabelSettings_gyq0d")
+
+[node name="BackBTN" type="Button" parent="LeftPlayerRightEnemy/LeftAS"]
+offset_left = -688.0
+offset_top = -80.0
+offset_right = -592.0
+offset_bottom = -55.0
+theme_override_font_sizes/font_size = 12
+text = "Back"
 
 [connection signal="body_entered" from="RetroBox/CharacterBody2D/Area2D" to="oldStuff/Texts" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="RetroBox/CharacterBody2D/Area2D" to="oldStuff/Texts" method="_on_area_2d_body_exited"]
