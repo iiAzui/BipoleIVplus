@@ -61,9 +61,9 @@ extends Node2D
 	#%EXPTHING.text = ""
 	#%Portrait.texture = load("res://Portraits/selection.png") 
 
-func _on_area_2d_body_entered(body):
-	%Texts.visible = true
-	%TextsNormal.visible = false
+#func _on_area_2d_body_entered(body):
+	#%Texts.visible = true
+	#%TextsNormal.visible = false
 	#if body.NumName == 1:
 		#%Name.text = "Proton"
 		#%LVLEXP.text = "Level: 1 EXP: 0"
