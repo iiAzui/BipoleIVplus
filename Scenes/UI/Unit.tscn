@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://da2b80p3dhtok"]
+[gd_scene load_steps=3 format=3 uid="uid://da2b80p3dhtok"]
 
 [ext_resource type="Texture2D" uid="uid://b5dxyrtb2nta1" path="res://Sprites/blueslime_small.png" id="1_fan6q"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="1_w7otd"]
 
 [node name="Enemy" type="Node2D"]
+script = ExtResource("1_w7otd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
 scale = Vector2(1.28, 1.28)
 texture = ExtResource("1_fan6q")
