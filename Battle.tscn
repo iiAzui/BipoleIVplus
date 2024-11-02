@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://cnnvgayg74dqn"]
+[gd_scene load_steps=39 format=3 uid="uid://cnnvgayg74dqn"]
 
 [ext_resource type="Script" path="res://Cursor.gd" id="1_c021g"]
 [ext_resource type="Script" path="res://Level.gd" id="1_fdsf4"]
@@ -7,17 +7,42 @@
 [ext_resource type="Texture2D" uid="uid://cd4dfxidbynqc" path="res://Setup/Insidebox.png" id="4_njdq7"]
 [ext_resource type="Script" path="res://Texts.gd" id="5_qumxx"]
 [ext_resource type="Texture2D" uid="uid://q6s74u6bktan" path="res://Setup/Outsidebox.png" id="6_cst8o"]
-[ext_resource type="Texture2D" uid="uid://yw476j47tg4w" path="res://Sprites/proton_small.png" id="8_77wd3"]
-[ext_resource type="Script" path="res://Proton.gd" id="8_ghuua"]
-[ext_resource type="PackedScene" uid="uid://da2b80p3dhtok" path="res://Enemy.tscn" id="9_xahdi"]
 [ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Portraits/proton_big.png" id="11_1rnof"]
 [ext_resource type="Texture2D" uid="uid://cg86jxdb07gtx" path="res://icon.svg" id="12_dkmyn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fs5lt"]
 size = Vector2(32, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oj8ew"]
-size = Vector2(16, 16)
+[sub_resource type="LabelSettings" id="LabelSettings_3gblg"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3rket"]
+font_size = 12
+font_color = Color(0, 0.560784, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_da464"]
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b0mk2"]
+font_size = 64
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_571py"]
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mn8kj"]
+font_size = 5
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ws7th"]
+size = Vector2(112, 23)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gyq0d"]
+font_size = 8
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_t7rh3"]
 font_size = 12
@@ -34,9 +59,6 @@ font_color = Color(0, 0, 1, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_jv8rx"]
 font_size = 12
 font_color = Color(5.21015e-06, 0.526791, 3.85046e-07, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ncoqg"]
-size = Vector2(25, 25)
 
 [sub_resource type="LabelSettings" id="LabelSettings_pmhhk"]
 font_color = Color(0, 0, 0, 1)
@@ -92,37 +114,6 @@ font_color = Color(0, 0, 0, 1)
 font_size = 8
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_3gblg"]
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_3rket"]
-font_size = 12
-font_color = Color(0, 0.560784, 0, 1)
-outline_size = 1
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_da464"]
-font_size = 8
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_b0mk2"]
-font_size = 64
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_571py"]
-font_color = Color(1, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_mn8kj"]
-font_size = 5
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ws7th"]
-size = Vector2(112, 23)
-
-[sub_resource type="LabelSettings" id="LabelSettings_gyq0d"]
-font_size = 8
-font_color = Color(0, 0, 0, 1)
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fdsf4")
 
@@ -155,640 +146,10 @@ shape = SubResource("RectangleShape2D_fs5lt")
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="C1" type="CharacterBody2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(-552, 224)
-
-[node name="Sprite2D" type="Sprite2D" parent="C1"]
-position = Vector2(-4.76837e-07, 5.24521e-06)
-scale = Vector2(0.64, 0.64)
-texture = ExtResource("8_77wd3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="C1"]
-shape = SubResource("RectangleShape2D_oj8ew")
-
-[node name="oldStuff" type="Node2D" parent="."]
-
-[node name="LeftBox" type="Node2D" parent="oldStuff"]
-visible = false
-
-[node name="Sprite2D" type="Sprite2D" parent="oldStuff/LeftBox"]
-position = Vector2(-640, -4.76837e-06)
-scale = Vector2(4, 15.5)
-texture = ExtResource("6_cst8o")
-
-[node name="C1" type="Label" parent="oldStuff/LeftBox"]
-offset_left = -696.0
-offset_top = -192.0
-offset_right = -584.0
-offset_bottom = -152.0
-text = "Proton"
-label_settings = SubResource("LabelSettings_t7rh3")
-autowrap_mode = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="oldStuff/LeftBox/C1"]
-position = Vector2(24, -24)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("11_1rnof")
-
-[node name="A1" type="Label" parent="oldStuff/LeftBox/C1"]
-layout_mode = 0
-offset_top = 64.0
-offset_right = 48.0
-offset_bottom = 87.0
-text = "A1: Slice"
-label_settings = SubResource("LabelSettings_o6tw3")
-
-[node name="S1" type="Label" parent="oldStuff/LeftBox/C1"]
-layout_mode = 0
-offset_top = 88.0
-offset_right = 40.0
-offset_bottom = 111.0
-text = "S1: N/A"
-label_settings = SubResource("LabelSettings_abt6w")
-
-[node name="Label" type="Label" parent="oldStuff/LeftBox/C1"]
-layout_mode = 0
-offset_top = 40.0
-offset_right = 63.0
-offset_bottom = 63.0
-text = "HP: 30/30"
-label_settings = SubResource("LabelSettings_jv8rx")
-
-[node name="C2" type="Label" parent="oldStuff/LeftBox"]
-offset_left = -696.0
-offset_top = -32.0
-offset_right = -584.0
-offset_bottom = 8.0
-text = "Proton"
-label_settings = SubResource("LabelSettings_t7rh3")
-autowrap_mode = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="oldStuff/LeftBox/C2"]
-position = Vector2(24, -24)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("11_1rnof")
-
-[node name="A1" type="Label" parent="oldStuff/LeftBox/C2"]
-layout_mode = 0
-offset_top = 64.0
-offset_right = 40.0
-offset_bottom = 87.0
-text = "A1: Slice"
-label_settings = SubResource("LabelSettings_o6tw3")
-
-[node name="S1" type="Label" parent="oldStuff/LeftBox/C2"]
-layout_mode = 0
-offset_top = 88.0
-offset_right = 40.0
-offset_bottom = 111.0
-text = "S1: N/A"
-label_settings = SubResource("LabelSettings_abt6w")
-
-[node name="Label" type="Label" parent="oldStuff/LeftBox/C2"]
-layout_mode = 0
-offset_top = 40.0
-offset_right = 63.0
-offset_bottom = 63.0
-text = "HP: 30/30"
-label_settings = SubResource("LabelSettings_jv8rx")
-
-[node name="C3" type="Label" parent="oldStuff/LeftBox"]
-offset_left = -696.0
-offset_top = 120.0
-offset_right = -584.0
-offset_bottom = 160.0
-text = "Proton"
-label_settings = SubResource("LabelSettings_t7rh3")
-autowrap_mode = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="oldStuff/LeftBox/C3"]
-position = Vector2(24, -24)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("11_1rnof")
-
-[node name="A1" type="Label" parent="oldStuff/LeftBox/C3"]
-layout_mode = 0
-offset_top = 64.0
-offset_right = 40.0
-offset_bottom = 87.0
-text = "A1: Slice"
-label_settings = SubResource("LabelSettings_o6tw3")
-
-[node name="S1" type="Label" parent="oldStuff/LeftBox/C3"]
-layout_mode = 0
-offset_top = 88.0
-offset_right = 40.0
-offset_bottom = 111.0
-text = "S1: N/A"
-label_settings = SubResource("LabelSettings_abt6w")
-
-[node name="Label" type="Label" parent="oldStuff/LeftBox/C3"]
-layout_mode = 0
-offset_top = 40.0
-offset_right = 63.0
-offset_bottom = 63.0
-text = "HP: 30/30"
-label_settings = SubResource("LabelSettings_jv8rx")
-
-[node name="Proton" type="CharacterBody2D" parent="oldStuff"]
-visible = false
-position = Vector2(-568, 208)
-scale = Vector2(0.64, 0.64)
-script = ExtResource("8_ghuua")
-NumName = 1
-
-[node name="Proton" type="Sprite2D" parent="oldStuff/Proton"]
-position = Vector2(0, -3.05176e-05)
-texture = ExtResource("8_77wd3")
-centered = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="oldStuff/Proton"]
-position = Vector2(25, 25)
-shape = SubResource("RectangleShape2D_ncoqg")
-
-[node name="Texts" type="Node2D" parent="oldStuff"]
-unique_name_in_owner = true
-visible = false
-script = ExtResource("5_qumxx")
-
-[node name="Name" type="Label" parent="oldStuff/Texts"]
-unique_name_in_owner = true
-offset_left = 256.0
-offset_top = -304.0
-offset_right = 448.0
-offset_bottom = -264.0
-text = "Name
-"
-label_settings = SubResource("LabelSettings_pmhhk")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="LVLEXP" type="Label" parent="oldStuff/Texts"]
-unique_name_in_owner = true
-offset_left = 320.0
-offset_top = -256.0
-offset_right = 512.0
-offset_bottom = -233.0
-text = "Level: # EXP: #"
-label_settings = SubResource("LabelSettings_rbr16")
-
-[node name="ATKDEFRES" type="Label" parent="oldStuff/Texts"]
-unique_name_in_owner = true
-offset_left = 320.0
-offset_top = -216.0
-offset_right = 512.0
-offset_bottom = -193.0
-text = "ATK: # DEF: # RES: #"
-label_settings = SubResource("LabelSettings_0ktpo")
-
-[node name="SPDAGLACR" type="Label" parent="oldStuff/Texts"]
-unique_name_in_owner = true
-offset_left = 320.0
-offset_top = -176.0
-offset_right = 512.0
-offset_bottom = -153.0
-text = "SPD: # AGL: # ACR: #"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="AttacksL" type="Label" parent="oldStuff/Texts"]
-offset_left = 128.0
-offset_top = -64.0
-offset_right = 256.0
-offset_bottom = -41.0
-text = "Attacks:"
-label_settings = SubResource("LabelSettings_qv7ij")
-
-[node name="A1" type="Label" parent="oldStuff/Texts/AttacksL"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 24.0
-offset_right = 128.0
-offset_bottom = 47.0
-text = "1"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="A2" type="Label" parent="oldStuff/Texts/AttacksL"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 48.0
-offset_right = 128.0
-offset_bottom = 71.0
-text = "2"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="A3" type="Label" parent="oldStuff/Texts/AttacksL"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 72.0
-offset_right = 128.0
-offset_bottom = 95.0
-text = "3
-"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="A4" type="Label" parent="oldStuff/Texts/AttacksL"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 96.0
-offset_right = 128.0
-offset_bottom = 119.0
-text = "4"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="SupportsL" type="Label" parent="oldStuff/Texts"]
-offset_left = 256.0
-offset_top = -64.0
-offset_right = 384.0
-offset_bottom = -41.0
-text = "Supports:"
-label_settings = SubResource("LabelSettings_ryynp")
-
-[node name="S1" type="Label" parent="oldStuff/Texts/SupportsL"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 24.0
-offset_right = 128.0
-offset_bottom = 47.0
-text = "1"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="S2" type="Label" parent="oldStuff/Texts/SupportsL"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 48.0
-offset_right = 128.0
-offset_bottom = 71.0
-text = "2"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="S3" type="Label" parent="oldStuff/Texts/SupportsL"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 72.0
-offset_right = 128.0
-offset_bottom = 95.0
-text = "3"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="S4" type="Label" parent="oldStuff/Texts/SupportsL"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 96.0
-offset_right = 128.0
-offset_bottom = 119.0
-text = "4"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="TraitsL" type="Label" parent="oldStuff/Texts"]
-offset_left = 384.0
-offset_top = -64.0
-offset_right = 512.0
-offset_bottom = -40.0
-text = "Traits:"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="T1" type="Label" parent="oldStuff/Texts/TraitsL"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 72.0
-offset_right = 128.0
-offset_bottom = 96.0
-text = "3"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="T2" type="Label" parent="oldStuff/Texts/TraitsL"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 24.0
-offset_right = 128.0
-offset_bottom = 48.0
-text = "1"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="T3" type="Label" parent="oldStuff/Texts/TraitsL"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 48.0
-offset_right = 128.0
-offset_bottom = 72.0
-text = "2"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="T4" type="Label" parent="oldStuff/Texts/TraitsL"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_top = 96.0
-offset_right = 128.0
-offset_bottom = 120.0
-text = "4"
-label_settings = SubResource("LabelSettings_nmsho")
-
-[node name="Class" type="Label" parent="oldStuff/Texts"]
-unique_name_in_owner = true
-offset_left = 384.0
-offset_top = -320.0
-offset_right = 576.0
-offset_bottom = -280.0
-text = "Class: ____
-"
-label_settings = SubResource("LabelSettings_pmhhk")
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="HP" type="Label" parent="oldStuff/Texts"]
-unique_name_in_owner = true
-offset_left = 80.0
-offset_top = -320.0
-offset_right = 272.0
-offset_bottom = -275.0
-text = "HP: ##/##
-"
-label_settings = SubResource("LabelSettings_tjcoj")
-vertical_alignment = 1
-
-[node name="Growths" type="Label" parent="oldStuff/Texts"]
-offset_left = 248.0
-offset_top = 48.0
-offset_right = 440.0
-offset_bottom = 88.0
-text = "Growths:
-"
-label_settings = SubResource("LabelSettings_pmhhk")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ATKHPDEF" type="Label" parent="oldStuff/Texts/Growths"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = -40.0
-offset_top = 40.0
-offset_right = 248.0
-offset_bottom = 80.0
-text = "ATK: [##,#] HP: [##,#] DEF: [##,#]
-"
-label_settings = SubResource("LabelSettings_pmhhk")
-vertical_alignment = 1
-
-[node name="RESAGLACR" type="Label" parent="oldStuff/Texts/Growths"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = -40.0
-offset_top = 72.0
-offset_right = 248.0
-offset_bottom = 112.0
-text = "RES: [##,#] AGL: [##,#] ACR: [##,#]
-"
-label_settings = SubResource("LabelSettings_pmhhk")
-vertical_alignment = 1
-
-[node name="BioL" type="Label" parent="oldStuff/Texts"]
-offset_left = 312.0
-offset_top = 160.0
-offset_right = 352.0
-offset_bottom = 183.0
-text = "Bio:"
-label_settings = SubResource("LabelSettings_5kcyn")
-horizontal_alignment = 1
-
-[node name="Bio" type="Label" parent="oldStuff/Texts/BioL"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = -208.0
-offset_top = 32.0
-offset_right = 240.0
-offset_bottom = 160.0
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut quam urna. Vivamus sodales tortor massa, ut sodales velit fringilla eu. Ut quis congue neque. Maecenas et pretium nunc, eget ultricies sem. Donec at sollicitudin felis. Vivamus euismod elit eget mattis ornare. Etiam faucibus felis a enim mattis, a dignissim dui porta. Curabitur viverra sagittis justo, sit amet dapibus libero maximus ac. Sed convallis convallis pulvinar. Integer id elit bibendum nisi bibendum porta. Vivamus pretium, odio id cursus interdum, felis sem ornare tortor, ac dictum urna lectus in lorem. Proin finibus aliquam eros. Maecenas in elit quis lorem lacinia pharetra ac in felis."
-label_settings = SubResource("LabelSettings_8wkr0")
-autowrap_mode = 2
-
-[node name="EXPTHING" type="Label" parent="oldStuff/Texts"]
-unique_name_in_owner = true
-offset_left = 200.0
-offset_top = 288.0
-offset_right = 462.0
-offset_bottom = 311.0
-text = "Chapter EXP Level Determinant: #"
-label_settings = SubResource("LabelSettings_en13m")
-
-[node name="Outsidebox" type="Sprite2D" parent="oldStuff/Texts"]
-z_index = -1
-position = Vector2(328, 0)
-scale = Vector2(15.5, 20)
-texture = ExtResource("6_cst8o")
-
-[node name="Portrait" type="Sprite2D" parent="oldStuff/Texts/Outsidebox"]
-unique_name_in_owner = true
-position = Vector2(-8.77419, -8.8)
-scale = Vector2(0.0113548, 0.0088)
-texture = ExtResource("6_cst8o")
-
-[node name="PortraitBox" type="Sprite2D" parent="oldStuff/Texts/Outsidebox"]
-position = Vector2(-8.77419, -8.8)
-scale = Vector2(0.247742, 0.192)
-texture = ExtResource("4_fo5yk")
-
-[node name="Enemy" parent="oldStuff" instance=ExtResource("9_xahdi")]
-visible = false
-position = Vector2(-536, 208)
-
-[node name="SelectMenu" type="Node2D" parent="."]
-visible = false
-position = Vector2(59, 8)
-scale = Vector2(1.2, 1.2)
-
-[node name="Background" type="Sprite2D" parent="SelectMenu"]
-modulate = Color(1, 1, 1, 0.666667)
-position = Vector2(-256, -2.14577e-06)
-rotation = 0.000798879
-scale = Vector2(16, 4)
-texture = ExtResource("6_cst8o")
-
-[node name="Label" type="Label" parent="SelectMenu"]
-offset_left = -376.0
-offset_top = -56.0
-offset_right = -114.0
-offset_bottom = -33.0
-text = "Attack:                                Support:"
-label_settings = SubResource("LabelSettings_hddfu")
-
-[node name="Por" type="Sprite2D" parent="SelectMenu"]
-position = Vector2(-474.583, -26.4167)
-scale = Vector2(0.0558333, 0.0561667)
-texture = ExtResource("11_1rnof")
-
-[node name="PorOutline" type="Sprite2D" parent="SelectMenu"]
-position = Vector2(-474.5, -26.875)
-scale = Vector2(1.2, 1.2)
-texture = ExtResource("4_fo5yk")
-
-[node name="Sprite2D" type="Sprite2D" parent="SelectMenu"]
-position = Vector2(-256, 3.8147e-06)
-scale = Vector2(0.780488, 0.258065)
-texture = ExtResource("1_nqlky")
-
-[node name="HP" type="Label" parent="SelectMenu"]
-offset_left = -441.833
-offset_top = -55.1667
-offset_right = -373.833
-offset_bottom = -24.1667
-text = "HP / MaxHP:
-30 / 30"
-label_settings = SubResource("LabelSettings_s4f1b")
-
-[node name="EXP" type="Label" parent="SelectMenu"]
-offset_left = -504.0
-offset_top = 22.0
-offset_right = -385.0
-offset_bottom = 37.0
-text = "EXP / LVL Up: 0 / 2"
-label_settings = SubResource("LabelSettings_s4f1b")
-
-[node name="Name" type="Label" parent="SelectMenu"]
-offset_left = -504.0
-offset_top = 0.333332
-offset_right = -384.0
-offset_bottom = 23.3333
-text = "Proton"
-label_settings = SubResource("LabelSettings_q25qu")
-autowrap_mode = 1
-
-[node name="Level" type="Label" parent="SelectMenu"]
-offset_left = -441.667
-offset_top = -20.0
-offset_right = -396.667
-offset_bottom = -3.0
-text = "LVL: 1"
-label_settings = SubResource("LabelSettings_22ell")
-
-[node name="Attacks" type="VBoxContainer" parent="SelectMenu"]
-offset_left = -347.0
-offset_top = -30.3333
-offset_right = -209.0
-offset_bottom = 61.6667
-
-[node name="Attack1" type="Label" parent="SelectMenu/Attacks"]
-layout_mode = 2
-text = "Slice, 1, 10d"
-label_settings = SubResource("LabelSettings_apsa1")
-
-[node name="Attack2" type="Label" parent="SelectMenu/Attacks"]
-layout_mode = 2
-text = "Fireball, 2, 5d + 5dot"
-label_settings = SubResource("LabelSettings_apsa1")
-
-[node name="Attack3" type="Label" parent="SelectMenu/Attacks"]
-layout_mode = 2
-text = "gggg"
-label_settings = SubResource("LabelSettings_apsa1")
-
-[node name="Attack4" type="Label" parent="SelectMenu/Attacks"]
-layout_mode = 2
-text = "gggg"
-label_settings = SubResource("LabelSettings_apsa1")
-
-[node name="Attack5" type="Label" parent="SelectMenu/Attacks"]
-layout_mode = 2
-text = "gggg"
-label_settings = SubResource("LabelSettings_apsa1")
-
-[node name="Supports" type="VBoxContainer" parent="SelectMenu"]
-offset_left = -184.0
-offset_top = -32.0
-offset_right = -64.0
-offset_bottom = 54.0
-
-[node name="Support1" type="Label" parent="SelectMenu/Supports"]
-layout_mode = 2
-text = "S + 1: Medkit, 1, 25h"
-label_settings = SubResource("LabelSettings_apsa1")
-
-[node name="Support2" type="Label" parent="SelectMenu/Supports"]
-layout_mode = 2
-text = "S + 2:"
-label_settings = SubResource("LabelSettings_apsa1")
-
-[node name="Support3" type="Label" parent="SelectMenu/Supports"]
-layout_mode = 2
-text = "S + 3:"
-label_settings = SubResource("LabelSettings_apsa1")
-
-[node name="Support4" type="Label" parent="SelectMenu/Supports"]
-layout_mode = 2
-text = "S + 4:"
-label_settings = SubResource("LabelSettings_apsa1")
-
-[node name="Support5" type="Label" parent="SelectMenu/Supports"]
-layout_mode = 2
-text = "S + 5:"
-label_settings = SubResource("LabelSettings_apsa1")
-
-[node name="AExplain" type="Label" parent="SelectMenu"]
-offset_left = -320.0
-offset_top = -47.0
-offset_right = -192.0
-offset_bottom = -31.0
-text = "Keys, Move, Range, Effects"
-label_settings = SubResource("LabelSettings_j1hsf")
-
-[node name="SExplain" type="Label" parent="SelectMenu"]
-offset_left = -121.0
-offset_top = -47.0
-offset_right = 7.0
-offset_bottom = -31.0
-text = "Keys, Move, Range, Effects"
-label_settings = SubResource("LabelSettings_j1hsf")
-
-[node name="AtkButtons" type="Node2D" parent="SelectMenu"]
-
-[node name="Button" type="Button" parent="SelectMenu/AtkButtons"]
-offset_left = -376.0
-offset_top = -34.0
-offset_right = -349.0
-offset_bottom = -17.0
-theme_override_font_sizes/font_size = 7
-text = "Cast"
-alignment = 0
-
-[node name="Button2" type="Button" parent="SelectMenu/AtkButtons"]
-offset_left = -376.0
-offset_top = -14.8333
-offset_right = -349.0
-offset_bottom = 4.16667
-theme_override_font_sizes/font_size = 7
-text = "Cast"
-alignment = 0
-
-[node name="Button3" type="Button" parent="SelectMenu/AtkButtons"]
-offset_left = -376.0
-offset_top = 4.33333
-offset_right = -349.0
-offset_bottom = 23.3333
-theme_override_font_sizes/font_size = 7
-text = "Cast"
-alignment = 0
-
-[node name="Button4" type="Button" parent="SelectMenu/AtkButtons"]
-offset_left = -376.0
-offset_top = 22.6667
-offset_right = -349.0
-offset_bottom = 41.6667
-theme_override_font_sizes/font_size = 7
-text = "Cast"
-alignment = 0
-
-[node name="Button5" type="Button" parent="SelectMenu/AtkButtons"]
-offset_left = -376.0
-offset_top = 41.8333
-offset_right = -349.0
-offset_bottom = 60.8333
-theme_override_font_sizes/font_size = 7
-text = "Cast"
-alignment = 0
-
 [node name="LeftPlayerRightEnemy" type="Node2D" parent="."]
 
 [node name="LeftOnHover" type="Node2D" parent="LeftPlayerRightEnemy"]
+visible = false
 
 [node name="Background" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
 position = Vector2(-640, 116)
@@ -1100,5 +461,606 @@ offset_bottom = -55.0
 theme_override_font_sizes/font_size = 12
 text = "Back"
 
+[node name="oldStuff" type="Node2D" parent="."]
+
+[node name="LeftBox" type="Node2D" parent="oldStuff"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="oldStuff/LeftBox"]
+position = Vector2(-640, -4.76837e-06)
+scale = Vector2(4, 15.5)
+texture = ExtResource("6_cst8o")
+
+[node name="C1" type="Label" parent="oldStuff/LeftBox"]
+offset_left = -696.0
+offset_top = -192.0
+offset_right = -584.0
+offset_bottom = -152.0
+text = "Proton"
+label_settings = SubResource("LabelSettings_t7rh3")
+autowrap_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="oldStuff/LeftBox/C1"]
+position = Vector2(24, -24)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_1rnof")
+
+[node name="A1" type="Label" parent="oldStuff/LeftBox/C1"]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 48.0
+offset_bottom = 87.0
+text = "A1: Slice"
+label_settings = SubResource("LabelSettings_o6tw3")
+
+[node name="S1" type="Label" parent="oldStuff/LeftBox/C1"]
+layout_mode = 0
+offset_top = 88.0
+offset_right = 40.0
+offset_bottom = 111.0
+text = "S1: N/A"
+label_settings = SubResource("LabelSettings_abt6w")
+
+[node name="Label" type="Label" parent="oldStuff/LeftBox/C1"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 63.0
+offset_bottom = 63.0
+text = "HP: 30/30"
+label_settings = SubResource("LabelSettings_jv8rx")
+
+[node name="C2" type="Label" parent="oldStuff/LeftBox"]
+offset_left = -696.0
+offset_top = -32.0
+offset_right = -584.0
+offset_bottom = 8.0
+text = "Proton"
+label_settings = SubResource("LabelSettings_t7rh3")
+autowrap_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="oldStuff/LeftBox/C2"]
+position = Vector2(24, -24)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_1rnof")
+
+[node name="A1" type="Label" parent="oldStuff/LeftBox/C2"]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 40.0
+offset_bottom = 87.0
+text = "A1: Slice"
+label_settings = SubResource("LabelSettings_o6tw3")
+
+[node name="S1" type="Label" parent="oldStuff/LeftBox/C2"]
+layout_mode = 0
+offset_top = 88.0
+offset_right = 40.0
+offset_bottom = 111.0
+text = "S1: N/A"
+label_settings = SubResource("LabelSettings_abt6w")
+
+[node name="Label" type="Label" parent="oldStuff/LeftBox/C2"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 63.0
+offset_bottom = 63.0
+text = "HP: 30/30"
+label_settings = SubResource("LabelSettings_jv8rx")
+
+[node name="C3" type="Label" parent="oldStuff/LeftBox"]
+offset_left = -696.0
+offset_top = 120.0
+offset_right = -584.0
+offset_bottom = 160.0
+text = "Proton"
+label_settings = SubResource("LabelSettings_t7rh3")
+autowrap_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="oldStuff/LeftBox/C3"]
+position = Vector2(24, -24)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_1rnof")
+
+[node name="A1" type="Label" parent="oldStuff/LeftBox/C3"]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 40.0
+offset_bottom = 87.0
+text = "A1: Slice"
+label_settings = SubResource("LabelSettings_o6tw3")
+
+[node name="S1" type="Label" parent="oldStuff/LeftBox/C3"]
+layout_mode = 0
+offset_top = 88.0
+offset_right = 40.0
+offset_bottom = 111.0
+text = "S1: N/A"
+label_settings = SubResource("LabelSettings_abt6w")
+
+[node name="Label" type="Label" parent="oldStuff/LeftBox/C3"]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 63.0
+offset_bottom = 63.0
+text = "HP: 30/30"
+label_settings = SubResource("LabelSettings_jv8rx")
+
+[node name="Texts" type="Node2D" parent="oldStuff"]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("5_qumxx")
+
+[node name="Name" type="Label" parent="oldStuff/Texts"]
+unique_name_in_owner = true
+offset_left = 256.0
+offset_top = -304.0
+offset_right = 448.0
+offset_bottom = -264.0
+text = "Name
+"
+label_settings = SubResource("LabelSettings_pmhhk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LVLEXP" type="Label" parent="oldStuff/Texts"]
+unique_name_in_owner = true
+offset_left = 320.0
+offset_top = -256.0
+offset_right = 512.0
+offset_bottom = -233.0
+text = "Level: # EXP: #"
+label_settings = SubResource("LabelSettings_rbr16")
+
+[node name="ATKDEFRES" type="Label" parent="oldStuff/Texts"]
+unique_name_in_owner = true
+offset_left = 320.0
+offset_top = -216.0
+offset_right = 512.0
+offset_bottom = -193.0
+text = "ATK: # DEF: # RES: #"
+label_settings = SubResource("LabelSettings_0ktpo")
+
+[node name="SPDAGLACR" type="Label" parent="oldStuff/Texts"]
+unique_name_in_owner = true
+offset_left = 320.0
+offset_top = -176.0
+offset_right = 512.0
+offset_bottom = -153.0
+text = "SPD: # AGL: # ACR: #"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="AttacksL" type="Label" parent="oldStuff/Texts"]
+offset_left = 128.0
+offset_top = -64.0
+offset_right = 256.0
+offset_bottom = -41.0
+text = "Attacks:"
+label_settings = SubResource("LabelSettings_qv7ij")
+
+[node name="A1" type="Label" parent="oldStuff/Texts/AttacksL"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 24.0
+offset_right = 128.0
+offset_bottom = 47.0
+text = "1"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="A2" type="Label" parent="oldStuff/Texts/AttacksL"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 48.0
+offset_right = 128.0
+offset_bottom = 71.0
+text = "2"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="A3" type="Label" parent="oldStuff/Texts/AttacksL"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 72.0
+offset_right = 128.0
+offset_bottom = 95.0
+text = "3
+"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="A4" type="Label" parent="oldStuff/Texts/AttacksL"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 96.0
+offset_right = 128.0
+offset_bottom = 119.0
+text = "4"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="SupportsL" type="Label" parent="oldStuff/Texts"]
+offset_left = 256.0
+offset_top = -64.0
+offset_right = 384.0
+offset_bottom = -41.0
+text = "Supports:"
+label_settings = SubResource("LabelSettings_ryynp")
+
+[node name="S1" type="Label" parent="oldStuff/Texts/SupportsL"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 24.0
+offset_right = 128.0
+offset_bottom = 47.0
+text = "1"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="S2" type="Label" parent="oldStuff/Texts/SupportsL"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 48.0
+offset_right = 128.0
+offset_bottom = 71.0
+text = "2"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="S3" type="Label" parent="oldStuff/Texts/SupportsL"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 72.0
+offset_right = 128.0
+offset_bottom = 95.0
+text = "3"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="S4" type="Label" parent="oldStuff/Texts/SupportsL"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 96.0
+offset_right = 128.0
+offset_bottom = 119.0
+text = "4"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="TraitsL" type="Label" parent="oldStuff/Texts"]
+offset_left = 384.0
+offset_top = -64.0
+offset_right = 512.0
+offset_bottom = -40.0
+text = "Traits:"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="T1" type="Label" parent="oldStuff/Texts/TraitsL"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 72.0
+offset_right = 128.0
+offset_bottom = 96.0
+text = "3"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="T2" type="Label" parent="oldStuff/Texts/TraitsL"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 24.0
+offset_right = 128.0
+offset_bottom = 48.0
+text = "1"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="T3" type="Label" parent="oldStuff/Texts/TraitsL"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 48.0
+offset_right = 128.0
+offset_bottom = 72.0
+text = "2"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="T4" type="Label" parent="oldStuff/Texts/TraitsL"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 96.0
+offset_right = 128.0
+offset_bottom = 120.0
+text = "4"
+label_settings = SubResource("LabelSettings_nmsho")
+
+[node name="Class" type="Label" parent="oldStuff/Texts"]
+unique_name_in_owner = true
+offset_left = 384.0
+offset_top = -320.0
+offset_right = 576.0
+offset_bottom = -280.0
+text = "Class: ____
+"
+label_settings = SubResource("LabelSettings_pmhhk")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HP" type="Label" parent="oldStuff/Texts"]
+unique_name_in_owner = true
+offset_left = 80.0
+offset_top = -320.0
+offset_right = 272.0
+offset_bottom = -275.0
+text = "HP: ##/##
+"
+label_settings = SubResource("LabelSettings_tjcoj")
+vertical_alignment = 1
+
+[node name="Growths" type="Label" parent="oldStuff/Texts"]
+offset_left = 248.0
+offset_top = 48.0
+offset_right = 440.0
+offset_bottom = 88.0
+text = "Growths:
+"
+label_settings = SubResource("LabelSettings_pmhhk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ATKHPDEF" type="Label" parent="oldStuff/Texts/Growths"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -40.0
+offset_top = 40.0
+offset_right = 248.0
+offset_bottom = 80.0
+text = "ATK: [##,#] HP: [##,#] DEF: [##,#]
+"
+label_settings = SubResource("LabelSettings_pmhhk")
+vertical_alignment = 1
+
+[node name="RESAGLACR" type="Label" parent="oldStuff/Texts/Growths"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -40.0
+offset_top = 72.0
+offset_right = 248.0
+offset_bottom = 112.0
+text = "RES: [##,#] AGL: [##,#] ACR: [##,#]
+"
+label_settings = SubResource("LabelSettings_pmhhk")
+vertical_alignment = 1
+
+[node name="BioL" type="Label" parent="oldStuff/Texts"]
+offset_left = 312.0
+offset_top = 160.0
+offset_right = 352.0
+offset_bottom = 183.0
+text = "Bio:"
+label_settings = SubResource("LabelSettings_5kcyn")
+horizontal_alignment = 1
+
+[node name="Bio" type="Label" parent="oldStuff/Texts/BioL"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -208.0
+offset_top = 32.0
+offset_right = 240.0
+offset_bottom = 160.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut quam urna. Vivamus sodales tortor massa, ut sodales velit fringilla eu. Ut quis congue neque. Maecenas et pretium nunc, eget ultricies sem. Donec at sollicitudin felis. Vivamus euismod elit eget mattis ornare. Etiam faucibus felis a enim mattis, a dignissim dui porta. Curabitur viverra sagittis justo, sit amet dapibus libero maximus ac. Sed convallis convallis pulvinar. Integer id elit bibendum nisi bibendum porta. Vivamus pretium, odio id cursus interdum, felis sem ornare tortor, ac dictum urna lectus in lorem. Proin finibus aliquam eros. Maecenas in elit quis lorem lacinia pharetra ac in felis."
+label_settings = SubResource("LabelSettings_8wkr0")
+autowrap_mode = 2
+
+[node name="EXPTHING" type="Label" parent="oldStuff/Texts"]
+unique_name_in_owner = true
+offset_left = 200.0
+offset_top = 288.0
+offset_right = 462.0
+offset_bottom = 311.0
+text = "Chapter EXP Level Determinant: #"
+label_settings = SubResource("LabelSettings_en13m")
+
+[node name="Outsidebox" type="Sprite2D" parent="oldStuff/Texts"]
+z_index = -1
+position = Vector2(328, 0)
+scale = Vector2(15.5, 20)
+texture = ExtResource("6_cst8o")
+
+[node name="Portrait" type="Sprite2D" parent="oldStuff/Texts/Outsidebox"]
+unique_name_in_owner = true
+position = Vector2(-8.77419, -8.8)
+scale = Vector2(0.0113548, 0.0088)
+texture = ExtResource("6_cst8o")
+
+[node name="PortraitBox" type="Sprite2D" parent="oldStuff/Texts/Outsidebox"]
+position = Vector2(-8.77419, -8.8)
+scale = Vector2(0.247742, 0.192)
+texture = ExtResource("4_fo5yk")
+
+[node name="SelectMenu" type="Node2D" parent="."]
+visible = false
+position = Vector2(59, 8)
+scale = Vector2(1.2, 1.2)
+
+[node name="Background" type="Sprite2D" parent="SelectMenu"]
+modulate = Color(1, 1, 1, 0.666667)
+position = Vector2(-256, -2.14577e-06)
+rotation = 0.000798879
+scale = Vector2(16, 4)
+texture = ExtResource("6_cst8o")
+
+[node name="Label" type="Label" parent="SelectMenu"]
+offset_left = -376.0
+offset_top = -56.0
+offset_right = -114.0
+offset_bottom = -33.0
+text = "Attack:                                Support:"
+label_settings = SubResource("LabelSettings_hddfu")
+
+[node name="Por" type="Sprite2D" parent="SelectMenu"]
+position = Vector2(-474.583, -26.4167)
+scale = Vector2(0.0558333, 0.0561667)
+texture = ExtResource("11_1rnof")
+
+[node name="PorOutline" type="Sprite2D" parent="SelectMenu"]
+position = Vector2(-474.5, -26.875)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_fo5yk")
+
+[node name="Sprite2D" type="Sprite2D" parent="SelectMenu"]
+position = Vector2(-256, 3.8147e-06)
+scale = Vector2(0.780488, 0.258065)
+texture = ExtResource("1_nqlky")
+
+[node name="HP" type="Label" parent="SelectMenu"]
+offset_left = -441.833
+offset_top = -55.1667
+offset_right = -373.833
+offset_bottom = -24.1667
+text = "HP / MaxHP:
+30 / 30"
+label_settings = SubResource("LabelSettings_s4f1b")
+
+[node name="EXP" type="Label" parent="SelectMenu"]
+offset_left = -504.0
+offset_top = 22.0
+offset_right = -385.0
+offset_bottom = 37.0
+text = "EXP / LVL Up: 0 / 2"
+label_settings = SubResource("LabelSettings_s4f1b")
+
+[node name="Name" type="Label" parent="SelectMenu"]
+offset_left = -504.0
+offset_top = 0.333332
+offset_right = -384.0
+offset_bottom = 23.3333
+text = "Proton"
+label_settings = SubResource("LabelSettings_q25qu")
+autowrap_mode = 1
+
+[node name="Level" type="Label" parent="SelectMenu"]
+offset_left = -441.667
+offset_top = -20.0
+offset_right = -396.667
+offset_bottom = -3.0
+text = "LVL: 1"
+label_settings = SubResource("LabelSettings_22ell")
+
+[node name="Attacks" type="VBoxContainer" parent="SelectMenu"]
+offset_left = -347.0
+offset_top = -30.3333
+offset_right = -209.0
+offset_bottom = 61.6667
+
+[node name="Attack1" type="Label" parent="SelectMenu/Attacks"]
+layout_mode = 2
+text = "Slice, 1, 10d"
+label_settings = SubResource("LabelSettings_apsa1")
+
+[node name="Attack2" type="Label" parent="SelectMenu/Attacks"]
+layout_mode = 2
+text = "Fireball, 2, 5d + 5dot"
+label_settings = SubResource("LabelSettings_apsa1")
+
+[node name="Attack3" type="Label" parent="SelectMenu/Attacks"]
+layout_mode = 2
+text = "gggg"
+label_settings = SubResource("LabelSettings_apsa1")
+
+[node name="Attack4" type="Label" parent="SelectMenu/Attacks"]
+layout_mode = 2
+text = "gggg"
+label_settings = SubResource("LabelSettings_apsa1")
+
+[node name="Attack5" type="Label" parent="SelectMenu/Attacks"]
+layout_mode = 2
+text = "gggg"
+label_settings = SubResource("LabelSettings_apsa1")
+
+[node name="Supports" type="VBoxContainer" parent="SelectMenu"]
+offset_left = -184.0
+offset_top = -32.0
+offset_right = -64.0
+offset_bottom = 54.0
+
+[node name="Support1" type="Label" parent="SelectMenu/Supports"]
+layout_mode = 2
+text = "S + 1: Medkit, 1, 25h"
+label_settings = SubResource("LabelSettings_apsa1")
+
+[node name="Support2" type="Label" parent="SelectMenu/Supports"]
+layout_mode = 2
+text = "S + 2:"
+label_settings = SubResource("LabelSettings_apsa1")
+
+[node name="Support3" type="Label" parent="SelectMenu/Supports"]
+layout_mode = 2
+text = "S + 3:"
+label_settings = SubResource("LabelSettings_apsa1")
+
+[node name="Support4" type="Label" parent="SelectMenu/Supports"]
+layout_mode = 2
+text = "S + 4:"
+label_settings = SubResource("LabelSettings_apsa1")
+
+[node name="Support5" type="Label" parent="SelectMenu/Supports"]
+layout_mode = 2
+text = "S + 5:"
+label_settings = SubResource("LabelSettings_apsa1")
+
+[node name="AExplain" type="Label" parent="SelectMenu"]
+offset_left = -320.0
+offset_top = -47.0
+offset_right = -192.0
+offset_bottom = -31.0
+text = "Keys, Move, Range, Effects"
+label_settings = SubResource("LabelSettings_j1hsf")
+
+[node name="SExplain" type="Label" parent="SelectMenu"]
+offset_left = -121.0
+offset_top = -47.0
+offset_right = 7.0
+offset_bottom = -31.0
+text = "Keys, Move, Range, Effects"
+label_settings = SubResource("LabelSettings_j1hsf")
+
+[node name="AtkButtons" type="Node2D" parent="SelectMenu"]
+
+[node name="Button" type="Button" parent="SelectMenu/AtkButtons"]
+offset_left = -376.0
+offset_top = -34.0
+offset_right = -349.0
+offset_bottom = -17.0
+theme_override_font_sizes/font_size = 7
+text = "Cast"
+alignment = 0
+
+[node name="Button2" type="Button" parent="SelectMenu/AtkButtons"]
+offset_left = -376.0
+offset_top = -14.8333
+offset_right = -349.0
+offset_bottom = 4.16667
+theme_override_font_sizes/font_size = 7
+text = "Cast"
+alignment = 0
+
+[node name="Button3" type="Button" parent="SelectMenu/AtkButtons"]
+offset_left = -376.0
+offset_top = 4.33333
+offset_right = -349.0
+offset_bottom = 23.3333
+theme_override_font_sizes/font_size = 7
+text = "Cast"
+alignment = 0
+
+[node name="Button4" type="Button" parent="SelectMenu/AtkButtons"]
+offset_left = -376.0
+offset_top = 22.6667
+offset_right = -349.0
+offset_bottom = 41.6667
+theme_override_font_sizes/font_size = 7
+text = "Cast"
+alignment = 0
+
+[node name="Button5" type="Button" parent="SelectMenu/AtkButtons"]
+offset_left = -376.0
+offset_top = 41.8333
+offset_right = -349.0
+offset_bottom = 60.8333
+theme_override_font_sizes/font_size = 7
+text = "Cast"
+alignment = 0
+
+[connection signal="body_entered" from="RetroBox/CharacterBody2D/Area2D" to="." method="_on_cursor_body_entered"]
 [connection signal="body_entered" from="RetroBox/CharacterBody2D/Area2D" to="oldStuff/Texts" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="RetroBox/CharacterBody2D/Area2D" to="." method="_on_cursor_body_exited"]
 [connection signal="body_exited" from="RetroBox/CharacterBody2D/Area2D" to="oldStuff/Texts" method="_on_area_2d_body_exited"]

@@ -52,10 +52,17 @@ var Sprite = ["0",str(ProtonPathS),"Quest","Scien","Romra"]
 
 
 
-var Party = ["Proton","Justin","NULL","NULL","NULL","NULL"]
+var Party = ["Proton","Rhys", "Justin"]
 
-var Names = ["Proton","Justin"]
+var Names = ["Proton","Justin", "Rhys"]
 
+var Spawns = [Vector2(-552,224),Vector2(-520,224),Vector2(-490,224)]
+
+var Por = [
+	["res://Portraits/proton_big.png","res://Sprites/proton_small.png"],
+	["res://Portraits/azure_big.png","res://Sprites/azure_small.png"],
+	["res://Portraits/azure_big.png","res://Sprites/azure_small.png"]
+]
 var ClassBioTraits = [
 	#[Class, Bio, [Trait1, Trait2, 0]]
 	["N/A", "N/A",["N/A",0]],
