@@ -5,6 +5,9 @@ extends Control
 @onready var dialogue_text: Label = $PanelContainer/MarginContainer/DialogueText
 @onready var name_left: Label = $PanelContainer/MarginContainer/NameLeft
 @onready var name_right: Label = $PanelContainer/MarginContainer/NameRight
+@onready var portrait_left: TextureRect = $PortraitLeft
+@onready var portrait_right: TextureRect = $PortraitRight
+
 
 # All current dialogue
 var dialogue: Array
@@ -81,8 +84,14 @@ func display_next_line() -> void:
 			
 	else:
 		dialogue_text.text = line["text"] if line.has("text") else ""
-		name_left.text = line["left"] if line.has("left") else ""
-		name_right.text = line["right"] if line.has("right") else ""
+		
+		var left = line["left"] if line.has("left") else ""
+		name_left.text = left
+		set_portrait(portrait_left, left)
+		
+		var right = line["right"] if line.has("right") else ""
+		name_right.text = right
+		set_portrait(portrait_right, right)
 		
 		if not line.has("text"):
 			display_next_line()
@@ -112,3 +121,18 @@ func check_condition(condition: Dictionary) -> bool:
 		
 	# no condition returned false, so all conditions passed, return true
 	return true
+
+# The name of the portrait to set for the given portrait texture rect.
+# Resource load will get it into memory if it needs to be loaded
+func set_portrait(texture_rect: TextureRect, name: String):
+	if not name or name == "":
+		texture_rect.visible = false
+		return
+	
+	var portrait_filename = "res://Portraits/"+name.to_lower()+"_big.png"
+	if ResourceLoader.exists(portrait_filename, "Texture2D"):
+		var portrait_texture: Texture2D = ResourceLoader.load(portrait_filename)
+		texture_rect.texture = portrait_texture
+		texture_rect.visible = true
+	else:
+		texture_rect.visible = false
