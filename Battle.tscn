@@ -117,16 +117,14 @@ font_color = Color(0, 0, 0, 1)
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fdsf4")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-256, 0)
-zoom = Vector2(1.286, 1.307)
-
 [node name="RetroBox" type="Sprite2D" parent="."]
 texture = ExtResource("1_nqlky")
+centered = false
 
 [node name="Insidebox" type="Sprite2D" parent="RetroBox"]
 z_index = -99
 texture = ExtResource("4_njdq7")
+centered = false
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="RetroBox"]
 position = Vector2(304, 224)
@@ -148,7 +146,6 @@ shape = SubResource("RectangleShape2D_fs5lt")
 [node name="LeftPlayerRightEnemy" type="Node2D" parent="."]
 
 [node name="LeftOnHover" type="Node2D" parent="LeftPlayerRightEnemy"]
-visible = false
 
 [node name="Background" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
 position = Vector2(-640, 116)
@@ -291,7 +288,6 @@ text = "20"
 label_settings = SubResource("LabelSettings_b0mk2")
 
 [node name="LeftAS" type="Node2D" parent="LeftPlayerRightEnemy"]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftAS"]
 position = Vector2(-640, 80)
@@ -461,6 +457,7 @@ theme_override_font_sizes/font_size = 12
 text = "Back"
 
 [node name="oldStuff" type="Node2D" parent="."]
+visible = false
 
 [node name="LeftBox" type="Node2D" parent="oldStuff"]
 visible = false
