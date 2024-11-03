@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://cc2kqmp1w5qbk"]
+
+[ext_resource type="Texture2D" uid="uid://hwa2hmsov8la" path="res://Sprites/redslime_small.png" id="1_wexsr"]
+[ext_resource type="Texture2D" uid="uid://cn5xe3ut516uh" path="res://Portraits/redslime_big.png" id="2_7rqsr"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_h6pi7"]
+
+[resource]
+script = ExtResource("3_h6pi7")
+display_name = "Red Slime"
+portrait = ExtResource("2_7rqsr")
+overworld_sprite = ExtResource("1_wexsr")
+bio = "Red Slimes are basic monsters that can be found throughout the Bipolian continent."
+level_quotes = ""

@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://b2fejm2qt300q"]
+
+[ext_resource type="Texture2D" uid="uid://duwjjm3r6mui6" path="res://Sprites/quest_small.png" id="1_ip8nq"]
+[ext_resource type="Texture2D" uid="uid://b1dmg7egqn7dh" path="res://Portraits/quest_big.png" id="2_7spom"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_vbtq6"]
+[ext_resource type="Script" path="res://Scripts/MoveUnlock.gd" id="4_d8t8h"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="5_pcpk6"]
+[ext_resource type="Resource" uid="uid://bcu3asejb0s5e" path="res://Database/Moves/Fireball.tres" id="6_au4lb"]
+[ext_resource type="Resource" uid="uid://2tphaotxnbto" path="res://Database/Moves/Heal.tres" id="7_hms0u"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="8_m5yc7"]
+
+[sub_resource type="Resource" id="Resource_5csqx"]
+script = ExtResource("3_vbtq6")
+display_name = "Quest"
+portrait = ExtResource("2_7spom")
+overworld_sprite = ExtResource("1_ip8nq")
+bio = "Quest is a skilled mage who acts as the high mage of the Territory of Static. His life goal is to discover the secrets of the legendary Artifacts."
+level_quotes = "I must become stronger.
+Hopefully, this will help me find the Artifacts.
+This is a welcome addition."
+
+[resource]
+script = ExtResource("8_m5yc7")
+character = SubResource("Resource_5csqx")
+moves = Array[ExtResource("5_pcpk6")]([ExtResource("6_au4lb"), ExtResource("7_hms0u")])
+hp = 30
+attack = 10
+defense = 8
+resistance = 6
+agility = 4
+accuracy = 13
+speed = 4
+exp_reward = 100
+primary_type = "Magic"
+traits = Array[String](["Bipolian", "Mage"])
+unit_class = "High Mage"
+move_unlocks = Array[ExtResource("4_d8t8h")]([])
+hp_growth = Vector2i(50, 2)
+atk_growth = Vector2i(50, 2)
+def_growth = Vector2i(30, 1)
+res_growth = Vector2i(40, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(70, 1)
+class_change = ""
+class_change_level = 0

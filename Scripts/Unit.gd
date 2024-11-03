@@ -1,9 +1,13 @@
+@tool
 class_name Unit
 extends Resource
 
-@export var display_name: String = "Unit"
-@export var portrait: Texture2D
-@export var overworld_sprite: Texture2D
+signal character_changed
+@export var character: Character:
+	set(value):
+		character = value
+		character_changed.emit()
+
 @export var moves: Array[Move]
 
 @export_subgroup("Stats")
@@ -15,10 +19,6 @@ extends Resource
 @export var accuracy: int = 10
 @export var speed: int = 10 # The amount of tiles this unit can move
 @export var exp_reward: int = 100 # EXP given when defeated. Enemy units can also level up if they defeat your units.
-
-@export_subgroup("Text")
-@export_multiline var bio: String
-@export_multiline var level_quotes: String #one per line
 
 @export_subgroup("Traits")
 @export_enum("Physical", "Magic") var primary_type: String = "Physical"
@@ -38,7 +38,6 @@ extends Resource
 @export_subgroup("Miscellaneous")
 @export var class_change: String
 @export var class_change_level: int
-
 
 var max_hp: int
 var exp: int = 0 # Level up every 100 EXP
