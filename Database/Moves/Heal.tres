@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://2tphaotxnbto"]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="1_c5i7b"]
+
+[resource]
+script = ExtResource("1_c5i7b")
+display_name = "Heal"
+move_type = "Support"
+damage_type = "Magic"
+hp_cost = 1
+range = 1
+power = 1.2
+hit_rate = 100.0
+accuracy_multiplier = 1.0
+element = "Fire"
+extra_damage_trait = ""
+extra_multiplier = 0.0

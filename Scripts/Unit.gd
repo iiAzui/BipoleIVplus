@@ -1,35 +1,44 @@
 class_name Unit
-extends Node2D
+extends Resource
 
-@export var display_name: String
-@export var attack_range: int
-@export_enum("Physical", "Magical") var primary_type: String
-@export var hp: int = 20
-
-@export var attacks: Array
-@export var supports: Array
+@export var display_name: String = "Unit"
+@export var portrait: Texture2D
+@export var overworld_sprite: Texture2D
+@export var moves: Array[Move]
 
 @export_subgroup("Stats")
-@export var atk: int # Influences attack damage
-@export var def: int # Influences damage taken from physical attacks
-@export var res: int # Influences damage taken from magic attacks
-@export var agl: int # Influences the change of getting hit by an attack, and the change of you hitting your attack
-@export var acr: int
-@export var spd: int # The amount of tiles this unit can move
-@export var exp_reward: int # EXP given when defeated. Enemy units can also level up if they defeat your units.
+@export var hp: int = 20
+@export var attack: int = 10 # Influences attack damage
+@export var defense: int = 10 # Influences damages taken from physical attacks
+@export var resistance: int = 10 # Influences damage taken from magic attacks
+@export var agility: int = 10 # Influences the change of getting hit by an attack, and the change of you hitting your attack
+@export var accuracy: int = 10
+@export var speed: int = 10 # The amount of tiles this unit can move
+@export var exp_reward: int = 100 # EXP given when defeated. Enemy units can also level up if they defeat your units.
 
+@export_subgroup("Text")
+@export_multiline var bio: String
+@export_multiline var level_quotes: String #one per line
 
+@export_subgroup("Traits")
+@export_enum("Physical", "Magic") var primary_type: String = "Physical"
+@export var traits: Array[String]
+@export var unit_class: String
 
-# TODO: Growths
+@export var move_unlocks: Array[MoveUnlock]
+
+@export_subgroup("Growths")
+@export var hp_growth: Vector2i = Vector2i(50, 1)
+@export var atk_growth: Vector2i = Vector2i(50, 1)
+@export var def_growth: Vector2i = Vector2i(50, 1)
+@export var res_growth: Vector2i = Vector2i(50, 1)
+@export var agl_growth: Vector2i = Vector2i(50, 1)
+@export var acr_growth: Vector2i = Vector2i(50, 1)
+
+@export_subgroup("Miscellaneous")
+@export var class_change: String
+@export var class_change_level: int
+
 
 var max_hp: int
 var exp: int = 0 # Level up every 100 EXP
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	max_hp = hp
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
