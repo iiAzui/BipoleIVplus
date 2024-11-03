@@ -1,9 +1,61 @@
-[gd_scene load_steps=2 format=3 uid="uid://da2b80p3dhtok"]
+[gd_scene load_steps=7 format=3 uid="uid://da2b80p3dhtok"]
 
 [ext_resource type="Script" path="res://Scripts/PlacedUnit.gd" id="1_w2poa"]
+[ext_resource type="Texture2D" uid="uid://b5dxyrtb2nta1" path="res://Sprites/blueslime_small.png" id="2_dntyg"]
+
+[sub_resource type="Gradient" id="Gradient_wwot8"]
+colors = PackedColorArray(0, 0, 0, 1, 0.0193997, 0.0907111, 0.122726, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fyavo"]
+gradient = SubResource("Gradient_wwot8")
+
+[sub_resource type="Gradient" id="Gradient_e7ran"]
+colors = PackedColorArray(0.635999, 0.0674713, 0.207334, 1, 0.779166, 0.120634, 0.271584, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0qaou"]
+gradient = SubResource("Gradient_e7ran")
 
 [node name="PlacedUnit" type="Node2D"]
 script = ExtResource("1_w2poa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1.28, 1.28)
+texture = ExtResource("2_dntyg")
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = 12.0
+offset_right = 24.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+value = 85.0
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture1D_fyavo")
+texture_progress = SubResource("GradientTexture1D_0qaou")
+
+[node name="LevelBackground" type="ColorRect" parent="."]
+offset_left = -36.0
+offset_top = 6.0
+offset_right = -16.0
+offset_bottom = 26.0
+color = Color(0.23, 0.23, 0.23, 1)
+
+[node name="LevelLabel" type="Label" parent="LevelBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1

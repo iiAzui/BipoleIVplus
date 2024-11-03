@@ -11,6 +11,12 @@ signal character_changed
 @export var moves: Array[Move]
 
 @export_subgroup("Stats")
+signal level_changed
+@export var level: int = 1:
+	set(value):
+		level = value
+		level_changed.emit()
+
 @export var hp: int = 20
 @export var attack: int = 10 # Influences attack damage
 @export var defense: int = 10 # Influences damages taken from physical attacks
