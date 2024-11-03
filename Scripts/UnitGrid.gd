@@ -5,8 +5,8 @@ extends Node2D
 # to get a unit at (x, y), use the key of Vector2i(x, y)
 var grid: Dictionary
 
-const RETRO_WIDTH: int = 14
-const RETRO_HEIGHT: int = 19
+const RETRO_WIDTH: int = 19
+const RETRO_HEIGHT: int = 14
 
 const TILE_SIZE: float = 64.0
 

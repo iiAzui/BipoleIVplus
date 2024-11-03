@@ -13,6 +13,7 @@
 script = ExtResource("5_fc30f")
 character = ExtResource("3_a5h2i")
 moves = Array[ExtResource("4_843sx")]([ExtResource("5_ppvk3")])
+move_unlocks = Array[ExtResource("3_2ytt2")]([])
 level = 1
 hp = 20
 attack = 12
@@ -25,20 +26,20 @@ exp_reward = 65
 primary_type = "Physical"
 traits = Array[String](["Monster", "Water"])
 unit_class = "Slime"
-move_unlocks = Array[ExtResource("3_2ytt2")]([])
+class_change = ""
+class_change_level = 0
 hp_growth = Vector2i(50, 1)
 atk_growth = Vector2i(50, 1)
 def_growth = Vector2i(50, 1)
 res_growth = Vector2i(50, 1)
 agl_growth = Vector2i(50, 1)
 acr_growth = Vector2i(50, 1)
-class_change = ""
-class_change_level = 0
 
 [sub_resource type="Resource" id="Resource_g344r"]
 script = ExtResource("5_fc30f")
 character = ExtResource("8_khk1t")
 moves = Array[ExtResource("4_843sx")]([ExtResource("5_ppvk3")])
+move_unlocks = Array[ExtResource("3_2ytt2")]([])
 level = 1
 hp = 20
 attack = 12
@@ -51,15 +52,14 @@ exp_reward = 65
 primary_type = "Physical"
 traits = Array[String](["Monster", "Water"])
 unit_class = "Slime"
-move_unlocks = Array[ExtResource("3_2ytt2")]([])
+class_change = ""
+class_change_level = 0
 hp_growth = Vector2i(50, 1)
 atk_growth = Vector2i(50, 1)
 def_growth = Vector2i(50, 1)
 res_growth = Vector2i(50, 1)
 agl_growth = Vector2i(50, 1)
 acr_growth = Vector2i(50, 1)
-class_change = ""
-class_change_level = 0
 
 [node name="Chapter01" instance=ExtResource("1_v11b5")]
 

@@ -23,10 +23,9 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Down"):
 		move_cursor(Vector2i.DOWN)
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			event = unit_grid.make_input_local(event)
 			var coords: Vector2i = round(event.position / unit_grid.TILE_SIZE)
-			print(coords)
 			if coords.x >= 0 and coords.x < unit_grid.RETRO_WIDTH and coords.y >= 0 and coords.y < unit_grid.RETRO_HEIGHT and coords != cursor_coords:
 				move_cursor_to(coords)
 		

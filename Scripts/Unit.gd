@@ -9,6 +9,7 @@ signal character_changed
 		character_changed.emit()
 
 @export var moves: Array[Move]
+@export var move_unlocks: Array[MoveUnlock]
 
 @export_subgroup("Stats")
 signal level_changed
@@ -30,8 +31,8 @@ signal level_changed
 @export_enum("Physical", "Magic") var primary_type: String = "Physical"
 @export var traits: Array[String]
 @export var unit_class: String
-
-@export var move_unlocks: Array[MoveUnlock]
+@export var class_change: String
+@export var class_change_level: int
 
 @export_subgroup("Growths")
 @export var hp_growth: Vector2i = Vector2i(50, 1)
@@ -40,10 +41,6 @@ signal level_changed
 @export var res_growth: Vector2i = Vector2i(50, 1)
 @export var agl_growth: Vector2i = Vector2i(50, 1)
 @export var acr_growth: Vector2i = Vector2i(50, 1)
-
-@export_subgroup("Miscellaneous")
-@export var class_change: String
-@export var class_change_level: int
 
 var max_hp: int
 var exp: int = 0 # Level up every 100 EXP

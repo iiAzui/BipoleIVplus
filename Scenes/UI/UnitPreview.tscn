@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxn3rrdekme4b"]
+[gd_scene load_steps=9 format=3 uid="uid://bxn3rrdekme4b"]
 
 [ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_wvhkx"]
 [ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Sprites/Portraits/proton_big.png" id="1_xt5hn"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://wnxndhdjerh7" path="res://Sprites/UI/HealthBarBack.tres" id="4_fmu38"]
 [ext_resource type="Texture2D" uid="uid://d2t50grm12hvp" path="res://Sprites/UI/HealthBarPlayer.tres" id="5_d3e85"]
 [ext_resource type="Texture2D" uid="uid://da0sx8yo2kgbx" path="res://Sprites/UI/HealthBarBorder.png" id="5_fgyma"]
+[ext_resource type="Texture2D" uid="uid://cyksus6u6o8l0" path="res://Sprites/UI/LevelBar.tres" id="7_c7hao"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jdxe5"]
 border_width_left = 8
@@ -38,8 +39,10 @@ layout_mode = 2
 theme_override_constants/separation = 8
 
 [node name="DisplayNameLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-size_flags_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 1
 theme_override_font_sizes/font_size = 32
 text = "Proton
 "
@@ -58,27 +61,27 @@ layout_mode = 2
 texture = ExtResource("1_xt5hn")
 expand_mode = 1
 
-[node name="PanelContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 40)
+[node name="HealthContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 45)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="HealthHeaderLabel" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer"]
+[node name="HealthHeaderLabel" type="Label" parent="MarginContainer/VBoxContainer/HealthContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 18
 text = "HP"
 
-[node name="HealthLabel" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer"]
+[node name="HealthLabel" type="Label" parent="MarginContainer/VBoxContainer/HealthContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 18
 text = "75/100"
 horizontal_alignment = 2
 
-[node name="HealthBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/PanelContainer"]
-custom_minimum_size = Vector2(0, 16)
+[node name="HealthBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/HealthContainer"]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_vertical = 8
 value = 75.0
@@ -90,3 +93,34 @@ stretch_margin_bottom = 3
 texture_under = ExtResource("4_fmu38")
 texture_over = ExtResource("5_fgyma")
 texture_progress = ExtResource("5_d3e85")
+
+[node name="LevelContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="LevelLabel" type="Label" parent="MarginContainer/VBoxContainer/LevelContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Lv 1"
+
+[node name="EXPLabel" type="Label" parent="MarginContainer/VBoxContainer/LevelContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "25/100 EXP"
+horizontal_alignment = 2
+
+[node name="EXPBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer/LevelContainer"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+size_flags_vertical = 8
+value = 25.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("4_fmu38")
+texture_over = ExtResource("5_fgyma")
+texture_progress = ExtResource("7_c7hao")
