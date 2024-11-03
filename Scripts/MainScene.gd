@@ -15,3 +15,4 @@ func show_hovered_unit():
 		unit_preview.display_unit(battle.hovered_unit)
 	else:
 		unit_preview.visible = false
+	battle.show_range(battle.hovered_unit)

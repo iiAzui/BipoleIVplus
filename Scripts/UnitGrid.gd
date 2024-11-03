@@ -5,11 +5,6 @@ extends Node2D
 # to get a unit at (x, y), use the key of Vector2i(x, y)
 var grid: Dictionary
 
-const RETRO_WIDTH: int = 19
-const RETRO_HEIGHT: int = 14
-
-const TILE_SIZE: float = 64.0
-
 const PLACED_UNIT_SCENE: PackedScene = preload("res://Scenes/UI/PlacedUnit.tscn")
 
 # Called when the node enters the scene tree for the first time.
@@ -22,7 +17,7 @@ func _ready() -> void:
 		if not unit:
 			continue
 
-		var grid_relative_position = unit.position / TILE_SIZE
+		var grid_relative_position = unit.position / ChapterBattle.TILE_SIZE
 		print(grid_relative_position)
 		var grid_coords := Vector2i(round(grid_relative_position.x), round(grid_relative_position.y))
 		place_unit(unit, grid_coords)
@@ -44,7 +39,7 @@ func load_player_units():
 		place_unit(placed_unit, place_coords)
 		
 		place_coords.x += 1
-		if place_coords.x >= RETRO_WIDTH:
+		if place_coords.x >= ChapterBattle.RETRO_WIDTH:
 			place_coords.x = 0
 			place_coords.y += 1
 
@@ -53,5 +48,6 @@ func get_unit_at(coords: Vector2i):
 		
 func place_unit(unit: PlacedUnit, coords: Vector2i):
 	grid[coords] = unit
-	unit.position = Vector2(coords.x*TILE_SIZE, coords.y*TILE_SIZE)
+	unit.position = coords * ChapterBattle.TILE_SIZE
+	unit.coords = coords
 	print("placed ", unit.name, " at ", coords)

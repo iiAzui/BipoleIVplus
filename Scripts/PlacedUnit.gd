@@ -5,11 +5,19 @@ extends Node2D
 @onready var health_bar: TextureProgressBar = $HealthBar
 @onready var level_label: Label = $LevelBackground/LevelLabel
 
+const HEALTH_BAR_PLAYER = preload("res://Sprites/UI/HealthBarPlayer.tres")
+const HEALTH_BAR_ENEMY = preload("res://Sprites/UI/HealthBarEnemy.tres")
+
 # True if in the player's party, false if this is an enemy unit fighting the player
 var allied: bool = false
 
-const HEALTH_BAR_PLAYER = preload("res://Sprites/UI/HealthBarPlayer.tres")
-const HEALTH_BAR_ENEMY = preload("res://Sprites/UI/HealthBarEnemy.tres")
+# True if the unit has moved yet during their turn. 
+# Can only move once per turn and cannot move after using a move.
+var moved: bool = false
+
+# Current coords on the map. Should always mirror the key that it has in UnitGrid's grid dictionary.
+# (UnitGrid should manage this value closely)
+var coords: Vector2i
 
 @export var unit: Unit:
 	set(value):
