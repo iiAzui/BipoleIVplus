@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://cslox4jgyjyci"]
 
-[ext_resource type="Texture2D" uid="uid://b5dxyrtb2nta1" path="res://Sprites/blueslime_small.png" id="1_6q3em"]
-[ext_resource type="Texture2D" uid="uid://dewxdmyfthii4" path="res://Portraits/blueslime_big.png" id="2_px7cw"]
+[ext_resource type="Texture2D" uid="uid://b5dxyrtb2nta1" path="res://Sprites/Overworld/blueslime_small.png" id="1_6q3em"]
+[ext_resource type="Texture2D" uid="uid://dewxdmyfthii4" path="res://Sprites/Portraits/blueslime_big.png" id="2_px7cw"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_hqtsm"]
 
 [resource]

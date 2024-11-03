@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/ChapterBattle.gd" id="1_ep1ch"]
 [ext_resource type="TileSet" uid="uid://dhpm4aemdlwfi" path="res://Tilesets/forest.tres" id="1_o20in"]
 [ext_resource type="Script" path="res://Scripts/UnitGrid.gd" id="2_vrrcd"]
-[ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/selection.png" id="4_c6mhe"]
+[ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/Overworld/selection.png" id="4_c6mhe"]
 
 [node name="ChapterTemplate" type="Control"]
 layout_mode = 3

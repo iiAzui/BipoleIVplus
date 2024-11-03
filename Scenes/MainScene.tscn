@@ -4,9 +4,9 @@
 [ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_ys1kv"]
 [ext_resource type="PackedScene" uid="uid://d0fbj420r3kat" path="res://Scenes/Chapters/Chapter01.tscn" id="2_qpl3e"]
 [ext_resource type="Texture2D" uid="uid://pvptlf4122jo" path="res://Setup/Box.png" id="3_xmniy"]
-[ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/selection.png" id="6_cen5d"]
+[ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/Overworld/selection.png" id="6_cen5d"]
 [ext_resource type="Texture2D" uid="uid://q6s74u6bktan" path="res://Setup/Outsidebox.png" id="7_72yba"]
-[ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Portraits/proton_big.png" id="8_4skrp"]
+[ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Sprites/Portraits/proton_big.png" id="8_4skrp"]
 [ext_resource type="Texture2D" uid="uid://cg86jxdb07gtx" path="res://icon.svg" id="9_cf5ab"]
 [ext_resource type="PackedScene" uid="uid://bxn3rrdekme4b" path="res://Scenes/UI/UnitPreview.tscn" id="9_qp0ux"]
 

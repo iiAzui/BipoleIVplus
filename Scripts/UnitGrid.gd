@@ -38,6 +38,7 @@ func load_player_units():
 	for i in len(SaveData.save.units):
 		var unit: Unit = SaveData.save.units[i]
 		var placed_unit: PlacedUnit = PLACED_UNIT_SCENE.instantiate()
+		placed_unit.allied = true
 		placed_unit.unit = unit
 		add_child(placed_unit)
 		place_unit(placed_unit, place_coords)

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://b2fejm2qt300q"]
 
-[ext_resource type="Texture2D" uid="uid://duwjjm3r6mui6" path="res://Sprites/quest_small.png" id="1_ip8nq"]
-[ext_resource type="Texture2D" uid="uid://b1dmg7egqn7dh" path="res://Portraits/quest_big.png" id="2_7spom"]
+[ext_resource type="Texture2D" uid="uid://duwjjm3r6mui6" path="res://Sprites/Overworld/quest_small.png" id="1_ip8nq"]
+[ext_resource type="Texture2D" uid="uid://b1dmg7egqn7dh" path="res://Sprites/Portraits/quest_big.png" id="2_7spom"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_vbtq6"]
 [ext_resource type="Script" path="res://Scripts/MoveUnlock.gd" id="4_d8t8h"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="5_pcpk6"]

@@ -12,6 +12,6 @@ func _ready() -> void:
 func show_hovered_unit():
 	if battle.hovered_unit:
 		unit_preview.visible = true
-		unit_preview.display_unit(battle.hovered_unit.unit)
+		unit_preview.display_unit(battle.hovered_unit)
 	else:
 		unit_preview.visible = false

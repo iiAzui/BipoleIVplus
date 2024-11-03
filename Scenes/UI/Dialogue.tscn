@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dyg16goh4fsw2"]
 
 [ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_dodj1"]
-[ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Portraits/proton_big.png" id="2_di4rn"]
+[ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Sprites/Portraits/proton_big.png" id="2_di4rn"]
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3

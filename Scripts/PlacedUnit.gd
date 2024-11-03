@@ -5,6 +5,12 @@ extends Node2D
 @onready var health_bar: TextureProgressBar = $HealthBar
 @onready var level_label: Label = $LevelBackground/LevelLabel
 
+# True if in the player's party, false if this is an enemy unit fighting the player
+var allied: bool = false
+
+const HEALTH_BAR_PLAYER = preload("res://Sprites/UI/HealthBarPlayer.tres")
+const HEALTH_BAR_ENEMY = preload("res://Sprites/UI/HealthBarEnemy.tres")
+
 @export var unit: Unit:
 	set(value):
 		if unit:
@@ -23,10 +29,6 @@ extends Node2D
 
 @onready var sprite: Sprite2D = $Sprite2D
 
-func _enter_tree() -> void:
-	if Engine.is_editor_hint():
-		update_unit_visual()
-
 func _ready() -> void:
 	update_unit_visual()
 
@@ -34,6 +36,8 @@ func _ready() -> void:
 func update_unit_visual():
 	if unit and unit.character:
 		$Sprite2D.texture = unit.character.overworld_sprite
-		health_bar.value = unit.hp
-		health_bar.max_value = unit.max_hp
-		level_label.text = str(unit.level)
+		if health_bar:
+			health_bar.value = unit.hp
+			health_bar.max_value = unit.max_hp
+			health_bar.texture_progress = HEALTH_BAR_PLAYER if allied else HEALTH_BAR_ENEMY
+			level_label.text = str(unit.level)

@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://bjddskkp0tpuy"]
 
-[ext_resource type="Texture2D" uid="uid://yw476j47tg4w" path="res://Sprites/proton_small.png" id="1_2kp8d"]
+[ext_resource type="Texture2D" uid="uid://yw476j47tg4w" path="res://Sprites/Overworld/proton_small.png" id="1_2kp8d"]
 [ext_resource type="Script" path="res://Scripts/MoveUnlock.gd" id="1_53xbf"]
-[ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Portraits/proton_big.png" id="2_6qkga"]
+[ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Sprites/Portraits/proton_big.png" id="2_6qkga"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_qwdiv"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_lus8k"]
 [ext_resource type="Resource" uid="uid://clvn71ednbdqi" path="res://Database/Moves/Slice.tres" id="3_yda0g"]
