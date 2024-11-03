@@ -14,9 +14,17 @@ const RETRO_HEIGHT: int = 14
 
 const TILE_SIZE: float = 64.0
 
+## Current coordinates of the player's cursor. Used for unit selection, move destination, attack target, etc.
 var cursor_coords: Vector2i = Vector2i.ZERO
 
+## Current selected unit for moving/attacking.
+var unit_selected: PlacedUnit
+
+## The unit currently hovered by the cursor.
 var hovered_unit: PlacedUnit
+
+## Current cursor mode ("Select", "Move", "Attack")
+var cursor_mode: String = "Select"
 
 signal cursor_moved
 
@@ -36,8 +44,16 @@ func _input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			event = unit_grid.make_input_local(event)
 			var coords: Vector2i = round(event.position / TILE_SIZE)
-			if is_coords_in_bounds(coords) and coords != cursor_coords:
-				move_cursor_to(coords)
+			if is_coords_in_bounds(coords):
+				# If clicked on the already hovered unit
+				if coords == cursor_coords and hovered_unit:
+					unit_selected = hovered_unit
+					if hovered_unit.moved:
+						cursor_mode = "Move"
+					else:
+						cursor_mode = "Attack"
+				else:
+					move_cursor_to(coords)
 		
 func is_coords_in_bounds(coords: Vector2i):
 	return coords.x >= 0 and coords.x < RETRO_WIDTH and coords.y >= 0 and coords.y < RETRO_HEIGHT
@@ -46,11 +62,16 @@ func move_cursor(offset: Vector2i):
 	move_cursor_to(cursor_coords + offset)
 
 func move_cursor_to(coords: Vector2i):
+	if coords == cursor_coords:
+		return
+	
 	cursor_coords = coords
 	cursor_coords.x = clamp(cursor_coords.x, 0, RETRO_WIDTH-1)
 	cursor_coords.y = clamp(cursor_coords.y, 0, RETRO_HEIGHT-1)
 	print("moved cursor to ", cursor_coords)
 	map_cursor.position = cursor_coords * TILE_SIZE
+	
+	unit_selected
 	
 	hovered_unit = unit_grid.get_unit_at(cursor_coords)
 	cursor_moved.emit()
