@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://d0fbj420r3kat"]
+[gd_scene load_steps=12 format=3 uid="uid://d0fbj420r3kat"]
 
 [ext_resource type="PackedScene" uid="uid://bh2c3tqr6mxhh" path="res://Scenes/ChapterTemplate.tscn" id="1_v11b5"]
-[ext_resource type="PackedScene" uid="uid://da2b80p3dhtok" path="res://Scenes/UI/Unit.tscn" id="2_crf22"]
+[ext_resource type="PackedScene" uid="uid://da2b80p3dhtok" path="res://Scenes/UI/PlacedUnit.tscn" id="2_crf22"]
+[ext_resource type="Script" path="res://Scripts/ChapterBattle.gd" id="2_njnsa"]
 [ext_resource type="Script" path="res://Scripts/MoveUnlock.gd" id="3_2ytt2"]
 [ext_resource type="Resource" uid="uid://cc2kqmp1w5qbk" path="res://Database/EnemyUnitIdentities/RedSlime.tres" id="3_a5h2i"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="4_843sx"]
@@ -60,6 +61,7 @@ class_change = ""
 class_change_level = 0
 
 [node name="Chapter01" instance=ExtResource("1_v11b5")]
+script = ExtResource("2_njnsa")
 
 [node name="RedSlime1" parent="UnitGrid" index="0" instance=ExtResource("2_crf22")]
 position = Vector2(128, 192)
