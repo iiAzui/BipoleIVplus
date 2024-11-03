@@ -1,17 +1,14 @@
-[gd_scene load_steps=40 format=3 uid="uid://cnnvgayg74dqn"]
+[gd_scene load_steps=39 format=3 uid="uid://cnnvgayg74dqn"]
 
-[ext_resource type="Script" path="res://Scripts/Level.gd" id="1_obxun"]
+[ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_obxun"]
+[ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_ys1kv"]
 [ext_resource type="PackedScene" uid="uid://d0fbj420r3kat" path="res://Scenes/Chapters/Chapter01.tscn" id="2_qpl3e"]
 [ext_resource type="Texture2D" uid="uid://pvptlf4122jo" path="res://Setup/Box.png" id="3_xmniy"]
-[ext_resource type="Texture2D" uid="uid://cd4dfxidbynqc" path="res://Setup/Insidebox.png" id="4_i2dwc"]
-[ext_resource type="Script" path="res://Scripts/Cursor.gd" id="5_d048v"]
 [ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/selection.png" id="6_cen5d"]
 [ext_resource type="Texture2D" uid="uid://q6s74u6bktan" path="res://Setup/Outsidebox.png" id="7_72yba"]
 [ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Portraits/proton_big.png" id="8_4skrp"]
 [ext_resource type="Texture2D" uid="uid://cg86jxdb07gtx" path="res://icon.svg" id="9_cf5ab"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fs5lt"]
-size = Vector2(32, 32)
+[ext_resource type="PackedScene" uid="uid://bxn3rrdekme4b" path="res://Scenes/UI/UnitPreview.tscn" id="9_qp0ux"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3gblg"]
 font_color = Color(0, 0, 0, 1)
@@ -255,41 +252,24 @@ font_color = Color(0, 0, 0, 1)
 font_size = 8
 font_color = Color(0, 0, 0, 1)
 
-[node name="MainScene" type="Node"]
+[node name="MainScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ys1kv")
 script = ExtResource("1_obxun")
 
 [node name="Chapter01" parent="." instance=ExtResource("2_qpl3e")]
 
-[node name="RetroBox" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("3_xmniy")
-centered = false
-
-[node name="Insidebox" type="Sprite2D" parent="RetroBox"]
-visible = false
-z_index = -99
-texture = ExtResource("4_i2dwc")
-centered = false
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="RetroBox"]
-position = Vector2(304, 224)
-script = ExtResource("5_d048v")
-
-[node name="Cursor" type="Sprite2D" parent="RetroBox/CharacterBody2D"]
-z_index = 10
-position = Vector2(4.29153e-06, 5.72205e-06)
-scale = Vector2(0.639999, 0.64)
-texture = ExtResource("6_cen5d")
-
-[node name="Area2D" type="Area2D" parent="RetroBox/CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RetroBox/CharacterBody2D/Area2D"]
-shape = SubResource("RectangleShape2D_fs5lt")
-
 [node name="Timer" type="Timer" parent="."]
 
 [node name="LeftPlayerRightEnemy" type="Node2D" parent="."]
-position = Vector2(770, 767)
+visible = false
+position = Vector2(960, 480)
+scale = Vector2(1.3, 1.3)
 
 [node name="LeftOnHover" type="Node2D" parent="LeftPlayerRightEnemy"]
 
@@ -1202,7 +1182,7 @@ theme_override_font_sizes/font_size = 7
 text = "Cast"
 alignment = 0
 
-[connection signal="body_entered" from="RetroBox/CharacterBody2D/Area2D" to="." method="_on_cursor_body_entered"]
-[connection signal="body_entered" from="RetroBox/CharacterBody2D/Area2D" to="oldStuff/Texts" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="RetroBox/CharacterBody2D/Area2D" to="." method="_on_cursor_body_exited"]
-[connection signal="body_exited" from="RetroBox/CharacterBody2D/Area2D" to="oldStuff/Texts" method="_on_area_2d_body_exited"]
+[node name="UnitPreview" parent="." instance=ExtResource("9_qp0ux")]
+layout_mode = 1
+offset_left = 16.0
+offset_right = 316.0

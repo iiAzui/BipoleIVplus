@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=3 uid="uid://bxn3rrdekme4b"]
+
+[ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_wvhkx"]
+[ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Portraits/proton_big.png" id="1_xt5hn"]
+[ext_resource type="Script" path="res://Scripts/UnitPreview.gd" id="2_r6it6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jdxe5"]
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.41598, 0.41598, 0.41598, 1)
+
+[sub_resource type="Gradient" id="Gradient_1txwr"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0.0757229, 0.157885, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_57bb1"]
+gradient = SubResource("Gradient_1txwr")
+
+[sub_resource type="Gradient" id="Gradient_5gfuj"]
+colors = PackedColorArray(0.180635, 0.548273, 0.731183, 1, 0, 0.772549, 0.811765, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_sii2a"]
+gradient = SubResource("Gradient_5gfuj")
+
+[node name="UnitPreview" type="PanelContainer"]
+custom_minimum_size = Vector2(300, 600)
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -300.0
+offset_right = 300.0
+offset_bottom = 300.0
+grow_vertical = 2
+theme = ExtResource("1_wvhkx")
+script = ExtResource("2_r6it6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="DisplayNameLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Proton
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PortraitPanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jdxe5")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PortraitPanelContainer"]
+layout_mode = 2
+texture = ExtResource("1_xt5hn")
+expand_mode = 1
+
+[node name="HealthLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "75/100"
+horizontal_alignment = 2
+
+[node name="HealthBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 30)
+layout_mode = 2
+value = 75.0
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture1D_57bb1")
+texture_progress = SubResource("GradientTexture1D_sii2a")

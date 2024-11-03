@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=4 uid="uid://bh2c3tqr6mxhh"]
+[gd_scene load_steps=5 format=4 uid="uid://bh2c3tqr6mxhh"]
 
+[ext_resource type="Script" path="res://Scripts/ChapterBattle.gd" id="1_ep1ch"]
 [ext_resource type="TileSet" uid="uid://dhpm4aemdlwfi" path="res://Tilesets/forest.tres" id="1_o20in"]
 [ext_resource type="Script" path="res://Scripts/UnitGrid.gd" id="2_vrrcd"]
+[ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/selection.png" id="4_c6mhe"]
 
-[node name="ChapterTemplate" type="Node2D"]
-position = Vector2(384, 124)
+[node name="ChapterTemplate" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 384.0
+offset_top = 124.0
+offset_right = 384.0
+offset_bottom = 124.0
+script = ExtResource("1_ep1ch")
 
 [node name="FloorTiles" type="TileMapLayer" parent="."]
 position = Vector2(-32, -32)
@@ -18,3 +26,7 @@ tile_set = ExtResource("1_o20in")
 
 [node name="UnitGrid" type="Node2D" parent="."]
 script = ExtResource("2_vrrcd")
+
+[node name="MapCursor" type="Sprite2D" parent="."]
+scale = Vector2(1.28, 1.28)
+texture = ExtResource("4_c6mhe")

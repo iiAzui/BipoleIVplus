@@ -11,6 +11,7 @@ extends Node2D
 		update_unit_visual()
 		
 		if unit:
+			unit.max_hp = unit.hp
 			unit.character_changed.connect(update_unit_visual)
 			
 
