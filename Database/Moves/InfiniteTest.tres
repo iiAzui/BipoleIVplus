@@ -5,14 +5,14 @@
 
 [resource]
 script = ExtResource("1_308sg")
-display_name = "Fireball"
+display_name = "InfiniteTest"
 move_type = "Attack"
 damage_type = "Magic"
 hp_cost = 1
-range = 2
+range = 999
 power = 1.5
 hit_rate = 100.0
-accuracy_multiplier = 1.5
-element = "Fire"
-extra_damage_trait = "Ice"
-extra_multiplier = 1.3
+accuracy_multiplier = 1
+element = "None"
+extra_damage_trait = ""
+extra_multiplier = 1

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://bjddskkp0tpuy"]
+[gd_resource type="Resource" script_class="Unit" load_steps=13 format=3 uid="uid://bjddskkp0tpuy"]
 
 [ext_resource type="Texture2D" uid="uid://yw476j47tg4w" path="res://Sprites/Overworld/proton_small.png" id="1_2kp8d"]
 [ext_resource type="Script" path="res://Scripts/MoveUnlock.gd" id="1_53xbf"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_lus8k"]
 [ext_resource type="Resource" uid="uid://clvn71ednbdqi" path="res://Database/Moves/Slice.tres" id="3_yda0g"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="4_t1vk0"]
+[ext_resource type="Resource" path="res://Database/Moves/Lance.tres" id="5_0ksuh"]
+[ext_resource type="Resource" path="res://Database/Moves/Javelin.tres" id="6_nxq84"]
 
 [sub_resource type="Resource" id="Resource_15dbi"]
 script = ExtResource("3_lus8k")
@@ -19,11 +21,21 @@ I'm feeling stronger.
 Is this the power of the Xuir?
 I feel stronger."
 
+[sub_resource type="Resource" id="Resource_dc1lt"]
+script = ExtResource("1_53xbf")
+level = 3
+move = ExtResource("5_0ksuh")
+
+[sub_resource type="Resource" id="Resource_4536d"]
+script = ExtResource("1_53xbf")
+level = 5
+move = ExtResource("6_nxq84")
+
 [resource]
 script = ExtResource("4_t1vk0")
 character = SubResource("Resource_15dbi")
 moves = Array[ExtResource("2_qwdiv")]([ExtResource("3_yda0g")])
-move_unlocks = Array[ExtResource("1_53xbf")]([])
+move_unlocks = Array[ExtResource("1_53xbf")]([SubResource("Resource_dc1lt"), SubResource("Resource_4536d")])
 level = 1
 hp = 30
 attack = 10

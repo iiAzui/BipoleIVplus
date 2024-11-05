@@ -14,12 +14,12 @@ extends Resource
 # all except None will automatically deal a 1.3x damage mult towards the one element they deal more damage to.
 # Fire -> Ice -> Bio -> Water -> Fire
 # Electric <-> Shadow
-@export_enum("None", "Fire", "Water", "Ice", "Bio", "Thunder", "Shadow") var element: String = "None"
+@export_enum("None", "Fire", "Water", "Ice", "Bio", "Electric", "Shadow") var element: String = "None"
 
 # Extra damage - seperate from the elmenetal system.
 # Extra damage values will override what's in the elemental matchup table
 # Trait to deal extra damage to
-@export_subgroup("Extra")
+#@export_subgroup("Extra")
 @export var extra_damage_trait: String
 # Amount of extra damage to deal
 @export var extra_multiplier: float

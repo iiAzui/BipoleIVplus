@@ -17,7 +17,7 @@ INFERRED_ELEMENTS_TABLE = {
 }
 
 def export_attack(move: moves.Attack):
-    print("Exporting "+move.DisplayName+"...")
+    print("Exporting "+move.CombatName+"...")
     # Maps trait extra damage to the element likely attributed to the move
     
     inferred_element = INFERRED_ELEMENTS_TABLE[move.Extra] if move.Extra in INFERRED_ELEMENTS_TABLE else "None"
@@ -29,11 +29,11 @@ def export_attack(move: moves.Attack):
 
 [resource]
 script = ExtResource("1_308sg")
-display_name = "{move.DisplayName}"
+display_name = "{move.CombatName}"
 move_type = "Attack"
 damage_type = "{move.MoveType}"
 hp_cost = {move.HPCost}
-range = {move.MoveRange}
+range = {999 if move.MoveRange == "Infinite" else move.MoveRange}
 power = {move.PWR}
 hit_rate = 100.0
 accuracy_multiplier = {move.HIT}
@@ -41,7 +41,7 @@ element = "{inferred_element}"
 extra_damage_trait = "{move.Extra}"
 extra_multiplier = {move.ExtraMul}"""
 
-    file_path = os.path.join("./Conversion/ExportedMoves", f"{move.CombatName}.tres")
+    file_path = os.path.join("./Database/Moves", f"{move.CombatName}.tres")
     with open(file_path, "w") as file:
         file.write(tres_content)
 

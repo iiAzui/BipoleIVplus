@@ -5,14 +5,14 @@
 
 [resource]
 script = ExtResource("1_308sg")
-display_name = "Fireball"
+display_name = "Volt Blades"
 move_type = "Attack"
-damage_type = "Magic"
-hp_cost = 1
-range = 2
-power = 1.5
+damage_type = "Physical"
+hp_cost = 3
+range = 1
+power = 1.8
 hit_rate = 100.0
-accuracy_multiplier = 1.5
-element = "Fire"
-extra_damage_trait = "Ice"
+accuracy_multiplier = 1.2
+element = "Electric"
+extra_damage_trait = "Shadow"
 extra_multiplier = 1.3

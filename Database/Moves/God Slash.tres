@@ -1,17 +1,18 @@
-[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://lhemddpv3hms"]
+
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="1_308sg"]
 
 [resource]
 script = ExtResource("1_308sg")
-display_name = "Slam"
+display_name = "God Slash"
 move_type = "Attack"
 damage_type = "Physical"
-hp_cost = 0
+hp_cost = 75
 range = 1
-power = 2
+power = 5.5
 hit_rate = 100.0
-accuracy_multiplier = 1.5
+accuracy_multiplier = 3
 element = "None"
 extra_damage_trait = ""
 extra_multiplier = 1
