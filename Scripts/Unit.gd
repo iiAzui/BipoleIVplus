@@ -9,7 +9,13 @@ signal character_changed
 		character_changed.emit()
 
 @export var moves: Array[Move]
-@export var move_unlocks: Array[MoveUnlock]
+@export var move_unlocks: Array[Move]
+@export var move_unlock_levels: Array[int]
+
+# USED ONLY FOR IMPORTING FROM PYTHON CONVERSION
+@export_storage var exported_move_names: Array[String]
+@export_storage var exported_move_unlock_names: Array[String]
+@export_storage var exported_move_unlock_levels: Array[int]
 
 @export_subgroup("Stats")
 signal level_changed
@@ -44,3 +50,6 @@ signal level_changed
 
 var max_hp: int
 var exp: int = 0 # Level up every 100 EXP
+
+func _init() -> void:
+	print("init ", resource_name)

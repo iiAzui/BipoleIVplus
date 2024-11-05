@@ -2,18 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://bh2c3tqr6mxhh" path="res://Scenes/ChapterTemplate.tscn" id="1_v11b5"]
 [ext_resource type="PackedScene" uid="uid://da2b80p3dhtok" path="res://Scenes/UI/PlacedUnit.tscn" id="2_crf22"]
-[ext_resource type="Script" path="res://Scripts/MoveUnlock.gd" id="3_2ytt2"]
-[ext_resource type="Resource" uid="uid://cc2kqmp1w5qbk" path="res://Database/EnemyUnitIdentities/RedSlime.tres" id="3_a5h2i"]
+[ext_resource type="Resource" uid="uid://cc2kqmp1w5qbk" path="res://Database/Characters/RedSlime.tres" id="3_a5h2i"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="4_843sx"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="5_fc30f"]
 [ext_resource type="Resource" uid="uid://lhemddpv3hms" path="res://Database/Moves/Slam.tres" id="5_ppvk3"]
-[ext_resource type="Resource" uid="uid://cslox4jgyjyci" path="res://Database/EnemyUnitIdentities/BlueSlime.tres" id="8_khk1t"]
+[ext_resource type="Resource" uid="uid://cslox4jgyjyci" path="res://Database/Characters/BlueSlime.tres" id="8_khk1t"]
 
 [sub_resource type="Resource" id="Resource_frl25"]
 script = ExtResource("5_fc30f")
 character = ExtResource("3_a5h2i")
 moves = Array[ExtResource("4_843sx")]([ExtResource("5_ppvk3")])
-move_unlocks = Array[ExtResource("3_2ytt2")]([])
+move_unlocks = Array[ExtResource("4_843sx")]([])
 level = 1
 hp = 20
 attack = 12
@@ -39,7 +38,7 @@ acr_growth = Vector2i(50, 1)
 script = ExtResource("5_fc30f")
 character = ExtResource("8_khk1t")
 moves = Array[ExtResource("4_843sx")]([ExtResource("5_ppvk3")])
-move_unlocks = Array[ExtResource("3_2ytt2")]([])
+move_unlocks = Array[ExtResource("4_843sx")]([])
 level = 1
 hp = 20
 attack = 12

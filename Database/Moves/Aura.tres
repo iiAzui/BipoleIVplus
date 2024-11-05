@@ -1,5 +1,4 @@
-
-[gd_resource type="Resource" script_class="Move" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://b8dj28ahmv3tl"]
 
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="1_308sg"]
 
@@ -12,7 +11,7 @@ hp_cost = 20
 range = 7
 power = 2
 hit_rate = 100.0
-accuracy_multiplier = 1
+accuracy_multiplier = 1.0
 element = "None"
 extra_damage_trait = ""
 extra_multiplier = 1

@@ -36,9 +36,9 @@ class Unit:
     EXPReward=50, #The EXP given when defeated, enemies can also level up if they defeat your units
     Level=1,
     UnitClass="Bipolian",
-    Attacks=[],
-    Supports=[],
-    Traits=[],
+    Attacks: list[moves.Attack] = [],
+    Supports: list[moves.Support] = [],
+    Traits: list[str] = [],
     HPGrowth=[50,1], #Chance to level up, max amount to increase
     ATKGrowth=[50,1],
     DEFGrowth=[50,1],

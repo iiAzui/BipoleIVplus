@@ -26,6 +26,10 @@ func _ready() -> void:
 	load_player_units()
 		
 func load_player_units():
+	if not SaveData.save:
+		printerr("no save data loaded but trying to load units!")
+		return
+	
 	# Spawn along the bottom row in retro mode.
 	# Once non retro modes are added this will need new code
 	var place_coords := Vector2i(0, 12)

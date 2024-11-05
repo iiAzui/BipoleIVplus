@@ -1,10 +1,8 @@
-[gd_resource type="Resource" script_class="SaveData" load_steps=5 format=3 uid="uid://dgue18jlmab4l"]
+[gd_resource type="Resource" script_class="SaveData" load_steps=3 format=3 uid="uid://g4bb60ja48co"]
 
 [ext_resource type="Script" path="res://Scripts/SaveData.gd" id="1_xkpom"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="2_d00s4"]
-[ext_resource type="Resource" uid="uid://bjddskkp0tpuy" path="res://Database/RecruitedUnits/Proton.tres" id="3_d0vcd"]
-[ext_resource type="Resource" uid="uid://b2fejm2qt300q" path="res://Database/RecruitedUnits/Quest.tres" id="4_r83hl"]
 
 [resource]
 script = ExtResource("1_xkpom")
-units = Array[ExtResource("2_d00s4")]([ExtResource("3_d0vcd"), ExtResource("4_r83hl")])
+units = Array[ExtResource("2_d00s4")]([])
