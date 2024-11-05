@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bobomkqivpepj"]
+
+[ext_resource type="Texture2D" uid="uid://ds5b67wsy4g1d" path="res://Sprites/Overworld/b_small.png" id="1_a1wgc"]
+[ext_resource type="Texture2D" uid="uid://bjc15xcg6qtcl" path="res://Sprites/Portraits/b_big.png" id="2_rk21u"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "B"
+portrait = ExtResource("2_rk21u")
+overworld_sprite = ExtResource("1_a1wgc")
+bio = "B is an Nolavillian who has been affected by the Inverse Time. Due to this, he is taken to a different timeline every 18 months."
+level_quotes = Array[String](["..."])

@@ -16,7 +16,7 @@ INFERRED_ELEMENTS_TABLE = {
     "Electric": "Shadow"
 }
 
-def export_attack(move: moves.Attack):
+def export_move(move: moves.Attack | moves.Support, move_type: str):
     print("Exporting "+move.CombatName+"...")
     # Maps trait extra damage to the element likely attributed to the move
     
@@ -30,13 +30,13 @@ def export_attack(move: moves.Attack):
 [resource]
 script = ExtResource("1_308sg")
 display_name = "{move.CombatName}"
-move_type = "Attack"
+move_type = "{move_type}"
 damage_type = "{move.MoveType}"
 hp_cost = {move.HPCost}
 range = {999 if move.MoveRange == "Infinite" else move.MoveRange}
 power = {move.PWR}
 hit_rate = 100.0
-accuracy_multiplier = {move.HIT}
+hit = {move.HIT if move_type == "Attack" else 1.0}
 element = "{inferred_element}"
 extra_damage_trait = "{move.Extra}"
 extra_multiplier = {move.ExtraMul}"""
@@ -45,5 +45,7 @@ extra_multiplier = {move.ExtraMul}"""
     with open(file_path, "w") as file:
         file.write(tres_content)
 
-for attack in moves.ListOfAttacks:
-    export_attack(attack)
+for move in moves.ListOfAttacks:
+    export_move(move, "Attack")
+for move in moves.ListOfSupports:
+    export_move(move, "Support")

@@ -1,5 +1,4 @@
-
-[gd_resource type="Resource" script_class="Move" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://c61nk2apu5m44"]
 
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="1_308sg"]
 
@@ -10,9 +9,9 @@ move_type = "Attack"
 damage_type = "Physical"
 hp_cost = 0
 range = 1
-power = 1
+power = 1.5
 hit_rate = 100.0
-accuracy_multiplier = 0.8
+hit = 0.8
 element = "None"
 extra_damage_trait = "Armored"
-extra_multiplier = 5
+extra_multiplier = 0.0

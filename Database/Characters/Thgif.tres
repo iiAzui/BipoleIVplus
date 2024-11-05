@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://tuud8xym4sdu"]
+
+[ext_resource type="Texture2D" uid="uid://c83g2pfto0jca" path="res://Sprites/Overworld/thgif_small.png" id="1_8xgt2"]
+[ext_resource type="Texture2D" uid="uid://c28pobofjhdth" path="res://Sprites/Portraits/thgif_big.png" id="2_dqbsy"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Thgif"
+portrait = ExtResource("2_dqbsy")
+overworld_sprite = ExtResource("1_8xgt2")
+bio = "Thgif is a soldier from Shade."
+level_quotes = Array[String](["Victory.", "Great.", "I've won."])

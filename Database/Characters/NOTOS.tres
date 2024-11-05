@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://di32wppeu8hxw"]
+
+[ext_resource type="Texture2D" uid="uid://csh087dten7vi" path="res://Sprites/Overworld/NOTOS_small.png" id="1_ojmn0"]
+[ext_resource type="Texture2D" uid="uid://dk2rblig17fxl" path="res://Sprites/Portraits/NOTOS_big.png" id="2_etg7h"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "NOTOS"
+portrait = ExtResource("2_etg7h")
+overworld_sprite = ExtResource("1_ojmn0")
+bio = "[[UNKNOWN]]"
+level_quotes = Array[String](["It is imminent.", "Death awaits.", "May the wrath consume you."])

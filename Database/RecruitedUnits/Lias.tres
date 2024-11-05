@@ -1,20 +1,26 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://d3cwymqoqwhoe"]
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://d3cwymqoqwhoe"]
 
+[ext_resource type="Resource" uid="uid://cyu1m1hbbu76g" path="res://Database/Characters/Lias.tres" id="1_bqcqb"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="2_vafp8"]
 [ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="3_e7t67"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" path="res://Database/Moves/Death Strike.tres" id="4_ddgqs"]
 [ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="5_q0hpf"]
+[ext_resource type="Resource" uid="uid://2tphaotxnbto" path="res://Database/Moves/Heal.tres" id="6_15hra"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="8_46usx"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([ExtResource("5_q0hpf")])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_vafp8"), ExtResource("3_e7t67"), ExtResource("4_ddgqs")])
-move_unlock_levels = Array[int]([25, 30, 30])
-exported_move_names = Array[String](["Slice"])
-exported_move_unlock_names = Array[String](["Slash", "Aqua", "Death Strike"])
-exported_move_unlock_levels = Array[int]([25, 30, 30])
+character = ExtResource("1_bqcqb")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("5_q0hpf"), ExtResource("8_46usx")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_vafp8"), ExtResource("3_e7t67"), ExtResource("4_ddgqs"), ExtResource("6_15hra")])
+move_unlock_levels = Array[int]([25, 30, 30, 27])
+exported_move_names = Array[String](["Slice", "Med Kit"])
+exported_move_unlock_names = Array[String](["Slash", "Aqua", "Death Strike", "Heal"])
+exported_move_unlock_levels = Array[int]([25, 30, 30, 27])
+exported_portrait_name = "lias_big"
+exported_overworld_name = "lias_small"
 level = 20
 hp = 20
 attack = 12

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://b5p2rqkgpy6ux"]
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://b5p2rqkgpy6ux"]
 
-[ext_resource type="Resource" uid="uid://bxv1q6gih741g" path="res://Database/Moves/Lance.tres" id="2_5d5xl"]
+[ext_resource type="Resource" uid="uid://c4ontcgn8wuma" path="res://Database/Characters/Proton.tres" id="1_8t7al"]
+[ext_resource type="Resource" path="res://Database/Moves/Lance.tres" id="2_5d5xl"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
-[ext_resource type="Resource" uid="uid://cfcu2fevofp4" path="res://Database/Moves/Javelin.tres" id="3_icvo0"]
+[ext_resource type="Resource" path="res://Database/Moves/Javelin.tres" id="3_icvo0"]
 [ext_resource type="Resource" uid="uid://dxtwj6h6wlkqs" path="res://Database/Moves/Armor Break.tres" id="4_ls70e"]
 [ext_resource type="Resource" path="res://Database/Moves/Mage Blade.tres" id="5_uirkf"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="6_8jw5r"]
@@ -11,12 +12,15 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_8t7al")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("7_k8npw")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_5d5xl"), ExtResource("3_icvo0"), ExtResource("4_ls70e"), ExtResource("5_uirkf"), ExtResource("6_8jw5r")])
 move_unlock_levels = Array[int]([3, 5, 10, 15, 20])
 exported_move_names = Array[String](["Slice"])
 exported_move_unlock_names = Array[String](["Lance", "Javelin", "Armor Break", "Mage Blade", "Slash"])
 exported_move_unlock_levels = Array[int]([3, 5, 10, 15, 20])
+exported_portrait_name = "proton_big"
+exported_overworld_name = "proton_small"
 level = 1
 hp = 30
 attack = 10

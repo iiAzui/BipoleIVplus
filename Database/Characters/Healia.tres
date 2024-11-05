@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bsbbb2vnrxx67"]
+
+[ext_resource type="Texture2D" uid="uid://ptbtkted0jje" path="res://Sprites/Overworld/healia_small.png" id="1_nl8ya"]
+[ext_resource type="Texture2D" uid="uid://ddqlcx2yauswh" path="res://Sprites/Portraits/healia_big.png" id="2_mrn86"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Healia"
+portrait = ExtResource("2_mrn86")
+overworld_sprite = ExtResource("1_nl8ya")
+bio = "Healia is a mage from Sine. She joined Proton's army after her town was saved by them."
+level_quotes = Array[String](["This should be good.", "This will help me heal.", "This should aid me."])

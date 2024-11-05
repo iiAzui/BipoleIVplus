@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://cprs6vbt251wq"]
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://cprs6vbt251wq"]
 
+[ext_resource type="Resource" uid="uid://bdu03ofgrrgj" path="res://Database/Characters/Bladen.tres" id="1_xjkhw"]
 [ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="2_fhqs5"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -7,15 +8,19 @@
 [ext_resource type="Resource" uid="uid://dxtwj6h6wlkqs" path="res://Database/Moves/Armor Break.tres" id="4_dxsrb"]
 [ext_resource type="Resource" path="res://Database/Moves/Death Strike.tres" id="5_fai7a"]
 [ext_resource type="Resource" path="res://Database/Moves/Dagger.tres" id="6_4ocvp"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="8_4hte6"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([ExtResource("6_4ocvp")])
+character = ExtResource("1_xjkhw")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("6_4ocvp"), ExtResource("8_4hte6")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_fhqs5"), ExtResource("3_x34kl"), ExtResource("4_dxsrb"), ExtResource("5_fai7a")])
 move_unlock_levels = Array[int]([10, 13, 15, 20])
-exported_move_names = Array[String](["Dagger"])
+exported_move_names = Array[String](["Dagger", "Med Kit"])
 exported_move_unlock_names = Array[String](["Cut", "Finisher", "Armor Break", "Death Strike"])
 exported_move_unlock_levels = Array[int]([10, 13, 15, 20])
+exported_portrait_name = "bladen_big"
+exported_overworld_name = "bladen_small"
 level = 8
 hp = 20
 attack = 12

@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://b2do8go4g4ka7"]
+[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://b2do8go4g4ka7"]
 
+[ext_resource type="Resource" uid="uid://do8pi57eymajm" path="res://Database/Characters/Damagein.tres" id="1_ybo63"]
 [ext_resource type="Resource" uid="uid://bcu3asejb0s5e" path="res://Database/Moves/Fireball.tres" id="2_ehpdg"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="3_8l6r2"]
@@ -7,12 +8,15 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_ybo63")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("3_8l6r2")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_ehpdg")])
 move_unlock_levels = Array[int]([15])
 exported_move_names = Array[String](["Slice"])
 exported_move_unlock_names = Array[String](["Fireball"])
 exported_move_unlock_levels = Array[int]([15])
+exported_portrait_name = "damagein_big"
+exported_overworld_name = "damagein_small"
 level = 6
 hp = 13
 attack = 18

@@ -1,0 +1,18 @@
+
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="1_308sg"]
+
+[resource]
+script = ExtResource("1_308sg")
+display_name = "Med Kit"
+move_type = "Support"
+damage_type = "Physical"
+hp_cost = 0
+range = 0
+power = 1.5
+hit_rate = 100.0
+hit = 1.0
+element = "None"
+extra_damage_trait = ""
+extra_multiplier = 1

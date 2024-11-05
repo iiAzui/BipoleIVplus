@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://cyu1m1hbbu76g"]
+
+[ext_resource type="Texture2D" uid="uid://d3aeswvxxtoai" path="res://Sprites/Overworld/lias_small.png" id="1_sbnfk"]
+[ext_resource type="Texture2D" uid="uid://di1n65ddhhkf6" path="res://Sprites/Portraits/lias_big.png" id="2_kilys"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Lias"
+portrait = ExtResource("2_kilys")
+overworld_sprite = ExtResource("1_sbnfk")
+bio = "Lias is a random sailor in the Bipole Sea who decided to team up with Proton's army."
+level_quotes = Array[String](["Nice.", "Good.", "This could be helpful."])

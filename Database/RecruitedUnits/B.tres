@@ -1,20 +1,25 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://cblquethd7tgi"]
+[gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://cblquethd7tgi"]
 
+[ext_resource type="Resource" uid="uid://bobomkqivpepj" path="res://Database/Characters/B.tres" id="1_hyb0y"]
 [ext_resource type="Resource" path="res://Database/Moves/Beam.tres" id="2_a0jkf"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" path="res://Database/Moves/Destroyer.tres" id="3_vrgfx"]
 [ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="4_v3txv"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="5_nigl2"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="5_p4slv"]
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_hyb0y")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("4_v3txv"), ExtResource("5_p4slv")])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_a0jkf"), ExtResource("3_vrgfx")])
-move_unlock_levels = Array[int]([40, 50])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_a0jkf"), ExtResource("3_vrgfx"), ExtResource("5_nigl2")])
+move_unlock_levels = Array[int]([40, 50, 45])
 exported_move_names = Array[String](["Cut", "Slash"])
-exported_move_unlock_names = Array[String](["Beam", "Destroyer"])
-exported_move_unlock_levels = Array[int]([40, 50])
+exported_move_unlock_names = Array[String](["Beam", "Destroyer", "Med Kit"])
+exported_move_unlock_levels = Array[int]([40, 50, 45])
+exported_portrait_name = "b_big"
+exported_overworld_name = "b_small"
 level = 25
 hp = 90
 attack = 35

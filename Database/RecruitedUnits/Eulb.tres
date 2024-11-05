@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://dre4ihptjb138"]
+[gd_resource type="Resource" script_class="Unit" load_steps=12 format=3 uid="uid://dre4ihptjb138"]
 
+[ext_resource type="Resource" uid="uid://c3kjk30vibnrn" path="res://Database/Characters/Eulb.tres" id="1_sr4nh"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Mage Blade.tres" id="2_un5e5"]
 [ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="3_d7rfk"]
@@ -7,15 +8,21 @@
 [ext_resource type="Resource" path="res://Database/Moves/Hydro.tres" id="4_jcd3l"]
 [ext_resource type="Resource" path="res://Database/Moves/Hydra.tres" id="5_uostv"]
 [ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="6_dpawg"]
+[ext_resource type="Resource" path="res://Database/Moves/Long Heal.tres" id="7_rjvv3"]
+[ext_resource type="Resource" path="res://Database/Moves/Far Heal.tres" id="8_5h0d4"]
+[ext_resource type="Resource" uid="uid://2tphaotxnbto" path="res://Database/Moves/Heal.tres" id="10_mjtay"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([ExtResource("6_dpawg")])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_un5e5"), ExtResource("3_d7rfk"), ExtResource("4_jcd3l"), ExtResource("5_uostv")])
-move_unlock_levels = Array[int]([30, 30, 35, 40])
-exported_move_names = Array[String](["Aqua"])
-exported_move_unlock_names = Array[String](["Mage Blade", "Cut", "Hydro", "Hydra"])
-exported_move_unlock_levels = Array[int]([30, 30, 35, 40])
+character = ExtResource("1_sr4nh")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("6_dpawg"), ExtResource("10_mjtay")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_un5e5"), ExtResource("3_d7rfk"), ExtResource("4_jcd3l"), ExtResource("5_uostv"), ExtResource("7_rjvv3"), ExtResource("8_5h0d4")])
+move_unlock_levels = Array[int]([30, 30, 35, 40, 25, 27])
+exported_move_names = Array[String](["Aqua", "Heal"])
+exported_move_unlock_names = Array[String](["Mage Blade", "Cut", "Hydro", "Hydra", "Long Heal", "Far Heal"])
+exported_move_unlock_levels = Array[int]([30, 30, 35, 40, 25, 27])
+exported_portrait_name = "eulb_big"
+exported_overworld_name = "eulb_small"
 level = 21
 hp = 45
 attack = 17

@@ -1,18 +1,23 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://cv4c2wa38o58d"]
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://cv4c2wa38o58d"]
 
-[ext_resource type="Resource" path="res://Database/Moves/Shield Shatter.tres" id="2_mblq5"]
+[ext_resource type="Resource" uid="uid://b36m7al344vag" path="res://Database/Characters/Vruh.tres" id="1_56tgh"]
+[ext_resource type="Resource" uid="uid://c61nk2apu5m44" path="res://Database/Moves/Shield Shatter.tres" id="2_mblq5"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
-[ext_resource type="Resource" path="res://Database/Moves/Punch.tres" id="3_oiqry"]
+[ext_resource type="Resource" uid="uid://cmpqi18op8xyt" path="res://Database/Moves/Punch.tres" id="3_oiqry"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="4_84sa4"]
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_56tgh")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("3_oiqry")])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_mblq5")])
-move_unlock_levels = Array[int]([20])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_mblq5"), ExtResource("4_84sa4")])
+move_unlock_levels = Array[int]([20, 17])
 exported_move_names = Array[String](["Punch"])
-exported_move_unlock_names = Array[String](["Shield Shatter"])
-exported_move_unlock_levels = Array[int]([20])
+exported_move_unlock_names = Array[String](["Shield Shatter", "Med Kit"])
+exported_move_unlock_levels = Array[int]([20, 17])
+exported_portrait_name = "vruh_big"
+exported_overworld_name = "vruh_small"
 level = 15
 hp = 30
 attack = 15

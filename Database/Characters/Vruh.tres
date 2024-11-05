@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://b36m7al344vag"]
+
+[ext_resource type="Texture2D" uid="uid://bllrk4gl0rki2" path="res://Sprites/Overworld/vruh_small.png" id="1_ue3ba"]
+[ext_resource type="Texture2D" uid="uid://crt0kmcbybh2i" path="res://Sprites/Portraits/vruh_big.png" id="2_wb3xf"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Vruh"
+portrait = ExtResource("2_wb3xf")
+overworld_sprite = ExtResource("1_ue3ba")
+bio = "bruh."
+level_quotes = Array[String](["Vruh moment.", "Bruh moment.", "Do you ever think about late-stage capitalism?"])

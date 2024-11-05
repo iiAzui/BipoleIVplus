@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://dbuyy0o6tnuo1"]
+
+[ext_resource type="Texture2D" uid="uid://d3p2cpylu1e0a" path="res://Sprites/Overworld/tnemecalperiii_small.png" id="1_ce8wl"]
+[ext_resource type="Texture2D" uid="uid://c72y7l0lxwitd" path="res://Sprites/Portraits/tnemecalperiii_big.png" id="2_807hu"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Tnemecalper III"
+portrait = ExtResource("2_807hu")
+overworld_sprite = ExtResource("1_ce8wl")
+bio = "Tnemecalper III is the third of the four Tnemecalpers. They are of unknown origin but have been summoned to assist you."
+level_quotes = Array[String](["Level has been detected", "Power has been detected"])

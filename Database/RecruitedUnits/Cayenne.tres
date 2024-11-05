@@ -1,18 +1,23 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://2vpd8cug3ych"]
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://2vpd8cug3ych"]
 
+[ext_resource type="Resource" uid="uid://gcwe13gsdksl" path="res://Database/Characters/Cayenne.tres" id="1_7bvii"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
-[ext_resource type="Resource" uid="uid://crvedwmghmsf2" path="res://Database/Moves/Anti-Xuir.tres" id="2_qv2eg"]
+[ext_resource type="Resource" path="res://Database/Moves/Anti-Xuir.tres" id="2_qv2eg"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="3_ifg7o"]
+[ext_resource type="Resource" path="res://Database/Moves/Health Potion.tres" id="5_shhhw"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([ExtResource("2_qv2eg"), ExtResource("3_ifg7o")])
+character = ExtResource("1_7bvii")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("2_qv2eg"), ExtResource("3_ifg7o"), ExtResource("5_shhhw")])
 move_unlocks = Array[ExtResource("2_pja1r")]([])
 move_unlock_levels = Array[int]([])
-exported_move_names = Array[String](["Anti-Xuir", "Slash"])
+exported_move_names = Array[String](["Anti-Xuir", "Slash", "Health Potion"])
 exported_move_unlock_names = Array[String]([])
 exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "cayenne_big"
+exported_overworld_name = "cayenne_small"
 level = 60
 hp = 150
 attack = 35

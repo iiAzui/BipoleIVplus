@@ -1,23 +1,28 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://ckugwsy8ditna"]
+[gd_resource type="Resource" script_class="Unit" load_steps=12 format=3 uid="uid://ckugwsy8ditna"]
 
+[ext_resource type="Resource" uid="uid://cge3ul1ykgocl" path="res://Database/Characters/Wob.tres" id="1_j0f4v"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Distance Shot.tres" id="2_tjq88"]
 [ext_resource type="Resource" uid="uid://bcu3asejb0s5e" path="res://Database/Moves/Fireball.tres" id="3_4j7x4"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe.tres" id="4_vrciq"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe II.tres" id="5_4eavd"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe III.tres" id="6_32flw"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe IV.tres" id="7_6hp8a"]
+[ext_resource type="Resource" uid="uid://d27gk18od5me0" path="res://Database/Moves/Snipe.tres" id="4_vrciq"]
+[ext_resource type="Resource" uid="uid://d3w2l3i1n8a7" path="res://Database/Moves/Snipe II.tres" id="5_4eavd"]
+[ext_resource type="Resource" uid="uid://ci1s7w7txiq5j" path="res://Database/Moves/Snipe III.tres" id="6_32flw"]
+[ext_resource type="Resource" uid="uid://c5slid8oyxlv4" path="res://Database/Moves/Snipe IV.tres" id="7_6hp8a"]
 [ext_resource type="Resource" path="res://Database/Moves/Bow+.tres" id="8_nuwf2"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="9_mqqeo"]
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_j0f4v")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("8_nuwf2")])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_tjq88"), ExtResource("3_4j7x4"), ExtResource("4_vrciq"), ExtResource("5_4eavd"), ExtResource("6_32flw"), ExtResource("7_6hp8a")])
-move_unlock_levels = Array[int]([8, 13, 20, 28, 39, 50])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_tjq88"), ExtResource("3_4j7x4"), ExtResource("4_vrciq"), ExtResource("5_4eavd"), ExtResource("6_32flw"), ExtResource("7_6hp8a"), ExtResource("9_mqqeo")])
+move_unlock_levels = Array[int]([8, 13, 20, 28, 39, 50, 16])
 exported_move_names = Array[String](["Bow+"])
-exported_move_unlock_names = Array[String](["Distance Shot", "Fireball", "Snipe", "Snipe II", "Snipe III", "Snipe IV"])
-exported_move_unlock_levels = Array[int]([8, 13, 20, 28, 39, 50])
+exported_move_unlock_names = Array[String](["Distance Shot", "Fireball", "Snipe", "Snipe II", "Snipe III", "Snipe IV", "Med Kit"])
+exported_move_unlock_levels = Array[int]([8, 13, 20, 28, 39, 50, 16])
+exported_portrait_name = "wob_big"
+exported_overworld_name = "wob_small"
 level = 6
 hp = 18
 attack = 19

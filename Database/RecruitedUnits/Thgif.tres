@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://d2b7rcdsxvy23"]
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://d2b7rcdsxvy23"]
 
+[ext_resource type="Resource" uid="uid://tuud8xym4sdu" path="res://Database/Characters/Thgif.tres" id="1_i8k7v"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="2_w2eun"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -8,12 +9,15 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_i8k7v")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("4_hqmrd")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_w2eun"), ExtResource("3_jd818")])
 move_unlock_levels = Array[int]([40, 45])
 exported_move_names = Array[String](["Slice"])
 exported_move_unlock_names = Array[String](["Slash", "Armor Break"])
 exported_move_unlock_levels = Array[int]([40, 45])
+exported_portrait_name = "thgif_big"
+exported_overworld_name = "thgif_small"
 level = 35
 hp = 60
 attack = 30

@@ -138,8 +138,8 @@ func show_range(unit: PlacedUnit):
 			highlight.position = coords * TILE_SIZE
 			range_display_grid.add_child(highlight)
 			
-		# Show attack range otherwise
-		elif highest_attack_range >= range_required:
+		# Show attack range otherwise if not an ally here
+		elif highest_attack_range >= range_required and (not other_unit or other_unit.allied != unit.allied):
 			var highlight: Node2D = ATTACK_TILE_HIGHLIGHT.instantiate()
 			highlight.position = coords * TILE_SIZE
 			range_display_grid.add_child(highlight)

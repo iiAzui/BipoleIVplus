@@ -1,22 +1,26 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://cndi38n3edcf4"]
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://cndi38n3edcf4"]
 
+[ext_resource type="Resource" uid="uid://cygoxvuvg8wbl" path="res://Database/Characters/Ahcem.tres" id="1_s28o2"]
 [ext_resource type="Resource" path="res://Database/Moves/Thunder Blast.tres" id="2_mi7jr"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" path="res://Database/Moves/Voltage.tres" id="3_npib5"]
-[ext_resource type="Resource" uid="uid://crvedwmghmsf2" path="res://Database/Moves/Anti-Xuir.tres" id="4_dir16"]
+[ext_resource type="Resource" path="res://Database/Moves/Anti-Xuir.tres" id="4_dir16"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="5_d10ms"]
 [ext_resource type="Resource" path="res://Database/Moves/Beam.tres" id="6_n28q2"]
 [ext_resource type="Resource" path="res://Database/Moves/Thunder.tres" id="7_e187g"]
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_s28o2")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("4_dir16"), ExtResource("5_d10ms"), ExtResource("6_n28q2"), ExtResource("7_e187g")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_mi7jr"), ExtResource("3_npib5")])
 move_unlock_levels = Array[int]([50, 55])
 exported_move_names = Array[String](["Anti-Xuir", "Slash", "Beam", "Thunder"])
 exported_move_unlock_names = Array[String](["Thunder Blast", "Voltage"])
 exported_move_unlock_levels = Array[int]([50, 55])
+exported_portrait_name = "ahcem_big"
+exported_overworld_name = "ahcem_small"
 level = 47
 hp = 115
 attack = 35

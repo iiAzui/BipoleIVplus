@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://b627175msnqce"]
+[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://b627175msnqce"]
 
+[ext_resource type="Resource" uid="uid://cqmtmnghklkgy" path="res://Database/Characters/Lacirtcele.tres" id="1_48vqh"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Thunder Blast.tres" id="2_xvrb2"]
 [ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="3_4svfw"]
@@ -9,12 +10,15 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_48vqh")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_o8swd")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_xvrb2"), ExtResource("3_4svfw"), ExtResource("4_b2ep6")])
 move_unlock_levels = Array[int]([10, 15, 15])
 exported_move_names = Array[String](["Thunder"])
 exported_move_unlock_names = Array[String](["Thunder Blast", "Slice", "Spark Blade"])
 exported_move_unlock_levels = Array[int]([10, 15, 15])
+exported_portrait_name = "lacirtcele_big"
+exported_overworld_name = "lacirtcele_small"
 level = 3
 hp = 13
 attack = 15

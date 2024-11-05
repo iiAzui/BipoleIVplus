@@ -1,21 +1,26 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://bu4vsp3wyeeau"]
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://bu4vsp3wyeeau"]
 
+[ext_resource type="Resource" uid="uid://bafctbxyd5o1b" path="res://Database/Characters/Xuirventh.tres" id="1_od5j8"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Finisher.tres" id="2_y1i3u"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="3_id87q"]
 [ext_resource type="Resource" path="res://Database/Moves/Fire Blast.tres" id="4_xed6e"]
 [ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="5_hsqom"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="6_1h3mv"]
 [ext_resource type="Resource" uid="uid://bcu3asejb0s5e" path="res://Database/Moves/Fireball.tres" id="6_5ue4v"]
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_od5j8")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_hsqom"), ExtResource("6_5ue4v")])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_y1i3u"), ExtResource("3_id87q"), ExtResource("4_xed6e")])
-move_unlock_levels = Array[int]([30, 35, 40])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_y1i3u"), ExtResource("3_id87q"), ExtResource("4_xed6e"), ExtResource("6_1h3mv")])
+move_unlock_levels = Array[int]([30, 35, 40, 32])
 exported_move_names = Array[String](["Slice", "Fireball"])
-exported_move_unlock_names = Array[String](["Finisher", "Slash", "Fire Blast"])
-exported_move_unlock_levels = Array[int]([30, 35, 40])
+exported_move_unlock_names = Array[String](["Finisher", "Slash", "Fire Blast", "Med Kit"])
+exported_move_unlock_levels = Array[int]([30, 35, 40, 32])
+exported_portrait_name = "xuirventh_big"
+exported_overworld_name = "xuirventh_small"
 level = 28
 hp = 45
 attack = 30

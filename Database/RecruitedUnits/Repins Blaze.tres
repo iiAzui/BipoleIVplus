@@ -1,23 +1,28 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://c0bwv734j3qi8"]
+[gd_resource type="Resource" script_class="Unit" load_steps=12 format=3 uid="uid://c0bwv734j3qi8"]
 
-[ext_resource type="Resource" path="res://Database/Moves/Snipe III.tres" id="2_eem24"]
+[ext_resource type="Resource" uid="uid://bq3x5g0ktlv2k" path="res://Database/Characters/Repins Blaze.tres" id="1_yvsjl"]
+[ext_resource type="Resource" uid="uid://ci1s7w7txiq5j" path="res://Database/Moves/Snipe III.tres" id="2_eem24"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe IV.tres" id="3_blp83"]
+[ext_resource type="Resource" uid="uid://c5slid8oyxlv4" path="res://Database/Moves/Snipe IV.tres" id="3_blp83"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
-[ext_resource type="Resource" path="res://Database/Moves/God Snipe.tres" id="4_rakfy"]
-[ext_resource type="Resource" path="res://Database/Moves/Flaming Arrow.tres" id="5_06xcc"]
+[ext_resource type="Resource" uid="uid://el8jqglnmsuk" path="res://Database/Moves/God Snipe.tres" id="4_rakfy"]
+[ext_resource type="Resource" uid="uid://dw8op4wkwvxt2" path="res://Database/Moves/Flaming Arrow.tres" id="5_06xcc"]
 [ext_resource type="Resource" uid="uid://bcu3asejb0s5e" path="res://Database/Moves/Fireball.tres" id="6_xy5ip"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe.tres" id="7_vqyqn"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe II.tres" id="8_ftk6i"]
+[ext_resource type="Resource" uid="uid://d27gk18od5me0" path="res://Database/Moves/Snipe.tres" id="7_vqyqn"]
+[ext_resource type="Resource" uid="uid://d3w2l3i1n8a7" path="res://Database/Moves/Snipe II.tres" id="8_ftk6i"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="10_jq3hu"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([ExtResource("5_06xcc"), ExtResource("6_xy5ip"), ExtResource("7_vqyqn"), ExtResource("8_ftk6i")])
+character = ExtResource("1_yvsjl")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("5_06xcc"), ExtResource("6_xy5ip"), ExtResource("7_vqyqn"), ExtResource("8_ftk6i"), ExtResource("10_jq3hu")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_eem24"), ExtResource("3_blp83"), ExtResource("4_rakfy")])
 move_unlock_levels = Array[int]([45, 50, 60])
-exported_move_names = Array[String](["Flaming Arrow", "Fireball", "Snipe", "Snipe II"])
+exported_move_names = Array[String](["Flaming Arrow", "Fireball", "Snipe", "Snipe II", "Med Kit"])
 exported_move_unlock_names = Array[String](["Snipe III", "Snipe IV", "God Snipe"])
 exported_move_unlock_levels = Array[int]([45, 50, 60])
+exported_portrait_name = "repins_big2"
+exported_overworld_name = "repins_small"
 level = 42
 hp = 70
 attack = 55

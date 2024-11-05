@@ -8,9 +8,9 @@ import placeunits
 import os
 
 def export_unit(unit: units.Unit, destination_folder: str):
-    move_names = ', '.join(['\"'+attack.CombatName+'\"' for attack in unit.Attacks])
-    move_unlock_names = ', '.join(['\"'+unlock[0].CombatName+'\"' for unlock in unit.AttackUnlocks])
-    move_unlock_levels = ', '.join([str(unlock[1]) for unlock in unit.AttackUnlocks])
+    move_names = ', '.join(['\"'+move.CombatName+'\"' for move in unit.Attacks + unit.Supports])
+    move_unlock_names = ', '.join(['\"'+unlock[0].CombatName+'\"' for unlock in unit.AttackUnlocks + unit.SupportUnlocks])
+    move_unlock_levels = ', '.join([str(unlock[1]) for unlock in unit.AttackUnlocks + unit.SupportUnlocks])
     traits = ', '.join(['\"'+trait+'\"' for trait in unit.Traits])
 
     tres_content = f"""
@@ -27,6 +27,8 @@ move_unlock_levels = Array[int]([])
 exported_move_names = Array[String]([{move_names}])
 exported_move_unlock_names = Array[String]([{move_unlock_names}])
 exported_move_unlock_levels = Array[int]([{move_unlock_levels}])
+exported_portrait_name = "{unit.Portrait}"
+exported_overworld_name = "{unit.Sprite}"
 level = {unit.Level}
 hp = {unit.MaxHP}
 attack = {unit.ATK}
@@ -50,8 +52,38 @@ acr_growth = Vector2i({unit.ACRGrowth[0]}, {unit.ACRGrowth[1]})
     """
 
     file_path = os.path.join(destination_folder, f"{unit.DisplayName}.tres")
+    # if not os.path.exists(file_path):
     with open(file_path, "w") as file:
         file.write(tres_content)
 
+
+
+def export_character(unit: units.Unit, destination_folder: str):
+    print("Exporting "+unit.DisplayName+"...")
+
+    bio = unit.Bio.replace("\n", " ")
+    level_quotes = ','.join(f'\"{quote[quote.index(": ")+2:]}\"' for quote in unit.LevelQuotes)
+
+    # Character - contains name, sprites, quotes, basically visual-only information
+    tres_content = f"""
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "{unit.DisplayName}"
+bio = "{bio}"
+level_quotes = Array[String]([{level_quotes}])
+"""
+    
+    file_path = os.path.join(destination_folder, f"{unit.DisplayName}.tres")
+    # if not os.path.exists(file_path):
+    with open(file_path, "w") as file:
+        file.write(tres_content)
+
+
 for unit in units.ListOfPlayableUnits:
     export_unit(unit, "./Database/RecruitedUnits")
+    # export_character(unit, "./Database/Characters")
+    pass

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://cge3ul1ykgocl"]
+
+[ext_resource type="Texture2D" uid="uid://l8h28krl4rdi" path="res://Sprites/Overworld/wob_small.png" id="1_1vk5j"]
+[ext_resource type="Texture2D" uid="uid://b6xnnqbbxyxjl" path="res://Sprites/Portraits/wob_big.png" id="2_k5d10"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Wob"
+portrait = ExtResource("2_k5d10")
+overworld_sprite = ExtResource("1_1vk5j")
+bio = "Wob is planning on joining the Static Army next year, but decided to help you out since  he's bored waiting for it."
+level_quotes = Array[String](["Hey, I did something.", "Am I winning?", "I hope I get stronger."])

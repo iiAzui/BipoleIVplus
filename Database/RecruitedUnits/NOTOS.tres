@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=11 format=3 uid="uid://bt4s1jhbfgsll"]
+[gd_resource type="Resource" script_class="Unit" load_steps=13 format=3 uid="uid://bt4s1jhbfgsll"]
 
+[ext_resource type="Resource" uid="uid://di32wppeu8hxw" path="res://Database/Characters/NOTOS.tres" id="1_jgosw"]
 [ext_resource type="Resource" uid="uid://dxtwj6h6wlkqs" path="res://Database/Moves/Armor Break.tres" id="2_hwclg"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
-[ext_resource type="Resource" path="res://Database/Moves/Shield Shatter.tres" id="3_fmrdu"]
+[ext_resource type="Resource" uid="uid://c61nk2apu5m44" path="res://Database/Moves/Shield Shatter.tres" id="3_fmrdu"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" path="res://Database/Moves/Execution.tres" id="4_v5qdt"]
 [ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="5_5j4i8"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="6_782ue"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="6_doqj0"]
 [ext_resource type="Resource" path="res://Database/Moves/Thunder.tres" id="7_v4rjv"]
 [ext_resource type="Resource" path="res://Database/Moves/Thunder Blast.tres" id="8_rnndm"]
@@ -13,12 +15,15 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_jgosw")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_5j4i8"), ExtResource("6_doqj0"), ExtResource("7_v4rjv"), ExtResource("8_rnndm"), ExtResource("9_5hox0")])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_hwclg"), ExtResource("3_fmrdu"), ExtResource("4_v5qdt")])
-move_unlock_levels = Array[int]([40, 45, 50])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_hwclg"), ExtResource("3_fmrdu"), ExtResource("4_v5qdt"), ExtResource("6_782ue")])
+move_unlock_levels = Array[int]([40, 45, 50, 47])
 exported_move_names = Array[String](["Slice", "Slash", "Thunder", "Thunder Blast", "Missile"])
-exported_move_unlock_names = Array[String](["Armor Break", "Shield Shatter", "Execution"])
-exported_move_unlock_levels = Array[int]([40, 45, 50])
+exported_move_unlock_names = Array[String](["Armor Break", "Shield Shatter", "Execution", "Med Kit"])
+exported_move_unlock_levels = Array[int]([40, 45, 50, 47])
+exported_portrait_name = "NOTOS_big"
+exported_overworld_name = "NOTOS_small"
 level = 38
 hp = 135
 attack = 35

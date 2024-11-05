@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bafctbxyd5o1b"]
+
+[ext_resource type="Texture2D" uid="uid://b6f7ecjdigdnj" path="res://Sprites/Overworld/xuirventh_small.png" id="1_kk1sy"]
+[ext_resource type="Texture2D" uid="uid://s8rm0c1qyg8g" path="res://Sprites/Portraits/xuirventh_big.png" id="2_rjkjp"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Xuirventh"
+portrait = ExtResource("2_rjkjp")
+overworld_sprite = ExtResource("1_kk1sy")
+bio = "Xuirventh is a Proto-Xuir who has escaped from Death Pepper's research center. He teams up with Proton in hopes of saving the other Proto-Xuirs that have been captured by the Xuirists."
+level_quotes = Array[String](["Good.", "This is revenge.", "I'm feeling stronger."])

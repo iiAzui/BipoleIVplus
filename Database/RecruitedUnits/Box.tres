@@ -1,17 +1,25 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=4 format=3 uid="uid://b2mrqr1to1al5"]
+[gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://b2mrqr1to1al5"]
 
+[ext_resource type="Resource" uid="uid://bwk0uuydyhk7r" path="res://Database/Characters/Box.tres" id="1_y1log"]
 [ext_resource type="Resource" path="res://Database/Moves/Dagger.tres" id="2_kr2mg"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Save.tres" id="4_kf5m3"]
+[ext_resource type="Resource" path="res://Database/Moves/Fortify (10).tres" id="5_ydps2"]
+[ext_resource type="Resource" path="res://Database/Moves/Health Potion.tres" id="6_qwbub"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="7_8j6la"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_kr2mg")])
-move_unlock_levels = Array[int]([42])
-exported_move_names = Array[String]([])
-exported_move_unlock_names = Array[String](["Dagger"])
-exported_move_unlock_levels = Array[int]([42])
+character = ExtResource("1_y1log")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("6_qwbub"), ExtResource("7_8j6la")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_kr2mg"), ExtResource("4_kf5m3"), ExtResource("5_ydps2")])
+move_unlock_levels = Array[int]([42, 40, 45])
+exported_move_names = Array[String](["Health Potion", "Med Kit"])
+exported_move_unlock_names = Array[String](["Dagger", "Save", "Fortify (10)"])
+exported_move_unlock_levels = Array[int]([42, 40, 45])
+exported_portrait_name = "box_big"
+exported_overworld_name = "box_small"
 level = 37
 hp = 100
 attack = 40

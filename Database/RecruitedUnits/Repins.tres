@@ -1,23 +1,28 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://r4wwtlks2wmd"]
+[gd_resource type="Resource" script_class="Unit" load_steps=12 format=3 uid="uid://r4wwtlks2wmd"]
 
+[ext_resource type="Resource" uid="uid://0sqcxbatr6ex" path="res://Database/Characters/Repins.tres" id="1_wrkj0"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe.tres" id="2_qcfnm"]
+[ext_resource type="Resource" uid="uid://d27gk18od5me0" path="res://Database/Moves/Snipe.tres" id="2_qcfnm"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" uid="uid://bcu3asejb0s5e" path="res://Database/Moves/Fireball.tres" id="3_l327u"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe II.tres" id="4_2euql"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe III.tres" id="5_velbw"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe IV.tres" id="6_mgxjv"]
+[ext_resource type="Resource" uid="uid://d3w2l3i1n8a7" path="res://Database/Moves/Snipe II.tres" id="4_2euql"]
+[ext_resource type="Resource" uid="uid://ci1s7w7txiq5j" path="res://Database/Moves/Snipe III.tres" id="5_velbw"]
+[ext_resource type="Resource" uid="uid://c5slid8oyxlv4" path="res://Database/Moves/Snipe IV.tres" id="6_mgxjv"]
 [ext_resource type="Resource" path="res://Database/Moves/Crossbow.tres" id="7_7ukyp"]
 [ext_resource type="Resource" path="res://Database/Moves/Distance Shot.tres" id="8_c6bbl"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="10_rq25y"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([ExtResource("7_7ukyp"), ExtResource("8_c6bbl")])
+character = ExtResource("1_wrkj0")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("7_7ukyp"), ExtResource("8_c6bbl"), ExtResource("10_rq25y")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_qcfnm"), ExtResource("3_l327u"), ExtResource("4_2euql"), ExtResource("5_velbw"), ExtResource("6_mgxjv")])
 move_unlock_levels = Array[int]([25, 35, 45, 55, 65])
-exported_move_names = Array[String](["Crossbow", "Distance Shot"])
+exported_move_names = Array[String](["Crossbow", "Distance Shot", "Med Kit"])
 exported_move_unlock_names = Array[String](["Snipe", "Fireball", "Snipe II", "Snipe III", "Snipe IV"])
 exported_move_unlock_levels = Array[int]([25, 35, 45, 55, 65])
+exported_portrait_name = "repins_big"
+exported_overworld_name = "repins_small"
 level = 20
 hp = 45
 attack = 35

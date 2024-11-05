@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bs3eavp03cffb"]
+
+[ext_resource type="Texture2D" uid="uid://3dv51xo05nay" path="res://Sprites/Overworld/xuirer_small.png" id="1_lioac"]
+[ext_resource type="Texture2D" uid="uid://cdmxl26gihjfa" path="res://Sprites/Portraits/xuirer_big.png" id="2_x41go"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Xuirer"
+portrait = ExtResource("2_x41go")
+overworld_sprite = ExtResource("1_lioac")
+bio = "Xuirer is a Xuirist who rejects the idea of the sinful Proto-Xuir and believes they should be worshipped as Xuir entities."
+level_quotes = Array[String](["Good.", "All shall fall to the power of Xuir.", "Accept the power of Xuir."])

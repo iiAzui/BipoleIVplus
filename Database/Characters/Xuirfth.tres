@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://b7yr8th61rcfc"]
+
+[ext_resource type="Texture2D" uid="uid://cx8100d4pd0if" path="res://Sprites/Overworld/xuirfth_small.png" id="1_3q64u"]
+[ext_resource type="Texture2D" uid="uid://dco7h4mfltmxr" path="res://Sprites/Portraits/xuirfth_big.png" id="2_taxth"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Xuirfth"
+portrait = ExtResource("2_taxth")
+overworld_sprite = ExtResource("1_3q64u")
+bio = "Xuirfth is a Proto-Xuir who escaped from the Shadow Realm with Xuirventh."
+level_quotes = Array[String](["Great.", "This will help.", "I feel stronger."])

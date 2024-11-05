@@ -1,15 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bco7bbqlikn0n"]
 
-[ext_resource type="Texture2D" uid="uid://duwjjm3r6mui6" path="res://Sprites/Overworld/quest_small.png" id="1_1w0a1"]
-[ext_resource type="Texture2D" uid="uid://b1dmg7egqn7dh" path="res://Sprites/Portraits/quest_big.png" id="2_8411n"]
-[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_yjdom"]
+[ext_resource type="Texture2D" uid="uid://duwjjm3r6mui6" path="res://Sprites/Overworld/quest_small.png" id="1_ekwun"]
+[ext_resource type="Texture2D" uid="uid://b1dmg7egqn7dh" path="res://Sprites/Portraits/quest_big.png" id="2_onf0k"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
-script = ExtResource("3_yjdom")
+script = ExtResource("3_qsxlm")
 display_name = "Quest"
-portrait = ExtResource("2_8411n")
-overworld_sprite = ExtResource("1_1w0a1")
+portrait = ExtResource("2_onf0k")
+overworld_sprite = ExtResource("1_ekwun")
 bio = "Quest is a skilled mage who acts as the high mage of the Territory of Static. His life goal is to discover the secrets of the legendary Artifacts."
-level_quotes = "I must become stronger.
-Hopefully, this will help me find the Artifacts.
-This is a welcome addition."
+level_quotes = Array[String](["I must become stronger.", "Hopefully, this will help me find the Artifacts.", "This is a welcome addition."])

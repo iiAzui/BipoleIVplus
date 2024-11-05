@@ -1,20 +1,24 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://dshndidxgdw44"]
+[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://dshndidxgdw44"]
 
+[ext_resource type="Resource" uid="uid://cq3i7we7chf6v" path="res://Database/Characters/Wodahs.tres" id="1_b58ts"]
 [ext_resource type="Resource" path="res://Database/Moves/Shadow Burst.tres" id="2_8egd0"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" path="res://Database/Moves/Dark Orb.tres" id="3_np2bv"]
-[ext_resource type="Resource" path="res://Database/Moves/Punch.tres" id="4_c254t"]
+[ext_resource type="Resource" uid="uid://cmpqi18op8xyt" path="res://Database/Moves/Punch.tres" id="4_c254t"]
 [ext_resource type="Resource" path="res://Database/Moves/Shadow Punch.tres" id="5_pi4cn"]
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_b58ts")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("4_c254t"), ExtResource("5_pi4cn")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_8egd0"), ExtResource("3_np2bv")])
 move_unlock_levels = Array[int]([15, 20])
 exported_move_names = Array[String](["Punch", "Shadow Punch"])
 exported_move_unlock_names = Array[String](["Shadow Burst", "Dark Orb"])
 exported_move_unlock_levels = Array[int]([15, 20])
+exported_portrait_name = "wodahs_big"
+exported_overworld_name = "wodahs_small"
 level = 10
 hp = 25
 attack = 19

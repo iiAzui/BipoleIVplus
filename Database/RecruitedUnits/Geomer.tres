@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://m4pxyv7fq45w"]
+[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://m4pxyv7fq45w"]
 
+[ext_resource type="Resource" uid="uid://b6uvj3p2uy1wo" path="res://Database/Characters/Geomer.tres" id="1_etq5d"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Geom Strike.tres" id="2_ykcuw"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -9,12 +10,15 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_etq5d")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("4_o07ae"), ExtResource("5_lb0vu")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_ykcuw"), ExtResource("3_o7aso")])
 move_unlock_levels = Array[int]([38, 42])
 exported_move_names = Array[String](["Geom Burst", "Geom Blast"])
 exported_move_unlock_names = Array[String](["Geom Strike", "Geom Slash"])
 exported_move_unlock_levels = Array[int]([38, 42])
+exported_portrait_name = "geomer_big"
+exported_overworld_name = "geomer_small"
 level = 34
 hp = 55
 attack = 35

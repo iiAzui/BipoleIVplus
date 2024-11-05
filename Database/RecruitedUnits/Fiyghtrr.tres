@@ -1,19 +1,26 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://cfk27totogkj3"]
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://cfk27totogkj3"]
 
+[ext_resource type="Resource" uid="uid://rwl76bhw6rh2" path="res://Database/Characters/Fiyghtrr.tres" id="1_brcoy"]
 [ext_resource type="Resource" path="res://Database/Moves/Mana Burst.tres" id="2_3holu"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
-[ext_resource type="Resource" uid="uid://b8dj28ahmv3tl" path="res://Database/Moves/Aura.tres" id="3_fa2nx"]
+[ext_resource type="Resource" path="res://Database/Moves/Aura.tres" id="3_fa2nx"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
-[ext_resource type="Resource" path="res://Database/Moves/Punch.tres" id="4_wtv8x"]
+[ext_resource type="Resource" uid="uid://cmpqi18op8xyt" path="res://Database/Moves/Punch.tres" id="4_wtv8x"]
+[ext_resource type="Resource" path="res://Database/Moves/Long Heal.tres" id="5_f1p06"]
+[ext_resource type="Resource" path="res://Database/Moves/Far Heal.tres" id="6_ggh0d"]
+[ext_resource type="Resource" uid="uid://2tphaotxnbto" path="res://Database/Moves/Heal.tres" id="8_lxusw"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([ExtResource("4_wtv8x")])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_3holu"), ExtResource("3_fa2nx")])
-move_unlock_levels = Array[int]([45, 55])
-exported_move_names = Array[String](["Punch"])
-exported_move_unlock_names = Array[String](["Mana Burst", "Aura"])
-exported_move_unlock_levels = Array[int]([45, 55])
+character = ExtResource("1_brcoy")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("4_wtv8x"), ExtResource("8_lxusw")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_3holu"), ExtResource("3_fa2nx"), ExtResource("5_f1p06"), ExtResource("6_ggh0d")])
+move_unlock_levels = Array[int]([45, 55, 50, 60])
+exported_move_names = Array[String](["Punch", "Heal"])
+exported_move_unlock_names = Array[String](["Mana Burst", "Aura", "Long Heal", "Far Heal"])
+exported_move_unlock_levels = Array[int]([45, 55, 50, 60])
+exported_portrait_name = "fiyghtrr_big"
+exported_overworld_name = "fiyghtrr_small"
 level = 40
 hp = 100
 attack = 35

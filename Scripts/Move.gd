@@ -8,7 +8,7 @@ extends Resource
 @export var range: int = 1
 @export var power: float = 1.5 # multiplied by attack to get damage/heal amount
 @export var hit_rate: float = 100 # new stat for accuracy percentage, only used outside of retro mode.
-@export var accuracy_multiplier: float = 1.0 # HIT stat from og bipole IV but renamed. only used in retro mode.
+@export var hit: float = 1.0 # HIT stat from og bipole IV but renamed. only used in retro mode. not used on sppoort type spells.
 
 # Used for dealing extra damage based on element.
 # all except None will automatically deal a 1.3x damage mult towards the one element they deal more damage to.

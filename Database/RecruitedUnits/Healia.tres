@@ -1,18 +1,25 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://dqg61mxed4o7r"]
+[gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://dqg61mxed4o7r"]
 
-[ext_resource type="Resource" uid="uid://bskgqpiv7juq4" path="res://Database/Moves/Thorn.tres" id="2_57lrb"]
+[ext_resource type="Resource" uid="uid://bsbbb2vnrxx67" path="res://Database/Characters/Healia.tres" id="1_msd0n"]
+[ext_resource type="Resource" path="res://Database/Moves/Thorn.tres" id="2_57lrb"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Vine Wrath.tres" id="3_0bq4j"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Far Heal.tres" id="5_6dsw0"]
+[ext_resource type="Resource" uid="uid://2tphaotxnbto" path="res://Database/Moves/Heal.tres" id="6_d2gdu"]
+[ext_resource type="Resource" path="res://Database/Moves/Long Heal.tres" id="7_esc3g"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_57lrb"), ExtResource("3_0bq4j")])
-move_unlock_levels = Array[int]([20, 25])
-exported_move_names = Array[String]([])
-exported_move_unlock_names = Array[String](["Thorn", "Vine Wrath"])
-exported_move_unlock_levels = Array[int]([20, 25])
+character = ExtResource("1_msd0n")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("6_d2gdu"), ExtResource("7_esc3g")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_57lrb"), ExtResource("3_0bq4j"), ExtResource("5_6dsw0")])
+move_unlock_levels = Array[int]([20, 25, 15])
+exported_move_names = Array[String](["Heal", "Long Heal"])
+exported_move_unlock_names = Array[String](["Thorn", "Vine Wrath", "Far Heal"])
+exported_move_unlock_levels = Array[int]([20, 25, 15])
+exported_portrait_name = "healia_big"
+exported_overworld_name = "healia_small"
 level = 6
 hp = 25
 attack = 9

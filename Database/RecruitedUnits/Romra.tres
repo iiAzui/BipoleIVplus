@@ -1,23 +1,27 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://dw4ca1e0dgrdt"]
+[gd_resource type="Resource" script_class="Unit" load_steps=11 format=3 uid="uid://dw4ca1e0dgrdt"]
 
-[ext_resource type="Resource" path="res://Database/Moves/Bow.tres" id="2_o4v8g"]
+[ext_resource type="Resource" uid="uid://ihnvhpvtp2w2" path="res://Database/Characters/Romra.tres" id="1_ksil0"]
+[ext_resource type="Resource" uid="uid://bi1ftik6el8mg" path="res://Database/Moves/Bow.tres" id="2_o4v8g"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" path="res://Database/Moves/Heavy Bow.tres" id="3_ndg3x"]
 [ext_resource type="Resource" path="res://Database/Moves/Long Bow.tres" id="4_3nj07"]
-[ext_resource type="Resource" path="res://Database/Moves/Hero's Strike.tres" id="5_1ct3h"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe.tres" id="6_vgn45"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe II.tres" id="7_lownc"]
+[ext_resource type="Resource" uid="uid://3dggiwdj2sny" path="res://Database/Moves/Hero's Strike.tres" id="5_1ct3h"]
+[ext_resource type="Resource" uid="uid://d27gk18od5me0" path="res://Database/Moves/Snipe.tres" id="6_vgn45"]
+[ext_resource type="Resource" uid="uid://d3w2l3i1n8a7" path="res://Database/Moves/Snipe II.tres" id="7_lownc"]
 [ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="8_mcrpa"]
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_ksil0")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("8_mcrpa")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_o4v8g"), ExtResource("3_ndg3x"), ExtResource("4_3nj07"), ExtResource("5_1ct3h"), ExtResource("6_vgn45"), ExtResource("7_lownc")])
 move_unlock_levels = Array[int]([10, 10, 13, 15, 20, 25])
 exported_move_names = Array[String](["Slice"])
 exported_move_unlock_names = Array[String](["Bow", "Heavy Bow", "Long Bow", "Hero's Strike", "Snipe", "Snipe II"])
 exported_move_unlock_levels = Array[int]([10, 10, 13, 15, 20, 25])
+exported_portrait_name = "romra_big"
+exported_overworld_name = "romra_small"
 level = 1
 hp = 30
 attack = 5

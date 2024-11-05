@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://oy1i5agt3woe"]
+
+[ext_resource type="Texture2D" uid="uid://7yh1dfk504oj" path="res://Sprites/Overworld/integer_small.png" id="1_cl6x2"]
+[ext_resource type="Texture2D" uid="uid://cc3e6yj5lujcd" path="res://Sprites/Portraits/integer_big.png" id="2_a4tkh"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Integer"
+portrait = ExtResource("2_a4tkh")
+overworld_sprite = ExtResource("1_cl6x2")
+bio = "Integer is Proton's tractor, and was awakened upon his revival from the Forbidden Ritual."
+level_quotes = Array[String](["..."])

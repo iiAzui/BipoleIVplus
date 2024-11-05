@@ -1,21 +1,26 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://bhhwvmkch5td4"]
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://bhhwvmkch5td4"]
 
+[ext_resource type="Resource" uid="uid://utrhysla66gk" path="res://Database/Characters/Recalper.tres" id="1_k0dp3"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="2_6fovx"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Thunder.tres" id="3_8txh2"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" path="res://Database/Moves/Thunder Blast.tres" id="4_q7s3q"]
-[ext_resource type="Resource" uid="uid://cfcu2fevofp4" path="res://Database/Moves/Javelin.tres" id="5_rqqj2"]
-[ext_resource type="Resource" path="res://Database/Moves/Shield Shatter.tres" id="6_trmwr"]
+[ext_resource type="Resource" path="res://Database/Moves/Javelin.tres" id="5_rqqj2"]
+[ext_resource type="Resource" uid="uid://c61nk2apu5m44" path="res://Database/Moves/Shield Shatter.tres" id="6_trmwr"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="8_t7lec"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([ExtResource("5_rqqj2"), ExtResource("6_trmwr")])
+character = ExtResource("1_k0dp3")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("5_rqqj2"), ExtResource("6_trmwr"), ExtResource("8_t7lec")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_6fovx"), ExtResource("3_8txh2"), ExtResource("4_q7s3q")])
 move_unlock_levels = Array[int]([45, 50, 55])
-exported_move_names = Array[String](["Javelin", "Shield Shatter"])
+exported_move_names = Array[String](["Javelin", "Shield Shatter", "Med Kit"])
 exported_move_unlock_names = Array[String](["Slash", "Thunder", "Thunder Blast"])
 exported_move_unlock_levels = Array[int]([45, 50, 55])
+exported_portrait_name = "recalper_big"
+exported_overworld_name = "recalper_small"
 level = 40
 hp = 95
 attack = 30

@@ -17,6 +17,9 @@ signal character_changed
 @export_storage var exported_move_unlock_names: Array[String]
 @export_storage var exported_move_unlock_levels: Array[int]
 
+@export_storage var exported_portrait_name: String
+@export_storage var exported_overworld_name: String
+
 @export_subgroup("Stats")
 signal level_changed
 @export var level: int = 1:

@@ -10,4 +10,4 @@ display_name = "Blue Slime"
 portrait = ExtResource("2_px7cw")
 overworld_sprite = ExtResource("1_6q3em")
 bio = "Blue Slimes are similar to Red Slimes, but have higher DEF and lower RES."
-level_quotes = ""
+level_quotes = Array[String]([])

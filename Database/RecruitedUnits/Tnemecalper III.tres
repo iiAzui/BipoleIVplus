@@ -1,18 +1,25 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://b8wylmvcq3hu"]
+[gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://b8wylmvcq3hu"]
 
-[ext_resource type="Resource" path="res://Database/Moves/Infection.tres" id="2_km8tj"]
+[ext_resource type="Resource" uid="uid://dbuyy0o6tnuo1" path="res://Database/Characters/Tnemecalper III.tres" id="1_v5sbn"]
+[ext_resource type="Resource" uid="uid://d2nd2llccu176" path="res://Database/Moves/Infection.tres" id="2_km8tj"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
-[ext_resource type="Resource" path="res://Database/Moves/Scalpel.tres" id="3_hkame"]
+[ext_resource type="Resource" uid="uid://d0vlirwem64eg" path="res://Database/Moves/Scalpel.tres" id="3_hkame"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Long Heal.tres" id="4_u38ck"]
+[ext_resource type="Resource" path="res://Database/Moves/Far Heal.tres" id="5_ov5mm"]
+[ext_resource type="Resource" uid="uid://2tphaotxnbto" path="res://Database/Moves/Heal.tres" id="7_rewdk"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([ExtResource("3_hkame")])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_km8tj")])
-move_unlock_levels = Array[int]([8])
-exported_move_names = Array[String](["Scalpel"])
-exported_move_unlock_names = Array[String](["Infection"])
-exported_move_unlock_levels = Array[int]([8])
+character = ExtResource("1_v5sbn")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_hkame"), ExtResource("7_rewdk")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_km8tj"), ExtResource("4_u38ck"), ExtResource("5_ov5mm")])
+move_unlock_levels = Array[int]([8, 5, 10])
+exported_move_names = Array[String](["Scalpel", "Heal"])
+exported_move_unlock_names = Array[String](["Infection", "Long Heal", "Far Heal"])
+exported_move_unlock_levels = Array[int]([8, 5, 10])
+exported_portrait_name = "tnemecalperiii_big"
+exported_overworld_name = "tnemecalperiii_small"
 level = 2
 hp = 17
 attack = 8

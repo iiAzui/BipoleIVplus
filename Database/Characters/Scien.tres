@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://dk84cig7iafkc"]
+
+[ext_resource type="Texture2D" uid="uid://dfd41rvx0rt3w" path="res://Sprites/Overworld/scien_small.png" id="1_ak2k6"]
+[ext_resource type="Texture2D" uid="uid://fdwis2g0tdjw" path="res://Sprites/Portraits/scien_big.png" id="2_ni71t"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Scien"
+portrait = ExtResource("2_ni71t")
+overworld_sprite = ExtResource("1_ak2k6")
+bio = "Scien was once a scientist at Death Pepper's research center,  where he was forced to conduct inhumane experiments to develop the Xuirs. After escaping to Bipole with Proton, he decided to serve as a knight in order to protect the peace and try to make up for his past."
+level_quotes = Array[String](["Though I grow stronger, I mustn't lose myself.", "If only I had this strength back then...", "I must defend Static, I cannot let it become like Nolavillia.", "Even this cannot make up for my sins..."])

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://1qy1vfshj6x0"]
+
+[ext_resource type="Texture2D" uid="uid://i176aaafuasj" path="res://Sprites/Overworld/xuirurth_small.png" id="1_je3d4"]
+[ext_resource type="Texture2D" uid="uid://clcodsme44h6u" path="res://Sprites/Portraits/xuirurth_big.png" id="2_tckep"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Xuirurth"
+portrait = ExtResource("2_tckep")
+overworld_sprite = ExtResource("1_je3d4")
+bio = "Xuirurth is Proto-Xuir G3 N4."
+level_quotes = Array[String](["Victory!", "We'll win.", "The Shadow Realm will be no more!"])

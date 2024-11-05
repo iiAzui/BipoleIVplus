@@ -1,21 +1,25 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://cit2mbfluye4v"]
+[gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://cit2mbfluye4v"]
 
-[ext_resource type="Resource" path="res://Database/Moves/Snipe II.tres" id="2_hydlb"]
+[ext_resource type="Resource" uid="uid://lcqas7qo5l52" path="res://Database/Characters/Gnirif.tres" id="1_jj4bd"]
+[ext_resource type="Resource" uid="uid://d3w2l3i1n8a7" path="res://Database/Moves/Snipe II.tres" id="2_hydlb"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe III.tres" id="3_hk62a"]
+[ext_resource type="Resource" uid="uid://ci1s7w7txiq5j" path="res://Database/Moves/Snipe III.tres" id="3_hk62a"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
-[ext_resource type="Resource" path="res://Database/Moves/Bow.tres" id="4_yttue"]
+[ext_resource type="Resource" uid="uid://bi1ftik6el8mg" path="res://Database/Moves/Bow.tres" id="4_yttue"]
 [ext_resource type="Resource" path="res://Database/Moves/Distance Shot.tres" id="5_rv2lx"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe.tres" id="6_j27kl"]
+[ext_resource type="Resource" uid="uid://d27gk18od5me0" path="res://Database/Moves/Snipe.tres" id="6_j27kl"]
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_jj4bd")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("4_yttue"), ExtResource("5_rv2lx"), ExtResource("6_j27kl")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_hydlb"), ExtResource("3_hk62a")])
 move_unlock_levels = Array[int]([40, 50])
 exported_move_names = Array[String](["Bow", "Distance Shot", "Snipe"])
 exported_move_unlock_names = Array[String](["Snipe II", "Snipe III"])
 exported_move_unlock_levels = Array[int]([40, 50])
+exported_portrait_name = "gnirif_big"
+exported_overworld_name = "gnirif_small"
 level = 35
 hp = 45
 attack = 35

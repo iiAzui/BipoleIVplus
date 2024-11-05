@@ -1,23 +1,28 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://c1a64t8poitxg"]
+[gd_resource type="Resource" script_class="Unit" load_steps=12 format=3 uid="uid://c1a64t8poitxg"]
 
+[ext_resource type="Resource" uid="uid://cthh25vytlu0j" path="res://Database/Characters/Yung Poggers.tres" id="1_erbsf"]
 [ext_resource type="Resource" path="res://Database/Moves/Geom Slash.tres" id="2_huwt5"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" path="res://Database/Moves/Geom Strike.tres" id="3_ul1y3"]
-[ext_resource type="Resource" path="res://Database/Moves/Shield Shatter.tres" id="4_ce2vg"]
+[ext_resource type="Resource" uid="uid://c61nk2apu5m44" path="res://Database/Moves/Shield Shatter.tres" id="4_ce2vg"]
 [ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="5_34ypr"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="6_gggp6"]
 [ext_resource type="Resource" path="res://Database/Moves/Geom Burst.tres" id="7_be1ax"]
 [ext_resource type="Resource" path="res://Database/Moves/Geom Medal.tres" id="8_4e5h1"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="10_6g6oe"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([ExtResource("5_34ypr"), ExtResource("6_gggp6"), ExtResource("7_be1ax"), ExtResource("8_4e5h1")])
+character = ExtResource("1_erbsf")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("5_34ypr"), ExtResource("6_gggp6"), ExtResource("7_be1ax"), ExtResource("8_4e5h1"), ExtResource("10_6g6oe")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_huwt5"), ExtResource("3_ul1y3"), ExtResource("4_ce2vg")])
 move_unlock_levels = Array[int]([40, 42, 45])
-exported_move_names = Array[String](["Slice", "Slash", "Geom Burst", "Geom Medal"])
+exported_move_names = Array[String](["Slice", "Slash", "Geom Burst", "Geom Medal", "Med Kit"])
 exported_move_unlock_names = Array[String](["Geom Slash", "Geom Strike", "Shield Shatter"])
 exported_move_unlock_levels = Array[int]([40, 42, 45])
+exported_portrait_name = "yungpoggers_big"
+exported_overworld_name = "yungpoggers_small"
 level = 38
 hp = 70
 attack = 42

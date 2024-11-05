@@ -1,22 +1,27 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://bw865mbrvubck"]
+[gd_resource type="Resource" script_class="Unit" load_steps=11 format=3 uid="uid://bw865mbrvubck"]
 
+[ext_resource type="Resource" uid="uid://g4cvldi3c1hs" path="res://Database/Characters/Rethgif.tres" id="1_3tctc"]
 [ext_resource type="Resource" path="res://Database/Moves/Death Strike.tres" id="2_6uhxq"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" uid="uid://dxtwj6h6wlkqs" path="res://Database/Moves/Armor Break.tres" id="3_q8jyb"]
-[ext_resource type="Resource" uid="uid://c2a0fqjprxy1k" path="res://Database/Moves/Freeze.tres" id="4_poifv"]
+[ext_resource type="Resource" path="res://Database/Moves/Freeze.tres" id="4_poifv"]
 [ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="5_3fyx4"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="6_d3k4a"]
 [ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="6_n7h62"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="7_ay01e"]
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_3tctc")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_3fyx4"), ExtResource("6_n7h62"), ExtResource("7_ay01e")])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_6uhxq"), ExtResource("3_q8jyb"), ExtResource("4_poifv")])
-move_unlock_levels = Array[int]([30, 35, 40])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_6uhxq"), ExtResource("3_q8jyb"), ExtResource("4_poifv"), ExtResource("6_d3k4a")])
+move_unlock_levels = Array[int]([30, 35, 40, 35])
 exported_move_names = Array[String](["Cut", "Slice", "Slash"])
-exported_move_unlock_names = Array[String](["Death Strike", "Armor Break", "Freeze"])
-exported_move_unlock_levels = Array[int]([30, 35, 40])
+exported_move_unlock_names = Array[String](["Death Strike", "Armor Break", "Freeze", "Med Kit"])
+exported_move_unlock_levels = Array[int]([30, 35, 40, 35])
+exported_portrait_name = "rethgif_big"
+exported_overworld_name = "rethgif_small"
 level = 27
 hp = 28
 attack = 15

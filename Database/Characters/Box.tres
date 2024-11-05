@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bwk0uuydyhk7r"]
+
+[ext_resource type="Texture2D" uid="uid://bvgapx0okl0sc" path="res://Sprites/Overworld/box_small.png" id="1_s6y6q"]
+[ext_resource type="Texture2D" uid="uid://b6pip8mhuh8v" path="res://Sprites/Portraits/box_big.png" id="2_082yo"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Box"
+portrait = ExtResource("2_082yo")
+overworld_sprite = ExtResource("1_s6y6q")
+bio = "Box is a merchant who has many medical items that can help you recover."
+level_quotes = Array[String](["If it ain't a box, then it is a box.", "Boxes are neat.", "Y'all see any good boxes on sale?", "It's a box.", "No, it's not a box."])

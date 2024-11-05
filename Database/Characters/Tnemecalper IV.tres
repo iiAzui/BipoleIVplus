@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://c0r03wwjmjvyr"]
+
+[ext_resource type="Texture2D" uid="uid://dpjbo16hl6cmf" path="res://Sprites/Overworld/tnemecalperiv_small.png" id="1_784tc"]
+[ext_resource type="Texture2D" uid="uid://cj6db35445ivv" path="res://Sprites/Portraits/tnemecalperiv_big.png" id="2_rn6jq"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Tnemecalper IV"
+portrait = ExtResource("2_rn6jq")
+overworld_sprite = ExtResource("1_784tc")
+bio = "Tnemecalper IV is the fourth of the four Tnemecalpers. They are of unknown origin but have been summoned to assist you."
+level_quotes = Array[String](["DIRECT HIT", "360�[N/A]SCOPE"])

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://5wg6stok02tj"]
+
+[ext_resource type="Texture2D" uid="uid://bgn6aya3wk1as" path="res://Sprites/Overworld/omegaxuirist_small.png" id="1_s8wvk"]
+[ext_resource type="Texture2D" uid="uid://bboht1fpsdfs7" path="res://Sprites/Portraits/omegaxuirist_big.png" id="2_ejovw"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Omega"
+portrait = ExtResource("2_ejovw")
+overworld_sprite = ExtResource("1_s8wvk")
+bio = "Omega was previously the official leader of the Xuirists, though he was being forced by Break. He now works with Proton to retrieve the Holy Itucher."
+level_quotes = Array[String](["..."])

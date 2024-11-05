@@ -1,21 +1,26 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://dn1fad215kkul"]
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://dn1fad215kkul"]
 
+[ext_resource type="Resource" uid="uid://bs3eavp03cffb" path="res://Database/Characters/Xuirer.tres" id="1_mgfic"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe.tres" id="2_ytv3a"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe II.tres" id="3_6pv2f"]
+[ext_resource type="Resource" uid="uid://d27gk18od5me0" path="res://Database/Moves/Snipe.tres" id="2_ytv3a"]
+[ext_resource type="Resource" uid="uid://d3w2l3i1n8a7" path="res://Database/Moves/Snipe II.tres" id="3_6pv2f"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" path="res://Database/Moves/Dagger.tres" id="4_516es"]
 [ext_resource type="Resource" path="res://Database/Moves/Dagger Toss.tres" id="5_0ev13"]
 [ext_resource type="Resource" path="res://Database/Moves/Geom Medal.tres" id="6_03aul"]
+[ext_resource type="Resource" path="res://Database/Moves/Xuirist Ritual.tres" id="8_678st"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([ExtResource("4_516es"), ExtResource("5_0ev13"), ExtResource("6_03aul")])
+character = ExtResource("1_mgfic")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("4_516es"), ExtResource("5_0ev13"), ExtResource("6_03aul"), ExtResource("8_678st")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_ytv3a"), ExtResource("3_6pv2f")])
 move_unlock_levels = Array[int]([35, 40])
-exported_move_names = Array[String](["Dagger", "Dagger Toss", "Geom Medal"])
+exported_move_names = Array[String](["Dagger", "Dagger Toss", "Geom Medal", "Xuirist Ritual"])
 exported_move_unlock_names = Array[String](["Snipe", "Snipe II"])
 exported_move_unlock_levels = Array[int]([35, 40])
+exported_portrait_name = "xuirer_big"
+exported_overworld_name = "xuirer_small"
 level = 32
 hp = 80
 attack = 42

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://c2ovbm8a2f43s"]
+
+[ext_resource type="Texture2D" uid="uid://ch1ni57qh5j6j" path="res://Sprites/Overworld/yranecrem_small.png" id="1_3lyp8"]
+[ext_resource type="Texture2D" uid="uid://cvwlmam0dhm6j" path="res://Sprites/Portraits/yranecrem_big.png" id="2_0wyfr"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Yranecrem"
+portrait = ExtResource("2_0wyfr")
+overworld_sprite = ExtResource("1_3lyp8")
+bio = "Yranecrem is an mercenary who works with Dliug."
+level_quotes = Array[String](["I've survived...", "This must end.", "I'm sorry.", "This is for the future.", "I must survive."])

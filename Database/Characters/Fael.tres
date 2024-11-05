@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://dxwrfmnoeb4ym"]
+
+[ext_resource type="Texture2D" uid="uid://dslb6vuio5rwm" path="res://Sprites/Overworld/fael_small.png" id="1_hovxk"]
+[ext_resource type="Texture2D" uid="uid://bya2y5mwk5w7w" path="res://Sprites/Portraits/fael_big.png" id="2_jjdn6"]
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Fael"
+portrait = ExtResource("2_jjdn6")
+overworld_sprite = ExtResource("1_hovxk")
+bio = "Fael is a memeber of the Elemental Offense Squad. He was sent by the king to help you on your journey to the Nolavillian continent."
+level_quotes = Array[String](["I did it.", "This is helpful.", "Just as planned."])

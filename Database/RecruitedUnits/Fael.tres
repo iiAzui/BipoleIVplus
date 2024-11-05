@@ -1,20 +1,26 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://bothay8tp8msv"]
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://bothay8tp8msv"]
 
+[ext_resource type="Resource" uid="uid://dxwrfmnoeb4ym" path="res://Database/Characters/Fael.tres" id="1_eyekr"]
 [ext_resource type="Resource" path="res://Database/Moves/Long Bow.tres" id="2_mhh4e"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" path="res://Database/Moves/Distance Shot.tres" id="3_l7wmi"]
-[ext_resource type="Resource" path="res://Database/Moves/Snipe.tres" id="4_a2k8q"]
+[ext_resource type="Resource" uid="uid://d27gk18od5me0" path="res://Database/Moves/Snipe.tres" id="4_a2k8q"]
 [ext_resource type="Resource" path="res://Database/Moves/Vine Bow.tres" id="5_py0fo"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="6_ixa8x"]
+[ext_resource type="Resource" uid="uid://2tphaotxnbto" path="res://Database/Moves/Heal.tres" id="7_whe02"]
 
 [resource]
 script = ExtResource("3_hyhyt")
+character = ExtResource("1_eyekr")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_py0fo")])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_mhh4e"), ExtResource("3_l7wmi"), ExtResource("4_a2k8q")])
-move_unlock_levels = Array[int]([17, 23, 30])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_mhh4e"), ExtResource("3_l7wmi"), ExtResource("4_a2k8q"), ExtResource("6_ixa8x"), ExtResource("7_whe02")])
+move_unlock_levels = Array[int]([17, 23, 30, 20, 25])
 exported_move_names = Array[String](["Vine Bow"])
-exported_move_unlock_names = Array[String](["Long Bow", "Distance Shot", "Snipe"])
-exported_move_unlock_levels = Array[int]([17, 23, 30])
+exported_move_unlock_names = Array[String](["Long Bow", "Distance Shot", "Snipe", "Med Kit", "Heal"])
+exported_move_unlock_levels = Array[int]([17, 23, 30, 20, 25])
+exported_portrait_name = "fael_big"
+exported_overworld_name = "fael_small"
 level = 15
 hp = 23
 attack = 18
