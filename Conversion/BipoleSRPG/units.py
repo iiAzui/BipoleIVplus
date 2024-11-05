@@ -15,7 +15,8 @@ def testprint():
 
 import screensetup
 
-screensetup.BattleScreen.tracer(0)
+# COMMENTED OUT FOR CONVERSION
+# screensetup.BattleScreen.tracer(0)
 
 class Unit:
     def __init__(self,
@@ -11361,4 +11362,5 @@ OmegaXuirist.TurtleName = new_turtle()
 OmegaXuirist.TurtleName.shape(current_directory+"/Sprites/omegaxuirist_small.gif")
 OmegaXuirist.TurtleName.hideturtle()
 
-screensetup.BattleScreen.tracer(1)
+# COMMENTED OUT FOR CONVERSION
+# screensetup.BattleScreen.tracer(1)

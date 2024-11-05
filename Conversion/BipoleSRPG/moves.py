@@ -139,8 +139,8 @@ ExtraMul=1)
 ListOfAttacks.append(Slice)
 
 XuirWrathSlice = Attack(
-DisplayName="▓▓▓▓▓",
-CombatName="▓▓▓▓▓",
+DisplayName="XuirWrathSlice",
+CombatName="#####",
 MoveType="Physical",
 HPCost=0,
 MoveRange=1,

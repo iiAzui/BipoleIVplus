@@ -1,0 +1,18 @@
+
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="1_308sg"]
+
+[resource]
+script = ExtResource("1_308sg")
+display_name = "Shadow Punch (1)"
+move_type = "Attack"
+damage_type = "Physical"
+hp_cost = 0
+range = 1
+power = 1.375
+hit_rate = 100.0
+accuracy_multiplier = 1.5
+element = "Shadow"
+extra_damage_trait = "Electric"
+extra_multiplier = 1.3
