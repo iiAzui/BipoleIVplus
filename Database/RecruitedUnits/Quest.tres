@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=13 format=3 uid="uid://ded8fjmb2up5u"]
 
-[ext_resource type="Resource" uid="uid://bco7bbqlikn0n" path="res://Database/Characters/Quest.tres" id="1_oiayn"]
+[ext_resource type="Resource" uid="uid://bco7bbqlikn0n" path="res://Database/Characters/quest.tres" id="1_enaui"]
 [ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="2_5rf2t"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -15,7 +15,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_oiayn")
+character = ExtResource("1_enaui")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("8_qxi7q"), ExtResource("11_r4wbr")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_5rf2t"), ExtResource("3_prjbp"), ExtResource("4_etqr7"), ExtResource("5_dm7ru"), ExtResource("6_3svqx"), ExtResource("7_g0mvl"), ExtResource("9_1rgaw")])
 move_unlock_levels = Array[int]([3, 7, 10, 12, 14, 15, 5])
@@ -24,6 +24,9 @@ exported_move_unlock_names = Array[String](["Aqua", "Freeze", "Thorn", "Dark Orb
 exported_move_unlock_levels = Array[int]([3, 7, 10, 12, 14, 15, 5])
 exported_portrait_name = "quest_big"
 exported_overworld_name = "quest_small"
+exported_character_name = "quest"
+exported_x = 0
+exported_y = 0
 level = 1
 hp = 13
 attack = 14

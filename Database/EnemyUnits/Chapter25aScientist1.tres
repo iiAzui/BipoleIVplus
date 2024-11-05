@@ -1,0 +1,40 @@
+
+[gd_resource type="Resource" script_class="Unit" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Far Heal"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericscientist_big"
+exported_overworld_name = "genericscientist_small"
+exported_character_name = "genericscientist"
+exported_y = 0
+exported_x = 0
+level = 43
+hp = 45
+attack = 9999
+defense = 25
+resistance = 25
+agility = 24
+accuracy = 9999
+speed = 3
+exp_reward = 175
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Scientist", "Electric"])
+unit_class = "Scientist"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)
+    

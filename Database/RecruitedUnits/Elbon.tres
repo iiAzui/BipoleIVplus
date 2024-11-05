@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=11 format=3 uid="uid://cr0us6o8al02b"]
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://cr0us6o8al02b"]
 
-[ext_resource type="Resource" uid="uid://wuahxch4wno5" path="res://Database/Characters/Elbon.tres" id="1_o3mhx"]
+[ext_resource type="Resource" uid="uid://hnfj0cjaiekv" path="res://Database/Characters/elbon.tres" id="1_1ucdq"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="2_xvhkb"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -8,20 +8,22 @@
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="5_8q0tg"]
 [ext_resource type="Resource" path="res://Database/Moves/Dagger.tres" id="6_mt3yi"]
 [ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="7_t2n8r"]
-[ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="9_byxeb"]
-[ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="9_rl5l5"]
+[ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="9_aaxvp"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_o3mhx")
-moves = Array[ExtResource("2_pja1r")]([ExtResource("6_mt3yi"), ExtResource("9_byxeb")])
-move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_xvhkb"), ExtResource("3_n1vkw"), ExtResource("9_rl5l5"), ExtResource("5_8q0tg"), ExtResource("7_t2n8r")])
+character = ExtResource("1_1ucdq")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("6_mt3yi"), ExtResource("9_aaxvp")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_xvhkb"), ExtResource("3_n1vkw"), ExtResource("9_aaxvp"), ExtResource("5_8q0tg"), ExtResource("7_t2n8r")])
 move_unlock_levels = Array[int]([27, 30, 35, 40, 32])
 exported_move_names = Array[String](["Dagger", "Aqua"])
 exported_move_unlock_names = Array[String](["Cut", "Slice", "Aqua", "Slash", "Med Kit"])
 exported_move_unlock_levels = Array[int]([27, 30, 35, 40, 32])
 exported_portrait_name = "elbon_big"
 exported_overworld_name = "elbon_small"
+exported_character_name = "elbon"
+exported_x = 0
+exported_y = 0
 level = 23
 hp = 25
 attack = 15

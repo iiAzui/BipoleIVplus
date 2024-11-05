@@ -1,0 +1,10 @@
+
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Quest"
+bio = "Quest has been possessed by the Holy Itucher, and has lost his free will. He now acts upon the Will of the Itucher."
+level_quotes = Array[String](["..."])

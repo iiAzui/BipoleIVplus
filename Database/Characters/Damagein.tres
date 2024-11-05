@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://do8pi57eymajm"]
 
-[ext_resource type="Texture2D" uid="uid://dw2wplelqj1cw" path="res://Sprites/Overworld/damagein_small.png" id="1_lapyn"]
-[ext_resource type="Texture2D" uid="uid://civsxsjfbkhcg" path="res://Sprites/Portraits/damagein_big.png" id="2_jq18a"]
+[ext_resource type="Texture2D" uid="uid://dw2wplelqj1cw" path="res://Sprites/Overworld/damagein_small.png" id="1_phl5l"]
+[ext_resource type="Texture2D" uid="uid://civsxsjfbkhcg" path="res://Sprites/Portraits/damagein_big.png" id="2_vchf1"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Damagein"
-portrait = ExtResource("2_jq18a")
-overworld_sprite = ExtResource("1_lapyn")
-bio = "Damagein lives for damage. Obsessed with damage, he has devoted his life to dealing higher amounts of damage."
+portrait = ExtResource("2_vchf1")
+overworld_sprite = ExtResource("1_phl5l")
+bio = "Damagein lives for damage. Obsessed with damage, he devotes  his life dealing higher amounts of damage and calling other people "
 level_quotes = Array[String]([])

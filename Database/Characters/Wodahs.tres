@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://cq3i7we7chf6v"]
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://rg5cf6mrno26"]
 
-[ext_resource type="Texture2D" uid="uid://b7bl2n48ch00t" path="res://Sprites/Overworld/wodahs_small.png" id="1_xu58o"]
-[ext_resource type="Texture2D" uid="uid://bbbpohans0abg" path="res://Sprites/Portraits/wodahs_big.png" id="2_cj5la"]
+[ext_resource type="Texture2D" uid="uid://b7bl2n48ch00t" path="res://Sprites/Overworld/wodahs_small.png" id="1_f3eyo"]
+[ext_resource type="Texture2D" uid="uid://bbbpohans0abg" path="res://Sprites/Portraits/wodahs_big.png" id="2_52k41"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Wodahs"
-portrait = ExtResource("2_cj5la")
-overworld_sprite = ExtResource("1_xu58o")
+portrait = ExtResource("2_52k41")
+overworld_sprite = ExtResource("1_f3eyo")
 bio = "Wodahs is a member of the Elemental Offense Sqaud. Though he usually does solo missions, he's decided to help Proton in his mission to retrieve the Holy Itucher."
 level_quotes = Array[String](["This will be useful.", "This is nice.", "This should help me out."])

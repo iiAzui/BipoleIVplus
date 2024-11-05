@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://bebycept5vv80"]
+
+[ext_resource type="Resource" path="res://Database/Moves/Javelin.tres" id="2_53sfk"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" uid="uid://dxtwj6h6wlkqs" path="res://Database/Moves/Armor Break.tres" id="3_tsa7a"]
+[ext_resource type="Resource" path="res://Database/Moves/Shield Bash.tres" id="4_8jxia"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="5_fmhxb"]
+[ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="6_8nw75"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("5_fmhxb"), ExtResource("6_8nw75")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_53sfk"), ExtResource("3_tsa7a"), ExtResource("4_8jxia")])
+move_unlock_levels = Array[int]([37, 40, 45])
+exported_move_names = Array[String](["Slice", "Slash"])
+exported_move_unlock_names = Array[String](["Javelin", "Armor Break", "Shield Bash"])
+exported_move_unlock_levels = Array[int]([37, 40, 45])
+exported_portrait_name = "dnefed_big"
+exported_overworld_name = "dnefed_small"
+exported_character_name = null
+exported_x = null
+exported_y = null
+level = 35
+hp = 100
+attack = 30
+defense = 30
+resistance = 12
+agility = 10
+accuracy = 34
+speed = 2
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Shadeian", "Armored"])
+unit_class = "Armor Knight"
+class_change = "Shield Knight"
+class_change_level = 45
+hp_growth = Vector2i(100, 5)
+atk_growth = Vector2i(70, 1)
+def_growth = Vector2i(60, 1)
+res_growth = Vector2i(5, 1)
+agl_growth = Vector2i(10, 1)
+acr_growth = Vector2i(65, 1)

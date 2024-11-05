@@ -1,13 +1,10 @@
-[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bg78jr24k6tuc"]
 
-[ext_resource type="Texture2D" uid="uid://6rq1i3y6kl20" path="res://Sprites/Overworld/erif_small.png" id="1_egndw"]
-[ext_resource type="Texture2D" uid="uid://dm6rkuqd6fal3" path="res://Sprites/Portraits/erif_big.png" id="2_drt36"]
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Erif"
-portrait = ExtResource("2_drt36")
-overworld_sprite = ExtResource("1_egndw")
-bio = "Erif is a memeber of the Elemental Offense Squad. She was sent by the king to help you on your journey to the Nolavillian continent."
-level_quotes = Array[String](["This will help.", "Good.", "I need to get stronger."])
+bio = "Erif is a memeber of the Elemental Offense Squad."
+level_quotes = Array[String](["This will help.","Good.","I need to get stronger."])

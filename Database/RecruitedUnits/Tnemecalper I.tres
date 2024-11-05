@@ -1,13 +1,11 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://tjx35knts3r"]
+[gd_resource type="Resource" script_class="Unit" load_steps=4 format=3 uid="uid://tjx35knts3r"]
 
-[ext_resource type="Resource" uid="uid://cifku256bsg2b" path="res://Database/Characters/Tnemecalper I.tres" id="1_bo0iv"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="2_vyqlb"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_bo0iv")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("2_vyqlb")])
 move_unlocks = Array[ExtResource("2_pja1r")]([])
 move_unlock_levels = Array[int]([])
@@ -16,6 +14,9 @@ exported_move_unlock_names = Array[String]([])
 exported_move_unlock_levels = Array[int]([])
 exported_portrait_name = "tnemecalperi_big"
 exported_overworld_name = "tnemecalperi_small"
+exported_character_name = "tnemecalperi"
+exported_x = 0
+exported_y = 0
 level = 2
 hp = 18
 attack = 12

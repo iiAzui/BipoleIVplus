@@ -1,0 +1,10 @@
+
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Diver Neville"
+bio = "The top diver of the K'Neville pirates. He can dive depths of over 420 meters in seconds, and can survive over 9000 meters of pressure."
+level_quotes = Array[String](["Yo poggers in the chat."])

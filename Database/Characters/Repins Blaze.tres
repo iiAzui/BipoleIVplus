@@ -1,13 +1,9 @@
-[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bq3x5g0ktlv2k"]
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://bq3x5g0ktlv2k"]
 
-[ext_resource type="Texture2D" uid="uid://caojcb7s6a0tf" path="res://Sprites/Overworld/repins_small.png" id="1_s0h4s"]
-[ext_resource type="Texture2D" uid="uid://di7xv4ww1lkaf" path="res://Sprites/Portraits/repins_big2.png" id="2_kfuc8"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Repins Blaze"
-portrait = ExtResource("2_kfuc8")
-overworld_sprite = ExtResource("1_s0h4s")
 bio = "..."
 level_quotes = Array[String](["...", "This is for the future.", "I've won."])

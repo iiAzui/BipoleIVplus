@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://1bikywypcv6v"]
+
+[ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="2_axqdt"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Cannon.tres" id="3_1uiit"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("2_axqdt"), ExtResource("3_1uiit")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Slash", "Cannon"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "kaptainkneville_big"
+exported_overworld_name = "kaptainkneville_small"
+exported_character_name = ""
+exported_x = 0
+exported_y = 0
+level = 30
+hp = 150
+attack = 10
+defense = 20
+resistance = 20
+agility = 10
+accuracy = 20
+speed = 3
+exp_reward = 250
+primary_type = "Physical"
+traits = Array[String](["Nolavillian", "Fighter", "Water"])
+unit_class = "Pirate Captain"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(100, 1)
+atk_growth = Vector2i(100, 1)
+def_growth = Vector2i(100, 1)
+res_growth = Vector2i(100, 1)
+agl_growth = Vector2i(100, 1)
+acr_growth = Vector2i(50, 1)

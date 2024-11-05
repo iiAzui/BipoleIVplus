@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://kurceurr51bm"]
 
-[ext_resource type="Resource" uid="uid://b7yr8th61rcfc" path="res://Database/Characters/Xuirfth.tres" id="1_f2fol"]
+[ext_resource type="Resource" uid="uid://b7yr8th61rcfc" path="res://Database/Characters/xuirfth.tres" id="1_c1e7c"]
 [ext_resource type="Resource" path="res://Database/Moves/Hydro.tres" id="2_jufel"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -11,7 +11,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_f2fol")
+character = ExtResource("1_c1e7c")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_lh17x"), ExtResource("6_575d8")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_jufel"), ExtResource("3_wjoj1"), ExtResource("4_mx7jm")])
 move_unlock_levels = Array[int]([33, 35, 40])
@@ -20,6 +20,9 @@ exported_move_unlock_names = Array[String](["Hydro", "Cut", "Hydra"])
 exported_move_unlock_levels = Array[int]([33, 35, 40])
 exported_portrait_name = "xuirfth_big"
 exported_overworld_name = "xuirfth_small"
+exported_character_name = "xuirfth"
+exported_x = 0
+exported_y = 0
 level = 29
 hp = 40
 attack = 32

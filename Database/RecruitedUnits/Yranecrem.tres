@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=11 format=3 uid="uid://ce4l2ojjj0ebi"]
 
-[ext_resource type="Resource" uid="uid://c2ovbm8a2f43s" path="res://Database/Characters/Yranecrem.tres" id="1_d53ed"]
+[ext_resource type="Resource" uid="uid://bppr3qnecjba2" path="res://Database/Characters/yranecrem.tres" id="1_uhdtq"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" uid="uid://c61nk2apu5m44" path="res://Database/Moves/Shield Shatter.tres" id="2_uasbg"]
 [ext_resource type="Resource" path="res://Database/Moves/Axe Throw.tres" id="3_023h5"]
@@ -13,7 +13,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_d53ed")
+character = ExtResource("1_uhdtq")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_8bday"), ExtResource("9_mrfxm")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_uasbg"), ExtResource("3_023h5"), ExtResource("4_ab1cy"), ExtResource("6_tvi4u"), ExtResource("7_263fh")])
 move_unlock_levels = Array[int]([40, 45, 50, 42, 47])
@@ -22,6 +22,9 @@ exported_move_unlock_names = Array[String](["Shield Shatter", "Axe Throw", "Exec
 exported_move_unlock_levels = Array[int]([40, 45, 50, 42, 47])
 exported_portrait_name = "yranecrem_big"
 exported_overworld_name = "yranecrem_small"
+exported_character_name = "yranecrem"
+exported_x = 0
+exported_y = 0
 level = 35
 hp = 125
 attack = 37

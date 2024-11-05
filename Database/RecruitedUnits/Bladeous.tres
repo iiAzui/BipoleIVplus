@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://dntpm88s4wcct"]
+[gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://dntpm88s4wcct"]
 
-[ext_resource type="Resource" uid="uid://cndbfs56kjp2o" path="res://Database/Characters/Bladeous.tres" id="1_k5mr0"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="2_r6gqf"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -12,7 +11,6 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_k5mr0")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_563wp"), ExtResource("6_wp28w")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_r6gqf"), ExtResource("3_qbcjj"), ExtResource("4_wt1o8"), ExtResource("6_jnfsb")])
 move_unlock_levels = Array[int]([23, 27, 35, 25])
@@ -21,6 +19,9 @@ exported_move_unlock_names = Array[String](["Slash", "Shadow Burst", "Shadow Sto
 exported_move_unlock_levels = Array[int]([23, 27, 35, 25])
 exported_portrait_name = "playablebladeous_big"
 exported_overworld_name = "playablebladeous_small"
+exported_character_name = "playablebladeous"
+exported_x = 0
+exported_y = 0
 level = 20
 hp = 25
 attack = 30

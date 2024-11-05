@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=11 format=3 uid="uid://cq5oxjjwy3r35"]
 
-[ext_resource type="Resource" uid="uid://1qy1vfshj6x0" path="res://Database/Characters/Xuirurth.tres" id="1_5q423"]
+[ext_resource type="Resource" uid="uid://bm0cjf47yh56c" path="res://Database/Characters/xuirurth.tres" id="1_462xu"]
 [ext_resource type="Resource" path="res://Database/Moves/Thunder.tres" id="2_ehnny"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -13,7 +13,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_5q423")
+character = ExtResource("1_462xu")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_viy05"), ExtResource("6_ouct0"), ExtResource("7_wcfdt"), ExtResource("9_wu2hu")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_ehnny"), ExtResource("3_kh5ci"), ExtResource("4_u8p5u")])
 move_unlock_levels = Array[int]([45, 50, 55])
@@ -22,6 +22,9 @@ exported_move_unlock_names = Array[String](["Thunder", "Armor Break", "Thunder B
 exported_move_unlock_levels = Array[int]([45, 50, 55])
 exported_portrait_name = "xuirurth_big"
 exported_overworld_name = "xuirurth_small"
+exported_character_name = "xuirurth"
+exported_x = 0
+exported_y = 0
 level = 40
 hp = 85
 attack = 30

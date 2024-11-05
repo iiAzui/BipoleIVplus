@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://cfk4ojbvwhbdc"]
 
-[ext_resource type="Resource" uid="uid://cvty86436nxq7" path="res://Database/Characters/Cigam.tres" id="1_7o7mm"]
+[ext_resource type="Resource" uid="uid://cvty86436nxq7" path="res://Database/Characters/cigam.tres" id="1_wh5ic"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="2_t3rv0"]
 [ext_resource type="Resource" path="res://Database/Moves/Hydro.tres" id="3_1oswp"]
@@ -12,7 +12,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_7o7mm")
+character = ExtResource("1_wh5ic")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("6_mtkx7"), ExtResource("7_ik8xk"), ExtResource("8_b0an0")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_t3rv0"), ExtResource("3_1oswp"), ExtResource("5_jxsy4")])
 move_unlock_levels = Array[int]([40, 45, 37])
@@ -21,6 +21,9 @@ exported_move_unlock_names = Array[String](["Aqua", "Hydro", "Med Kit"])
 exported_move_unlock_levels = Array[int]([40, 45, 37])
 exported_portrait_name = "cigam_big"
 exported_overworld_name = "cigam_small"
+exported_character_name = "cigam"
+exported_x = 0
+exported_y = 0
 level = 35
 hp = 40
 attack = 35

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://j78we4205brv"]
 
-[ext_resource type="Resource" uid="uid://5wg6stok02tj" path="res://Database/Characters/Omega.tres" id="1_jhovu"]
+[ext_resource type="Resource" uid="uid://w7xy6r7ke0u3" path="res://Database/Characters/omegaxuirist.tres" id="1_n6m33"]
 [ext_resource type="Resource" path="res://Database/Moves/Shadow Blade.tres" id="2_aq676"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Shadow Storm.tres" id="3_fpybf"]
@@ -11,7 +11,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_jhovu")
+character = ExtResource("1_n6m33")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("4_6le6d"), ExtResource("5_80m6d"), ExtResource("7_5c3n3")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_aq676"), ExtResource("3_fpybf")])
 move_unlock_levels = Array[int]([45, 50])
@@ -20,6 +20,9 @@ exported_move_unlock_names = Array[String](["Shadow Blade", "Shadow Storm"])
 exported_move_unlock_levels = Array[int]([45, 50])
 exported_portrait_name = "omegaxuirist_big"
 exported_overworld_name = "omegaxuirist_small"
+exported_character_name = "omegaxuirist"
+exported_x = 0
+exported_y = 0
 level = 40
 hp = 75
 attack = 45

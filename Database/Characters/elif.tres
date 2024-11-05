@@ -1,0 +1,10 @@
+
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Elif"
+bio = "Elif Int is the head of the Second Division of Scientists at the Shadow Realm Research Center. He is the most lenient of the four division heads, being open to most alternate options. He is also the founder and leader of the Sci-Triptych Sectoral Board, a board of the first three Division Heads of the Shadow Realm Research Lab to which he often discusses alternate courses of actions that could be taken at the lab."
+level_quotes = Array[String](["It seems like my tactics are succeeding."])

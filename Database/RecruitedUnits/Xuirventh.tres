@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://bu4vsp3wyeeau"]
 
-[ext_resource type="Resource" uid="uid://bafctbxyd5o1b" path="res://Database/Characters/Xuirventh.tres" id="1_od5j8"]
+[ext_resource type="Resource" uid="uid://bafctbxyd5o1b" path="res://Database/Characters/xuirventh.tres" id="1_iiyed"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Finisher.tres" id="2_y1i3u"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -12,7 +12,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_od5j8")
+character = ExtResource("1_iiyed")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_hsqom"), ExtResource("6_5ue4v")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_y1i3u"), ExtResource("3_id87q"), ExtResource("4_xed6e"), ExtResource("6_1h3mv")])
 move_unlock_levels = Array[int]([30, 35, 40, 32])
@@ -21,6 +21,9 @@ exported_move_unlock_names = Array[String](["Finisher", "Slash", "Fire Blast", "
 exported_move_unlock_levels = Array[int]([30, 35, 40, 32])
 exported_portrait_name = "xuirventh_big"
 exported_overworld_name = "xuirventh_small"
+exported_character_name = "xuirventh"
+exported_x = 0
+exported_y = 0
 level = 28
 hp = 45
 attack = 30

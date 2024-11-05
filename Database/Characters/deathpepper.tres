@@ -1,0 +1,10 @@
+
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Death Pepper"
+bio = "Death Pepper is the head of the Shadow Realm Research Center, where he has been tasked by Neville Prime to create entities with the powers of True Xuir. Though the research of recreating the powers of True Xuir have been going on for centuries, Death Pepper has come the closest to discovering the secret of activating the power of the True Xuir."
+level_quotes = Array[String](["This is what you get for defying me."])

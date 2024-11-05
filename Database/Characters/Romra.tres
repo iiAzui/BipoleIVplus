@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://ihnvhpvtp2w2"]
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://ddpbaxejvmdba"]
 
-[ext_resource type="Texture2D" uid="uid://byuwl7nxtgnq4" path="res://Sprites/Overworld/romra_small.png" id="1_og27b"]
-[ext_resource type="Texture2D" uid="uid://c5eg0g6me4mq8" path="res://Sprites/Portraits/romra_big.png" id="2_2t0ui"]
+[ext_resource type="Texture2D" uid="uid://byuwl7nxtgnq4" path="res://Sprites/Overworld/romra_small.png" id="1_k6mo1"]
+[ext_resource type="Texture2D" uid="uid://c5eg0g6me4mq8" path="res://Sprites/Portraits/romra_big.png" id="2_g45g0"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Romra"
-portrait = ExtResource("2_2t0ui")
-overworld_sprite = ExtResource("1_og27b")
+portrait = ExtResource("2_g45g0")
+overworld_sprite = ExtResource("1_k6mo1")
 bio = "Romra was recently promoted to a knight, and his  dream is to eventually become a member of the   Static Elemental Offense Squad. He trains  everyday to achieve his dream but isn't strong  enough to join yet."
 level_quotes = Array[String](["I need to keep getting stronger!", "With this power, I can probably join the Elemental Offense Squad.", "The best offense is a great defense, I think."])

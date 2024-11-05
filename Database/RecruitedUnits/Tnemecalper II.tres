@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://j3nyrijuf6jw"]
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://j3nyrijuf6jw"]
 
-[ext_resource type="Resource" uid="uid://cpx44jb3qvdtf" path="res://Database/Characters/Tnemecalper II.tres" id="1_w3tdp"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="2_tnlh0"]
 [ext_resource type="Resource" path="res://Database/Moves/Dark Orb.tres" id="3_6wah7"]
@@ -10,7 +9,6 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_w3tdp")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("3_6wah7")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_tnlh0"), ExtResource("4_jjndo"), ExtResource("5_hk3nb")])
 move_unlock_levels = Array[int]([15, 10, 13])
@@ -19,6 +17,9 @@ exported_move_unlock_names = Array[String](["Slice", "Heal", "Long Heal"])
 exported_move_unlock_levels = Array[int]([15, 10, 13])
 exported_portrait_name = "tnemecalperii_big"
 exported_overworld_name = "tnemecalperii_small"
+exported_character_name = "tnemecalperii"
+exported_x = 0
+exported_y = 0
 level = 2
 hp = 14
 attack = 10

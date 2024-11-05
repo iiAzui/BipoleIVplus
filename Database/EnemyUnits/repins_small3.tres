@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=4 format=3 uid="uid://dp1ysqor3c4ji"]
+
+[ext_resource type="Resource" path="res://Database/Moves/The Holy Itucher.tres" id="2_gbnhr"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("2_gbnhr")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["The Holy Itucher"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "repins_big4"
+exported_overworld_name = "repins_small3"
+exported_character_name = ""
+exported_x = 0
+exported_y = 0
+level = 500
+hp = 9999
+attack = 45
+defense = 25
+resistance = 99999
+agility = 10
+accuracy = 99999
+speed = 1
+exp_reward = 9000
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Shadow"])
+unit_class = "Master of the Holy Itucher"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

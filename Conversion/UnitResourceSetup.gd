@@ -5,6 +5,7 @@ extends EditorScript
 func _run():
 	# for each Unit resource, find the exported move names and hook them up to the correct Move resources.
 	setup_units_in_dir("res://Database/RecruitedUnits")
+	setup_units_in_dir("res://Database/EnemyUnits")
 	
 func setup_units_in_dir(dir_path: String):
 	var dir = DirAccess.open(dir_path)
@@ -23,7 +24,7 @@ func setup_unit(dir_path: String, unit_name: String):
 	unit.moves = []
 	for i in len(unit.exported_move_names):
 		var move_name: String = unit.exported_move_names[i]
-		var move: Move = ResourceLoader.load("res://Database/Moves/"+move_name+".tres", "", ResourceLoader.CACHE_MODE_IGNORE_DEEP)
+		var move: Move = ResourceLoader.load("res://Database/Moves/"+move_name+".tres")
 		if move:
 			unit.moves.push_back(move)
 			print("\t", move_name, " connected!")
@@ -32,14 +33,14 @@ func setup_unit(dir_path: String, unit_name: String):
 	unit.move_unlock_levels = []
 	for i in len(unit.exported_move_unlock_names):
 		var move_name: String = unit.exported_move_unlock_names[i]
-		var move: Move = ResourceLoader.load("res://Database/Moves/"+move_name+".tres", "", ResourceLoader.CACHE_MODE_IGNORE_DEEP)
+		var move: Move = ResourceLoader.load("res://Database/Moves/"+move_name+".tres")
 		if move:
 			var unlock_level: int = unit.exported_move_unlock_levels[i]
 			unit.move_unlocks.push_back(move)
 			unit.move_unlock_levels.push_back(unlock_level)
 			print("\t", move_name, " connected!")
 	
-	var character: Character = ResourceLoader.load("res://Database/Characters/"+unit_name+".tres", "", ResourceLoader.CACHE_MODE_IGNORE_DEEP)
+	var character: Character = ResourceLoader.load("res://Database/Characters/"+unit.exported_character_name+".tres", "")
 	if character:
 		print("\tdisplay name: ", character.display_name)
 		

@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://utrhysla66gk"]
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://d15korcltv5e7"]
 
-[ext_resource type="Texture2D" uid="uid://ftaigwwyybid" path="res://Sprites/Overworld/recalper_small.png" id="1_lxo1w"]
-[ext_resource type="Texture2D" uid="uid://dnpxpou27cayc" path="res://Sprites/Portraits/recalper_big.png" id="2_2fosm"]
+[ext_resource type="Texture2D" uid="uid://ftaigwwyybid" path="res://Sprites/Overworld/recalper_small.png" id="1_k3m7j"]
+[ext_resource type="Texture2D" uid="uid://dnpxpou27cayc" path="res://Sprites/Portraits/recalper_big.png" id="2_q658c"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Recalper"
-portrait = ExtResource("2_2fosm")
-overworld_sprite = ExtResource("1_lxo1w")
+portrait = ExtResource("2_q658c")
+overworld_sprite = ExtResource("1_k3m7j")
 bio = "Recalper is the self-proclaimed "
 level_quotes = Array[String]([])

@@ -1,0 +1,10 @@
+
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Dael"
+bio = "The head night of Neo's revoluionary army and an extreme supporter of Neo, Dael has come to Nolavillia to obtain the Itucher for Neo's conquest of Shade."
+level_quotes = Array[String](["Fall before his power."])

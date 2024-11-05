@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=12 format=3 uid="uid://ckugwsy8ditna"]
 
-[ext_resource type="Resource" uid="uid://cge3ul1ykgocl" path="res://Database/Characters/Wob.tres" id="1_j0f4v"]
+[ext_resource type="Resource" uid="uid://cge3ul1ykgocl" path="res://Database/Characters/wob.tres" id="1_8lh3h"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Distance Shot.tres" id="2_tjq88"]
 [ext_resource type="Resource" uid="uid://bcu3asejb0s5e" path="res://Database/Moves/Fireball.tres" id="3_4j7x4"]
@@ -14,7 +14,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_j0f4v")
+character = ExtResource("1_8lh3h")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("8_nuwf2")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_tjq88"), ExtResource("3_4j7x4"), ExtResource("4_vrciq"), ExtResource("5_4eavd"), ExtResource("6_32flw"), ExtResource("7_6hp8a"), ExtResource("9_mqqeo")])
 move_unlock_levels = Array[int]([8, 13, 20, 28, 39, 50, 16])
@@ -23,6 +23,9 @@ exported_move_unlock_names = Array[String](["Distance Shot", "Fireball", "Snipe"
 exported_move_unlock_levels = Array[int]([8, 13, 20, 28, 39, 50, 16])
 exported_portrait_name = "wob_big"
 exported_overworld_name = "wob_small"
+exported_character_name = "wob"
+exported_x = 0
+exported_y = 0
 level = 6
 hp = 18
 attack = 19

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=11 format=3 uid="uid://sva4qth08rg6"]
 
-[ext_resource type="Resource" uid="uid://58puciwf7rtw" path="res://Database/Characters/Fieht.tres" id="1_jh6vv"]
+[ext_resource type="Resource" uid="uid://cj2qwvn7ymhdx" path="res://Database/Characters/fieht.tres" id="1_t67af"]
 [ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="2_n46dc"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -13,7 +13,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_jh6vv")
+character = ExtResource("1_t67af")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("7_w0bt4"), ExtResource("9_yvkvg")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_n46dc"), ExtResource("3_o8jwi"), ExtResource("4_beahf"), ExtResource("5_n08s6"), ExtResource("6_31vf2")])
 move_unlock_levels = Array[int]([22, 25, 27, 30, 30])
@@ -22,6 +22,9 @@ exported_move_unlock_names = Array[String](["Cut", "Slice", "Slash", "Death Stri
 exported_move_unlock_levels = Array[int]([22, 25, 27, 30, 30])
 exported_portrait_name = "fieht_big"
 exported_overworld_name = "fieht_small"
+exported_character_name = "fieht"
+exported_x = 0
+exported_y = 0
 level = 26
 hp = 40
 attack = 20

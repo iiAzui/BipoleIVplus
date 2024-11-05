@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://cfk27totogkj3"]
 
-[ext_resource type="Resource" uid="uid://rwl76bhw6rh2" path="res://Database/Characters/Fiyghtrr.tres" id="1_brcoy"]
+[ext_resource type="Resource" uid="uid://rwl76bhw6rh2" path="res://Database/Characters/fiyghtrr.tres" id="1_yeb6w"]
 [ext_resource type="Resource" path="res://Database/Moves/Mana Burst.tres" id="2_3holu"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Aura.tres" id="3_fa2nx"]
@@ -12,7 +12,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_brcoy")
+character = ExtResource("1_yeb6w")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("4_wtv8x"), ExtResource("8_lxusw")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_3holu"), ExtResource("3_fa2nx"), ExtResource("5_f1p06"), ExtResource("6_ggh0d")])
 move_unlock_levels = Array[int]([45, 55, 50, 60])
@@ -21,6 +21,9 @@ exported_move_unlock_names = Array[String](["Mana Burst", "Aura", "Long Heal", "
 exported_move_unlock_levels = Array[int]([45, 55, 50, 60])
 exported_portrait_name = "fiyghtrr_big"
 exported_overworld_name = "fiyghtrr_small"
+exported_character_name = "fiyghtrr"
+exported_x = 0
+exported_y = 0
 level = 40
 hp = 100
 attack = 35

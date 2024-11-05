@@ -1,0 +1,10 @@
+
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Break"
+bio = "Break is successfully wielding the Holy Itucher. As well as this, he has activated his Alg Formation and his Unique Spell, Depravity. Depravity allows him to move extremely quickly and provides a massive boost  to his physical strength and magica generation while actiavted. However, his power,  due to the combination of the Holy Itucher, Alg Formation, and Depravity; is starting to go beyond what his body can handle."
+level_quotes = Array[String](["AHAHAHAHAHAHHAHAHAHAHAHA!!!"])

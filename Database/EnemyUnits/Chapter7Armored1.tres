@@ -1,0 +1,40 @@
+
+[gd_resource type="Resource" script_class="Unit" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Death Strike"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericarmored_big"
+exported_overworld_name = "genericarmored_small"
+exported_character_name = "genericarmored"
+exported_y = 0
+exported_x = 0
+level = 13
+hp = 35
+attack = 15
+defense = 15
+resistance = 7
+agility = 2
+accuracy = 35
+speed = 0
+exp_reward = 80
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Fire", "Armored"])
+unit_class = "Armored"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)
+    

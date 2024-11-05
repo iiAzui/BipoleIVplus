@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=11 format=3 uid="uid://bw865mbrvubck"]
 
-[ext_resource type="Resource" uid="uid://g4cvldi3c1hs" path="res://Database/Characters/Rethgif.tres" id="1_3tctc"]
+[ext_resource type="Resource" uid="uid://w45ipexxvbfc" path="res://Database/Characters/rethgif.tres" id="1_sf4un"]
 [ext_resource type="Resource" path="res://Database/Moves/Death Strike.tres" id="2_6uhxq"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -13,7 +13,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_3tctc")
+character = ExtResource("1_sf4un")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_3fyx4"), ExtResource("6_n7h62"), ExtResource("7_ay01e")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_6uhxq"), ExtResource("3_q8jyb"), ExtResource("4_poifv"), ExtResource("6_d3k4a")])
 move_unlock_levels = Array[int]([30, 35, 40, 35])
@@ -22,6 +22,9 @@ exported_move_unlock_names = Array[String](["Death Strike", "Armor Break", "Free
 exported_move_unlock_levels = Array[int]([30, 35, 40, 35])
 exported_portrait_name = "rethgif_big"
 exported_overworld_name = "rethgif_small"
+exported_character_name = "rethgif"
+exported_x = 0
+exported_y = 0
 level = 27
 hp = 28
 attack = 15

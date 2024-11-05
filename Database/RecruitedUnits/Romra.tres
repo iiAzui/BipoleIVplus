@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=11 format=3 uid="uid://dw4ca1e0dgrdt"]
 
-[ext_resource type="Resource" uid="uid://ihnvhpvtp2w2" path="res://Database/Characters/Romra.tres" id="1_ksil0"]
+[ext_resource type="Resource" uid="uid://ddpbaxejvmdba" path="res://Database/Characters/romra.tres" id="1_bk8sk"]
 [ext_resource type="Resource" uid="uid://bi1ftik6el8mg" path="res://Database/Moves/Bow.tres" id="2_o4v8g"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -13,7 +13,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_ksil0")
+character = ExtResource("1_bk8sk")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("8_mcrpa")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_o4v8g"), ExtResource("3_ndg3x"), ExtResource("4_3nj07"), ExtResource("5_1ct3h"), ExtResource("6_vgn45"), ExtResource("7_lownc")])
 move_unlock_levels = Array[int]([10, 10, 13, 15, 20, 25])
@@ -22,6 +22,9 @@ exported_move_unlock_names = Array[String](["Bow", "Heavy Bow", "Long Bow", "Her
 exported_move_unlock_levels = Array[int]([10, 10, 13, 15, 20, 25])
 exported_portrait_name = "romra_big"
 exported_overworld_name = "romra_small"
+exported_character_name = "romra"
+exported_x = 0
+exported_y = 0
 level = 1
 hp = 30
 attack = 5

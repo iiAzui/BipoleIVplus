@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://cacmbw25wye0e"]
 
-[ext_resource type="Texture2D" uid="uid://bjpeua581oxyl" path="res://Sprites/Overworld/azure_small.png" id="1_cejmf"]
-[ext_resource type="Texture2D" uid="uid://de6os12ny1e60" path="res://Sprites/Portraits/azure_big.png" id="2_a5y86"]
+[ext_resource type="Texture2D" uid="uid://bjpeua581oxyl" path="res://Sprites/Overworld/azure_small.png" id="1_ea5da"]
+[ext_resource type="Texture2D" uid="uid://de6os12ny1e60" path="res://Sprites/Portraits/azure_big.png" id="2_4a16s"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Azure"
-portrait = ExtResource("2_a5y86")
-overworld_sprite = ExtResource("1_cejmf")
+portrait = ExtResource("2_4a16s")
+overworld_sprite = ExtResource("1_ea5da")
 bio = "The Link of this Realm, he will execute Proton after he follows the Neville Prophecy."
 level_quotes = Array[String](["..."])

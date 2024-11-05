@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://cqmtmnghklkgy"]
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://2i4q2ai4xk75"]
 
-[ext_resource type="Texture2D" uid="uid://ddchuxg761gf0" path="res://Sprites/Overworld/lacirtcele_small.png" id="1_3l6tw"]
-[ext_resource type="Texture2D" uid="uid://dx06t8bqq555w" path="res://Sprites/Portraits/lacirtcele_big.png" id="2_m2vcy"]
+[ext_resource type="Texture2D" uid="uid://ddchuxg761gf0" path="res://Sprites/Overworld/lacirtcele_small.png" id="1_p2k2u"]
+[ext_resource type="Texture2D" uid="uid://dx06t8bqq555w" path="res://Sprites/Portraits/lacirtcele_big.png" id="2_fpbv7"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Lacirtcele"
-portrait = ExtResource("2_m2vcy")
-overworld_sprite = ExtResource("1_3l6tw")
+portrait = ExtResource("2_fpbv7")
+overworld_sprite = ExtResource("1_p2k2u")
 bio = "Lacirtcele is a member of the Elemental Offense Squad. He doesn't care for much and is extremely lazy. Though  he joined the EOS only for the fame, he can fight suprisingly well."
 level_quotes = Array[String](["Like... poggers, bruh.", "gaming.", "Yo....."])

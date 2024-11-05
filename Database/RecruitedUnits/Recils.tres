@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://beybfaxmbt0ys"]
 
-[ext_resource type="Resource" uid="uid://8ujpg7rhdexh" path="res://Database/Characters/Recils.tres" id="1_n000t"]
+[ext_resource type="Resource" uid="uid://8ujpg7rhdexh" path="res://Database/Characters/recils.tres" id="1_6xxvx"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="2_dnt4u"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Death Strike.tres" id="3_02ayd"]
@@ -11,7 +11,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_n000t")
+character = ExtResource("1_6xxvx")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_xrrjm")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_dnt4u"), ExtResource("3_02ayd"), ExtResource("4_jxk3i"), ExtResource("6_h07dq")])
 move_unlock_levels = Array[int]([20, 22, 25, 17])
@@ -20,6 +20,9 @@ exported_move_unlock_names = Array[String](["Slash", "Death Strike", "Armor Brea
 exported_move_unlock_levels = Array[int]([20, 22, 25, 17])
 exported_portrait_name = "recils_big"
 exported_overworld_name = "recils_small"
+exported_character_name = "recils"
+exported_x = 0
+exported_y = 0
 level = 15
 hp = 42
 attack = 28

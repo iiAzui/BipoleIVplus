@@ -19,6 +19,9 @@ signal character_changed
 
 @export_storage var exported_portrait_name: String
 @export_storage var exported_overworld_name: String
+@export_storage var exported_character_name: String
+@export_storage var exported_x: int
+@export_storage var exported_y: int
 
 @export_subgroup("Stats")
 signal level_changed

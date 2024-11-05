@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://bk2mvdvg4lrl7"]
 
-[ext_resource type="Resource" uid="uid://bg78jr24k6tuc" path="res://Database/Characters/Erif.tres" id="1_0f7bx"]
+[ext_resource type="Resource" uid="uid://w6ot1rem4orj" path="res://Database/Characters/erif.tres" id="1_pjtx0"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="2_qqkwp"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -11,7 +11,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_0f7bx")
+character = ExtResource("1_pjtx0")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_5hcsh")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_qqkwp"), ExtResource("3_ytsuo"), ExtResource("4_3kv2t"), ExtResource("6_opvbd")])
 move_unlock_levels = Array[int]([17, 25, 35, 20])
@@ -20,6 +20,9 @@ exported_move_unlock_names = Array[String](["Slash", "Fireball", "Fire Blast", "
 exported_move_unlock_levels = Array[int]([17, 25, 35, 20])
 exported_portrait_name = "erif_big"
 exported_overworld_name = "erif_small"
+exported_character_name = "erif"
+exported_x = 0
+exported_y = 0
 level = 15
 hp = 45
 attack = 25

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://ot1254tjaeap"]
 
-[ext_resource type="Resource" uid="uid://ds4gbik8v55xv" path="res://Database/Characters/Dnefed.tres" id="1_1hjy4"]
+[ext_resource type="Resource" uid="uid://c4nw1vgxcu0m7" path="res://Database/Characters/dnefed.tres" id="1_otiy8"]
 [ext_resource type="Resource" path="res://Database/Moves/Javelin.tres" id="2_k1fta"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -11,7 +11,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_1hjy4")
+character = ExtResource("1_otiy8")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_2mal4"), ExtResource("6_52deq")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_k1fta"), ExtResource("3_kepg6"), ExtResource("4_rlpml")])
 move_unlock_levels = Array[int]([37, 40, 45])
@@ -20,6 +20,9 @@ exported_move_unlock_names = Array[String](["Javelin", "Armor Break", "Shield Ba
 exported_move_unlock_levels = Array[int]([37, 40, 45])
 exported_portrait_name = "dnefed_big"
 exported_overworld_name = "dnefed_small"
+exported_character_name = "dnefed"
+exported_x = 0
+exported_y = 0
 level = 35
 hp = 100
 attack = 30

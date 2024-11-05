@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://dn1fad215kkul"]
 
-[ext_resource type="Resource" uid="uid://bs3eavp03cffb" path="res://Database/Characters/Xuirer.tres" id="1_mgfic"]
+[ext_resource type="Resource" uid="uid://b8r8pyr83lub" path="res://Database/Characters/xuirer.tres" id="1_t3or0"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" uid="uid://d27gk18od5me0" path="res://Database/Moves/Snipe.tres" id="2_ytv3a"]
 [ext_resource type="Resource" uid="uid://d3w2l3i1n8a7" path="res://Database/Moves/Snipe II.tres" id="3_6pv2f"]
@@ -12,7 +12,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_mgfic")
+character = ExtResource("1_t3or0")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("4_516es"), ExtResource("5_0ev13"), ExtResource("6_03aul"), ExtResource("8_678st")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_ytv3a"), ExtResource("3_6pv2f")])
 move_unlock_levels = Array[int]([35, 40])
@@ -21,6 +21,9 @@ exported_move_unlock_names = Array[String](["Snipe", "Snipe II"])
 exported_move_unlock_levels = Array[int]([35, 40])
 exported_portrait_name = "xuirer_big"
 exported_overworld_name = "xuirer_small"
+exported_character_name = "xuirer"
+exported_x = 0
+exported_y = 0
 level = 32
 hp = 80
 attack = 42

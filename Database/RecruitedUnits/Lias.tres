@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://d3cwymqoqwhoe"]
 
-[ext_resource type="Resource" uid="uid://cyu1m1hbbu76g" path="res://Database/Characters/Lias.tres" id="1_bqcqb"]
+[ext_resource type="Resource" uid="uid://bitewpve3hret" path="res://Database/Characters/lias.tres" id="1_gw21e"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="2_vafp8"]
 [ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="3_e7t67"]
@@ -12,7 +12,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_bqcqb")
+character = ExtResource("1_gw21e")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_q0hpf"), ExtResource("8_46usx")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_vafp8"), ExtResource("3_e7t67"), ExtResource("4_ddgqs"), ExtResource("6_15hra")])
 move_unlock_levels = Array[int]([25, 30, 30, 27])
@@ -21,6 +21,9 @@ exported_move_unlock_names = Array[String](["Slash", "Aqua", "Death Strike", "He
 exported_move_unlock_levels = Array[int]([25, 30, 30, 27])
 exported_portrait_name = "lias_big"
 exported_overworld_name = "lias_small"
+exported_character_name = "lias"
+exported_x = 0
+exported_y = 0
 level = 20
 hp = 20
 attack = 12

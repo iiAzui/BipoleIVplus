@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://bothay8tp8msv"]
 
-[ext_resource type="Resource" uid="uid://dxwrfmnoeb4ym" path="res://Database/Characters/Fael.tres" id="1_eyekr"]
+[ext_resource type="Resource" uid="uid://dxwrfmnoeb4ym" path="res://Database/Characters/fael.tres" id="1_v4ktw"]
 [ext_resource type="Resource" path="res://Database/Moves/Long Bow.tres" id="2_mhh4e"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -12,7 +12,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_eyekr")
+character = ExtResource("1_v4ktw")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_py0fo")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_mhh4e"), ExtResource("3_l7wmi"), ExtResource("4_a2k8q"), ExtResource("6_ixa8x"), ExtResource("7_whe02")])
 move_unlock_levels = Array[int]([17, 23, 30, 20, 25])
@@ -21,6 +21,9 @@ exported_move_unlock_names = Array[String](["Long Bow", "Distance Shot", "Snipe"
 exported_move_unlock_levels = Array[int]([17, 23, 30, 20, 25])
 exported_portrait_name = "fael_big"
 exported_overworld_name = "fael_small"
+exported_character_name = "fael"
+exported_x = 0
+exported_y = 0
 level = 15
 hp = 23
 attack = 18

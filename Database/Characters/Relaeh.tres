@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://c82tl27up2k7p"]
 
-[ext_resource type="Texture2D" uid="uid://cfbx4hno5t205" path="res://Sprites/Overworld/relaeh_small.png" id="1_ple1d"]
-[ext_resource type="Texture2D" uid="uid://qk7c4l3bx8xu" path="res://Sprites/Portraits/relaeh_big.png" id="2_1rckp"]
+[ext_resource type="Texture2D" uid="uid://cfbx4hno5t205" path="res://Sprites/Overworld/relaeh_small.png" id="1_0hcov"]
+[ext_resource type="Texture2D" uid="uid://qk7c4l3bx8xu" path="res://Sprites/Portraits/relaeh_big.png" id="2_vs11m"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Relaeh"
-portrait = ExtResource("2_1rckp")
-overworld_sprite = ExtResource("1_ple1d")
+portrait = ExtResource("2_vs11m")
+overworld_sprite = ExtResource("1_0hcov")
 bio = "Relaeh is a mage from Altar who fled after Bladeous became possessed by the Itucher. Stuck at the Bipole Sea, he joined forces with Proton to retrieve the Itucher from Nolavillia."
 level_quotes = Array[String](["This should help me.", "This is useful.", "This should help out."])

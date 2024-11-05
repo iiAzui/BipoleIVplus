@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://58puciwf7rtw"]
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://cj2qwvn7ymhdx"]
 
-[ext_resource type="Texture2D" uid="uid://cyghh3opgplrc" path="res://Sprites/Overworld/fieht_small.png" id="1_gpl2g"]
-[ext_resource type="Texture2D" uid="uid://5w6as1gpepjq" path="res://Sprites/Portraits/fieht_big.png" id="2_qvpx3"]
+[ext_resource type="Texture2D" uid="uid://cyghh3opgplrc" path="res://Sprites/Overworld/fieht_small.png" id="1_5hhmn"]
+[ext_resource type="Texture2D" uid="uid://5w6as1gpepjq" path="res://Sprites/Portraits/fieht_big.png" id="2_3t03u"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Fieht"
-portrait = ExtResource("2_qvpx3")
-overworld_sprite = ExtResource("1_gpl2g")
+portrait = ExtResource("2_3t03u")
+overworld_sprite = ExtResource("1_5hhmn")
 bio = "Fieht is a theif who was looting Kaptain K'Neville's ship. After hearing about Proton's quest, she decides to help you find the Itucher in return for a payment."
 level_quotes = Array[String](["Nice.", "This should help me out.", "This should help my stealth."])

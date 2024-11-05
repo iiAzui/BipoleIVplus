@@ -1,13 +1,9 @@
-[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://cthh25vytlu0j"]
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3 uid="uid://cthh25vytlu0j"]
 
-[ext_resource type="Texture2D" uid="uid://dtg8loj67iuly" path="res://Sprites/Overworld/yungpoggers_small.png" id="1_waxse"]
-[ext_resource type="Texture2D" uid="uid://duo20aocdqn4t" path="res://Sprites/Portraits/yungpoggers_big.png" id="2_l3g7k"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Yung Poggers"
-portrait = ExtResource("2_l3g7k")
-overworld_sprite = ExtResource("1_waxse")
 bio = "He is red pilled and based."
 level_quotes = Array[String](["Based.", "Red pilled.", "When *SUS*."])

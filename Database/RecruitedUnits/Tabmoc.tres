@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://bi66cxiv8pxpu"]
 
-[ext_resource type="Resource" uid="uid://d0ng0bkuwok25" path="res://Database/Characters/Tabmoc.tres" id="1_od8fl"]
+[ext_resource type="Resource" uid="uid://bu08ffca6xvff" path="res://Database/Characters/tabmoc.tres" id="1_bbe54"]
 [ext_resource type="Resource" path="res://Database/Moves/Hyper Slash.tres" id="2_hjkmc"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -12,7 +12,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_od8fl")
+character = ExtResource("1_bbe54")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("4_q36n7"), ExtResource("5_dg7ee"), ExtResource("6_jvioi"), ExtResource("8_spy20")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_hjkmc"), ExtResource("3_p37ay")])
 move_unlock_levels = Array[int]([48, 53])
@@ -21,6 +21,9 @@ exported_move_unlock_names = Array[String](["Hyper Slash", "God Slash"])
 exported_move_unlock_levels = Array[int]([48, 53])
 exported_portrait_name = "tabmoc_big"
 exported_overworld_name = "tabmoc_small"
+exported_character_name = "tabmoc"
+exported_x = 0
+exported_y = 0
 level = 42
 hp = 125
 attack = 65

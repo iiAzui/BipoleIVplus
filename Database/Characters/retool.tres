@@ -1,0 +1,10 @@
+
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Retool"
+bio = "Retool is the leader of the Guild  of Retool, a guild of bandits that has recently gained power after looting the Castle of Quad."
+level_quotes = Array[String](["Bow down to me, fools!"])

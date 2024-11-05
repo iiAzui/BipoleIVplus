@@ -1,0 +1,9 @@
+
+[gd_resource type="Resource" script_class="ChapterPlacements" load_steps=2 format=3 uid="uid://bkhl1kl5604v5"]
+
+[ext_resource type="Script" path="res://Scripts/ChapterPlacements.gd" id="1_kp6pv"]
+
+[resource]
+script = ExtResource("1_kp6pv")
+unit_names = Array[String](["IfTurtle", "Chapter22aScientist1", "Chapter22aScientist7", "Chapter22aScientist8", "Chapter22aScientist2", "Chapter22aScientist6", "Chapter22aScientist5", "Chapter22aScientist10", "Chapter22aScientist11", "Chapter22aScientist3", "Chapter22aScientist4", "Chapter22aScientist9"])
+unit_coords = Array[Vector2i]([Vector2i(1, 8), Vector2i(3, 6), Vector2i(3, 8), Vector2i(3, 10), Vector2i(5, 4), Vector2i(5, 6), Vector2i(5, 8), Vector2i(5, 10), Vector2i(5, 12), Vector2i(7, 6), Vector2i(7, 8), Vector2i(7, 10)])

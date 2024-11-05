@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bdu03ofgrrgj"]
 
-[ext_resource type="Texture2D" uid="uid://domwwh51t0xvu" path="res://Sprites/Overworld/bladen_small.png" id="1_dhmkm"]
-[ext_resource type="Texture2D" uid="uid://cq1w3v122r8me" path="res://Sprites/Portraits/bladen_big.png" id="2_552hn"]
+[ext_resource type="Texture2D" uid="uid://domwwh51t0xvu" path="res://Sprites/Overworld/bladen_small.png" id="1_d0dyk"]
+[ext_resource type="Texture2D" uid="uid://cq1w3v122r8me" path="res://Sprites/Portraits/bladen_big.png" id="2_on702"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Bladen"
-portrait = ExtResource("2_552hn")
-overworld_sprite = ExtResource("1_dhmkm")
+portrait = ExtResource("2_on702")
+overworld_sprite = ExtResource("1_d0dyk")
 bio = "Bladen is a mercenary hired by Proton to lead his army to the Nation of Altar."
 level_quotes = Array[String](["This should help me.", "This will be useful.", "This should help out."])

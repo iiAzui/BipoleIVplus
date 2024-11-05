@@ -1,0 +1,10 @@
+
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Else"
+bio = "Else Do is the head of the Third Division of Scientists at the Shadow Realm Research Center. He often does the opposite of what the others do, and has a very strong stance on the preservation of obsucure technology and spells. As well, he acts as the advisor of the Sci-Triptych Sectoral Board; though it's frankly an useless title in such a  powerless and small organization."
+level_quotes = Array[String](["Yes!"])

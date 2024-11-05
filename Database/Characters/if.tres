@@ -1,0 +1,10 @@
+
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "If"
+bio = "If Bool is the head of the First Division of Scientists at the Shadow Realm Research Center. He is often very strict, only allowing his division to perform under his exact conditions."
+level_quotes = Array[String](["Imagine not even making it past the first sector."])

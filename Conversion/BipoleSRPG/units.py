@@ -15,13 +15,33 @@ def testprint():
 
 import screensetup
 
+# (( Only for Godot bipole IV+ generation!!! skips the turtle registering thing)
+def register_shape(name):
+    # register_shape(name)
+    pass
+
+class FakeTurtle:
+    name: str
+
+    def shape(self, name):
+        self.name = name
+
+    def hideturtle(self):
+        pass
+
+def new_turtle():
+    # return turtle.Turtle()
+    return FakeTurtle()
+
 # COMMENTED OUT FOR CONVERSION
 # screensetup.BattleScreen.tracer(0)
 # current_directory = os.getcwd()
 current_directory = ""
 class Unit:
+    Turtle: FakeTurtle
+
     def __init__(self,
-    TurtleName="NameTurtle",
+    TurtleName: str = "NameTurtle",
     DisplayName="Name",
     PrimaryType="Physical",
     AttackRange=[],
@@ -60,8 +80,10 @@ class Unit:
     ConvertedSupportList=[],
     MoveStamp=None,
     ActStamp=None):
+        self.TurtleName = TurtleName
         self.AttackRange = AttackRange
         self.PrimaryType = PrimaryType
+        self.Turtle = TurtleName
         self.DisplayName = DisplayName
         self.MaxHP = MaxHP
         self.CurrentHP = CurrentHP
@@ -110,24 +132,6 @@ EnemyUnitsAlive = [] #This will be set at the start of each battle
 #==== Playable Units ===========================================================================================================================================================================================
 #===============================================================================================================================================================================================================
 
-# (( Only for Godot bipole IV+ generation!!! skips the turtle registering thing)
-def register_shape(name):
-    # register_shape(name)
-    pass
-
-class FakeTurtle:
-    name: str
-
-    def shape(self, name):
-        self.name = name
-
-    def hideturtle(self):
-        pass
-
-def new_turtle():
-    # return turtle.Turtle()
-    return FakeTurtle()
-
 #Proton------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 register_shape("proton_small")
 register_shape("proton_big")
@@ -168,9 +172,9 @@ ClassChange=[["Xuir Champion", 25]], #[Name, Level]
 AttackUnlocks=[[moves.Lance,3],[moves.Javelin,5],[moves.ArmorBreak,10],[moves.MageBlade,15],[moves.Slash,20]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Proton)
-Proton.TurtleName = new_turtle()
-Proton.TurtleName.shape("proton_small")
-Proton.TurtleName.hideturtle()
+Proton.Turtle = new_turtle()
+Proton.Turtle.shape("proton_small")
+Proton.Turtle.hideturtle()
 DataListUnit = Proton
 Proton.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -210,9 +214,9 @@ ClassChange=[["Grand Mage", 15]], #[Name, Level]
 AttackUnlocks=[[moves.Aqua,3],[moves.Freeze,7],[moves.Thorn,10],[moves.DarkOrb,12],[moves.Thunder,14],[moves.MageBlade,15]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.LongHeal,5]])
 ListOfPlayableUnits.append(Quest)
-Quest.TurtleName = new_turtle()
-Quest.TurtleName.shape("quest_small")
-Quest.TurtleName.hideturtle()
+Quest.Turtle = new_turtle()
+Quest.Turtle.shape("quest_small")
+Quest.Turtle.hideturtle()
 DataListUnit = Quest
 Quest.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -252,9 +256,9 @@ ClassChange=[["Legendary Knight", 10]], #[Name, Level]
 AttackUnlocks=[[moves.HerosStrike,7],[moves.Bow,10],[moves.ShieldShatter,20],[moves.SnipeIII,30]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.Mend,10],[moves.Save,13],[moves.Fortify,15],[moves.MedKit,17]])
 ListOfPlayableUnits.append(Scien)
-Scien.TurtleName = new_turtle()
-Scien.TurtleName.shape("scien_small")
-Scien.TurtleName.hideturtle()
+Scien.Turtle = new_turtle()
+Scien.Turtle.shape("scien_small")
+Scien.Turtle.hideturtle()
 DataListUnit = Scien
 Scien.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -294,9 +298,9 @@ ClassChange=[["Bow Knight", 10]], #[Name, Level]
 AttackUnlocks=[[moves.Bow,10],[moves.HeavyBow,10],[moves.LongBow,13],[moves.HerosStrike,15],[moves.Snipe,20],[moves.SnipeII,25]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Romra)
-Romra.TurtleName = new_turtle()
-Romra.TurtleName.shape("romra_small")
-Romra.TurtleName.hideturtle()
+Romra.Turtle = new_turtle()
+Romra.Turtle.shape("romra_small")
+Romra.Turtle.hideturtle()
 DataListUnit = Romra
 Romra.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -336,9 +340,9 @@ ClassChange=[["Blade Master", 10]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(TnemecalperI)
-TnemecalperI.TurtleName = new_turtle()
-TnemecalperI.TurtleName.shape("tnemecalperi_small")
-TnemecalperI.TurtleName.hideturtle()
+TnemecalperI.Turtle = new_turtle()
+TnemecalperI.Turtle.shape("tnemecalperi_small")
+TnemecalperI.Turtle.hideturtle()
 DataListUnit = TnemecalperI
 TnemecalperI.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -378,9 +382,9 @@ ClassChange=[["Dual Mage", 10]], #[Name, Level]
 AttackUnlocks=[[moves.Slice,15]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.Heal,10],[moves.LongHeal,13]])
 ListOfPlayableUnits.append(TnemecalperII)
-TnemecalperII.TurtleName = new_turtle()
-TnemecalperII.TurtleName.shape("tnemecalperii_small")
-TnemecalperII.TurtleName.hideturtle()
+TnemecalperII.Turtle = new_turtle()
+TnemecalperII.Turtle.shape("tnemecalperii_small")
+TnemecalperII.Turtle.hideturtle()
 DataListUnit = TnemecalperII
 TnemecalperII.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -420,9 +424,9 @@ ClassChange=[["Promoted Scientist", 10]], #[Name, Level]
 AttackUnlocks=[[moves.Infection,8]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.LongHeal,5],[moves.FarHeal,10]])
 ListOfPlayableUnits.append(TnemecalperIII)
-TnemecalperIII.TurtleName = new_turtle()
-TnemecalperIII.TurtleName.shape("tnemecalperiii_small")
-TnemecalperIII.TurtleName.hideturtle()
+TnemecalperIII.Turtle = new_turtle()
+TnemecalperIII.Turtle.shape("tnemecalperiii_small")
+TnemecalperIII.Turtle.hideturtle()
 DataListUnit = TnemecalperIII
 TnemecalperIII.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -462,9 +466,9 @@ ClassChange=[["Sniper", 10]], #[Name, Level]
 AttackUnlocks=[[moves.Dagger,5],[moves.LongBow,8],[moves.DistanceShot,10]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(TnemecalperIV)
-TnemecalperIV.TurtleName = new_turtle()
-TnemecalperIV.TurtleName.shape("tnemecalperiv_small")
-TnemecalperIV.TurtleName.hideturtle()
+TnemecalperIV.Turtle = new_turtle()
+TnemecalperIV.Turtle.shape("tnemecalperiv_small")
+TnemecalperIV.Turtle.hideturtle()
 DataListUnit = TnemecalperIV
 TnemecalperIV.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -504,9 +508,9 @@ ClassChange=[["Elemental Warrior", 15]], #[Name, Level]
 AttackUnlocks=[[moves.ThunderBlast,10],[moves.Slice,15],[moves.SparkBlade,15]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Lacirtcele)
-Lacirtcele.TurtleName = new_turtle()
-Lacirtcele.TurtleName.shape(Lacirtcele.Sprite)
-Lacirtcele.TurtleName.hideturtle()
+Lacirtcele.Turtle = new_turtle()
+Lacirtcele.Turtle.shape(Lacirtcele.Sprite)
+Lacirtcele.Turtle.hideturtle()
 DataListUnit = Lacirtcele
 Lacirtcele.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -546,9 +550,9 @@ ClassChange=[["Elemental Fighter", 15]], #[Name, Level]
 AttackUnlocks=[[moves.Fireball,15]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Damagein)
-Damagein.TurtleName = new_turtle()
-Damagein.TurtleName.shape(Damagein.Sprite)
-Damagein.TurtleName.hideturtle()
+Damagein.Turtle = new_turtle()
+Damagein.Turtle.shape(Damagein.Sprite)
+Damagein.Turtle.hideturtle()
 DataListUnit = Damagein
 Damagein.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -588,9 +592,9 @@ ClassChange=[["Dual Mage", 20]], #[Name, Level]
 AttackUnlocks=[[moves.Thorn,20],[moves.VineWrath,25]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.FarHeal,15]])
 ListOfPlayableUnits.append(Healia)
-Healia.TurtleName = new_turtle()
-Healia.TurtleName.shape(Healia.Sprite)
-Healia.TurtleName.hideturtle()
+Healia.Turtle = new_turtle()
+Healia.Turtle.shape(Healia.Sprite)
+Healia.Turtle.hideturtle()
 DataListUnit = Healia
 Healia.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -630,9 +634,9 @@ ClassChange=[["Elemental Archer", 13],["Elemental Sniper",20],["Ultimate Sniper"
 AttackUnlocks=[[moves.DistanceShot,8],[moves.Fireball,13],[moves.Snipe,20],[moves.SnipeII,28],[moves.SnipeIII,39],[moves.SnipeIV,50]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,16]])
 ListOfPlayableUnits.append(Wob)
-Wob.TurtleName = new_turtle()
-Wob.TurtleName.shape("wob_small")
-Wob.TurtleName.hideturtle()
+Wob.Turtle = new_turtle()
+Wob.Turtle.shape("wob_small")
+Wob.Turtle.hideturtle()
 DataListUnit = Wob
 Wob.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -672,9 +676,9 @@ ClassChange=[["Assassin", 20]], #[Name, Level]
 AttackUnlocks=[[moves.Cut,10],[moves.Finisher,13],[moves.ArmorBreak,15],[moves.DeathStrike,20]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Bladen)
-Bladen.TurtleName = new_turtle()
-Bladen.TurtleName.shape(Bladen.Sprite)
-Bladen.TurtleName.hideturtle()
+Bladen.Turtle = new_turtle()
+Bladen.Turtle.shape(Bladen.Sprite)
+Bladen.Turtle.hideturtle()
 DataListUnit = Bladen
 Bladen.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -714,9 +718,9 @@ ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[[moves.ShadowBurst,15],[moves.DarkOrb,20]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Wodahs)
-Wodahs.TurtleName = new_turtle()
-Wodahs.TurtleName.shape(Wodahs.Sprite)
-Wodahs.TurtleName.hideturtle()
+Wodahs.Turtle = new_turtle()
+Wodahs.Turtle.shape(Wodahs.Sprite)
+Wodahs.Turtle.hideturtle()
 DataListUnit = Wodahs
 Wodahs.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -756,9 +760,9 @@ ClassChange=[["Elemental Champion", 25]], #[Name, Level]
 AttackUnlocks=[[moves.Slash,23],[moves.ShadowBurst,27],[moves.ShadowStorm,35]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,25]])
 ListOfPlayableUnits.append(PlayableBladeous)
-PlayableBladeous.TurtleName = new_turtle()
-PlayableBladeous.TurtleName.shape(PlayableBladeous.Sprite)
-PlayableBladeous.TurtleName.hideturtle()
+PlayableBladeous.Turtle = new_turtle()
+PlayableBladeous.Turtle.shape(PlayableBladeous.Sprite)
+PlayableBladeous.Turtle.hideturtle()
 DataListUnit = PlayableBladeous
 PlayableBladeous.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -798,9 +802,9 @@ ClassChange=[["The Link", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Azure)
-Azure.TurtleName = new_turtle()
-Azure.TurtleName.shape(Azure.Sprite)
-Azure.TurtleName.hideturtle()
+Azure.Turtle = new_turtle()
+Azure.Turtle.shape(Azure.Sprite)
+Azure.Turtle.hideturtle()
 DataListUnit = Azure
 Azure.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -840,9 +844,9 @@ ClassChange=[["Elemental Sniper", 30]], #[Name, Level]
 AttackUnlocks=[[moves.LongBow,17],[moves.DistanceShot,23],[moves.Snipe,30]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,20],[moves.Heal,25]])
 ListOfPlayableUnits.append(Fael)
-Fael.TurtleName = new_turtle()
-Fael.TurtleName.shape(Fael.Sprite)
-Fael.TurtleName.hideturtle()
+Fael.Turtle = new_turtle()
+Fael.Turtle.shape(Fael.Sprite)
+Fael.Turtle.hideturtle()
 DataListUnit = Fael
 Fael.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -882,9 +886,9 @@ ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[[moves.Slash,17],[moves.Fireball,25],[moves.FireBlast,35]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,20]])
 ListOfPlayableUnits.append(Erif)
-Erif.TurtleName = new_turtle()
-Erif.TurtleName.shape(Erif.Sprite)
-Erif.TurtleName.hideturtle()
+Erif.Turtle = new_turtle()
+Erif.Turtle.shape(Erif.Sprite)
+Erif.Turtle.hideturtle()
 DataListUnit = Erif
 Erif.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -924,9 +928,9 @@ ClassChange=[["why are you using vruh", 20]], #[Name, Level]
 AttackUnlocks=[[moves.ShieldShatter,20]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,17]])
 ListOfPlayableUnits.append(Vruh)
-Vruh.TurtleName = new_turtle()
-Vruh.TurtleName.shape(Vruh.Sprite)
-Vruh.TurtleName.hideturtle()
+Vruh.Turtle = new_turtle()
+Vruh.Turtle.shape(Vruh.Sprite)
+Vruh.Turtle.hideturtle()
 DataListUnit = Vruh
 Vruh.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -966,9 +970,9 @@ ClassChange=[["Blade Master", 25]], #[Name, Level]
 AttackUnlocks=[[moves.Slash,20],[moves.DeathStrike,22],[moves.ArmorBreak,25]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,17]])
 ListOfPlayableUnits.append(Recils)
-Recils.TurtleName = new_turtle()
-Recils.TurtleName.shape(Recils.Sprite)
-Recils.TurtleName.hideturtle()
+Recils.Turtle = new_turtle()
+Recils.Turtle.shape(Recils.Sprite)
+Recils.Turtle.hideturtle()
 DataListUnit = Recils
 Recils.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1009,9 +1013,9 @@ ClassChange=[["Elemental Sniper", 35],["Elite Sniper", 65]], #[Name, Level]
 AttackUnlocks=[[moves.Snipe,25],[moves.Fireball,35],[moves.SnipeII,45],[moves.SnipeIII,55],[moves.SnipeIV,65]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Repins)
-Repins.TurtleName = new_turtle()
-Repins.TurtleName.shape(Repins.Sprite)
-Repins.TurtleName.hideturtle()
+Repins.Turtle = new_turtle()
+Repins.Turtle.shape(Repins.Sprite)
+Repins.Turtle.hideturtle()
 DataListUnit = Repins
 Repins.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1051,9 +1055,9 @@ ClassChange=[["Dual Mage", 23]], #[Name, Level]
 AttackUnlocks=[[moves.Freeze,23],[moves.Congeal,30]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,25]])
 ListOfPlayableUnits.append(Relaeh)
-Relaeh.TurtleName = new_turtle()
-Relaeh.TurtleName.shape(Relaeh.Sprite)
-Relaeh.TurtleName.hideturtle()
+Relaeh.Turtle = new_turtle()
+Relaeh.Turtle.shape(Relaeh.Sprite)
+Relaeh.Turtle.hideturtle()
 DataListUnit = Relaeh
 Relaeh.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1093,9 +1097,9 @@ ClassChange=[["Greater Mage", 30]], #[Name, Level]
 AttackUnlocks=[[moves.MageBlade,30],[moves.Cut,30],[moves.Hydro,35],[moves.Hydra,40]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.LongHeal,25],[moves.FarHeal,27]])
 ListOfPlayableUnits.append(Eulb)
-Eulb.TurtleName = new_turtle()
-Eulb.TurtleName.shape(Eulb.Sprite)
-Eulb.TurtleName.hideturtle()
+Eulb.Turtle = new_turtle()
+Eulb.Turtle.shape(Eulb.Sprite)
+Eulb.Turtle.hideturtle()
 DataListUnit = Eulb
 Eulb.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1135,9 +1139,9 @@ ClassChange=[["Elemental Warrior", 30]], #[Name, Level]
 AttackUnlocks=[[moves.Slash,25],[moves.Aqua,30],[moves.DeathStrike,30]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.Heal,27]])
 ListOfPlayableUnits.append(Lias)
-Lias.TurtleName = new_turtle()
-Lias.TurtleName.shape(Lias.Sprite)
-Lias.TurtleName.hideturtle()
+Lias.Turtle = new_turtle()
+Lias.Turtle.shape(Lias.Sprite)
+Lias.Turtle.hideturtle()
 DataListUnit = Lias
 Lias.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1177,9 +1181,9 @@ ClassChange=[["Assassin", 30]], #[Name, Level]
 AttackUnlocks=[[moves.Cut,22],[moves.Slice,25],[moves.Slash,27],[moves.DeathStrike,30],[moves.ArmorBreak,30]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Fieht)
-Fieht.TurtleName = new_turtle()
-Fieht.TurtleName.shape(Fieht.Sprite)
-Fieht.TurtleName.hideturtle()
+Fieht.Turtle = new_turtle()
+Fieht.Turtle.shape(Fieht.Sprite)
+Fieht.Turtle.hideturtle()
 DataListUnit = Fieht
 Fieht.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1219,9 +1223,9 @@ ClassChange=[["Elemental Warrior", 45]], #[Name, Level]
 AttackUnlocks=[[moves.DeathStrike,30],[moves.ArmorBreak,35],[moves.Freeze,40]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,35]])
 ListOfPlayableUnits.append(Rethgif)
-Rethgif.TurtleName = new_turtle()
-Rethgif.TurtleName.shape(Rethgif.Sprite)
-Rethgif.TurtleName.hideturtle()
+Rethgif.Turtle = new_turtle()
+Rethgif.Turtle.shape(Rethgif.Sprite)
+Rethgif.Turtle.hideturtle()
 DataListUnit = Rethgif
 Rethgif.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1261,9 +1265,9 @@ ClassChange=[["Destroyer", 45]], #[Name, Level]
 AttackUnlocks=[[moves.DeathStrike,30],[moves.Slash,32],[moves.ArmorBreak,35],[moves.Thunder,40],[moves.ThunderBlast,45]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Eg)
-Eg.TurtleName = new_turtle()
-Eg.TurtleName.shape(Eg.Sprite)
-Eg.TurtleName.hideturtle()
+Eg.Turtle = new_turtle()
+Eg.Turtle.shape(Eg.Sprite)
+Eg.Turtle.hideturtle()
 DataListUnit = Eg
 Eg.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1303,9 +1307,9 @@ ClassChange=[["Elemental Noble", 35]], #[Name, Level]
 AttackUnlocks=[[moves.Cut,27],[moves.Slice,30],[moves.Aqua,35],[moves.Slash,40]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,32]])
 ListOfPlayableUnits.append(Elbon)
-Elbon.TurtleName = new_turtle()
-Elbon.TurtleName.shape(Elbon.Sprite)
-Elbon.TurtleName.hideturtle()
+Elbon.Turtle = new_turtle()
+Elbon.Turtle.shape(Elbon.Sprite)
+Elbon.Turtle.hideturtle()
 DataListUnit = Elbon
 Elbon.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1345,9 +1349,9 @@ ClassChange=[["Chrono Master", 50]], #[Name, Level]
 AttackUnlocks=[[moves.Beam,40],[moves.Destroyer,50]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,45]])
 ListOfPlayableUnits.append(B)
-B.TurtleName = new_turtle()
-B.TurtleName.shape(B.Sprite)
-B.TurtleName.hideturtle()
+B.Turtle = new_turtle()
+B.Turtle.shape(B.Sprite)
+B.Turtle.hideturtle()
 DataListUnit = B
 B.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1388,9 +1392,9 @@ ClassChange=[["Xuir Champion", 40]], #[Name, Level]
 AttackUnlocks=[[moves.Finisher,30],[moves.Slash,35],[moves.FireBlast,40]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,32]])
 ListOfPlayableUnits.append(Xuirventh)
-Xuirventh.TurtleName = new_turtle()
-Xuirventh.TurtleName.shape(Xuirventh.Sprite)
-Xuirventh.TurtleName.hideturtle()
+Xuirventh.Turtle = new_turtle()
+Xuirventh.Turtle.shape(Xuirventh.Sprite)
+Xuirventh.Turtle.hideturtle()
 DataListUnit = Xuirventh
 Xuirventh.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1430,9 +1434,9 @@ ClassChange=[["Xuir Champion", 45]], #[Name, Level]
 AttackUnlocks=[[moves.Hydro,33],[moves.Cut,35],[moves.Hydra,40]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Xuirfth)
-Xuirfth.TurtleName = new_turtle()
-Xuirfth.TurtleName.shape(Xuirfth.Sprite)
-Xuirfth.TurtleName.hideturtle()
+Xuirfth.Turtle = new_turtle()
+Xuirfth.Turtle.shape(Xuirfth.Sprite)
+Xuirfth.Turtle.hideturtle()
 DataListUnit = Xuirfth
 Xuirfth.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1472,9 +1476,9 @@ ClassChange=[["High Xuirist", 40]], #[Name, Level]
 AttackUnlocks=[[moves.Snipe,35],[moves.SnipeII,40]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Xuirer)
-Xuirer.TurtleName = new_turtle()
-Xuirer.TurtleName.shape(Xuirer.Sprite)
-Xuirer.TurtleName.hideturtle()
+Xuirer.Turtle = new_turtle()
+Xuirer.Turtle.shape(Xuirer.Sprite)
+Xuirer.Turtle.hideturtle()
 DataListUnit = Xuirer
 Xuirer.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1514,9 +1518,9 @@ ClassChange=[["Executioner", 45]], #[Name, Level]
 AttackUnlocks=[[moves.ShieldShatter,40],[moves.Execution,45]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Dliug)
-Dliug.TurtleName = new_turtle()
-Dliug.TurtleName.shape(Dliug.Sprite)
-Dliug.TurtleName.hideturtle()
+Dliug.Turtle = new_turtle()
+Dliug.Turtle.shape(Dliug.Sprite)
+Dliug.Turtle.hideturtle()
 DataListUnit = Dliug
 Dliug.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1556,9 +1560,9 @@ ClassChange=[["Elemental Mercenary", 45]], #[Name, Level]
 AttackUnlocks=[[moves.AxeThrow,40],[moves.Thorn,45]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,42]])
 ListOfPlayableUnits.append(Exa)
-Exa.TurtleName = new_turtle()
-Exa.TurtleName.shape(Exa.Sprite)
-Exa.TurtleName.hideturtle()
+Exa.Turtle = new_turtle()
+Exa.Turtle.shape(Exa.Sprite)
+Exa.Turtle.hideturtle()
 DataListUnit = Exa
 Exa.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1598,9 +1602,9 @@ ClassChange=[["Executioner", 50]], #[Name, Level]
 AttackUnlocks=[[moves.ShieldShatter,40],[moves.AxeThrow,45],[moves.Execution,50]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.Heal,42],[moves.LongHeal,47]])
 ListOfPlayableUnits.append(Yranecrem)
-Yranecrem.TurtleName = new_turtle()
-Yranecrem.TurtleName.shape(Yranecrem.Sprite)
-Yranecrem.TurtleName.hideturtle()
+Yranecrem.Turtle = new_turtle()
+Yranecrem.Turtle.shape(Yranecrem.Sprite)
+Yranecrem.Turtle.hideturtle()
 DataListUnit = Yranecrem
 Yranecrem.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1640,9 +1644,9 @@ ClassChange=[["Geom Master", 42]], #[Name, Level]
 AttackUnlocks=[[moves.GeomStrike,38],[moves.GeomSlash,42]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Geomer)
-Geomer.TurtleName = new_turtle()
-Geomer.TurtleName.shape(Geomer.Sprite)
-Geomer.TurtleName.hideturtle()
+Geomer.Turtle = new_turtle()
+Geomer.Turtle.shape(Geomer.Sprite)
+Geomer.Turtle.hideturtle()
 DataListUnit = Geomer
 Geomer.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1682,9 +1686,9 @@ ClassChange=[["Merchant", 37]], #[Name, Level]
 AttackUnlocks=[[moves.Dagger,42]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.Save,40],[moves.Fortify,45]])
 ListOfPlayableUnits.append(Box) 
-Box.TurtleName = new_turtle()
-Box.TurtleName.shape(Box.Sprite)
-Box.TurtleName.hideturtle()
+Box.Turtle = new_turtle()
+Box.Turtle.shape(Box.Sprite)
+Box.Turtle.hideturtle()
 DataListUnit = Box
 Box.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1724,9 +1728,9 @@ ClassChange=[["Master of the OS", 50]], #[Name, Level]
 AttackUnlocks=[[moves.ArmorBreak,40],[moves.ShieldShatter,45],[moves.Execution,50]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,47]])
 ListOfPlayableUnits.append(NOTOS)
-NOTOS.TurtleName = new_turtle()
-NOTOS.TurtleName.shape(NOTOS.Sprite)
-NOTOS.TurtleName.hideturtle()
+NOTOS.Turtle = new_turtle()
+NOTOS.Turtle.shape(NOTOS.Sprite)
+NOTOS.Turtle.hideturtle()
 DataListUnit = NOTOS
 NOTOS.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1766,9 +1770,9 @@ ClassChange=[["Red-Pilled", 45]], #[Name, Level]
 AttackUnlocks=[[moves.GeomSlash,40],[moves.GeomStrike,42],[moves.ShieldShatter,45]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(YungPoggers)
-YungPoggers.TurtleName = new_turtle()
-YungPoggers.TurtleName.shape(YungPoggers.Sprite)
-YungPoggers.TurtleName.hideturtle()
+YungPoggers.Turtle = new_turtle()
+YungPoggers.Turtle.shape(YungPoggers.Sprite)
+YungPoggers.Turtle.hideturtle()
 DataListUnit = YungPoggers
 YungPoggers.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1808,9 +1812,9 @@ ClassChange=[["Shield Knight", 45]], #[Name, Level]
 AttackUnlocks=[[moves.Javelin,37],[moves.ArmorBreak,40],[moves.ShieldBash,45]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Dnefed)
-Dnefed.TurtleName = new_turtle()
-Dnefed.TurtleName.shape(Dnefed.Sprite)
-Dnefed.TurtleName.hideturtle()
+Dnefed.Turtle = new_turtle()
+Dnefed.Turtle.shape(Dnefed.Sprite)
+Dnefed.Turtle.hideturtle()
 DataListUnit = Dnefed
 Dnefed.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1850,9 +1854,9 @@ ClassChange=[["Elite Warrior", 45]], #[Name, Level]
 AttackUnlocks=[[moves.Slash,40],[moves.ArmorBreak,45]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Thgif)
-Thgif.TurtleName = new_turtle()
-Thgif.TurtleName.shape(Thgif.Sprite)
-Thgif.TurtleName.hideturtle()
+Thgif.Turtle = new_turtle()
+Thgif.Turtle.shape(Thgif.Sprite)
+Thgif.Turtle.hideturtle()
 DataListUnit = Thgif
 Thgif.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1892,9 +1896,9 @@ ClassChange=[["Elite Sniper", 50]], #[Name, Level]
 AttackUnlocks=[[moves.SnipeII,40],[moves.SnipeIII,50]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Gnirif)
-Gnirif.TurtleName = new_turtle()
-Gnirif.TurtleName.shape(Gnirif.Sprite)
-Gnirif.TurtleName.hideturtle()
+Gnirif.Turtle = new_turtle()
+Gnirif.Turtle.shape(Gnirif.Sprite)
+Gnirif.Turtle.hideturtle()
 DataListUnit = Gnirif
 Gnirif.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1934,9 +1938,9 @@ ClassChange=[["Dual Mage", 40]], #[Name, Level]
 AttackUnlocks=[[moves.Aqua,40],[moves.Hydro,45]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,37]])
 ListOfPlayableUnits.append(Cigam)
-Cigam.TurtleName = new_turtle()
-Cigam.TurtleName.shape(Cigam.Sprite)
-Cigam.TurtleName.hideturtle()
+Cigam.Turtle = new_turtle()
+Cigam.Turtle.shape(Cigam.Sprite)
+Cigam.Turtle.hideturtle()
 DataListUnit = Cigam
 Cigam.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -1976,9 +1980,9 @@ ClassChange=[["Elite Xuirist", 50]], #[Name, Level]
 AttackUnlocks=[[moves.ShadowBlade,45],[moves.ShadowStorm,50]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Omega)
-Omega.TurtleName = new_turtle()
-Omega.TurtleName.shape(Omega.Sprite)
-Omega.TurtleName.hideturtle()
+Omega.Turtle = new_turtle()
+Omega.Turtle.shape(Omega.Sprite)
+Omega.Turtle.hideturtle()
 DataListUnit = Omega
 Omega.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -2018,9 +2022,9 @@ ClassChange=[["Spirit Fighter", 60]], #[Name, Level]
 AttackUnlocks=[[moves.ManaBurst,45],[moves.Aura,55]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.LongHeal,50],[moves.FarHeal,60]])
 ListOfPlayableUnits.append(Fiyghtrr)
-Fiyghtrr.TurtleName = new_turtle()
-Fiyghtrr.TurtleName.shape(Fiyghtrr.Sprite)
-Fiyghtrr.TurtleName.hideturtle()
+Fiyghtrr.Turtle = new_turtle()
+Fiyghtrr.Turtle.shape(Fiyghtrr.Sprite)
+Fiyghtrr.Turtle.hideturtle()
 DataListUnit = Fiyghtrr
 Fiyghtrr.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -2060,9 +2064,9 @@ ClassChange=[["The \"Ultimate\"-er Replacement", 55]], #[Name, Level]
 AttackUnlocks=[[moves.Slash,45],[moves.Thunder,50],[moves.ThunderBlast,55]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Recalper)
-Recalper.TurtleName = new_turtle()
-Recalper.TurtleName.shape(Recalper.Sprite)
-Recalper.TurtleName.hideturtle()
+Recalper.Turtle = new_turtle()
+Recalper.Turtle.shape(Recalper.Sprite)
+Recalper.Turtle.hideturtle()
 DataListUnit = Recalper
 Recalper.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -2102,9 +2106,9 @@ ClassChange=[["Blade Warrior", 53]], #[Name, Level]
 AttackUnlocks=[[moves.HyperSlash,48],[moves.GodSlash,53]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Tabmoc)
-Tabmoc.TurtleName = new_turtle()
-Tabmoc.TurtleName.shape(Tabmoc.Sprite)
-Tabmoc.TurtleName.hideturtle()
+Tabmoc.Turtle = new_turtle()
+Tabmoc.Turtle.shape(Tabmoc.Sprite)
+Tabmoc.Turtle.hideturtle()
 DataListUnit = Tabmoc
 Tabmoc.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -2144,9 +2148,9 @@ ClassChange=[["Xuir Champion", 55]], #[Name, Level]
 AttackUnlocks=[[moves.Thunder,45],[moves.ArmorBreak,50],[moves.ThunderBlast,55]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Xuirurth)
-Xuirurth.TurtleName = new_turtle()
-Xuirurth.TurtleName.shape(Xuirurth.Sprite)
-Xuirurth.TurtleName.hideturtle()
+Xuirurth.Turtle = new_turtle()
+Xuirurth.Turtle.shape(Xuirurth.Sprite)
+Xuirurth.Turtle.hideturtle()
 DataListUnit = Xuirurth
 Xuirurth.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -2186,9 +2190,9 @@ ClassChange=[["Elite Sniper", 50],["God Sniper",60]], #[Name, Level]
 AttackUnlocks=[[moves.SnipeIII,45],[moves.SnipeIV,50],[moves.GodSnipe,60]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Repins2)
-Repins2.TurtleName = new_turtle()
-Repins2.TurtleName.shape(Repins2.Sprite)
-Repins2.TurtleName.hideturtle()
+Repins2.Turtle = new_turtle()
+Repins2.Turtle.shape(Repins2.Sprite)
+Repins2.Turtle.hideturtle()
 DataListUnit = Repins2
 Repins2.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -2228,9 +2232,9 @@ ClassChange=[["=RITUAL_PREPARED=", 57]], #[Name, Level]
 AttackUnlocks=[[moves.ThunderBlast,50],[moves.Voltage,55]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Ahcem)
-Ahcem.TurtleName = new_turtle()
-Ahcem.TurtleName.shape(Ahcem.Sprite)
-Ahcem.TurtleName.hideturtle()
+Ahcem.Turtle = new_turtle()
+Ahcem.Turtle.shape(Ahcem.Sprite)
+Ahcem.Turtle.hideturtle()
 DataListUnit = Ahcem
 Ahcem.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -2270,9 +2274,9 @@ ClassChange=[["Mechanical", 60]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Cayenne)
-Cayenne.TurtleName = new_turtle()
-Cayenne.TurtleName.shape(Cayenne.Sprite)
-Cayenne.TurtleName.hideturtle()
+Cayenne.Turtle = new_turtle()
+Cayenne.Turtle.shape(Cayenne.Sprite)
+Cayenne.Turtle.hideturtle()
 DataListUnit = Cayenne
 Cayenne.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -2312,9 +2316,9 @@ ClassChange=[], #[Name, Level]
 AttackUnlocks=[[moves.Lance,3],[moves.Javelin,5],[moves.ArmorBreak,10],[moves.MageBlade,15],[moves.Slash,20]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(XuirMan)
-XuirMan.TurtleName = new_turtle()
-XuirMan.TurtleName.shape("xuirman_small")
-XuirMan.TurtleName.hideturtle()
+XuirMan.Turtle = new_turtle()
+XuirMan.Turtle.shape("xuirman_small")
+XuirMan.Turtle.hideturtle()
 DataListUnit = XuirMan
 XuirMan.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -2354,9 +2358,9 @@ ClassChange=[], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
 ListOfPlayableUnits.append(Integer)
-Integer.TurtleName = new_turtle()
-Integer.TurtleName.shape(Integer.Sprite)
-Integer.TurtleName.hideturtle()
+Integer.Turtle = new_turtle()
+Integer.Turtle.shape(Integer.Sprite)
+Integer.Turtle.hideturtle()
 DataListUnit = Integer
 Integer.DataList = [DataListUnit.MaxHP,DataListUnit.CurrentHP,DataListUnit.ATK,DataListUnit.DEF,DataListUnit.RES,DataListUnit.AGL,DataListUnit.ACR,DataListUnit.SPD,DataListUnit.EXP,DataListUnit.Level,DataListUnit.UnitClass,DataListUnit.Portrait,DataListUnit.Sprite]
 
@@ -2418,9 +2422,9 @@ Portrait="redslime_big",
 Sprite="redslime_small",
 LevelQuotes=["Red Slime: bruh how do you lose in the first chapter"],
 Bio="Red Slimes are basic monsters that \n can be found throughout the Bipolian continent.")
-Chapter1RedSlime1.TurtleName = new_turtle()
-Chapter1RedSlime1.TurtleName.shape(Chapter1RedSlime1.Sprite)
-Chapter1RedSlime1.TurtleName.hideturtle()
+Chapter1RedSlime1.Turtle = new_turtle()
+Chapter1RedSlime1.Turtle.shape(Chapter1RedSlime1.Sprite)
+Chapter1RedSlime1.Turtle.hideturtle()
 
 #Red Slime 2---------------
 register_shape("redslime_small")
@@ -2448,9 +2452,9 @@ Portrait="redslime_big",
 Sprite="redslime_small",
 LevelQuotes=["Red Slime: bruh how do you lose in the first chapter"],
 Bio="Red Slimes are basic monsters that \n can be found throughout the Bipolian continent.")
-Chapter1RedSlime2.TurtleName = new_turtle()
-Chapter1RedSlime2.TurtleName.shape(Chapter1RedSlime2.Sprite)
-Chapter1RedSlime2.TurtleName.hideturtle()
+Chapter1RedSlime2.Turtle = new_turtle()
+Chapter1RedSlime2.Turtle.shape(Chapter1RedSlime2.Sprite)
+Chapter1RedSlime2.Turtle.hideturtle()
 
 #Red Slime 3---------------
 register_shape("redslime_small")
@@ -2478,9 +2482,9 @@ Portrait="redslime_big",
 Sprite="redslime_small",
 LevelQuotes=["Red Slime: bruh how do you lose in the first chapter"],
 Bio="Red Slimes are basic monsters that \n can be found throughout the Bipolian continent.")
-Chapter1RedSlime3.TurtleName = new_turtle()
-Chapter1RedSlime3.TurtleName.shape(Chapter1RedSlime3.Sprite)
-Chapter1RedSlime3.TurtleName.hideturtle()
+Chapter1RedSlime3.Turtle = new_turtle()
+Chapter1RedSlime3.Turtle.shape(Chapter1RedSlime3.Sprite)
+Chapter1RedSlime3.Turtle.hideturtle()
 
 #Red Slime 4---------------
 register_shape("redslime_small")
@@ -2508,9 +2512,9 @@ Portrait="redslime_big",
 Sprite="redslime_small",
 LevelQuotes=["Red Slime: bruh how do you lose in the first chapter"],
 Bio="Red Slimes are basic monsters that \n can be found throughout the Bipolian continent.")
-Chapter1RedSlime4.TurtleName = new_turtle()
-Chapter1RedSlime4.TurtleName.shape(Chapter1RedSlime4.Sprite)
-Chapter1RedSlime4.TurtleName.hideturtle()
+Chapter1RedSlime4.Turtle = new_turtle()
+Chapter1RedSlime4.Turtle.shape(Chapter1RedSlime4.Sprite)
+Chapter1RedSlime4.Turtle.hideturtle()
 
 #Blue Slime 1---------------
 register_shape("blueslime_small")
@@ -2538,9 +2542,9 @@ Portrait="blueslime_big",
 Sprite="blueslime_small",
 LevelQuotes=["Blue Slime: bruh how do you lose in the first chapter"],
 Bio="Blue Slimes are similar to Red Slimes, \n but have higher DEF and lower RES.")
-Chapter1BlueSlime1.TurtleName = new_turtle()
-Chapter1BlueSlime1.TurtleName.shape("blueslime_small")
-Chapter1BlueSlime1.TurtleName.hideturtle()
+Chapter1BlueSlime1.Turtle = new_turtle()
+Chapter1BlueSlime1.Turtle.shape("blueslime_small")
+Chapter1BlueSlime1.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 2]=======================================================================================================================================
@@ -2572,9 +2576,9 @@ Portrait="redslime_big",
 Sprite="redslime_small",
 LevelQuotes=["Red Slime: *slime sounds*"],
 Bio="Red Slimes are basic monsters that \n can be found throughout the Bipolian continent.")
-Chapter2RedSlime1.TurtleName = new_turtle()
-Chapter2RedSlime1.TurtleName.shape(Chapter2RedSlime1.Sprite)
-Chapter2RedSlime1.TurtleName.hideturtle()
+Chapter2RedSlime1.Turtle = new_turtle()
+Chapter2RedSlime1.Turtle.shape(Chapter2RedSlime1.Sprite)
+Chapter2RedSlime1.Turtle.hideturtle()
 
 #Red Slime 2---------------
 register_shape("redslime_small")
@@ -2602,9 +2606,9 @@ Portrait="redslime_big",
 Sprite="redslime_small",
 LevelQuotes=["Red Slime: *slime sounds*"],
 Bio="Red Slimes are basic monsters that \n can be found throughout the Bipolian continent.")
-Chapter2RedSlime2.TurtleName = new_turtle()
-Chapter2RedSlime2.TurtleName.shape(Chapter2RedSlime2.Sprite)
-Chapter2RedSlime2.TurtleName.hideturtle()
+Chapter2RedSlime2.Turtle = new_turtle()
+Chapter2RedSlime2.Turtle.shape(Chapter2RedSlime2.Sprite)
+Chapter2RedSlime2.Turtle.hideturtle()
 
 #Red Slime 3---------------
 register_shape("redslime_small")
@@ -2632,9 +2636,9 @@ Portrait="redslime_big",
 Sprite="redslime_small",
 LevelQuotes=["Red Slime: *slime sounds*"],
 Bio="Red Slimes are basic monsters that \n can be found throughout the Bipolian continent.")
-Chapter2RedSlime3.TurtleName = new_turtle()
-Chapter2RedSlime3.TurtleName.shape(Chapter2RedSlime3.Sprite)
-Chapter2RedSlime3.TurtleName.hideturtle()
+Chapter2RedSlime3.Turtle = new_turtle()
+Chapter2RedSlime3.Turtle.shape(Chapter2RedSlime3.Sprite)
+Chapter2RedSlime3.Turtle.hideturtle()
 
 #Yellow Slime 1---------------
 register_shape("yellowslime_small")
@@ -2662,9 +2666,9 @@ Portrait="yellowslime_big",
 Sprite="yellowslime_small",
 LevelQuotes=["Yellow Slime: *slime sounds*"],
 Bio="Yellow Slimes are similar to Red Slimes, \n but have higher RES, lower DEF, and focus more on magic.")
-Chapter2YellowSlime1.TurtleName = new_turtle()
-Chapter2YellowSlime1.TurtleName.shape(Chapter2YellowSlime1.Sprite)
-Chapter2YellowSlime1.TurtleName.hideturtle()
+Chapter2YellowSlime1.Turtle = new_turtle()
+Chapter2YellowSlime1.Turtle.shape(Chapter2YellowSlime1.Sprite)
+Chapter2YellowSlime1.Turtle.hideturtle()
 
 #Yellow Slime 2---------------
 register_shape("yellowslime_small")
@@ -2692,9 +2696,9 @@ Portrait="yellowslime_big",
 Sprite="yellowslime_small",
 LevelQuotes=["Yellow Slime: *slime sounds*"],
 Bio="Yellow Slimes are similar to Red Slimes, \n but have higher RES, lower DEF, and focus more on magic.")
-Chapter2YellowSlime2.TurtleName = new_turtle()
-Chapter2YellowSlime2.TurtleName.shape(Chapter2YellowSlime2.Sprite)
-Chapter2YellowSlime2.TurtleName.hideturtle()
+Chapter2YellowSlime2.Turtle = new_turtle()
+Chapter2YellowSlime2.Turtle.shape(Chapter2YellowSlime2.Sprite)
+Chapter2YellowSlime2.Turtle.hideturtle()
 
 #Yellow Slime 3---------------
 register_shape("yellowslime_small")
@@ -2722,9 +2726,9 @@ Portrait="yellowslime_big",
 Sprite="yellowslime_small",
 LevelQuotes=["Yellow Slime: *slime sounds*"],
 Bio="Yellow Slimes are similar to Red Slimes, \n but have higher RES, lower DEF, and focus more on magic.")
-Chapter2YellowSlime3.TurtleName = new_turtle()
-Chapter2YellowSlime3.TurtleName.shape(Chapter2YellowSlime3.Sprite)
-Chapter2YellowSlime3.TurtleName.hideturtle()
+Chapter2YellowSlime3.Turtle = new_turtle()
+Chapter2YellowSlime3.Turtle.shape(Chapter2YellowSlime3.Sprite)
+Chapter2YellowSlime3.Turtle.hideturtle()
 
 #Blue Slime 1---------------
 register_shape("blueslime_small")
@@ -2752,9 +2756,9 @@ Portrait="blueslime_big",
 Sprite="blueslime_small",
 LevelQuotes=["Blue Slime: bruh how do you lose in the first chapter"],
 Bio="Blue Slimes are similar to Red Slimes, \n but have higher DEF and lower RES.")
-Chapter2BlueSlime1.TurtleName = new_turtle()
-Chapter2BlueSlime1.TurtleName.shape(Chapter2BlueSlime1.Sprite)
-Chapter2BlueSlime1.TurtleName.hideturtle()
+Chapter2BlueSlime1.Turtle = new_turtle()
+Chapter2BlueSlime1.Turtle.shape(Chapter2BlueSlime1.Sprite)
+Chapter2BlueSlime1.Turtle.hideturtle()
 
 #Blue Slime 2---------------
 register_shape("blueslime_small")
@@ -2782,9 +2786,9 @@ Portrait="blueslime_big",
 Sprite="blueslime_small",
 LevelQuotes=["Blue Slime: bruh how do you lose in the first chapter"],
 Bio="Blue Slimes are similar to Red Slimes, \n but have higher DEF and lower RES.")
-Chapter2BlueSlime2.TurtleName = new_turtle()
-Chapter2BlueSlime2.TurtleName.shape(Chapter2BlueSlime2.Sprite)
-Chapter2BlueSlime2.TurtleName.hideturtle()
+Chapter2BlueSlime2.Turtle = new_turtle()
+Chapter2BlueSlime2.Turtle.shape(Chapter2BlueSlime2.Sprite)
+Chapter2BlueSlime2.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 3]=======================================================================================================================================
@@ -2816,9 +2820,9 @@ Portrait="yellowslime_big",
 Sprite="yellowslime_small",
 LevelQuotes=["Yellow Slime: *slime sounds*"],
 Bio="Yellow Slimes are similar to Red Slimes, \n but have higher RES, lower DEF, and focus more on magic.")
-Chapter3YellowSlime1.TurtleName = new_turtle()
-Chapter3YellowSlime1.TurtleName.shape(Chapter3YellowSlime1.Sprite)
-Chapter3YellowSlime1.TurtleName.hideturtle()
+Chapter3YellowSlime1.Turtle = new_turtle()
+Chapter3YellowSlime1.Turtle.shape(Chapter3YellowSlime1.Sprite)
+Chapter3YellowSlime1.Turtle.hideturtle()
 
 #Yellow Slime 2---------------
 register_shape("yellowslime_small")
@@ -2846,9 +2850,9 @@ Portrait="yellowslime_big",
 Sprite="yellowslime_small",
 LevelQuotes=["Yellow Slime: *slime sounds*"],
 Bio="Yellow Slimes are similar to Red Slimes, \n but have higher RES, lower DEF, and focus more on magic.")
-Chapter3YellowSlime2.TurtleName = new_turtle()
-Chapter3YellowSlime2.TurtleName.shape(Chapter3YellowSlime2.Sprite)
-Chapter3YellowSlime2.TurtleName.hideturtle()
+Chapter3YellowSlime2.Turtle = new_turtle()
+Chapter3YellowSlime2.Turtle.shape(Chapter3YellowSlime2.Sprite)
+Chapter3YellowSlime2.Turtle.hideturtle()
 
 #Yellow Slime 3---------------
 register_shape("yellowslime_small")
@@ -2876,9 +2880,9 @@ Portrait="yellowslime_big",
 Sprite="yellowslime_small",
 LevelQuotes=["Yellow Slime: *slime sounds*"],
 Bio="Yellow Slimes are similar to Red Slimes, \n but have higher RES, lower DEF, and focus more on magic.")
-Chapter3YellowSlime3.TurtleName = new_turtle()
-Chapter3YellowSlime3.TurtleName.shape(Chapter3YellowSlime3.Sprite)
-Chapter3YellowSlime3.TurtleName.hideturtle()
+Chapter3YellowSlime3.Turtle = new_turtle()
+Chapter3YellowSlime3.Turtle.shape(Chapter3YellowSlime3.Sprite)
+Chapter3YellowSlime3.Turtle.hideturtle()
 
 #Yellow Slime 4---------------
 register_shape("yellowslime_small")
@@ -2906,9 +2910,9 @@ Portrait="yellowslime_big",
 Sprite="yellowslime_small",
 LevelQuotes=["Yellow Slime: *slime sounds*"],
 Bio="Yellow Slimes are similar to Red Slimes, \n but have higher RES, lower DEF, and focus more on magic.")
-Chapter3YellowSlime4.TurtleName = new_turtle()
-Chapter3YellowSlime4.TurtleName.shape(Chapter3YellowSlime4.Sprite)
-Chapter3YellowSlime4.TurtleName.hideturtle()
+Chapter3YellowSlime4.Turtle = new_turtle()
+Chapter3YellowSlime4.Turtle.shape(Chapter3YellowSlime4.Sprite)
+Chapter3YellowSlime4.Turtle.hideturtle()
 
 #Yellow Slime 5---------------
 register_shape("yellowslime_small")
@@ -2936,9 +2940,9 @@ Portrait="yellowslime_big",
 Sprite="yellowslime_small",
 LevelQuotes=["Yellow Slime: *slime sounds*"],
 Bio="Yellow Slimes are similar to Red Slimes, \n but have higher RES, lower DEF, and focus more on magic.")
-Chapter3YellowSlime5.TurtleName = new_turtle()
-Chapter3YellowSlime5.TurtleName.shape(Chapter3YellowSlime5.Sprite)
-Chapter3YellowSlime5.TurtleName.hideturtle()
+Chapter3YellowSlime5.Turtle = new_turtle()
+Chapter3YellowSlime5.Turtle.shape(Chapter3YellowSlime5.Sprite)
+Chapter3YellowSlime5.Turtle.hideturtle()
 
 #Blue Slime 1---------------
 register_shape("blueslime_small")
@@ -2966,9 +2970,9 @@ Portrait="blueslime_big",
 Sprite="blueslime_small",
 LevelQuotes=["Blue Slime: bruh how do you lose in the first chapter"],
 Bio="Blue Slimes are similar to Red Slimes, \n but have higher DEF and lower RES.")
-Chapter3BlueSlime1.TurtleName = new_turtle()
-Chapter3BlueSlime1.TurtleName.shape(Chapter3BlueSlime1.Sprite)
-Chapter3BlueSlime1.TurtleName.hideturtle()
+Chapter3BlueSlime1.Turtle = new_turtle()
+Chapter3BlueSlime1.Turtle.shape(Chapter3BlueSlime1.Sprite)
+Chapter3BlueSlime1.Turtle.hideturtle()
 
 #Blue Slime 2---------------
 register_shape("blueslime_small")
@@ -2996,9 +3000,9 @@ Portrait="blueslime_big",
 Sprite="blueslime_small",
 LevelQuotes=["Blue Slime: bruh how do you lose in the first chapter"],
 Bio="Blue Slimes are similar to Red Slimes, \n but have higher DEF and lower RES.")
-Chapter3BlueSlime2.TurtleName = new_turtle()
-Chapter3BlueSlime2.TurtleName.shape(Chapter3BlueSlime2.Sprite)
-Chapter3BlueSlime2.TurtleName.hideturtle()
+Chapter3BlueSlime2.Turtle = new_turtle()
+Chapter3BlueSlime2.Turtle.shape(Chapter3BlueSlime2.Sprite)
+Chapter3BlueSlime2.Turtle.hideturtle()
 
 #Blue Slime 3---------------
 register_shape("blueslime_small")
@@ -3026,9 +3030,9 @@ Portrait="blueslime_big",
 Sprite="blueslime_small",
 LevelQuotes=["Blue Slime: bruh how do you lose in the first chapter"],
 Bio="Blue Slimes are similar to Red Slimes, \n but have higher DEF and lower RES.")
-Chapter3BlueSlime3.TurtleName = new_turtle()
-Chapter3BlueSlime3.TurtleName.shape(Chapter3BlueSlime3.Sprite)
-Chapter3BlueSlime3.TurtleName.hideturtle()
+Chapter3BlueSlime3.Turtle = new_turtle()
+Chapter3BlueSlime3.Turtle.shape(Chapter3BlueSlime3.Sprite)
+Chapter3BlueSlime3.Turtle.hideturtle()
 
 #Red Slime 1---------------
 register_shape("redslime_small")
@@ -3056,9 +3060,9 @@ Portrait="redslime_big",
 Sprite="redslime_small",
 LevelQuotes=["Red Slime: *slime sounds*"],
 Bio="Red Slimes are basic monsters that \n can be found throughout the Bipolian continent.")
-Chapter3RedSlime1.TurtleName = new_turtle()
-Chapter3RedSlime1.TurtleName.shape(Chapter3RedSlime1.Sprite)
-Chapter3RedSlime1.TurtleName.hideturtle()
+Chapter3RedSlime1.Turtle = new_turtle()
+Chapter3RedSlime1.Turtle.shape(Chapter3RedSlime1.Sprite)
+Chapter3RedSlime1.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 4]=======================================================================================================================================
@@ -3090,9 +3094,9 @@ Portrait="retool_big",
 Sprite="retool_small",
 LevelQuotes=["Retool: Bow down to me, fools!"],
 Bio="Retool is the leader of the Guild\n of Retool, a guild of bandits that has\nrecently gained power after looting the Castle of Quad.")
-Retool.TurtleName = new_turtle()
-Retool.TurtleName.shape(Retool.Sprite)
-Retool.TurtleName.hideturtle()
+Retool.Turtle = new_turtle()
+Retool.Turtle.shape(Retool.Sprite)
+Retool.Turtle.hideturtle()
 
 #Fighter1---------------
 register_shape("genericswordfighter_small")
@@ -3120,9 +3124,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You won't be stopping us."],
 Bio="A bandit that is part of the Guild of Retool.")
-Chapter4Fighter1.TurtleName = new_turtle()
-Chapter4Fighter1.TurtleName.shape(Chapter4Fighter1.Sprite)
-Chapter4Fighter1.TurtleName.hideturtle()
+Chapter4Fighter1.Turtle = new_turtle()
+Chapter4Fighter1.Turtle.shape(Chapter4Fighter1.Sprite)
+Chapter4Fighter1.Turtle.hideturtle()
 
 #Fighter2---------------
 register_shape("genericswordfighter_small")
@@ -3150,9 +3154,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You won't be stopping us."],
 Bio="A bandit that is part of the Guild of Retool.")
-Chapter4Fighter2.TurtleName = new_turtle()
-Chapter4Fighter2.TurtleName.shape(Chapter4Fighter2.Sprite)
-Chapter4Fighter2.TurtleName.hideturtle()
+Chapter4Fighter2.Turtle = new_turtle()
+Chapter4Fighter2.Turtle.shape(Chapter4Fighter2.Sprite)
+Chapter4Fighter2.Turtle.hideturtle()
 
 #Fighter3---------------
 register_shape("genericswordfighter_small")
@@ -3180,9 +3184,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You won't be stopping us."],
 Bio="A bandit that is part of the Guild of Retool.")
-Chapter4Fighter3.TurtleName = new_turtle()
-Chapter4Fighter3.TurtleName.shape(Chapter4Fighter3.Sprite)
-Chapter4Fighter3.TurtleName.hideturtle()
+Chapter4Fighter3.Turtle = new_turtle()
+Chapter4Fighter3.Turtle.shape(Chapter4Fighter3.Sprite)
+Chapter4Fighter3.Turtle.hideturtle()
 
 #Archer1---------------
 register_shape("genericarcher_small")
@@ -3210,9 +3214,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Bandit: You won't be stopping us."],
 Bio="A bandit that is part of the Guild of Retool.")
-Chapter4Archer1.TurtleName = new_turtle()
-Chapter4Archer1.TurtleName.shape(Chapter4Archer1.Sprite)
-Chapter4Archer1.TurtleName.hideturtle()
+Chapter4Archer1.Turtle = new_turtle()
+Chapter4Archer1.Turtle.shape(Chapter4Archer1.Sprite)
+Chapter4Archer1.Turtle.hideturtle()
 
 #Archer2---------------
 register_shape("genericarcher_small")
@@ -3240,9 +3244,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Bandit: You won't be stopping us."],
 Bio="A bandit that is part of the Guild of Retool.")
-Chapter4Archer2.TurtleName = new_turtle()
-Chapter4Archer2.TurtleName.shape(Chapter4Archer2.Sprite)
-Chapter4Archer2.TurtleName.hideturtle()
+Chapter4Archer2.Turtle = new_turtle()
+Chapter4Archer2.Turtle.shape(Chapter4Archer2.Sprite)
+Chapter4Archer2.Turtle.hideturtle()
 
 #Archer3---------------
 register_shape("genericarcher_small")
@@ -3270,9 +3274,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Bandit: You won't be stopping us."],
 Bio="A bandit that is part of the Guild of Retool.")
-Chapter4Archer3.TurtleName = new_turtle()
-Chapter4Archer3.TurtleName.shape(Chapter4Archer3.Sprite)
-Chapter4Archer3.TurtleName.hideturtle()
+Chapter4Archer3.Turtle = new_turtle()
+Chapter4Archer3.Turtle.shape(Chapter4Archer3.Sprite)
+Chapter4Archer3.Turtle.hideturtle()
 
 #Archer4---------------
 register_shape("genericarcher_small")
@@ -3300,9 +3304,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Bandit: You won't be stopping us."],
 Bio="A bandit that is part of the Guild of Retool.")
-Chapter4Archer4.TurtleName = new_turtle()
-Chapter4Archer4.TurtleName.shape(Chapter4Archer4.Sprite)
-Chapter4Archer4.TurtleName.hideturtle()
+Chapter4Archer4.Turtle = new_turtle()
+Chapter4Archer4.Turtle.shape(Chapter4Archer4.Sprite)
+Chapter4Archer4.Turtle.hideturtle()
 
 #Archer5---------------
 register_shape("genericarcher_small")
@@ -3330,9 +3334,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Bandit: You won't be stopping us."],
 Bio="A bandit that is part of the Guild of Retool.")
-Chapter4Archer5.TurtleName = new_turtle()
-Chapter4Archer5.TurtleName.shape(Chapter4Archer5.Sprite)
-Chapter4Archer5.TurtleName.hideturtle()
+Chapter4Archer5.Turtle = new_turtle()
+Chapter4Archer5.Turtle.shape(Chapter4Archer5.Sprite)
+Chapter4Archer5.Turtle.hideturtle()
 
 #Armored1---------------
 register_shape("genericarmored_small")
@@ -3360,9 +3364,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You won't be stopping us."],
 Bio="A bandit that is part of the Guild of Retool.")
-Chapter4Armored1.TurtleName = new_turtle()
-Chapter4Armored1.TurtleName.shape(Chapter4Armored1.Sprite)
-Chapter4Armored1.TurtleName.hideturtle()
+Chapter4Armored1.Turtle = new_turtle()
+Chapter4Armored1.Turtle.shape(Chapter4Armored1.Sprite)
+Chapter4Armored1.Turtle.hideturtle()
 
 #Armored2---------------
 register_shape("genericarmored_small")
@@ -3390,9 +3394,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You won't be stopping us."],
 Bio="A bandit that is part of the Guild of Retool.")
-Chapter4Armored2.TurtleName = new_turtle()
-Chapter4Armored2.TurtleName.shape(Chapter4Armored2.Sprite)
-Chapter4Armored2.TurtleName.hideturtle()
+Chapter4Armored2.Turtle = new_turtle()
+Chapter4Armored2.Turtle.shape(Chapter4Armored2.Sprite)
+Chapter4Armored2.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 5]=======================================================================================================================================
@@ -3424,9 +3428,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter5Archer1.TurtleName = new_turtle()
-Chapter5Archer1.TurtleName.shape(Chapter5Archer1.Sprite)
-Chapter5Archer1.TurtleName.hideturtle()
+Chapter5Archer1.Turtle = new_turtle()
+Chapter5Archer1.Turtle.shape(Chapter5Archer1.Sprite)
+Chapter5Archer1.Turtle.hideturtle()
 
 #Archer2---------------
 register_shape("genericarcher_small")
@@ -3454,9 +3458,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter5Archer2.TurtleName = new_turtle()
-Chapter5Archer2.TurtleName.shape(Chapter5Archer2.Sprite)
-Chapter5Archer2.TurtleName.hideturtle()
+Chapter5Archer2.Turtle = new_turtle()
+Chapter5Archer2.Turtle.shape(Chapter5Archer2.Sprite)
+Chapter5Archer2.Turtle.hideturtle()
 
 #Archer3---------------
 register_shape("genericarcher_small")
@@ -3484,9 +3488,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter5Archer3.TurtleName = new_turtle()
-Chapter5Archer3.TurtleName.shape(Chapter5Archer3.Sprite)
-Chapter5Archer3.TurtleName.hideturtle()
+Chapter5Archer3.Turtle = new_turtle()
+Chapter5Archer3.Turtle.shape(Chapter5Archer3.Sprite)
+Chapter5Archer3.Turtle.hideturtle()
 
 #Armored1---------------
 register_shape("genericarmored_small")
@@ -3514,9 +3518,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter5Armored1.TurtleName = new_turtle()
-Chapter5Armored1.TurtleName.shape(Chapter5Armored1.Sprite)
-Chapter5Armored1.TurtleName.hideturtle()
+Chapter5Armored1.Turtle = new_turtle()
+Chapter5Armored1.Turtle.shape(Chapter5Armored1.Sprite)
+Chapter5Armored1.Turtle.hideturtle()
 
 #Armored2---------------
 register_shape("genericarmored_small")
@@ -3544,9 +3548,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter5Armored2.TurtleName = new_turtle()
-Chapter5Armored2.TurtleName.shape(Chapter5Armored2.Sprite)
-Chapter5Armored2.TurtleName.hideturtle()
+Chapter5Armored2.Turtle = new_turtle()
+Chapter5Armored2.Turtle.shape(Chapter5Armored2.Sprite)
+Chapter5Armored2.Turtle.hideturtle()
 
 #Armored3---------------
 register_shape("genericarmored_small")
@@ -3574,9 +3578,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter5Armored3.TurtleName = new_turtle()
-Chapter5Armored3.TurtleName.shape(Chapter5Armored3.Sprite)
-Chapter5Armored3.TurtleName.hideturtle()
+Chapter5Armored3.Turtle = new_turtle()
+Chapter5Armored3.Turtle.shape(Chapter5Armored3.Sprite)
+Chapter5Armored3.Turtle.hideturtle()
 
 #Armored4---------------
 register_shape("genericarmored_small")
@@ -3604,9 +3608,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter5Armored4.TurtleName = new_turtle()
-Chapter5Armored4.TurtleName.shape(Chapter5Armored4.Sprite)
-Chapter5Armored4.TurtleName.hideturtle()
+Chapter5Armored4.Turtle = new_turtle()
+Chapter5Armored4.Turtle.shape(Chapter5Armored4.Sprite)
+Chapter5Armored4.Turtle.hideturtle()
 
 #Armored5---------------
 register_shape("genericarmored_small")
@@ -3634,9 +3638,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter5Armored5.TurtleName = new_turtle()
-Chapter5Armored5.TurtleName.shape(Chapter5Armored5.Sprite)
-Chapter5Armored5.TurtleName.hideturtle()
+Chapter5Armored5.Turtle = new_turtle()
+Chapter5Armored5.Turtle.shape(Chapter5Armored5.Sprite)
+Chapter5Armored5.Turtle.hideturtle()
 
 #Fighter1---------------
 register_shape("genericswordfighter_small")
@@ -3664,9 +3668,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter5Fighter1.TurtleName = new_turtle()
-Chapter5Fighter1.TurtleName.shape(Chapter5Fighter1.Sprite)
-Chapter5Fighter1.TurtleName.hideturtle()
+Chapter5Fighter1.Turtle = new_turtle()
+Chapter5Fighter1.Turtle.shape(Chapter5Fighter1.Sprite)
+Chapter5Fighter1.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 6]=======================================================================================================================================
@@ -3698,9 +3702,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Static.")
-Chapter6Fighter1.TurtleName = new_turtle()
-Chapter6Fighter1.TurtleName.shape(Chapter6Fighter1.Sprite)
-Chapter6Fighter1.TurtleName.hideturtle()
+Chapter6Fighter1.Turtle = new_turtle()
+Chapter6Fighter1.Turtle.shape(Chapter6Fighter1.Sprite)
+Chapter6Fighter1.Turtle.hideturtle()
 
 #Fighter2---------------
 register_shape("genericswordfighter_small")
@@ -3728,9 +3732,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Static.")
-Chapter6Fighter2.TurtleName = new_turtle()
-Chapter6Fighter2.TurtleName.shape(Chapter6Fighter2.Sprite)
-Chapter6Fighter2.TurtleName.hideturtle()
+Chapter6Fighter2.Turtle = new_turtle()
+Chapter6Fighter2.Turtle.shape(Chapter6Fighter2.Sprite)
+Chapter6Fighter2.Turtle.hideturtle()
 
 #Fighter3---------------
 register_shape("genericswordfighter_small")
@@ -3758,9 +3762,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Static.")
-Chapter6Fighter3.TurtleName = new_turtle()
-Chapter6Fighter3.TurtleName.shape(Chapter6Fighter3.Sprite)
-Chapter6Fighter3.TurtleName.hideturtle()
+Chapter6Fighter3.Turtle = new_turtle()
+Chapter6Fighter3.Turtle.shape(Chapter6Fighter3.Sprite)
+Chapter6Fighter3.Turtle.hideturtle()
 
 #Fighter4---------------
 register_shape("genericswordfighter_small")
@@ -3788,9 +3792,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Static.")
-Chapter6Fighter4.TurtleName = new_turtle()
-Chapter6Fighter4.TurtleName.shape(Chapter6Fighter4.Sprite)
-Chapter6Fighter4.TurtleName.hideturtle()
+Chapter6Fighter4.Turtle = new_turtle()
+Chapter6Fighter4.Turtle.shape(Chapter6Fighter4.Sprite)
+Chapter6Fighter4.Turtle.hideturtle()
 
 #Fighter5---------------
 register_shape("genericswordfighter_small")
@@ -3818,9 +3822,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Static.")
-Chapter6Fighter5.TurtleName = new_turtle()
-Chapter6Fighter5.TurtleName.shape(Chapter6Fighter5.Sprite)
-Chapter6Fighter5.TurtleName.hideturtle()
+Chapter6Fighter5.Turtle = new_turtle()
+Chapter6Fighter5.Turtle.shape(Chapter6Fighter5.Sprite)
+Chapter6Fighter5.Turtle.hideturtle()
 
 #Fighter6---------------
 register_shape("genericswordfighter_small")
@@ -3848,9 +3852,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Static.")
-Chapter6Fighter6.TurtleName = new_turtle()
-Chapter6Fighter6.TurtleName.shape(Chapter6Fighter6.Sprite)
-Chapter6Fighter6.TurtleName.hideturtle()
+Chapter6Fighter6.Turtle = new_turtle()
+Chapter6Fighter6.Turtle.shape(Chapter6Fighter6.Sprite)
+Chapter6Fighter6.Turtle.hideturtle()
 
 #Archer1---------------
 register_shape("genericarcher_small")
@@ -3878,9 +3882,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Static.")
-Chapter6Archer1.TurtleName = new_turtle()
-Chapter6Archer1.TurtleName.shape(Chapter6Archer1.Sprite)
-Chapter6Archer1.TurtleName.hideturtle()
+Chapter6Archer1.Turtle = new_turtle()
+Chapter6Archer1.Turtle.shape(Chapter6Archer1.Sprite)
+Chapter6Archer1.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 7]=======================================================================================================================================
@@ -3912,9 +3916,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter7Armored1.TurtleName = new_turtle()
-Chapter7Armored1.TurtleName.shape(Chapter7Armored1.Sprite)
-Chapter7Armored1.TurtleName.hideturtle()
+Chapter7Armored1.Turtle = new_turtle()
+Chapter7Armored1.Turtle.shape(Chapter7Armored1.Sprite)
+Chapter7Armored1.Turtle.hideturtle()
 
 #Armored2---------------
 register_shape("genericarmored_small")
@@ -3942,9 +3946,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter7Armored2.TurtleName = new_turtle()
-Chapter7Armored2.TurtleName.shape(Chapter7Armored2.Sprite)
-Chapter7Armored2.TurtleName.hideturtle()
+Chapter7Armored2.Turtle = new_turtle()
+Chapter7Armored2.Turtle.shape(Chapter7Armored2.Sprite)
+Chapter7Armored2.Turtle.hideturtle()
 
 #Armored3---------------
 register_shape("genericarmored_small")
@@ -3972,9 +3976,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter7Armored3.TurtleName = new_turtle()
-Chapter7Armored3.TurtleName.shape(Chapter7Armored3.Sprite)
-Chapter7Armored3.TurtleName.hideturtle()
+Chapter7Armored3.Turtle = new_turtle()
+Chapter7Armored3.Turtle.shape(Chapter7Armored3.Sprite)
+Chapter7Armored3.Turtle.hideturtle()
 
 #Armored4---------------
 register_shape("genericarmored_small")
@@ -4002,9 +4006,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter7Armored4.TurtleName = new_turtle()
-Chapter7Armored4.TurtleName.shape(Chapter7Armored4.Sprite)
-Chapter7Armored4.TurtleName.hideturtle()
+Chapter7Armored4.Turtle = new_turtle()
+Chapter7Armored4.Turtle.shape(Chapter7Armored4.Sprite)
+Chapter7Armored4.Turtle.hideturtle()
 
 #Armored5---------------
 register_shape("genericarmored_small")
@@ -4032,9 +4036,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter7Armored5.TurtleName = new_turtle()
-Chapter7Armored5.TurtleName.shape(Chapter7Armored5.Sprite)
-Chapter7Armored5.TurtleName.hideturtle()
+Chapter7Armored5.Turtle = new_turtle()
+Chapter7Armored5.Turtle.shape(Chapter7Armored5.Sprite)
+Chapter7Armored5.Turtle.hideturtle()
 
 #Armored6---------------
 register_shape("genericarmored_small")
@@ -4062,9 +4066,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter7Armored6.TurtleName = new_turtle()
-Chapter7Armored6.TurtleName.shape(Chapter7Armored6.Sprite)
-Chapter7Armored6.TurtleName.hideturtle()
+Chapter7Armored6.Turtle = new_turtle()
+Chapter7Armored6.Turtle.shape(Chapter7Armored6.Sprite)
+Chapter7Armored6.Turtle.hideturtle()
 
 #Armored7---------------
 register_shape("genericarmored_small")
@@ -4092,9 +4096,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter7Armored7.TurtleName = new_turtle()
-Chapter7Armored7.TurtleName.shape(Chapter7Armored7.Sprite)
-Chapter7Armored7.TurtleName.hideturtle()
+Chapter7Armored7.Turtle = new_turtle()
+Chapter7Armored7.Turtle.shape(Chapter7Armored7.Sprite)
+Chapter7Armored7.Turtle.hideturtle()
 
 #Armored8---------------
 register_shape("genericarmored_small")
@@ -4122,9 +4126,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter7Armored8.TurtleName = new_turtle()
-Chapter7Armored8.TurtleName.shape(Chapter7Armored8.Sprite)
-Chapter7Armored8.TurtleName.hideturtle()
+Chapter7Armored8.Turtle = new_turtle()
+Chapter7Armored8.Turtle.shape(Chapter7Armored8.Sprite)
+Chapter7Armored8.Turtle.hideturtle()
 
 #Archer1---------------
 register_shape("genericarcher_small")
@@ -4152,9 +4156,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter7Archer1.TurtleName = new_turtle()
-Chapter7Archer1.TurtleName.shape(Chapter7Archer1.Sprite)
-Chapter7Archer1.TurtleName.hideturtle()
+Chapter7Archer1.Turtle = new_turtle()
+Chapter7Archer1.Turtle.shape(Chapter7Archer1.Sprite)
+Chapter7Archer1.Turtle.hideturtle()
 
 #Archer2---------------
 register_shape("genericarcher_small")
@@ -4182,9 +4186,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter7Archer2.TurtleName = new_turtle()
-Chapter7Archer2.TurtleName.shape(Chapter7Archer2.Sprite)
-Chapter7Archer2.TurtleName.hideturtle()
+Chapter7Archer2.Turtle = new_turtle()
+Chapter7Archer2.Turtle.shape(Chapter7Archer2.Sprite)
+Chapter7Archer2.Turtle.hideturtle()
 
 #Archer3---------------
 register_shape("genericarcher_small")
@@ -4212,9 +4216,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter7Archer3.TurtleName = new_turtle()
-Chapter7Archer3.TurtleName.shape(Chapter7Archer3.Sprite)
-Chapter7Archer3.TurtleName.hideturtle()
+Chapter7Archer3.Turtle = new_turtle()
+Chapter7Archer3.Turtle.shape(Chapter7Archer3.Sprite)
+Chapter7Archer3.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 8]=======================================================================================================================================
@@ -4246,9 +4250,9 @@ Portrait="Bladeous_big",
 Sprite="Bladeous_small",
 LevelQuotes=["Bladeous: ..."],
 Bio="A person possesed by the power\nof the Itucher.")
-BladeousBoss.TurtleName = new_turtle()
-BladeousBoss.TurtleName.shape(BladeousBoss.Sprite)
-BladeousBoss.TurtleName.hideturtle()
+BladeousBoss.Turtle = new_turtle()
+BladeousBoss.Turtle.shape(BladeousBoss.Sprite)
+BladeousBoss.Turtle.hideturtle()
 
 #Yellow Slime 1---------------
 register_shape("yellowslime_small")
@@ -4276,9 +4280,9 @@ Portrait="yellowslime_big",
 Sprite="yellowslime_small",
 LevelQuotes=["Yellow Slime: *slime sounds*"],
 Bio="Yellow Slimes are similar to Red Slimes, \n but have higher RES, lower DEF, and focus more on magic.")
-Chapter8YellowSlime1.TurtleName = new_turtle()
-Chapter8YellowSlime1.TurtleName.shape(Chapter8YellowSlime1.Sprite)
-Chapter8YellowSlime1.TurtleName.hideturtle()
+Chapter8YellowSlime1.Turtle = new_turtle()
+Chapter8YellowSlime1.Turtle.shape(Chapter8YellowSlime1.Sprite)
+Chapter8YellowSlime1.Turtle.hideturtle()
 
 #Yellow Slime 2---------------
 register_shape("yellowslime_small")
@@ -4306,9 +4310,9 @@ Portrait="yellowslime_big",
 Sprite="yellowslime_small",
 LevelQuotes=["Yellow Slime: *slime sounds*"],
 Bio="Yellow Slimes are similar to Red Slimes, \n but have higher RES, lower DEF, and focus more on magic.")
-Chapter8YellowSlime2.TurtleName = new_turtle()
-Chapter8YellowSlime2.TurtleName.shape(Chapter8YellowSlime2.Sprite)
-Chapter8YellowSlime2.TurtleName.hideturtle()
+Chapter8YellowSlime2.Turtle = new_turtle()
+Chapter8YellowSlime2.Turtle.shape(Chapter8YellowSlime2.Sprite)
+Chapter8YellowSlime2.Turtle.hideturtle()
 
 #Yellow Slime 3---------------
 register_shape("yellowslime_small")
@@ -4336,9 +4340,9 @@ Portrait="yellowslime_big",
 Sprite="yellowslime_small",
 LevelQuotes=["Yellow Slime: *slime sounds*"],
 Bio="Yellow Slimes are similar to Red Slimes, \n but have higher RES, lower DEF, and focus more on magic.")
-Chapter8YellowSlime3.TurtleName = new_turtle()
-Chapter8YellowSlime3.TurtleName.shape(Chapter8YellowSlime3.Sprite)
-Chapter8YellowSlime3.TurtleName.hideturtle()
+Chapter8YellowSlime3.Turtle = new_turtle()
+Chapter8YellowSlime3.Turtle.shape(Chapter8YellowSlime3.Sprite)
+Chapter8YellowSlime3.Turtle.hideturtle()
 
 #Yellow Slime 4---------------
 register_shape("yellowslime_small")
@@ -4366,9 +4370,9 @@ Portrait="yellowslime_big",
 Sprite="yellowslime_small",
 LevelQuotes=["Yellow Slime: *slime sounds*"],
 Bio="Yellow Slimes are similar to Red Slimes, \n but have higher RES, lower DEF, and focus more on magic.")
-Chapter8YellowSlime4.TurtleName = new_turtle()
-Chapter8YellowSlime4.TurtleName.shape(Chapter8YellowSlime4.Sprite)
-Chapter8YellowSlime4.TurtleName.hideturtle()
+Chapter8YellowSlime4.Turtle = new_turtle()
+Chapter8YellowSlime4.Turtle.shape(Chapter8YellowSlime4.Sprite)
+Chapter8YellowSlime4.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 9a]=======================================================================================================================================
@@ -4400,9 +4404,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter9aFighter1.TurtleName = new_turtle()
-Chapter9aFighter1.TurtleName.shape(Chapter9aFighter1.Sprite)
-Chapter9aFighter1.TurtleName.hideturtle()
+Chapter9aFighter1.Turtle = new_turtle()
+Chapter9aFighter1.Turtle.shape(Chapter9aFighter1.Sprite)
+Chapter9aFighter1.Turtle.hideturtle()
 
 #Fighter2---------------
 register_shape("genericswordfighter_small")
@@ -4430,9 +4434,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter9aFighter2.TurtleName = new_turtle()
-Chapter9aFighter2.TurtleName.shape(Chapter9aFighter2.Sprite)
-Chapter9aFighter2.TurtleName.hideturtle()
+Chapter9aFighter2.Turtle = new_turtle()
+Chapter9aFighter2.Turtle.shape(Chapter9aFighter2.Sprite)
+Chapter9aFighter2.Turtle.hideturtle()
 
 #Fighter3---------------
 register_shape("genericswordfighter_small")
@@ -4460,9 +4464,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter9aFighter3.TurtleName = new_turtle()
-Chapter9aFighter3.TurtleName.shape(Chapter9aFighter3.Sprite)
-Chapter9aFighter3.TurtleName.hideturtle()
+Chapter9aFighter3.Turtle = new_turtle()
+Chapter9aFighter3.Turtle.shape(Chapter9aFighter3.Sprite)
+Chapter9aFighter3.Turtle.hideturtle()
 
 #Fighter4---------------
 register_shape("genericswordfighter_small")
@@ -4490,9 +4494,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter9aFighter4.TurtleName = new_turtle()
-Chapter9aFighter4.TurtleName.shape(Chapter9aFighter4.Sprite)
-Chapter9aFighter4.TurtleName.hideturtle()
+Chapter9aFighter4.Turtle = new_turtle()
+Chapter9aFighter4.Turtle.shape(Chapter9aFighter4.Sprite)
+Chapter9aFighter4.Turtle.hideturtle()
 
 #Fighter5---------------
 register_shape("genericswordfighter_small")
@@ -4520,9 +4524,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter9aFighter5.TurtleName = new_turtle()
-Chapter9aFighter5.TurtleName.shape(Chapter9aFighter5.Sprite)
-Chapter9aFighter5.TurtleName.hideturtle()
+Chapter9aFighter5.Turtle = new_turtle()
+Chapter9aFighter5.Turtle.shape(Chapter9aFighter5.Sprite)
+Chapter9aFighter5.Turtle.hideturtle()
 
 #Fighter6---------------
 register_shape("genericswordfighter_small")
@@ -4550,9 +4554,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter9aFighter6.TurtleName = new_turtle()
-Chapter9aFighter6.TurtleName.shape(Chapter9aFighter6.Sprite)
-Chapter9aFighter6.TurtleName.hideturtle()
+Chapter9aFighter6.Turtle = new_turtle()
+Chapter9aFighter6.Turtle.shape(Chapter9aFighter6.Sprite)
+Chapter9aFighter6.Turtle.hideturtle()
 
 #Fighter7---------------
 register_shape("genericswordfighter_small")
@@ -4580,9 +4584,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Cos.")
-Chapter9aFighter7.TurtleName = new_turtle()
-Chapter9aFighter7.TurtleName.shape(Chapter9aFighter7.Sprite)
-Chapter9aFighter7.TurtleName.hideturtle()
+Chapter9aFighter7.Turtle = new_turtle()
+Chapter9aFighter7.Turtle.shape(Chapter9aFighter7.Sprite)
+Chapter9aFighter7.Turtle.hideturtle()
 
 
 #==============================================================================================================================================================================================================================================================================
@@ -4615,9 +4619,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Wallimos Vessel: ..."],
 Bio="A husk of armor controlled by\nthe powers of Wallimos Alexander.")
-Chapter9bArmored1.TurtleName = new_turtle()
-Chapter9bArmored1.TurtleName.shape(Chapter9bArmored1.Sprite)
-Chapter9bArmored1.TurtleName.hideturtle()
+Chapter9bArmored1.Turtle = new_turtle()
+Chapter9bArmored1.Turtle.shape(Chapter9bArmored1.Sprite)
+Chapter9bArmored1.Turtle.hideturtle()
 
 #Armored2---------------
 register_shape("genericarmored_small")
@@ -4645,9 +4649,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Wallimos Vessel: ..."],
 Bio="A husk of armor controlled by\nthe powers of Wallimos Alexander.")
-Chapter9bArmored2.TurtleName = new_turtle()
-Chapter9bArmored2.TurtleName.shape(Chapter9bArmored2.Sprite)
-Chapter9bArmored2.TurtleName.hideturtle()
+Chapter9bArmored2.Turtle = new_turtle()
+Chapter9bArmored2.Turtle.shape(Chapter9bArmored2.Sprite)
+Chapter9bArmored2.Turtle.hideturtle()
 
 #Armored3---------------
 register_shape("genericarmored_small")
@@ -4675,9 +4679,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Wallimos Vessel: ..."],
 Bio="A husk of armor controlled by\nthe powers of Wallimos Alexander.")
-Chapter9bArmored3.TurtleName = new_turtle()
-Chapter9bArmored3.TurtleName.shape(Chapter9bArmored3.Sprite)
-Chapter9bArmored3.TurtleName.hideturtle()
+Chapter9bArmored3.Turtle = new_turtle()
+Chapter9bArmored3.Turtle.shape(Chapter9bArmored3.Sprite)
+Chapter9bArmored3.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 10a]=======================================================================================================================================
@@ -4709,9 +4713,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Static.")
-Chapter10aFighter1.TurtleName = new_turtle()
-Chapter10aFighter1.TurtleName.shape(Chapter10aFighter1.Sprite)
-Chapter10aFighter1.TurtleName.hideturtle()
+Chapter10aFighter1.Turtle = new_turtle()
+Chapter10aFighter1.Turtle.shape(Chapter10aFighter1.Sprite)
+Chapter10aFighter1.Turtle.hideturtle()
 
 #Fighter2---------------
 register_shape("genericswordfighter_small")
@@ -4739,9 +4743,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Static.")
-Chapter10aFighter2.TurtleName = new_turtle()
-Chapter10aFighter2.TurtleName.shape(Chapter10aFighter2.Sprite)
-Chapter10aFighter2.TurtleName.hideturtle()
+Chapter10aFighter2.Turtle = new_turtle()
+Chapter10aFighter2.Turtle.shape(Chapter10aFighter2.Sprite)
+Chapter10aFighter2.Turtle.hideturtle()
 
 #Fighter3---------------
 register_shape("genericswordfighter_small")
@@ -4769,9 +4773,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Static.")
-Chapter10aFighter3.TurtleName = new_turtle()
-Chapter10aFighter3.TurtleName.shape(Chapter10aFighter3.Sprite)
-Chapter10aFighter3.TurtleName.hideturtle()
+Chapter10aFighter3.Turtle = new_turtle()
+Chapter10aFighter3.Turtle.shape(Chapter10aFighter3.Sprite)
+Chapter10aFighter3.Turtle.hideturtle()
 
 #Fighter4---------------
 register_shape("genericswordfighter_small")
@@ -4799,9 +4803,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in Static.")
-Chapter10aFighter4.TurtleName = new_turtle()
-Chapter10aFighter4.TurtleName.shape(Chapter10aFighter4.Sprite)
-Chapter10aFighter4.TurtleName.hideturtle()
+Chapter10aFighter4.Turtle = new_turtle()
+Chapter10aFighter4.Turtle.shape(Chapter10aFighter4.Sprite)
+Chapter10aFighter4.Turtle.hideturtle()
 
 
 #==============================================================================================================================================================================================================================================================================
@@ -4834,9 +4838,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Wallimos Vessel: ..."],
 Bio="A husk of armor controlled by\nthe powers of Wallimos Alexander.")
-Chapter10bArmored1.TurtleName = new_turtle()
-Chapter10bArmored1.TurtleName.shape(Chapter10bArmored1.Sprite)
-Chapter10bArmored1.TurtleName.hideturtle()
+Chapter10bArmored1.Turtle = new_turtle()
+Chapter10bArmored1.Turtle.shape(Chapter10bArmored1.Sprite)
+Chapter10bArmored1.Turtle.hideturtle()
 
 #Armored2---------------
 register_shape("genericarmored_small")
@@ -4864,9 +4868,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Wallimos Vessel: ..."],
 Bio="A husk of armor controlled by\nthe powers of Wallimos Alexander.")
-Chapter10bArmored2.TurtleName = new_turtle()
-Chapter10bArmored2.TurtleName.shape(Chapter10bArmored2.Sprite)
-Chapter10bArmored2.TurtleName.hideturtle()
+Chapter10bArmored2.Turtle = new_turtle()
+Chapter10bArmored2.Turtle.shape(Chapter10bArmored2.Sprite)
+Chapter10bArmored2.Turtle.hideturtle()
 
 #Wallimos---------------
 register_shape("wallimos_small")
@@ -4894,9 +4898,9 @@ Portrait="wallimos_big",
 Sprite="wallimos_small",
 LevelQuotes=["Wallimos: Fear me, mortals."],
 Bio="Wallimos Alexander is a Dimensional Entity\nthat fought with Bobbish Razz centuries ago.\nHe now reawakens, wanting to rule the world.")
-Wallimos.TurtleName = new_turtle()
-Wallimos.TurtleName.shape(Wallimos.Sprite)
-Wallimos.TurtleName.hideturtle()
+Wallimos.Turtle = new_turtle()
+Wallimos.Turtle.shape(Wallimos.Sprite)
+Wallimos.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 10c]=======================================================================================================================================
@@ -4937,9 +4941,9 @@ Bio="Fael is a memeber of the Elemental Offense Squad.",
 ClassChange=[["Elemental Sniper", 30]], #[Name, Level]
 AttackUnlocks=[[moves.LongBow,17],[moves.DistanceShot,23],[moves.Snipe,30]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,20],[moves.Heal,25]])
-FaelBoss.TurtleName = new_turtle()
-FaelBoss.TurtleName.shape(FaelBoss.Sprite)
-FaelBoss.TurtleName.hideturtle()
+FaelBoss.Turtle = new_turtle()
+FaelBoss.Turtle.shape(FaelBoss.Sprite)
+FaelBoss.Turtle.hideturtle()
 
 #ErifBoss---------------
 register_shape("erif_small")
@@ -4976,9 +4980,9 @@ Bio="Erif is a memeber of the Elemental Offense Squad.",
 ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[[moves.Slash,17],[moves.Fireball,25],[moves.FireBlast,30]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,20]])
-ErifBoss.TurtleName = new_turtle()
-ErifBoss.TurtleName.shape(ErifBoss.Sprite)
-ErifBoss.TurtleName.hideturtle()
+ErifBoss.Turtle = new_turtle()
+ErifBoss.Turtle.shape(ErifBoss.Sprite)
+ErifBoss.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 11a]=======================================================================================================================================
@@ -5013,9 +5017,9 @@ Bio="A water spirit in the Bipole Sea.",
 ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-Chapter11aWaterSpirit1.TurtleName = new_turtle()
-Chapter11aWaterSpirit1.TurtleName.shape(Chapter11aWaterSpirit1.Sprite)
-Chapter11aWaterSpirit1.TurtleName.hideturtle()
+Chapter11aWaterSpirit1.Turtle = new_turtle()
+Chapter11aWaterSpirit1.Turtle.shape(Chapter11aWaterSpirit1.Sprite)
+Chapter11aWaterSpirit1.Turtle.hideturtle()
 
 #WaterSpirit2---------------
 register_shape("waterspirit_small")
@@ -5046,9 +5050,9 @@ Bio="A water spirit in the Bipole Sea.",
 ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-Chapter11aWaterSpirit2.TurtleName = new_turtle()
-Chapter11aWaterSpirit2.TurtleName.shape(Chapter11aWaterSpirit2.Sprite)
-Chapter11aWaterSpirit2.TurtleName.hideturtle()
+Chapter11aWaterSpirit2.Turtle = new_turtle()
+Chapter11aWaterSpirit2.Turtle.shape(Chapter11aWaterSpirit2.Sprite)
+Chapter11aWaterSpirit2.Turtle.hideturtle()
 
 #WaterSpirit3---------------
 register_shape("waterspirit_small")
@@ -5079,9 +5083,9 @@ Bio="A water spirit in the Bipole Sea.",
 ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-Chapter11aWaterSpirit3.TurtleName = new_turtle()
-Chapter11aWaterSpirit3.TurtleName.shape(Chapter11aWaterSpirit3.Sprite)
-Chapter11aWaterSpirit3.TurtleName.hideturtle()
+Chapter11aWaterSpirit3.Turtle = new_turtle()
+Chapter11aWaterSpirit3.Turtle.shape(Chapter11aWaterSpirit3.Sprite)
+Chapter11aWaterSpirit3.Turtle.hideturtle()
 
 #WaterSpirit4---------------
 register_shape("waterspirit_small")
@@ -5112,9 +5116,9 @@ Bio="A water spirit in the Bipole Sea.",
 ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-Chapter11aWaterSpirit4.TurtleName = new_turtle()
-Chapter11aWaterSpirit4.TurtleName.shape(Chapter11aWaterSpirit4.Sprite)
-Chapter11aWaterSpirit4.TurtleName.hideturtle()
+Chapter11aWaterSpirit4.Turtle = new_turtle()
+Chapter11aWaterSpirit4.Turtle.shape(Chapter11aWaterSpirit4.Sprite)
+Chapter11aWaterSpirit4.Turtle.hideturtle()
 
 #WaterSpirit5---------------
 register_shape("waterspirit_small")
@@ -5145,9 +5149,9 @@ Bio="A water spirit in the Bipole Sea.",
 ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-Chapter11aWaterSpirit5.TurtleName = new_turtle()
-Chapter11aWaterSpirit5.TurtleName.shape(Chapter11aWaterSpirit5.Sprite)
-Chapter11aWaterSpirit5.TurtleName.hideturtle()
+Chapter11aWaterSpirit5.Turtle = new_turtle()
+Chapter11aWaterSpirit5.Turtle.shape(Chapter11aWaterSpirit5.Sprite)
+Chapter11aWaterSpirit5.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 12a]=======================================================================================================================================
@@ -5182,9 +5186,9 @@ Bio="A water spirit in the Bipole Sea.",
 ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-Chapter12aWaterSpirit1.TurtleName = new_turtle()
-Chapter12aWaterSpirit1.TurtleName.shape(Chapter12aWaterSpirit1.Sprite)
-Chapter12aWaterSpirit1.TurtleName.hideturtle()
+Chapter12aWaterSpirit1.Turtle = new_turtle()
+Chapter12aWaterSpirit1.Turtle.shape(Chapter12aWaterSpirit1.Sprite)
+Chapter12aWaterSpirit1.Turtle.hideturtle()
 
 #WaterSpirit2---------------
 register_shape("waterspirit_small")
@@ -5215,9 +5219,9 @@ Bio="A water spirit in the Bipole Sea.",
 ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-Chapter12aWaterSpirit2.TurtleName = new_turtle()
-Chapter12aWaterSpirit2.TurtleName.shape(Chapter12aWaterSpirit2.Sprite)
-Chapter12aWaterSpirit2.TurtleName.hideturtle()
+Chapter12aWaterSpirit2.Turtle = new_turtle()
+Chapter12aWaterSpirit2.Turtle.shape(Chapter12aWaterSpirit2.Sprite)
+Chapter12aWaterSpirit2.Turtle.hideturtle()
 
 #WaterSpirit3---------------
 register_shape("waterspirit_small")
@@ -5248,9 +5252,9 @@ Bio="A water spirit in the Bipole Sea.",
 ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-Chapter12aWaterSpirit3.TurtleName = new_turtle()
-Chapter12aWaterSpirit3.TurtleName.shape(Chapter12aWaterSpirit3.Sprite)
-Chapter12aWaterSpirit3.TurtleName.hideturtle()
+Chapter12aWaterSpirit3.Turtle = new_turtle()
+Chapter12aWaterSpirit3.Turtle.shape(Chapter12aWaterSpirit3.Sprite)
+Chapter12aWaterSpirit3.Turtle.hideturtle()
 
 #WaterSpirit4---------------
 register_shape("waterspirit_small")
@@ -5281,9 +5285,9 @@ Bio="A water spirit in the Bipole Sea.",
 ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-Chapter12aWaterSpirit4.TurtleName = new_turtle()
-Chapter12aWaterSpirit4.TurtleName.shape(Chapter12aWaterSpirit4.Sprite)
-Chapter12aWaterSpirit4.TurtleName.hideturtle()
+Chapter12aWaterSpirit4.Turtle = new_turtle()
+Chapter12aWaterSpirit4.Turtle.shape(Chapter12aWaterSpirit4.Sprite)
+Chapter12aWaterSpirit4.Turtle.hideturtle()
 
 #WaterSpirit4---------------
 register_shape("waterspirit_small")
@@ -5314,9 +5318,9 @@ Bio="A water spirit in the Bipole Sea.",
 ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-Chapter12aWaterSpirit5.TurtleName = new_turtle()
-Chapter12aWaterSpirit5.TurtleName.shape(Chapter12aWaterSpirit5.Sprite)
-Chapter12aWaterSpirit5.TurtleName.hideturtle()
+Chapter12aWaterSpirit5.Turtle = new_turtle()
+Chapter12aWaterSpirit5.Turtle.shape(Chapter12aWaterSpirit5.Sprite)
+Chapter12aWaterSpirit5.Turtle.hideturtle()
 
 #WaterSpirit6---------------
 register_shape("waterspirit_small")
@@ -5347,9 +5351,9 @@ Bio="A water spirit in the Bipole Sea.",
 ClassChange=[["Elemental Warrior", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-Chapter12aWaterSpirit6.TurtleName = new_turtle()
-Chapter12aWaterSpirit6.TurtleName.shape(Chapter12aWaterSpirit6.Sprite)
-Chapter12aWaterSpirit6.TurtleName.hideturtle()
+Chapter12aWaterSpirit6.Turtle = new_turtle()
+Chapter12aWaterSpirit6.Turtle.shape(Chapter12aWaterSpirit6.Sprite)
+Chapter12aWaterSpirit6.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 13a]=======================================================================================================================================
@@ -5384,9 +5388,9 @@ Bio="The top diver of the K'Neville pirates. He can dive\ndepths of over 420 met
 ClassChange=[["Diver", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-DiverNeville.TurtleName = new_turtle()
-DiverNeville.TurtleName.shape(DiverNeville.Sprite)
-DiverNeville.TurtleName.hideturtle()
+DiverNeville.Turtle = new_turtle()
+DiverNeville.Turtle.shape(DiverNeville.Sprite)
+DiverNeville.Turtle.hideturtle()
 
 #Fighter1---------------
 register_shape("genericswordfighter_small")
@@ -5414,9 +5418,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter13aFighter1.TurtleName = new_turtle()
-Chapter13aFighter1.TurtleName.shape(Chapter13aFighter1.Sprite)
-Chapter13aFighter1.TurtleName.hideturtle()
+Chapter13aFighter1.Turtle = new_turtle()
+Chapter13aFighter1.Turtle.shape(Chapter13aFighter1.Sprite)
+Chapter13aFighter1.Turtle.hideturtle()
 
 #Fighter2---------------
 register_shape("genericswordfighter_small")
@@ -5444,9 +5448,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter13aFighter2.TurtleName = new_turtle()
-Chapter13aFighter2.TurtleName.shape(Chapter13aFighter2.Sprite)
-Chapter13aFighter2.TurtleName.hideturtle()
+Chapter13aFighter2.Turtle = new_turtle()
+Chapter13aFighter2.Turtle.shape(Chapter13aFighter2.Sprite)
+Chapter13aFighter2.Turtle.hideturtle()
 
 #Fighter3---------------
 register_shape("genericswordfighter_small")
@@ -5474,9 +5478,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter13aFighter3.TurtleName = new_turtle()
-Chapter13aFighter3.TurtleName.shape(Chapter13aFighter3.Sprite)
-Chapter13aFighter3.TurtleName.hideturtle()
+Chapter13aFighter3.Turtle = new_turtle()
+Chapter13aFighter3.Turtle.shape(Chapter13aFighter3.Sprite)
+Chapter13aFighter3.Turtle.hideturtle()
 
 #Fighter4---------------
 register_shape("genericswordfighter_small")
@@ -5504,9 +5508,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter13aFighter4.TurtleName = new_turtle()
-Chapter13aFighter4.TurtleName.shape(Chapter13aFighter4.Sprite)
-Chapter13aFighter4.TurtleName.hideturtle()
+Chapter13aFighter4.Turtle = new_turtle()
+Chapter13aFighter4.Turtle.shape(Chapter13aFighter4.Sprite)
+Chapter13aFighter4.Turtle.hideturtle()
 
 #Fighter5---------------
 register_shape("genericswordfighter_small")
@@ -5534,9 +5538,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter13aFighter5.TurtleName = new_turtle()
-Chapter13aFighter5.TurtleName.shape(Chapter13aFighter5.Sprite)
-Chapter13aFighter5.TurtleName.hideturtle()
+Chapter13aFighter5.Turtle = new_turtle()
+Chapter13aFighter5.Turtle.shape(Chapter13aFighter5.Sprite)
+Chapter13aFighter5.Turtle.hideturtle()
 
 #Fighter6---------------
 register_shape("genericswordfighter_small")
@@ -5564,9 +5568,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter13aFighter6.TurtleName = new_turtle()
-Chapter13aFighter6.TurtleName.shape(Chapter13aFighter6.Sprite)
-Chapter13aFighter6.TurtleName.hideturtle()
+Chapter13aFighter6.Turtle = new_turtle()
+Chapter13aFighter6.Turtle.shape(Chapter13aFighter6.Sprite)
+Chapter13aFighter6.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 14a]=======================================================================================================================================
@@ -5601,9 +5605,9 @@ Bio="The navigator and tactician of the K'Neville pirates.\nThough he once capta
 ClassChange=[["Navigator", 25]], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-BigBrainNeville.TurtleName = new_turtle()
-BigBrainNeville.TurtleName.shape(BigBrainNeville.Sprite)
-BigBrainNeville.TurtleName.hideturtle()
+BigBrainNeville.Turtle = new_turtle()
+BigBrainNeville.Turtle.shape(BigBrainNeville.Sprite)
+BigBrainNeville.Turtle.hideturtle()
 
 #Archer1---------------
 register_shape("genericarcher_small")
@@ -5631,9 +5635,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter14aArcher1.TurtleName = new_turtle()
-Chapter14aArcher1.TurtleName.shape(Chapter14aArcher1.Sprite)
-Chapter14aArcher1.TurtleName.hideturtle()
+Chapter14aArcher1.Turtle = new_turtle()
+Chapter14aArcher1.Turtle.shape(Chapter14aArcher1.Sprite)
+Chapter14aArcher1.Turtle.hideturtle()
 
 #Archer2---------------
 register_shape("genericarcher_small")
@@ -5661,9 +5665,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter14aArcher2.TurtleName = new_turtle()
-Chapter14aArcher2.TurtleName.shape(Chapter14aArcher2.Sprite)
-Chapter14aArcher2.TurtleName.hideturtle()
+Chapter14aArcher2.Turtle = new_turtle()
+Chapter14aArcher2.Turtle.shape(Chapter14aArcher2.Sprite)
+Chapter14aArcher2.Turtle.hideturtle()
 
 #Archer3---------------
 register_shape("genericarcher_small")
@@ -5691,9 +5695,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter14aArcher3.TurtleName = new_turtle()
-Chapter14aArcher3.TurtleName.shape(Chapter14aArcher3.Sprite)
-Chapter14aArcher3.TurtleName.hideturtle()
+Chapter14aArcher3.Turtle = new_turtle()
+Chapter14aArcher3.Turtle.shape(Chapter14aArcher3.Sprite)
+Chapter14aArcher3.Turtle.hideturtle()
 
 #Archer4---------------
 register_shape("genericarcher_small")
@@ -5721,9 +5725,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter14aArcher4.TurtleName = new_turtle()
-Chapter14aArcher4.TurtleName.shape(Chapter14aArcher4.Sprite)
-Chapter14aArcher4.TurtleName.hideturtle()
+Chapter14aArcher4.Turtle = new_turtle()
+Chapter14aArcher4.Turtle.shape(Chapter14aArcher4.Sprite)
+Chapter14aArcher4.Turtle.hideturtle()
 
 #Archer5---------------
 register_shape("genericarcher_small")
@@ -5751,9 +5755,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter14aArcher5.TurtleName = new_turtle()
-Chapter14aArcher5.TurtleName.shape(Chapter14aArcher5.Sprite)
-Chapter14aArcher5.TurtleName.hideturtle()
+Chapter14aArcher5.Turtle = new_turtle()
+Chapter14aArcher5.Turtle.shape(Chapter14aArcher5.Sprite)
+Chapter14aArcher5.Turtle.hideturtle()
 
 #Archer6---------------
 register_shape("genericarcher_small")
@@ -5781,9 +5785,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter14aArcher6.TurtleName = new_turtle()
-Chapter14aArcher6.TurtleName.shape(Chapter14aArcher6.Sprite)
-Chapter14aArcher6.TurtleName.hideturtle()
+Chapter14aArcher6.Turtle = new_turtle()
+Chapter14aArcher6.Turtle.shape(Chapter14aArcher6.Sprite)
+Chapter14aArcher6.Turtle.hideturtle()
 
 #Archer7---------------
 register_shape("genericarcher_small")
@@ -5811,9 +5815,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter14aArcher7.TurtleName = new_turtle()
-Chapter14aArcher7.TurtleName.shape(Chapter14aArcher7.Sprite)
-Chapter14aArcher7.TurtleName.hideturtle()
+Chapter14aArcher7.Turtle = new_turtle()
+Chapter14aArcher7.Turtle.shape(Chapter14aArcher7.Sprite)
+Chapter14aArcher7.Turtle.hideturtle()
 
 #Archer8---------------
 register_shape("genericarcher_small")
@@ -5841,9 +5845,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter14aArcher8.TurtleName = new_turtle()
-Chapter14aArcher8.TurtleName.shape(Chapter14aArcher8.Sprite)
-Chapter14aArcher8.TurtleName.hideturtle()
+Chapter14aArcher8.Turtle = new_turtle()
+Chapter14aArcher8.Turtle.shape(Chapter14aArcher8.Sprite)
+Chapter14aArcher8.Turtle.hideturtle()
 
 #Archer9---------------
 register_shape("genericarcher_small")
@@ -5871,9 +5875,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter14aArcher9.TurtleName = new_turtle()
-Chapter14aArcher9.TurtleName.shape(Chapter14aArcher9.Sprite)
-Chapter14aArcher9.TurtleName.hideturtle()
+Chapter14aArcher9.Turtle = new_turtle()
+Chapter14aArcher9.Turtle.shape(Chapter14aArcher9.Sprite)
+Chapter14aArcher9.Turtle.hideturtle()
 
 #Archer10---------------
 register_shape("genericarcher_small")
@@ -5901,9 +5905,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter14aArcher10.TurtleName = new_turtle()
-Chapter14aArcher10.TurtleName.shape(Chapter14aArcher10.Sprite)
-Chapter14aArcher10.TurtleName.hideturtle()
+Chapter14aArcher10.Turtle = new_turtle()
+Chapter14aArcher10.Turtle.shape(Chapter14aArcher10.Sprite)
+Chapter14aArcher10.Turtle.hideturtle()
 
 #Armored1---------------
 register_shape("genericarmored_small")
@@ -5931,9 +5935,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter14aArmored1.TurtleName = new_turtle()
-Chapter14aArmored1.TurtleName.shape(Chapter14aArmored1.Sprite)
-Chapter14aArmored1.TurtleName.hideturtle()
+Chapter14aArmored1.Turtle = new_turtle()
+Chapter14aArmored1.Turtle.shape(Chapter14aArmored1.Sprite)
+Chapter14aArmored1.Turtle.hideturtle()
 
 #Armored2---------------
 register_shape("genericarmored_small")
@@ -5961,9 +5965,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter14aArmored2.TurtleName = new_turtle()
-Chapter14aArmored2.TurtleName.shape(Chapter14aArmored2.Sprite)
-Chapter14aArmored2.TurtleName.hideturtle()
+Chapter14aArmored2.Turtle = new_turtle()
+Chapter14aArmored2.Turtle.shape(Chapter14aArmored2.Sprite)
+Chapter14aArmored2.Turtle.hideturtle()
 
 #Armored3---------------
 register_shape("genericarmored_small")
@@ -5991,9 +5995,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter14aArmored3.TurtleName = new_turtle()
-Chapter14aArmored3.TurtleName.shape(Chapter14aArmored3.Sprite)
-Chapter14aArmored3.TurtleName.hideturtle()
+Chapter14aArmored3.Turtle = new_turtle()
+Chapter14aArmored3.Turtle.shape(Chapter14aArmored3.Sprite)
+Chapter14aArmored3.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 15a]=======================================================================================================================================
@@ -6030,9 +6034,9 @@ Portrait="kaptainkneville_big",
 Sprite="kaptainkneville_small",
 LevelQuotes=["K'Neville: Noob."],
 Bio="Kaptain K'Neville is an notorious pirate who sails the seas near the\n Nolavillian. He sails the K.Neville, along with his fleet of the K'Neville Pirates.\nYears ago, he was turned into a distorted version of\nhis past self after consuming the Chalice of Effects.")
-KaptainKNeville.TurtleName = new_turtle()
-KaptainKNeville.TurtleName.shape(KaptainKNeville.Sprite)
-KaptainKNeville.TurtleName.hideturtle()
+KaptainKNeville.Turtle = new_turtle()
+KaptainKNeville.Turtle.shape(KaptainKNeville.Sprite)
+KaptainKNeville.Turtle.hideturtle()
 
 #Archer1---------------
 register_shape("genericarcher_small")
@@ -6060,9 +6064,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aArcher1.TurtleName = new_turtle()
-Chapter15aArcher1.TurtleName.shape(Chapter15aArcher1.Sprite)
-Chapter15aArcher1.TurtleName.hideturtle()
+Chapter15aArcher1.Turtle = new_turtle()
+Chapter15aArcher1.Turtle.shape(Chapter15aArcher1.Sprite)
+Chapter15aArcher1.Turtle.hideturtle()
 
 #Archer2---------------
 register_shape("genericarcher_small")
@@ -6090,9 +6094,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aArcher2.TurtleName = new_turtle()
-Chapter15aArcher2.TurtleName.shape(Chapter15aArcher2.Sprite)
-Chapter15aArcher2.TurtleName.hideturtle()
+Chapter15aArcher2.Turtle = new_turtle()
+Chapter15aArcher2.Turtle.shape(Chapter15aArcher2.Sprite)
+Chapter15aArcher2.Turtle.hideturtle()
 
 #Archer3---------------
 register_shape("genericarcher_small")
@@ -6120,9 +6124,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aArcher3.TurtleName = new_turtle()
-Chapter15aArcher3.TurtleName.shape(Chapter15aArcher3.Sprite)
-Chapter15aArcher3.TurtleName.hideturtle()
+Chapter15aArcher3.Turtle = new_turtle()
+Chapter15aArcher3.Turtle.shape(Chapter15aArcher3.Sprite)
+Chapter15aArcher3.Turtle.hideturtle()
 
 #Archer4---------------
 register_shape("genericarcher_small")
@@ -6150,9 +6154,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aArcher4.TurtleName = new_turtle()
-Chapter15aArcher4.TurtleName.shape(Chapter15aArcher4.Sprite)
-Chapter15aArcher4.TurtleName.hideturtle()
+Chapter15aArcher4.Turtle = new_turtle()
+Chapter15aArcher4.Turtle.shape(Chapter15aArcher4.Sprite)
+Chapter15aArcher4.Turtle.hideturtle()
 
 #Armored1---------------
 register_shape("genericarmored_small")
@@ -6180,9 +6184,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aArmored1.TurtleName = new_turtle()
-Chapter15aArmored1.TurtleName.shape(Chapter15aArmored1.Sprite)
-Chapter15aArmored1.TurtleName.hideturtle()
+Chapter15aArmored1.Turtle = new_turtle()
+Chapter15aArmored1.Turtle.shape(Chapter15aArmored1.Sprite)
+Chapter15aArmored1.Turtle.hideturtle()
 
 #Armored2---------------
 register_shape("genericarmored_small")
@@ -6210,9 +6214,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aArmored2.TurtleName = new_turtle()
-Chapter15aArmored2.TurtleName.shape(Chapter15aArmored2.Sprite)
-Chapter15aArmored2.TurtleName.hideturtle()
+Chapter15aArmored2.Turtle = new_turtle()
+Chapter15aArmored2.Turtle.shape(Chapter15aArmored2.Sprite)
+Chapter15aArmored2.Turtle.hideturtle()
 
 #Armored3---------------
 register_shape("genericarmored_small")
@@ -6240,9 +6244,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aArmored3.TurtleName = new_turtle()
-Chapter15aArmored3.TurtleName.shape(Chapter15aArmored3.Sprite)
-Chapter15aArmored3.TurtleName.hideturtle()
+Chapter15aArmored3.Turtle = new_turtle()
+Chapter15aArmored3.Turtle.shape(Chapter15aArmored3.Sprite)
+Chapter15aArmored3.Turtle.hideturtle()
 
 #Armored4---------------
 register_shape("genericarmored_small")
@@ -6270,9 +6274,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aArmored4.TurtleName = new_turtle()
-Chapter15aArmored4.TurtleName.shape(Chapter15aArmored4.Sprite)
-Chapter15aArmored4.TurtleName.hideturtle()
+Chapter15aArmored4.Turtle = new_turtle()
+Chapter15aArmored4.Turtle.shape(Chapter15aArmored4.Sprite)
+Chapter15aArmored4.Turtle.hideturtle()
 
 #Armored5---------------
 register_shape("genericarmored_small")
@@ -6300,9 +6304,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aArmored5.TurtleName = new_turtle()
-Chapter15aArmored5.TurtleName.shape(Chapter15aArmored5.Sprite)
-Chapter15aArmored5.TurtleName.hideturtle()
+Chapter15aArmored5.Turtle = new_turtle()
+Chapter15aArmored5.Turtle.shape(Chapter15aArmored5.Sprite)
+Chapter15aArmored5.Turtle.hideturtle()
 
 #Armored6---------------
 register_shape("genericarmored_small")
@@ -6330,9 +6334,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aArmored6.TurtleName = new_turtle()
-Chapter15aArmored6.TurtleName.shape(Chapter15aArmored6.Sprite)
-Chapter15aArmored6.TurtleName.hideturtle()
+Chapter15aArmored6.Turtle = new_turtle()
+Chapter15aArmored6.Turtle.shape(Chapter15aArmored6.Sprite)
+Chapter15aArmored6.Turtle.hideturtle()
 
 #Armored7---------------
 register_shape("genericarmored_small")
@@ -6360,9 +6364,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aArmored7.TurtleName = new_turtle()
-Chapter15aArmored7.TurtleName.shape(Chapter15aArmored7.Sprite)
-Chapter15aArmored7.TurtleName.hideturtle()
+Chapter15aArmored7.Turtle = new_turtle()
+Chapter15aArmored7.Turtle.shape(Chapter15aArmored7.Sprite)
+Chapter15aArmored7.Turtle.hideturtle()
 
 #Armored8---------------
 register_shape("genericarmored_small")
@@ -6390,9 +6394,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Pirate: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aArmored8.TurtleName = new_turtle()
-Chapter15aArmored8.TurtleName.shape(Chapter15aArmored8.Sprite)
-Chapter15aArmored8.TurtleName.hideturtle()
+Chapter15aArmored8.Turtle = new_turtle()
+Chapter15aArmored8.Turtle.shape(Chapter15aArmored8.Sprite)
+Chapter15aArmored8.Turtle.hideturtle()
 
 #Fighter1---------------
 register_shape("genericswordfighter_small")
@@ -6420,9 +6424,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aFighter1.TurtleName = new_turtle()
-Chapter15aFighter1.TurtleName.shape(Chapter15aFighter1.Sprite)
-Chapter15aFighter1.TurtleName.hideturtle()
+Chapter15aFighter1.Turtle = new_turtle()
+Chapter15aFighter1.Turtle.shape(Chapter15aFighter1.Sprite)
+Chapter15aFighter1.Turtle.hideturtle()
 
 #Fighter2---------------
 register_shape("genericswordfighter_small")
@@ -6450,9 +6454,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aFighter2.TurtleName = new_turtle()
-Chapter15aFighter2.TurtleName.shape(Chapter15aFighter2.Sprite)
-Chapter15aFighter2.TurtleName.hideturtle()
+Chapter15aFighter2.Turtle = new_turtle()
+Chapter15aFighter2.Turtle.shape(Chapter15aFighter2.Sprite)
+Chapter15aFighter2.Turtle.hideturtle()
 
 #Fighter3---------------
 register_shape("genericswordfighter_small")
@@ -6480,9 +6484,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aFighter3.TurtleName = new_turtle()
-Chapter15aFighter3.TurtleName.shape(Chapter15aFighter3.Sprite)
-Chapter15aFighter3.TurtleName.hideturtle()
+Chapter15aFighter3.Turtle = new_turtle()
+Chapter15aFighter3.Turtle.shape(Chapter15aFighter3.Sprite)
+Chapter15aFighter3.Turtle.hideturtle()
 
 #Fighter4---------------
 register_shape("genericswordfighter_small")
@@ -6510,9 +6514,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aFighter4.TurtleName = new_turtle()
-Chapter15aFighter4.TurtleName.shape(Chapter15aFighter4.Sprite)
-Chapter15aFighter4.TurtleName.hideturtle()
+Chapter15aFighter4.Turtle = new_turtle()
+Chapter15aFighter4.Turtle.shape(Chapter15aFighter4.Sprite)
+Chapter15aFighter4.Turtle.hideturtle()
 
 #Fighter5---------------
 register_shape("genericswordfighter_small")
@@ -6540,9 +6544,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A pirate in the K'Neville Pirates.")
-Chapter15aFighter5.TurtleName = new_turtle()
-Chapter15aFighter5.TurtleName.shape(Chapter15aFighter5.Sprite)
-Chapter15aFighter5.TurtleName.hideturtle()
+Chapter15aFighter5.Turtle = new_turtle()
+Chapter15aFighter5.Turtle.shape(Chapter15aFighter5.Sprite)
+Chapter15aFighter5.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 16a]=======================================================================================================================================
@@ -6574,9 +6578,9 @@ Portrait="tluc_big",
 Sprite="tluc_small",
 LevelQuotes=["Tluc: Perish! Bipolian scum!"],
 Bio="Tluc is a high-ranking Xuirist and\nworks directly under the leader of\nthe Xuirists, Omega. Tluc is\nextremely devoted to Xuirism and will go to extreme\nlengths to stop opposition.")
-Tluc.TurtleName = new_turtle()
-Tluc.TurtleName.shape(Tluc.Sprite)
-Tluc.TurtleName.hideturtle()
+Tluc.Turtle = new_turtle()
+Tluc.Turtle.shape(Tluc.Sprite)
+Tluc.Turtle.hideturtle()
 
 #Chapter16Xuirist1---------------
 register_shape("genericxuirist_small")
@@ -6604,9 +6608,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist working under Tluc.")
-Chapter16Xuirist1.TurtleName = new_turtle()
-Chapter16Xuirist1.TurtleName.shape(Chapter16Xuirist1.Sprite)
-Chapter16Xuirist1.TurtleName.hideturtle()
+Chapter16Xuirist1.Turtle = new_turtle()
+Chapter16Xuirist1.Turtle.shape(Chapter16Xuirist1.Sprite)
+Chapter16Xuirist1.Turtle.hideturtle()
 
 #Chapter16Xuirist2---------------
 register_shape("genericxuirist_small")
@@ -6634,9 +6638,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist working under Tluc.")
-Chapter16Xuirist2.TurtleName = new_turtle()
-Chapter16Xuirist2.TurtleName.shape(Chapter16Xuirist2.Sprite)
-Chapter16Xuirist2.TurtleName.hideturtle()
+Chapter16Xuirist2.Turtle = new_turtle()
+Chapter16Xuirist2.Turtle.shape(Chapter16Xuirist2.Sprite)
+Chapter16Xuirist2.Turtle.hideturtle()
 
 #Chapter16Xuirist3---------------
 register_shape("genericxuirist_small")
@@ -6664,9 +6668,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist working under Tluc.")
-Chapter16Xuirist3.TurtleName = new_turtle()
-Chapter16Xuirist3.TurtleName.shape(Chapter16Xuirist3.Sprite)
-Chapter16Xuirist3.TurtleName.hideturtle()
+Chapter16Xuirist3.Turtle = new_turtle()
+Chapter16Xuirist3.Turtle.shape(Chapter16Xuirist3.Sprite)
+Chapter16Xuirist3.Turtle.hideturtle()
 
 #Chapter16Xuirist4---------------
 register_shape("genericxuirist_small")
@@ -6694,9 +6698,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist working under Tluc.")
-Chapter16Xuirist4.TurtleName = new_turtle()
-Chapter16Xuirist4.TurtleName.shape(Chapter16Xuirist4.Sprite)
-Chapter16Xuirist4.TurtleName.hideturtle()
+Chapter16Xuirist4.Turtle = new_turtle()
+Chapter16Xuirist4.Turtle.shape(Chapter16Xuirist4.Sprite)
+Chapter16Xuirist4.Turtle.hideturtle()
 
 #Chapter16Xuirist5---------------
 register_shape("genericxuirist_small")
@@ -6724,9 +6728,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist working under Tluc.")
-Chapter16Xuirist5.TurtleName = new_turtle()
-Chapter16Xuirist5.TurtleName.shape(Chapter16Xuirist5.Sprite)
-Chapter16Xuirist5.TurtleName.hideturtle()
+Chapter16Xuirist5.Turtle = new_turtle()
+Chapter16Xuirist5.Turtle.shape(Chapter16Xuirist5.Sprite)
+Chapter16Xuirist5.Turtle.hideturtle()
 
 #Chapter16Xuirist6---------------
 register_shape("genericxuirist_small")
@@ -6754,9 +6758,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist working under Tluc.")
-Chapter16Xuirist6.TurtleName = new_turtle()
-Chapter16Xuirist6.TurtleName.shape(Chapter16Xuirist6.Sprite)
-Chapter16Xuirist6.TurtleName.hideturtle()
+Chapter16Xuirist6.Turtle = new_turtle()
+Chapter16Xuirist6.Turtle.shape(Chapter16Xuirist6.Sprite)
+Chapter16Xuirist6.Turtle.hideturtle()
 
 #Chapter16Xuirist7---------------
 register_shape("genericxuirist_small")
@@ -6784,9 +6788,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist working under Tluc.")
-Chapter16Xuirist7.TurtleName = new_turtle()
-Chapter16Xuirist7.TurtleName.shape(Chapter16Xuirist7.Sprite)
-Chapter16Xuirist7.TurtleName.hideturtle()
+Chapter16Xuirist7.Turtle = new_turtle()
+Chapter16Xuirist7.Turtle.shape(Chapter16Xuirist7.Sprite)
+Chapter16Xuirist7.Turtle.hideturtle()
 
 #RethgifEnemy------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 register_shape("rethgif_small")
@@ -6823,9 +6827,9 @@ Bio="Rethgif is an Nolavillian warrior who travels\nthe lands in search of battl
 ClassChange=[["Destroyer", 45]], #[Name, Level]
 AttackUnlocks=[[moves.DeathStrike,40],[moves.ArmorBreak,45]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,35]])
-RethgifEnemy.TurtleName = new_turtle()
-RethgifEnemy.TurtleName.shape(RethgifEnemy.Sprite)
-RethgifEnemy.TurtleName.hideturtle()
+RethgifEnemy.Turtle = new_turtle()
+RethgifEnemy.Turtle.shape(RethgifEnemy.Sprite)
+RethgifEnemy.Turtle.hideturtle()
 
 #EgEnemy------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 register_shape("eg_small")
@@ -6862,9 +6866,9 @@ Bio="Eg is Rethgif's brother and accompanies him on\nhis travels. While he might
 ClassChange=[["Destroyer", 45]], #[Name, Level]
 AttackUnlocks=[[moves.DeathStrike,35],[moves.Slash,40],[moves.ArmorBreak,45],[moves.Thunder,45],[moves.ThunderBlast,45]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-EgEnemy.TurtleName = new_turtle()
-EgEnemy.TurtleName.shape(EgEnemy.Sprite)
-EgEnemy.TurtleName.hideturtle()
+EgEnemy.Turtle = new_turtle()
+EgEnemy.Turtle.shape(EgEnemy.Sprite)
+EgEnemy.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 17a]=======================================================================================================================================
@@ -6896,9 +6900,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist1.TurtleName = new_turtle()
-Chapter17Xuirist1.TurtleName.shape(Chapter17Xuirist1.Sprite)
-Chapter17Xuirist1.TurtleName.hideturtle()
+Chapter17Xuirist1.Turtle = new_turtle()
+Chapter17Xuirist1.Turtle.shape(Chapter17Xuirist1.Sprite)
+Chapter17Xuirist1.Turtle.hideturtle()
 
 #Chapter17Xuirist2---------------
 register_shape("genericxuirist_small")
@@ -6926,9 +6930,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist2.TurtleName = new_turtle()
-Chapter17Xuirist2.TurtleName.shape(Chapter17Xuirist2.Sprite)
-Chapter17Xuirist2.TurtleName.hideturtle()
+Chapter17Xuirist2.Turtle = new_turtle()
+Chapter17Xuirist2.Turtle.shape(Chapter17Xuirist2.Sprite)
+Chapter17Xuirist2.Turtle.hideturtle()
 
 #Chapter17Xuirist3---------------
 register_shape("genericxuirist_small")
@@ -6956,9 +6960,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist3.TurtleName = new_turtle()
-Chapter17Xuirist3.TurtleName.shape(Chapter17Xuirist3.Sprite)
-Chapter17Xuirist3.TurtleName.hideturtle()
+Chapter17Xuirist3.Turtle = new_turtle()
+Chapter17Xuirist3.Turtle.shape(Chapter17Xuirist3.Sprite)
+Chapter17Xuirist3.Turtle.hideturtle()
 
 #Chapter17Xuirist4---------------
 register_shape("genericxuirist_small")
@@ -6986,9 +6990,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist4.TurtleName = new_turtle()
-Chapter17Xuirist4.TurtleName.shape(Chapter17Xuirist4.Sprite)
-Chapter17Xuirist4.TurtleName.hideturtle()
+Chapter17Xuirist4.Turtle = new_turtle()
+Chapter17Xuirist4.Turtle.shape(Chapter17Xuirist4.Sprite)
+Chapter17Xuirist4.Turtle.hideturtle()
 
 #Chapter17Xuirist5---------------
 register_shape("genericxuirist_small")
@@ -7016,9 +7020,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist5.TurtleName = new_turtle()
-Chapter17Xuirist5.TurtleName.shape(Chapter17Xuirist5.Sprite)
-Chapter17Xuirist5.TurtleName.hideturtle()
+Chapter17Xuirist5.Turtle = new_turtle()
+Chapter17Xuirist5.Turtle.shape(Chapter17Xuirist5.Sprite)
+Chapter17Xuirist5.Turtle.hideturtle()
 
 #Chapter17Xuirist6---------------
 register_shape("genericxuirist_small")
@@ -7046,9 +7050,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist6.TurtleName = new_turtle()
-Chapter17Xuirist6.TurtleName.shape(Chapter17Xuirist6.Sprite)
-Chapter17Xuirist6.TurtleName.hideturtle()
+Chapter17Xuirist6.Turtle = new_turtle()
+Chapter17Xuirist6.Turtle.shape(Chapter17Xuirist6.Sprite)
+Chapter17Xuirist6.Turtle.hideturtle()
 
 #Chapter17Xuirist7---------------
 register_shape("genericxuirist_small")
@@ -7076,9 +7080,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist7.TurtleName = new_turtle()
-Chapter17Xuirist7.TurtleName.shape(Chapter17Xuirist7.Sprite)
-Chapter17Xuirist7.TurtleName.hideturtle()
+Chapter17Xuirist7.Turtle = new_turtle()
+Chapter17Xuirist7.Turtle.shape(Chapter17Xuirist7.Sprite)
+Chapter17Xuirist7.Turtle.hideturtle()
 
 #Chapter17Xuirist8---------------
 register_shape("genericxuirist_small")
@@ -7106,9 +7110,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist8.TurtleName = new_turtle()
-Chapter17Xuirist8.TurtleName.shape(Chapter17Xuirist8.Sprite)
-Chapter17Xuirist8.TurtleName.hideturtle()
+Chapter17Xuirist8.Turtle = new_turtle()
+Chapter17Xuirist8.Turtle.shape(Chapter17Xuirist8.Sprite)
+Chapter17Xuirist8.Turtle.hideturtle()
 
 #Chapter17Xuirist9---------------
 register_shape("genericxuirist_small")
@@ -7136,9 +7140,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist9.TurtleName = new_turtle()
-Chapter17Xuirist9.TurtleName.shape(Chapter17Xuirist9.Sprite)
-Chapter17Xuirist9.TurtleName.hideturtle()
+Chapter17Xuirist9.Turtle = new_turtle()
+Chapter17Xuirist9.Turtle.shape(Chapter17Xuirist9.Sprite)
+Chapter17Xuirist9.Turtle.hideturtle()
 
 #Chapter17Xuirist10---------------
 register_shape("genericxuirist_small")
@@ -7166,9 +7170,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist10.TurtleName = new_turtle()
-Chapter17Xuirist10.TurtleName.shape(Chapter17Xuirist10.Sprite)
-Chapter17Xuirist10.TurtleName.hideturtle()
+Chapter17Xuirist10.Turtle = new_turtle()
+Chapter17Xuirist10.Turtle.shape(Chapter17Xuirist10.Sprite)
+Chapter17Xuirist10.Turtle.hideturtle()
 
 #Chapter17Xuirist11---------------
 register_shape("genericxuirist_small")
@@ -7196,9 +7200,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist11.TurtleName = new_turtle()
-Chapter17Xuirist11.TurtleName.shape(Chapter17Xuirist11.Sprite)
-Chapter17Xuirist11.TurtleName.hideturtle()
+Chapter17Xuirist11.Turtle = new_turtle()
+Chapter17Xuirist11.Turtle.shape(Chapter17Xuirist11.Sprite)
+Chapter17Xuirist11.Turtle.hideturtle()
 
 #Chapter17Xuirist12---------------
 register_shape("genericxuirist_small")
@@ -7226,9 +7230,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist12.TurtleName = new_turtle()
-Chapter17Xuirist12.TurtleName.shape(Chapter17Xuirist12.Sprite)
-Chapter17Xuirist12.TurtleName.hideturtle()
+Chapter17Xuirist12.Turtle = new_turtle()
+Chapter17Xuirist12.Turtle.shape(Chapter17Xuirist12.Sprite)
+Chapter17Xuirist12.Turtle.hideturtle()
 
 #Chapter17Xuirist13---------------
 register_shape("genericxuirist_small")
@@ -7256,9 +7260,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist13.TurtleName = new_turtle()
-Chapter17Xuirist13.TurtleName.shape(Chapter17Xuirist13.Sprite)
-Chapter17Xuirist13.TurtleName.hideturtle()
+Chapter17Xuirist13.Turtle = new_turtle()
+Chapter17Xuirist13.Turtle.shape(Chapter17Xuirist13.Sprite)
+Chapter17Xuirist13.Turtle.hideturtle()
 
 #Chapter17Xuirist14---------------
 register_shape("genericxuirist_small")
@@ -7286,9 +7290,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter17Xuirist14.TurtleName = new_turtle()
-Chapter17Xuirist14.TurtleName.shape(Chapter17Xuirist14.Sprite)
-Chapter17Xuirist14.TurtleName.hideturtle()
+Chapter17Xuirist14.Turtle = new_turtle()
+Chapter17Xuirist14.Turtle.shape(Chapter17Xuirist14.Sprite)
+Chapter17Xuirist14.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 17d]=======================================================================================================================================
@@ -7329,9 +7333,9 @@ Bio="B is an Nolavillian who has been affected\nby the Inverse Time. Due to this
 ClassChange=[["Chrono Master", 50]], #[Name, Level]
 AttackUnlocks=[[moves.Beam,40],[moves.Destroyer,50]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,45]])
-BBoss.TurtleName = new_turtle()
-BBoss.TurtleName.shape(B.Sprite)
-BBoss.TurtleName.hideturtle()
+BBoss.Turtle = new_turtle()
+BBoss.Turtle.shape(B.Sprite)
+BBoss.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 18a]=======================================================================================================================================
@@ -7363,9 +7367,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist1.TurtleName = new_turtle()
-Chapter18Xuirist1.TurtleName.shape(Chapter18Xuirist1.Sprite)
-Chapter18Xuirist1.TurtleName.hideturtle()
+Chapter18Xuirist1.Turtle = new_turtle()
+Chapter18Xuirist1.Turtle.shape(Chapter18Xuirist1.Sprite)
+Chapter18Xuirist1.Turtle.hideturtle()
 
 #Chapter18Xuirist2---------------
 register_shape("genericxuirist_small")
@@ -7393,9 +7397,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist2.TurtleName = new_turtle()
-Chapter18Xuirist2.TurtleName.shape(Chapter18Xuirist2.Sprite)
-Chapter18Xuirist2.TurtleName.hideturtle()
+Chapter18Xuirist2.Turtle = new_turtle()
+Chapter18Xuirist2.Turtle.shape(Chapter18Xuirist2.Sprite)
+Chapter18Xuirist2.Turtle.hideturtle()
 
 #Chapter18Xuirist3---------------
 register_shape("genericxuirist_small")
@@ -7423,9 +7427,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist3.TurtleName = new_turtle()
-Chapter18Xuirist3.TurtleName.shape(Chapter18Xuirist3.Sprite)
-Chapter18Xuirist3.TurtleName.hideturtle()
+Chapter18Xuirist3.Turtle = new_turtle()
+Chapter18Xuirist3.Turtle.shape(Chapter18Xuirist3.Sprite)
+Chapter18Xuirist3.Turtle.hideturtle()
 
 #Chapter18Xuirist4---------------
 register_shape("genericxuirist_small")
@@ -7453,9 +7457,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist4.TurtleName = new_turtle()
-Chapter18Xuirist4.TurtleName.shape(Chapter18Xuirist4.Sprite)
-Chapter18Xuirist4.TurtleName.hideturtle()
+Chapter18Xuirist4.Turtle = new_turtle()
+Chapter18Xuirist4.Turtle.shape(Chapter18Xuirist4.Sprite)
+Chapter18Xuirist4.Turtle.hideturtle()
 
 #Chapter18Xuirist5---------------
 register_shape("genericxuirist_small")
@@ -7483,9 +7487,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist5.TurtleName = new_turtle()
-Chapter18Xuirist5.TurtleName.shape(Chapter18Xuirist5.Sprite)
-Chapter18Xuirist5.TurtleName.hideturtle()
+Chapter18Xuirist5.Turtle = new_turtle()
+Chapter18Xuirist5.Turtle.shape(Chapter18Xuirist5.Sprite)
+Chapter18Xuirist5.Turtle.hideturtle()
 
 #Chapter18Xuirist6---------------
 register_shape("genericxuirist_small")
@@ -7513,9 +7517,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist6.TurtleName = new_turtle()
-Chapter18Xuirist6.TurtleName.shape(Chapter18Xuirist6.Sprite)
-Chapter18Xuirist6.TurtleName.hideturtle()
+Chapter18Xuirist6.Turtle = new_turtle()
+Chapter18Xuirist6.Turtle.shape(Chapter18Xuirist6.Sprite)
+Chapter18Xuirist6.Turtle.hideturtle()
 
 #Chapter18Xuirist7---------------
 register_shape("genericxuirist_small")
@@ -7543,9 +7547,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist7.TurtleName = new_turtle()
-Chapter18Xuirist7.TurtleName.shape(Chapter18Xuirist7.Sprite)
-Chapter18Xuirist7.TurtleName.hideturtle()
+Chapter18Xuirist7.Turtle = new_turtle()
+Chapter18Xuirist7.Turtle.shape(Chapter18Xuirist7.Sprite)
+Chapter18Xuirist7.Turtle.hideturtle()
 
 #Chapter18Xuirist8---------------
 register_shape("genericxuirist_small")
@@ -7573,9 +7577,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist8.TurtleName = new_turtle()
-Chapter18Xuirist8.TurtleName.shape(Chapter18Xuirist8.Sprite)
-Chapter18Xuirist8.TurtleName.hideturtle()
+Chapter18Xuirist8.Turtle = new_turtle()
+Chapter18Xuirist8.Turtle.shape(Chapter18Xuirist8.Sprite)
+Chapter18Xuirist8.Turtle.hideturtle()
 
 #Chapter18Xuirist9---------------
 register_shape("genericxuirist_small")
@@ -7603,9 +7607,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist9.TurtleName = new_turtle()
-Chapter18Xuirist9.TurtleName.shape(Chapter18Xuirist9.Sprite)
-Chapter18Xuirist9.TurtleName.hideturtle()
+Chapter18Xuirist9.Turtle = new_turtle()
+Chapter18Xuirist9.Turtle.shape(Chapter18Xuirist9.Sprite)
+Chapter18Xuirist9.Turtle.hideturtle()
 
 #Chapter18Xuirist10---------------
 register_shape("genericxuirist_small")
@@ -7633,9 +7637,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist10.TurtleName = new_turtle()
-Chapter18Xuirist10.TurtleName.shape(Chapter18Xuirist10.Sprite)
-Chapter18Xuirist10.TurtleName.hideturtle()
+Chapter18Xuirist10.Turtle = new_turtle()
+Chapter18Xuirist10.Turtle.shape(Chapter18Xuirist10.Sprite)
+Chapter18Xuirist10.Turtle.hideturtle()
 
 #Chapter18Xuirist11---------------
 register_shape("genericxuirist_small")
@@ -7663,9 +7667,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist11.TurtleName = new_turtle()
-Chapter18Xuirist11.TurtleName.shape(Chapter18Xuirist11.Sprite)
-Chapter18Xuirist11.TurtleName.hideturtle()
+Chapter18Xuirist11.Turtle = new_turtle()
+Chapter18Xuirist11.Turtle.shape(Chapter18Xuirist11.Sprite)
+Chapter18Xuirist11.Turtle.hideturtle()
 
 #Chapter18Xuirist12---------------
 register_shape("genericxuirist_small")
@@ -7693,9 +7697,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist12.TurtleName = new_turtle()
-Chapter18Xuirist12.TurtleName.shape(Chapter18Xuirist12.Sprite)
-Chapter18Xuirist12.TurtleName.hideturtle()
+Chapter18Xuirist12.Turtle = new_turtle()
+Chapter18Xuirist12.Turtle.shape(Chapter18Xuirist12.Sprite)
+Chapter18Xuirist12.Turtle.hideturtle()
 
 #Chapter18Xuirist13---------------
 register_shape("genericxuirist_small")
@@ -7723,9 +7727,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist13.TurtleName = new_turtle()
-Chapter18Xuirist13.TurtleName.shape(Chapter18Xuirist13.Sprite)
-Chapter18Xuirist13.TurtleName.hideturtle()
+Chapter18Xuirist13.Turtle = new_turtle()
+Chapter18Xuirist13.Turtle.shape(Chapter18Xuirist13.Sprite)
+Chapter18Xuirist13.Turtle.hideturtle()
 
 #Chapter18Xuirist14---------------
 register_shape("genericxuirist_small")
@@ -7753,9 +7757,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter18Xuirist14.TurtleName = new_turtle()
-Chapter18Xuirist14.TurtleName.shape(Chapter18Xuirist14.Sprite)
-Chapter18Xuirist14.TurtleName.hideturtle()
+Chapter18Xuirist14.Turtle = new_turtle()
+Chapter18Xuirist14.Turtle.shape(Chapter18Xuirist14.Sprite)
+Chapter18Xuirist14.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 19a]=======================================================================================================================================
@@ -7787,9 +7791,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter19Xuirist1.TurtleName = new_turtle()
-Chapter19Xuirist1.TurtleName.shape(Chapter19Xuirist1.Sprite)
-Chapter19Xuirist1.TurtleName.hideturtle()
+Chapter19Xuirist1.Turtle = new_turtle()
+Chapter19Xuirist1.Turtle.shape(Chapter19Xuirist1.Sprite)
+Chapter19Xuirist1.Turtle.hideturtle()
 
 #Chapter19Xuirist2---------------
 register_shape("genericxuirist_small")
@@ -7817,9 +7821,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter19Xuirist2.TurtleName = new_turtle()
-Chapter19Xuirist2.TurtleName.shape(Chapter19Xuirist2.Sprite)
-Chapter19Xuirist2.TurtleName.hideturtle()
+Chapter19Xuirist2.Turtle = new_turtle()
+Chapter19Xuirist2.Turtle.shape(Chapter19Xuirist2.Sprite)
+Chapter19Xuirist2.Turtle.hideturtle()
 
 #Chapter19Xuirist3---------------
 register_shape("genericxuirist_small")
@@ -7847,9 +7851,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter19Xuirist3.TurtleName = new_turtle()
-Chapter19Xuirist3.TurtleName.shape(Chapter19Xuirist3.Sprite)
-Chapter19Xuirist3.TurtleName.hideturtle()
+Chapter19Xuirist3.Turtle = new_turtle()
+Chapter19Xuirist3.Turtle.shape(Chapter19Xuirist3.Sprite)
+Chapter19Xuirist3.Turtle.hideturtle()
 
 #Chapter19Xuirist4---------------
 register_shape("genericxuirist_small")
@@ -7877,9 +7881,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter19Xuirist4.TurtleName = new_turtle()
-Chapter19Xuirist4.TurtleName.shape(Chapter19Xuirist4.Sprite)
-Chapter19Xuirist4.TurtleName.hideturtle()
+Chapter19Xuirist4.Turtle = new_turtle()
+Chapter19Xuirist4.Turtle.shape(Chapter19Xuirist4.Sprite)
+Chapter19Xuirist4.Turtle.hideturtle()
 
 #Chapter19Xuirist5---------------
 register_shape("genericxuirist_small")
@@ -7907,9 +7911,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter19Xuirist5.TurtleName = new_turtle()
-Chapter19Xuirist5.TurtleName.shape(Chapter19Xuirist5.Sprite)
-Chapter19Xuirist5.TurtleName.hideturtle()
+Chapter19Xuirist5.Turtle = new_turtle()
+Chapter19Xuirist5.Turtle.shape(Chapter19Xuirist5.Sprite)
+Chapter19Xuirist5.Turtle.hideturtle()
 
 #Armored1---------------
 register_shape("genericarmored_small")
@@ -7937,9 +7941,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Mercenary: Fall to the power of Xuir, or something."],
 Bio="A mercenary hired by the Xuirists.")
-Chapter19Armored1.TurtleName = new_turtle()
-Chapter19Armored1.TurtleName.shape(Chapter19Armored1.Sprite)
-Chapter19Armored1.TurtleName.hideturtle()
+Chapter19Armored1.Turtle = new_turtle()
+Chapter19Armored1.Turtle.shape(Chapter19Armored1.Sprite)
+Chapter19Armored1.Turtle.hideturtle()
 
 #Armored2---------------
 register_shape("genericarmored_small")
@@ -7967,9 +7971,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Mercenary: Fall to the power of Xuir, or something."],
 Bio="A mercenary hired by the Xuirists.")
-Chapter19Armored2.TurtleName = new_turtle()
-Chapter19Armored2.TurtleName.shape(Chapter19Armored2.Sprite)
-Chapter19Armored2.TurtleName.hideturtle()
+Chapter19Armored2.Turtle = new_turtle()
+Chapter19Armored2.Turtle.shape(Chapter19Armored2.Sprite)
+Chapter19Armored2.Turtle.hideturtle()
 
 #Armored3---------------
 register_shape("genericarmored_small")
@@ -7997,9 +8001,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Mercenary: Fall to the power of Xuir, or something."],
 Bio="A mercenary hired by the Xuirists.")
-Chapter19Armored3.TurtleName = new_turtle()
-Chapter19Armored3.TurtleName.shape(Chapter19Armored3.Sprite)
-Chapter19Armored3.TurtleName.hideturtle()
+Chapter19Armored3.Turtle = new_turtle()
+Chapter19Armored3.Turtle.shape(Chapter19Armored3.Sprite)
+Chapter19Armored3.Turtle.hideturtle()
 
 #Armored4---------------
 register_shape("genericarmored_small")
@@ -8027,9 +8031,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Mercenary: Fall to the power of Xuir, or something."],
 Bio="A mercenary hired by the Xuirists.")
-Chapter19Armored4.TurtleName = new_turtle()
-Chapter19Armored4.TurtleName.shape(Chapter19Armored4.Sprite)
-Chapter19Armored4.TurtleName.hideturtle()
+Chapter19Armored4.Turtle = new_turtle()
+Chapter19Armored4.Turtle.shape(Chapter19Armored4.Sprite)
+Chapter19Armored4.Turtle.hideturtle()
 
 #Armored5---------------
 register_shape("genericarmored_small")
@@ -8057,9 +8061,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Mercenary: Fall to the power of Xuir, or something."],
 Bio="A mercenary hired by the Xuirists.")
-Chapter19Armored5.TurtleName = new_turtle()
-Chapter19Armored5.TurtleName.shape(Chapter19Armored5.Sprite)
-Chapter19Armored5.TurtleName.hideturtle()
+Chapter19Armored5.Turtle = new_turtle()
+Chapter19Armored5.Turtle.shape(Chapter19Armored5.Sprite)
+Chapter19Armored5.Turtle.hideturtle()
 
 #Armored6---------------
 register_shape("genericarmored_small")
@@ -8087,9 +8091,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Mercenary: Fall to the power of Xuir, or something."],
 Bio="A mercenary hired by the Xuirists.")
-Chapter19Armored6.TurtleName = new_turtle()
-Chapter19Armored6.TurtleName.shape(Chapter19Armored6.Sprite)
-Chapter19Armored6.TurtleName.hideturtle()
+Chapter19Armored6.Turtle = new_turtle()
+Chapter19Armored6.Turtle.shape(Chapter19Armored6.Sprite)
+Chapter19Armored6.Turtle.hideturtle()
 
 #Archer1---------------
 register_shape("genericarcher_small")
@@ -8117,9 +8121,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Mercenary: Xuirism is good, or something."],
 Bio="A mercenary hired by the Xuirists.")
-Chapter19Archer1.TurtleName = new_turtle()
-Chapter19Archer1.TurtleName.shape(Chapter19Archer1.Sprite)
-Chapter19Archer1.TurtleName.hideturtle()
+Chapter19Archer1.Turtle = new_turtle()
+Chapter19Archer1.Turtle.shape(Chapter19Archer1.Sprite)
+Chapter19Archer1.Turtle.hideturtle()
 
 #Archer2---------------
 register_shape("genericarcher_small")
@@ -8147,9 +8151,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Mercenary: Xuirism is good, or something."],
 Bio="A mercenary hired by the Xuirists.")
-Chapter19Archer2.TurtleName = new_turtle()
-Chapter19Archer2.TurtleName.shape(Chapter19Archer2.Sprite)
-Chapter19Archer2.TurtleName.hideturtle()
+Chapter19Archer2.Turtle = new_turtle()
+Chapter19Archer2.Turtle.shape(Chapter19Archer2.Sprite)
+Chapter19Archer2.Turtle.hideturtle()
 
 #Archer3---------------
 register_shape("genericarcher_small")
@@ -8177,9 +8181,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Mercenary: Xuirism is good, or something."],
 Bio="A mercenary hired by the Xuirists.")
-Chapter19Archer3.TurtleName = new_turtle()
-Chapter19Archer3.TurtleName.shape(Chapter19Archer3.Sprite)
-Chapter19Archer3.TurtleName.hideturtle()
+Chapter19Archer3.Turtle = new_turtle()
+Chapter19Archer3.Turtle.shape(Chapter19Archer3.Sprite)
+Chapter19Archer3.Turtle.hideturtle()
 
 #Archer4---------------
 register_shape("genericarcher_small")
@@ -8207,9 +8211,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Mercenary: Xuirism is good, or something."],
 Bio="A mercenary hired by the Xuirists.")
-Chapter19Archer4.TurtleName = new_turtle()
-Chapter19Archer4.TurtleName.shape(Chapter19Archer4.Sprite)
-Chapter19Archer4.TurtleName.hideturtle()
+Chapter19Archer4.Turtle = new_turtle()
+Chapter19Archer4.Turtle.shape(Chapter19Archer4.Sprite)
+Chapter19Archer4.Turtle.hideturtle()
 
 #Archer5---------------
 register_shape("genericarcher_small")
@@ -8237,9 +8241,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Mercenary: Xuirism is good, or something."],
 Bio="A mercenary hired by the Xuirists.")
-Chapter19Archer5.TurtleName = new_turtle()
-Chapter19Archer5.TurtleName.shape(Chapter19Archer5.Sprite)
-Chapter19Archer5.TurtleName.hideturtle()
+Chapter19Archer5.Turtle = new_turtle()
+Chapter19Archer5.Turtle.shape(Chapter19Archer5.Sprite)
+Chapter19Archer5.Turtle.hideturtle()
 
 #Archer6---------------
 register_shape("genericarcher_small")
@@ -8267,9 +8271,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Mercenary: Xuirism is good, or something."],
 Bio="A mercenary hired by the Xuirists.")
-Chapter19Archer6.TurtleName = new_turtle()
-Chapter19Archer6.TurtleName.shape(Chapter19Archer6.Sprite)
-Chapter19Archer6.TurtleName.hideturtle()
+Chapter19Archer6.Turtle = new_turtle()
+Chapter19Archer6.Turtle.shape(Chapter19Archer6.Sprite)
+Chapter19Archer6.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 20a]=======================================================================================================================================
@@ -8301,9 +8305,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in the\nNolavillian Mountain Range.")
-Chapter20aFighter1.TurtleName = new_turtle()
-Chapter20aFighter1.TurtleName.shape(Chapter20aFighter1.Sprite)
-Chapter20aFighter1.TurtleName.hideturtle()
+Chapter20aFighter1.Turtle = new_turtle()
+Chapter20aFighter1.Turtle.shape(Chapter20aFighter1.Sprite)
+Chapter20aFighter1.Turtle.hideturtle()
 
 #Fighter2---------------
 register_shape("genericswordfighter_small")
@@ -8331,9 +8335,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in the\nNolavillian Mountain Range.")
-Chapter20aFighter2.TurtleName = new_turtle()
-Chapter20aFighter2.TurtleName.shape(Chapter20aFighter2.Sprite)
-Chapter20aFighter2.TurtleName.hideturtle()
+Chapter20aFighter2.Turtle = new_turtle()
+Chapter20aFighter2.Turtle.shape(Chapter20aFighter2.Sprite)
+Chapter20aFighter2.Turtle.hideturtle()
 
 #Fighter3---------------
 register_shape("genericswordfighter_small")
@@ -8361,9 +8365,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in the\nNolavillian Mountain Range.")
-Chapter20aFighter3.TurtleName = new_turtle()
-Chapter20aFighter3.TurtleName.shape(Chapter20aFighter3.Sprite)
-Chapter20aFighter3.TurtleName.hideturtle()
+Chapter20aFighter3.Turtle = new_turtle()
+Chapter20aFighter3.Turtle.shape(Chapter20aFighter3.Sprite)
+Chapter20aFighter3.Turtle.hideturtle()
 
 #Fighter4---------------
 register_shape("genericswordfighter_small")
@@ -8391,9 +8395,9 @@ Portrait="genericswordfighter_big",
 Sprite="genericswordfighter_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in the\nNolavillian Mountain Range.")
-Chapter20aFighter4.TurtleName = new_turtle()
-Chapter20aFighter4.TurtleName.shape(Chapter20aFighter4.Sprite)
-Chapter20aFighter4.TurtleName.hideturtle()
+Chapter20aFighter4.Turtle = new_turtle()
+Chapter20aFighter4.Turtle.shape(Chapter20aFighter4.Sprite)
+Chapter20aFighter4.Turtle.hideturtle()
 
 #Armored1---------------
 register_shape("genericarmored_small")
@@ -8421,9 +8425,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Bandit: You can't defeat me."],
 Bio="A bandit in the\nNolavillian Mountain Range.")
-Chapter20aArmored1.TurtleName = new_turtle()
-Chapter20aArmored1.TurtleName.shape(Chapter20aArmored1.Sprite)
-Chapter20aArmored1.TurtleName.hideturtle()
+Chapter20aArmored1.Turtle = new_turtle()
+Chapter20aArmored1.Turtle.shape(Chapter20aArmored1.Sprite)
+Chapter20aArmored1.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 20b]=======================================================================================================================================
@@ -8455,9 +8459,9 @@ Portrait="dael_big",
 Sprite="dael_small",
 LevelQuotes=["Dael: Fall before his power."],
 Bio="The head night of Neo's revoluionary army\nand an extreme supporter of Neo, Dael\nhas come to Nolavillia to obtain\nthe Itucher for Neo's conquest of Shade.")
-Dael.TurtleName = new_turtle()
-Dael.TurtleName.shape(Dael.Sprite)
-Dael.TurtleName.hideturtle()
+Dael.Turtle = new_turtle()
+Dael.Turtle.shape(Dael.Sprite)
+Dael.Turtle.hideturtle()
 
 #Dnefed------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 register_shape("dnefed_small")
@@ -8494,9 +8498,9 @@ Bio="Dnefed is a soldier from Shade.",
 ClassChange=[["Shield Knight", 45]], #[Name, Level]
 AttackUnlocks=[[moves.Javelin,37],[moves.ArmorBreak,40],[moves.ShieldBash,45]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-DnefedEnemy.TurtleName = new_turtle()
-DnefedEnemy.TurtleName.shape(DnefedEnemy.Sprite)
-DnefedEnemy.TurtleName.hideturtle()
+DnefedEnemy.Turtle = new_turtle()
+DnefedEnemy.Turtle.shape(DnefedEnemy.Sprite)
+DnefedEnemy.Turtle.hideturtle()
 
 #Thgif------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 register_shape("thgif_small")
@@ -8533,9 +8537,9 @@ Bio="Thgif is a soldier from Shade.",
 ClassChange=[["Elite Warrior", 45]], #[Name, Level]
 AttackUnlocks=[[moves.Slash,40],[moves.ArmorBreak,45]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-ThgifEnemy.TurtleName = new_turtle()
-ThgifEnemy.TurtleName.shape(ThgifEnemy.Sprite)
-ThgifEnemy.TurtleName.hideturtle()
+ThgifEnemy.Turtle = new_turtle()
+ThgifEnemy.Turtle.shape(ThgifEnemy.Sprite)
+ThgifEnemy.Turtle.hideturtle()
 
 #Gnirif------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 register_shape("gnirif_small")
@@ -8572,9 +8576,9 @@ Bio="Gnirif is a soldier from Shade.",
 ClassChange=[["Elite Sniper", 50]], #[Name, Level]
 AttackUnlocks=[[moves.SnipeII,40],[moves.SnipeIII,50]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-GnirifEnemy.TurtleName = new_turtle()
-GnirifEnemy.TurtleName.shape(GnirifEnemy.Sprite)
-GnirifEnemy.TurtleName.hideturtle()
+GnirifEnemy.Turtle = new_turtle()
+GnirifEnemy.Turtle.shape(GnirifEnemy.Sprite)
+GnirifEnemy.Turtle.hideturtle()
 
 #Cigam------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 register_shape("cigam_small")
@@ -8611,9 +8615,9 @@ Bio="Cigam is a soldier from Shade.",
 ClassChange=[["Dual Mage", 40]], #[Name, Level]
 AttackUnlocks=[[moves.Aqua,40],[moves.Hydro,45]], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[[moves.MedKit,37]])
-CigamEnemy.TurtleName = new_turtle()
-CigamEnemy.TurtleName.shape(CigamEnemy.Sprite)
-CigamEnemy.TurtleName.hideturtle()
+CigamEnemy.Turtle = new_turtle()
+CigamEnemy.Turtle.shape(CigamEnemy.Sprite)
+CigamEnemy.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 21a]=======================================================================================================================================
@@ -8645,9 +8649,9 @@ Portrait="break_big",
 Sprite="break_small",
 LevelQuotes=["Break: Are you scared?"],
 Bio="Break is one of the head scientists\nat the Shadow Realm Research Center, and works\ndirectly with Death Pepper in Xuir Research.\nHe is also the true leader of the Xuirist religion,\nhaving controlled Omega into creating and leading the\nreligion for him/")
-Chapter21aBreak.TurtleName = new_turtle()
-Chapter21aBreak.TurtleName.shape(Chapter21aBreak.Sprite)
-Chapter21aBreak.TurtleName.hideturtle()
+Chapter21aBreak.Turtle = new_turtle()
+Chapter21aBreak.Turtle.shape(Chapter21aBreak.Sprite)
+Chapter21aBreak.Turtle.hideturtle()
 
 #OmegaBoss------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 register_shape("omegaxuirist_small")
@@ -8675,9 +8679,9 @@ Portrait="omegaxuirist_big",
 Sprite="omegaxuirist_small",
 LevelQuotes=["Omega: ..."],
 Bio="Omega is the official founder of the\nXuirist religion, though he was forced\nby Break to create and maintain the religion\nfor him.")
-OmegaBoss.TurtleName = new_turtle()
-OmegaBoss.TurtleName.shape("omegaxuirist_small")
-OmegaBoss.TurtleName.hideturtle()
+OmegaBoss.Turtle = new_turtle()
+OmegaBoss.Turtle.shape("omegaxuirist_small")
+OmegaBoss.Turtle.hideturtle()
 
 #Undead1---------------
 register_shape("undead_small")
@@ -8705,9 +8709,9 @@ Portrait="undead1_big",
 Sprite="undead_small",
 LevelQuotes=["Undead: ..."],
 Bio="???")
-Undead1.TurtleName = new_turtle()
-Undead1.TurtleName.shape(Undead1.Sprite)
-Undead1.TurtleName.hideturtle()
+Undead1.Turtle = new_turtle()
+Undead1.Turtle.shape(Undead1.Sprite)
+Undead1.Turtle.hideturtle()
 
 #Undead2---------------
 register_shape("undead_small")
@@ -8735,9 +8739,9 @@ Portrait="undead2_big",
 Sprite="undead_small",
 LevelQuotes=["Undead: ..."],
 Bio="???")
-Undead2.TurtleName = new_turtle()
-Undead2.TurtleName.shape(Undead2.Sprite)
-Undead2.TurtleName.hideturtle()
+Undead2.Turtle = new_turtle()
+Undead2.Turtle.shape(Undead2.Sprite)
+Undead2.Turtle.hideturtle()
 
 #Undead3---------------
 register_shape("undead_small")
@@ -8765,9 +8769,9 @@ Portrait="undead3_big",
 Sprite="undead_small",
 LevelQuotes=["Undead: ..."],
 Bio="???")
-Undead3.TurtleName = new_turtle()
-Undead3.TurtleName.shape(Undead3.Sprite)
-Undead3.TurtleName.hideturtle()
+Undead3.Turtle = new_turtle()
+Undead3.Turtle.shape(Undead3.Sprite)
+Undead3.Turtle.hideturtle()
 
 #Undead4---------------
 register_shape("undead_small")
@@ -8795,9 +8799,9 @@ Portrait="undead4_big",
 Sprite="undead_small",
 LevelQuotes=["Undead: ..."],
 Bio="???")
-Undead4.TurtleName = new_turtle()
-Undead4.TurtleName.shape(Undead4.Sprite)
-Undead4.TurtleName.hideturtle()
+Undead4.Turtle = new_turtle()
+Undead4.Turtle.shape(Undead4.Sprite)
+Undead4.Turtle.hideturtle()
 
 #Undead5---------------
 register_shape("undead_small")
@@ -8825,9 +8829,9 @@ Portrait="undead5_big",
 Sprite="undead_small",
 LevelQuotes=["Undead: ..."],
 Bio="???")
-Undead5.TurtleName = new_turtle()
-Undead5.TurtleName.shape(Undead5.Sprite)
-Undead5.TurtleName.hideturtle()
+Undead5.Turtle = new_turtle()
+Undead5.Turtle.shape(Undead5.Sprite)
+Undead5.Turtle.hideturtle()
 
 #Chapter21aXuirist1---------------
 register_shape("genericxuirist_small")
@@ -8854,9 +8858,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter21aXuirist1.TurtleName = new_turtle()
-Chapter21aXuirist1.TurtleName.shape(Chapter21aXuirist1.Sprite)
-Chapter21aXuirist1.TurtleName.hideturtle()
+Chapter21aXuirist1.Turtle = new_turtle()
+Chapter21aXuirist1.Turtle.shape(Chapter21aXuirist1.Sprite)
+Chapter21aXuirist1.Turtle.hideturtle()
 
 #Chapter21aXuirist2---------------
 register_shape("genericxuirist_small")
@@ -8883,9 +8887,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter21aXuirist2.TurtleName = new_turtle()
-Chapter21aXuirist2.TurtleName.shape(Chapter21aXuirist2.Sprite)
-Chapter21aXuirist2.TurtleName.hideturtle()
+Chapter21aXuirist2.Turtle = new_turtle()
+Chapter21aXuirist2.Turtle.shape(Chapter21aXuirist2.Sprite)
+Chapter21aXuirist2.Turtle.hideturtle()
 
 #Chapter21aXuirist3---------------
 register_shape("genericxuirist_small")
@@ -8912,9 +8916,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter21aXuirist3.TurtleName = new_turtle()
-Chapter21aXuirist3.TurtleName.shape(Chapter21aXuirist3.Sprite)
-Chapter21aXuirist3.TurtleName.hideturtle()
+Chapter21aXuirist3.Turtle = new_turtle()
+Chapter21aXuirist3.Turtle.shape(Chapter21aXuirist3.Sprite)
+Chapter21aXuirist3.Turtle.hideturtle()
 
 #Chapter21aXuirist4---------------
 register_shape("genericxuirist_small")
@@ -8941,9 +8945,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter21aXuirist4.TurtleName = new_turtle()
-Chapter21aXuirist4.TurtleName.shape(Chapter21aXuirist4.Sprite)
-Chapter21aXuirist4.TurtleName.hideturtle()
+Chapter21aXuirist4.Turtle = new_turtle()
+Chapter21aXuirist4.Turtle.shape(Chapter21aXuirist4.Sprite)
+Chapter21aXuirist4.Turtle.hideturtle()
 
 #Chapter21aXuirist5---------------
 register_shape("genericxuirist_small")
@@ -8970,9 +8974,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter21aXuirist5.TurtleName = new_turtle()
-Chapter21aXuirist5.TurtleName.shape(Chapter21aXuirist5.Sprite)
-Chapter21aXuirist5.TurtleName.hideturtle()
+Chapter21aXuirist5.Turtle = new_turtle()
+Chapter21aXuirist5.Turtle.shape(Chapter21aXuirist5.Sprite)
+Chapter21aXuirist5.Turtle.hideturtle()
 
 #Chapter21aXuirist6---------------
 register_shape("genericxuirist_small")
@@ -8999,9 +9003,9 @@ Portrait="genericxuirist_big",
 Sprite="genericxuirist_small",
 LevelQuotes=["Xuirist: All opposition must be stopped."],
 Bio="A low-ranking Xuirist.")
-Chapter21aXuirist6.TurtleName = new_turtle()
-Chapter21aXuirist6.TurtleName.shape(Chapter21aXuirist6.Sprite)
-Chapter21aXuirist6.TurtleName.hideturtle()
+Chapter21aXuirist6.Turtle = new_turtle()
+Chapter21aXuirist6.Turtle.shape(Chapter21aXuirist6.Sprite)
+Chapter21aXuirist6.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 22a]=======================================================================================================================================
@@ -9033,9 +9037,9 @@ Portrait="if_big",
 Sprite="if_small",
 LevelQuotes=["If: Imagine not even making it past the first sector."],
 Bio="If Bool is the head of the First Division of Scientists\nat the Shadow Realm Research Center. He is\noften very strict, only allowing his division\nto perform under his exact conditions.")
-IfBoss.TurtleName = new_turtle()
-IfBoss.TurtleName.shape(IfBoss.Sprite)
-IfBoss.TurtleName.hideturtle()
+IfBoss.Turtle = new_turtle()
+IfBoss.Turtle.shape(IfBoss.Sprite)
+IfBoss.Turtle.hideturtle()
 
 #Scientist1---------------
 register_shape("genericscientist_small")
@@ -9063,9 +9067,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the First\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter22aScientist1.TurtleName = new_turtle()
-Chapter22aScientist1.TurtleName.shape(Chapter22aScientist1.Sprite)
-Chapter22aScientist1.TurtleName.hideturtle()
+Chapter22aScientist1.Turtle = new_turtle()
+Chapter22aScientist1.Turtle.shape(Chapter22aScientist1.Sprite)
+Chapter22aScientist1.Turtle.hideturtle()
 
 #Scientist2---------------
 register_shape("genericscientist_small")
@@ -9093,9 +9097,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the First\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter22aScientist2.TurtleName = new_turtle()
-Chapter22aScientist2.TurtleName.shape(Chapter22aScientist2.Sprite)
-Chapter22aScientist2.TurtleName.hideturtle()
+Chapter22aScientist2.Turtle = new_turtle()
+Chapter22aScientist2.Turtle.shape(Chapter22aScientist2.Sprite)
+Chapter22aScientist2.Turtle.hideturtle()
 
 #Scientist3---------------
 register_shape("genericscientist_small")
@@ -9123,9 +9127,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the First\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter22aScientist3.TurtleName = new_turtle()
-Chapter22aScientist3.TurtleName.shape(Chapter22aScientist3.Sprite)
-Chapter22aScientist3.TurtleName.hideturtle()
+Chapter22aScientist3.Turtle = new_turtle()
+Chapter22aScientist3.Turtle.shape(Chapter22aScientist3.Sprite)
+Chapter22aScientist3.Turtle.hideturtle()
 
 #Scientist4---------------
 register_shape("genericscientist_small")
@@ -9153,9 +9157,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the First\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter22aScientist4.TurtleName = new_turtle()
-Chapter22aScientist4.TurtleName.shape(Chapter22aScientist4.Sprite)
-Chapter22aScientist4.TurtleName.hideturtle()
+Chapter22aScientist4.Turtle = new_turtle()
+Chapter22aScientist4.Turtle.shape(Chapter22aScientist4.Sprite)
+Chapter22aScientist4.Turtle.hideturtle()
 
 #Scientist5---------------
 register_shape("genericscientist_small")
@@ -9183,9 +9187,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the First\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter22aScientist5.TurtleName = new_turtle()
-Chapter22aScientist5.TurtleName.shape(Chapter22aScientist5.Sprite)
-Chapter22aScientist5.TurtleName.hideturtle()
+Chapter22aScientist5.Turtle = new_turtle()
+Chapter22aScientist5.Turtle.shape(Chapter22aScientist5.Sprite)
+Chapter22aScientist5.Turtle.hideturtle()
 
 #Scientist6---------------
 register_shape("genericscientist_small")
@@ -9213,9 +9217,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: The Itucher is ours."],
 Bio="A scientist working in the First\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter22aScientist6.TurtleName = new_turtle()
-Chapter22aScientist6.TurtleName.shape(Chapter22aScientist6.Sprite)
-Chapter22aScientist6.TurtleName.hideturtle()
+Chapter22aScientist6.Turtle = new_turtle()
+Chapter22aScientist6.Turtle.shape(Chapter22aScientist6.Sprite)
+Chapter22aScientist6.Turtle.hideturtle()
 
 #Scientist7---------------
 register_shape("genericscientist_small")
@@ -9243,9 +9247,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: The Itucher is ours."],
 Bio="A scientist working in the First\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter22aScientist7.TurtleName = new_turtle()
-Chapter22aScientist7.TurtleName.shape(Chapter22aScientist7.Sprite)
-Chapter22aScientist7.TurtleName.hideturtle()
+Chapter22aScientist7.Turtle = new_turtle()
+Chapter22aScientist7.Turtle.shape(Chapter22aScientist7.Sprite)
+Chapter22aScientist7.Turtle.hideturtle()
 
 #Scientist8---------------
 register_shape("genericscientist_small")
@@ -9273,9 +9277,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: The Itucher is ours."],
 Bio="A scientist working in the First\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter22aScientist8.TurtleName = new_turtle()
-Chapter22aScientist8.TurtleName.shape(Chapter22aScientist8.Sprite)
-Chapter22aScientist8.TurtleName.hideturtle()
+Chapter22aScientist8.Turtle = new_turtle()
+Chapter22aScientist8.Turtle.shape(Chapter22aScientist8.Sprite)
+Chapter22aScientist8.Turtle.hideturtle()
 
 #Scientist9---------------
 register_shape("genericscientist_small")
@@ -9303,9 +9307,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the First\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter22aScientist9.TurtleName = new_turtle()
-Chapter22aScientist9.TurtleName.shape(Chapter22aScientist9.Sprite)
-Chapter22aScientist9.TurtleName.hideturtle()
+Chapter22aScientist9.Turtle = new_turtle()
+Chapter22aScientist9.Turtle.shape(Chapter22aScientist9.Sprite)
+Chapter22aScientist9.Turtle.hideturtle()
 
 #Scientist10---------------
 register_shape("genericscientist_small")
@@ -9333,9 +9337,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the First\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter22aScientist10.TurtleName = new_turtle()
-Chapter22aScientist10.TurtleName.shape(Chapter22aScientist10.Sprite)
-Chapter22aScientist10.TurtleName.hideturtle()
+Chapter22aScientist10.Turtle = new_turtle()
+Chapter22aScientist10.Turtle.shape(Chapter22aScientist10.Sprite)
+Chapter22aScientist10.Turtle.hideturtle()
 
 #Scientist11---------------
 register_shape("genericscientist_small")
@@ -9363,9 +9367,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the First\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter22aScientist11.TurtleName = new_turtle()
-Chapter22aScientist11.TurtleName.shape(Chapter22aScientist11.Sprite)
-Chapter22aScientist11.TurtleName.hideturtle()
+Chapter22aScientist11.Turtle = new_turtle()
+Chapter22aScientist11.Turtle.shape(Chapter22aScientist11.Sprite)
+Chapter22aScientist11.Turtle.hideturtle()
 
 
 #==============================================================================================================================================================================================================================================================================
@@ -9398,9 +9402,9 @@ Portrait="elif_big",
 Sprite="elif_small",
 LevelQuotes=["Elif: It seems like my tactics are succeeding."],
 Bio="Elif Int is the head of the Second Division of Scientists at the Shadow Realm Research Center.\nHe is the most lenient of the four division heads, being open to most\nalternate options. He is also the founder and leader of the Sci-Triptych Sectoral Board,\na board of the first three Division Heads of the Shadow Realm\nResearch Lab to which he often discusses alternate courses of\nactions that could be taken at the lab.")
-ElifBoss.TurtleName = new_turtle()
-ElifBoss.TurtleName.shape(ElifBoss.Sprite)
-ElifBoss.TurtleName.hideturtle()
+ElifBoss.Turtle = new_turtle()
+ElifBoss.Turtle.shape(ElifBoss.Sprite)
+ElifBoss.Turtle.hideturtle()
 
 #Scientist1---------------
 register_shape("genericscientist_small")
@@ -9428,9 +9432,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Second\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter23aScientist1.TurtleName = new_turtle()
-Chapter23aScientist1.TurtleName.shape(Chapter23aScientist1.Sprite)
-Chapter23aScientist1.TurtleName.hideturtle()
+Chapter23aScientist1.Turtle = new_turtle()
+Chapter23aScientist1.Turtle.shape(Chapter23aScientist1.Sprite)
+Chapter23aScientist1.Turtle.hideturtle()
 
 #Scientist2---------------
 register_shape("genericscientist_small")
@@ -9458,9 +9462,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Second\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter23aScientist2.TurtleName = new_turtle()
-Chapter23aScientist2.TurtleName.shape(Chapter23aScientist2.Sprite)
-Chapter23aScientist2.TurtleName.hideturtle()
+Chapter23aScientist2.Turtle = new_turtle()
+Chapter23aScientist2.Turtle.shape(Chapter23aScientist2.Sprite)
+Chapter23aScientist2.Turtle.hideturtle()
 
 #Scientist3---------------
 register_shape("genericscientist_small")
@@ -9488,9 +9492,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Second\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter23aScientist3.TurtleName = new_turtle()
-Chapter23aScientist3.TurtleName.shape(Chapter23aScientist3.Sprite)
-Chapter23aScientist3.TurtleName.hideturtle()
+Chapter23aScientist3.Turtle = new_turtle()
+Chapter23aScientist3.Turtle.shape(Chapter23aScientist3.Sprite)
+Chapter23aScientist3.Turtle.hideturtle()
 
 #Scientist4---------------
 register_shape("genericscientist_small")
@@ -9518,9 +9522,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Second\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter23aScientist4.TurtleName = new_turtle()
-Chapter23aScientist4.TurtleName.shape(Chapter23aScientist4.Sprite)
-Chapter23aScientist4.TurtleName.hideturtle()
+Chapter23aScientist4.Turtle = new_turtle()
+Chapter23aScientist4.Turtle.shape(Chapter23aScientist4.Sprite)
+Chapter23aScientist4.Turtle.hideturtle()
 
 #Scientist5---------------
 register_shape("genericscientist_small")
@@ -9548,9 +9552,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Second\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter23aScientist5.TurtleName = new_turtle()
-Chapter23aScientist5.TurtleName.shape(Chapter23aScientist5.Sprite)
-Chapter23aScientist5.TurtleName.hideturtle()
+Chapter23aScientist5.Turtle = new_turtle()
+Chapter23aScientist5.Turtle.shape(Chapter23aScientist5.Sprite)
+Chapter23aScientist5.Turtle.hideturtle()
 
 #Scientist6---------------
 register_shape("genericscientist_small")
@@ -9578,9 +9582,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Second\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter23aScientist6.TurtleName = new_turtle()
-Chapter23aScientist6.TurtleName.shape(Chapter23aScientist6.Sprite)
-Chapter23aScientist6.TurtleName.hideturtle()
+Chapter23aScientist6.Turtle = new_turtle()
+Chapter23aScientist6.Turtle.shape(Chapter23aScientist6.Sprite)
+Chapter23aScientist6.Turtle.hideturtle()
 
 #Scientist7---------------
 register_shape("genericscientist_small")
@@ -9608,9 +9612,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Second\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter23aScientist7.TurtleName = new_turtle()
-Chapter23aScientist7.TurtleName.shape(Chapter23aScientist7.Sprite)
-Chapter23aScientist7.TurtleName.hideturtle()
+Chapter23aScientist7.Turtle = new_turtle()
+Chapter23aScientist7.Turtle.shape(Chapter23aScientist7.Sprite)
+Chapter23aScientist7.Turtle.hideturtle()
 
 #Scientist8---------------
 register_shape("genericscientist_small")
@@ -9638,9 +9642,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Second\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter23aScientist8.TurtleName = new_turtle()
-Chapter23aScientist8.TurtleName.shape(Chapter23aScientist8.Sprite)
-Chapter23aScientist8.TurtleName.hideturtle()
+Chapter23aScientist8.Turtle = new_turtle()
+Chapter23aScientist8.Turtle.shape(Chapter23aScientist8.Sprite)
+Chapter23aScientist8.Turtle.hideturtle()
 
 #Scientist9---------------
 register_shape("genericscientist_small")
@@ -9668,9 +9672,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Second\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter23aScientist9.TurtleName = new_turtle()
-Chapter23aScientist9.TurtleName.shape(Chapter23aScientist9.Sprite)
-Chapter23aScientist9.TurtleName.hideturtle()
+Chapter23aScientist9.Turtle = new_turtle()
+Chapter23aScientist9.Turtle.shape(Chapter23aScientist9.Sprite)
+Chapter23aScientist9.Turtle.hideturtle()
 
 #Scientist10---------------
 register_shape("genericscientist_small")
@@ -9698,9 +9702,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Second\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter23aScientist10.TurtleName = new_turtle()
-Chapter23aScientist10.TurtleName.shape(Chapter23aScientist10.Sprite)
-Chapter23aScientist10.TurtleName.hideturtle()
+Chapter23aScientist10.Turtle = new_turtle()
+Chapter23aScientist10.Turtle.shape(Chapter23aScientist10.Sprite)
+Chapter23aScientist10.Turtle.hideturtle()
 
 #Archer1---------------
 register_shape("genericarcher_small")
@@ -9728,9 +9732,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Guard: You must be eliminated."],
 Bio="A guard at the Shadow Realm Research Lab.")
-Chapter23aArcher1.TurtleName = new_turtle()
-Chapter23aArcher1.TurtleName.shape(Chapter23aArcher1.Sprite)
-Chapter23aArcher1.TurtleName.hideturtle()
+Chapter23aArcher1.Turtle = new_turtle()
+Chapter23aArcher1.Turtle.shape(Chapter23aArcher1.Sprite)
+Chapter23aArcher1.Turtle.hideturtle()
 
 #Archer2---------------
 register_shape("genericarcher_small")
@@ -9758,9 +9762,9 @@ Portrait="genericarcher_big",
 Sprite="genericarcher_small",
 LevelQuotes=["Guard: You must be eliminated."],
 Bio="A guard at the Shadow Realm Research Lab.")
-Chapter23aArcher2.TurtleName = new_turtle()
-Chapter23aArcher2.TurtleName.shape(Chapter23aArcher2.Sprite)
-Chapter23aArcher2.TurtleName.hideturtle()
+Chapter23aArcher2.Turtle = new_turtle()
+Chapter23aArcher2.Turtle.shape(Chapter23aArcher2.Sprite)
+Chapter23aArcher2.Turtle.hideturtle()
 
 
 #==============================================================================================================================================================================================================================================================================
@@ -9793,9 +9797,9 @@ Portrait="else_big",
 Sprite="else_small",
 LevelQuotes=["Else: Yes!"],
 Bio="Else Do is the head of the Third Division of Scientists at the Shadow Realm Research Center.\nHe often does the opposite of what the others do,\nand has a very strong stance on the preservation of\nobsucure technology and spells. As well, he acts as the advisor of the\nSci-Triptych Sectoral Board; though it's frankly an useless title in such a\n powerless and small organization.")
-ElseBoss.TurtleName = new_turtle()
-ElseBoss.TurtleName.shape(ElseBoss.Sprite)
-ElseBoss.TurtleName.hideturtle()
+ElseBoss.Turtle = new_turtle()
+ElseBoss.Turtle.shape(ElseBoss.Sprite)
+ElseBoss.Turtle.hideturtle()
 
 #Scientist1---------------
 register_shape("genericscientist_small")
@@ -9823,9 +9827,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter24aScientist1.TurtleName = new_turtle()
-Chapter24aScientist1.TurtleName.shape(Chapter24aScientist1.Sprite)
-Chapter24aScientist1.TurtleName.hideturtle()
+Chapter24aScientist1.Turtle = new_turtle()
+Chapter24aScientist1.Turtle.shape(Chapter24aScientist1.Sprite)
+Chapter24aScientist1.Turtle.hideturtle()
 
 #Scientist2---------------
 register_shape("genericscientist_small")
@@ -9853,9 +9857,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter24aScientist2.TurtleName = new_turtle()
-Chapter24aScientist2.TurtleName.shape(Chapter24aScientist2.Sprite)
-Chapter24aScientist2.TurtleName.hideturtle()
+Chapter24aScientist2.Turtle = new_turtle()
+Chapter24aScientist2.Turtle.shape(Chapter24aScientist2.Sprite)
+Chapter24aScientist2.Turtle.hideturtle()
 
 #Scientist3---------------
 register_shape("genericscientist_small")
@@ -9883,9 +9887,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter24aScientist3.TurtleName = new_turtle()
-Chapter24aScientist3.TurtleName.shape(Chapter24aScientist3.Sprite)
-Chapter24aScientist3.TurtleName.hideturtle()
+Chapter24aScientist3.Turtle = new_turtle()
+Chapter24aScientist3.Turtle.shape(Chapter24aScientist3.Sprite)
+Chapter24aScientist3.Turtle.hideturtle()
 
 #Scientist4---------------
 register_shape("genericscientist_small")
@@ -9913,9 +9917,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter24aScientist4.TurtleName = new_turtle()
-Chapter24aScientist4.TurtleName.shape(Chapter24aScientist4.Sprite)
-Chapter24aScientist4.TurtleName.hideturtle()
+Chapter24aScientist4.Turtle = new_turtle()
+Chapter24aScientist4.Turtle.shape(Chapter24aScientist4.Sprite)
+Chapter24aScientist4.Turtle.hideturtle()
 
 #Scientist5---------------
 register_shape("genericscientist_small")
@@ -9943,9 +9947,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter24aScientist5.TurtleName = new_turtle()
-Chapter24aScientist5.TurtleName.shape(Chapter24aScientist5.Sprite)
-Chapter24aScientist5.TurtleName.hideturtle()
+Chapter24aScientist5.Turtle = new_turtle()
+Chapter24aScientist5.Turtle.shape(Chapter24aScientist5.Sprite)
+Chapter24aScientist5.Turtle.hideturtle()
 
 #Scientist6---------------
 register_shape("genericscientist_small")
@@ -9973,9 +9977,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter24aScientist6.TurtleName = new_turtle()
-Chapter24aScientist6.TurtleName.shape(Chapter24aScientist6.Sprite)
-Chapter24aScientist6.TurtleName.hideturtle()
+Chapter24aScientist6.Turtle = new_turtle()
+Chapter24aScientist6.Turtle.shape(Chapter24aScientist6.Sprite)
+Chapter24aScientist6.Turtle.hideturtle()
 
 #Scientist7---------------
 register_shape("genericscientist_small")
@@ -10003,9 +10007,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter24aScientist7.TurtleName = new_turtle()
-Chapter24aScientist7.TurtleName.shape(Chapter24aScientist7.Sprite)
-Chapter24aScientist7.TurtleName.hideturtle()
+Chapter24aScientist7.Turtle = new_turtle()
+Chapter24aScientist7.Turtle.shape(Chapter24aScientist7.Sprite)
+Chapter24aScientist7.Turtle.hideturtle()
 
 #Scientist8---------------
 register_shape("genericscientist_small")
@@ -10033,9 +10037,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter24aScientist8.TurtleName = new_turtle()
-Chapter24aScientist8.TurtleName.shape(Chapter24aScientist8.Sprite)
-Chapter24aScientist8.TurtleName.hideturtle()
+Chapter24aScientist8.Turtle = new_turtle()
+Chapter24aScientist8.Turtle.shape(Chapter24aScientist8.Sprite)
+Chapter24aScientist8.Turtle.hideturtle()
 
 #Scientist9---------------
 register_shape("genericscientist_small")
@@ -10063,9 +10067,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter24aScientist9.TurtleName = new_turtle()
-Chapter24aScientist9.TurtleName.shape(Chapter24aScientist9.Sprite)
-Chapter24aScientist9.TurtleName.hideturtle()
+Chapter24aScientist9.Turtle = new_turtle()
+Chapter24aScientist9.Turtle.shape(Chapter24aScientist9.Sprite)
+Chapter24aScientist9.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 25a]=======================================================================================================================================
@@ -10097,9 +10101,9 @@ Portrait="break2_big",
 Sprite="break2_small",
 LevelQuotes=["Break: AHAHAHAHAHAHHAHAHAHAHAHA!!!"],
 Bio="Break is successfully wielding the Holy Itucher. As well as this, he has activated his\nAlg Formation and his Unique Spell, Depravity.\nDepravity allows him to move extremely quickly and provides a massive boost\n to his physical strength and magica generation while actiavted. However, his power,\n due to the combination of the Holy Itucher, Alg Formation, and Depravity;\nis starting to go beyond what his body can handle.")
-BreakItucher.TurtleName = new_turtle()
-BreakItucher.TurtleName.shape(BreakItucher.Sprite)
-BreakItucher.TurtleName.hideturtle()
+BreakItucher.Turtle = new_turtle()
+BreakItucher.Turtle.shape(BreakItucher.Sprite)
+BreakItucher.Turtle.hideturtle()
 
 #Scientist1---------------
 register_shape("genericscientist_small")
@@ -10127,9 +10131,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter25aScientist1.TurtleName = new_turtle()
-Chapter25aScientist1.TurtleName.shape(Chapter25aScientist1.Sprite)
-Chapter25aScientist1.TurtleName.hideturtle()
+Chapter25aScientist1.Turtle = new_turtle()
+Chapter25aScientist1.Turtle.shape(Chapter25aScientist1.Sprite)
+Chapter25aScientist1.Turtle.hideturtle()
 
 #Scientist2---------------
 register_shape("genericscientist_small")
@@ -10157,9 +10161,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter25aScientist2.TurtleName = new_turtle()
-Chapter25aScientist2.TurtleName.shape(Chapter25aScientist2.Sprite)
-Chapter25aScientist2.TurtleName.hideturtle()
+Chapter25aScientist2.Turtle = new_turtle()
+Chapter25aScientist2.Turtle.shape(Chapter25aScientist2.Sprite)
+Chapter25aScientist2.Turtle.hideturtle()
 
 #Scientist3---------------
 register_shape("genericscientist_small")
@@ -10187,9 +10191,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter25aScientist3.TurtleName = new_turtle()
-Chapter25aScientist3.TurtleName.shape(Chapter25aScientist3.Sprite)
-Chapter25aScientist3.TurtleName.hideturtle()
+Chapter25aScientist3.Turtle = new_turtle()
+Chapter25aScientist3.Turtle.shape(Chapter25aScientist3.Sprite)
+Chapter25aScientist3.Turtle.hideturtle()
 
 #Scientist4---------------
 register_shape("genericscientist_small")
@@ -10217,9 +10221,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter25aScientist4.TurtleName = new_turtle()
-Chapter25aScientist4.TurtleName.shape(Chapter25aScientist4.Sprite)
-Chapter25aScientist4.TurtleName.hideturtle()
+Chapter25aScientist4.Turtle = new_turtle()
+Chapter25aScientist4.Turtle.shape(Chapter25aScientist4.Sprite)
+Chapter25aScientist4.Turtle.hideturtle()
 
 #Scientist5---------------
 register_shape("genericscientist_small")
@@ -10247,9 +10251,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter25aScientist5.TurtleName = new_turtle()
-Chapter25aScientist5.TurtleName.shape(Chapter25aScientist5.Sprite)
-Chapter25aScientist5.TurtleName.hideturtle()
+Chapter25aScientist5.Turtle = new_turtle()
+Chapter25aScientist5.Turtle.shape(Chapter25aScientist5.Sprite)
+Chapter25aScientist5.Turtle.hideturtle()
 
 #Scientist6---------------
 register_shape("genericscientist_small")
@@ -10277,9 +10281,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Third\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter25aScientist6.TurtleName = new_turtle()
-Chapter25aScientist6.TurtleName.shape(Chapter25aScientist6.Sprite)
-Chapter25aScientist6.TurtleName.hideturtle()
+Chapter25aScientist6.Turtle = new_turtle()
+Chapter25aScientist6.Turtle.shape(Chapter25aScientist6.Sprite)
+Chapter25aScientist6.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 25b]=======================================================================================================================================
@@ -10311,9 +10315,9 @@ Portrait="break_big",
 Sprite="break_small",
 LevelQuotes=["Break: Fall to my power, fools."],
 Bio="Break is the head of the Fourth Division of\nScientists at the Shadow Realm Research Lab,\nand is the second-highest ranking official\nat the Shadow Realm Research Lab. He is the\nonly Division Head not part of the Sci-Triptych Sectoral Board.")
-Breakc25b.TurtleName = new_turtle()
-Breakc25b.TurtleName.shape(Breakc25b.Sprite)
-Breakc25b.TurtleName.hideturtle()
+Breakc25b.Turtle = new_turtle()
+Breakc25b.Turtle.shape(Breakc25b.Sprite)
+Breakc25b.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 26a]=======================================================================================================================================
@@ -10345,9 +10349,9 @@ Portrait="deathpepper_big",
 Sprite="deathpepper_small",
 LevelQuotes=["Death Pepper: This is what you get for defying me."],
 Bio="Death Pepper is the head of the Shadow Realm Research Center,\nwhere he has been tasked by Neville Prime to create entities with the powers\nof True Xuir. Though the research of recreating the\npowers of True Xuir have been going on for centuries,\nDeath Pepper has come the closest to discovering the secret of\nactivating the power of the True Xuir.")
-DeathPepperBoss.TurtleName = new_turtle()
-DeathPepperBoss.TurtleName.shape(DeathPepperBoss.Sprite)
-DeathPepperBoss.TurtleName.hideturtle()
+DeathPepperBoss.Turtle = new_turtle()
+DeathPepperBoss.Turtle.shape(DeathPepperBoss.Sprite)
+DeathPepperBoss.Turtle.hideturtle()
 
 #Armored1---------------
 register_shape("genericarmored_small")
@@ -10375,9 +10379,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Guard: You can't defeat me."],
 Bio="Death Pepper's Guard.")
-Chapter26aArmored1.TurtleName = new_turtle()
-Chapter26aArmored1.TurtleName.shape(Chapter26aArmored1.Sprite)
-Chapter26aArmored1.TurtleName.hideturtle()
+Chapter26aArmored1.Turtle = new_turtle()
+Chapter26aArmored1.Turtle.shape(Chapter26aArmored1.Sprite)
+Chapter26aArmored1.Turtle.hideturtle()
 
 #Armored2---------------
 register_shape("genericarmored_small")
@@ -10405,9 +10409,9 @@ Portrait="genericarmored_big",
 Sprite="genericarmored_small",
 LevelQuotes=["Guard: You can't defeat me."],
 Bio="Death Pepper's Guard.")
-Chapter26aArmored2.TurtleName = new_turtle()
-Chapter26aArmored2.TurtleName.shape(Chapter26aArmored2.Sprite)
-Chapter26aArmored2.TurtleName.hideturtle()
+Chapter26aArmored2.Turtle = new_turtle()
+Chapter26aArmored2.Turtle.shape(Chapter26aArmored2.Sprite)
+Chapter26aArmored2.Turtle.hideturtle()
 
 #Scientist1---------------
 register_shape("genericscientist_small")
@@ -10435,9 +10439,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Fifth\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter26aScientist1.TurtleName = new_turtle()
-Chapter26aScientist1.TurtleName.shape(Chapter26aScientist1.Sprite)
-Chapter26aScientist1.TurtleName.hideturtle()
+Chapter26aScientist1.Turtle = new_turtle()
+Chapter26aScientist1.Turtle.shape(Chapter26aScientist1.Sprite)
+Chapter26aScientist1.Turtle.hideturtle()
 
 #Scientist2---------------
 register_shape("genericscientist_small")
@@ -10465,9 +10469,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Fifth\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter26aScientist2.TurtleName = new_turtle()
-Chapter26aScientist2.TurtleName.shape(Chapter26aScientist2.Sprite)
-Chapter26aScientist2.TurtleName.hideturtle()
+Chapter26aScientist2.Turtle = new_turtle()
+Chapter26aScientist2.Turtle.shape(Chapter26aScientist2.Sprite)
+Chapter26aScientist2.Turtle.hideturtle()
 
 #Scientist3---------------
 register_shape("genericscientist_small")
@@ -10495,9 +10499,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Fifth\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter26aScientist3.TurtleName = new_turtle()
-Chapter26aScientist3.TurtleName.shape(Chapter26aScientist3.Sprite)
-Chapter26aScientist3.TurtleName.hideturtle()
+Chapter26aScientist3.Turtle = new_turtle()
+Chapter26aScientist3.Turtle.shape(Chapter26aScientist3.Sprite)
+Chapter26aScientist3.Turtle.hideturtle()
 
 #Scientist4---------------
 register_shape("genericscientist_small")
@@ -10525,9 +10529,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Fifth\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter26aScientist4.TurtleName = new_turtle()
-Chapter26aScientist4.TurtleName.shape(Chapter26aScientist4.Sprite)
-Chapter26aScientist4.TurtleName.hideturtle()
+Chapter26aScientist4.Turtle = new_turtle()
+Chapter26aScientist4.Turtle.shape(Chapter26aScientist4.Sprite)
+Chapter26aScientist4.Turtle.hideturtle()
 
 #Scientist5---------------
 register_shape("genericscientist_small")
@@ -10555,9 +10559,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Fifth\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter26aScientist5.TurtleName = new_turtle()
-Chapter26aScientist5.TurtleName.shape(Chapter26aScientist5.Sprite)
-Chapter26aScientist5.TurtleName.hideturtle()
+Chapter26aScientist5.Turtle = new_turtle()
+Chapter26aScientist5.Turtle.shape(Chapter26aScientist5.Sprite)
+Chapter26aScientist5.Turtle.hideturtle()
 
 #Scientist6---------------
 register_shape("genericscientist_small")
@@ -10585,9 +10589,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Fifth\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter26aScientist6.TurtleName = new_turtle()
-Chapter26aScientist6.TurtleName.shape(Chapter26aScientist6.Sprite)
-Chapter26aScientist6.TurtleName.hideturtle()
+Chapter26aScientist6.Turtle = new_turtle()
+Chapter26aScientist6.Turtle.shape(Chapter26aScientist6.Sprite)
+Chapter26aScientist6.Turtle.hideturtle()
 
 #Scientist7---------------
 register_shape("genericscientist_small")
@@ -10615,9 +10619,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Fifth\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter26aScientist7.TurtleName = new_turtle()
-Chapter26aScientist7.TurtleName.shape(Chapter26aScientist7.Sprite)
-Chapter26aScientist7.TurtleName.hideturtle()
+Chapter26aScientist7.Turtle = new_turtle()
+Chapter26aScientist7.Turtle.shape(Chapter26aScientist7.Sprite)
+Chapter26aScientist7.Turtle.hideturtle()
 
 #Scientist8---------------
 register_shape("genericscientist_small")
@@ -10645,9 +10649,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Fifth\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter26aScientist8.TurtleName = new_turtle()
-Chapter26aScientist8.TurtleName.shape(Chapter26aScientist8.Sprite)
-Chapter26aScientist8.TurtleName.hideturtle()
+Chapter26aScientist8.Turtle = new_turtle()
+Chapter26aScientist8.Turtle.shape(Chapter26aScientist8.Sprite)
+Chapter26aScientist8.Turtle.hideturtle()
 
 #Scientist9---------------
 register_shape("genericscientist_small")
@@ -10675,9 +10679,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Fifth\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter26aScientist9.TurtleName = new_turtle()
-Chapter26aScientist9.TurtleName.shape(Chapter26aScientist9.Sprite)
-Chapter26aScientist9.TurtleName.hideturtle()
+Chapter26aScientist9.Turtle = new_turtle()
+Chapter26aScientist9.Turtle.shape(Chapter26aScientist9.Sprite)
+Chapter26aScientist9.Turtle.hideturtle()
 
 #Scientist10---------------
 register_shape("genericscientist_small")
@@ -10705,9 +10709,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Fifth\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter26aScientist10.TurtleName = new_turtle()
-Chapter26aScientist10.TurtleName.shape(Chapter26aScientist10.Sprite)
-Chapter26aScientist10.TurtleName.hideturtle()
+Chapter26aScientist10.Turtle = new_turtle()
+Chapter26aScientist10.Turtle.shape(Chapter26aScientist10.Sprite)
+Chapter26aScientist10.Turtle.hideturtle()
 
 #Scientist11---------------
 register_shape("genericscientist_small")
@@ -10735,9 +10739,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Fifth\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter26aScientist11.TurtleName = new_turtle()
-Chapter26aScientist11.TurtleName.shape(Chapter26aScientist11.Sprite)
-Chapter26aScientist11.TurtleName.hideturtle()
+Chapter26aScientist11.Turtle = new_turtle()
+Chapter26aScientist11.Turtle.shape(Chapter26aScientist11.Sprite)
+Chapter26aScientist11.Turtle.hideturtle()
 
 #Scientist12---------------
 register_shape("genericscientist_small")
@@ -10765,9 +10769,9 @@ Portrait="genericscientist_big",
 Sprite="genericscientist_small",
 LevelQuotes=["Scientist: You must be eliminated."],
 Bio="A scientist working in the Fifth\nDivision of Scientists at the\nShadow Realm Research Center.")
-Chapter26aScientist12.TurtleName = new_turtle()
-Chapter26aScientist12.TurtleName.shape(Chapter26aScientist12.Sprite)
-Chapter26aScientist12.TurtleName.hideturtle()
+Chapter26aScientist12.Turtle = new_turtle()
+Chapter26aScientist12.Turtle.shape(Chapter26aScientist12.Sprite)
+Chapter26aScientist12.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 27a]=======================================================================================================================================
@@ -10799,9 +10803,9 @@ Portrait="questitucher_big",
 Sprite="questitucher_small",
 LevelQuotes=["Quest: ..."],
 Bio="Quest has been possessed by the Holy Itucher,\nand has lost his free will. He now\nacts upon the Will of the Itucher.")
-QuestBoss.TurtleName = new_turtle()
-QuestBoss.TurtleName.shape(QuestBoss.Sprite)
-QuestBoss.TurtleName.hideturtle()
+QuestBoss.Turtle = new_turtle()
+QuestBoss.Turtle.shape(QuestBoss.Sprite)
+QuestBoss.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 27b]=======================================================================================================================================
@@ -10833,9 +10837,9 @@ Portrait="repins_big3",
 Sprite="repins_small2",
 LevelQuotes=["Repins: ..."],
 Bio="Repins has become possessed by the\nHoly Itucher, he has lost his free will.")
-RepinsBoss1.TurtleName = new_turtle()
-RepinsBoss1.TurtleName.shape(RepinsBoss1.Sprite)
-RepinsBoss1.TurtleName.hideturtle()
+RepinsBoss1.Turtle = new_turtle()
+RepinsBoss1.Turtle.shape(RepinsBoss1.Sprite)
+RepinsBoss1.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 27c]=======================================================================================================================================
@@ -10867,9 +10871,9 @@ Portrait="repins_big4",
 Sprite="repins_small3",
 LevelQuotes=["Repins: AHAHAHA!!! THIS IS POWER!!!"],
 Bio="Repins has obtained the power of the\nHoly Itucher, and has gained an immense amount of power.\nHe has retained his free will.")
-RepinsBoss2.TurtleName = new_turtle()
-RepinsBoss2.TurtleName.shape(RepinsBoss2.Sprite)
-RepinsBoss2.TurtleName.hideturtle()
+RepinsBoss2.Turtle = new_turtle()
+RepinsBoss2.Turtle.shape(RepinsBoss2.Sprite)
+RepinsBoss2.Turtle.hideturtle()
 
 #RepinsBoss3---------------
 register_shape("repins_small3")
@@ -10897,9 +10901,9 @@ Portrait="repins_big4",
 Sprite="repins_small3",
 LevelQuotes=["Repins: You won't... be defeating me..."],
 Bio="Repins has been weakened, but is still\nstrong enough to fight.")
-RepinsBoss3.TurtleName = new_turtle()
-RepinsBoss3.TurtleName.shape(RepinsBoss3.Sprite)
-RepinsBoss3.TurtleName.hideturtle()
+RepinsBoss3.Turtle = new_turtle()
+RepinsBoss3.Turtle.shape(RepinsBoss3.Sprite)
+RepinsBoss3.Turtle.hideturtle()
 
 #RepinsBoss4---------------
 register_shape("repins_small3")
@@ -10927,9 +10931,9 @@ Portrait="repins_big4",
 Sprite="repins_small3",
 LevelQuotes=["Repins: Yes..."],
 Bio="Repins has been extremely weakened,\nhe can barely fight.")
-RepinsBoss4.TurtleName = new_turtle()
-RepinsBoss4.TurtleName.shape(RepinsBoss4.Sprite)
-RepinsBoss4.TurtleName.hideturtle()
+RepinsBoss4.Turtle = new_turtle()
+RepinsBoss4.Turtle.shape(RepinsBoss4.Sprite)
+RepinsBoss4.Turtle.hideturtle()
 
 #RepinsBoss5---------------
 register_shape("repins_small3")
@@ -10957,9 +10961,9 @@ Portrait="repins_big4",
 Sprite="repins_small3",
 LevelQuotes=["Repins: THIS IS THE END!!!!!!!"],
 Bio="Repins has obtained the power of the\nHoly Itucher, and has gained an immense amount of power.\nHe has retained his free will.")
-RepinsBoss5.TurtleName = new_turtle()
-RepinsBoss5.TurtleName.shape(RepinsBoss5.Sprite)
-RepinsBoss5.TurtleName.hideturtle()
+RepinsBoss5.Turtle = new_turtle()
+RepinsBoss5.Turtle.shape(RepinsBoss5.Sprite)
+RepinsBoss5.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 27d]=======================================================================================================================================
@@ -10995,14 +10999,14 @@ AGLGrowth=[40,1],
 ACRGrowth=[60,1],
 Portrait="vruh_big",
 Sprite="vruh_small",
-LevelQuotes=["Vruh: 社会はあなたの心の構成物にすぎません。","景気後退が私たちに迫っています。"],
+LevelQuotes=["Society is just a construct of your mind.","Recession is upon us."],
 Bio="yuh aye nolan got waves\nplayed neville os for ninety four days straight",
 ClassChange=[], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-VruhBoss.TurtleName = new_turtle()
-VruhBoss.TurtleName.shape(Vruh.Sprite)
-VruhBoss.TurtleName.hideturtle()
+VruhBoss.Turtle = new_turtle()
+VruhBoss.Turtle.shape(Vruh.Sprite)
+VruhBoss.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 27e]=======================================================================================================================================
@@ -11033,10 +11037,10 @@ Traits=["Physical Primary", "Electric"],
 Portrait="ultimatemechanical_big",
 Sprite="ultimatemechanical_small",
 LevelQuotes=["Etamitlu: ..."],
-Bio="🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢\n🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢\n🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢\n🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢\n🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢\n🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢\n🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢🁢")
-Etamitlu.TurtleName = new_turtle()
-Etamitlu.TurtleName.shape(Etamitlu.Sprite)
-Etamitlu.TurtleName.hideturtle()
+Bio="#######################################")
+Etamitlu.Turtle = new_turtle()
+Etamitlu.Turtle.shape(Etamitlu.Sprite)
+Etamitlu.Turtle.hideturtle()
 
 #AhcemBoss------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 register_shape("ahcem_small")
@@ -11073,9 +11077,9 @@ Bio="???",
 ClassChange=[], #[Name, Level]
 AttackUnlocks=[], #[[Attack,Level],[Attack,Level],[Attack,Level]]
 SupportUnlocks=[])
-AhcemBoss.TurtleName = new_turtle()
-AhcemBoss.TurtleName.shape(Ahcem.Sprite)
-AhcemBoss.TurtleName.hideturtle()
+AhcemBoss.Turtle = new_turtle()
+AhcemBoss.Turtle.shape(Ahcem.Sprite)
+AhcemBoss.Turtle.hideturtle()
 
 #==============================================================================================================================================================================================================================================================================
 #===============[Chapter 27f]=======================================================================================================================================
@@ -11085,7 +11089,7 @@ AhcemBoss.TurtleName.hideturtle()
 register_shape("xuirwrath_big2")
 register_shape("xuirwrath_small2")
 XuirWrath1 = Unit(TurtleName="XuirWrath1",
-DisplayName="▓THE▓XUIR▓WRATH▓",
+DisplayName="#THE#XUIR#WRATH#",
 AttackRange=[1],
 PrimaryType="Physical",
 MaxHP=5000,
@@ -11099,23 +11103,23 @@ SPD=1, #The amount of "tiles" you can move
 EXP=0, #You level up every 100 EXP
 EXPReward=0, #The EXP given when defeated, enemies can also level up if they defeat your units
 Level=70317031,
-UnitClass="▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓",
+UnitClass="##### ###",
 Attacks=[moves.XuirWrathSlice],
 Supports=[],
-Traits=["▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓", "▓▓▓▓▓▓▓▓▓▓▓▓","▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓","▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓","▓▓▓▓▓▓▓▓▓▓▓▓▓"],
+Traits=["############## #########", "############","###### ######## ############","####### ############","#############"],
 Portrait="xuirwrath_big2",
 Sprite="xuirwrath_small2",
-LevelQuotes=["▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"],
-Bio="▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓\n▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓▓▓▓▓▓\n▓▓▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓▓▓▓▓▓")
-XuirWrath1.TurtleName = new_turtle()
-XuirWrath1.TurtleName.shape(XuirWrath1.Sprite)
-XuirWrath1.TurtleName.hideturtle()
+LevelQuotes=["##########################"],
+Bio="###################### ############## #########\n########## ################ ###########\n##### # #### ######## #### ########")
+XuirWrath1.Turtle = new_turtle()
+XuirWrath1.Turtle.shape(XuirWrath1.Sprite)
+XuirWrath1.Turtle.hideturtle()
 
 #XuirWrath2---------------
 register_shape("xuirwrath_big1")
 register_shape("xuirwrath_small1")
 XuirWrath2 = Unit(TurtleName="XuirWrath2",
-DisplayName="p▓▓t▓n ?",
+DisplayName="p##t#n ?",
 AttackRange=[1],
 PrimaryType="Physical",
 MaxHP=60,
@@ -11129,23 +11133,23 @@ SPD=1, #The amount of "tiles" you can move
 EXP=0, #You level up every 100 EXP
 EXPReward=0, #The EXP given when defeated, enemies can also level up if they defeat your units
 Level=70317031,
-UnitClass="▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓",
+UnitClass="################",
 Attacks=[moves.XuirWrathSlice],
 Supports=[],
-Traits=["▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓", "▓▓▓▓▓▓▓"],
+Traits=["######## ######", "#######"],
 Portrait="xuirwrath_big1",
 Sprite="xuirwrath_small1",
-LevelQuotes=["▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"],
-Bio="▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
-XuirWrath2.TurtleName = new_turtle()
-XuirWrath2.TurtleName.shape(XuirWrath2.Sprite)
-XuirWrath2.TurtleName.hideturtle()
+LevelQuotes=["##########################"],
+Bio="######################")
+XuirWrath2.Turtle = new_turtle()
+XuirWrath2.Turtle.shape(XuirWrath2.Sprite)
+XuirWrath2.Turtle.hideturtle()
 
 #XuirWrath3---------------
 register_shape("xuirwrath_big1")
 register_shape("xuirwrath_small1")
 XuirWrath3 = Unit(TurtleName="XuirWrath3",
-DisplayName="p▓▓t▓n ?",
+DisplayName="p##t#n ?",
 AttackRange=[1],
 PrimaryType="Physical",
 MaxHP=60,
@@ -11159,23 +11163,23 @@ SPD=1, #The amount of "tiles" you can move
 EXP=0, #You level up every 100 EXP
 EXPReward=0, #The EXP given when defeated, enemies can also level up if they defeat your units
 Level=70317031,
-UnitClass="▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓",
+UnitClass="################",
 Attacks=[moves.XuirWrathSlice],
 Supports=[],
-Traits=["▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓", "▓▓▓▓▓▓▓"],
+Traits=["######## ######", "#######"],
 Portrait="xuirwrath_big1",
 Sprite="xuirwrath_small1",
-LevelQuotes=["▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"],
-Bio="▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
-XuirWrath3.TurtleName = new_turtle()
-XuirWrath3.TurtleName.shape(XuirWrath3.Sprite)
-XuirWrath3.TurtleName.hideturtle()
+LevelQuotes=["##########################"],
+Bio="######################")
+XuirWrath3.Turtle = new_turtle()
+XuirWrath3.Turtle.shape(XuirWrath3.Sprite)
+XuirWrath3.Turtle.hideturtle()
 
 #XuirWrath4---------------
 register_shape("xuirwrath_big1")
 register_shape("xuirwrath_small1")
 XuirWrath4 = Unit(TurtleName="XuirWrath4",
-DisplayName="p▓▓t▓n ?",
+DisplayName="p##t#n ?",
 AttackRange=[1],
 PrimaryType="Physical",
 MaxHP=60,
@@ -11189,17 +11193,17 @@ SPD=1, #The amount of "tiles" you can move
 EXP=0, #You level up every 100 EXP
 EXPReward=0, #The EXP given when defeated, enemies can also level up if they defeat your units
 Level=70317031,
-UnitClass="▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓",
+UnitClass="################",
 Attacks=[moves.XuirWrathSlice],
 Supports=[],
-Traits=["▓▓▓▓▓▓▓▓ ▓▓▓▓▓▓", "▓▓▓▓▓▓▓"],
+Traits=["######## ######", "#######"],
 Portrait="xuirwrath_big1",
 Sprite="xuirwrath_small1",
-LevelQuotes=["▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"],
-Bio="▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓")
-XuirWrath4.TurtleName = new_turtle()
-XuirWrath4.TurtleName.shape(XuirWrath4.Sprite)
-XuirWrath4.TurtleName.hideturtle()
+LevelQuotes=["##########################"],
+Bio="######################")
+XuirWrath4.Turtle = new_turtle()
+XuirWrath4.Turtle.shape(XuirWrath4.Sprite)
+XuirWrath4.Turtle.hideturtle()
 
 
 
@@ -11259,9 +11263,9 @@ Portrait="deathpepper_big",
 Sprite="deathpepper_small",
 LevelQuotes=["Death Pepper: This is what you get for defying me."],
 Bio="Death Pepper is the head of the Shadow Realm Research Center,\nwhere he has been tasked by Neville Prime to create entities with the powers\n of True Xuir. Though the research of recreating the\n powers of True Xuir have been going on for centuries,\n Death Pepper is the closest to discovering the secret of \n activating the power of the True Xuir.")
-DeathPepper.TurtleName = new_turtle()
-DeathPepper.TurtleName.shape("deathpepper_small")
-DeathPepper.TurtleName.hideturtle()
+DeathPepper.Turtle = new_turtle()
+DeathPepper.Turtle.shape("deathpepper_small")
+DeathPepper.Turtle.hideturtle()
 
 #Death Pepper 2------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 register_shape("deathpepper_small")
@@ -11293,9 +11297,9 @@ Portrait="deathpepper_big2",
 Sprite="deathpepper_small",
 LevelQuotes=["Death Pepper: This is what you get for defying me."],
 Bio="Death Pepper is the head of the Shadow Realm Research Center,\nwhere he has been tasked by Neville Prime to create entities with the powers\n of True Xuir. Though the research of recreating the\n powers of True Xuir have been going on for centuries,\n Death Pepper is the closest to discovering the secret of \n activating the power of the True Xuir.")
-DeathPepper2.TurtleName = new_turtle()
-DeathPepper2.TurtleName.shape("deathpepper_small")
-DeathPepper2.TurtleName.hideturtle()
+DeathPepper2.Turtle = new_turtle()
+DeathPepper2.Turtle.shape("deathpepper_small")
+DeathPepper2.Turtle.hideturtle()
 
 #Break------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 register_shape("break_small")
@@ -11327,9 +11331,9 @@ Portrait="break_big",
 Sprite="break_small",
 LevelQuotes=["Death Pepper: Are you scared?"],
 Bio="Break is the head of the Fourth Division of\nScientists at the Shadow Realm Research Lab,\nand is the second-highest ranking official\nat the Shadow Realm Research Lab.")
-DeathPepper.TurtleName = new_turtle()
-DeathPepper.TurtleName.shape("break_small")
-DeathPepper.TurtleName.hideturtle()
+DeathPepper.Turtle = new_turtle()
+DeathPepper.Turtle.shape("break_small")
+DeathPepper.Turtle.hideturtle()
 
 #OmegaXuirist------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 register_shape("omegaxuirist_small")
@@ -11361,9 +11365,9 @@ Portrait="omegaxuirist_big",
 Sprite="omegaxuirist_small",
 LevelQuotes=["Death Pepper: Are you scared?"],
 Bio="Death Pepper is the head of the Shadow Realm Research Center,\nwhere he has been tasked by Neville Prime to create entities with the powers\n of True Xuir. Though the research of recreating the\n powers of True Xuir have been going on for centuries,\n Death Pepper is the closest to discovering the secret of \n activating the power of the True Xuir.")
-OmegaXuirist.TurtleName = new_turtle()
-OmegaXuirist.TurtleName.shape("omegaxuirist_small")
-OmegaXuirist.TurtleName.hideturtle()
+OmegaXuirist.Turtle = new_turtle()
+OmegaXuirist.Turtle.shape("omegaxuirist_small")
+OmegaXuirist.Turtle.hideturtle()
 
 # COMMENTED OUT FOR CONVERSION
 # screensetup.BattleScreen.tracer(1)

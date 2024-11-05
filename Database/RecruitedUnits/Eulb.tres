@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=12 format=3 uid="uid://dre4ihptjb138"]
 
-[ext_resource type="Resource" uid="uid://c3kjk30vibnrn" path="res://Database/Characters/Eulb.tres" id="1_sr4nh"]
+[ext_resource type="Resource" uid="uid://c3kjk30vibnrn" path="res://Database/Characters/eulb.tres" id="1_861kd"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Mage Blade.tres" id="2_un5e5"]
 [ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="3_d7rfk"]
@@ -14,7 +14,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_sr4nh")
+character = ExtResource("1_861kd")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("6_dpawg"), ExtResource("10_mjtay")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_un5e5"), ExtResource("3_d7rfk"), ExtResource("4_jcd3l"), ExtResource("5_uostv"), ExtResource("7_rjvv3"), ExtResource("8_5h0d4")])
 move_unlock_levels = Array[int]([30, 30, 35, 40, 25, 27])
@@ -23,6 +23,9 @@ exported_move_unlock_names = Array[String](["Mage Blade", "Cut", "Hydro", "Hydra
 exported_move_unlock_levels = Array[int]([30, 30, 35, 40, 25, 27])
 exported_portrait_name = "eulb_big"
 exported_overworld_name = "eulb_small"
+exported_character_name = "eulb"
+exported_x = 0
+exported_y = 0
 level = 21
 hp = 45
 attack = 17

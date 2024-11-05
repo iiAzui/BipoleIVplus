@@ -1,0 +1,10 @@
+
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Break"
+bio = "Break is one of the head scientists at the Shadow Realm Research Center, and works directly with Death Pepper in Xuir Research. He is also the true leader of the Xuirist religion, having controlled Omega into creating and leading the religion for him/"
+level_quotes = Array[String](["Are you scared?"])

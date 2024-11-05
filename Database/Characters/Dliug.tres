@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://cmqkpfpf18v7n"]
 
-[ext_resource type="Texture2D" uid="uid://kytxqhjdp31x" path="res://Sprites/Overworld/dliug_small.png" id="1_8m1gg"]
-[ext_resource type="Texture2D" uid="uid://cirnfgtqrxi2g" path="res://Sprites/Portraits/dliug_big.png" id="2_0g1u4"]
+[ext_resource type="Texture2D" uid="uid://kytxqhjdp31x" path="res://Sprites/Overworld/dliug_small.png" id="1_6l3qm"]
+[ext_resource type="Texture2D" uid="uid://cirnfgtqrxi2g" path="res://Sprites/Portraits/dliug_big.png" id="2_a1w8q"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Dliug"
-portrait = ExtResource("2_0g1u4")
-overworld_sprite = ExtResource("1_8m1gg")
+portrait = ExtResource("2_a1w8q")
+overworld_sprite = ExtResource("1_6l3qm")
 bio = "Dliug is an mercenary who has decided to fight against the Xuirists."
 level_quotes = Array[String](["Victory.", "You shall fall.", "Fear me."])

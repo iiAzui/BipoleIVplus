@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://cblquethd7tgi"]
 
-[ext_resource type="Resource" uid="uid://bobomkqivpepj" path="res://Database/Characters/B.tres" id="1_hyb0y"]
+[ext_resource type="Resource" uid="uid://bobomkqivpepj" path="res://Database/Characters/b.tres" id="1_j5oqn"]
 [ext_resource type="Resource" path="res://Database/Moves/Beam.tres" id="2_a0jkf"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -11,7 +11,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_hyb0y")
+character = ExtResource("1_j5oqn")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("4_v3txv"), ExtResource("5_p4slv")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_a0jkf"), ExtResource("3_vrgfx"), ExtResource("5_nigl2")])
 move_unlock_levels = Array[int]([40, 50, 45])
@@ -20,6 +20,9 @@ exported_move_unlock_names = Array[String](["Beam", "Destroyer", "Med Kit"])
 exported_move_unlock_levels = Array[int]([40, 50, 45])
 exported_portrait_name = "b_big"
 exported_overworld_name = "b_small"
+exported_character_name = "b"
+exported_x = 0
+exported_y = 0
 level = 25
 hp = 90
 attack = 35

@@ -1,6 +1,5 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://bw5ws6vjgfab4"]
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://bw5ws6vjgfab4"]
 
-[ext_resource type="Resource" uid="uid://c0r03wwjmjvyr" path="res://Database/Characters/Tnemecalper IV.tres" id="1_q0r4l"]
 [ext_resource type="Resource" path="res://Database/Moves/Dagger.tres" id="2_mw5qi"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Long Bow.tres" id="3_agm2b"]
@@ -10,7 +9,6 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_q0r4l")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("5_5miji")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_mw5qi"), ExtResource("3_agm2b"), ExtResource("4_rk3bp")])
 move_unlock_levels = Array[int]([5, 8, 10])
@@ -19,6 +17,9 @@ exported_move_unlock_names = Array[String](["Dagger", "Long Bow", "Distance Shot
 exported_move_unlock_levels = Array[int]([5, 8, 10])
 exported_portrait_name = "tnemecalperiv_big"
 exported_overworld_name = "tnemecalperiv_small"
+exported_character_name = "tnemecalperiv"
+exported_x = 0
+exported_y = 0
 level = 2
 hp = 20
 attack = 7

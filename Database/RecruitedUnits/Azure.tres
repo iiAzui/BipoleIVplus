@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=11 format=3 uid="uid://wjcr0j12c1mw"]
 
-[ext_resource type="Resource" uid="uid://cacmbw25wye0e" path="res://Database/Characters/Azure.tres" id="1_s3mjn"]
+[ext_resource type="Resource" uid="uid://cacmbw25wye0e" path="res://Database/Characters/azure.tres" id="1_wtgjl"]
 [ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="2_2hhpp"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" path="res://Database/Moves/Thunder Blast.tres" id="3_f3mjx"]
@@ -13,7 +13,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_s3mjn")
+character = ExtResource("1_wtgjl")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("2_2hhpp"), ExtResource("3_f3mjx"), ExtResource("4_lp76g"), ExtResource("6_whdce"), ExtResource("7_7kek0"), ExtResource("8_q21iu"), ExtResource("9_vmr7i")])
 move_unlocks = Array[ExtResource("2_pja1r")]([])
 move_unlock_levels = Array[int]([])
@@ -22,6 +22,9 @@ exported_move_unlock_names = Array[String]([])
 exported_move_unlock_levels = Array[int]([])
 exported_portrait_name = "azure_big"
 exported_overworld_name = "azure_small"
+exported_character_name = "azure"
+exported_x = 0
+exported_y = 0
 level = 20
 hp = 40
 attack = 30

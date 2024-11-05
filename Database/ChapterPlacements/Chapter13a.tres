@@ -1,0 +1,9 @@
+
+[gd_resource type="Resource" script_class="ChapterPlacements" load_steps=2 format=3 uid="uid://bkhl1kl5604v5"]
+
+[ext_resource type="Script" path="res://Scripts/ChapterPlacements.gd" id="1_kp6pv"]
+
+[resource]
+script = ExtResource("1_kp6pv")
+unit_names = Array[String](["Chapter13aFighter5", "Chapter13aFighter6", "Chapter13aFighter1", "Chapter13aFighter2", "Chapter13aFighter3", "Chapter13aFighter4", "DiverNeville"])
+unit_coords = Array[Vector2i]([Vector2i(1, 6), Vector2i(1, 10), Vector2i(2, 4), Vector2i(2, 6), Vector2i(2, 10), Vector2i(2, 12), Vector2i(3, 8)])

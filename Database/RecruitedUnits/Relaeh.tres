@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://twsrq13nastj"]
 
-[ext_resource type="Resource" uid="uid://c82tl27up2k7p" path="res://Database/Characters/Relaeh.tres" id="1_u16mc"]
+[ext_resource type="Resource" uid="uid://c82tl27up2k7p" path="res://Database/Characters/relaeh.tres" id="1_h6hny"]
 [ext_resource type="Resource" path="res://Database/Moves/Freeze.tres" id="2_gmjs5"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -12,7 +12,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_u16mc")
+character = ExtResource("1_h6hny")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("6_5o2ps"), ExtResource("7_q8sqx"), ExtResource("8_ifoly")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_gmjs5"), ExtResource("3_wm6fn"), ExtResource("5_e3nmd")])
 move_unlock_levels = Array[int]([23, 30, 25])
@@ -21,6 +21,9 @@ exported_move_unlock_names = Array[String](["Freeze", "Congeal", "Med Kit"])
 exported_move_unlock_levels = Array[int]([23, 30, 25])
 exported_portrait_name = "relaeh_big"
 exported_overworld_name = "relaeh_small"
+exported_character_name = "relaeh"
+exported_x = 0
+exported_y = 0
 level = 20
 hp = 52
 attack = 18

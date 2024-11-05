@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=4 format=3 uid="uid://7bkeej1px31r"]
+
+[ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="2_a8t0a"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("2_a8t0a")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Aqua"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "bigbrainneville_big"
+exported_overworld_name = "bigbrainneville_small"
+exported_character_name = ""
+exported_x = 0
+exported_y = 0
+level = 27
+hp = 100
+attack = 13
+defense = 4
+resistance = 175
+agility = 10
+accuracy = 19
+speed = 7
+exp_reward = 150
+primary_type = "Magic"
+traits = Array[String](["Magic Primary", "Nolavillian", "Water"])
+unit_class = "Navigator"
+class_change = "Navigator"
+class_change_level = 25
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

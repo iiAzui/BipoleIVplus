@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://bkyekoocxw2kp"]
+
+[ext_resource type="Resource" path="res://Database/Moves/God Slash.tres" id="2_lwnja"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/The Holy Itucher.tres" id="3_4p6fu"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("2_lwnja"), ExtResource("3_4p6fu")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["God Slash", "The Holy Itucher"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "questitucher_big"
+exported_overworld_name = "questitucher_small"
+exported_character_name = ""
+exported_x = 0
+exported_y = 0
+level = 75
+hp = 2500
+attack = 50
+defense = 20
+resistance = 45
+agility = 26
+accuracy = 58
+speed = 7
+exp_reward = 850
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Shadow"])
+unit_class = "Wielder of the Holy Itucher"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

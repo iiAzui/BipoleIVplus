@@ -1,0 +1,10 @@
+
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Omega"
+bio = "Omega is the official founder of the Xuirist religion, though he was forced by Break to create and maintain the religion for him."
+level_quotes = Array[String](["..."])

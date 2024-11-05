@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://bpqnpksk6koyr"]
 
-[ext_resource type="Resource" uid="uid://oy1i5agt3woe" path="res://Database/Characters/Integer.tres" id="1_q3r2b"]
+[ext_resource type="Resource" uid="uid://bxf8tyyoxxcqk" path="res://Database/Characters/integer.tres" id="1_kn8nr"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
 [ext_resource type="Resource" path="res://Database/Moves/Far Heal.tres" id="3_ipcso"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_q3r2b")
+character = ExtResource("1_kn8nr")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("3_ipcso")])
 move_unlocks = Array[ExtResource("2_pja1r")]([])
 move_unlock_levels = Array[int]([])
@@ -16,6 +16,9 @@ exported_move_unlock_names = Array[String]([])
 exported_move_unlock_levels = Array[int]([])
 exported_portrait_name = "integer_big"
 exported_overworld_name = "integer_small"
+exported_character_name = "integer"
+exported_x = 0
+exported_y = 0
 level = 99
 hp = 999
 attack = 999

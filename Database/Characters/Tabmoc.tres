@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://d0ng0bkuwok25"]
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bu08ffca6xvff"]
 
-[ext_resource type="Texture2D" uid="uid://cbt6ll382w2bo" path="res://Sprites/Overworld/tabmoc_small.png" id="1_5qdt4"]
-[ext_resource type="Texture2D" uid="uid://bmf22vdbogc0l" path="res://Sprites/Portraits/tabmoc_big.png" id="2_30s61"]
+[ext_resource type="Texture2D" uid="uid://cbt6ll382w2bo" path="res://Sprites/Overworld/tabmoc_small.png" id="1_p6m0y"]
+[ext_resource type="Texture2D" uid="uid://bmf22vdbogc0l" path="res://Sprites/Portraits/tabmoc_big.png" id="2_kiv7d"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Tabmoc"
-portrait = ExtResource("2_30s61")
-overworld_sprite = ExtResource("1_5qdt4")
+portrait = ExtResource("2_kiv7d")
+overworld_sprite = ExtResource("1_p6m0y")
 bio = "Tabmoc is a warrior from Bipole who has allied with Proton in retrieving the Holy Itucher."
 level_quotes = Array[String](["Fall.", "I win.", "Victory."])

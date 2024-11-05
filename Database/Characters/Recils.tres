@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://8ujpg7rhdexh"]
 
-[ext_resource type="Texture2D" uid="uid://dxn16cyyuybdo" path="res://Sprites/Overworld/recils_small.png" id="1_1qvov"]
-[ext_resource type="Texture2D" uid="uid://dd16cys1ksu1c" path="res://Sprites/Portraits/recils_big.png" id="2_g42sy"]
+[ext_resource type="Texture2D" uid="uid://dxn16cyyuybdo" path="res://Sprites/Overworld/recils_small.png" id="1_qqb6g"]
+[ext_resource type="Texture2D" uid="uid://dd16cys1ksu1c" path="res://Sprites/Portraits/recils_big.png" id="2_7row2"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Recils"
-portrait = ExtResource("2_g42sy")
-overworld_sprite = ExtResource("1_1qvov")
+portrait = ExtResource("2_7row2")
+overworld_sprite = ExtResource("1_qqb6g")
 bio = "Recils is a wandering swordsman who has decided to help Proton in taking back the Holy Itucher."
 level_quotes = Array[String](["Good.", "This should help out.", "This should help."])

@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://b6uvj3p2uy1wo"]
 
-[ext_resource type="Texture2D" uid="uid://skc57y2v2mi0" path="res://Sprites/Overworld/geomer_small.png" id="1_ah1rh"]
-[ext_resource type="Texture2D" uid="uid://dpua0spfgt3qq" path="res://Sprites/Portraits/geomer_big.png" id="2_bxv6p"]
+[ext_resource type="Texture2D" uid="uid://skc57y2v2mi0" path="res://Sprites/Overworld/geomer_small.png" id="1_3on34"]
+[ext_resource type="Texture2D" uid="uid://dpua0spfgt3qq" path="res://Sprites/Portraits/geomer_big.png" id="2_pgnh5"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Geomer"
-portrait = ExtResource("2_bxv6p")
-overworld_sprite = ExtResource("1_ah1rh")
+portrait = ExtResource("2_pgnh5")
+overworld_sprite = ExtResource("1_3on34")
 bio = "Geomer is Geom user who is proficient in the usage of Geom Energy in combat."
 level_quotes = Array[String](["This is going perfectly.", "Should've learned Geom.", "You ever hear about the Geom Clan?"])

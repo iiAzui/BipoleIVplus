@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=12 format=3 uid="uid://r4wwtlks2wmd"]
 
-[ext_resource type="Resource" uid="uid://0sqcxbatr6ex" path="res://Database/Characters/Repins.tres" id="1_wrkj0"]
+[ext_resource type="Resource" uid="uid://yhng2asej0m7" path="res://Database/Characters/repins.tres" id="1_ebloc"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" uid="uid://d27gk18od5me0" path="res://Database/Moves/Snipe.tres" id="2_qcfnm"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
@@ -14,7 +14,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_wrkj0")
+character = ExtResource("1_ebloc")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("7_7ukyp"), ExtResource("8_c6bbl"), ExtResource("10_rq25y")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_qcfnm"), ExtResource("3_l327u"), ExtResource("4_2euql"), ExtResource("5_velbw"), ExtResource("6_mgxjv")])
 move_unlock_levels = Array[int]([25, 35, 45, 55, 65])
@@ -23,6 +23,9 @@ exported_move_unlock_names = Array[String](["Snipe", "Fireball", "Snipe II", "Sn
 exported_move_unlock_levels = Array[int]([25, 35, 45, 55, 65])
 exported_portrait_name = "repins_big"
 exported_overworld_name = "repins_small"
+exported_character_name = "repins"
+exported_x = 0
+exported_y = 0
 level = 20
 hp = 45
 attack = 35

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=13 format=3 uid="uid://cawtheoidgonv"]
 
-[ext_resource type="Resource" uid="uid://dk84cig7iafkc" path="res://Database/Characters/Scien.tres" id="1_ljirn"]
+[ext_resource type="Resource" uid="uid://b3a8qcf7avlmb" path="res://Database/Characters/scien.tres" id="1_ejrba"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" uid="uid://3dggiwdj2sny" path="res://Database/Moves/Hero's Strike.tres" id="2_un3dr"]
 [ext_resource type="Resource" uid="uid://bi1ftik6el8mg" path="res://Database/Moves/Bow.tres" id="3_6t3hm"]
@@ -15,7 +15,7 @@
 
 [resource]
 script = ExtResource("3_hyhyt")
-character = ExtResource("1_ljirn")
+character = ExtResource("1_ejrba")
 moves = Array[ExtResource("2_pja1r")]([ExtResource("6_nw43v")])
 move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_un3dr"), ExtResource("3_6t3hm"), ExtResource("4_aaery"), ExtResource("5_vkldy"), ExtResource("7_d4xto"), ExtResource("8_ovk4q"), ExtResource("9_ta68u"), ExtResource("10_v3d4a")])
 move_unlock_levels = Array[int]([7, 10, 20, 30, 10, 13, 15, 17])
@@ -24,6 +24,9 @@ exported_move_unlock_names = Array[String](["Hero's Strike", "Bow", "Shield Shat
 exported_move_unlock_levels = Array[int]([7, 10, 20, 30, 10, 13, 15, 17])
 exported_portrait_name = "scien_big"
 exported_overworld_name = "scien_small"
+exported_character_name = "scien"
+exported_x = 0
+exported_y = 0
 level = 1
 hp = 30
 attack = 8

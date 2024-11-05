@@ -1,0 +1,10 @@
+
+[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
+
+[resource]
+script = ExtResource("3_qsxlm")
+display_name = "Tluc"
+bio = "Tluc is a high-ranking Xuirist and works directly under the leader of the Xuirists, Omega. Tluc is extremely devoted to Xuirism and will go to extreme lengths to stop opposition."
+level_quotes = Array[String](["Perish! Bipolian scum!"])
