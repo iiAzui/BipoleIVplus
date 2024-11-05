@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://bu4vsp3wyeeau"]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Finisher.tres" id="2_y1i3u"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="3_id87q"]
+[ext_resource type="Resource" path="res://Database/Moves/Fire Blast.tres" id="4_xed6e"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="5_hsqom"]
+[ext_resource type="Resource" uid="uid://bcu3asejb0s5e" path="res://Database/Moves/Fireball.tres" id="6_5ue4v"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("5_hsqom"), ExtResource("6_5ue4v")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_y1i3u"), ExtResource("3_id87q"), ExtResource("4_xed6e")])
+move_unlock_levels = Array[int]([30, 35, 40])
+exported_move_names = Array[String](["Slice", "Fireball"])
+exported_move_unlock_names = Array[String](["Finisher", "Slash", "Fire Blast"])
+exported_move_unlock_levels = Array[int]([30, 35, 40])
+level = 28
+hp = 45
+attack = 30
+defense = 18
+resistance = 18
+agility = 15
+accuracy = 25
+speed = 3
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Xuir", "Fire"])
+unit_class = "Proto-Xuir"
+class_change = "Xuir Champion"
+class_change_level = 40
+hp_growth = Vector2i(70, 1)
+atk_growth = Vector2i(80, 1)
+def_growth = Vector2i(80, 1)
+res_growth = Vector2i(80, 1)
+agl_growth = Vector2i(45, 1)
+acr_growth = Vector2i(80, 2)

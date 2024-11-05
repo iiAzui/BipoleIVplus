@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://dn1fad215kkul"]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Snipe.tres" id="2_ytv3a"]
+[ext_resource type="Resource" path="res://Database/Moves/Snipe II.tres" id="3_6pv2f"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Dagger.tres" id="4_516es"]
+[ext_resource type="Resource" path="res://Database/Moves/Dagger Toss.tres" id="5_0ev13"]
+[ext_resource type="Resource" path="res://Database/Moves/Geom Medal.tres" id="6_03aul"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("4_516es"), ExtResource("5_0ev13"), ExtResource("6_03aul")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_ytv3a"), ExtResource("3_6pv2f")])
+move_unlock_levels = Array[int]([35, 40])
+exported_move_names = Array[String](["Dagger", "Dagger Toss", "Geom Medal"])
+exported_move_unlock_names = Array[String](["Snipe", "Snipe II"])
+exported_move_unlock_levels = Array[int]([35, 40])
+level = 32
+hp = 80
+attack = 42
+defense = 32
+resistance = 25
+agility = 10
+accuracy = 30
+speed = 3
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Infinian", "Xuirist"])
+unit_class = "Xuirist"
+class_change = "High Xuirist"
+class_change_level = 40
+hp_growth = Vector2i(90, 2)
+atk_growth = Vector2i(70, 1)
+def_growth = Vector2i(70, 1)
+res_growth = Vector2i(70, 1)
+agl_growth = Vector2i(15, 1)
+acr_growth = Vector2i(80, 1)

@@ -4,18 +4,21 @@ extends EditorScript
 # Called when the script is executed (using File -> Run in Script Editor).
 func _run():
 	# for each Unit resource, find the exported move names and hook them up to the correct Move resources.
-	setup_units_in_dir("res://Conversion/ExportedUnits")
+	setup_units_in_dir("res://Database/RecruitedUnits")
 	
 func setup_units_in_dir(dir_path: String):
 	var dir = DirAccess.open(dir_path)
 	for file_name in dir.get_files():
-		var unit: Unit = ResourceLoader.load(dir_path + "/" + file_name)
-		if unit: 
-			print("setting up unit ", file_name, "...")
-			setup_unit(unit)
-	
+		setup_unit(dir_path + "/" + file_name)
 			
-func setup_unit(unit: Unit):
+func setup_unit(unit_path: String):
+	var unit: Unit = ResourceLoader.load(unit_path)
+	if not unit:
+		printerr("not a unit: ", unit_path)
+		return
+		
+	print(unit_path, ": Setting up unit")
+	
 	unit.moves = []
 	for i in len(unit.exported_move_names):
 		var move_name: String = unit.exported_move_names[i]
@@ -34,3 +37,5 @@ func setup_unit(unit: Unit):
 			unit.move_unlocks.push_back(move)
 			unit.move_unlock_levels.push_back(unlock_level)
 			print("\t", move_name, " connected!")
+			
+	ResourceSaver.save(unit)

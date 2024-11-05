@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://cfk4ojbvwhbdc"]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="2_t3rv0"]
+[ext_resource type="Resource" path="res://Database/Moves/Hydro.tres" id="3_1oswp"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_t3rv0"), ExtResource("3_1oswp")])
+move_unlock_levels = Array[int]([40, 45])
+exported_move_names = Array[String]([])
+exported_move_unlock_names = Array[String](["Aqua", "Hydro"])
+exported_move_unlock_levels = Array[int]([40, 45])
+level = 35
+hp = 40
+attack = 35
+defense = 20
+resistance = 55
+agility = 25
+accuracy = 35
+speed = 3
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Shadeian", "Mage", "Water"])
+unit_class = "Heal Mage"
+class_change = "Dual Mage"
+class_change_level = 40
+hp_growth = Vector2i(70, 1)
+atk_growth = Vector2i(90, 1)
+def_growth = Vector2i(20, 1)
+res_growth = Vector2i(70, 1)
+agl_growth = Vector2i(25, 1)
+acr_growth = Vector2i(75, 1)

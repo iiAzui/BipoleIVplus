@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://kurceurr51bm"]
+
+[ext_resource type="Resource" path="res://Database/Moves/Hydro.tres" id="2_jufel"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="3_wjoj1"]
+[ext_resource type="Resource" path="res://Database/Moves/Hydra.tres" id="4_mx7jm"]
+[ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="5_lh17x"]
+[ext_resource type="Resource" path="res://Database/Moves/Mage Blade.tres" id="6_575d8"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("5_lh17x"), ExtResource("6_575d8")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_jufel"), ExtResource("3_wjoj1"), ExtResource("4_mx7jm")])
+move_unlock_levels = Array[int]([33, 35, 40])
+exported_move_names = Array[String](["Aqua", "Mage Blade"])
+exported_move_unlock_names = Array[String](["Hydro", "Cut", "Hydra"])
+exported_move_unlock_levels = Array[int]([33, 35, 40])
+level = 29
+hp = 40
+attack = 32
+defense = 22
+resistance = 30
+agility = 29
+accuracy = 35
+speed = 3
+exp_reward = 100
+primary_type = "Magic"
+traits = Array[String](["Magic Primary", "Xuir", "Water"])
+unit_class = "Proto-Xuir"
+class_change = "Xuir Champion"
+class_change_level = 45
+hp_growth = Vector2i(75, 1)
+atk_growth = Vector2i(90, 1)
+def_growth = Vector2i(70, 1)
+res_growth = Vector2i(100, 2)
+agl_growth = Vector2i(60, 1)
+acr_growth = Vector2i(75, 2)

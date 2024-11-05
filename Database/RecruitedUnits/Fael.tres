@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://bothay8tp8msv"]
+
+[ext_resource type="Resource" path="res://Database/Moves/Long Bow.tres" id="2_mhh4e"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Distance Shot.tres" id="3_l7wmi"]
+[ext_resource type="Resource" path="res://Database/Moves/Snipe.tres" id="4_a2k8q"]
+[ext_resource type="Resource" path="res://Database/Moves/Vine Bow.tres" id="5_py0fo"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("5_py0fo")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_mhh4e"), ExtResource("3_l7wmi"), ExtResource("4_a2k8q")])
+move_unlock_levels = Array[int]([17, 23, 30])
+exported_move_names = Array[String](["Vine Bow"])
+exported_move_unlock_names = Array[String](["Long Bow", "Distance Shot", "Snipe"])
+exported_move_unlock_levels = Array[int]([17, 23, 30])
+level = 15
+hp = 23
+attack = 18
+defense = 9
+resistance = 9
+agility = 10
+accuracy = 20
+speed = 3
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Bipolian", "Archer", "E.O.S.", "Bio"])
+unit_class = "Archer"
+class_change = "Elemental Sniper"
+class_change_level = 30
+hp_growth = Vector2i(80, 1)
+atk_growth = Vector2i(80, 1)
+def_growth = Vector2i(60, 1)
+res_growth = Vector2i(60, 1)
+agl_growth = Vector2i(70, 1)
+acr_growth = Vector2i(70, 1)

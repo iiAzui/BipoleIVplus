@@ -93,8 +93,6 @@ func show_range(unit: PlacedUnit):
 	
 	if not unit:
 		return
-		
-	print("showing range of ", unit.unit.character.display_name, " from coords ", unit.coords)
 	
 	# Total range of abilities is move amount plus range of highest range attack
 	highest_attack_range = 0

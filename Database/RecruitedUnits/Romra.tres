@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://dw4ca1e0dgrdt"]
+
+[ext_resource type="Resource" path="res://Database/Moves/Bow.tres" id="2_o4v8g"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Heavy Bow.tres" id="3_ndg3x"]
+[ext_resource type="Resource" path="res://Database/Moves/Long Bow.tres" id="4_3nj07"]
+[ext_resource type="Resource" path="res://Database/Moves/Hero's Strike.tres" id="5_1ct3h"]
+[ext_resource type="Resource" path="res://Database/Moves/Snipe.tres" id="6_vgn45"]
+[ext_resource type="Resource" path="res://Database/Moves/Snipe II.tres" id="7_lownc"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="8_mcrpa"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("8_mcrpa")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_o4v8g"), ExtResource("3_ndg3x"), ExtResource("4_3nj07"), ExtResource("5_1ct3h"), ExtResource("6_vgn45"), ExtResource("7_lownc")])
+move_unlock_levels = Array[int]([10, 10, 13, 15, 20, 25])
+exported_move_names = Array[String](["Slice"])
+exported_move_unlock_names = Array[String](["Bow", "Heavy Bow", "Long Bow", "Hero's Strike", "Snipe", "Snipe II"])
+exported_move_unlock_levels = Array[int]([10, 10, 13, 15, 20, 25])
+level = 1
+hp = 30
+attack = 5
+defense = 15
+resistance = 1
+agility = 3
+accuracy = 13
+speed = 2
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Bipolian", "Knight", "Armored"])
+unit_class = "Armor Knight"
+class_change = "Bow Knight"
+class_change_level = 10
+hp_growth = Vector2i(80, 4)
+atk_growth = Vector2i(80, 3)
+def_growth = Vector2i(80, 2)
+res_growth = Vector2i(5, 1)
+agl_growth = Vector2i(10, 1)
+acr_growth = Vector2i(50, 2)

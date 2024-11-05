@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://bk2mvdvg4lrl7"]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="2_qqkwp"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" uid="uid://bcu3asejb0s5e" path="res://Database/Moves/Fireball.tres" id="3_ytsuo"]
+[ext_resource type="Resource" path="res://Database/Moves/Fire Blast.tres" id="4_3kv2t"]
+[ext_resource type="Resource" path="res://Database/Moves/Flame Blade.tres" id="5_5hcsh"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("5_5hcsh")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_qqkwp"), ExtResource("3_ytsuo"), ExtResource("4_3kv2t")])
+move_unlock_levels = Array[int]([17, 25, 35])
+exported_move_names = Array[String](["Flame Blade"])
+exported_move_unlock_names = Array[String](["Slash", "Fireball", "Fire Blast"])
+exported_move_unlock_levels = Array[int]([17, 25, 35])
+level = 15
+hp = 45
+attack = 25
+defense = 16
+resistance = 12
+agility = 6
+accuracy = 16
+speed = 3
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Bipolian", "Fighter", "E.O.S.", "Fire"])
+unit_class = "Elemental Fighter"
+class_change = "Elemental Warrior"
+class_change_level = 25
+hp_growth = Vector2i(70, 1)
+atk_growth = Vector2i(70, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(40, 1)
+acr_growth = Vector2i(60, 1)

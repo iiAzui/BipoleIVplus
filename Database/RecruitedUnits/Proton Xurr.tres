@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://brgpua2g2qrqk"]
+
+[ext_resource type="Resource" uid="uid://bxv1q6gih741g" path="res://Database/Moves/Lance.tres" id="2_0r2af"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" uid="uid://cfcu2fevofp4" path="res://Database/Moves/Javelin.tres" id="3_hx4dj"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" uid="uid://dxtwj6h6wlkqs" path="res://Database/Moves/Armor Break.tres" id="4_4p6tv"]
+[ext_resource type="Resource" path="res://Database/Moves/Mage Blade.tres" id="5_xintc"]
+[ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="6_xhnl8"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="7_je314"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("7_je314")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_0r2af"), ExtResource("3_hx4dj"), ExtResource("4_4p6tv"), ExtResource("5_xintc"), ExtResource("6_xhnl8")])
+move_unlock_levels = Array[int]([3, 5, 10, 15, 20])
+exported_move_names = Array[String](["Slice"])
+exported_move_unlock_names = Array[String](["Lance", "Javelin", "Armor Break", "Mage Blade", "Slash"])
+exported_move_unlock_levels = Array[int]([3, 5, 10, 15, 20])
+level = 1
+hp = 30
+attack = 10
+defense = 8
+resistance = 6
+agility = 4
+accuracy = 13
+speed = 7
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Xuir", "Knight"])
+unit_class = "Ascended Realmer"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(100, 3)
+atk_growth = Vector2i(100, 1)
+def_growth = Vector2i(100, 1)
+res_growth = Vector2i(100, 1)
+agl_growth = Vector2i(100, 1)
+acr_growth = Vector2i(100, 1)

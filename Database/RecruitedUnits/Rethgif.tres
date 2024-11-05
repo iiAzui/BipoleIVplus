@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://bw865mbrvubck"]
+
+[ext_resource type="Resource" path="res://Database/Moves/Death Strike.tres" id="2_6uhxq"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" uid="uid://dxtwj6h6wlkqs" path="res://Database/Moves/Armor Break.tres" id="3_q8jyb"]
+[ext_resource type="Resource" uid="uid://c2a0fqjprxy1k" path="res://Database/Moves/Freeze.tres" id="4_poifv"]
+[ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="5_3fyx4"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="6_n7h62"]
+[ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="7_ay01e"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("5_3fyx4"), ExtResource("6_n7h62"), ExtResource("7_ay01e")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_6uhxq"), ExtResource("3_q8jyb"), ExtResource("4_poifv")])
+move_unlock_levels = Array[int]([30, 35, 40])
+exported_move_names = Array[String](["Cut", "Slice", "Slash"])
+exported_move_unlock_names = Array[String](["Death Strike", "Armor Break", "Freeze"])
+exported_move_unlock_levels = Array[int]([30, 35, 40])
+level = 27
+hp = 28
+attack = 15
+defense = 27
+resistance = 5
+agility = 10
+accuracy = 35
+speed = 4
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Nolavillian", "Fighter", "Ice"])
+unit_class = "Warrior"
+class_change = "Elemental Warrior"
+class_change_level = 45
+hp_growth = Vector2i(60, 2)
+atk_growth = Vector2i(70, 1)
+def_growth = Vector2i(80, 1)
+res_growth = Vector2i(20, 1)
+agl_growth = Vector2i(70, 1)
+acr_growth = Vector2i(100, 2)

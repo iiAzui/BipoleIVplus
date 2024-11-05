@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://j3nyrijuf6jw"]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="2_tnlh0"]
+[ext_resource type="Resource" path="res://Database/Moves/Dark Orb.tres" id="3_6wah7"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_6wah7")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_tnlh0")])
+move_unlock_levels = Array[int]([15])
+exported_move_names = Array[String](["Dark Orb"])
+exported_move_unlock_names = Array[String](["Slice"])
+exported_move_unlock_levels = Array[int]([15])
+level = 2
+hp = 14
+attack = 10
+defense = 2
+resistance = 9
+agility = 5
+accuracy = 13
+speed = 3
+exp_reward = 100
+primary_type = "Magic"
+traits = Array[String](["Magic Primary", "Shadow Summon", "Mage", "Shadow"])
+unit_class = "Attack Mage"
+class_change = "Dual Mage"
+class_change_level = 10
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(80, 1)
+def_growth = Vector2i(30, 1)
+res_growth = Vector2i(90, 1)
+agl_growth = Vector2i(40, 1)
+acr_growth = Vector2i(60, 1)

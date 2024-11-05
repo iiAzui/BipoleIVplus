@@ -7,7 +7,7 @@ import statprint
 import placeunits
 import os
 
-def export_unit(unit: units.Unit):
+def export_unit(unit: units.Unit, destination_folder: str):
     move_names = ', '.join(['\"'+attack.CombatName+'\"' for attack in unit.Attacks])
     move_unlock_names = ', '.join(['\"'+unlock[0].CombatName+'\"' for unlock in unit.AttackUnlocks])
     move_unlock_levels = ', '.join([str(unlock[1]) for unlock in unit.AttackUnlocks])
@@ -40,7 +40,7 @@ primary_type = "{unit.PrimaryType}"
 traits = Array[String]([{traits}])
 unit_class = "{unit.UnitClass}"
 class_change = "{unit.ClassChange[0][0] if len(unit.ClassChange)>0 else ''}"
-class_change_level = {unit.ClassChange[0][1] if len(unit.ClassChange)>0 else ''}
+class_change_level = {unit.ClassChange[0][1] if len(unit.ClassChange)>0 else '0'}
 hp_growth = Vector2i({unit.HPGrowth[0]}, {unit.HPGrowth[1]})
 atk_growth = Vector2i({unit.ATKGrowth[0]}, {unit.ATKGrowth[1]})
 def_growth = Vector2i({unit.DEFGrowth[0]}, {unit.DEFGrowth[1]})
@@ -49,11 +49,9 @@ agl_growth = Vector2i({unit.AGLGrowth[0]}, {unit.AGLGrowth[1]})
 acr_growth = Vector2i({unit.ACRGrowth[0]}, {unit.ACRGrowth[1]})
     """
 
-    file_path = os.path.join("./Conversion/ExportedUnits", f"{unit.DisplayName}.tres")
+    file_path = os.path.join(destination_folder, f"{unit.DisplayName}.tres")
     with open(file_path, "w") as file:
         file.write(tres_content)
 
-export_unit(units.Scien)
-
-# for unit in units.ListOfPlayableUnits:
-#     print(unit.DisplayName)
+for unit in units.ListOfPlayableUnits:
+    export_unit(unit, "./Database/RecruitedUnits")

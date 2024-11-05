@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=9 format=3 uid="uid://sva4qth08rg6"]
+
+[ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="2_n46dc"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="3_o8jwi"]
+[ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="4_beahf"]
+[ext_resource type="Resource" path="res://Database/Moves/Death Strike.tres" id="5_n08s6"]
+[ext_resource type="Resource" uid="uid://dxtwj6h6wlkqs" path="res://Database/Moves/Armor Break.tres" id="6_31vf2"]
+[ext_resource type="Resource" path="res://Database/Moves/Dagger.tres" id="7_w0bt4"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("7_w0bt4")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_n46dc"), ExtResource("3_o8jwi"), ExtResource("4_beahf"), ExtResource("5_n08s6"), ExtResource("6_31vf2")])
+move_unlock_levels = Array[int]([22, 25, 27, 30, 30])
+exported_move_names = Array[String](["Dagger"])
+exported_move_unlock_names = Array[String](["Cut", "Slice", "Slash", "Death Strike", "Armor Break"])
+exported_move_unlock_levels = Array[int]([22, 25, 27, 30, 30])
+level = 26
+hp = 40
+attack = 20
+defense = 17
+resistance = 17
+agility = 19
+accuracy = 60
+speed = 5
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Bipolian", "Fighter"])
+unit_class = "Rogue"
+class_change = "Assassin"
+class_change_level = 30
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(100, 1)
+def_growth = Vector2i(40, 1)
+res_growth = Vector2i(30, 1)
+agl_growth = Vector2i(80, 1)
+acr_growth = Vector2i(90, 1)

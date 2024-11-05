@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://b627175msnqce"]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Thunder Blast.tres" id="2_xvrb2"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="3_4svfw"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Spark Blade.tres" id="4_b2ep6"]
+[ext_resource type="Resource" path="res://Database/Moves/Thunder.tres" id="5_o8swd"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("5_o8swd")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_xvrb2"), ExtResource("3_4svfw"), ExtResource("4_b2ep6")])
+move_unlock_levels = Array[int]([10, 15, 15])
+exported_move_names = Array[String](["Thunder"])
+exported_move_unlock_names = Array[String](["Thunder Blast", "Slice", "Spark Blade"])
+exported_move_unlock_levels = Array[int]([10, 15, 15])
+level = 3
+hp = 13
+attack = 15
+defense = 5
+resistance = 9
+agility = 4
+accuracy = 9
+speed = 3
+exp_reward = 100
+primary_type = "Magic"
+traits = Array[String](["Magic Primary", "Bipolian", "Mage", "E.O.S.", "Electric"])
+unit_class = "Attack Mage"
+class_change = "Elemental Warrior"
+class_change_level = 15
+hp_growth = Vector2i(65, 2)
+atk_growth = Vector2i(50, 2)
+def_growth = Vector2i(40, 1)
+res_growth = Vector2i(40, 2)
+agl_growth = Vector2i(15, 1)
+acr_growth = Vector2i(60, 1)

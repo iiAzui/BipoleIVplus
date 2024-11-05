@@ -1,13 +1,18 @@
-[gd_resource type="Resource" script_class="Unit" load_steps=3 format=3 uid="uid://db6p7ycug34gr"]
+[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://cawtheoidgonv"]
 
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Hero's Strike.tres" id="2_un3dr"]
+[ext_resource type="Resource" path="res://Database/Moves/Bow.tres" id="3_6t3hm"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Shield Shatter.tres" id="4_aaery"]
+[ext_resource type="Resource" path="res://Database/Moves/Snipe III.tres" id="5_vkldy"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="6_nw43v"]
 
 [resource]
 script = ExtResource("3_hyhyt")
-moves = Array[ExtResource("2_pja1r")]([])
-move_unlocks = Array[ExtResource("2_pja1r")]([])
-move_unlock_levels = Array[int]([])
+moves = Array[ExtResource("2_pja1r")]([ExtResource("6_nw43v")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_un3dr"), ExtResource("3_6t3hm"), ExtResource("4_aaery"), ExtResource("5_vkldy")])
+move_unlock_levels = Array[int]([7, 10, 20, 30])
 exported_move_names = Array[String](["Slice"])
 exported_move_unlock_names = Array[String](["Hero's Strike", "Bow", "Shield Shatter", "Snipe III"])
 exported_move_unlock_levels = Array[int]([7, 10, 20, 30])

@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://m2q8fqoqqsej"]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" uid="uid://cc3v33dwxfpl5" path="res://Database/Moves/Axe Throw.tres" id="2_uubky"]
+[ext_resource type="Resource" uid="uid://bskgqpiv7juq4" path="res://Database/Moves/Thorn.tres" id="3_81pox"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Axe.tres" id="4_bjfmd"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("4_bjfmd")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_uubky"), ExtResource("3_81pox")])
+move_unlock_levels = Array[int]([40, 45])
+exported_move_names = Array[String](["Axe"])
+exported_move_unlock_names = Array[String](["Axe Throw", "Thorn"])
+exported_move_unlock_levels = Array[int]([40, 45])
+level = 35
+hp = 65
+attack = 20
+defense = 20
+resistance = 5
+agility = 17
+accuracy = 38
+speed = 3
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Bipolian", "Mercenary", "Bio"])
+unit_class = "Mercenary"
+class_change = "Elemental Mercenary"
+class_change_level = 45
+hp_growth = Vector2i(80, 1)
+atk_growth = Vector2i(60, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(5, 1)
+agl_growth = Vector2i(30, 1)
+acr_growth = Vector2i(75, 1)

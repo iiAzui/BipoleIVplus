@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://m4pxyv7fq45w"]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Geom Strike.tres" id="2_ykcuw"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Geom Slash.tres" id="3_o7aso"]
+[ext_resource type="Resource" path="res://Database/Moves/Geom Burst.tres" id="4_o07ae"]
+[ext_resource type="Resource" path="res://Database/Moves/Geom Blast.tres" id="5_lb0vu"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("4_o07ae"), ExtResource("5_lb0vu")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_ykcuw"), ExtResource("3_o7aso")])
+move_unlock_levels = Array[int]([38, 42])
+exported_move_names = Array[String](["Geom Burst", "Geom Blast"])
+exported_move_unlock_names = Array[String](["Geom Strike", "Geom Slash"])
+exported_move_unlock_levels = Array[int]([38, 42])
+level = 34
+hp = 55
+attack = 35
+defense = 20
+resistance = 45
+agility = 15
+accuracy = 35
+speed = 4
+exp_reward = 100
+primary_type = "Magic"
+traits = Array[String](["Magic Primary", "Nolavillian"])
+unit_class = "Geom User"
+class_change = "Geom Master"
+class_change_level = 42
+hp_growth = Vector2i(70, 1)
+atk_growth = Vector2i(80, 1)
+def_growth = Vector2i(30, 1)
+res_growth = Vector2i(30, 1)
+agl_growth = Vector2i(20, 1)
+acr_growth = Vector2i(75, 2)

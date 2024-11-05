@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://j78we4205brv"]
+
+[ext_resource type="Resource" path="res://Database/Moves/Shadow Blade.tres" id="2_aq676"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Shadow Storm.tres" id="3_fpybf"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Dark Orb.tres" id="4_6le6d"]
+[ext_resource type="Resource" path="res://Database/Moves/Shadow Burst.tres" id="5_80m6d"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("4_6le6d"), ExtResource("5_80m6d")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_aq676"), ExtResource("3_fpybf")])
+move_unlock_levels = Array[int]([45, 50])
+exported_move_names = Array[String](["Dark Orb", "Shadow Burst"])
+exported_move_unlock_names = Array[String](["Shadow Blade", "Shadow Storm"])
+exported_move_unlock_levels = Array[int]([45, 50])
+level = 40
+hp = 75
+attack = 45
+defense = 15
+resistance = 50
+agility = 20
+accuracy = 38
+speed = 3
+exp_reward = 100
+primary_type = "Magic"
+traits = Array[String](["Magic Primary", "Nolavillian", "Xuirist"])
+unit_class = "Elite Xuirist"
+class_change = "Elite Xuirist"
+class_change_level = 50
+hp_growth = Vector2i(85, 1)
+atk_growth = Vector2i(90, 1)
+def_growth = Vector2i(40, 1)
+res_growth = Vector2i(80, 2)
+agl_growth = Vector2i(35, 1)
+acr_growth = Vector2i(95, 1)

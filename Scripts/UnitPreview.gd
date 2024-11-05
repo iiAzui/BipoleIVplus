@@ -14,8 +14,8 @@ const HEALTH_BAR_ENEMY = preload("res://Sprites/UI/HealthBarEnemy.tres")
 
 func display_unit(placed_unit: PlacedUnit):
 	var unit = placed_unit.unit
-	display_name_label.text = unit.character.display_name
-	portrait_texture_rect.texture = unit.character.portrait
+	display_name_label.text = unit.character.display_name if unit.character else "Unit"
+	portrait_texture_rect.texture = unit.character.portrait if unit.character else null
 	
 	health_label.text = "%d/%d" % [unit.hp, unit.max_hp]
 	health_bar.max_value = unit.max_hp

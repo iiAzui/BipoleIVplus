@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://cblquethd7tgi"]
+
+[ext_resource type="Resource" path="res://Database/Moves/Beam.tres" id="2_a0jkf"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Destroyer.tres" id="3_vrgfx"]
+[ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="4_v3txv"]
+[ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="5_p4slv"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("4_v3txv"), ExtResource("5_p4slv")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_a0jkf"), ExtResource("3_vrgfx")])
+move_unlock_levels = Array[int]([40, 50])
+exported_move_names = Array[String](["Cut", "Slash"])
+exported_move_unlock_names = Array[String](["Beam", "Destroyer"])
+exported_move_unlock_levels = Array[int]([40, 50])
+level = 25
+hp = 90
+attack = 35
+defense = 40
+resistance = 25
+agility = 3
+accuracy = 25
+speed = 4
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Infinian", "Mechanical"])
+unit_class = "Partial Mechanical"
+class_change = "Chrono Master"
+class_change_level = 50
+hp_growth = Vector2i(70, 1)
+atk_growth = Vector2i(70, 2)
+def_growth = Vector2i(60, 1)
+res_growth = Vector2i(60, 1)
+agl_growth = Vector2i(40, 1)
+acr_growth = Vector2i(90, 1)

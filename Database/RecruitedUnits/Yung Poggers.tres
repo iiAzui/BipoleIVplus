@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://c1a64t8poitxg"]
+
+[ext_resource type="Resource" path="res://Database/Moves/Geom Slash.tres" id="2_huwt5"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Geom Strike.tres" id="3_ul1y3"]
+[ext_resource type="Resource" path="res://Database/Moves/Shield Shatter.tres" id="4_ce2vg"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="5_34ypr"]
+[ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="6_gggp6"]
+[ext_resource type="Resource" path="res://Database/Moves/Geom Burst.tres" id="7_be1ax"]
+[ext_resource type="Resource" path="res://Database/Moves/Geom Medal.tres" id="8_4e5h1"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("5_34ypr"), ExtResource("6_gggp6"), ExtResource("7_be1ax"), ExtResource("8_4e5h1")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_huwt5"), ExtResource("3_ul1y3"), ExtResource("4_ce2vg")])
+move_unlock_levels = Array[int]([40, 42, 45])
+exported_move_names = Array[String](["Slice", "Slash", "Geom Burst", "Geom Medal"])
+exported_move_unlock_names = Array[String](["Geom Slash", "Geom Strike", "Shield Shatter"])
+exported_move_unlock_levels = Array[int]([40, 42, 45])
+level = 38
+hp = 70
+attack = 42
+defense = 37
+resistance = 30
+agility = 17
+accuracy = 30
+speed = 3
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Nolavillian", "Red Pilled"])
+unit_class = "Pogger"
+class_change = "Red-Pilled"
+class_change_level = 45
+hp_growth = Vector2i(85, 1)
+atk_growth = Vector2i(65, 1)
+def_growth = Vector2i(65, 1)
+res_growth = Vector2i(65, 1)
+agl_growth = Vector2i(40, 1)
+acr_growth = Vector2i(100, 1)

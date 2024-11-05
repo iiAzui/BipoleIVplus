@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://cr0us6o8al02b"]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="2_xvhkb"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="3_n1vkw"]
+[ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="4_cnb7p"]
+[ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="5_8q0tg"]
+[ext_resource type="Resource" path="res://Database/Moves/Dagger.tres" id="6_mt3yi"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("6_mt3yi"), ExtResource("4_cnb7p")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_xvhkb"), ExtResource("3_n1vkw"), ExtResource("4_cnb7p"), ExtResource("5_8q0tg")])
+move_unlock_levels = Array[int]([27, 30, 35, 40])
+exported_move_names = Array[String](["Dagger", "Aqua"])
+exported_move_unlock_names = Array[String](["Cut", "Slice", "Aqua", "Slash"])
+exported_move_unlock_levels = Array[int]([27, 30, 35, 40])
+level = 23
+hp = 25
+attack = 15
+defense = 18
+resistance = 15
+agility = 12
+accuracy = 25
+speed = 3
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Shadeian", "Water"])
+unit_class = "Noble"
+class_change = "Elemental Noble"
+class_change_level = 35
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(70, 2)
+def_growth = Vector2i(60, 1)
+res_growth = Vector2i(60, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(65, 1)

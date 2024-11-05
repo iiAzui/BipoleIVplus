@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://cprs6vbt251wq"]
+
+[ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="2_fhqs5"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Finisher.tres" id="3_x34kl"]
+[ext_resource type="Resource" uid="uid://dxtwj6h6wlkqs" path="res://Database/Moves/Armor Break.tres" id="4_dxsrb"]
+[ext_resource type="Resource" path="res://Database/Moves/Death Strike.tres" id="5_fai7a"]
+[ext_resource type="Resource" path="res://Database/Moves/Dagger.tres" id="6_4ocvp"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("6_4ocvp")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_fhqs5"), ExtResource("3_x34kl"), ExtResource("4_dxsrb"), ExtResource("5_fai7a")])
+move_unlock_levels = Array[int]([10, 13, 15, 20])
+exported_move_names = Array[String](["Dagger"])
+exported_move_unlock_names = Array[String](["Cut", "Finisher", "Armor Break", "Death Strike"])
+exported_move_unlock_levels = Array[int]([10, 13, 15, 20])
+level = 8
+hp = 20
+attack = 12
+defense = 6
+resistance = 12
+agility = 10
+accuracy = 20
+speed = 5
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Altarian", "Fighter"])
+unit_class = "Rogue"
+class_change = "Assassin"
+class_change_level = 20
+hp_growth = Vector2i(100, 1)
+atk_growth = Vector2i(70, 1)
+def_growth = Vector2i(40, 1)
+res_growth = Vector2i(75, 1)
+agl_growth = Vector2i(40, 1)
+acr_growth = Vector2i(65, 1)

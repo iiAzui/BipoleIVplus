@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://xcg2d2av4tm1"]
+
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Shield Shatter.tres" id="2_ym6xn"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Execution.tres" id="3_qubw6"]
+[ext_resource type="Resource" path="res://Database/Moves/Axe.tres" id="4_jdyou"]
+[ext_resource type="Resource" uid="uid://cc3v33dwxfpl5" path="res://Database/Moves/Axe Throw.tres" id="5_bp00d"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("4_jdyou"), ExtResource("5_bp00d")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_ym6xn"), ExtResource("3_qubw6")])
+move_unlock_levels = Array[int]([40, 45])
+exported_move_names = Array[String](["Axe", "Axe Throw"])
+exported_move_unlock_names = Array[String](["Shield Shatter", "Execution"])
+exported_move_unlock_levels = Array[int]([40, 45])
+level = 37
+hp = 100
+attack = 40
+defense = 30
+resistance = 10
+agility = 10
+accuracy = 30
+speed = 3
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Bipolian", "Mercenary"])
+unit_class = "Mercenary"
+class_change = "Executioner"
+class_change_level = 45
+hp_growth = Vector2i(100, 3)
+atk_growth = Vector2i(90, 1)
+def_growth = Vector2i(60, 1)
+res_growth = Vector2i(10, 1)
+agl_growth = Vector2i(5, 1)
+acr_growth = Vector2i(50, 1)

@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://twsrq13nastj"]
+
+[ext_resource type="Resource" uid="uid://c2a0fqjprxy1k" path="res://Database/Moves/Freeze.tres" id="2_gmjs5"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Congeal.tres" id="3_wm6fn"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_gmjs5"), ExtResource("3_wm6fn")])
+move_unlock_levels = Array[int]([23, 30])
+exported_move_names = Array[String]([])
+exported_move_unlock_names = Array[String](["Freeze", "Congeal"])
+exported_move_unlock_levels = Array[int]([23, 30])
+level = 20
+hp = 52
+attack = 18
+defense = 17
+resistance = 25
+agility = 2
+accuracy = 23
+speed = 3
+exp_reward = 100
+primary_type = "Magic"
+traits = Array[String](["Magic Primary", "Altarian", "Mage", "Bio"])
+unit_class = "Heal Mage"
+class_change = "Dual Mage"
+class_change_level = 23
+hp_growth = Vector2i(100, 1)
+atk_growth = Vector2i(80, 1)
+def_growth = Vector2i(70, 1)
+res_growth = Vector2i(70, 1)
+agl_growth = Vector2i(15, 1)
+acr_growth = Vector2i(100, 1)

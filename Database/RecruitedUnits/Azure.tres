@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://wjcr0j12c1mw"]
+
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="2_2hhpp"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Thunder Blast.tres" id="3_f3mjx"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Shadow Blade.tres" id="4_lp76g"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("2_2hhpp"), ExtResource("3_f3mjx"), ExtResource("4_lp76g")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Slice", "Thunder Blast", "Shadow Blade"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+level = 20
+hp = 40
+attack = 30
+defense = 45
+resistance = 45
+agility = 5
+accuracy = 999
+speed = 3
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "God Entity"])
+unit_class = "The Link"
+class_change = "The Link"
+class_change_level = 25
+hp_growth = Vector2i(100, 1)
+atk_growth = Vector2i(100, 1)
+def_growth = Vector2i(100, 1)
+res_growth = Vector2i(100, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(0, 0)

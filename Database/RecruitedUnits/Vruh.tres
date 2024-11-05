@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://cv4c2wa38o58d"]
+
+[ext_resource type="Resource" path="res://Database/Moves/Shield Shatter.tres" id="2_mblq5"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Punch.tres" id="3_oiqry"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_oiqry")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_mblq5")])
+move_unlock_levels = Array[int]([20])
+exported_move_names = Array[String](["Punch"])
+exported_move_unlock_names = Array[String](["Shield Shatter"])
+exported_move_unlock_levels = Array[int]([20])
+level = 15
+hp = 30
+attack = 15
+defense = 10
+resistance = 7
+agility = 4
+accuracy = 11
+speed = 2
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Bipolian", "Fighter"])
+unit_class = "Fighter"
+class_change = "why are you using vruh"
+class_change_level = 20
+hp_growth = Vector2i(70, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(20, 1)
+agl_growth = Vector2i(40, 1)
+acr_growth = Vector2i(60, 1)

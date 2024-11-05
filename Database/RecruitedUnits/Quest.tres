@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://ded8fjmb2up5u"]
+
+[ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="2_5rf2t"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" uid="uid://c2a0fqjprxy1k" path="res://Database/Moves/Freeze.tres" id="3_prjbp"]
+[ext_resource type="Resource" uid="uid://bskgqpiv7juq4" path="res://Database/Moves/Thorn.tres" id="4_etqr7"]
+[ext_resource type="Resource" path="res://Database/Moves/Dark Orb.tres" id="5_dm7ru"]
+[ext_resource type="Resource" path="res://Database/Moves/Thunder.tres" id="6_3svqx"]
+[ext_resource type="Resource" path="res://Database/Moves/Mage Blade.tres" id="7_g0mvl"]
+[ext_resource type="Resource" uid="uid://bcu3asejb0s5e" path="res://Database/Moves/Fireball.tres" id="8_qxi7q"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("8_qxi7q")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_5rf2t"), ExtResource("3_prjbp"), ExtResource("4_etqr7"), ExtResource("5_dm7ru"), ExtResource("6_3svqx"), ExtResource("7_g0mvl")])
+move_unlock_levels = Array[int]([3, 7, 10, 12, 14, 15])
+exported_move_names = Array[String](["Fireball"])
+exported_move_unlock_names = Array[String](["Aqua", "Freeze", "Thorn", "Dark Orb", "Thunder", "Mage Blade"])
+exported_move_unlock_levels = Array[int]([3, 7, 10, 12, 14, 15])
+level = 1
+hp = 13
+attack = 14
+defense = 4
+resistance = 8
+agility = 7
+accuracy = 9
+speed = 4
+exp_reward = 100
+primary_type = "Magic"
+traits = Array[String](["Magic Primary", "Bipolian", "Mage"])
+unit_class = "High Mage"
+class_change = "Grand Mage"
+class_change_level = 15
+hp_growth = Vector2i(50, 2)
+atk_growth = Vector2i(50, 2)
+def_growth = Vector2i(30, 1)
+res_growth = Vector2i(40, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(70, 1)

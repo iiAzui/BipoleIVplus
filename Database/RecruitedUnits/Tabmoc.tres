@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://bi66cxiv8pxpu"]
+
+[ext_resource type="Resource" path="res://Database/Moves/Hyper Slash.tres" id="2_hjkmc"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/God Slash.tres" id="3_p37ay"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="4_q36n7"]
+[ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="5_dg7ee"]
+[ext_resource type="Resource" path="res://Database/Moves/Shield Shatter.tres" id="6_jvioi"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("4_q36n7"), ExtResource("5_dg7ee"), ExtResource("6_jvioi")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("2_hjkmc"), ExtResource("3_p37ay")])
+move_unlock_levels = Array[int]([48, 53])
+exported_move_names = Array[String](["Slice", "Slash", "Shield Shatter"])
+exported_move_unlock_names = Array[String](["Hyper Slash", "God Slash"])
+exported_move_unlock_levels = Array[int]([48, 53])
+level = 42
+hp = 125
+attack = 65
+defense = 42
+resistance = 33
+agility = 18
+accuracy = 50
+speed = 4
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Shadeian", "Fighter"])
+unit_class = "Blade Fighter"
+class_change = "Blade Warrior"
+class_change_level = 53
+hp_growth = Vector2i(90, 1)
+atk_growth = Vector2i(90, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(20, 1)
+acr_growth = Vector2i(95, 1)
