@@ -6,8 +6,8 @@ extends Control
 @onready var range_display_grid: Node2D = $RangeDisplayGrid
 
 const MOVE_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/MoveTileHighlight.tscn")
-const ATTACK_TILE_HIGHLIGHT = preload("res://Scenes/UI/AttackTileHighlight.tscn")
-const SUPPORT_TILE_HIGHLIGHT = preload("res://Scenes/UI/SupportTileHighlight.tscn")
+const ATTACK_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/AttackTileHighlight.tscn")
+const SUPPORT_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/SupportTileHighlight.tscn")
 
 const RETRO_WIDTH: int = 19
 const RETRO_HEIGHT: int = 14
