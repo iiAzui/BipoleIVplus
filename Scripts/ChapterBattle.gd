@@ -77,11 +77,18 @@ func on_tile_pressed():
 			elif !hovered_unit.attacked:
 				change_cursor_mode(CursorMode.ATTACKING)
 	elif cursor_mode == CursorMode.MOVING:
+		# if in move mode and the current coords of the unit is selected, cancel the move
+		if cursor_coords == unit_selected.coords:
+			change_cursor_mode(CursorMode.SELECT)
+			return
+			
 		unit_grid.move_unit(unit_selected.coords, cursor_coords)
 		unit_selected.moved = true
 		change_cursor_mode(CursorMode.SELECT)
+		show_range(unit_selected)
 	elif cursor_mode == CursorMode.ATTACKING:
 		## TODO: implement attacking, and selecting move for that matter
+		unit_selected.moved = true # Cannot move after attack
 		unit_selected.attacked = true
 		change_cursor_mode(CursorMode.SELECT)
 		
@@ -129,6 +136,10 @@ func move_cursor(offset: Vector2i):
 
 func move_cursor_to(coords: Vector2i):
 	if coords == cursor_coords:
+		return
+		
+	# don't allow selecting non-movable tile in move mode (allow move in place to cancel move
+	if cursor_mode == CursorMode.MOVING and not (coords in moveable_tiles or coords == unit_selected.coords):
 		return
 	
 	cursor_coords = coords
@@ -192,7 +203,7 @@ func show_range(unit: PlacedUnit):
 	
 	range_iterations = 0
 	range_attack_iterations = 0
-	spread_range(unit.coords, unit, unit.unit.speed)
+	spread_range(unit.coords, unit, 0 if unit.moved else unit.unit.speed)
 	print("range iterations: ", range_iterations)
 	print("range attack iterations: ", range_attack_iterations)
 	
@@ -251,7 +262,7 @@ func spread_range(coords: Vector2i, unit: PlacedUnit, move_remaining: int):
 	range_iterations += 1
 	
 	# Spread attack range from this position that the unit can reach
-	spread_attack_range(coords, unit, total_attack_range_span)
+	spread_attack_range(coords, unit, 0 if unit.attacked else total_attack_range_span)
 	
 	if move_remaining <= 0:
 		return
