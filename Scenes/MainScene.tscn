@@ -1,9 +1,10 @@
-[gd_scene load_steps=39 format=3 uid="uid://cnnvgayg74dqn"]
+[gd_scene load_steps=40 format=3 uid="uid://cnnvgayg74dqn"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_obxun"]
 [ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_ys1kv"]
-[ext_resource type="PackedScene" uid="uid://d0fbj420r3kat" path="res://Scenes/Chapters/Chapter01.tscn" id="2_qpl3e"]
+[ext_resource type="PackedScene" uid="uid://bh2c3tqr6mxhh" path="res://Scenes/ChapterBattle.tscn" id="3_17mib"]
 [ext_resource type="Texture2D" uid="uid://pvptlf4122jo" path="res://Setup/Box.png" id="3_xmniy"]
+[ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter1.tres" id="4_pxc12"]
 [ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/Overworld/selection.png" id="6_cen5d"]
 [ext_resource type="Texture2D" uid="uid://q6s74u6bktan" path="res://Setup/Outsidebox.png" id="7_72yba"]
 [ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Sprites/Portraits/proton_big.png" id="8_4skrp"]
@@ -262,7 +263,8 @@ grow_vertical = 2
 theme = ExtResource("1_ys1kv")
 script = ExtResource("1_obxun")
 
-[node name="Chapter01" parent="." instance=ExtResource("2_qpl3e")]
+[node name="ChapterBattle" parent="." instance=ExtResource("3_17mib")]
+placements = ExtResource("4_pxc12")
 
 [node name="Timer" type="Timer" parent="."]
 

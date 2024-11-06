@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0fbj420r3kat"]
-
-[ext_resource type="PackedScene" uid="uid://bh2c3tqr6mxhh" path="res://Scenes/ChapterTemplate.tscn" id="1_v11b5"]
-[ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter1.tres" id="2_4ar2y"]
-
-[node name="Chapter01" instance=ExtResource("1_v11b5")]
-placements = ExtResource("2_4ar2y")
-
-[node name="RangeDisplayGrid" type="Node2D" parent="." index="3"]

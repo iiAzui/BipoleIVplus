@@ -4,7 +4,7 @@ extends Control
 @onready var unit_preview: UnitPreview = $UnitPreview
 
 # TODO: load chapter from save file
-@onready var battle: ChapterBattle = $Chapter01
+@onready var battle: ChapterBattle = $ChapterBattle
 
 func _ready() -> void:
 	battle.cursor_moved.connect(show_hovered_unit)

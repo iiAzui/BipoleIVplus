@@ -129,6 +129,9 @@ var highest_attack_range: int
 var highest_support_range: int
 var total_attack_range_span: int
 
+var range_iterations: int
+var range_attack_iterations: int
+
 func show_range(unit: PlacedUnit):	
 	for child in range_display_grid.get_children():
 		child.queue_free()
@@ -150,7 +153,11 @@ func show_range(unit: PlacedUnit):
 			
 	total_attack_range_span = max(highest_attack_range, highest_support_range)
 	
+	range_iterations = 0
+	range_attack_iterations = 0
 	spread_range(unit.coords, unit, unit.unit.speed)
+	print("range iterations: ", range_iterations)
+	print("range attack iterations: ", range_attack_iterations)
 	
 	# can't move in place
 	moveable_tiles.erase(unit.coords)
@@ -204,6 +211,7 @@ func spread_range(coords: Vector2i, unit: PlacedUnit, move_remaining: int):
 		
 	# Mark as a valid move location and mark the value as the moves it took to get here
 	moveable_tiles[coords] = move_remaining
+	range_iterations += 1
 	
 	# Spread attack range from this position that the unit can reach
 	spread_attack_range(coords, unit, total_attack_range_span)
@@ -224,11 +232,18 @@ func spread_attack_range(coords: Vector2i, unit: PlacedUnit, attack_range_remain
 	if not is_coords_in_bounds(coords):
 		return
 	
-	# If already marked as attackable, stop if unit can already reach this tile in fewer moves
-	if attackable_tiles.has(coords) and attackable_tiles[coords] >= attack_range_remaining:
-		return
+	# If renaining range is above 500, considered infinite,
+	# doesn't matter if this has been reached in fewer moves, all other tiles will be be reached either way.
+	if attack_range_remaining > 500:
+		if attackable_tiles.has(coords):
+			return
+	else:
+		# If already marked as attackable, stop if unit can already reach this tile in fewer moves
+		if attackable_tiles.has(coords) and attackable_tiles[coords] >= attack_range_remaining:
+			return
 		
 	attackable_tiles[coords] = attack_range_remaining
+	range_attack_iterations += 1
 	
 	if attack_range_remaining <= 0:
 		return
