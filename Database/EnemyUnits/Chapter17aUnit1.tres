@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=8 format=3 uid="uid://c6o321xpw4udx"]
+
+[ext_resource type="Resource" uid="uid://l7hqkvaq42a0" path="res://Database/Characters/genericxuirist.tres" id="1_4hrbp"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" uid="uid://bi1ftik6el8mg" path="res://Database/Moves/Bow.tres" id="3_s30cm"]
+[ext_resource type="Resource" path="res://Database/Moves/Long Bow.tres" id="4_g2bx7"]
+[ext_resource type="Resource" path="res://Database/Moves/Distance Shot.tres" id="5_elopf"]
+[ext_resource type="Resource" uid="uid://d27gk18od5me0" path="res://Database/Moves/Snipe.tres" id="6_gmndi"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_4hrbp")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_s30cm"), ExtResource("4_g2bx7"), ExtResource("5_elopf"), ExtResource("6_gmndi")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Bow", "Long Bow", "Distance Shot", "Snipe"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericxuirist_big"
+exported_overworld_name = "genericxuirist_small"
+exported_character_name = "genericxuirist"
+exported_x = 0
+exported_y = 0
+level = 35
+hp = 30
+attack = 5
+defense = 6
+resistance = 6
+agility = 8
+accuracy = 28
+speed = 3
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Ice"])
+unit_class = "Xuirist"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

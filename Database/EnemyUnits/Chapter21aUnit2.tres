@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://t6yxinjnxwxw"]
+
+[ext_resource type="Resource" uid="uid://drq1nkexoc3l6" path="res://Database/Characters/break.tres" id="1_e4q3w"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Venom Blade.tres" id="3_m0edf"]
+[ext_resource type="Resource" path="res://Database/Moves/Gun.tres" id="4_6ycc6"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_e4q3w")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_m0edf"), ExtResource("4_6ycc6")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Venom Blade", "Gun"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "break_big"
+exported_overworld_name = "break_small"
+exported_character_name = "break"
+exported_x = 0
+exported_y = 0
+level = 50
+hp = 125
+attack = 30
+defense = 35
+resistance = 25
+agility = 17
+accuracy = 35
+speed = 0
+exp_reward = 350
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Nolavillian", "Scientist", "Shadow"])
+unit_class = "Head Scientist"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

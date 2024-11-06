@@ -1,73 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://d0fbj420r3kat"]
+[gd_scene load_steps=3 format=3 uid="uid://d0fbj420r3kat"]
 
 [ext_resource type="PackedScene" uid="uid://bh2c3tqr6mxhh" path="res://Scenes/ChapterTemplate.tscn" id="1_v11b5"]
-[ext_resource type="PackedScene" uid="uid://da2b80p3dhtok" path="res://Scenes/UI/PlacedUnit.tscn" id="2_crf22"]
-[ext_resource type="Resource" uid="uid://cc2kqmp1w5qbk" path="res://Database/Characters/RedSlime.tres" id="3_a5h2i"]
-[ext_resource type="Script" path="res://Scripts/Move.gd" id="4_843sx"]
-[ext_resource type="Script" path="res://Scripts/Unit.gd" id="5_fc30f"]
-[ext_resource type="Resource" uid="uid://lhemddpv3hms" path="res://Database/Moves/Slam.tres" id="5_ppvk3"]
-[ext_resource type="Resource" uid="uid://cslox4jgyjyci" path="res://Database/Characters/BlueSlime.tres" id="8_khk1t"]
-
-[sub_resource type="Resource" id="Resource_frl25"]
-script = ExtResource("5_fc30f")
-character = ExtResource("3_a5h2i")
-moves = Array[ExtResource("4_843sx")]([ExtResource("5_ppvk3")])
-move_unlocks = Array[ExtResource("4_843sx")]([])
-level = 1
-hp = 20
-attack = 12
-defense = 22
-resistance = 0
-agility = 5
-accuracy = 99
-speed = 4
-exp_reward = 65
-primary_type = "Physical"
-traits = Array[String](["Monster", "Water"])
-unit_class = "Slime"
-class_change = ""
-class_change_level = 0
-hp_growth = Vector2i(50, 1)
-atk_growth = Vector2i(50, 1)
-def_growth = Vector2i(50, 1)
-res_growth = Vector2i(50, 1)
-agl_growth = Vector2i(50, 1)
-acr_growth = Vector2i(50, 1)
-
-[sub_resource type="Resource" id="Resource_g344r"]
-script = ExtResource("5_fc30f")
-character = ExtResource("8_khk1t")
-moves = Array[ExtResource("4_843sx")]([ExtResource("5_ppvk3")])
-move_unlocks = Array[ExtResource("4_843sx")]([])
-level = 1
-hp = 20
-attack = 12
-defense = 22
-resistance = 0
-agility = 5
-accuracy = 99
-speed = 3
-exp_reward = 65
-primary_type = "Physical"
-traits = Array[String](["Monster", "Water"])
-unit_class = "Slime"
-class_change = ""
-class_change_level = 0
-hp_growth = Vector2i(50, 1)
-atk_growth = Vector2i(50, 1)
-def_growth = Vector2i(50, 1)
-res_growth = Vector2i(50, 1)
-agl_growth = Vector2i(50, 1)
-acr_growth = Vector2i(50, 1)
+[ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter1.tres" id="2_4ar2y"]
 
 [node name="Chapter01" instance=ExtResource("1_v11b5")]
-
-[node name="RedSlime1" parent="UnitGrid" index="0" instance=ExtResource("2_crf22")]
-position = Vector2(128, 192)
-unit = SubResource("Resource_frl25")
-
-[node name="BlueSlime1" parent="UnitGrid" index="1" instance=ExtResource("2_crf22")]
-position = Vector2(64, 576)
-unit = SubResource("Resource_g344r")
+placements = ExtResource("2_4ar2y")
 
 [node name="RangeDisplayGrid" type="Node2D" parent="." index="3"]

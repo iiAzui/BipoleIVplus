@@ -1,9 +1,8 @@
-
-[gd_resource type="Resource" script_class="ChapterPlacements" load_steps=2 format=3 uid="uid://bkhl1kl5604v5"]
+[gd_resource type="Resource" script_class="ChapterPlacements" load_steps=2 format=3 uid="uid://clvp31yrnwnqf"]
 
 [ext_resource type="Script" path="res://Scripts/ChapterPlacements.gd" id="1_kp6pv"]
 
 [resource]
 script = ExtResource("1_kp6pv")
-unit_names = Array[String](["Chapter6Fighter5", "Chapter6Fighter4", "Chapter6Fighter6", "Chapter6Fighter2", "Chapter6Fighter3", "Chapter6Archer1", "Chapter6Fighter1"])
-unit_coords = Array[Vector2i]([Vector2i(1, 1), Vector2i(1, 3), Vector2i(2, 2), Vector2i(5, 0), Vector2i(5, 4), Vector2i(6, 16), Vector2i(7, 2)])
+unit_names = Array[String](["Chapter6Unit1", "Chapter6Unit2", "Chapter6Unit3", "Chapter6Unit4", "Chapter6Unit5", "Chapter6Unit6", "Chapter6Unit7"])
+unit_coords = Array[Vector2i]([Vector2i(1, 1), Vector2i(3, 1), Vector2i(2, 2), Vector2i(0, 5), Vector2i(4, 5), Vector2i(16, 6), Vector2i(2, 7)])

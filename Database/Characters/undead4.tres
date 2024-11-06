@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://c6tjwymfmnphv"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://dtuc4dcpfgwbj" path="res://Sprites/Overworld/undead_small.png" id="1_5d527"]
+[ext_resource type="Texture2D" uid="uid://cmbw4thbf6vbj" path="res://Sprites/Portraits/undead4_big.png" id="2_kjmuy"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Undead"
+portrait = ExtResource("2_kjmuy")
+overworld_sprite = ExtResource("1_5d527")
 bio = "???"
 level_quotes = Array[String](["..."])

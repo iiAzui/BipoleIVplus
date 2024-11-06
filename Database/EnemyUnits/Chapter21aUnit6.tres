@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://daadwgg7waox4"]
+
+[ext_resource type="Resource" uid="uid://vys7k6pjl23a" path="res://Database/Characters/undead3.tres" id="1_lduti"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Shadow Punch.tres" id="3_t8oke"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_lduti")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_t8oke")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Shadow Punch"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "undead3_big"
+exported_overworld_name = "undead_small"
+exported_character_name = "undead3"
+exported_x = 0
+exported_y = 0
+level = 35
+hp = 60
+attack = 22
+defense = 10
+resistance = 25
+agility = 10
+accuracy = 34
+speed = 3
+exp_reward = 130
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Shadow"])
+unit_class = "Undead"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

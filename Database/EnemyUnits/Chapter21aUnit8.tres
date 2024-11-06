@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://dbbj45x6wwq4q"]
+
+[ext_resource type="Resource" uid="uid://l7hqkvaq42a0" path="res://Database/Characters/genericxuirist.tres" id="1_58at2"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Countdown.tres" id="3_d1ktj"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Death.tres" id="4_0kowk"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_58at2")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_d1ktj"), ExtResource("4_0kowk")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Countdown", "Death"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericxuirist_big"
+exported_overworld_name = "genericxuirist_small"
+exported_character_name = "genericxuirist"
+exported_x = 0
+exported_y = 0
+level = 45
+hp = 6
+attack = 40
+defense = 0
+resistance = 999
+agility = 15
+accuracy = 999
+speed = 0
+exp_reward = 215
+primary_type = "Magic"
+traits = Array[String](["Magic Primary", "Water"])
+unit_class = "Xuirist"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

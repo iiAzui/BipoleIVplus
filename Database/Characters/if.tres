@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://dhwgb3sf7hxdg"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://cnwjw6rxrfumc" path="res://Sprites/Overworld/if_small.png" id="1_c00q2"]
+[ext_resource type="Texture2D" uid="uid://cmkacw7c8vd8n" path="res://Sprites/Portraits/if_big.png" id="2_wlmp0"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "If"
+portrait = ExtResource("2_wlmp0")
+overworld_sprite = ExtResource("1_c00q2")
 bio = "If Bool is the head of the First Division of Scientists at the Shadow Realm Research Center. He is often very strict, only allowing his division to perform under his exact conditions."
 level_quotes = Array[String](["Imagine not even making it past the first sector."])

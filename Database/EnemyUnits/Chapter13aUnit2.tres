@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://dw75x7b0012g2"]
+
+[ext_resource type="Resource" uid="uid://k58pcmalsj4p" path="res://Database/Characters/genericswordfighter.tres" id="1_llt5n"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="3_stgk3"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_llt5n")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_stgk3")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Slice"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericswordfighter_big"
+exported_overworld_name = "genericswordfighter_small"
+exported_character_name = "genericswordfighter"
+exported_x = 0
+exported_y = 0
+level = 19
+hp = 65
+attack = 16
+defense = 10
+resistance = 783
+agility = 10
+accuracy = 28
+speed = 3
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Water"])
+unit_class = "Fighter"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

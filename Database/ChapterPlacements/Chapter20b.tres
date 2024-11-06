@@ -5,5 +5,5 @@
 
 [resource]
 script = ExtResource("1_kp6pv")
-unit_names = Array[String](["GnirifEnemy", "CigamEnemy", "DaelTurtle", "DnefedEnemy", "ThgifEnemy"])
-unit_coords = Array[Vector2i]([Vector2i(1, 14), Vector2i(1, 16), Vector2i(3, 14), Vector2i(5, 12), Vector2i(5, 14)])
+unit_names = Array[String](["Chapter20bUnit1", "Chapter20bUnit2", "Chapter20bUnit3", "Chapter20bUnit4", "Chapter20bUnit5"])
+unit_coords = Array[Vector2i]([Vector2i(14, 1), Vector2i(16, 1), Vector2i(14, 3), Vector2i(12, 5), Vector2i(14, 5)])

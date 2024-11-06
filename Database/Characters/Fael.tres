@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://dxwrfmnoeb4ym"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://dslb6vuio5rwm" path="res://Sprites/Overworld/fael_small.png" id="1_ru5fy"]
+[ext_resource type="Texture2D" uid="uid://bya2y5mwk5w7w" path="res://Sprites/Portraits/fael_big.png" id="2_pq6pa"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Fael"
+portrait = ExtResource("2_pq6pa")
+overworld_sprite = ExtResource("1_ru5fy")
 bio = "Fael is a memeber of the Elemental Offense Squad."
-level_quotes = Array[String](["I did it.","This is helpful.","Just as planned."])
+level_quotes = Array[String](["I did it.", "This is helpful.", "Just as planned."])

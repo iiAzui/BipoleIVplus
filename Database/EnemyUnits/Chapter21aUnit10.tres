@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://df2nbflc244p8"]
+
+[ext_resource type="Resource" uid="uid://l7hqkvaq42a0" path="res://Database/Characters/genericxuirist.tres" id="1_rwgm2"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Congeal.tres" id="3_6c0p7"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Freeze.tres" id="4_odby6"]
+[ext_resource type="Resource" path="res://Database/Moves/Cut.tres" id="5_ygskb"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_rwgm2")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_6c0p7"), ExtResource("4_odby6"), ExtResource("5_ygskb")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Congeal", "Freeze", "Cut"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericxuirist_big"
+exported_overworld_name = "genericxuirist_small"
+exported_character_name = "genericxuirist"
+exported_x = 0
+exported_y = 0
+level = 40
+hp = 45
+attack = 15
+defense = 15
+resistance = 75
+agility = 15
+accuracy = 40
+speed = 1
+exp_reward = 125
+primary_type = "Magic"
+traits = Array[String](["Magic Primary", "Ice"])
+unit_class = "Xuirist"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

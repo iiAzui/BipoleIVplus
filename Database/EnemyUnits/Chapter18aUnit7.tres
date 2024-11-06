@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://da8ngnwfxkdgn"]
+
+[ext_resource type="Resource" uid="uid://l7hqkvaq42a0" path="res://Database/Characters/genericxuirist.tres" id="1_xb3ar"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" uid="uid://d3w2l3i1n8a7" path="res://Database/Moves/Snipe II.tres" id="3_gxi3o"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_xb3ar")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_gxi3o")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Snipe II"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericxuirist_big"
+exported_overworld_name = "genericxuirist_small"
+exported_character_name = "genericxuirist"
+exported_x = 0
+exported_y = 0
+level = 32
+hp = 30
+attack = 9
+defense = 7
+resistance = 10
+agility = 10
+accuracy = 25
+speed = 2
+exp_reward = 95
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Ice"])
+unit_class = "Xuirist"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

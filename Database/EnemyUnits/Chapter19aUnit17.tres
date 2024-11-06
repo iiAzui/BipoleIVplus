@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://dd2qew2bxr7ww"]
+
+[ext_resource type="Resource" uid="uid://0sxkay3kno7d" path="res://Database/Characters/genericarcher.tres" id="1_6xgt4"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Bow+.tres" id="3_ut5lp"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_6xgt4")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_ut5lp")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Bow+"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericarcher_big"
+exported_overworld_name = "genericarcher_small"
+exported_character_name = "genericarcher"
+exported_x = 0
+exported_y = 0
+level = 35
+hp = 40
+attack = 35
+defense = 15
+resistance = 25
+agility = 25
+accuracy = 40
+speed = 1
+exp_reward = 115
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Water"])
+unit_class = "Archer"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

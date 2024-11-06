@@ -15,19 +15,22 @@ def export_chapter(chapter_name: str, units: list[units.Unit | None]):
     chapter_units = []
     chapter_unit_positions = []
 
+    unit_num = 1
     for i in range(len(units)):
         unit = units[i]
         if unit is None:
             continue
 
-        y = i % 19
-        x = math.floor(i / 19)
+        y = math.floor(i / 19)
+        x = i % 19
 
-        chapter_units.append(unit.TurtleName)
+        unit_resource_name = f"{chapter_name}Unit{unit_num}"
+        chapter_units.append(unit_resource_name)
         chapter_unit_positions.append((x, y))
 
-        unitconverter.export_unit(unit, "./Database/EnemyUnits", True, x, y)
+        unitconverter.export_unit(unit, "./Database/EnemyUnits", unit_resource_name)
         unitconverter.export_character(unit, "./Database/Characters", True)
+        unit_num += 1
 
     tres_content = f"""
 [gd_resource type="Resource" script_class="ChapterPlacements" load_steps=2 format=3 uid="uid://bkhl1kl5604v5"]

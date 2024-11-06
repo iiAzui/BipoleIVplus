@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://3vmmxn85w3ix"]
+
+[ext_resource type="Resource" uid="uid://dm72y6up2hg1c" path="res://Database/Characters/break2.tres" id="1_vtlsx"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/The Holy Itucher.tres" id="3_rqn60"]
+[ext_resource type="Resource" path="res://Database/Moves/Venom Blade.tres" id="4_d4wro"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_vtlsx")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_rqn60"), ExtResource("4_d4wro")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["The Holy Itucher", "Venom Blade"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "break2_big"
+exported_overworld_name = "break2_small"
+exported_character_name = "break2"
+exported_x = 0
+exported_y = 0
+level = 65
+hp = 650
+attack = 28
+defense = 20
+resistance = 40
+agility = 28
+accuracy = 50
+speed = 25
+exp_reward = 500
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Scientist", "Shadow"])
+unit_class = "Wielder of the Holy Itucher"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

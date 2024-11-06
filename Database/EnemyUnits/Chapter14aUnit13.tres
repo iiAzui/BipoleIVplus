@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://ckjqorb2hfywp"]
+
+[ext_resource type="Resource" uid="uid://0sxkay3kno7d" path="res://Database/Characters/genericarcher.tres" id="1_y6tfp"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" uid="uid://bi1ftik6el8mg" path="res://Database/Moves/Bow.tres" id="3_f12a2"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Bow+.tres" id="4_sxsro"]
+[ext_resource type="Resource" path="res://Database/Moves/Long Bow.tres" id="5_j4x2u"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_y6tfp")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_f12a2"), ExtResource("4_sxsro"), ExtResource("5_j4x2u")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Bow", "Bow+", "Long Bow"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericarcher_big"
+exported_overworld_name = "genericarcher_small"
+exported_character_name = "genericarcher"
+exported_x = 0
+exported_y = 0
+level = 25
+hp = 50
+attack = 10
+defense = 15
+resistance = 70
+agility = 6
+accuracy = 50
+speed = 3
+exp_reward = 80
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Water"])
+unit_class = "Archer"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

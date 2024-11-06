@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://ce3e73x3hbe24"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://bfq3a6xehq12d" path="res://Sprites/Overworld/diverneville_small.png" id="1_xfu4d"]
+[ext_resource type="Texture2D" uid="uid://bu2olbih3em6w" path="res://Sprites/Portraits/diverneville_big.png" id="2_jqjxt"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Diver Neville"
+portrait = ExtResource("2_jqjxt")
+overworld_sprite = ExtResource("1_xfu4d")
 bio = "The top diver of the K'Neville pirates. He can dive depths of over 420 meters in seconds, and can survive over 9000 meters of pressure."
 level_quotes = Array[String](["Yo poggers in the chat."])

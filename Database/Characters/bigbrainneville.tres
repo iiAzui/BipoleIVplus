@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://dt53mu0kj7is3"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://7uteo2laakh2" path="res://Sprites/Overworld/bigbrainneville_small.png" id="1_wsrv8"]
+[ext_resource type="Texture2D" uid="uid://cjs5k1hkteha0" path="res://Sprites/Portraits/bigbrainneville_big.png" id="2_juu62"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Big Brain Neville"
+portrait = ExtResource("2_juu62")
+overworld_sprite = ExtResource("1_wsrv8")
 bio = "The navigator and tactician of the K'Neville pirates. Though he once captained his own ship, the B.Neville, he is now loyal to Kaptain K'Neville and should not be underestimated."
 level_quotes = Array[String](["I detect a small brain."])

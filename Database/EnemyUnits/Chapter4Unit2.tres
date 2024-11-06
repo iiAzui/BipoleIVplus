@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://bymflslm46aqg"]
+
+[ext_resource type="Resource" uid="uid://bwa5cr6vcfkgf" path="res://Database/Characters/retool.tres" id="1_jytl3"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="3_ivd8a"]
+[ext_resource type="Resource" path="res://Database/Moves/Thorn.tres" id="4_6bf6f"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_jytl3")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_ivd8a"), ExtResource("4_6bf6f")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Slice", "Thorn"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "retool_big"
+exported_overworld_name = "retool_small"
+exported_character_name = "retool"
+exported_x = 0
+exported_y = 0
+level = 8
+hp = 50
+attack = 10
+defense = 9
+resistance = 5
+agility = 5
+accuracy = 13
+speed = 2
+exp_reward = 150
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Bio"])
+unit_class = "Guild Leader"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

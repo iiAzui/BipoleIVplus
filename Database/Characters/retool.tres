@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bwa5cr6vcfkgf"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://bdmyf322pfj2a" path="res://Sprites/Overworld/retool_small.png" id="1_sfctt"]
+[ext_resource type="Texture2D" uid="uid://yv7nc262rtkx" path="res://Sprites/Portraits/retool_big.png" id="2_xpq2r"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Retool"
+portrait = ExtResource("2_xpq2r")
+overworld_sprite = ExtResource("1_sfctt")
 bio = "Retool is the leader of the Guild  of Retool, a guild of bandits that has recently gained power after looting the Castle of Quad."
 level_quotes = Array[String](["Bow down to me, fools!"])

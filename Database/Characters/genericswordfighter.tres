@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://k58pcmalsj4p"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://cv6ignqn2ruqp" path="res://Sprites/Overworld/genericswordfighter_small.png" id="1_kd2bh"]
+[ext_resource type="Texture2D" uid="uid://scfugwvwdqmo" path="res://Sprites/Portraits/genericswordfighter_big.png" id="2_wap8y"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Bandit"
+portrait = ExtResource("2_wap8y")
+overworld_sprite = ExtResource("1_kd2bh")
 bio = "A bandit that is part of the Guild of Retool."
 level_quotes = Array[String](["You won't be stopping us."])

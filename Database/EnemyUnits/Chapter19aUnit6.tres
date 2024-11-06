@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://p4kci2hbc0wi"]
+
+[ext_resource type="Resource" uid="uid://dbdtdt65vgt0a" path="res://Database/Characters/genericarmored.tres" id="1_q1lqk"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="3_vykd8"]
+[ext_resource type="Resource" path="res://Database/Moves/Javelin.tres" id="4_dc5ac"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_q1lqk")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_vykd8"), ExtResource("4_dc5ac")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Slice", "Javelin"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericarmored_big"
+exported_overworld_name = "genericarmored_small"
+exported_character_name = "genericarmored"
+exported_x = 0
+exported_y = 0
+level = 33
+hp = 100
+attack = 20
+defense = 40
+resistance = 20
+agility = 10
+accuracy = 35
+speed = 1
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Shadow", "Armored"])
+unit_class = "Armored"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

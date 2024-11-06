@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://d15no5v8ncsbg"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://djkioulj5jd58" path="res://Sprites/Overworld/genericscientist_small.png" id="1_cbhl7"]
+[ext_resource type="Texture2D" uid="uid://ctbbbeg6uoosl" path="res://Sprites/Portraits/genericscientist_big.png" id="2_orp0n"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Scientist"
+portrait = ExtResource("2_orp0n")
+overworld_sprite = ExtResource("1_cbhl7")
 bio = "A scientist working in the First Division of Scientists at the Shadow Realm Research Center."
 level_quotes = Array[String](["You must be eliminated."])

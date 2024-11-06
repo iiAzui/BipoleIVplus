@@ -1,9 +1,8 @@
-
-[gd_resource type="Resource" script_class="ChapterPlacements" load_steps=2 format=3 uid="uid://bkhl1kl5604v5"]
+[gd_resource type="Resource" script_class="ChapterPlacements" load_steps=2 format=3 uid="uid://bftk44r76n7st"]
 
 [ext_resource type="Script" path="res://Scripts/ChapterPlacements.gd" id="1_kp6pv"]
 
 [resource]
 script = ExtResource("1_kp6pv")
-unit_names = Array[String](["VruhBossTurtle"])
-unit_coords = Array[Vector2i]([Vector2i(6, 8)])
+unit_names = Array[String](["Chapter27dUnit1"])
+unit_coords = Array[Vector2i]([Vector2i(8, 6)])

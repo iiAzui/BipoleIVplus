@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://bavowuy1hy6b2"]
+
+[ext_resource type="Resource" uid="uid://6lffiu33m5ya" path="res://Database/Characters/ultimatemechanical.tres" id="1_remep"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/God Slash.tres" id="3_fx8ju"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_remep")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_fx8ju")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["God Slash"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "ultimatemechanical_big"
+exported_overworld_name = "ultimatemechanical_small"
+exported_character_name = "ultimatemechanical"
+exported_x = 0
+exported_y = 0
+level = 250
+hp = 1000
+attack = 30
+defense = 20
+resistance = 40
+agility = 10
+accuracy = 250
+speed = 1
+exp_reward = 1750
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Electric"])
+unit_class = "The Ultimate Mechanical"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

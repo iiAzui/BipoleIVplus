@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://c2kuwslfodrde"]
+
+[ext_resource type="Resource" uid="uid://l7hqkvaq42a0" path="res://Database/Characters/genericxuirist.tres" id="1_rauul"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Slash.tres" id="3_f1q7y"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Thorn.tres" id="4_ngwu7"]
+[ext_resource type="Resource" path="res://Database/Moves/Vine Wrath.tres" id="5_xhifo"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_rauul")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_f1q7y"), ExtResource("4_ngwu7"), ExtResource("5_xhifo")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Slash", "Thorn", "Vine Wrath"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericxuirist_big"
+exported_overworld_name = "genericxuirist_small"
+exported_character_name = "genericxuirist"
+exported_x = 0
+exported_y = 0
+level = 37
+hp = 80
+attack = 13
+defense = 8
+resistance = 8
+agility = 10
+accuracy = 25
+speed = 3
+exp_reward = 120
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Bio"])
+unit_class = "Xuirist"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

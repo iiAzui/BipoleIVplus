@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://6lffiu33m5ya"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://dnexf1x1kb8ou" path="res://Sprites/Overworld/ultimatemechanical_small.png" id="1_lcd3t"]
+[ext_resource type="Texture2D" uid="uid://cybcp2bvb1mhj" path="res://Sprites/Portraits/ultimatemechanical_big.png" id="2_8qhmc"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Etamitlu"
+portrait = ExtResource("2_8qhmc")
+overworld_sprite = ExtResource("1_lcd3t")
 bio = "#######################################"
 level_quotes = Array[String](["..."])

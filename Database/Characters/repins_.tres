@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://dopyk0l7eigi8"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://dfrv5h2np1ky0" path="res://Sprites/Overworld/repins_small3.png" id="1_8wryt"]
+[ext_resource type="Texture2D" uid="uid://oxcio4w5ucyq" path="res://Sprites/Portraits/repins_big4.png" id="2_jpqnd"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Repins"
+portrait = ExtResource("2_jpqnd")
+overworld_sprite = ExtResource("1_8wryt")
 bio = "Repins has become possessed by the Holy Itucher, he has lost his free will."
 level_quotes = Array[String](["..."])

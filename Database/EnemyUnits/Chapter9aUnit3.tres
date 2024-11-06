@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=7 format=3 uid="uid://2er1o0mwjjte"]
+
+[ext_resource type="Resource" uid="uid://k58pcmalsj4p" path="res://Database/Characters/genericswordfighter.tres" id="1_wu0ha"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" uid="uid://bcu3asejb0s5e" path="res://Database/Moves/Fireball.tres" id="3_rk3ot"]
+[ext_resource type="Resource" uid="uid://2tphaotxnbto" path="res://Database/Moves/Heal.tres" id="4_y8656"]
+[ext_resource type="Resource" path="res://Database/Moves/Long Heal.tres" id="5_mh4ed"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_wu0ha")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_rk3ot"), ExtResource("4_y8656"), ExtResource("5_mh4ed")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Fireball", "Heal", "Long Heal"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericswordfighter_big"
+exported_overworld_name = "genericswordfighter_small"
+exported_character_name = "genericswordfighter"
+exported_x = 0
+exported_y = 0
+level = 18
+hp = 50
+attack = 6
+defense = 8
+resistance = 55
+agility = 6
+accuracy = 35
+speed = 3
+exp_reward = 100
+primary_type = "Magic"
+traits = Array[String](["Magic Primary", "Fire"])
+unit_class = "Elemental Fighter"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

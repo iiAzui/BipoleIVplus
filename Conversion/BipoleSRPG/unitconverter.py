@@ -7,8 +7,7 @@ import statprint
 import placeunits
 import os
 
-def export_unit(unit: units.Unit, destination_folder: str, use_turtle_name: bool = False, x: int = -1, y: int = -1):
-    resource_name = unit.TurtleName if use_turtle_name else unit.DisplayName
+def export_unit(unit: units.Unit, destination_folder: str, resource_name: str):
     character_name = unit.Portrait[:-4]
 
     print("Exporting unit "+resource_name+"...")
@@ -35,8 +34,6 @@ exported_move_unlock_levels = Array[int]([{move_unlock_levels}])
 exported_portrait_name = "{unit.Portrait}"
 exported_overworld_name = "{unit.Sprite}"
 exported_character_name = "{character_name}"
-exported_y = 0
-exported_x = 0
 level = {unit.Level}
 hp = {unit.MaxHP}
 attack = {unit.ATK}
@@ -101,5 +98,5 @@ level_quotes = Array[String]([{level_quotes}])
 
 if __name__ == "__main__":
     for unit in units.ListOfPlayableUnits:
-        export_unit(unit, "./Database/RecruitedUnits")
+        export_unit(unit, "./Database/RecruitedUnits", unit.DisplayName)
         export_character(unit, "./Database/Characters")

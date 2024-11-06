@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://ddos0cupha6sp"]
+
+[ext_resource type="Resource" uid="uid://0sxkay3kno7d" path="res://Database/Characters/genericarcher.tres" id="1_gpb2t"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" uid="uid://bi1ftik6el8mg" path="res://Database/Moves/Bow.tres" id="3_hi66e"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Long Bow.tres" id="4_dpiqg"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_gpb2t")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_hi66e"), ExtResource("4_dpiqg")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Bow", "Long Bow"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericarcher_big"
+exported_overworld_name = "genericarcher_small"
+exported_character_name = "genericarcher"
+exported_x = 0
+exported_y = 0
+level = 7
+hp = 18
+attack = 16
+defense = 4
+resistance = 1
+agility = 8
+accuracy = 10
+speed = 3
+exp_reward = 90
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Ice", "Guild of Retool"])
+unit_class = "Archer"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://w7xy6r7ke0u3"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://bgn6aya3wk1as" path="res://Sprites/Overworld/omegaxuirist_small.png" id="1_8l6s1"]
+[ext_resource type="Texture2D" uid="uid://bboht1fpsdfs7" path="res://Sprites/Portraits/omegaxuirist_big.png" id="2_goe7v"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Omega"
+portrait = ExtResource("2_goe7v")
+overworld_sprite = ExtResource("1_8l6s1")
 bio = "Omega is the official founder of the Xuirist religion, though he was forced by Break to create and maintain the religion for him."
 level_quotes = Array[String](["..."])

@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://cv6n7o7dt5x8a"]
+
+[ext_resource type="Resource" uid="uid://k58pcmalsj4p" path="res://Database/Characters/genericswordfighter.tres" id="1_yjbxb"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" path="res://Database/Moves/Death Strike.tres" id="3_7hq1i"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_yjbxb")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_7hq1i")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Death Strike"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericswordfighter_big"
+exported_overworld_name = "genericswordfighter_small"
+exported_character_name = "genericswordfighter"
+exported_x = 0
+exported_y = 0
+level = 15
+hp = 55
+attack = 12
+defense = 20
+resistance = 14
+agility = 9
+accuracy = 19
+speed = 3
+exp_reward = 90
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Shadow"])
+unit_class = "Swordfighter"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

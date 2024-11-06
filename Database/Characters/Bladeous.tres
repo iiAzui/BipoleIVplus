@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://cndbfs56kjp2o"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://crvobuyhcyvvv" path="res://Sprites/Overworld/Bladeous_small.png" id="1_ptt2l"]
+[ext_resource type="Texture2D" uid="uid://c301ifdm246h4" path="res://Sprites/Portraits/Bladeous_big.png" id="2_x272j"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Bladeous"
+portrait = ExtResource("2_x272j")
+overworld_sprite = ExtResource("1_ptt2l")
 bio = "A person possesed by the power of the Itucher."
 level_quotes = Array[String](["..."])

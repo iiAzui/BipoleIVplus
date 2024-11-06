@@ -1,6 +1,12 @@
 class_name ChapterBattle
 extends Control
 
+# If this is non-null, all the enemies from this CHapterPlacements objects will be placed when the battle begins
+# Used to store placements in a file instead of a scene.
+# this method of transfer works better for the retro files, 
+# since I don't want to figure out how to make a whole scene based off that data
+@export var placements: ChapterPlacements
+
 @onready var unit_grid: UnitGrid = $UnitGrid
 @onready var map_cursor: Sprite2D = $MapCursor
 @onready var range_display_grid: Node2D = $RangeDisplayGrid
@@ -29,7 +35,10 @@ var cursor_mode: String = "Select"
 signal cursor_moved
 
 func _ready() -> void:
-	call_deferred("grab_focus")
+	place_player_units()
+	place_enemy_units()
+	
+	#call_deferred("grab_focus")
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Left"):
@@ -54,6 +63,42 @@ func _input(event: InputEvent) -> void:
 						cursor_mode = "Attack"
 				else:
 					move_cursor_to(coords)
+		
+func place_player_units():
+	if not SaveData.save:
+		printerr("no save data loaded but trying to load units!")
+		return
+	
+	# Spawn along the bottom row in retro mode.
+	# Once non retro modes are added this will need new code
+	var place_coords := Vector2i(0, 12)
+	
+	for i in len(SaveData.save.units):
+		var unit: Unit = SaveData.save.units[i]
+		var placed_unit: PlacedUnit = unit_grid.PLACED_UNIT_SCENE.instantiate()
+		placed_unit.allied = true
+		placed_unit.unit = unit
+		unit_grid.place_unit(placed_unit, place_coords)
+		
+		place_coords.x += 1
+		if place_coords.x >= ChapterBattle.RETRO_WIDTH:
+			place_coords.x = 0
+			place_coords.y += 1
+		
+func place_enemy_units():
+	if not placements:
+		printerr("no placements defined but trying to load placements from file!")
+		return
+		
+	for i in len(placements.unit_names):
+		var unit_name: String = placements.unit_names[i]
+		var unit_coords: Vector2i = placements.unit_coords[i]
+		var unit: Unit = ResourceLoader.load("res://Database/EnemyUnits/"+unit_name+".tres")
+		var placed_unit: PlacedUnit = unit_grid.PLACED_UNIT_SCENE.instantiate()
+		placed_unit.allied = false
+		placed_unit.unit = unit
+		unit_grid.place_unit(placed_unit, unit_coords)
+		
 		
 func is_coords_in_bounds(coords: Vector2i):
 	return coords.x >= 0 and coords.x < RETRO_WIDTH and coords.y >= 0 and coords.y < RETRO_HEIGHT
@@ -180,7 +225,7 @@ func spread_attack_range(coords: Vector2i, unit: PlacedUnit, attack_range_remain
 		return
 	
 	# If already marked as attackable, stop if unit can already reach this tile in fewer moves
-	if attackable_tiles.has(coords) and attackable_tiles[coords] > attack_range_remaining:
+	if attackable_tiles.has(coords) and attackable_tiles[coords] >= attack_range_remaining:
 		return
 		
 	attackable_tiles[coords] = attack_range_remaining

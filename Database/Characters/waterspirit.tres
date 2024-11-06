@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://lorcch4wpa0r"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://cf4hq3cebkx3b" path="res://Sprites/Overworld/waterspirit_small.png" id="1_2sot1"]
+[ext_resource type="Texture2D" uid="uid://b6myqg027bovx" path="res://Sprites/Portraits/waterspirit_big.png" id="2_kvu8y"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Water Spirit"
+portrait = ExtResource("2_kvu8y")
+overworld_sprite = ExtResource("1_2sot1")
 bio = "A water spirit in the Bipole Sea."
 level_quotes = Array[String](["*water sounds*"])

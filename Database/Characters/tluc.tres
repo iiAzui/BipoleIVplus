@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://bofuwvv3gd7h3"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://bt88vt7ytgrqp" path="res://Sprites/Overworld/tluc_small.png" id="1_3e2t4"]
+[ext_resource type="Texture2D" uid="uid://cfvhhjdp22yr8" path="res://Sprites/Portraits/tluc_big.png" id="2_6wgsi"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Tluc"
+portrait = ExtResource("2_6wgsi")
+overworld_sprite = ExtResource("1_3e2t4")
 bio = "Tluc is a high-ranking Xuirist and works directly under the leader of the Xuirists, Omega. Tluc is extremely devoted to Xuirism and will go to extreme lengths to stop opposition."
 level_quotes = Array[String](["Perish! Bipolian scum!"])

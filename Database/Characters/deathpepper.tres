@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://ber78uqfrww4q"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://cwq7a6c6hmav" path="res://Sprites/Overworld/deathpepper_small.png" id="1_sqo5q"]
+[ext_resource type="Texture2D" uid="uid://b25ic3mmo63ix" path="res://Sprites/Portraits/deathpepper_big.png" id="2_coyxy"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Death Pepper"
+portrait = ExtResource("2_coyxy")
+overworld_sprite = ExtResource("1_sqo5q")
 bio = "Death Pepper is the head of the Shadow Realm Research Center, where he has been tasked by Neville Prime to create entities with the powers of True Xuir. Though the research of recreating the powers of True Xuir have been going on for centuries, Death Pepper has come the closest to discovering the secret of activating the power of the True Xuir."
 level_quotes = Array[String](["This is what you get for defying me."])

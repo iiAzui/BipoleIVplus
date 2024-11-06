@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://jjbeygy153s6"]
+
+[ext_resource type="Resource" uid="uid://lorcch4wpa0r" path="res://Database/Characters/waterspirit.tres" id="1_3k6ey"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" uid="uid://bxd8w47cwvilg" path="res://Database/Moves/Slice.tres" id="3_8qm80"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_3k6ey")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_8qm80")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Slice"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "waterspirit_big"
+exported_overworld_name = "waterspirit_small"
+exported_character_name = "waterspirit"
+exported_x = 0
+exported_y = 0
+level = 17
+hp = 40
+attack = 20
+defense = 12
+resistance = 35
+agility = 9
+accuracy = 16
+speed = 4
+exp_reward = 80
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Monster", "Water"])
+unit_class = "Water Spirit"
+class_change = "Elemental Warrior"
+class_change_level = 25
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://xtukc3mjuehr"]
+
+[ext_resource type="Resource" uid="uid://d15no5v8ncsbg" path="res://Database/Characters/genericscientist.tres" id="1_khbg2"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" uid="uid://d2nd2llccu176" path="res://Database/Moves/Infection.tres" id="3_74kd8"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Heavy Bow.tres" id="4_k00nb"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_khbg2")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_74kd8"), ExtResource("4_k00nb")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Infection", "Heavy Bow"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericscientist_big"
+exported_overworld_name = "genericscientist_small"
+exported_character_name = "genericscientist"
+exported_x = 0
+exported_y = 0
+level = 44
+hp = 75
+attack = 18
+defense = 999
+resistance = 5
+agility = 25
+accuracy = 37
+speed = 2
+exp_reward = 180
+primary_type = "Physical"
+traits = Array[String](["Magic Primary", "Scientist", "Bio"])
+unit_class = "Scientist"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

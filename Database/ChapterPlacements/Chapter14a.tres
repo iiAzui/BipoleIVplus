@@ -5,5 +5,5 @@
 
 [resource]
 script = ExtResource("1_kp6pv")
-unit_names = Array[String](["Chapter14aArcher7", "BigBrainNevilleTurtle", "Chapter14aArcher9", "Chapter14aArmored1", "Chapter14aArcher4", "Chapter14aArcher5", "Chapter14aArcher8", "Chapter14aArcher10", "Chapter14aArmored2", "Chapter14aArcher1", "Chapter14aArcher3", "Chapter14aArcher6", "Chapter14aArcher2", "Chapter14aArmored3"])
-unit_coords = Array[Vector2i]([Vector2i(0, 8), Vector2i(0, 10), Vector2i(0, 12), Vector2i(1, 1), Vector2i(1, 4), Vector2i(1, 6), Vector2i(1, 10), Vector2i(1, 12), Vector2i(1, 16), Vector2i(4, 1), Vector2i(4, 8), Vector2i(4, 17), Vector2i(6, 9), Vector2i(8, 14)])
+unit_names = Array[String](["Chapter14aUnit1", "Chapter14aUnit2", "Chapter14aUnit3", "Chapter14aUnit4", "Chapter14aUnit5", "Chapter14aUnit6", "Chapter14aUnit7", "Chapter14aUnit8", "Chapter14aUnit9", "Chapter14aUnit10", "Chapter14aUnit11", "Chapter14aUnit12", "Chapter14aUnit13", "Chapter14aUnit14"])
+unit_coords = Array[Vector2i]([Vector2i(8, 0), Vector2i(10, 0), Vector2i(12, 0), Vector2i(1, 1), Vector2i(4, 1), Vector2i(6, 1), Vector2i(10, 1), Vector2i(12, 1), Vector2i(16, 1), Vector2i(1, 4), Vector2i(8, 4), Vector2i(17, 4), Vector2i(9, 6), Vector2i(14, 8)])

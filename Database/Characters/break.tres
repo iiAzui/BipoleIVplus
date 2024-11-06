@@ -1,10 +1,13 @@
+[gd_resource type="Resource" script_class="Character" load_steps=4 format=3 uid="uid://drq1nkexoc3l6"]
 
-[gd_resource type="Resource" script_class="Character" load_steps=2 format=3]
-
+[ext_resource type="Texture2D" uid="uid://bhvv5l6pby3n8" path="res://Sprites/Overworld/break_small.png" id="1_4yymy"]
+[ext_resource type="Texture2D" uid="uid://dudywjsc32k6n" path="res://Sprites/Portraits/break_big.png" id="2_3jer0"]
 [ext_resource type="Script" path="res://Scripts/Character.gd" id="3_qsxlm"]
 
 [resource]
 script = ExtResource("3_qsxlm")
 display_name = "Break"
+portrait = ExtResource("2_3jer0")
+overworld_sprite = ExtResource("1_4yymy")
 bio = "Break is one of the head scientists at the Shadow Realm Research Center, and works directly with Death Pepper in Xuir Research. He is also the true leader of the Xuirist religion, having controlled Omega into creating and leading the religion for him/"
 level_quotes = Array[String](["Are you scared?"])

@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=10 format=3 uid="uid://b0mq25xk05emt"]
+
+[ext_resource type="Resource" uid="uid://cvty86436nxq7" path="res://Database/Characters/cigam.tres" id="1_5g6jy"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Resource" uid="uid://c65rmpt0hb1hd" path="res://Database/Moves/Aqua.tres" id="3_64afu"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Hydro.tres" id="4_c3jf5"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="5_ak3e7"]
+[ext_resource type="Resource" uid="uid://2tphaotxnbto" path="res://Database/Moves/Heal.tres" id="6_cpkf8"]
+[ext_resource type="Resource" path="res://Database/Moves/Long Heal.tres" id="7_dw54h"]
+[ext_resource type="Resource" path="res://Database/Moves/Far Heal.tres" id="8_l7x6a"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_5g6jy")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("6_cpkf8"), ExtResource("7_dw54h"), ExtResource("8_l7x6a")])
+move_unlocks = Array[ExtResource("2_pja1r")]([ExtResource("3_64afu"), ExtResource("4_c3jf5"), ExtResource("5_ak3e7")])
+move_unlock_levels = Array[int]([40, 45, 37])
+exported_move_names = Array[String](["Heal", "Long Heal", "Far Heal"])
+exported_move_unlock_names = Array[String](["Aqua", "Hydro", "Med Kit"])
+exported_move_unlock_levels = Array[int]([40, 45, 37])
+exported_portrait_name = "cigam_big"
+exported_overworld_name = "cigam_small"
+exported_character_name = "cigam"
+exported_x = 0
+exported_y = 0
+level = 35
+hp = 40
+attack = 35
+defense = 20
+resistance = 55
+agility = 25
+accuracy = 35
+speed = 3
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Shadeian", "Mage", "Water"])
+unit_class = "Heal Mage"
+class_change = "Dual Mage"
+class_change_level = 40
+hp_growth = Vector2i(70, 1)
+atk_growth = Vector2i(90, 1)
+def_growth = Vector2i(20, 1)
+res_growth = Vector2i(70, 1)
+agl_growth = Vector2i(25, 1)
+acr_growth = Vector2i(75, 1)

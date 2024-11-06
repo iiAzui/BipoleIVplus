@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://dochdkmm03w7u"]
+
+[ext_resource type="Resource" uid="uid://gqb8x6q5uk5h" path="res://Database/Characters/yellowslime.tres" id="1_ku6k7"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" uid="uid://lhemddpv3hms" path="res://Database/Moves/Slam.tres" id="3_lng5j"]
+[ext_resource type="Resource" path="res://Database/Moves/Far Heal.tres" id="4_k818p"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_ku6k7")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_lng5j"), ExtResource("4_k818p")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Slam", "Far Heal"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "yellowslime_big"
+exported_overworld_name = "yellowslime_small"
+exported_character_name = "yellowslime"
+exported_x = 0
+exported_y = 0
+level = 5
+hp = 50
+attack = 3
+defense = 0
+resistance = 35
+agility = 1
+accuracy = 20
+speed = 1
+exp_reward = 100
+primary_type = "Physical"
+traits = Array[String](["Physical Primary", "Monster", "Electric"])
+unit_class = "Yellow Slime"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)

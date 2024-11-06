@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Unit" load_steps=6 format=3 uid="uid://dtjn5dae63edb"]
+
+[ext_resource type="Resource" uid="uid://k58pcmalsj4p" path="res://Database/Characters/genericswordfighter.tres" id="1_k771t"]
+[ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
+[ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]
+[ext_resource type="Resource" path="res://Database/Moves/Thunder Blast.tres" id="3_x2sko"]
+[ext_resource type="Resource" path="res://Database/Moves/Med Kit.tres" id="4_ieyyf"]
+
+[resource]
+script = ExtResource("3_hyhyt")
+character = ExtResource("1_k771t")
+moves = Array[ExtResource("2_pja1r")]([ExtResource("3_x2sko"), ExtResource("4_ieyyf")])
+move_unlocks = Array[ExtResource("2_pja1r")]([])
+move_unlock_levels = Array[int]([])
+exported_move_names = Array[String](["Thunder Blast", "Med Kit"])
+exported_move_unlock_names = Array[String]([])
+exported_move_unlock_levels = Array[int]([])
+exported_portrait_name = "genericswordfighter_big"
+exported_overworld_name = "genericswordfighter_small"
+exported_character_name = "genericswordfighter"
+exported_x = 0
+exported_y = 0
+level = 20
+hp = 60
+attack = 8
+defense = 6
+resistance = 85
+agility = 6
+accuracy = 45
+speed = 2
+exp_reward = 150
+primary_type = "Magic"
+traits = Array[String](["Magic Primary", "Electric"])
+unit_class = "Elemental Fighter"
+class_change = ""
+class_change_level = 0
+hp_growth = Vector2i(50, 1)
+atk_growth = Vector2i(50, 1)
+def_growth = Vector2i(50, 1)
+res_growth = Vector2i(50, 1)
+agl_growth = Vector2i(50, 1)
+acr_growth = Vector2i(50, 1)
