@@ -15,6 +15,9 @@ var allied: bool = false
 # Can only move once per turn and cannot move after using a move.
 var moved: bool = false
 
+# true if unit has already used their attack during their turn.
+var attacked: bool = false
+
 # Current coords on the map. Should always mirror the key that it has in UnitGrid's grid dictionary.
 # (UnitGrid should manage this value closely)
 var coords: Vector2i

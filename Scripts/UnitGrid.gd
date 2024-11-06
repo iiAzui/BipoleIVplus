@@ -27,7 +27,15 @@ func get_unit_at(coords: Vector2i):
 		
 func place_unit(unit: PlacedUnit, coords: Vector2i):
 	grid[coords] = unit
-	unit.position = coords * ChapterBattle.TILE_SIZE
 	unit.coords = coords
+	unit.position = coords * ChapterBattle.TILE_SIZE
 	add_child(unit)
 	print("placed ", unit.name, " at ", coords)
+	
+func move_unit(from: Vector2i, to: Vector2i):
+	var unit: PlacedUnit = grid[from]
+	grid[from] = null
+	grid[to] = unit
+	unit.coords = to
+	unit.position = to * ChapterBattle.TILE_SIZE
+	print("moved ", unit.name, " from ", from, " to ", to)

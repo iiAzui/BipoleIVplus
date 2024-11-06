@@ -8,8 +8,9 @@ extends Control
 @export var placements: ChapterPlacements
 
 @onready var unit_grid: UnitGrid = $UnitGrid
-@onready var map_cursor: Sprite2D = $MapCursor
+@onready var map_cursor: MapCursor = $MapCursor
 @onready var range_display_grid: Node2D = $RangeDisplayGrid
+@onready var unit_preview: UnitPreview = $UnitPreview
 
 const MOVE_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/MoveTileHighlight.tscn")
 const ATTACK_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/AttackTileHighlight.tscn")
@@ -30,9 +31,15 @@ var unit_selected: PlacedUnit
 var hovered_unit: PlacedUnit
 
 ## Current cursor mode ("Select", "Move", "Attack")
-var cursor_mode: String = "Select"
-
-signal cursor_moved
+var cursor_mode: CursorMode = CursorMode.SELECT
+enum CursorMode {
+	## Cursor selecting a unit to move/attack.
+	SELECT,
+	## Moving the unit
+	MOVING,
+	## Using an attack or support type move.
+	ATTACKING
+}
 
 func _ready() -> void:
 	place_player_units()
@@ -43,26 +50,40 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Left"):
 		move_cursor(Vector2i.LEFT)
-	if event.is_action_pressed("Right"):
+	elif event.is_action_pressed("Right"):
 		move_cursor(Vector2i.RIGHT)
-	if event.is_action_pressed("Up"):
+	elif event.is_action_pressed("Up"):
 		move_cursor(Vector2i.UP)
-	if event.is_action_pressed("Down"):
+	elif event.is_action_pressed("Down"):
 		move_cursor(Vector2i.DOWN)
-	if event is InputEventMouseButton:
+	elif event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			event = unit_grid.make_input_local(event)
 			var coords: Vector2i = round(event.position / TILE_SIZE)
 			if is_coords_in_bounds(coords):
-				# If clicked on the already hovered unit
-				if coords == cursor_coords and hovered_unit:
-					unit_selected = hovered_unit
-					if hovered_unit.moved:
-						cursor_mode = "Move"
-					else:
-						cursor_mode = "Attack"
-				else:
-					move_cursor_to(coords)
+				move_cursor_to(coords)
+	elif event.is_action_pressed("Esc"):
+		change_cursor_mode(CursorMode.SELECT)
+	elif event.is_action_pressed("Select"):
+		on_tile_pressed()
+					
+		
+func on_tile_pressed():
+	if cursor_mode == CursorMode.SELECT:
+		unit_selected = hovered_unit
+		if hovered_unit:
+			if !hovered_unit.moved:
+				change_cursor_mode(CursorMode.MOVING)
+			elif !hovered_unit.attacked:
+				change_cursor_mode(CursorMode.ATTACKING)
+	elif cursor_mode == CursorMode.MOVING:
+		unit_grid.move_unit(unit_selected.coords, cursor_coords)
+		unit_selected.moved = true
+		change_cursor_mode(CursorMode.SELECT)
+	elif cursor_mode == CursorMode.ATTACKING:
+		## TODO: implement attacking, and selecting move for that matter
+		unit_selected.attacked = true
+		change_cursor_mode(CursorMode.SELECT)
 		
 func place_player_units():
 	if not SaveData.save:
@@ -119,7 +140,23 @@ func move_cursor_to(coords: Vector2i):
 	unit_selected
 	
 	hovered_unit = unit_grid.get_unit_at(cursor_coords)
-	cursor_moved.emit()
+	
+	if cursor_mode == CursorMode.SELECT:
+		if hovered_unit:
+			unit_preview.visible = true
+			unit_preview.display_unit(hovered_unit)
+		else:
+			unit_preview.visible = false
+		show_range(hovered_unit)
+
+func change_cursor_mode(mode: CursorMode):
+	cursor_mode = mode
+	if mode == CursorMode.SELECT:
+		map_cursor.modulate = map_cursor.select_color
+	elif mode == CursorMode.MOVING:
+		map_cursor.modulate = map_cursor.move_color
+	elif mode == CursorMode.ATTACKING:
+		map_cursor.modulate = map_cursor.attack_color
 
 # dictionary to store the Vector2i coords as keys and dummy values
 var moveable_tiles: Dictionary

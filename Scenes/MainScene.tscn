@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cnnvgayg74dqn"]
+[gd_scene load_steps=39 format=3 uid="uid://cnnvgayg74dqn"]
 
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_obxun"]
 [ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_ys1kv"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://q6s74u6bktan" path="res://Setup/Outsidebox.png" id="7_72yba"]
 [ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Sprites/Portraits/proton_big.png" id="8_4skrp"]
 [ext_resource type="Texture2D" uid="uid://cg86jxdb07gtx" path="res://icon.svg" id="9_cf5ab"]
-[ext_resource type="PackedScene" uid="uid://bxn3rrdekme4b" path="res://Scenes/UI/UnitPreview.tscn" id="9_qp0ux"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3gblg"]
 font_color = Color(0, 0, 0, 1)
@@ -1183,8 +1182,3 @@ offset_bottom = 60.8333
 theme_override_font_sizes/font_size = 7
 text = "Cast"
 alignment = 0
-
-[node name="UnitPreview" parent="." instance=ExtResource("9_qp0ux")]
-layout_mode = 1
-offset_left = 16.0
-offset_right = 316.0
