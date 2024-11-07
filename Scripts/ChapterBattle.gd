@@ -165,15 +165,18 @@ func move_cursor_to(coords: Vector2i):
 	print("moved cursor to ", cursor_coords)
 	map_cursor.position = cursor_coords * TILE_SIZE
 	
-	unit_selected
-	
 	hovered_unit = unit_grid.get_unit_at(cursor_coords)
 	
 	if cursor_mode == CursorMode.SELECT:
 		unit_preview.display_unit(hovered_unit)
 		show_range(hovered_unit)
 	elif cursor_mode == CursorMode.MOVING:
-		add_to_move_path(cursor_coords)
+		# If moving father than speed allows
+		# recalculate the path to reach that tile with the minimum changes
+		if len(current_path) > unit_selected.unit.speed and not (coords in current_path):
+			recalculate_path_to(cursor_coords)
+		else:
+			add_to_move_path(cursor_coords)
 
 func change_cursor_mode(mode: CursorMode):
 	cursor_mode = mode
@@ -192,7 +195,7 @@ func change_cursor_mode(mode: CursorMode):
 func start_move_path():
 	move_path_line.clear_points()
 	current_path.clear()
-	add_to_move_path(cursor_coords)
+	add_to_move_path(unit_selected.coords)
 	move_path_line.visible = true
 
 func add_to_move_path(coords: Vector2i):
@@ -201,8 +204,28 @@ func add_to_move_path(coords: Vector2i):
 			current_path.pop_back()
 			move_path_line.remove_point(move_path_line.get_point_count()-1)
 	else:
-		move_path_line.add_point(coords * TILE_SIZE)
-		current_path.append(coords)
+		add_move_point(coords)
+		
+func add_move_point(coords: Vector2i):
+	move_path_line.add_point(coords * TILE_SIZE)
+	current_path.append(coords)
+		
+func recalculate_path_to(target_coords: Vector2i):
+	start_move_path()
+	var coords: Vector2i = unit_selected.coords
+	while coords != target_coords:
+		if coords.x < target_coords.x and coords.y <= target_coords.y:
+			coords.x += 1
+		elif coords.x > target_coords.x and coords.y >= target_coords.y:
+			coords.x -= 1
+		elif coords.y < target_coords.y and coords.x >= target_coords.x:
+			coords.y += 1
+		elif coords.y > target_coords.y and coords.x <= target_coords.x:
+			coords.y -= 1
+		else:
+			printerr("should have found a new move point by now...")
+			break
+		add_move_point(coords)
 		
 
 func end_move_path():

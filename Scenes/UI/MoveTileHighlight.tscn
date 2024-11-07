@@ -12,7 +12,7 @@ width = 50
 height = 50
 
 [node name="MoveTileHighlight" type="Sprite2D"]
-modulate = Color(0.226393, 0.703628, 0.881616, 1)
+modulate = Color(0.140351, 0.616508, 0.873457, 0.858824)
 z_index = -1
 texture = ExtResource("1_8g71h")
 

@@ -12,7 +12,7 @@ width = 50
 height = 50
 
 [node name="AttackTileHighlight" type="Sprite2D"]
-modulate = Color(0.925638, 0.380249, 0.337372, 1)
+modulate = Color(0.915065, 0.278476, 0.338848, 0.858824)
 z_index = -1
 texture = ExtResource("1_10kap")
 
