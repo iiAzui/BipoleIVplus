@@ -171,12 +171,20 @@ func move_cursor_to(coords: Vector2i):
 		unit_preview.display_unit(hovered_unit)
 		show_range(hovered_unit)
 	elif cursor_mode == CursorMode.MOVING:
-		# If moving father than speed allows
+		# if cursor intersects itself, shrink path back to that position
+		if cursor_coords in current_path:
+			var last: Vector2i = current_path.pop_back()
+			while last != cursor_coords:
+				last = current_path.pop_back()
+		
+		# If moving farther than speed allows
 		# recalculate the path to reach that tile with the minimum changes
-		if len(current_path) > unit_selected.unit.speed and not (coords in current_path):
+		# also recalculate if path intersects itself	
+		if len(current_path) > unit_selected.unit.speed:
 			recalculate_path_to(cursor_coords)
 		else:
-			add_to_move_path(cursor_coords)
+			current_path.append(cursor_coords)
+			refresh_move_path()
 
 func change_cursor_mode(mode: CursorMode):
 	cursor_mode = mode
@@ -193,40 +201,74 @@ func change_cursor_mode(mode: CursorMode):
 	move_path_line.visible = cursor_mode == CursorMode.MOVING
 	
 func start_move_path():
-	move_path_line.clear_points()
-	current_path.clear()
-	add_to_move_path(unit_selected.coords)
 	move_path_line.visible = true
+	current_path.clear()
+	current_path.append(unit_selected.coords)
+	refresh_move_path()
 
-func add_to_move_path(coords: Vector2i):
-	if coords in current_path:
-		while !current_path.is_empty() and  current_path.back() != coords:
-			current_path.pop_back()
-			move_path_line.remove_point(move_path_line.get_point_count()-1)
-	else:
-		add_move_point(coords)
+func refresh_move_path():
+	move_path_line.clear_points()
+	for coords in current_path:
+		move_path_line.add_point(coords * TILE_SIZE)
 		
-func add_move_point(coords: Vector2i):
-	move_path_line.add_point(coords * TILE_SIZE)
-	current_path.append(coords)
-		
+# Return tru ewhen a path is found
 func recalculate_path_to(target_coords: Vector2i):
-	start_move_path()
-	var coords: Vector2i = unit_selected.coords
-	while coords != target_coords:
-		if coords.x < target_coords.x and coords.y <= target_coords.y:
-			coords.x += 1
-		elif coords.x > target_coords.x and coords.y >= target_coords.y:
-			coords.x -= 1
-		elif coords.y < target_coords.y and coords.x >= target_coords.x:
-			coords.y += 1
-		elif coords.y > target_coords.y and coords.x <= target_coords.x:
-			coords.y -= 1
-		else:
-			printerr("should have found a new move point by now...")
-			break
-		add_move_point(coords)
+	current_path.clear()
+	search_for_path(unit_selected.coords, target_coords, unit_selected.unit.speed+1)
+	refresh_move_path()
+
+func search_for_path(coords: Vector2i, target_coords: Vector2i, steps_left: int) -> bool:
+	# Can't move here if not movable (ignore if on starting tile)
+	if not coords in moveable_tiles and coords != unit_selected.coords:
+		return false
+	
+	# "Take" the "step" for this possible path
+	steps_left -= 1
+	
+	# Return true if the target position was reached
+	if coords == target_coords:
+		current_path.append(coords)
+		return true
 		
+	# Can't take any more steps
+	if steps_left == 0:
+		return false
+		
+	# If there's not enough steps to reach the target position, return false
+	var distance: int = abs(target_coords.x - coords.x) + abs(target_coords.y - coords.y)
+	if distance > steps_left:
+		return false
+		
+	# Add to the ongoing path, this will get cleared after all the directional checks and possible branching paths
+	current_path.append(coords)
+	
+	# If any branches find the target successfully, return true to prevent popping back 
+	# or checking any more unneccesary brnaches
+	var right_first := coords.x < target_coords.x and coords.y <= target_coords.y
+	if right_first:
+		if search_for_path(coords + Vector2i.RIGHT, target_coords, steps_left): return true
+	var left_first := coords.x > target_coords.x and coords.y >= target_coords.y
+	if left_first:
+		if search_for_path(coords + Vector2i.LEFT, target_coords, steps_left): return true
+	var down_first := coords.y < target_coords.y and coords.x >= target_coords.x
+	if down_first:
+		if search_for_path(coords + Vector2i.DOWN, target_coords, steps_left): return true
+	var up_first := coords.y > target_coords.y and coords.x <= target_coords.x
+	if up_first:
+		if search_for_path(coords + Vector2i.UP, target_coords, steps_left): return true
+		
+	if not right_first:
+		if search_for_path(coords + Vector2i.RIGHT, target_coords, steps_left): return true
+	if not left_first:
+		if search_for_path(coords + Vector2i.LEFT, target_coords, steps_left): return true
+	if not down_first:
+		if search_for_path(coords + Vector2i.DOWN, target_coords, steps_left): return true
+	if not up_first:
+		if search_for_path(coords + Vector2i.UP, target_coords, steps_left): return true
+		
+	# If none of the branches reached the target, remove so the next branches can replace this
+	current_path.pop_back()
+	return false
 
 func end_move_path():
 	move_path_line.visible = false
