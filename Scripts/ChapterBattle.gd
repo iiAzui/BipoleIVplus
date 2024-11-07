@@ -32,6 +32,10 @@ var cursor_coords: Vector2i = Vector2i.ZERO
 ## Current selected unit for moving/attacking.
 var unit_selected: PlacedUnit
 
+## Current attack/support move selected for the unit selected.
+var move_selected_index: int
+var move_selected: Move
+
 ## The unit currently hovered by the cursor.
 var hovered_unit: PlacedUnit
 
@@ -97,12 +101,7 @@ func on_tile_pressed():
 			elif !hovered_unit.attacked:
 				change_cursor_mode(CursorMode.ATTACKING)
 	elif cursor_mode == CursorMode.MOVING:
-		# if in move mode and the current coords of the unit is selected, cancel the move
-		if cursor_coords == unit_selected.coords:
-			change_cursor_mode(CursorMode.SELECT)
-			return
-			
-		# if pressing tile outside of move range, return
+		# if pressing tile outside of move range (or trying to move in place), return
 		if not cursor_coords in moveable_tiles:
 			change_cursor_mode(CursorMode.SELECT)
 			return
@@ -113,6 +112,10 @@ func on_tile_pressed():
 		hovered_unit = unit_selected
 		show_range(unit_selected)
 	elif cursor_mode == CursorMode.ATTACKING:
+		if not cursor_coords in attackable_tiles:
+			change_cursor_mode(CursorMode.SELECT)
+			return
+			
 		## TODO: implement attacking, and selecting move for that matter
 		unit_selected.moved = true # Cannot move after attack
 		unit_selected.attacked = true
@@ -206,17 +209,28 @@ func change_cursor_mode(mode: CursorMode):
 	cursor_mode = mode
 	if mode == CursorMode.SELECT:
 		map_cursor.modulate = map_cursor.select_color
+		select_move(-1)
 		end_move_path()
 	elif mode == CursorMode.MOVING:
 		map_cursor.modulate = map_cursor.move_color
 		start_path()
 	elif mode == CursorMode.ATTACKING:
 		map_cursor.modulate = map_cursor.attack_color
+		# TODO: select by arrow keys, change selection by scroll wheel, may want to select via a menu
+		select_move(0)
 		start_path()
 		
 	move_path_line.visible = cursor_mode == CursorMode.MOVING
 	attack_path_line.visible = cursor_mode == CursorMode.ATTACKING
 	
+func select_move(move_index: int):
+	if move_index < 0:
+		move_selected_index = -1;
+		move_selected = null
+		return
+	
+	move_selected_index = move_index
+	move_selected = unit_selected.unit.moves[move_index]
 	
 func start_path():
 	current_path.clear()
@@ -317,16 +331,20 @@ func show_range(unit: PlacedUnit):
 	if not unit or not unit.unit:
 		return
 	
-	# Total range of abilities is move amount plus range of highest range attack
-	highest_attack_range = 0
-	highest_support_range = 0
-	for move in unit.unit.moves:
-		if move.move_type == "Attack":
-			highest_attack_range = max(highest_attack_range, move.range)
-		elif move.move_type == "Support":
-			highest_support_range = max(highest_support_range, move.range)
-			
-	total_attack_range_span = max(highest_attack_range, highest_support_range)
+	
+	if move_selected:
+		total_attack_range_span = move_selected.range
+	else:
+		# Total range of abilities is move amount plus range of highest range attack
+		highest_attack_range = 0
+		highest_support_range = 0
+		for move in unit.unit.moves:
+			if move.move_type == "Attack":
+				highest_attack_range = max(highest_attack_range, move.range)
+			elif move.move_type == "Support":
+				highest_support_range = max(highest_support_range, move.range)
+				
+		total_attack_range_span = max(highest_attack_range, highest_support_range)
 	
 	range_iterations = 0
 	range_attack_iterations = 0
@@ -360,14 +378,14 @@ func show_range(unit: PlacedUnit):
 		
 		# If there is indeed another unit here and they are on the same team, 
 		# check if they're in support range and draw a green square if so
-		if other_unit and other_unit.allied == unit.allied and highest_support_range >= range_required:
+		if other_unit and other_unit.allied == unit.allied and (not move_selected or move_selected.move_type == "Support") and highest_support_range >= range_required:
 			var highlight: Node2D = SUPPORT_TILE_HIGHLIGHT.instantiate()
 			highlight.position = coords * TILE_SIZE
 			range_display_grid.add_child(highlight)
 			
 		# TODO: attack minimum and maximum range
 		# Show attack range otherwise if not an ally here
-		elif highest_attack_range >= range_required and (not other_unit or other_unit.allied != unit.allied):
+		elif highest_attack_range >= range_required and (not move_selected or move_selected.move_type == "Attack") and (not other_unit or other_unit.allied != unit.allied):
 			var highlight: Node2D = ATTACK_TILE_HIGHLIGHT.instantiate()
 			highlight.position = coords * TILE_SIZE
 			range_display_grid.add_child(highlight)
