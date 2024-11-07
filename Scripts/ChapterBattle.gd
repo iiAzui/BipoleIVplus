@@ -24,6 +24,8 @@ const RETRO_HEIGHT: int = 14
 
 const TILE_SIZE: float = 64.0
 
+var is_player_turn: bool = true
+
 ## Current coordinates of the player's cursor. Used for unit selection, move destination, attack target, etc.
 var cursor_coords: Vector2i = Vector2i.ZERO
 
@@ -87,7 +89,7 @@ func _input(event: InputEvent) -> void:
 					
 		
 func on_tile_pressed():
-	if cursor_mode == CursorMode.SELECT:
+	if cursor_mode == CursorMode.SELECT and hovered_unit.allied == is_player_turn:
 		unit_selected = hovered_unit
 		if hovered_unit:
 			if !hovered_unit.moved:
@@ -97,6 +99,11 @@ func on_tile_pressed():
 	elif cursor_mode == CursorMode.MOVING:
 		# if in move mode and the current coords of the unit is selected, cancel the move
 		if cursor_coords == unit_selected.coords:
+			change_cursor_mode(CursorMode.SELECT)
+			return
+			
+		# if pressing tile outside of move range, return
+		if not cursor_coords in moveable_tiles:
 			change_cursor_mode(CursorMode.SELECT)
 			return
 			
@@ -158,11 +165,6 @@ func move_cursor(offset: Vector2i):
 func move_cursor_to(coords: Vector2i):
 	if coords == cursor_coords:
 		return
-		
-	# don't allow selecting non-movable tile in move mode (allow move in place to cancel move)
-	var prevent_outside: Dictionary = moveable_tiles if cursor_mode == CursorMode.MOVING else attackable_tiles
-	if (cursor_mode == CursorMode.MOVING or cursor_mode == CursorMode.ATTACKING) and not (coords in prevent_outside or coords == unit_selected.coords):
-		return
 	
 	cursor_coords = coords
 	cursor_coords.x = clamp(cursor_coords.x, 0, RETRO_WIDTH-1)
@@ -176,6 +178,10 @@ func move_cursor_to(coords: Vector2i):
 		unit_preview.display_unit(hovered_unit)
 		show_range(hovered_unit)
 	elif cursor_mode == CursorMode.MOVING or cursor_mode == CursorMode.ATTACKING:
+		var prevent_outside: Dictionary = moveable_tiles if cursor_mode == CursorMode.MOVING else attackable_tiles
+		if not (coords in prevent_outside or coords == unit_selected.coords):
+			return
+		
 		# if cursor intersects itself, shrink path back to that position
 		if cursor_coords in current_path:
 			var last: Vector2i = current_path.pop_back()
@@ -241,7 +247,7 @@ func recalculate_path_to(target_coords: Vector2i):
 	if cursor_mode == CursorMode.MOVING:
 		search_for_path(unit_selected.coords, target_coords, unit_selected.unit.speed+1)
 	elif cursor_mode == CursorMode.ATTACKING:
-		search_for_path(unit_selected.coords, target_coords, max(highest_attack_range, highest_support_range))
+		search_for_path(unit_selected.coords, target_coords, max(highest_attack_range, highest_support_range)+1)
 	
 	refresh_path()
 
@@ -300,8 +306,6 @@ func search_for_path(coords: Vector2i, target_coords: Vector2i, steps_left: int)
 
 func end_move_path():
 	move_path_line.visible = false
-	
-	
 
 func show_range(unit: PlacedUnit):	
 	for child in range_display_grid.get_children():
@@ -361,6 +365,7 @@ func show_range(unit: PlacedUnit):
 			highlight.position = coords * TILE_SIZE
 			range_display_grid.add_child(highlight)
 			
+		# TODO: attack minimum and maximum range
 		# Show attack range otherwise if not an ally here
 		elif highest_attack_range >= range_required and (not other_unit or other_unit.allied != unit.allied):
 			var highlight: Node2D = ATTACK_TILE_HIGHLIGHT.instantiate()
