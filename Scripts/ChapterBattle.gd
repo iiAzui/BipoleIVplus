@@ -12,6 +12,7 @@ extends Control
 @onready var range_display_grid: Node2D = $RangeDisplayGrid
 @onready var unit_preview: UnitPreview = $UnitPreview
 @onready var move_path_line: Line2D = $MovePathLine
+@onready var attack_path_line: Line2D = $AttackPathLine
 
 
 const MOVE_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/MoveTileHighlight.tscn")
@@ -102,12 +103,15 @@ func on_tile_pressed():
 		unit_grid.move_unit(unit_selected.coords, cursor_coords)
 		unit_selected.moved = true
 		change_cursor_mode(CursorMode.SELECT)
+		hovered_unit = unit_selected
 		show_range(unit_selected)
 	elif cursor_mode == CursorMode.ATTACKING:
 		## TODO: implement attacking, and selecting move for that matter
 		unit_selected.moved = true # Cannot move after attack
 		unit_selected.attacked = true
 		change_cursor_mode(CursorMode.SELECT)
+		hovered_unit = unit_selected
+		show_range(unit_selected)
 		
 func place_player_units():
 	if not SaveData.save:
@@ -155,8 +159,9 @@ func move_cursor_to(coords: Vector2i):
 	if coords == cursor_coords:
 		return
 		
-	# don't allow selecting non-movable tile in move mode (allow move in place to cancel move
-	if cursor_mode == CursorMode.MOVING and not (coords in moveable_tiles or coords == unit_selected.coords):
+	# don't allow selecting non-movable tile in move mode (allow move in place to cancel move)
+	var prevent_outside: Dictionary = moveable_tiles if cursor_mode == CursorMode.MOVING else attackable_tiles
+	if (cursor_mode == CursorMode.MOVING or cursor_mode == CursorMode.ATTACKING) and not (coords in prevent_outside or coords == unit_selected.coords):
 		return
 	
 	cursor_coords = coords
@@ -170,7 +175,7 @@ func move_cursor_to(coords: Vector2i):
 	if cursor_mode == CursorMode.SELECT:
 		unit_preview.display_unit(hovered_unit)
 		show_range(hovered_unit)
-	elif cursor_mode == CursorMode.MOVING:
+	elif cursor_mode == CursorMode.MOVING or cursor_mode == CursorMode.ATTACKING:
 		# if cursor intersects itself, shrink path back to that position
 		if cursor_coords in current_path:
 			var last: Vector2i = current_path.pop_back()
@@ -182,9 +187,14 @@ func move_cursor_to(coords: Vector2i):
 		# also recalculate if path intersects itself	
 		if len(current_path) > unit_selected.unit.speed:
 			recalculate_path_to(cursor_coords)
-		else:
+		# simply add an adjacent point if the new point is adjacent to the last
+		# allows click-drag or arrow keys to map out specific paths
+		elif not current_path.is_empty() and abs(cursor_coords.x - current_path.back().x) + abs(cursor_coords.y - current_path.back().y) == 1:
 			current_path.append(cursor_coords)
-			refresh_move_path()
+			refresh_path()
+		# otherwise, just recalculate the path to the point
+		else:
+			recalculate_path_to(cursor_coords)
 
 func change_cursor_mode(mode: CursorMode):
 	cursor_mode = mode
@@ -193,33 +203,51 @@ func change_cursor_mode(mode: CursorMode):
 		end_move_path()
 	elif mode == CursorMode.MOVING:
 		map_cursor.modulate = map_cursor.move_color
-		start_move_path()
+		start_path()
 	elif mode == CursorMode.ATTACKING:
 		map_cursor.modulate = map_cursor.attack_color
-		end_move_path()
+		start_path()
 		
 	move_path_line.visible = cursor_mode == CursorMode.MOVING
+	attack_path_line.visible = cursor_mode == CursorMode.ATTACKING
 	
-func start_move_path():
-	move_path_line.visible = true
+	
+func start_path():
 	current_path.clear()
 	current_path.append(unit_selected.coords)
-	refresh_move_path()
+	refresh_path()
 
-func refresh_move_path():
-	move_path_line.clear_points()
-	for coords in current_path:
-		move_path_line.add_point(coords * TILE_SIZE)
+func refresh_path():
+	if cursor_mode == CursorMode.MOVING:
+		move_path_line.visible = true
+		attack_path_line.visible = false
+		move_path_line.clear_points()
+		for coords in current_path:
+			move_path_line.add_point(coords * TILE_SIZE)
+	elif cursor_mode == CursorMode.ATTACKING:
+		move_path_line.visible = false
+		attack_path_line.visible = true
+		attack_path_line.clear_points()
+		for coords in current_path:
+			attack_path_line.add_point(coords * TILE_SIZE)
+	else:
+		move_path_line.visible = false
+		attack_path_line.visible = false
 		
 # Return tru ewhen a path is found
 func recalculate_path_to(target_coords: Vector2i):
 	current_path.clear()
-	search_for_path(unit_selected.coords, target_coords, unit_selected.unit.speed+1)
-	refresh_move_path()
+	
+	if cursor_mode == CursorMode.MOVING:
+		search_for_path(unit_selected.coords, target_coords, unit_selected.unit.speed+1)
+	elif cursor_mode == CursorMode.ATTACKING:
+		search_for_path(unit_selected.coords, target_coords, max(highest_attack_range, highest_support_range))
+	
+	refresh_path()
 
 func search_for_path(coords: Vector2i, target_coords: Vector2i, steps_left: int) -> bool:
-	# Can't move here if not movable (ignore if on starting tile)
-	if not coords in moveable_tiles and coords != unit_selected.coords:
+	# Can't move here if not movable/attack (ignore if on starting tile)
+	if not coords in (moveable_tiles if cursor_mode == CursorMode.MOVING else attackable_tiles) and coords != unit_selected.coords:
 		return false
 	
 	# "Take" the "step" for this possible path
