@@ -11,6 +11,8 @@ extends Control
 @onready var map_cursor: MapCursor = $MapCursor
 @onready var range_display_grid: Node2D = $RangeDisplayGrid
 @onready var unit_preview: UnitPreview = $UnitPreview
+@onready var move_path_line: Line2D = $MovePathLine
+
 
 const MOVE_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/MoveTileHighlight.tscn")
 const ATTACK_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/AttackTileHighlight.tscn")
@@ -40,6 +42,21 @@ enum CursorMode {
 	## Using an attack or support type move.
 	ATTACKING
 }
+
+# The current tiles the selected unit can move to, as calculated from the last show_range call.
+# Store the Vector2i coords as keys as the amount of moves left when moving to that tile.
+var moveable_tiles: Dictionary
+var attackable_tiles: Dictionary
+
+var highest_attack_range: int
+var highest_support_range: int
+var total_attack_range_span: int
+
+var range_iterations: int
+var range_attack_iterations: int
+
+## When in move/attack mode, the current tile path.
+var current_path: Array[Vector2i]
 
 func _ready() -> void:
 	place_player_units()
@@ -153,32 +170,45 @@ func move_cursor_to(coords: Vector2i):
 	hovered_unit = unit_grid.get_unit_at(cursor_coords)
 	
 	if cursor_mode == CursorMode.SELECT:
-		if hovered_unit:
-			unit_preview.visible = true
-			unit_preview.display_unit(hovered_unit)
-		else:
-			unit_preview.visible = false
+		unit_preview.display_unit(hovered_unit)
 		show_range(hovered_unit)
+	elif cursor_mode == CursorMode.MOVING:
+		add_to_move_path(cursor_coords)
 
 func change_cursor_mode(mode: CursorMode):
 	cursor_mode = mode
 	if mode == CursorMode.SELECT:
 		map_cursor.modulate = map_cursor.select_color
+		end_move_path()
 	elif mode == CursorMode.MOVING:
 		map_cursor.modulate = map_cursor.move_color
+		start_move_path()
 	elif mode == CursorMode.ATTACKING:
 		map_cursor.modulate = map_cursor.attack_color
+		end_move_path()
+		
+	move_path_line.visible = cursor_mode == CursorMode.MOVING
+	
+func start_move_path():
+	move_path_line.clear_points()
+	current_path.clear()
+	add_to_move_path(cursor_coords)
+	move_path_line.visible = true
 
-# dictionary to store the Vector2i coords as keys and dummy values
-var moveable_tiles: Dictionary
-var attackable_tiles: Dictionary
+func add_to_move_path(coords: Vector2i):
+	if coords in current_path:
+		while !current_path.is_empty() and  current_path.back() != coords:
+			current_path.pop_back()
+			move_path_line.remove_point(move_path_line.get_point_count()-1)
+	else:
+		move_path_line.add_point(coords * TILE_SIZE)
+		current_path.append(coords)
+		
 
-var highest_attack_range: int
-var highest_support_range: int
-var total_attack_range_span: int
-
-var range_iterations: int
-var range_attack_iterations: int
+func end_move_path():
+	move_path_line.visible = false
+	
+	
 
 func show_range(unit: PlacedUnit):	
 	for child in range_display_grid.get_children():
@@ -187,7 +217,7 @@ func show_range(unit: PlacedUnit):
 	moveable_tiles.clear()
 	attackable_tiles.clear()
 	
-	if not unit:
+	if not unit or not unit.unit:
 		return
 	
 	# Total range of abilities is move amount plus range of highest range attack

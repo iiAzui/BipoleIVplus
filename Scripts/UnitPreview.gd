@@ -13,7 +13,16 @@ const HEALTH_BAR_PLAYER = preload("res://Sprites/UI/HealthBarPlayer.tres")
 const HEALTH_BAR_ENEMY = preload("res://Sprites/UI/HealthBarEnemy.tres")
 
 func display_unit(placed_unit: PlacedUnit):
+	if not placed_unit:
+		visible = false
+		return
 	var unit = placed_unit.unit
+	if not unit:
+		printerr(placed_unit, " doesn't have any unit stats! (this might be bad)")
+		visible = false
+		return
+	visible = true
+		
 	display_name_label.text = unit.character.display_name if unit.character else "Unit"
 	portrait_texture_rect.texture = unit.character.portrait if unit.character else null
 	

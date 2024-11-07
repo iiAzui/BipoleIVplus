@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://bh2c3tqr6mxhh"]
+[gd_scene load_steps=8 format=4 uid="uid://bh2c3tqr6mxhh"]
 
 [ext_resource type="Script" path="res://Scripts/ChapterBattle.gd" id="1_usvja"]
 [ext_resource type="TileSet" uid="uid://dhpm4aemdlwfi" path="res://Tilesets/forest.tres" id="2_nuju3"]
 [ext_resource type="Script" path="res://Scripts/UnitGrid.gd" id="3_52egx"]
 [ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/Overworld/selection.png" id="4_7qgnb"]
+[ext_resource type="PackedScene" uid="uid://da2b80p3dhtok" path="res://Scenes/UI/PlacedUnit.tscn" id="4_aokkw"]
 [ext_resource type="Script" path="res://Scripts/MapCursor.gd" id="5_ef3eq"]
 [ext_resource type="PackedScene" uid="uid://bxn3rrdekme4b" path="res://Scenes/UI/UnitPreview.tscn" id="6_7mvkl"]
 
@@ -33,7 +34,19 @@ tile_set = ExtResource("2_nuju3")
 [node name="UnitGrid" type="Node2D" parent="."]
 script = ExtResource("3_52egx")
 
+[node name="PlacedUnit" parent="UnitGrid" instance=ExtResource("4_aokkw")]
+
 [node name="RangeDisplayGrid" type="Node2D" parent="."]
+
+[node name="MovePathLine" type="Line2D" parent="."]
+visible = false
+z_index = -1
+points = PackedVector2Array(0, 0, 0, 64, 0, 128, 64, 128, 64, 192)
+width = 15.0
+default_color = Color(0.1995, 0.487192, 0.95, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
 
 [node name="MapCursor" type="Sprite2D" parent="."]
 scale = Vector2(1.28, 1.28)
