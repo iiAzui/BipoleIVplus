@@ -134,7 +134,13 @@ func on_tile_pressed():
 		hovered_unit = unit_selected
 		show_range(unit_selected)
 	elif cursor_mode == CursorMode.ATTACKING:
+		# If not in attackable tiles range, go back to select mode
 		if not cursor_coords in attackable_tiles:
+			change_cursor_mode(CursorMode.SELECT)
+			return
+			
+		# If there is not a unit or the unit cannot be targeted by the selected move, go back to select mode
+		if not hovered_unit or hovered_unit.allied != (move_selected.move_type == "Support"):
 			change_cursor_mode(CursorMode.SELECT)
 			return
 			
@@ -398,8 +404,8 @@ func show_range(unit: PlacedUnit):
 	move_range_iterations = 0
 	skill_range_iterations = 0
 	spread_range(unit.coords, unit, 0 if unit.moved else unit.unit.speed)
-	#print("move range search iterations: ", move_range_iterations)
-	#print("skill range search iterations: ", skill_range_iterations)
+	print("move range search iterations: ", move_range_iterations)
+	print("skill range search iterations: ", skill_range_iterations)
 	
 	# can't move in place
 	moveable_tiles.erase(unit.coords)
@@ -407,13 +413,11 @@ func show_range(unit: PlacedUnit):
 	# can't attack self
 	attackable_tiles.erase(unit.coords)
 	
-	print("moveable tiles: ", moveable_tiles)
 	for coords in moveable_tiles.keys():
 		var highlight: Node2D = MOVE_TILE_HIGHLIGHT.instantiate()
 		highlight.position = coords * TILE_SIZE
 		range_display_grid.add_child(highlight)
 	
-	print("attackable tiles: ", attackable_tiles)
 	for coords in attackable_tiles.keys():
 		# Don't show the attack square if unit can move here, blue square should be shown instead
 		if coords in moveable_tiles.keys():
@@ -422,14 +426,13 @@ func show_range(unit: PlacedUnit):
 		# If there is another unit here, don't show a red square if it's another ally here.
 		# (Empty squares will still have a red square)
 		var other_unit: PlacedUnit = unit_grid.get_unit_at(coords)
-		if other_unit and other_unit.allied:
+		if other_unit and other_unit.allied == unit.allied:
 			continue
 			
 		var highlight: Node2D = ATTACK_TILE_HIGHLIGHT.instantiate()
 		highlight.position = coords * TILE_SIZE
 		range_display_grid.add_child(highlight)
 		
-	print("supportable tiles: ", supportable_tiles)
 	for coords in supportable_tiles.keys():
 		# if player can move or attack here, don't show a support highlight
 		if coords in moveable_tiles.keys():
@@ -439,7 +442,7 @@ func show_range(unit: PlacedUnit):
 			
 		# there has to be an ally here to show the supportable highlight
 		var other_unit: PlacedUnit = unit_grid.get_unit_at(coords)
-		if other_unit and other_unit.allied:
+		if other_unit and other_unit.allied == unit.allied:
 			var highlight: Node2D = SUPPORT_TILE_HIGHLIGHT.instantiate()
 			highlight.position = coords * TILE_SIZE
 			range_display_grid.add_child(highlight)
