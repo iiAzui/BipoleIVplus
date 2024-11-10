@@ -183,6 +183,12 @@ func move_cursor_to(coords: Vector2i):
 	
 	hovered_unit = unit_grid.get_unit_at(cursor_coords)
 	
+	# For debugging
+	if cursor_coords in attackable_tiles:
+		var hovered_tiles_left: int = attackable_tiles[cursor_coords]
+		print("hovered tile steps left: ", hovered_tiles_left)
+		print("hovered minimum range required: ", displayed_min_attack_range - hovered_tiles_left + 1)
+	
 	if cursor_mode == CursorMode.SELECT:
 		allied_unit_preview.display_unit(hovered_unit if hovered_unit and hovered_unit.allied else null)
 		enemy_unit_preview.display_unit(hovered_unit if hovered_unit and !hovered_unit.allied else null)
@@ -353,6 +359,10 @@ func show_range(unit: PlacedUnit):
 	if move_selected:
 		displayed_min_attack_range = move_selected.min_range
 		displayed_max_attack_range = move_selected.max_range
+		lowest_attack_range = move_selected.min_range if move_selected.move_type == "Attack" else 0
+		lowest_support_range = move_selected.min_range if move_selected.move_type == "Support" else 0
+		highest_attack_range = move_selected.max_range if move_selected.move_type == "Attack" else 0
+		highest_support_range = move_selected.max_range if move_selected.move_type == "Support" else 0
 	else:
 		for move in unit.unit.moves:
 			if move.move_type == "Attack":
@@ -389,7 +399,7 @@ func show_range(unit: PlacedUnit):
 			continue
 			
 		var tiles_left: int = attackable_tiles[coords]
-		var range_required: int = displayed_max_attack_range - tiles_left
+		var minimum_range_required: int = displayed_min_attack_range - tiles_left + 1 # range of move must be at least this high to reach this tile
 			
 		# Don't show the attack square if there is a unit here that is not the targe tof the current move.
 		# TODO: change logic based on whether or not move is a support move, or add green tiles for supportable allies?
@@ -397,14 +407,14 @@ func show_range(unit: PlacedUnit):
 		
 		# If there is indeed another unit here and they are on the same team, 
 		# check if they're in support range and draw a green square if so
-		if other_unit and other_unit.allied == unit.allied and (not move_selected or move_selected.move_type == "Support") and highest_support_range >= range_required:
+		if lowest_support_range <= minimum_range_required and (not move_selected or move_selected.move_type == "Support") and other_unit and other_unit.allied == unit.allied:
 			var highlight: Node2D = SUPPORT_TILE_HIGHLIGHT.instantiate()
 			highlight.position = coords * TILE_SIZE
 			range_display_grid.add_child(highlight)
 			
 		# TODO: attack minimum and maximum range
 		# Show attack range otherwise if not an ally here
-		elif highest_attack_range >= range_required and (not move_selected or move_selected.move_type == "Attack") and (not other_unit or other_unit.allied != unit.allied):
+		elif lowest_attack_range <= minimum_range_required and (not move_selected or move_selected.move_type == "Attack") and (not other_unit or other_unit.allied != unit.allied):
 			var highlight: Node2D = ATTACK_TILE_HIGHLIGHT.instantiate()
 			highlight.position = coords * TILE_SIZE
 			range_display_grid.add_child(highlight)

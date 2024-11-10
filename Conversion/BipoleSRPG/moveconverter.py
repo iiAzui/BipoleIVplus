@@ -33,7 +33,7 @@ display_name = "{move.CombatName}"
 move_type = "{move_type}"
 damage_type = "{move.MoveType}"
 hp_cost = {move.HPCost}
-min_range = {1 if move.MoveRange == "Infinite" else min(move.MoveRange, 2)}
+min_range = {(0 if move_type == "Support" else 1) if move.MoveRange == "Infinite" else (0 if move_type == "Support" else min(move.MoveRange, 2))}
 max_range = {999 if move.MoveRange == "Infinite" else move.MoveRange}
 power = {move.PWR}
 hit_rate = 100.0
