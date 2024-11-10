@@ -56,9 +56,9 @@ enum CursorMode {
 var moveable_tiles: Dictionary
 var attackable_tiles: Dictionary
 
-var highest_attack_range: int
-var highest_support_range: int
-var total_attack_range_span: int
+# DIsplayed range for the current move, or shared mix/max of all moves if no move selected yet
+var displayed_min_attack_range: int
+var displayed_max_attack_range: int
 
 var range_iterations: int
 var range_attack_iterations: int
@@ -274,7 +274,7 @@ func recalculate_path_to(target_coords: Vector2i):
 	if cursor_mode == CursorMode.MOVING:
 		search_for_path(unit_selected.coords, target_coords, unit_selected.unit.speed+1)
 	elif cursor_mode == CursorMode.ATTACKING:
-		search_for_path(unit_selected.coords, target_coords, max(highest_attack_range, highest_support_range)+1)
+		search_for_path(unit_selected.coords, target_coords, displayed_max_attack_range+1)
 	
 	refresh_path()
 
@@ -344,20 +344,26 @@ func show_range(unit: PlacedUnit):
 	if not unit or not unit.unit:
 		return
 	
+	# Only used if no move selected
+	var lowest_attack_range = 99
+	var lowest_support_range = 99
+	var highest_attack_range = 0
+	var highest_support_range = 0
 	
 	if move_selected:
-		total_attack_range_span = move_selected.range
+		displayed_min_attack_range = move_selected.min_range
+		displayed_max_attack_range = move_selected.max_range
 	else:
-		# Total range of abilities is move amount plus range of highest range attack
-		highest_attack_range = 0
-		highest_support_range = 0
 		for move in unit.unit.moves:
 			if move.move_type == "Attack":
-				highest_attack_range = max(highest_attack_range, move.range)
+				lowest_attack_range = min(lowest_attack_range, move.min_range)
+				highest_attack_range = max(highest_attack_range, move.max_range)
 			elif move.move_type == "Support":
-				highest_support_range = max(highest_support_range, move.range)
+				lowest_support_range = min(lowest_support_range, move.min_range)
+				highest_support_range = max(highest_support_range, move.max_range)
 				
-		total_attack_range_span = max(highest_attack_range, highest_support_range)
+		displayed_min_attack_range = min(lowest_attack_range, lowest_support_range)
+		displayed_max_attack_range = max(highest_attack_range, highest_support_range)
 	
 	range_iterations = 0
 	range_attack_iterations = 0
@@ -383,7 +389,7 @@ func show_range(unit: PlacedUnit):
 			continue
 			
 		var tiles_left: int = attackable_tiles[coords]
-		var range_required: int = total_attack_range_span - tiles_left
+		var range_required: int = displayed_max_attack_range - tiles_left
 			
 		# Don't show the attack square if there is a unit here that is not the targe tof the current move.
 		# TODO: change logic based on whether or not move is a support move, or add green tiles for supportable allies?
@@ -421,7 +427,7 @@ func spread_range(coords: Vector2i, unit: PlacedUnit, move_remaining: int):
 	range_iterations += 1
 	
 	# Spread attack range from this position that the unit can reach
-	spread_attack_range(coords, unit, 0 if unit.attacked else total_attack_range_span)
+	spread_attack_range(coords, unit, 0 if unit.attacked else displayed_max_attack_range)
 	
 	if move_remaining <= 0:
 		return
