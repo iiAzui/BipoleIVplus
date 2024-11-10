@@ -263,6 +263,7 @@ theme = ExtResource("1_ys1kv")
 script = ExtResource("1_obxun")
 
 [node name="ChapterBattle" parent="." instance=ExtResource("3_17mib")]
+layout_mode = 1
 placements = ExtResource("4_pxc12")
 
 [node name="Timer" type="Timer" parent="."]

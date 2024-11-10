@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d273u7ss6tahe"]
+
+[ext_resource type="PackedScene" uid="uid://bh2c3tqr6mxhh" path="res://Scenes/ChapterBattle.tscn" id="1_0tonm"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vr8mh"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+axis = 1
+texture = SubResource("ViewportTexture_vr8mh")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(1920, 1080)
+
+[node name="ChapterBattle" parent="SubViewport" instance=ExtResource("1_0tonm")]

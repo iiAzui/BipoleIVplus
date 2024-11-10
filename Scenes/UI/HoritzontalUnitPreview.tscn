@@ -1,0 +1,140 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4ojdylljxwvf"]
+
+[ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_gb0mt"]
+[ext_resource type="Script" path="res://Scripts/UnitPreview.gd" id="2_6y0t3"]
+[ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Sprites/Portraits/proton_big.png" id="3_ifbmr"]
+[ext_resource type="Texture2D" uid="uid://wnxndhdjerh7" path="res://Sprites/UI/HealthBarBack.tres" id="4_sdcyb"]
+[ext_resource type="Texture2D" uid="uid://da0sx8yo2kgbx" path="res://Sprites/UI/HealthBarBorder.png" id="5_wc2m6"]
+[ext_resource type="Texture2D" uid="uid://d2t50grm12hvp" path="res://Sprites/UI/HealthBarPlayer.tres" id="6_ifilo"]
+[ext_resource type="Texture2D" uid="uid://cyksus6u6o8l0" path="res://Sprites/UI/LevelBar.tres" id="7_4xend"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ptyk"]
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.41598, 0.41598, 0.41598, 1)
+
+[node name="HorizontalUnitPreview" type="PanelContainer" node_paths=PackedStringArray("display_name_label", "portrait_texture_rect", "health_label", "health_bar", "level_label", "exp_label", "exp_bar")]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = 397.0
+offset_right = 553.0
+offset_bottom = 579.0
+grow_vertical = 2
+theme = ExtResource("1_gb0mt")
+script = ExtResource("2_6y0t3")
+display_name_label = NodePath("MarginContainer/HBoxContainer/PortraitVBoxContainer/DisplayNameLabel")
+portrait_texture_rect = NodePath("MarginContainer/HBoxContainer/PortraitVBoxContainer/PortraitPanelContainer/TextureRect")
+health_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/HealthLabel")
+health_bar = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/HealthBar")
+level_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/LevelLabel")
+exp_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/EXPLabel")
+exp_bar = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/EXPBar")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="PortraitVBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="DisplayNameLabel" type="Label" parent="MarginContainer/HBoxContainer/PortraitVBoxContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Proton
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PortraitPanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer/PortraitVBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5ptyk")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/PortraitVBoxContainer/PortraitPanelContainer"]
+layout_mode = 2
+texture = ExtResource("3_ifbmr")
+expand_mode = 1
+
+[node name="StatsVBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HealthContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/StatsVBoxContainer"]
+custom_minimum_size = Vector2(200, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HealthHeaderLabel" type="Label" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 18
+text = "HP"
+
+[node name="HealthLabel" type="Label" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 18
+text = "75/100"
+horizontal_alignment = 2
+
+[node name="HealthBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_vertical = 8
+value = 75.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("4_sdcyb")
+texture_over = ExtResource("5_wc2m6")
+texture_progress = ExtResource("6_ifilo")
+
+[node name="LevelContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/StatsVBoxContainer"]
+custom_minimum_size = Vector2(200, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="LevelLabel" type="Label" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Lv 1"
+
+[node name="EXPLabel" type="Label" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "25/100 EXP"
+horizontal_alignment = 2
+
+[node name="EXPBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+size_flags_vertical = 8
+value = 25.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("4_sdcyb")
+texture_over = ExtResource("5_wc2m6")
+texture_progress = ExtResource("7_4xend")

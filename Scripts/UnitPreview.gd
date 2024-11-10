@@ -1,27 +1,27 @@
 class_name UnitPreview
 extends PanelContainer
 
-@onready var display_name_label: Label = $MarginContainer/VBoxContainer/DisplayNameLabel
-@onready var portrait_texture_rect: TextureRect = $MarginContainer/VBoxContainer/PortraitPanelContainer/TextureRect
-@onready var health_label: Label = $MarginContainer/VBoxContainer/HealthContainer/HealthLabel
-@onready var health_bar: TextureProgressBar = $MarginContainer/VBoxContainer/HealthContainer/HealthBar
-@onready var level_label: Label = $MarginContainer/VBoxContainer/LevelContainer/LevelLabel
-@onready var exp_label: Label = $MarginContainer/VBoxContainer/LevelContainer/EXPLabel
-@onready var exp_bar: TextureProgressBar = $MarginContainer/VBoxContainer/LevelContainer/EXPBar
+@export var display_name_label: Label
+@export var portrait_texture_rect: TextureRect
+@export var health_label: Label
+@export var health_bar: TextureProgressBar
+@export var level_label: Label
+@export var exp_label: Label
+@export var exp_bar: TextureProgressBar
 
 const HEALTH_BAR_PLAYER = preload("res://Sprites/UI/HealthBarPlayer.tres")
 const HEALTH_BAR_ENEMY = preload("res://Sprites/UI/HealthBarEnemy.tres")
 
 func display_unit(placed_unit: PlacedUnit):
 	if not placed_unit:
-		visible = false
+		modulate.a = 0
 		return
 	var unit = placed_unit.unit
 	if not unit:
 		printerr(placed_unit, " doesn't have any unit stats! (this might be bad)")
-		visible = false
+		modulate.a = 0
 		return
-	visible = true
+	modulate.a = 1
 		
 	display_name_label.text = unit.character.display_name if unit.character else "Unit"
 	portrait_texture_rect.texture = unit.character.portrait if unit.character else null

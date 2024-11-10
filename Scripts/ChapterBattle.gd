@@ -7,13 +7,14 @@ extends Control
 # since I don't want to figure out how to make a whole scene based off that data
 @export var placements: ChapterPlacements
 
-@onready var unit_grid: UnitGrid = $UnitGrid
-@onready var map_cursor: MapCursor = $MapCursor
-@onready var range_display_grid: Node2D = $RangeDisplayGrid
-@onready var unit_preview: UnitPreview = $UnitPreview
-@onready var move_path_line: Line2D = $MovePathLine
-@onready var attack_path_line: Line2D = $AttackPathLine
+@export var allied_unit_preview: UnitPreview
+@export var enemy_unit_preview: UnitPreview
 
+@export var unit_grid: UnitGrid
+@export var map_cursor: MapCursor
+@export var range_display_grid: Node2D
+@export var move_path_line: Line2D
+@export var attack_path_line: Line2D
 
 const MOVE_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/MoveTileHighlight.tscn")
 const ATTACK_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/AttackTileHighlight.tscn")
@@ -178,11 +179,17 @@ func move_cursor_to(coords: Vector2i):
 	hovered_unit = unit_grid.get_unit_at(cursor_coords)
 	
 	if cursor_mode == CursorMode.SELECT:
-		unit_preview.display_unit(hovered_unit)
+		allied_unit_preview.display_unit(hovered_unit if hovered_unit and hovered_unit.allied else null)
+		enemy_unit_preview.display_unit(hovered_unit if hovered_unit and !hovered_unit.allied else null)
 		show_range(hovered_unit)
 	elif cursor_mode == CursorMode.MOVING or cursor_mode == CursorMode.ATTACKING:
-		var prevent_outside: Dictionary = moveable_tiles if cursor_mode == CursorMode.MOVING else attackable_tiles
-		if not (coords in prevent_outside or coords == unit_selected.coords):
+		# When in attacking or moving, display any enemies hovered over on right, 
+		# while moving/attacking unit is still displayed on left.
+		if hovered_unit:
+			enemy_unit_preview.display_unit(hovered_unit if hovered_unit and !hovered_unit.allied else null)
+		
+		var valid_range: Dictionary = moveable_tiles if cursor_mode == CursorMode.MOVING else attackable_tiles
+		if not (coords in valid_range or coords == unit_selected.coords):
 			return
 		
 		# if cursor intersects itself, shrink path back to that position
@@ -231,6 +238,7 @@ func select_move(move_index: int):
 	
 	move_selected_index = move_index
 	move_selected = unit_selected.unit.moves[move_index]
+	print("selected move ", move_selected.display_name, " (slot ", move_index, ")")
 	
 func start_path():
 	current_path.clear()
