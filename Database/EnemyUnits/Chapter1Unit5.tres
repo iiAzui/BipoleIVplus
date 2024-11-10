@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Unit" load_steps=5 format=3 uid="uid://bd75iboq7y133"]
 
-[ext_resource type="Resource" uid="uid://cslox4jgyjyci" path="res://Database/Characters/blueslime.tres" id="1_10rpx"]
+[ext_resource type="Resource" uid="uid://cslox4jgyjyci" path="res://Database/Characters/BlueSlime.tres" id="1_10rpx"]
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="2_pja1r"]
 [ext_resource type="Resource" uid="uid://lhemddpv3hms" path="res://Database/Moves/Slam.tres" id="3_3i2nb"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="3_hyhyt"]

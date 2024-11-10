@@ -1,5 +1,4 @@
-
-[gd_resource type="Resource" script_class="Move" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://dpiahfhihmgos"]
 
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="1_308sg"]
 
@@ -13,7 +12,7 @@ min_range = 1
 max_range = 1
 power = 1.5
 hit_rate = 100.0
-hit = 1
+hit = 1.0
 element = "None"
 extra_damage_trait = ""
 extra_multiplier = 1

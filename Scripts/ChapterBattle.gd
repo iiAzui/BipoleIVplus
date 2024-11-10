@@ -54,14 +54,30 @@ enum CursorMode {
 # The current tiles the selected unit can move to, as calculated from the last show_range call.
 # Store the Vector2i coords as keys as the amount of moves left when moving to that tile.
 var moveable_tiles: Dictionary
+
+# Tiles that the player's skill cursor can move on. Contains the amount of skill range steps left as the value.
+var skill_range_tiles: Dictionary
+
+# Tiles that can be the destination of an attack or the player's current Attack type move. 
+# Will not include tiles that require a range lower than the current move's min_range.
+# Automatically added in spread_range if current range is within the current move or set of moves' min and max range.
 var attackable_tiles: Dictionary
+
+# Same as attackable_tiles but for support moves
+var supportable_tiles: Dictionary
 
 # DIsplayed range for the current move, or shared mix/max of all moves if no move selected yet
 var displayed_min_attack_range: int
 var displayed_max_attack_range: int
 
-var range_iterations: int
-var range_attack_iterations: int
+# used when recursively mapping out attack/support range
+var lowest_attack_range: int = 99
+var lowest_support_range: int = 99
+var highest_attack_range: int = -1
+var highest_support_range: int = -1
+
+var move_range_iterations: int
+var skill_range_iterations: int
 
 ## When in move/attack mode, the current tile path.
 var current_path: Array[Vector2i]
@@ -178,16 +194,16 @@ func move_cursor_to(coords: Vector2i):
 	cursor_coords = coords
 	cursor_coords.x = clamp(cursor_coords.x, 0, RETRO_WIDTH-1)
 	cursor_coords.y = clamp(cursor_coords.y, 0, RETRO_HEIGHT-1)
-	print("moved cursor to ", cursor_coords)
+	#print("moved cursor to ", cursor_coords)
 	map_cursor.position = cursor_coords * TILE_SIZE
 	
 	hovered_unit = unit_grid.get_unit_at(cursor_coords)
 	
 	# For debugging
-	if cursor_coords in attackable_tiles:
-		var hovered_tiles_left: int = attackable_tiles[cursor_coords]
-		print("hovered tile steps left: ", hovered_tiles_left)
-		print("hovered minimum range required: ", displayed_min_attack_range - hovered_tiles_left + 1)
+	if cursor_coords in skill_range_tiles:
+		var hovered_tiles_left: int = skill_range_tiles[cursor_coords]
+		#print("hovered tile steps left: ", hovered_tiles_left)
+		print("hover range: ", displayed_max_attack_range - hovered_tiles_left)
 	
 	if cursor_mode == CursorMode.SELECT:
 		allied_unit_preview.display_unit(hovered_unit if hovered_unit and hovered_unit.allied else null)
@@ -199,7 +215,7 @@ func move_cursor_to(coords: Vector2i):
 		if hovered_unit:
 			enemy_unit_preview.display_unit(hovered_unit if hovered_unit and !hovered_unit.allied else null)
 		
-		var valid_range: Dictionary = moveable_tiles if cursor_mode == CursorMode.MOVING else attackable_tiles
+		var valid_range: Dictionary = moveable_tiles if cursor_mode == CursorMode.MOVING else skill_range_tiles
 		if not (coords in valid_range or coords == unit_selected.coords):
 			return
 		
@@ -286,7 +302,7 @@ func recalculate_path_to(target_coords: Vector2i):
 
 func search_for_path(coords: Vector2i, target_coords: Vector2i, steps_left: int) -> bool:
 	# Can't move here if not movable/attack (ignore if on starting tile)
-	if not coords in (moveable_tiles if cursor_mode == CursorMode.MOVING else attackable_tiles) and coords != unit_selected.coords:
+	if not coords in (moveable_tiles if cursor_mode == CursorMode.MOVING else skill_range_tiles) and coords != unit_selected.coords:
 		return false
 	
 	# "Take" the "step" for this possible path
@@ -345,25 +361,25 @@ func show_range(unit: PlacedUnit):
 		child.queue_free()
 		
 	moveable_tiles.clear()
+	skill_range_tiles.clear()
 	attackable_tiles.clear()
+	supportable_tiles.clear()
 	
 	if not unit or not unit.unit:
 		return
-	
-	# Only used if no move selected
-	var lowest_attack_range = 99
-	var lowest_support_range = 99
-	var highest_attack_range = 0
-	var highest_support_range = 0
-	
+
 	if move_selected:
 		displayed_min_attack_range = move_selected.min_range
 		displayed_max_attack_range = move_selected.max_range
-		lowest_attack_range = move_selected.min_range if move_selected.move_type == "Attack" else 0
-		lowest_support_range = move_selected.min_range if move_selected.move_type == "Support" else 0
+		lowest_attack_range = move_selected.min_range if move_selected.move_type == "Attack" else 99
+		lowest_support_range = move_selected.min_range if move_selected.move_type == "Support" else 99
 		highest_attack_range = move_selected.max_range if move_selected.move_type == "Attack" else 0
 		highest_support_range = move_selected.max_range if move_selected.move_type == "Support" else 0
 	else:
+		lowest_attack_range = 99
+		lowest_support_range = 99
+		highest_attack_range = -1
+		highest_support_range = -1
 		for move in unit.unit.moves:
 			if move.move_type == "Attack":
 				lowest_attack_range = min(lowest_attack_range, move.min_range)
@@ -374,48 +390,57 @@ func show_range(unit: PlacedUnit):
 				
 		displayed_min_attack_range = min(lowest_attack_range, lowest_support_range)
 		displayed_max_attack_range = max(highest_attack_range, highest_support_range)
+		
+	print("attack range: ", lowest_attack_range, "-", highest_attack_range)
+	print("support range: ", lowest_support_range, "-", highest_support_range)
+	print("displayed range: ", displayed_min_attack_range, "-", displayed_max_attack_range)
 	
-	range_iterations = 0
-	range_attack_iterations = 0
+	move_range_iterations = 0
+	skill_range_iterations = 0
 	spread_range(unit.coords, unit, 0 if unit.moved else unit.unit.speed)
-	print("range iterations: ", range_iterations)
-	print("range attack iterations: ", range_attack_iterations)
+	#print("move range search iterations: ", move_range_iterations)
+	#print("skill range search iterations: ", skill_range_iterations)
 	
 	# can't move in place
 	moveable_tiles.erase(unit.coords)
 	
-	# TODO: only show attack in place if move is a support move
+	# can't attack self
 	attackable_tiles.erase(unit.coords)
 	
-	
+	print("moveable tiles: ", moveable_tiles)
 	for coords in moveable_tiles.keys():
 		var highlight: Node2D = MOVE_TILE_HIGHLIGHT.instantiate()
 		highlight.position = coords * TILE_SIZE
 		range_display_grid.add_child(highlight)
-		
+	
+	print("attackable tiles: ", attackable_tiles)
 	for coords in attackable_tiles.keys():
-		# Don't show the attack square if unit can move here, blue swuare should be shown instead
+		# Don't show the attack square if unit can move here, blue square should be shown instead
 		if coords in moveable_tiles.keys():
 			continue
 			
-		var tiles_left: int = attackable_tiles[coords]
-		var minimum_range_required: int = displayed_min_attack_range - tiles_left + 1 # range of move must be at least this high to reach this tile
-			
-		# Don't show the attack square if there is a unit here that is not the targe tof the current move.
-		# TODO: change logic based on whether or not move is a support move, or add green tiles for supportable allies?
+		# If there is another unit here, don't show a red square if it's another ally here.
+		# (Empty squares will still have a red square)
 		var other_unit: PlacedUnit = unit_grid.get_unit_at(coords)
-		
-		# If there is indeed another unit here and they are on the same team, 
-		# check if they're in support range and draw a green square if so
-		if lowest_support_range <= minimum_range_required and (not move_selected or move_selected.move_type == "Support") and other_unit and other_unit.allied == unit.allied:
-			var highlight: Node2D = SUPPORT_TILE_HIGHLIGHT.instantiate()
-			highlight.position = coords * TILE_SIZE
-			range_display_grid.add_child(highlight)
+		if other_unit and other_unit.allied:
+			continue
 			
-		# TODO: attack minimum and maximum range
-		# Show attack range otherwise if not an ally here
-		elif lowest_attack_range <= minimum_range_required and (not move_selected or move_selected.move_type == "Attack") and (not other_unit or other_unit.allied != unit.allied):
-			var highlight: Node2D = ATTACK_TILE_HIGHLIGHT.instantiate()
+		var highlight: Node2D = ATTACK_TILE_HIGHLIGHT.instantiate()
+		highlight.position = coords * TILE_SIZE
+		range_display_grid.add_child(highlight)
+		
+	print("supportable tiles: ", supportable_tiles)
+	for coords in supportable_tiles.keys():
+		# if player can move or attack here, don't show a support highlight
+		if coords in moveable_tiles.keys():
+			continue
+		if coords in attackable_tiles.keys():
+			continue
+			
+		# there has to be an ally here to show the supportable highlight
+		var other_unit: PlacedUnit = unit_grid.get_unit_at(coords)
+		if other_unit and other_unit.allied:
+			var highlight: Node2D = SUPPORT_TILE_HIGHLIGHT.instantiate()
 			highlight.position = coords * TILE_SIZE
 			range_display_grid.add_child(highlight)
 		
@@ -434,7 +459,7 @@ func spread_range(coords: Vector2i, unit: PlacedUnit, move_remaining: int):
 		
 	# Mark as a valid move location and mark the value as the moves it took to get here
 	moveable_tiles[coords] = move_remaining
-	range_iterations += 1
+	move_range_iterations += 1
 	
 	# Spread attack range from this position that the unit can reach
 	spread_attack_range(coords, unit, 0 if unit.attacked else displayed_max_attack_range)
@@ -450,32 +475,40 @@ func spread_range(coords: Vector2i, unit: PlacedUnit, move_remaining: int):
 	spread_range(coords + Vector2i.DOWN, unit, move_remaining)
 	spread_range(coords + Vector2i.LEFT, unit, move_remaining)
 	
-func spread_attack_range(coords: Vector2i, unit: PlacedUnit, attack_range_remaining: int):
+func spread_attack_range(coords: Vector2i, unit: PlacedUnit, range_remaining: int):
 	# stop if cursor is OOB
 	if not is_coords_in_bounds(coords):
 		return
+		
+	# if currently on this tile on or above min and on or below max,
+	# mark as attackable/supportable
+	var range = displayed_max_attack_range - range_remaining
+	if range >= lowest_attack_range and range <= highest_attack_range and not (coords in attackable_tiles):
+		attackable_tiles[coords] = true
+	if range >= lowest_support_range and range <= highest_support_range and not (coords in supportable_tiles):
+		supportable_tiles[coords] = true
 	
 	# If renaining range is above 500, considered infinite,
 	# doesn't matter if this has been reached in fewer moves, all other tiles will be be reached either way.
-	if attack_range_remaining > 500:
-		if attackable_tiles.has(coords):
+	if range_remaining > 500:
+		if skill_range_tiles.has(coords):
 			return
-	else:
-		# If already marked as attackable, stop if unit can already reach this tile in fewer moves
-		if attackable_tiles.has(coords) and attackable_tiles[coords] >= attack_range_remaining:
-			return
+	#else:
+		## If already marked as attackable, stop if unit can already reach this tile in fewer moves
+		#if skill_range_tiles.has(coords) and skill_range_tiles[coords] >= range_remaining:
+			#return
 		
-	attackable_tiles[coords] = attack_range_remaining
-	range_attack_iterations += 1
+	skill_range_tiles[coords] = range_remaining
+	skill_range_iterations += 1
 	
-	if attack_range_remaining <= 0:
+	if range_remaining <= 0:
 		return
-	attack_range_remaining -= 1
+	range_remaining -= 1
 	
-	spread_attack_range(coords + Vector2i.UP, unit, attack_range_remaining)
-	spread_attack_range(coords + Vector2i.RIGHT, unit, attack_range_remaining)
-	spread_attack_range(coords + Vector2i.DOWN, unit, attack_range_remaining)
-	spread_attack_range(coords + Vector2i.LEFT, unit, attack_range_remaining)
+	spread_attack_range(coords + Vector2i.UP, unit, range_remaining)
+	spread_attack_range(coords + Vector2i.RIGHT, unit, range_remaining)
+	spread_attack_range(coords + Vector2i.DOWN, unit, range_remaining)
+	spread_attack_range(coords + Vector2i.LEFT, unit, range_remaining)
 	
 # Return true if this tile is either out of bounds or there is a solid tile here (for non retro mode).
 func is_tile_solid(coords: Vector2i):
