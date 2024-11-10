@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bh2c3tqr6mxhh"]
+[gd_scene load_steps=8 format=4 uid="uid://bh2c3tqr6mxhh"]
 
 [ext_resource type="Script" path="res://Scripts/ChapterBattle.gd" id="1_usvja"]
 [ext_resource type="TileSet" uid="uid://dhpm4aemdlwfi" path="res://Tilesets/forest.tres" id="2_nuju3"]
@@ -6,20 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/Overworld/selection.png" id="4_7qgnb"]
 [ext_resource type="Script" path="res://Scripts/MapCursor.gd" id="5_ef3eq"]
 [ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="7_ob44a"]
-[ext_resource type="Script" path="res://Scripts/UnitPreview.gd" id="8_jsa54"]
-[ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Sprites/Portraits/proton_big.png" id="9_qxcmt"]
-[ext_resource type="Texture2D" uid="uid://wnxndhdjerh7" path="res://Sprites/UI/HealthBarBack.tres" id="10_6d1n0"]
-[ext_resource type="Texture2D" uid="uid://da0sx8yo2kgbx" path="res://Sprites/UI/HealthBarBorder.png" id="11_xuhxl"]
-[ext_resource type="Texture2D" uid="uid://d2t50grm12hvp" path="res://Sprites/UI/HealthBarPlayer.tres" id="12_hunkj"]
 [ext_resource type="PackedScene" uid="uid://c4ojdylljxwvf" path="res://Scenes/UI/HoritzontalUnitPreview.tscn" id="13_cxd6n"]
-[ext_resource type="Texture2D" uid="uid://cyksus6u6o8l0" path="res://Sprites/UI/LevelBar.tres" id="13_mv4rv"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jdxe5"]
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.41598, 0.41598, 0.41598, 1)
 
 [node name="ChapterBattle" type="Control" node_paths=PackedStringArray("allied_unit_preview", "enemy_unit_preview", "unit_grid", "map_cursor", "range_display_grid", "move_path_line", "attack_path_line")]
 layout_mode = 3
@@ -28,9 +15,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("7_ob44a")
 script = ExtResource("1_usvja")
-allied_unit_preview = NodePath("HBoxContainer/AlliedUnitPreview")
-enemy_unit_preview = NodePath("HBoxContainer/EnemyUnitPreview")
+allied_unit_preview = NodePath("UnitPreviews/AlliedUnitPreview")
+enemy_unit_preview = NodePath("UnitPreviews/EnemyUnitPreview")
 unit_grid = NodePath("Map/UnitGrid")
 map_cursor = NodePath("Map/MapCursor")
 range_display_grid = NodePath("Map/RangeDisplayGrid")
@@ -83,120 +71,7 @@ scale = Vector2(1.28, 1.28)
 texture = ExtResource("4_7qgnb")
 script = ExtResource("5_ef3eq")
 
-[node name="UnitPreviewVertical" type="PanelContainer" parent="."]
-visible = false
-custom_minimum_size = Vector2(300, 600)
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -360.0
-offset_top = -388.0
-offset_right = -60.0
-offset_bottom = 212.0
-grow_vertical = 2
-theme = ExtResource("7_ob44a")
-script = ExtResource("8_jsa54")
-
-[node name="MarginContainer" type="MarginContainer" parent="UnitPreviewVertical"]
-layout_mode = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 8
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UnitPreviewVertical/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 8
-
-[node name="DisplayNameLabel" type="Label" parent="UnitPreviewVertical/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 1
-theme_override_font_sizes/font_size = 32
-text = "Proton
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="PortraitPanelContainer" type="PanelContainer" parent="UnitPreviewVertical/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_jdxe5")
-
-[node name="TextureRect" type="TextureRect" parent="UnitPreviewVertical/MarginContainer/VBoxContainer/PortraitPanelContainer"]
-layout_mode = 2
-texture = ExtResource("9_qxcmt")
-expand_mode = 1
-
-[node name="HealthContainer" type="MarginContainer" parent="UnitPreviewVertical/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 45)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="HealthHeaderLabel" type="Label" parent="UnitPreviewVertical/MarginContainer/VBoxContainer/HealthContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 18
-text = "HP"
-
-[node name="HealthLabel" type="Label" parent="UnitPreviewVertical/MarginContainer/VBoxContainer/HealthContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 18
-text = "75/100"
-horizontal_alignment = 2
-
-[node name="HealthBar" type="TextureProgressBar" parent="UnitPreviewVertical/MarginContainer/VBoxContainer/HealthContainer"]
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
-size_flags_vertical = 8
-value = 75.0
-nine_patch_stretch = true
-stretch_margin_left = 3
-stretch_margin_top = 3
-stretch_margin_right = 3
-stretch_margin_bottom = 3
-texture_under = ExtResource("10_6d1n0")
-texture_over = ExtResource("11_xuhxl")
-texture_progress = ExtResource("12_hunkj")
-
-[node name="LevelContainer" type="MarginContainer" parent="UnitPreviewVertical/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 35)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="LevelLabel" type="Label" parent="UnitPreviewVertical/MarginContainer/VBoxContainer/LevelContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "Lv 1"
-
-[node name="EXPLabel" type="Label" parent="UnitPreviewVertical/MarginContainer/VBoxContainer/LevelContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "25/100 EXP"
-horizontal_alignment = 2
-
-[node name="EXPBar" type="TextureProgressBar" parent="UnitPreviewVertical/MarginContainer/VBoxContainer/LevelContainer"]
-custom_minimum_size = Vector2(0, 12)
-layout_mode = 2
-size_flags_vertical = 8
-value = 25.0
-nine_patch_stretch = true
-stretch_margin_left = 3
-stretch_margin_top = 3
-stretch_margin_right = 3
-stretch_margin_bottom = 3
-texture_under = ExtResource("10_6d1n0")
-texture_over = ExtResource("11_xuhxl")
-texture_progress = ExtResource("13_mv4rv")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="UnitPreviews" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -208,9 +83,43 @@ grow_vertical = 0
 theme_override_constants/separation = 32
 alignment = 1
 
-[node name="AlliedUnitPreview" parent="HBoxContainer" instance=ExtResource("13_cxd6n")]
+[node name="AlliedUnitPreview" parent="UnitPreviews" instance=ExtResource("13_cxd6n")]
 layout_mode = 2
 
-[node name="EnemyUnitPreview" parent="HBoxContainer" instance=ExtResource("13_cxd6n")]
+[node name="EnemyUnitPreview" parent="UnitPreviews" instance=ExtResource("13_cxd6n")]
 layout_direction = 3
 layout_mode = 2
+
+[node name="StatsVBoxContainer" parent="UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer" index="1"]
+layout_direction = 2
+
+[node name="HealthBar" parent="UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="2"]
+fill_mode = 0
+
+[node name="EXPBar" parent="UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer" index="2"]
+fill_mode = 0
+
+[node name="AttackWindow" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="AttackWindow"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -250.0
+offset_right = 350.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[editable path="UnitPreviews/EnemyUnitPreview"]
