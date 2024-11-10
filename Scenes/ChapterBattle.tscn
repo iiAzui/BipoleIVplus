@@ -87,6 +87,7 @@ alignment = 1
 layout_mode = 2
 
 [node name="EnemyUnitPreview" parent="UnitPreviews" instance=ExtResource("13_cxd6n")]
+z_index = 4
 layout_direction = 3
 layout_mode = 2
 
