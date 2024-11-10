@@ -8,6 +8,12 @@ extends PanelContainer
 @export var level_label: Label
 @export var exp_label: Label
 @export var exp_bar: TextureProgressBar
+@export var atk_label: Label
+@export var def_label: Label
+@export var res_label: Label
+@export var spd_label: Label
+@export var agl_label: Label
+@export var acr_label: Label
 
 const HEALTH_BAR_PLAYER = preload("res://Sprites/UI/HealthBarPlayer.tres")
 const HEALTH_BAR_ENEMY = preload("res://Sprites/UI/HealthBarEnemy.tres")
@@ -36,3 +42,10 @@ func display_unit(placed_unit: PlacedUnit):
 	exp_label.text = "%d/%d EXP" % [unit.exp, xp_until_next]
 	exp_bar.value = unit.exp
 	exp_bar.max_value = xp_until_next
+	
+	atk_label.text = str(unit.attack)
+	def_label.text = str(unit.defense)
+	res_label.text = str(unit.resistance)
+	spd_label.text = str(unit.speed)
+	agl_label.text = str(unit.agility)
+	acr_label.text = str(unit.accuracy)

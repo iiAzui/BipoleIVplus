@@ -5,7 +5,8 @@ extends Resource
 @export_enum("Attack", "Support") var move_type: String = "Attack"
 @export_enum("Physical", "Magic") var damage_type: String = "Physical"
 @export var hp_cost: int = 0
-@export var range: int = 1
+@export var min_range: int = 1
+@export var max_range: int = 1
 @export var power: float = 1.5 # multiplied by attack to get damage/heal amount
 @export var hit_rate: float = 100 # new stat for accuracy percentage, only used outside of retro mode.
 @export var hit: float = 1.0 # HIT stat from og bipole IV but renamed. only used in retro mode. not used on sppoort type spells.

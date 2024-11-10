@@ -1,4 +1,5 @@
-[gd_resource type="Resource" script_class="Move" load_steps=2 format=3 uid="uid://d0vlirwem64eg"]
+
+[gd_resource type="Resource" script_class="Move" load_steps=2 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Move.gd" id="1_308sg"]
 
@@ -8,10 +9,11 @@ display_name = "Scalpel"
 move_type = "Attack"
 damage_type = "Physical"
 hp_cost = 0
-range = 1
-power = 1.5
+min_range = 1
+max_range = 1
+power = 1
 hit_rate = 100.0
-hit = 1.0
+hit = 2
 element = "None"
 extra_damage_trait = ""
-extra_multiplier = 0.0
+extra_multiplier = 1

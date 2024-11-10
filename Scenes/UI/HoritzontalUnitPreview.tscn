@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4ojdylljxwvf"]
+[gd_scene load_steps=10 format=3 uid="uid://c4ojdylljxwvf"]
 
 [ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_gb0mt"]
 [ext_resource type="Script" path="res://Scripts/UnitPreview.gd" id="2_6y0t3"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://da0sx8yo2kgbx" path="res://Sprites/UI/HealthBarBorder.png" id="5_wc2m6"]
 [ext_resource type="Texture2D" uid="uid://d2t50grm12hvp" path="res://Sprites/UI/HealthBarPlayer.tres" id="6_ifilo"]
 [ext_resource type="Texture2D" uid="uid://cyksus6u6o8l0" path="res://Sprites/UI/LevelBar.tres" id="7_4xend"]
+[ext_resource type="PackedScene" uid="uid://re8l7ocsynq6" path="res://Scenes/UI/StatDisplay.tscn" id="8_qqols"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ptyk"]
 border_width_left = 8
@@ -15,15 +16,9 @@ border_width_right = 8
 border_width_bottom = 8
 border_color = Color(0.41598, 0.41598, 0.41598, 1)
 
-[node name="HorizontalUnitPreview" type="PanelContainer" node_paths=PackedStringArray("display_name_label", "portrait_texture_rect", "health_label", "health_bar", "level_label", "exp_label", "exp_bar")]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = 397.0
-offset_right = 553.0
-offset_bottom = 579.0
-grow_vertical = 2
+[node name="HorizontalUnitPreview" type="PanelContainer" node_paths=PackedStringArray("display_name_label", "portrait_texture_rect", "health_label", "health_bar", "level_label", "exp_label", "exp_bar", "atk_label", "def_label", "res_label", "spd_label", "agl_label", "acr_label")]
+offset_right = 368.0
+offset_bottom = 182.0
 theme = ExtResource("1_gb0mt")
 script = ExtResource("2_6y0t3")
 display_name_label = NodePath("MarginContainer/HBoxContainer/PortraitVBoxContainer/DisplayNameLabel")
@@ -33,6 +28,12 @@ health_bar = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/HealthCo
 level_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/LevelLabel")
 exp_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/EXPLabel")
 exp_bar = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/EXPBar")
+atk_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/ATKStatDisplay/Label")
+def_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/DEFStatDisplay/Label")
+res_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/RESStatDisplay/Label")
+spd_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/SPDStatDisplay/Label")
+agl_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/AGLStatDisplay/Label")
+acr_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/ACRStatDisplay/Label")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -76,7 +77,7 @@ expand_mode = 1
 layout_mode = 2
 
 [node name="HealthContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/StatsVBoxContainer"]
-custom_minimum_size = Vector2(200, 45)
+custom_minimum_size = Vector2(300, 45)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -89,8 +90,9 @@ text = "HP"
 
 [node name="HealthLabel" type="Label" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer"]
 layout_mode = 2
+size_flags_horizontal = 8
 size_flags_vertical = 0
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 20
 text = "75/100"
 horizontal_alignment = 2
 
@@ -110,7 +112,7 @@ texture_over = ExtResource("5_wc2m6")
 texture_progress = ExtResource("6_ifilo")
 
 [node name="LevelContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/StatsVBoxContainer"]
-custom_minimum_size = Vector2(200, 35)
+custom_minimum_size = Vector2(300, 35)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -140,3 +142,53 @@ stretch_margin_bottom = 3
 texture_under = ExtResource("4_sdcyb")
 texture_over = ExtResource("5_wc2m6")
 texture_progress = ExtResource("7_4xend")
+
+[node name="StatRow" type="HBoxContainer" parent="MarginContainer/HBoxContainer/StatsVBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ATKStatDisplay" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow" instance=ExtResource("8_qqols")]
+layout_mode = 2
+
+[node name="DEFStatDisplay" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow" instance=ExtResource("8_qqols")]
+layout_mode = 2
+
+[node name="HeaderLabel" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/DEFStatDisplay" index="0"]
+text = "DEF"
+
+[node name="RESStatDisplay" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow" instance=ExtResource("8_qqols")]
+layout_mode = 2
+
+[node name="HeaderLabel" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/RESStatDisplay" index="0"]
+text = "RES"
+
+[node name="StatRow2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/StatsVBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SPDStatDisplay" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2" instance=ExtResource("8_qqols")]
+layout_mode = 2
+
+[node name="HeaderLabel" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/SPDStatDisplay" index="0"]
+text = "SPD"
+
+[node name="AGLStatDisplay" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2" instance=ExtResource("8_qqols")]
+layout_mode = 2
+
+[node name="HeaderLabel" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/AGLStatDisplay" index="0"]
+text = "AGL"
+
+[node name="ACRStatDisplay" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2" instance=ExtResource("8_qqols")]
+layout_mode = 2
+
+[node name="HeaderLabel" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/ACRStatDisplay" index="0"]
+text = "ACR"
+
+[editable path="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/ATKStatDisplay"]
+[editable path="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/DEFStatDisplay"]
+[editable path="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/RESStatDisplay"]
+[editable path="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/SPDStatDisplay"]
+[editable path="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/AGLStatDisplay"]
+[editable path="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/ACRStatDisplay"]

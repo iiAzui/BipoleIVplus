@@ -86,7 +86,12 @@ func _input(event: InputEvent) -> void:
 			event = unit_grid.make_input_local(event)
 			var coords: Vector2i = round(event.position / TILE_SIZE)
 			if is_coords_in_bounds(coords):
-				move_cursor_to(coords)
+				# Press the tile if it is already hovered when clicking it
+				if coords == cursor_coords:
+					on_tile_pressed()
+				# Otherwise, hover the clicked tile
+				else:
+					move_cursor_to(coords)
 	elif event.is_action_pressed("Esc"):
 		change_cursor_mode(CursorMode.SELECT)
 	elif event.is_action_pressed("Select"):
