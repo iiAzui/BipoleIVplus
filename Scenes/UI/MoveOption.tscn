@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhmvd1yco0p2l"]
+
+[ext_resource type="Script" path="res://Scripts/MoveOption.gd" id="1_18pnu"]
+[ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_674kk"]
+[ext_resource type="StyleBox" uid="uid://btxqedwexl4dm" path="res://Theme/MoveUnselectedStylebox.tres" id="2_5d6gg"]
+[ext_resource type="StyleBox" uid="uid://3uum5niyesxk" path="res://Theme/MoveSelectedStylebox.tres" id="4_rsbna"]
+
+[node name="MoveOption" type="Panel" node_paths=PackedStringArray("move_name_label")]
+custom_minimum_size = Vector2(200, 50)
+offset_right = 100.0
+offset_bottom = 50.0
+theme = ExtResource("1_674kk")
+theme_override_styles/panel = ExtResource("2_5d6gg")
+script = ExtResource("1_18pnu")
+unselected_stylebox = ExtResource("2_5d6gg")
+selected_stylebox = ExtResource("4_rsbna")
+move_name_label = NodePath("MoveNameLabel")
+
+[node name="MoveNameLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "Move Name"
+horizontal_alignment = 1
+vertical_alignment = 1

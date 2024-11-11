@@ -9,6 +9,7 @@ extends Control
 
 @export var allied_unit_preview: UnitPreview
 @export var enemy_unit_preview: UnitPreview
+@export var move_select_panel: MoveSelectPanel
 
 @export var unit_grid: UnitGrid
 @export var map_cursor: MapCursor
@@ -28,7 +29,7 @@ const TILE_SIZE: float = 64.0
 var is_player_turn: bool = true
 
 ## Current coordinates of the player's cursor. Used for unit selection, move destination, attack target, etc.
-var cursor_coords: Vector2i = Vector2i.ZERO
+var cursor_coords: Vector2i = Vector2i(-1, -1)
 
 ## Current selected unit for moving/attacking.
 var unit_selected: PlacedUnit
@@ -85,6 +86,8 @@ var current_path: Array[Vector2i]
 func _ready() -> void:
 	place_player_units()
 	place_enemy_units()
+	change_cursor_mode(CursorMode.SELECT)
+	move_cursor_to(Vector2i.ZERO)
 	
 	#call_deferred("grab_focus")
 
@@ -112,10 +115,24 @@ func _input(event: InputEvent) -> void:
 		change_cursor_mode(CursorMode.SELECT)
 	elif event.is_action_pressed("Select"):
 		on_tile_pressed()
+	elif event.is_action_pressed("1"):
+		select_move(0)
+	elif event.is_action_pressed("2"):
+		select_move(1)
+	elif event.is_action_pressed("3"):
+		select_move(2)
+	elif event.is_action_pressed("4"):
+		select_move(3)
+	elif event.is_action_pressed("5"):
+		select_move(4)
+	elif event.is_action_pressed("6"):
+		select_move(5)
+	elif event.is_action_pressed("7"):
+		select_move(6)
 					
 		
 func on_tile_pressed():
-	if cursor_mode == CursorMode.SELECT and hovered_unit.allied == is_player_turn:
+	if cursor_mode == CursorMode.SELECT and hovered_unit and hovered_unit.allied == is_player_turn:
 		unit_selected = hovered_unit
 		if hovered_unit:
 			if !hovered_unit.moved:
@@ -134,21 +151,53 @@ func on_tile_pressed():
 		hovered_unit = unit_selected
 		show_range(unit_selected)
 	elif cursor_mode == CursorMode.ATTACKING:
-		# If not in attackable tiles range, go back to select mode
-		if not cursor_coords in attackable_tiles:
+		# If not in attackable or supportable range, go back to select mode
+		if not (cursor_coords in attackable_tiles) and not (cursor_coords in supportable_tiles):
 			change_cursor_mode(CursorMode.SELECT)
 			return
 			
-		# If there is not a unit or the unit cannot be targeted by the selected move, go back to select mode
-		if not hovered_unit or hovered_unit.allied != (move_selected.move_type == "Support"):
+		# If there isn't a unit here, go back to select mode
+		if not hovered_unit:
+			change_cursor_mode(CursorMode.SELECT)
+			return
+			
+		# If no skill is selected, select the first skill that can hit the target
+		if not move_selected:
+			# Loop through the moves until one can hit the target unit
+			var attack_range_remaining: int = attackable_tiles[cursor_coords] if cursor_coords in attackable_tiles else -1
+			var support_range_remaining: int = supportable_tiles[cursor_coords] if cursor_coords in supportable_tiles else -1
+			
+			for i in len(unit_selected.unit.moves):
+				var move: Move = unit_selected.unit.moves[i]
+				var range_remaining: int = attack_range_remaining if move.move_type == "Attack" else support_range_remaining
+				var range_required: int = displayed_max_attack_range - range_remaining + 1
+				print(move.display_name, " range required: ", range_required)
+				if move.min_range <= range_required and move.max_range >= range_required:
+					# select this move
+					select_move(i)
+					break
+					
+			# if a suitable skill was not found to hit this tile, go back to select mode
+			if not move_selected:
+				change_cursor_mode(CursorMode.SELECT)
+				return
+			else:
+				# if a move was selected, don't immediately use the skill. 
+				# return here and wait for another input for confirmation to use the auto selected skill.
+				return
+			
+		# If a skill is selected but the unit cannot be targeted by the selected move, go back to select mode
+		elif hovered_unit.allied != (move_selected.move_type == "Support"):
 			change_cursor_mode(CursorMode.SELECT)
 			return
 			
 		## TODO: implement attacking, and selecting move for that matter
 		unit_selected.moved = true # Cannot move after attack
 		unit_selected.attacked = true
+		print("used skill ", move_selected.display_name)
 		change_cursor_mode(CursorMode.SELECT)
 		hovered_unit = unit_selected
+		select_move(-1)
 		show_range(unit_selected)
 		
 func place_player_units():
@@ -251,14 +300,15 @@ func change_cursor_mode(mode: CursorMode):
 		map_cursor.modulate = map_cursor.select_color
 		select_move(-1)
 		end_move_path()
+		move_select_panel.display_moves(null)
 	elif mode == CursorMode.MOVING:
 		map_cursor.modulate = map_cursor.move_color
 		start_path()
 	elif mode == CursorMode.ATTACKING:
 		map_cursor.modulate = map_cursor.attack_color
 		# TODO: select by arrow keys, change selection by scroll wheel, may want to select via a menu
-		select_move(0)
 		start_path()
+		move_select_panel.display_moves(unit_selected)
 		
 	move_path_line.visible = cursor_mode == CursorMode.MOVING
 	attack_path_line.visible = cursor_mode == CursorMode.ATTACKING
@@ -267,11 +317,24 @@ func select_move(move_index: int):
 	if move_index < 0:
 		move_selected_index = -1;
 		move_selected = null
+		move_select_panel.show_selected_move(move_selected_index)
+		return
+		
+	if not unit_selected:
+		# If move is selectable on the hovered unit in select mode, select the unit and the move and go straight into attack mode
+		if cursor_mode == CursorMode.SELECT and hovered_unit and move_index < len(hovered_unit.unit.moves):
+			unit_selected = hovered_unit
+			change_cursor_mode(CursorMode.ATTACKING)
+			
+	# otherwise, if a unit is selected but the move index requested is outside its move list range, ignore the input
+	elif move_index >= len(unit_selected.unit.moves):
 		return
 	
 	move_selected_index = move_index
 	move_selected = unit_selected.unit.moves[move_index]
 	print("selected move ", move_selected.display_name, " (slot ", move_index, ")")
+	
+	move_select_panel.show_selected_move(move_selected_index)
 	
 func start_path():
 	current_path.clear()
@@ -397,9 +460,9 @@ func show_range(unit: PlacedUnit):
 		displayed_min_attack_range = min(lowest_attack_range, lowest_support_range)
 		displayed_max_attack_range = max(highest_attack_range, highest_support_range)
 		
-	print("attack range: ", lowest_attack_range, "-", highest_attack_range)
-	print("support range: ", lowest_support_range, "-", highest_support_range)
-	print("displayed range: ", displayed_min_attack_range, "-", displayed_max_attack_range)
+	#print("attack range: ", lowest_attack_range, "-", highest_attack_range)
+	#print("support range: ", lowest_support_range, "-", highest_support_range)
+	#print("displayed range: ", displayed_min_attack_range, "-", displayed_max_attack_range)
 	
 	move_range_iterations = 0
 	skill_range_iterations = 0
