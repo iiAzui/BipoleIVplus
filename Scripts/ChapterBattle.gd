@@ -177,6 +177,7 @@ func on_tile_pressed():
 		# If not in attackable or supportable range, return
 		if not (cursor_coords in attackable_tiles) and not (cursor_coords in supportable_tiles):
 			move_cursor_to(unit_selected.coords)
+			hovered_unit = unit_selected
 			change_cursor_mode(CursorMode.SELECT)
 			show_range(hovered_unit)
 			return
@@ -184,6 +185,7 @@ func on_tile_pressed():
 		# If there isn't a unit here, return
 		if not hovered_unit:
 			move_cursor_to(unit_selected.coords)
+			hovered_unit = unit_selected
 			change_cursor_mode(CursorMode.SELECT)
 			show_range(hovered_unit)
 			return
@@ -206,8 +208,9 @@ func on_tile_pressed():
 					
 			# if a suitable skill was not found to hit this tile, return and move cursor back to selected unit
 			if not move_selected:
-				change_cursor_mode(CursorMode.SELECT)
+				hovered_unit = unit_selected
 				move_cursor_to(unit_selected.coords)
+				change_cursor_mode(CursorMode.SELECT)
 				return
 			else:
 				# if a move was selected, don't immediately use the skill. 
@@ -356,7 +359,6 @@ func select_move(move_index: int):
 		if cursor_mode == CursorMode.SELECT and hovered_unit and move_index < len(hovered_unit.unit.moves):
 			unit_selected = hovered_unit
 			change_cursor_mode(CursorMode.ATTACKING)
-			show_range(unit_selected) # update range to not include move range in case havent moved yet
 			await get_tree().process_frame
 			
 	# otherwise, if a unit is selected but the move index requested is outside its move list range, ignore the input
@@ -370,6 +372,7 @@ func select_move(move_index: int):
 	move_selected = unit_selected.unit.moves[move_index]
 	print("selected move ", move_selected.display_name, " (slot ", move_index, ")")
 	
+	show_range(unit_selected) # update range to not include move range in case havent moved yet
 	move_select_panel.show_selected_move(move_selected_index)
 	
 func start_path():
