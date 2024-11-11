@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://da2b80p3dhtok"]
+[gd_scene load_steps=8 format=3 uid="uid://da2b80p3dhtok"]
 
 [ext_resource type="Script" path="res://Scripts/PlacedUnit.gd" id="1_w2poa"]
 [ext_resource type="Texture2D" uid="uid://byuwl7nxtgnq4" path="res://Sprites/Overworld/romra_small.png" id="2_puuba"]
 [ext_resource type="Texture2D" uid="uid://da0sx8yo2kgbx" path="res://Sprites/UI/HealthBarBorder.png" id="3_7q2pf"]
 [ext_resource type="Texture2D" uid="uid://cg000ewm2cd5g" path="res://Sprites/UI/HealthBarEnemy.tres" id="3_ig5or"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_c5eei"]
+viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Gradient" id="Gradient_wwot8"]
 colors = PackedColorArray(0, 0, 0, 1, 0.0193997, 0.0907111, 0.122726, 1)
@@ -11,26 +14,50 @@ colors = PackedColorArray(0, 0, 0, 1, 0.0193997, 0.0907111, 0.122726, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_fyavo"]
 gradient = SubResource("Gradient_wwot8")
 
-[node name="PlacedUnit" type="Node2D"]
+[node name="PlacedUnit" type="Node3D"]
 script = ExtResource("1_w2poa")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1.28, 1.28)
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+pixel_size = 0.02
+billboard = 1
+alpha_cut = 2
 texture = ExtResource("2_puuba")
 
-[node name="HealthBar" type="TextureProgressBar" parent="."]
+[node name="MeshInstance3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+sorting_offset = 1.0
+pixel_size = 0.0156
+billboard = 1
+no_depth_test = true
+texture_filter = 0
+texture = SubResource("ViewportTexture_c5eei")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(64, 64)
+
+[node name="Control" type="Control" parent="SubViewport"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="HealthBar" type="TextureProgressBar" parent="SubViewport/Control"]
 texture_filter = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -11.0
-offset_top = 19.0
-offset_right = 28.0
-offset_bottom = 29.0
-grow_horizontal = 2
-grow_vertical = 2
+custom_minimum_size = Vector2(40, 12)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -16.0
+offset_right = -1.0
+offset_bottom = -4.0
+grow_horizontal = 0
+grow_vertical = 0
 size_flags_horizontal = 4
 value = 85.0
 nine_patch_stretch = true
@@ -42,15 +69,15 @@ texture_under = SubResource("GradientTexture1D_fyavo")
 texture_over = ExtResource("3_7q2pf")
 texture_progress = ExtResource("3_ig5or")
 
-[node name="LevelBackground" type="ColorRect" parent="."]
+[node name="LevelBackground" type="ColorRect" parent="SubViewport/Control"]
 z_index = 1
-offset_left = -31.0
-offset_top = 11.0
-offset_right = -11.0
-offset_bottom = 31.0
+offset_left = 2.0
+offset_top = 43.0
+offset_right = 22.0
+offset_bottom = 63.0
 color = Color(0.23, 0.23, 0.23, 1)
 
-[node name="NinePatchRect" type="NinePatchRect" parent="LevelBackground"]
+[node name="NinePatchRect" type="NinePatchRect" parent="SubViewport/Control/LevelBackground"]
 z_index = 1
 texture_filter = 1
 layout_mode = 1
@@ -69,7 +96,7 @@ patch_margin_top = 3
 patch_margin_right = 3
 patch_margin_bottom = 3
 
-[node name="LevelLabel" type="Label" parent="LevelBackground"]
+[node name="LevelLabel" type="Label" parent="SubViewport/Control/LevelBackground"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 15
@@ -82,3 +109,5 @@ grow_vertical = 2
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HeightOffset" type="Node3D" parent="."]

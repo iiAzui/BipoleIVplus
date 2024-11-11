@@ -1,5 +1,5 @@
 class_name MapCursor
-extends Sprite2D
+extends Sprite3D
 
 @export var select_color: Color = Color.WHITE
 @export var move_color: Color = Color.BLUE

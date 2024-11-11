@@ -1,5 +1,7 @@
 class_name UnitGrid
-extends Node2D
+extends Node3D
+
+@export var use_3d: bool = false
 
 #Contains all units in a dictionary. key is coordinates, value is the PlacedUnit
 # to get a unit at (x, y), use the key of Vector2i(x, y)
@@ -27,8 +29,7 @@ func get_unit_at(coords: Vector2i):
 		
 func place_unit(unit: PlacedUnit, coords: Vector2i):
 	grid[coords] = unit
-	unit.coords = coords
-	unit.position = coords * ChapterBattle.TILE_SIZE
+	set_unit_coords(unit, coords)
 	add_child(unit)
 	print("placed ", unit.name, " at ", coords)
 	
@@ -36,6 +37,9 @@ func move_unit(from: Vector2i, to: Vector2i):
 	var unit: PlacedUnit = grid[from]
 	grid[from] = null
 	grid[to] = unit
-	unit.coords = to
-	unit.position = to * ChapterBattle.TILE_SIZE
+	set_unit_coords(unit, to)
 	print("moved ", unit.name, " from ", from, " to ", to)
+
+func set_unit_coords(unit: PlacedUnit, coords: Vector2i):
+	unit.coords = coords
+	unit.position = Vector3(coords.x, unit.position.y, coords.y)

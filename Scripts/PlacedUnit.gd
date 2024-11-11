@@ -1,9 +1,11 @@
 @tool
 class_name PlacedUnit
-extends Node2D
+extends Node3D
 
 @onready var health_bar: TextureProgressBar = $HealthBar
 @onready var level_label: Label = $LevelBackground/LevelLabel
+@onready var sprite_3d: Sprite3D = $Sprite3D
+
 
 const HEALTH_BAR_PLAYER = preload("res://Sprites/UI/HealthBarPlayer.tres")
 const HEALTH_BAR_ENEMY = preload("res://Sprites/UI/HealthBarEnemy.tres")
@@ -46,7 +48,9 @@ func _ready() -> void:
 # for editor reflecting current unit
 func update_unit_visual():
 	if unit and unit.character:
-		$Sprite2D.texture = unit.character.overworld_sprite
+		if not sprite_3d:
+			sprite_3d = $Sprite3D
+		sprite_3d.texture = unit.character.overworld_sprite
 		if health_bar:
 			health_bar.value = unit.hp
 			health_bar.max_value = unit.max_hp

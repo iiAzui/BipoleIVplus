@@ -1,5 +1,5 @@
 class_name ChapterBattle
-extends Control
+extends Node
 
 # If this is non-null, all the enemies from this CHapterPlacements objects will be placed when the battle begins
 # Used to store placements in a file instead of a scene.
@@ -13,7 +13,7 @@ extends Control
 
 @export var unit_grid: UnitGrid
 @export var map_cursor: MapCursor
-@export var range_display_grid: Node2D
+@export var range_display_grid: Node3D
 @export var move_path_line: Line2D
 @export var attack_path_line: Line2D
 
@@ -282,7 +282,7 @@ func move_cursor_to(coords: Vector2i):
 	cursor_coords.x = clamp(cursor_coords.x, 0, RETRO_WIDTH-1)
 	cursor_coords.y = clamp(cursor_coords.y, 0, RETRO_HEIGHT-1)
 	#print("moved cursor to ", cursor_coords)
-	map_cursor.position = cursor_coords * TILE_SIZE
+	map_cursor.position = Vector3(cursor_coords.x, 0, cursor_coords.y)
 	
 	hovered_unit = unit_grid.get_unit_at(cursor_coords)
 	
@@ -344,8 +344,8 @@ func change_cursor_mode(mode: CursorMode):
 		start_path()
 		move_select_panel.display_moves(unit_selected)
 		
-	move_path_line.visible = cursor_mode == CursorMode.MOVING
-	attack_path_line.visible = cursor_mode == CursorMode.ATTACKING
+	if move_path_line: move_path_line.visible = cursor_mode == CursorMode.MOVING
+	if attack_path_line: attack_path_line.visible = cursor_mode == CursorMode.ATTACKING
 	
 func select_move(move_index: int):
 	if move_index < 0:
@@ -382,20 +382,24 @@ func start_path():
 
 func refresh_path():
 	if cursor_mode == CursorMode.MOVING:
-		move_path_line.visible = true
-		attack_path_line.visible = false
-		move_path_line.clear_points()
-		for coords in current_path:
-			move_path_line.add_point(coords * TILE_SIZE)
+		if move_path_line: 
+			move_path_line.visible = true
+			move_path_line.clear_points()
+			for coords in current_path:
+				move_path_line.add_point(coords * TILE_SIZE)
+		if attack_path_line:
+			attack_path_line.visible = false
 	elif cursor_mode == CursorMode.ATTACKING:
-		move_path_line.visible = false
-		attack_path_line.visible = true
-		attack_path_line.clear_points()
-		for coords in current_path:
-			attack_path_line.add_point(coords * TILE_SIZE)
+		if move_path_line:
+			move_path_line.visible = false
+		if attack_path_line:
+			attack_path_line.visible = true
+			attack_path_line.clear_points()
+			for coords in current_path:
+				attack_path_line.add_point(coords * TILE_SIZE)
 	else:
-		move_path_line.visible = false
-		attack_path_line.visible = false
+		if move_path_line: move_path_line.visible = false
+		if attack_path_line: attack_path_line.visible = false
 		
 # Return tru ewhen a path is found
 func recalculate_path_to(target_coords: Vector2i):
@@ -462,7 +466,7 @@ func search_for_path(coords: Vector2i, target_coords: Vector2i, steps_left: int)
 	return false
 
 func end_move_path():
-	move_path_line.visible = false
+	if move_path_line: move_path_line.visible = false
 
 func show_range(unit: PlacedUnit):	
 	for child in range_display_grid.get_children():

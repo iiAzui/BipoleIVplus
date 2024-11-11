@@ -1,0 +1,171 @@
+[gd_scene load_steps=16 format=3 uid="uid://d273u7ss6tahe"]
+
+[ext_resource type="Script" path="res://Scripts/ChapterBattle.gd" id="1_4h1kv"]
+[ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter1.tres" id="2_5jyhv"]
+[ext_resource type="Shader" path="res://Shaders/Map.gdshader" id="2_a7bsw"]
+[ext_resource type="Script" path="res://Scripts/UnitGrid.gd" id="3_7lps6"]
+[ext_resource type="Script" path="res://Scripts/MapCursor.gd" id="4_6ei7i"]
+[ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/Overworld/selection.png" id="4_23hxa"]
+[ext_resource type="PackedScene" uid="uid://c4ojdylljxwvf" path="res://Scenes/UI/HoritzontalUnitPreview.tscn" id="4_hpppt"]
+[ext_resource type="Script" path="res://Scripts/MoveSelectPanel.gd" id="5_4jc8v"]
+[ext_resource type="PackedScene" uid="uid://dhmvd1yco0p2l" path="res://Scenes/UI/MoveOption.tscn" id="6_8itd0"]
+[ext_resource type="PackedScene" uid="uid://da2b80p3dhtok" path="res://Scenes/UI/PlacedUnit.tscn" id="9_k2j8h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lq4p6"]
+render_priority = 0
+shader = ExtResource("2_a7bsw")
+shader_parameter/albedo = Color(0, 0.5, 0, 1)
+shader_parameter/grid_color = Color(0, 0, 0, 0.12549)
+shader_parameter/grid_thickness = 0.063
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qkwye"]
+material = SubResource("ShaderMaterial_lq4p6")
+size = Vector2(19, 14)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kosm6"]
+albedo_color = Color(0, 0.192157, 0.0117647, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cllfn"]
+material = SubResource("StandardMaterial3D_kosm6")
+size = Vector2(49, 44)
+
+[sub_resource type="Environment" id="Environment_m2r1f"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.4
+
+[node name="3DChapterBattle" type="Node3D" node_paths=PackedStringArray("allied_unit_preview", "enemy_unit_preview", "move_select_panel", "unit_grid", "map_cursor", "range_display_grid")]
+script = ExtResource("1_4h1kv")
+placements = ExtResource("2_5jyhv")
+allied_unit_preview = NodePath("CanvasLayer/UnitPreviews/AlliedUnitPreview")
+enemy_unit_preview = NodePath("CanvasLayer/UnitPreviews/EnemyUnitPreview")
+move_select_panel = NodePath("CanvasLayer/MoveSelectPanel")
+unit_grid = NodePath("UnitGrid")
+map_cursor = NodePath("Sprite3D")
+range_display_grid = NodePath("RangeDisplayGrid")
+
+[node name="MapQuad" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 6.5)
+mesh = SubResource("PlaneMesh_qkwye")
+
+[node name="MapOutsideQuad" type="MeshInstance3D" parent="MapQuad"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.143, 0)
+mesh = SubResource("PlaneMesh_cllfn")
+skeleton = NodePath("../..")
+
+[node name="UnitGrid" type="Node3D" parent="."]
+script = ExtResource("3_7lps6")
+
+[node name="RangeDisplayGrid" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 6.5)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+sorting_offset = 2.0
+pixel_size = 0.02
+axis = 1
+double_sided = false
+texture_filter = 0
+render_priority = 1
+texture = ExtResource("4_23hxa")
+script = ExtResource("4_6ei7i")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.267238, 0.96363, 0, -0.96363, 0.267238, 8.5, 20.55, 13.8)
+fov = 45.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UnitPreviews" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -182.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="AlliedUnitPreview" parent="CanvasLayer/UnitPreviews" instance=ExtResource("4_hpppt")]
+layout_mode = 2
+
+[node name="EnemyUnitPreview" parent="CanvasLayer/UnitPreviews" instance=ExtResource("4_hpppt")]
+z_index = 4
+layout_direction = 3
+layout_mode = 2
+
+[node name="StatsVBoxContainer" parent="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer" index="1"]
+layout_direction = 2
+
+[node name="HealthBar" parent="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="2"]
+fill_mode = 0
+
+[node name="EXPBar" parent="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer" index="2"]
+fill_mode = 0
+
+[node name="MoveSelectPanel" type="PanelContainer" parent="CanvasLayer" node_paths=PackedStringArray("moves_container")]
+custom_minimum_size = Vector2(250, 500)
+offset_left = 43.0
+offset_top = 557.0
+offset_right = 293.0
+offset_bottom = 1057.0
+script = ExtResource("5_4jc8v")
+moves_container = NodePath("MarginContainer/VBoxContainer")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MoveSelectPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MoveSelectPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="MoveOption" parent="CanvasLayer/MoveSelectPanel/MarginContainer/VBoxContainer" instance=ExtResource("6_8itd0")]
+layout_mode = 2
+
+[node name="AttackWindow" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/AttackWindow"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -250.0
+offset_right = 350.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlacedUnit" parent="." instance=ExtResource("9_k2j8h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.451594, 0.892224, 0, -0.892224, 0.451594, 0, 14.6465, 0)
+light_energy = 0.6
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_m2r1f")
+
+[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview"]
+[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/ATKStatDisplay"]
+[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/DEFStatDisplay"]
+[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/RESStatDisplay"]
+[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/SPDStatDisplay"]
+[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/AGLStatDisplay"]
+[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/ACRStatDisplay"]
