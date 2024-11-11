@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d273u7ss6tahe"]
+[gd_scene load_steps=17 format=3 uid="uid://d273u7ss6tahe"]
 
 [ext_resource type="Script" path="res://Scripts/ChapterBattle.gd" id="1_4h1kv"]
 [ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter1.tres" id="2_5jyhv"]
@@ -11,19 +11,22 @@
 [ext_resource type="PackedScene" uid="uid://dhmvd1yco0p2l" path="res://Scenes/UI/MoveOption.tscn" id="6_8itd0"]
 [ext_resource type="PackedScene" uid="uid://da2b80p3dhtok" path="res://Scenes/UI/PlacedUnit.tscn" id="9_k2j8h"]
 
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_c7kij"]
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lq4p6"]
-render_priority = 0
+render_priority = -1
 shader = ExtResource("2_a7bsw")
 shader_parameter/albedo = Color(0, 0.5, 0, 1)
-shader_parameter/grid_color = Color(0, 0, 0, 0.12549)
-shader_parameter/grid_thickness = 0.063
+shader_parameter/grid_color = Color(0, 0, 0, 0.0941176)
+shader_parameter/grid_thickness = 0.1
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qkwye"]
 material = SubResource("ShaderMaterial_lq4p6")
 size = Vector2(19, 14)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kosm6"]
-albedo_color = Color(0, 0.192157, 0.0117647, 1)
+render_priority = -1
+albedo_color = Color(0, 0.376471, 0, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_cllfn"]
 material = SubResource("StandardMaterial3D_kosm6")
@@ -32,7 +35,7 @@ size = Vector2(49, 44)
 [sub_resource type="Environment" id="Environment_m2r1f"]
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 0.4
+ambient_light_energy = 0.75
 
 [node name="3DChapterBattle" type="Node3D" node_paths=PackedStringArray("allied_unit_preview", "enemy_unit_preview", "move_select_panel", "unit_grid", "map_cursor", "range_display_grid")]
 script = ExtResource("1_4h1kv")
@@ -41,8 +44,13 @@ allied_unit_preview = NodePath("CanvasLayer/UnitPreviews/AlliedUnitPreview")
 enemy_unit_preview = NodePath("CanvasLayer/UnitPreviews/EnemyUnitPreview")
 move_select_panel = NodePath("CanvasLayer/MoveSelectPanel")
 unit_grid = NodePath("UnitGrid")
-map_cursor = NodePath("Sprite3D")
+map_cursor = NodePath("MapCursor")
 range_display_grid = NodePath("RangeDisplayGrid")
+
+[node name="MapClickBody" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MapClickBody"]
+shape = SubResource("WorldBoundaryShape3D_c7kij")
 
 [node name="MapQuad" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 6.5)
@@ -57,9 +65,9 @@ skeleton = NodePath("../..")
 script = ExtResource("3_7lps6")
 
 [node name="RangeDisplayGrid" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 6.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="MapCursor" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
 sorting_offset = 2.0
 pixel_size = 0.02
@@ -156,8 +164,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.451594, 0.892224, 0, -0.892224, 0.451594, 0, 14.6465, 0)
-light_energy = 0.6
-shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_m2r1f")

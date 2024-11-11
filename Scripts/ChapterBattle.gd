@@ -1,5 +1,5 @@
 class_name ChapterBattle
-extends Node
+extends Node3D
 
 # If this is non-null, all the enemies from this CHapterPlacements objects will be placed when the battle begins
 # Used to store placements in a file instead of a scene.
@@ -102,15 +102,24 @@ func _input(event: InputEvent) -> void:
 		move_cursor(Vector2i.DOWN)
 	elif event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			event = unit_grid.make_input_local(event)
-			var coords: Vector2i = round(event.position / TILE_SIZE)
-			if is_coords_in_bounds(coords):
-				# Press the tile if it is already hovered when clicking it
-				if coords == cursor_coords:
-					on_tile_pressed()
-				# Otherwise, hover the clicked tile
-				else:
-					move_cursor_to(coords)
+			var space_state := get_world_3d().direct_space_state
+			var cam := get_viewport().get_camera_3d()
+			
+			var origin = cam.project_ray_origin(event.position)
+			var end = origin + cam.project_ray_normal(event.position) * 1000
+			var query = PhysicsRayQueryParameters3D.create(origin, end)
+			
+			var result := space_state.intersect_ray(query)
+		
+			if result:
+				var coords: Vector2i = round(Vector2i(result.position.x + 0.5, result.position.z + 0.5))
+				if is_coords_in_bounds(coords):
+					# Press the tile if it is already hovered when clicking it
+					if coords == cursor_coords:
+						on_tile_pressed()
+					# Otherwise, hover the clicked tile
+					else:
+						move_cursor_to(coords)
 	elif event.is_action_pressed("Esc"):
 		if cursor_mode != CursorMode.SELECT:
 			change_cursor_mode(CursorMode.SELECT)
@@ -282,7 +291,7 @@ func move_cursor_to(coords: Vector2i):
 	cursor_coords.x = clamp(cursor_coords.x, 0, RETRO_WIDTH-1)
 	cursor_coords.y = clamp(cursor_coords.y, 0, RETRO_HEIGHT-1)
 	#print("moved cursor to ", cursor_coords)
-	map_cursor.position = Vector3(cursor_coords.x, 0, cursor_coords.y)
+	map_cursor.position = Vector3(cursor_coords.x, 0.025, cursor_coords.y)
 	
 	hovered_unit = unit_grid.get_unit_at(cursor_coords)
 	
@@ -520,9 +529,7 @@ func show_range(unit: PlacedUnit):
 	attackable_tiles.erase(unit.coords)
 	
 	for coords in moveable_tiles.keys():
-		var highlight: Node2D = MOVE_TILE_HIGHLIGHT.instantiate()
-		highlight.position = coords * TILE_SIZE
-		range_display_grid.add_child(highlight)
+		place_highlight(MOVE_TILE_HIGHLIGHT, coords)
 	
 	for coords in attackable_tiles.keys():
 		# Don't show the attack square if unit can move here, blue square should be shown instead
@@ -535,9 +542,7 @@ func show_range(unit: PlacedUnit):
 		if other_unit and other_unit.allied == unit.allied:
 			continue
 			
-		var highlight: Node2D = ATTACK_TILE_HIGHLIGHT.instantiate()
-		highlight.position = coords * TILE_SIZE
-		range_display_grid.add_child(highlight)
+		place_highlight(ATTACK_TILE_HIGHLIGHT, coords)
 		
 	for coords in supportable_tiles.keys():
 		# if player can move or attack here, don't show a support highlight
@@ -549,11 +554,13 @@ func show_range(unit: PlacedUnit):
 		# there has to be an ally here to show the supportable highlight
 		var other_unit: PlacedUnit = unit_grid.get_unit_at(coords)
 		if other_unit and other_unit.allied == unit.allied:
-			var highlight: Node2D = SUPPORT_TILE_HIGHLIGHT.instantiate()
-			highlight.position = coords * TILE_SIZE
-			range_display_grid.add_child(highlight)
+			place_highlight(SUPPORT_TILE_HIGHLIGHT, coords)
+
 		
-		
+func place_highlight(highlight_scene: PackedScene, coords: Vector2i):
+	var highlight: Node3D = highlight_scene.instantiate()
+	highlight.position = Vector3(coords.x, 0, coords.y);
+	range_display_grid.add_child(highlight)
 	
 # Mark how many moves remaining at the coords, and spreads movable/attackable range to adjacent tiles
 func spread_range(coords: Vector2i, unit: PlacedUnit, move_remaining: int):

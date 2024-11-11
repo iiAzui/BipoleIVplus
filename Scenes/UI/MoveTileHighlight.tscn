@@ -11,11 +11,13 @@ gradient = SubResource("Gradient_6u3wv")
 width = 50
 height = 50
 
-[node name="MoveTileHighlight" type="Sprite2D"]
+[node name="MoveTileHighlight" type="Sprite3D"]
 modulate = Color(0.140351, 0.616508, 0.873457, 0.858824)
-z_index = -1
+pixel_size = 0.0156
+axis = 1
 texture = ExtResource("1_8g71h")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-z_index = -1
+[node name="Sprite2D2" type="Sprite3D" parent="."]
+pixel_size = 0.0156
+axis = 1
 texture = SubResource("GradientTexture2D_21huf")

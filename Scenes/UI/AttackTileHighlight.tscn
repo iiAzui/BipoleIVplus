@@ -1,21 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://w1v6ips54x2h"]
+[gd_scene load_steps=2 format=3 uid="uid://brj7lqhi3tncg"]
 
-[ext_resource type="Texture2D" uid="uid://crnnp5oyg88ix" path="res://Sprites/UI/TileMoveHighlight.png" id="1_10kap"]
+[ext_resource type="PackedScene" uid="uid://dyjwfbpxkygh8" path="res://Scenes/UI/MoveTileHighlight.tscn" id="1_fka6k"]
 
-[sub_resource type="Gradient" id="Gradient_6u3wv"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(1, 1, 1, 0.341176)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_21huf"]
-gradient = SubResource("Gradient_6u3wv")
-width = 50
-height = 50
-
-[node name="AttackTileHighlight" type="Sprite2D"]
-modulate = Color(0.915065, 0.278476, 0.338848, 0.858824)
-z_index = -1
-texture = ExtResource("1_10kap")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-z_index = -1
-texture = SubResource("GradientTexture2D_21huf")
+[node name="AttackTileHighlight" instance=ExtResource("1_fka6k")]
+modulate = Color(0.925612, 0.254932, 0.287746, 0.858824)
