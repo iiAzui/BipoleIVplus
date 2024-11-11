@@ -2,9 +2,9 @@
 class_name PlacedUnit
 extends Node3D
 
-@onready var health_bar: TextureProgressBar = $HealthBar
-@onready var level_label: Label = $LevelBackground/LevelLabel
-@onready var sprite_3d: Sprite3D = $Sprite3D
+@export var health_bar: TextureProgressBar
+@export var level_label: Label
+@export var sprite_3d: Sprite3D
 
 
 const HEALTH_BAR_PLAYER = preload("res://Sprites/UI/HealthBarPlayer.tres")

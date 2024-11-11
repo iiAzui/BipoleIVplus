@@ -14,8 +14,11 @@ colors = PackedColorArray(0, 0, 0, 1, 0.0193997, 0.0907111, 0.122726, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_fyavo"]
 gradient = SubResource("Gradient_wwot8")
 
-[node name="PlacedUnit" type="Node3D"]
+[node name="PlacedUnit" type="Node3D" node_paths=PackedStringArray("health_bar", "level_label", "sprite_3d")]
 script = ExtResource("1_w2poa")
+health_bar = NodePath("SubViewport/Control/HealthBar")
+level_label = NodePath("SubViewport/Control/LevelBackground/LevelLabel")
+sprite_3d = NodePath("Sprite3D")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)

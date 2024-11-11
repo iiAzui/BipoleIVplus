@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d273u7ss6tahe"]
+[gd_scene load_steps=16 format=3 uid="uid://d273u7ss6tahe"]
 
 [ext_resource type="Script" path="res://Scripts/ChapterBattle.gd" id="1_4h1kv"]
 [ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter1.tres" id="2_5jyhv"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://c4ojdylljxwvf" path="res://Scenes/UI/HoritzontalUnitPreview.tscn" id="4_hpppt"]
 [ext_resource type="Script" path="res://Scripts/MoveSelectPanel.gd" id="5_4jc8v"]
 [ext_resource type="PackedScene" uid="uid://dhmvd1yco0p2l" path="res://Scenes/UI/MoveOption.tscn" id="6_8itd0"]
-[ext_resource type="PackedScene" uid="uid://da2b80p3dhtok" path="res://Scenes/UI/PlacedUnit.tscn" id="9_k2j8h"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_c7kij"]
 
@@ -78,9 +77,15 @@ render_priority = 1
 texture = ExtResource("4_23hxa")
 script = ExtResource("4_6ei7i")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="PerspectiveCamera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.267238, 0.96363, 0, -0.96363, 0.267238, 8.5, 20.55, 13.8)
 fov = 45.0
+
+[node name="OrthoCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.5, 20.55, 7.695)
+projection = 1
+fov = 45.0
+size = 17.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -158,9 +163,6 @@ offset_right = 350.0
 offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="PlacedUnit" parent="." instance=ExtResource("9_k2j8h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.451594, 0.892224, 0, -0.892224, 0.451594, 0, 14.6465, 0)

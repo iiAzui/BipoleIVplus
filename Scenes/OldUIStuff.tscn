@@ -1,14 +1,14 @@
 [gd_scene load_steps=39 format=3 uid="uid://cnnvgayg74dqn"]
 
-[ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_obxun"]
-[ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_ys1kv"]
-[ext_resource type="PackedScene" uid="uid://bh2c3tqr6mxhh" path="res://Scenes/ChapterBattle.tscn" id="3_17mib"]
-[ext_resource type="Texture2D" uid="uid://pvptlf4122jo" path="res://Setup/Box.png" id="3_xmniy"]
-[ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter1.tres" id="4_pxc12"]
-[ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/Overworld/selection.png" id="6_cen5d"]
-[ext_resource type="Texture2D" uid="uid://q6s74u6bktan" path="res://Setup/Outsidebox.png" id="7_72yba"]
-[ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Sprites/Portraits/proton_big.png" id="8_4skrp"]
-[ext_resource type="Texture2D" uid="uid://cg86jxdb07gtx" path="res://icon.svg" id="9_cf5ab"]
+[ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_he3e0"]
+[ext_resource type="Script" path="res://Scripts/MainScene.gd" id="2_kf0lt"]
+[ext_resource type="PackedScene" uid="uid://bh2c3tqr6mxhh" path="res://Scenes/2DChapterBattle.tscn" id="3_xloaw"]
+[ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter1.tres" id="4_f4exf"]
+[ext_resource type="Texture2D" uid="uid://q6s74u6bktan" path="res://Setup/Outsidebox.png" id="5_gas08"]
+[ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Sprites/Portraits/proton_big.png" id="6_6h22j"]
+[ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/Overworld/selection.png" id="7_xtpq6"]
+[ext_resource type="Texture2D" uid="uid://cg86jxdb07gtx" path="res://icon.svg" id="8_jabrj"]
+[ext_resource type="Texture2D" uid="uid://pvptlf4122jo" path="res://Setup/Box.png" id="9_rjy6h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3gblg"]
 font_color = Color(0, 0, 0, 1)
@@ -259,12 +259,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_ys1kv")
-script = ExtResource("1_obxun")
+theme = ExtResource("1_he3e0")
+script = ExtResource("2_kf0lt")
 
-[node name="ChapterBattle" parent="." instance=ExtResource("3_17mib")]
+[node name="ChapterBattle" parent="." instance=ExtResource("3_xloaw")]
 layout_mode = 1
-placements = ExtResource("4_pxc12")
+placements = ExtResource("4_f4exf")
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -278,17 +278,17 @@ scale = Vector2(1.3, 1.3)
 [node name="Background" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
 position = Vector2(-640, 116)
 scale = Vector2(4, 8.25)
-texture = ExtResource("7_72yba")
+texture = ExtResource("5_gas08")
 
 [node name="Por" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
 position = Vector2(-640, 40)
 scale = Vector2(0.096, 0.096)
-texture = ExtResource("8_4skrp")
+texture = ExtResource("6_6h22j")
 
 [node name="PorFrame" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
 position = Vector2(-640, 40)
 scale = Vector2(1.92, 1.92)
-texture = ExtResource("6_cen5d")
+texture = ExtResource("7_xtpq6")
 
 [node name="Name" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover"]
 offset_left = -696.0
@@ -353,7 +353,7 @@ vertical_alignment = 1
 [node name="Effect1" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
 position = Vector2(-688, 120)
 scale = Vector2(0.125, 0.125)
-texture = ExtResource("9_cf5ab")
+texture = ExtResource("8_jabrj")
 
 [node name="Label" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover/Effect1"]
 offset_left = -96.0
@@ -366,7 +366,7 @@ label_settings = SubResource("LabelSettings_b0mk2")
 [node name="Effect2" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
 position = Vector2(-664, 120)
 scale = Vector2(0.125, 0.125)
-texture = ExtResource("9_cf5ab")
+texture = ExtResource("8_jabrj")
 
 [node name="Label" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover/Effect2"]
 offset_left = -96.0
@@ -379,7 +379,7 @@ label_settings = SubResource("LabelSettings_b0mk2")
 [node name="Effect3" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
 position = Vector2(-640, 120)
 scale = Vector2(0.125, 0.125)
-texture = ExtResource("9_cf5ab")
+texture = ExtResource("8_jabrj")
 
 [node name="Label" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover/Effect3"]
 offset_left = -96.0
@@ -392,7 +392,7 @@ label_settings = SubResource("LabelSettings_b0mk2")
 [node name="Effect4" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
 position = Vector2(-616, 120)
 scale = Vector2(0.125, 0.125)
-texture = ExtResource("9_cf5ab")
+texture = ExtResource("8_jabrj")
 
 [node name="Label" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover/Effect4"]
 offset_left = -96.0
@@ -405,7 +405,7 @@ label_settings = SubResource("LabelSettings_b0mk2")
 [node name="Effect5" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftOnHover"]
 position = Vector2(-592, 120)
 scale = Vector2(0.125, 0.125)
-texture = ExtResource("9_cf5ab")
+texture = ExtResource("8_jabrj")
 
 [node name="Label" type="Label" parent="LeftPlayerRightEnemy/LeftOnHover/Effect5"]
 offset_left = -96.0
@@ -420,17 +420,17 @@ label_settings = SubResource("LabelSettings_b0mk2")
 [node name="Sprite2D" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftAS"]
 position = Vector2(-640, 80)
 scale = Vector2(4, 10.5)
-texture = ExtResource("7_72yba")
+texture = ExtResource("5_gas08")
 
 [node name="Por" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftAS"]
 position = Vector2(-640, 0)
 scale = Vector2(0.096, 0.096)
-texture = ExtResource("8_4skrp")
+texture = ExtResource("6_6h22j")
 
 [node name="PorFrame" type="Sprite2D" parent="LeftPlayerRightEnemy/LeftAS"]
 position = Vector2(-640, 0)
 scale = Vector2(1.92, 1.92)
-texture = ExtResource("6_cen5d")
+texture = ExtResource("7_xtpq6")
 
 [node name="Name" type="Label" parent="LeftPlayerRightEnemy/LeftAS"]
 offset_left = -696.0
@@ -593,7 +593,7 @@ visible = false
 [node name="Sprite2D" type="Sprite2D" parent="oldStuff/LeftBox"]
 position = Vector2(-640, -4.76837e-06)
 scale = Vector2(4, 15.5)
-texture = ExtResource("7_72yba")
+texture = ExtResource("5_gas08")
 
 [node name="C1" type="Label" parent="oldStuff/LeftBox"]
 offset_left = -696.0
@@ -607,7 +607,7 @@ autowrap_mode = 1
 [node name="Sprite2D" type="Sprite2D" parent="oldStuff/LeftBox/C1"]
 position = Vector2(24, -24)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("8_4skrp")
+texture = ExtResource("6_6h22j")
 
 [node name="A1" type="Label" parent="oldStuff/LeftBox/C1"]
 layout_mode = 0
@@ -645,7 +645,7 @@ autowrap_mode = 1
 [node name="Sprite2D" type="Sprite2D" parent="oldStuff/LeftBox/C2"]
 position = Vector2(24, -24)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("8_4skrp")
+texture = ExtResource("6_6h22j")
 
 [node name="A1" type="Label" parent="oldStuff/LeftBox/C2"]
 layout_mode = 0
@@ -683,7 +683,7 @@ autowrap_mode = 1
 [node name="Sprite2D" type="Sprite2D" parent="oldStuff/LeftBox/C3"]
 position = Vector2(24, -24)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("8_4skrp")
+texture = ExtResource("6_6h22j")
 
 [node name="A1" type="Label" parent="oldStuff/LeftBox/C3"]
 layout_mode = 0
@@ -977,18 +977,18 @@ label_settings = SubResource("LabelSettings_en13m")
 z_index = -1
 position = Vector2(328, 0)
 scale = Vector2(15.5, 20)
-texture = ExtResource("7_72yba")
+texture = ExtResource("5_gas08")
 
 [node name="Portrait" type="Sprite2D" parent="oldStuff/Texts/Outsidebox"]
 unique_name_in_owner = true
 position = Vector2(-8.77419, -8.8)
 scale = Vector2(0.0113548, 0.0088)
-texture = ExtResource("7_72yba")
+texture = ExtResource("5_gas08")
 
 [node name="PortraitBox" type="Sprite2D" parent="oldStuff/Texts/Outsidebox"]
 position = Vector2(-8.77419, -8.8)
 scale = Vector2(0.247742, 0.192)
-texture = ExtResource("6_cen5d")
+texture = ExtResource("7_xtpq6")
 
 [node name="SelectMenu" type="Node2D" parent="."]
 visible = false
@@ -1000,7 +1000,7 @@ modulate = Color(1, 1, 1, 0.666667)
 position = Vector2(-256, -2.14577e-06)
 rotation = 0.000798879
 scale = Vector2(16, 4)
-texture = ExtResource("7_72yba")
+texture = ExtResource("5_gas08")
 
 [node name="Label" type="Label" parent="SelectMenu"]
 offset_left = -376.0
@@ -1013,17 +1013,17 @@ label_settings = SubResource("LabelSettings_hddfu")
 [node name="Por" type="Sprite2D" parent="SelectMenu"]
 position = Vector2(-474.583, -26.4167)
 scale = Vector2(0.0558333, 0.0561667)
-texture = ExtResource("8_4skrp")
+texture = ExtResource("6_6h22j")
 
 [node name="PorOutline" type="Sprite2D" parent="SelectMenu"]
 position = Vector2(-474.5, -26.875)
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("6_cen5d")
+texture = ExtResource("7_xtpq6")
 
 [node name="Sprite2D" type="Sprite2D" parent="SelectMenu"]
 position = Vector2(-256, 3.8147e-06)
 scale = Vector2(0.780488, 0.258065)
-texture = ExtResource("3_xmniy")
+texture = ExtResource("9_rjy6h")
 
 [node name="HP" type="Label" parent="SelectMenu"]
 offset_left = -441.833
