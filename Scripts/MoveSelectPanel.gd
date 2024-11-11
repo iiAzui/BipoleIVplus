@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	pass
 
 func show_selected_move(index: int):
-	if selected_option:
+	if selected_option and is_instance_valid(selected_option):
 		selected_option.show_unselected()
 		
 	if index < 0:
