@@ -87,6 +87,8 @@ func _ready() -> void:
 	place_player_units()
 	place_enemy_units()
 	change_cursor_mode(CursorMode.SELECT)
+	allied_unit_preview.display_unit(null)
+	enemy_unit_preview.display_unit(null)
 	move_cursor_to(Vector2i.ZERO)
 	
 	#call_deferred("grab_focus")
@@ -185,6 +187,26 @@ func on_tile_pressed():
 	elif cursor_mode == CursorMode.ATTACKING:
 		if not move_selected:
 			auto_select_move()
+			
+		if not (cursor_coords in attackable_tiles) and not (cursor_coords in supportable_tiles):
+			move_cursor_to(unit_selected.coords)
+			hovered_unit = unit_selected
+			change_cursor_mode(CursorMode.SELECT)
+			show_range(hovered_unit)
+			return
+			
+		# If there isn't a unit here, return
+		if not hovered_unit:
+			move_cursor_to(unit_selected.coords)
+			hovered_unit = unit_selected
+			change_cursor_mode(CursorMode.SELECT)
+			show_range(hovered_unit)
+			return
+			
+		if hovered_unit.allied != (move_selected.move_type == "Support"):
+			change_cursor_mode(CursorMode.SELECT)
+			show_range(hovered_unit)
+			return
 		
 		if move_selected:
 			## TODO: implement attacking, and selecting move for that matter
@@ -259,8 +281,7 @@ func move_cursor_to(coords: Vector2i):
 		print("hover range: ", displayed_max_attack_range - hovered_tiles_left)
 	
 	if cursor_mode == CursorMode.SELECT:
-		allied_unit_preview.display_unit(hovered_unit if hovered_unit and hovered_unit.allied else null)
-		enemy_unit_preview.display_unit(hovered_unit if hovered_unit and !hovered_unit.allied else null)
+		allied_unit_preview.display_unit(hovered_unit)
 		show_range(hovered_unit)
 	elif cursor_mode == CursorMode.MOVING or cursor_mode == CursorMode.ATTACKING:
 		# When in attacking or moving, display any enemies hovered over on right, 
@@ -325,22 +346,7 @@ func change_cursor_mode(mode: CursorMode):
 	if move_path_line: move_path_line.visible = cursor_mode == CursorMode.MOVING
 	if attack_path_line: attack_path_line.visible = cursor_mode == CursorMode.ATTACKING
 	
-func auto_select_move():
-	if not (cursor_coords in attackable_tiles) and not (cursor_coords in supportable_tiles):
-		move_cursor_to(unit_selected.coords)
-		hovered_unit = unit_selected
-		change_cursor_mode(CursorMode.SELECT)
-		show_range(hovered_unit)
-		return
-		
-	# If there isn't a unit here, return
-	if not hovered_unit:
-		move_cursor_to(unit_selected.coords)
-		hovered_unit = unit_selected
-		change_cursor_mode(CursorMode.SELECT)
-		show_range(hovered_unit)
-		return
-			
+func auto_select_move():	
 	# Loop through the moves until one can hit the target unit
 	var attack_range_remaining: int = attackable_tiles[cursor_coords] if cursor_coords in attackable_tiles else -1
 	var support_range_remaining: int = supportable_tiles[cursor_coords] if cursor_coords in supportable_tiles else -1
@@ -367,12 +373,6 @@ func auto_select_move():
 		# return here and wait for another input for confirmation to use the auto selected skill.
 		return
 		
-	 #If a skill is selected but the unit cannot be targeted by the selected move, go back to select mode
-	#elif hovered_unit.allied != (move_selected.move_type == "Support"):
-		#change_cursor_mode(CursorMode.SELECT)
-		#show_range(hovered_unit)
-		#return
-	
 func select_move(move_index: int):
 	if move_index < 0:
 		move_selected_index = -1;
@@ -570,7 +570,7 @@ func show_range(unit: PlacedUnit):
 			
 		# there has to be an ally here to show the supportable highlight
 		var other_unit: PlacedUnit = unit_grid.get_unit_at(coords)
-		if other_unit and other_unit.allied == unit.allied:
+		if not other_unit or other_unit.allied == unit.allied:
 			place_highlight(SUPPORT_TILE_HIGHLIGHT, coords)
 
 		
