@@ -111,7 +111,7 @@ layout_mode = 2
 [node name="StatsVBoxContainer" parent="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer" index="1"]
 layout_direction = 2
 
-[node name="HealthBar" parent="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="2"]
+[node name="HealthBar" parent="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="3"]
 fill_mode = 0
 
 [node name="EXPBar" parent="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer" index="2"]

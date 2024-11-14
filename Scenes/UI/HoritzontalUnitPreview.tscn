@@ -16,7 +16,7 @@ border_width_right = 8
 border_width_bottom = 8
 border_color = Color(0.41598, 0.41598, 0.41598, 1)
 
-[node name="HorizontalUnitPreview" type="PanelContainer" node_paths=PackedStringArray("display_name_label", "portrait_texture_rect", "health_label", "health_bar", "level_label", "exp_label", "exp_bar", "atk_label", "def_label", "res_label", "spd_label", "agl_label", "acr_label")]
+[node name="HorizontalUnitPreview" type="PanelContainer" node_paths=PackedStringArray("display_name_label", "portrait_texture_rect", "health_label", "health_bar", "health_before_damage_bar", "level_label", "exp_label", "exp_bar", "atk_label", "def_label", "res_label", "spd_label", "agl_label", "acr_label")]
 offset_right = 368.0
 offset_bottom = 182.0
 theme = ExtResource("1_gb0mt")
@@ -25,6 +25,7 @@ display_name_label = NodePath("MarginContainer/HBoxContainer/PortraitVBoxContain
 portrait_texture_rect = NodePath("MarginContainer/HBoxContainer/PortraitVBoxContainer/PortraitPanelContainer/TextureRect")
 health_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/HealthLabel")
 health_bar = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/HealthBar")
+health_before_damage_bar = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/HealthBeforeDamageBar")
 level_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/LevelLabel")
 exp_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/EXPLabel")
 exp_bar = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/EXPBar")
@@ -96,7 +97,8 @@ theme_override_font_sizes/font_size = 20
 text = "75/100"
 horizontal_alignment = 2
 
-[node name="HealthBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer"]
+[node name="HealthBeforeDamageBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer"]
+editor_description = "Drawn underneath (before) the health bar to show the current HP during attack previews."
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_vertical = 8
@@ -108,6 +110,23 @@ stretch_margin_top = 3
 stretch_margin_right = 3
 stretch_margin_bottom = 3
 texture_under = ExtResource("4_sdcyb")
+texture_over = ExtResource("5_wc2m6")
+texture_progress = ExtResource("6_ifilo")
+tint_progress = Color(1, 1, 1, 0.501961)
+
+[node name="HealthBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer"]
+editor_description = "Shows health.
+During attack damage previews, shows health after being (possibly) damaged."
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_vertical = 8
+value = 60.0
+fill_mode = 1
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
 texture_over = ExtResource("5_wc2m6")
 texture_progress = ExtResource("6_ifilo")
 

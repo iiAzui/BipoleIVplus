@@ -17,6 +17,10 @@ extends Resource
 # Electric <-> Shadow
 @export_enum("None", "Fire", "Water", "Ice", "Bio", "Electric", "Shadow") var element: String = "None"
 
+const elemental_chart = {
+	"Fire": "Ice"
+}
+
 # Extra damage - seperate from the elmenetal system.
 # Extra damage values will override what's in the elemental matchup table
 # Trait to deal extra damage to
@@ -24,3 +28,19 @@ extends Resource
 @export var extra_damage_trait: String
 # Amount of extra damage to deal
 @export var extra_multiplier: float
+
+func get_damage_dealt(attacker: Unit, defender: Unit) -> int:
+	var def_or_res = defender.defense if damage_type == "Physical" else defender.resistance
+	var extra_mul = 1.0
+	# Explicitly defined extra damage
+	if extra_damage_trait in defender.traits:
+		extra_mul = extra_multiplier
+	# If not applicable, fallback to the type advantage table
+	elif move_type in elemental_chart and elemental_chart[move_type] in defender.traits:
+		extra_mul = 1.3
+		
+	var dmg: int = round((float(attacker.attack) * power - float(def_or_res) / 2.0) * extra_mul)
+		
+	print(attacker.character.display_name, " will deal ", dmg, " damage to ", defender.character.display_name)
+		
+	return dmg

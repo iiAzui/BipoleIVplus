@@ -222,6 +222,7 @@ func on_tile_pressed():
 				change_cursor_mode(CursorMode.SELECT)
 				return
 			else:
+				display_hovered_skill_target()
 				# if a move was selected, don't immediately use the skill. 
 				# return here and wait for another input for confirmation to use the auto selected skill.
 				return
@@ -308,7 +309,9 @@ func move_cursor_to(coords: Vector2i):
 	elif cursor_mode == CursorMode.MOVING or cursor_mode == CursorMode.ATTACKING:
 		# When in attacking or moving, display any enemies hovered over on right, 
 		# while moving/attacking unit is still displayed on left.
-		if hovered_unit:
+		if move_selected:
+			display_hovered_skill_target()
+		elif hovered_unit:
 			enemy_unit_preview.display_unit(hovered_unit if hovered_unit and !hovered_unit.allied else null)
 		
 		var valid_range: Dictionary = moveable_tiles if cursor_mode == CursorMode.MOVING else skill_range_tiles
@@ -335,6 +338,14 @@ func move_cursor_to(coords: Vector2i):
 		else:
 			recalculate_path_to(cursor_coords)
 
+func display_hovered_skill_target():
+	if hovered_unit and move_selected and hovered_unit.allied == (move_selected.move_type == "Support"):
+		enemy_unit_preview.display_unit(hovered_unit)
+		if move_selected:
+			enemy_unit_preview.display_damage_preview(hovered_unit, move_selected.get_damage_dealt(unit_selected.unit, hovered_unit.unit))
+	else:
+		enemy_unit_preview.display_unit(null)
+
 func change_cursor_mode(mode: CursorMode):
 	cursor_mode = mode
 	if mode == CursorMode.SELECT:
@@ -351,6 +362,7 @@ func change_cursor_mode(mode: CursorMode):
 		map_cursor.modulate = map_cursor.attack_color
 		# TODO: select by arrow keys, change selection by scroll wheel, may want to select via a menu
 		start_path()
+		display_hovered_skill_target()
 		move_select_panel.display_moves(unit_selected)
 		
 	if move_path_line: move_path_line.visible = cursor_mode == CursorMode.MOVING

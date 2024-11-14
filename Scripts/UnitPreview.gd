@@ -5,6 +5,7 @@ extends PanelContainer
 @export var portrait_texture_rect: TextureRect
 @export var health_label: Label
 @export var health_bar: TextureProgressBar
+@export var health_before_damage_bar: TextureProgressBar
 @export var level_label: Label
 @export var exp_label: Label
 @export var exp_bar: TextureProgressBar
@@ -37,6 +38,10 @@ func display_unit(placed_unit: PlacedUnit):
 	health_bar.value = unit.hp
 	health_bar.texture_progress = HEALTH_BAR_PLAYER if placed_unit.allied else HEALTH_BAR_ENEMY
 	
+	health_before_damage_bar.max_value = unit.max_hp
+	health_before_damage_bar.value = unit.hp
+	health_before_damage_bar.texture_progress = HEALTH_BAR_PLAYER if placed_unit.allied else HEALTH_BAR_ENEMY
+	
 	level_label.text = "Lv %d" % unit.level
 	const xp_until_next: int = 100 # might change in non retro mode, not sure
 	exp_label.text = "%d/%d EXP" % [unit.exp, xp_until_next]
@@ -49,3 +54,7 @@ func display_unit(placed_unit: PlacedUnit):
 	spd_label.text = str(unit.speed)
 	agl_label.text = str(unit.agility)
 	acr_label.text = str(unit.accuracy)
+	
+func display_damage_preview(placed_unit: PlacedUnit, incoming_damage: int):
+	health_before_damage_bar.value = placed_unit.unit.hp
+	health_bar.value = max(0, placed_unit.unit.hp - incoming_damage)
