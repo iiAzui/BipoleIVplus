@@ -93,7 +93,7 @@ func _ready() -> void:
 	
 	#call_deferred("grab_focus")
 
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Left"):
 		move_cursor(Vector2i.LEFT)
 	elif event.is_action_pressed("Right"):
@@ -400,6 +400,18 @@ func select_move(move_index: int):
 	
 	show_range(unit_selected) # update range to not include move range in case havent moved yet
 	move_select_panel.show_move(move_selected)
+	
+func next_move():
+	move_selected_index += 1
+	if move_selected_index >= len(unit_selected.unit.moves):
+		move_selected_index = 0
+	elif move_selected_index < 0:
+		move_selected_index = len(unit_selected.unit.moves) - 1
+		
+	select_move(move_selected_index)
+	
+func prev_move():
+	pass
 	
 func start_path():
 	current_path.clear()
