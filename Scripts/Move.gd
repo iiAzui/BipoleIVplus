@@ -41,6 +41,12 @@ func get_damage_dealt(attacker: Unit, defender: Unit) -> int:
 		
 	var dmg: int = round((float(attacker.attack) * power - float(def_or_res) / 2.0) * extra_mul)
 		
-	print(attacker.character.display_name, " will deal ", dmg, " damage to ", defender.character.display_name)
+	print(attacker.character.display_name, " will deal ", dmg, " damage to ", defender.character.display_name, " with ", display_name)
 		
 	return dmg
+
+# Get the percentage that this attack will hit the target.
+func get_hit_chance(attacker: Unit, defender: Unit) -> float:
+	var chance: float = min(10.0, float(attacker.accuracy) * hit - float(defender.agility)) / 10.0
+	print(attacker.character.display_name, " has a ", chance*100, "% chance to hit ", defender.character.display_name, " with ", display_name)
+	return chance

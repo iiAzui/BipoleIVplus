@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d273u7ss6tahe"]
+[gd_scene load_steps=15 format=3 uid="uid://d273u7ss6tahe"]
 
 [ext_resource type="Script" path="res://Scripts/ChapterBattle.gd" id="1_4h1kv"]
 [ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter1.tres" id="2_5jyhv"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/Overworld/selection.png" id="4_23hxa"]
 [ext_resource type="PackedScene" uid="uid://c4ojdylljxwvf" path="res://Scenes/UI/HoritzontalUnitPreview.tscn" id="4_hpppt"]
 [ext_resource type="Script" path="res://Scripts/MoveSelectPanel.gd" id="5_4jc8v"]
-[ext_resource type="PackedScene" uid="uid://dhmvd1yco0p2l" path="res://Scenes/UI/MoveOption.tscn" id="6_8itd0"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_c7kij"]
 
@@ -39,9 +38,9 @@ ambient_light_energy = 0.75
 [node name="3DChapterBattle" type="Node3D" node_paths=PackedStringArray("allied_unit_preview", "enemy_unit_preview", "move_select_panel", "unit_grid", "map_cursor", "range_display_grid")]
 script = ExtResource("1_4h1kv")
 placements = ExtResource("2_5jyhv")
-allied_unit_preview = NodePath("CanvasLayer/UnitPreviews/AlliedUnitPreview")
-enemy_unit_preview = NodePath("CanvasLayer/UnitPreviews/EnemyUnitPreview")
-move_select_panel = NodePath("CanvasLayer/MoveSelectPanel")
+allied_unit_preview = NodePath("CanvasLayer/Screen/AlliedUnitPreview")
+enemy_unit_preview = NodePath("CanvasLayer/Screen/EnemyUnitPreview")
+move_select_panel = NodePath("CanvasLayer/Screen/MoveSelectPanel")
 unit_grid = NodePath("UnitGrid")
 map_cursor = NodePath("MapCursor")
 range_display_grid = NodePath("RangeDisplayGrid")
@@ -89,59 +88,7 @@ size = 17.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="UnitPreviews" type="HBoxContainer" parent="CanvasLayer"]
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -182.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/separation = 32
-alignment = 1
-
-[node name="AlliedUnitPreview" parent="CanvasLayer/UnitPreviews" instance=ExtResource("4_hpppt")]
-layout_mode = 2
-
-[node name="EnemyUnitPreview" parent="CanvasLayer/UnitPreviews" instance=ExtResource("4_hpppt")]
-z_index = 4
-layout_direction = 3
-layout_mode = 2
-
-[node name="StatsVBoxContainer" parent="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer" index="1"]
-layout_direction = 2
-
-[node name="HealthBar" parent="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="3"]
-fill_mode = 0
-
-[node name="EXPBar" parent="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer" index="2"]
-fill_mode = 0
-
-[node name="MoveSelectPanel" type="PanelContainer" parent="CanvasLayer" node_paths=PackedStringArray("moves_container")]
-custom_minimum_size = Vector2(250, 500)
-offset_left = 43.0
-offset_top = 557.0
-offset_right = 293.0
-offset_bottom = 1057.0
-script = ExtResource("5_4jc8v")
-moves_container = NodePath("MarginContainer/VBoxContainer")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MoveSelectPanel"]
-layout_mode = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MoveSelectPanel/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="MoveOption" parent="CanvasLayer/MoveSelectPanel/MarginContainer/VBoxContainer" instance=ExtResource("6_8itd0")]
-layout_mode = 2
-
-[node name="AttackWindow" type="Control" parent="CanvasLayer"]
-visible = false
+[node name="Screen" type="Control" parent="CanvasLayer"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -149,7 +96,88 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/AttackWindow"]
+[node name="AlliedUnitPreview" parent="CanvasLayer/Screen" instance=ExtResource("4_hpppt")]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_top = -251.0
+offset_right = 720.0
+offset_bottom = -32.0
+grow_vertical = 0
+
+[node name="EnemyUnitPreview" parent="CanvasLayer/Screen" instance=ExtResource("4_hpppt")]
+z_index = 4
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -720.0
+offset_top = -251.0
+offset_right = -96.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="MarginContainer" parent="CanvasLayer/Screen/EnemyUnitPreview" index="0"]
+layout_direction = 3
+
+[node name="StatsVBoxContainer" parent="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer" index="1"]
+layout_direction = 2
+
+[node name="HealthBar" parent="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="3"]
+fill_mode = 0
+
+[node name="EXPBar" parent="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer" index="2"]
+fill_mode = 0
+
+[node name="MoveSelectPanel" type="PanelContainer" parent="CanvasLayer/Screen" node_paths=PackedStringArray("move_name_label")]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 96.0
+offset_top = 188.0
+offset_right = 596.0
+offset_bottom = 268.0
+grow_vertical = 2
+script = ExtResource("5_4jc8v")
+move_name_label = NodePath("MoveNameLabel")
+
+[node name="LeftButton" type="Button" parent="CanvasLayer/Screen/MoveSelectPanel"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 32
+text = "<"
+
+[node name="MoveNameLabel" type="Label" parent="CanvasLayer/Screen/MoveSelectPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+text = "MoveName"
+
+[node name="RightButton" type="Button" parent="CanvasLayer/Screen/MoveSelectPanel"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 32
+text = ">
+"
+
+[node name="AttackWindow" type="Control" parent="CanvasLayer/Screen"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Screen/AttackWindow"]
 custom_minimum_size = Vector2(700, 500)
 layout_mode = 1
 anchors_preset = 8
@@ -170,10 +198,10 @@ transform = Transform3D(1, 0, 0, 0, 0.451594, 0.892224, 0, -0.892224, 0.451594, 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_m2r1f")
 
-[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview"]
-[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/ATKStatDisplay"]
-[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/DEFStatDisplay"]
-[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/RESStatDisplay"]
-[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/SPDStatDisplay"]
-[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/AGLStatDisplay"]
-[editable path="CanvasLayer/UnitPreviews/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/ACRStatDisplay"]
+[editable path="CanvasLayer/Screen/EnemyUnitPreview"]
+[editable path="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/ATKStatDisplay"]
+[editable path="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/DEFStatDisplay"]
+[editable path="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/RESStatDisplay"]
+[editable path="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/SPDStatDisplay"]
+[editable path="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/AGLStatDisplay"]
+[editable path="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/ACRStatDisplay"]

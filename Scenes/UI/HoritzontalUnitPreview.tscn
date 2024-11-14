@@ -17,8 +17,8 @@ border_width_bottom = 8
 border_color = Color(0.41598, 0.41598, 0.41598, 1)
 
 [node name="HorizontalUnitPreview" type="PanelContainer" node_paths=PackedStringArray("display_name_label", "portrait_texture_rect", "health_label", "health_bar", "health_before_damage_bar", "level_label", "exp_label", "exp_bar", "atk_label", "def_label", "res_label", "spd_label", "agl_label", "acr_label")]
-offset_right = 368.0
-offset_bottom = 182.0
+offset_right = 608.0
+offset_bottom = 219.0
 theme = ExtResource("1_gb0mt")
 script = ExtResource("2_6y0t3")
 display_name_label = NodePath("MarginContainer/HBoxContainer/PortraitVBoxContainer/DisplayNameLabel")
@@ -45,7 +45,7 @@ theme_override_constants/margin_bottom = 8
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 8
+theme_override_constants/separation = 32
 alignment = 2
 
 [node name="PortraitVBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
@@ -56,14 +56,14 @@ custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 28
 text = "Proton
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PortraitPanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer/PortraitVBoxContainer"]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
@@ -78,7 +78,7 @@ expand_mode = 1
 layout_mode = 2
 
 [node name="HealthContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/StatsVBoxContainer"]
-custom_minimum_size = Vector2(300, 45)
+custom_minimum_size = Vector2(400, 60)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -99,7 +99,7 @@ horizontal_alignment = 2
 
 [node name="HealthBeforeDamageBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer"]
 editor_description = "Drawn underneath (before) the health bar to show the current HP during attack previews."
-custom_minimum_size = Vector2(0, 20)
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 size_flags_vertical = 8
 value = 75.0
@@ -117,7 +117,7 @@ tint_progress = Color(1, 1, 1, 0.501961)
 [node name="HealthBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer"]
 editor_description = "Shows health.
 During attack damage previews, shows health after being (possibly) damaged."
-custom_minimum_size = Vector2(0, 20)
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 size_flags_vertical = 8
 value = 60.0
@@ -131,9 +131,9 @@ texture_over = ExtResource("5_wc2m6")
 texture_progress = ExtResource("6_ifilo")
 
 [node name="LevelContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/StatsVBoxContainer"]
-custom_minimum_size = Vector2(300, 35)
+custom_minimum_size = Vector2(380, 45)
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 8
 size_flags_vertical = 4
 
 [node name="LevelLabel" type="Label" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer"]
@@ -148,7 +148,7 @@ text = "25/100 EXP"
 horizontal_alignment = 2
 
 [node name="EXPBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer"]
-custom_minimum_size = Vector2(0, 12)
+custom_minimum_size = Vector2(0, 15)
 layout_mode = 2
 size_flags_vertical = 8
 value = 25.0

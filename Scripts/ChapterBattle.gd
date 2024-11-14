@@ -183,64 +183,20 @@ func on_tile_pressed():
 		change_cursor_mode(CursorMode.SELECT)
 		show_range(hovered_unit)
 	elif cursor_mode == CursorMode.ATTACKING:
-		# If not in attackable or supportable range, return
-		if not (cursor_coords in attackable_tiles) and not (cursor_coords in supportable_tiles):
-			move_cursor_to(unit_selected.coords)
-			hovered_unit = unit_selected
-			change_cursor_mode(CursorMode.SELECT)
-			show_range(hovered_unit)
-			return
-			
-		# If there isn't a unit here, return
-		if not hovered_unit:
-			move_cursor_to(unit_selected.coords)
-			hovered_unit = unit_selected
-			change_cursor_mode(CursorMode.SELECT)
-			show_range(hovered_unit)
-			return
-			
-		# If no skill is selected, select the first skill that can hit the target
 		if not move_selected:
-			# Loop through the moves until one can hit the target unit
-			var attack_range_remaining: int = attackable_tiles[cursor_coords] if cursor_coords in attackable_tiles else -1
-			var support_range_remaining: int = supportable_tiles[cursor_coords] if cursor_coords in supportable_tiles else -1
-			
-			for i in len(unit_selected.unit.moves):
-				var move: Move = unit_selected.unit.moves[i]
-				var range_remaining: int = attack_range_remaining if move.move_type == "Attack" else support_range_remaining
-				var range_required: int = displayed_max_attack_range - range_remaining + 1
-				print(move.display_name, " range required: ", range_required)
-				if move.min_range <= range_required and move.max_range >= range_required:
-					# select this move
-					select_move(i)
-					break
-					
-			# if a suitable skill was not found to hit this tile, return and move cursor back to selected unit
-			if not move_selected:
-				hovered_unit = unit_selected
-				move_cursor_to(unit_selected.coords)
-				change_cursor_mode(CursorMode.SELECT)
-				return
-			else:
-				display_hovered_skill_target()
-				# if a move was selected, don't immediately use the skill. 
-				# return here and wait for another input for confirmation to use the auto selected skill.
-				return
-			
-		# If a skill is selected but the unit cannot be targeted by the selected move, go back to select mode
-		elif hovered_unit.allied != (move_selected.move_type == "Support"):
+			auto_select_move()
+		
+		if move_selected:
+			## TODO: implement attacking, and selecting move for that matter
+			unit_selected.moved = true # Cannot move after attack
+			unit_selected.attacked = true
+			print("used skill ", move_selected.display_name)
 			change_cursor_mode(CursorMode.SELECT)
-			show_range(hovered_unit)
-			return
-			
-		## TODO: implement attacking, and selecting move for that matter
-		unit_selected.moved = true # Cannot move after attack
-		unit_selected.attacked = true
-		print("used skill ", move_selected.display_name)
-		change_cursor_mode(CursorMode.SELECT)
-		hovered_unit = unit_selected
-		select_move(-1)
-		show_range(unit_selected)
+			hovered_unit = unit_selected
+			select_move(-1)
+			show_range(unit_selected)
+		else:
+			printerr("a move should be selected while in attack mode! there is none selected")
 		
 func place_player_units():
 	if not SaveData.save:
@@ -343,6 +299,7 @@ func display_hovered_skill_target():
 		enemy_unit_preview.display_unit(hovered_unit)
 		if move_selected:
 			enemy_unit_preview.display_damage_preview(hovered_unit, move_selected.get_damage_dealt(unit_selected.unit, hovered_unit.unit))
+			move_selected.get_hit_chance(unit_selected.unit, hovered_unit.unit)
 	else:
 		enemy_unit_preview.display_unit(null)
 
@@ -353,26 +310,74 @@ func change_cursor_mode(mode: CursorMode):
 		select_move(-1)
 		end_move_path()
 		unit_selected = null
-		move_select_panel.display_moves(null)
+		move_select_panel.show_move(null)
 	elif mode == CursorMode.MOVING:
 		map_cursor.modulate = map_cursor.move_color
 		start_path()
-		move_select_panel.display_moves(null)
+		move_select_panel.show_move(null)
 	elif mode == CursorMode.ATTACKING:
 		map_cursor.modulate = map_cursor.attack_color
 		# TODO: select by arrow keys, change selection by scroll wheel, may want to select via a menu
 		start_path()
+		select_move(0)
 		display_hovered_skill_target()
-		move_select_panel.display_moves(unit_selected)
 		
 	if move_path_line: move_path_line.visible = cursor_mode == CursorMode.MOVING
 	if attack_path_line: attack_path_line.visible = cursor_mode == CursorMode.ATTACKING
+	
+func auto_select_move():
+	if not (cursor_coords in attackable_tiles) and not (cursor_coords in supportable_tiles):
+		move_cursor_to(unit_selected.coords)
+		hovered_unit = unit_selected
+		change_cursor_mode(CursorMode.SELECT)
+		show_range(hovered_unit)
+		return
+		
+	# If there isn't a unit here, return
+	if not hovered_unit:
+		move_cursor_to(unit_selected.coords)
+		hovered_unit = unit_selected
+		change_cursor_mode(CursorMode.SELECT)
+		show_range(hovered_unit)
+		return
+			
+	# Loop through the moves until one can hit the target unit
+	var attack_range_remaining: int = attackable_tiles[cursor_coords] if cursor_coords in attackable_tiles else -1
+	var support_range_remaining: int = supportable_tiles[cursor_coords] if cursor_coords in supportable_tiles else -1
+	
+	for i in len(unit_selected.unit.moves):
+		var move: Move = unit_selected.unit.moves[i]
+		var range_remaining: int = attack_range_remaining if move.move_type == "Attack" else support_range_remaining
+		var range_required: int = displayed_max_attack_range - range_remaining + 1
+		print(move.display_name, " range required: ", range_required)
+		if move.min_range <= range_required and move.max_range >= range_required:
+			# select this move
+			select_move(i)
+			break
+			
+	# if a suitable skill was not found to hit this tile, return and move cursor back to selected unit
+	if not move_selected:
+		hovered_unit = unit_selected
+		move_cursor_to(unit_selected.coords)
+		change_cursor_mode(CursorMode.SELECT)
+		return
+	else:
+		display_hovered_skill_target()
+		# if a move was selected, don't immediately use the skill. 
+		# return here and wait for another input for confirmation to use the auto selected skill.
+		return
+		
+	 #If a skill is selected but the unit cannot be targeted by the selected move, go back to select mode
+	#elif hovered_unit.allied != (move_selected.move_type == "Support"):
+		#change_cursor_mode(CursorMode.SELECT)
+		#show_range(hovered_unit)
+		#return
 	
 func select_move(move_index: int):
 	if move_index < 0:
 		move_selected_index = -1;
 		move_selected = null
-		move_select_panel.show_selected_move(-1)
+		move_select_panel.show_move(null)
 		return
 		
 	if not unit_selected:
@@ -394,7 +399,7 @@ func select_move(move_index: int):
 	print("selected move ", move_selected.display_name, " (slot ", move_index, ")")
 	
 	show_range(unit_selected) # update range to not include move range in case havent moved yet
-	move_select_panel.show_selected_move(move_selected_index)
+	move_select_panel.show_move(move_selected)
 	
 func start_path():
 	current_path.clear()
