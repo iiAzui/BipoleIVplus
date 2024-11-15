@@ -242,22 +242,25 @@ func attack_pressed():
 		unit_selected.moved = true # Cannot move after attack
 		unit_selected.attacked = true
 		print("used skill ", move_selected.display_name)
-		change_cursor_mode(CursorMode.SELECT)
+		
 		hovered_unit = unit_selected
 		select_move(-1)
+		change_cursor_mode(CursorMode.SELECT)
+		show_range(null)
+		map_cursor.modulate = Color.TRANSPARENT
 		
 		# Skill
-		await attack_animation(attacker, defender, move)
-		
+		var skill_damage: int = move.get_damage_dealt(attacker.unit, defender.unit)
+		await attack_animation(attacker, defender, move, skill_damage)
 		
 		show_range(unit_selected)
 	else:
 		printerr("a move should be selected while in attack mode! there is none selected")
 		
-func attack_animation(attacker: PlacedUnit, target: PlacedUnit, move: Move):
+func attack_animation(attacker: PlacedUnit, target: PlacedUnit, move: Move, damage: int):
 	battle_camera.combat_view(attacker, target)
 	await get_tree().create_timer(0.25).timeout
-	await attacker.attack_animation(target, move)
+	await attacker.attack_animation(target, move, damage)
 	await get_tree().create_timer(0.25).timeout
 	battle_camera.standard_view()
 		

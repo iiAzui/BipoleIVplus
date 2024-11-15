@@ -6,9 +6,9 @@ extends Node3D
 @export var level_label: Label
 @export var sprite_3d: Sprite3D
 
-
 const HEALTH_BAR_PLAYER = preload("res://Sprites/UI/HealthBarPlayer.tres")
 const HEALTH_BAR_ENEMY = preload("res://Sprites/UI/HealthBarEnemy.tres")
+const DAMAGE_POPUP = preload("res://Scenes/UI/DamagePopup.tscn")
 
 # True if in the player's party, false if this is an enemy unit fighting the player
 var allied: bool = false
@@ -55,15 +55,19 @@ func update_unit_visual():
 			level_label.text = str(unit.level)
 
 # if move is null this is probably a generic attack (counter attack / follow up)
-func attack_animation(target: PlacedUnit, move: Move):
+func attack_animation(target: PlacedUnit, move: Move, damage: int):
 	var start_point: Vector3 = global_position
 	var attack_point: Vector3 = lerp(global_position, target.global_position, 0.5)
 	await get_tree().create_tween().tween_property(self, "global_position", attack_point, 0.125).finished
-	target.damage_animation()
+	target.damage_animation(damage)
 	await get_tree().create_timer(0.125).timeout
 	await get_tree().create_tween().tween_property(self, "global_position", start_point, 0.25).finished
 
-func damage_animation():
+func damage_animation(damage: int):
+	var popup: DamagePopup = DAMAGE_POPUP.instantiate() as DamagePopup
+	add_child(popup)
+	popup.global_position = global_position
+	popup.animate(self, damage)
 	await get_tree().create_tween().tween_property(sprite_3d, "modulate", Color(1, 0.5, 0.5), 0.125).finished
 	await get_tree().create_timer(0.125).timeout
 	await get_tree().create_tween().tween_property(sprite_3d, "modulate", Color.WHITE, 0.25).finished
