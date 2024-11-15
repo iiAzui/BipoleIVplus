@@ -251,7 +251,12 @@ func attack_pressed():
 		
 		# Skill
 		var skill_damage: int = move.get_damage_dealt(attacker.unit, defender.unit)
+		defender.unit.take_damage(skill_damage)
 		await attack_animation(attacker, defender, move, skill_damage)
+		
+		if defender.unit.hp == 0:
+			unit_grid.grid.erase(defender.coords)
+			defender.queue_free()
 		
 		change_cursor_mode(CursorMode.SELECT)
 		show_range(unit_selected)

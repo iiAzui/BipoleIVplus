@@ -67,6 +67,12 @@ func damage_animation(damage: int):
 	var popup: DamagePopup = DAMAGE_POPUP.instantiate() as DamagePopup
 	add_child(popup)
 	popup.animate(self, damage)
+	# just use whatever value is already in the health bar to use to animate bewteen old and new value
+	animate_health_bar(health_bar.value, unit.hp) 
 	await get_tree().create_tween().tween_property(sprite_3d, "modulate", Color(1, 0.5, 0.5), 0.125).finished
 	await get_tree().create_timer(0.125).timeout
 	await get_tree().create_tween().tween_property(sprite_3d, "modulate", Color.WHITE, 0.25).finished
+	
+func animate_health_bar(old_health: int, new_health: int):
+	health_bar.value = old_health
+	await get_tree().create_tween().tween_property(health_bar, "value", new_health, 0.25)

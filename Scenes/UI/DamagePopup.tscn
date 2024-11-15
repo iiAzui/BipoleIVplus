@@ -3,10 +3,9 @@
 [ext_resource type="Script" path="res://Scripts/DamagePopup.gd" id="1_8cint"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_e2jqs"]
-font_size = 64
-font_color = Color(1, 0.794667, 0.72, 1)
+font_size = 80
 outline_size = 8
-outline_color = Color(0.236316, 0.00349195, 0.139117, 1)
+outline_color = Color(0.0816515, 0.0016389, 0.00572859, 1)
 
 [node name="DamagePopup" type="Control" node_paths=PackedStringArray("damage_label")]
 layout_mode = 3
