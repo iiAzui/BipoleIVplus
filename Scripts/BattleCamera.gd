@@ -33,6 +33,7 @@ func standard_view():
 
 func combat_view(attacker: PlacedUnit, defender: PlacedUnit):
 	start_position = camera.global_position
-	var center: Vector3 = (attacker.global_position + defender.global_position) / 2.0;
-	target_position = center + offset_direction * combat_distance
+	var map_center: Vector3 = center_position + offset_direction * standard_distance
+	var combat_center: Vector3 = (attacker.global_position + defender.global_position) / 2.0 + offset_direction * combat_distance;
+	target_position = lerp(map_center, combat_center, 0.5)
 	current_t = 0.0

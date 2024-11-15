@@ -54,6 +54,7 @@ func update_unit_visual():
 			health_bar.texture_progress = HEALTH_BAR_PLAYER if allied else HEALTH_BAR_ENEMY
 			level_label.text = str(unit.level)
 
+# if move is null this is probably a generic attack (counter attack / follow up)
 func attack_animation(target: PlacedUnit, move: Move):
 	var start_point: Vector3 = global_position
 	var attack_point: Vector3 = lerp(global_position, target.global_position, 0.5)
