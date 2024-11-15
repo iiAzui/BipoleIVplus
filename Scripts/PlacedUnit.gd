@@ -42,14 +42,16 @@ var coords: Vector2i
 func _ready() -> void:
 	update_unit_visual()
 
-
-
 # for editor reflecting current unit
 func update_unit_visual():
 	if unit and unit.character:
 		if not sprite_3d:
 			sprite_3d = $Sprite3D
 		sprite_3d.texture = unit.character.overworld_sprite
+		var shader_mat: ShaderMaterial = sprite_3d.material_override as ShaderMaterial
+		if shader_mat:
+			shader_mat.set_shader_parameter("acted", attacked)
+			shader_mat.set_shader_parameter("texture_albedo", unit.character.overworld_sprite)
 		if health_bar:
 			health_bar.value = unit.hp
 			health_bar.max_value = unit.max_hp

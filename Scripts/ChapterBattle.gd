@@ -173,6 +173,7 @@ func start_player_turn():
 	for unit in unit_grid.enemy_units:
 		unit.moved = false
 		unit.attacked = false
+		unit.update_unit_visual()
 	is_player_turn = true
 		
 func start_enemy_turn():
@@ -182,6 +183,7 @@ func start_enemy_turn():
 	for unit in unit_grid.allied_units:
 		unit.moved = false
 		unit.attacked = false
+		unit.update_unit_visual()
 	is_player_turn = false
 	
 	await unit_ai.retro_ai_all_enemies()
@@ -343,8 +345,12 @@ func use_skill(attacker: PlacedUnit, defender: PlacedUnit, move: Move):
 	# if either unit died, remove them from the grid
 	if not attacker.unit.is_alive():
 		unit_grid.erase_unit(attacker.coords)
+	else:
+		attacker.update_unit_visual()
 	if not defender.unit.is_alive():
 		unit_grid.erase_unit(defender.coords)
+	else:
+		defender.update_unit_visual()
 		
 func attack_animation(attacker: PlacedUnit, target: PlacedUnit, move: Move, damage: int, miss: bool = false):
 	await attacker.attack_animation(target, move, damage, miss)
