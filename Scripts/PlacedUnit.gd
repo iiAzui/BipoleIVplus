@@ -57,19 +57,20 @@ func update_unit_visual():
 # if move is null this is probably a generic attack (counter attack / follow up)
 func attack_animation(target: PlacedUnit, move: Move, damage: int):
 	var start_point: Vector3 = global_position
-	var attack_point: Vector3 = lerp(global_position, target.global_position, 0.5)
+	var attack_point: Vector3 = lerp(global_position, target.global_position, 0.2 if move and move.move_type == "Support" else 0.5)
 	await get_tree().create_tween().tween_property(self, "global_position", attack_point, 0.125).finished
-	target.damage_animation(damage)
+	target.damage_animation(damage, move, move and move.move_type == "Support")
 	await get_tree().create_timer(0.125).timeout
 	await get_tree().create_tween().tween_property(self, "global_position", start_point, 0.25).finished
 
-func damage_animation(damage: int):
+func damage_animation(damage: int, move: Move, is_heal: bool = false):
 	var popup: DamagePopup = DAMAGE_POPUP.instantiate() as DamagePopup
 	add_child(popup)
 	popup.animate(self, damage)
 	# just use whatever value is already in the health bar to use to animate bewteen old and new value
-	animate_health_bar(health_bar.value, unit.hp) 
-	await get_tree().create_tween().tween_property(sprite_3d, "modulate", Color(1, 0.5, 0.5), 0.125).finished
+	animate_health_bar(health_bar.value, unit.hp)
+	var modulate_color: Color = Color(0.3, 1, 0.3) if is_heal else Color(1, 0.3, 0.3)
+	await get_tree().create_tween().tween_property(sprite_3d, "modulate", modulate_color, 0.125).finished
 	await get_tree().create_timer(0.125).timeout
 	await get_tree().create_tween().tween_property(sprite_3d, "modulate", Color.WHITE, 0.25).finished
 	

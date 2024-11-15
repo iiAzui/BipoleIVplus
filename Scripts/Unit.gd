@@ -63,6 +63,9 @@ func _init() -> void:
 func take_damage(damage: int):
 	hp = max(0, hp - damage)
 	
+func heal(heal_amount: int):
+	hp = min(max_hp, hp + heal_amount)
+	
 func get_counter_damage(target: Unit) -> int:
 	var def_or_res: int = target.defense if primary_type == "Physical" else target.resistance
 	return max(0, int(attack * 1.25 - def_or_res / 2.0))

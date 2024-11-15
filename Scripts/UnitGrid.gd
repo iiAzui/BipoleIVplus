@@ -42,14 +42,14 @@ func place_unit(unit: PlacedUnit, coords: Vector2i):
 		allied_units.append(unit)
 	else:
 		enemy_units.append(unit)
-	print("placed ", unit.name, " at ", coords)
+	print("placed ", unit.unit.character.display_name, " at ", coords)
 	
 func move_unit(from: Vector2i, to: Vector2i):
 	var unit: PlacedUnit = grid[from]
 	grid[from] = null
 	grid[to] = unit
 	set_unit_coords(unit, to)
-	print("moved ", unit.name, " from ", from, " to ", to)
+	#print("moved ", unit.unit.character.display_name, " from ", from, " to ", to)
 
 func erase_unit(coords: Vector2i):
 	if coords in grid:

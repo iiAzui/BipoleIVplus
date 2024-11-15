@@ -170,19 +170,19 @@ func _unhandled_input(event: InputEvent) -> void:
 		select_move(6)
 		
 func start_player_turn():
-	is_player_turn = true
-	for unit in unit_grid.allied_units:
+	for unit in unit_grid.enemy_units:
 		unit.moved = false
 		unit.attacked = false
+	is_player_turn = true
 		
 func start_enemy_turn():
 	if not is_player_turn:
 		return false
 	
-	is_player_turn = false
-	for unit in unit_grid.enemy_units:
+	for unit in unit_grid.allied_units:
 		unit.moved = false
 		unit.attacked = false
+	is_player_turn = false
 	
 	await unit_ai.retro_ai_all_enemies()
 	
@@ -288,33 +288,41 @@ func use_skill(attacker: PlacedUnit, defender: PlacedUnit, move: Move):
 	await get_tree().create_timer(0.25).timeout
 	
 	# Skill
-	var skill_damage: int = move.get_damage_dealt(attacker.unit, defender.unit)
-	defender.unit.take_damage(skill_damage)
-	await attack_animation(attacker, defender, move, skill_damage)
+	if move.move_type == "Support":
+		var skill_heal_amount: int = move.get_damage_dealt(attacker.unit, defender.unit)
+		defender.unit.heal(skill_heal_amount)
+		await attack_animation(attacker, defender, move, skill_heal_amount)
+	else:
+		var skill_damage: int = move.get_damage_dealt(attacker.unit, defender.unit)
+		defender.unit.take_damage(skill_damage)
+		await attack_animation(attacker, defender, move, skill_damage)
 	await get_tree().create_timer(0.25).timeout
 	
-	if defender.unit.is_alive() and attacker.unit.is_alive() and unit_in_range(defender, attacker):
+	# Counter
+	if move.move_type == "Attack" and defender.unit.is_alive() and attacker.unit.is_alive() and unit_in_range(defender, attacker):
 		var counter_damage: int = defender.unit.get_counter_damage(attacker.unit)
 		if counter_damage > 0:
 			attacker.unit.take_damage(counter_damage)
 			await attack_animation(defender, attacker, null, counter_damage)
 			await get_tree().create_timer(0.25).timeout
-		
-	var followup_attacker: PlacedUnit
-	var followup_defender: PlacedUnit
-	if attacker.unit.speed > defender.unit.speed:
-		followup_attacker = attacker
-		followup_defender = defender
-	elif attacker.unit.speed < defender.unit.speed:
-		followup_attacker = defender
-		followup_defender = attacker
-		
-	if followup_attacker and followup_attacker.unit.is_alive() and followup_defender.unit.is_alive() and unit_in_range(followup_attacker, followup_defender):
-		var followup_damage: int = followup_attacker.unit.get_counter_damage(followup_defender.unit)
-		if followup_damage > 0:
-			followup_defender.unit.take_damage(followup_damage)
-			await attack_animation(followup_attacker, followup_defender, null, followup_damage)
-			await get_tree().create_timer(0.25).timeout
+			
+	# Follow-up
+	if move.move_type == "Attack":
+		var followup_attacker: PlacedUnit
+		var followup_defender: PlacedUnit
+		if attacker.unit.speed > defender.unit.speed:
+			followup_attacker = attacker
+			followup_defender = defender
+		elif attacker.unit.speed < defender.unit.speed:
+			followup_attacker = defender
+			followup_defender = attacker
+			
+		if followup_attacker and followup_attacker.unit.is_alive() and followup_defender.unit.is_alive() and unit_in_range(followup_attacker, followup_defender):
+			var followup_damage: int = followup_attacker.unit.get_counter_damage(followup_defender.unit)
+			if followup_damage > 0:
+				followup_defender.unit.take_damage(followup_damage)
+				await attack_animation(followup_attacker, followup_defender, null, followup_damage)
+				await get_tree().create_timer(0.25).timeout
 	
 	await get_tree().create_timer(0.25).timeout
 	battle_camera.standard_view()
@@ -373,7 +381,7 @@ func move_cursor_to(coords: Vector2i):
 	cursor_coords = coords
 	cursor_coords.x = clamp(cursor_coords.x, 0, RETRO_WIDTH-1)
 	cursor_coords.y = clamp(cursor_coords.y, 0, RETRO_HEIGHT-1)
-	#print("moved cursor to ", cursor_coords)
+	print("moved cursor to ", cursor_coords)
 	map_cursor.position = Vector3(cursor_coords.x, 0.025, cursor_coords.y)
 	
 	hovered_unit = unit_grid.get_unit_at(cursor_coords)

@@ -162,6 +162,9 @@ layout_direction = 3
 [node name="StatsVBoxContainer" parent="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer" index="1"]
 layout_direction = 2
 
+[node name="HealthBeforeDamageBar" parent="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="2"]
+fill_mode = 0
+
 [node name="HealthBar" parent="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="3"]
 fill_mode = 0
 
