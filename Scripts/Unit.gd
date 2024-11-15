@@ -70,5 +70,10 @@ func get_counter_damage(target: Unit) -> int:
 	var def_or_res: int = target.defense if primary_type == "Physical" else target.resistance
 	return max(0, int(attack * 1.25 - def_or_res / 2.0))
 
+func get_counter_hit_chance(defender: Unit):
+	var chance: float = min(1.0, (float(accuracy) - float(defender.agility)) / 10.0) 
+	print(character.display_name, " has a ", chance*100, "% chance to hit ", defender.character.display_name, " with counter/followup attack")
+	return chance
+
 func is_alive():
 	return hp > 0

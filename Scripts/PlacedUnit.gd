@@ -42,6 +42,8 @@ var coords: Vector2i
 func _ready() -> void:
 	update_unit_visual()
 
+
+
 # for editor reflecting current unit
 func update_unit_visual():
 	if unit and unit.character:
@@ -55,18 +57,18 @@ func update_unit_visual():
 			level_label.text = str(unit.level)
 
 # if move is null this is probably a generic attack (counter attack / follow up)
-func attack_animation(target: PlacedUnit, move: Move, damage: int):
+func attack_animation(target: PlacedUnit, move: Move, damage: int, miss: bool):
 	var start_point: Vector3 = global_position
 	var attack_point: Vector3 = lerp(global_position, target.global_position, 0.2 if move and move.move_type == "Support" else 0.5)
 	await get_tree().create_tween().tween_property(self, "global_position", attack_point, 0.125).finished
-	target.damage_animation(damage, move, move and move.move_type == "Support")
+	target.damage_animation(damage, move, miss, move and move.move_type == "Support")
 	await get_tree().create_timer(0.125).timeout
 	await get_tree().create_tween().tween_property(self, "global_position", start_point, 0.25).finished
 
-func damage_animation(damage: int, move: Move, is_heal: bool = false):
+func damage_animation(damage: int, move: Move, miss: bool, is_heal: bool = false):
 	var popup: DamagePopup = DAMAGE_POPUP.instantiate() as DamagePopup
 	add_child(popup)
-	popup.animate(self, damage)
+	popup.animate(self, damage, miss)
 	# just use whatever value is already in the health bar to use to animate bewteen old and new value
 	animate_health_bar(health_bar.value, unit.hp)
 	var modulate_color: Color = Color(0.3, 1, 0.3) if is_heal else Color(1, 0.3, 0.3)

@@ -294,16 +294,25 @@ func use_skill(attacker: PlacedUnit, defender: PlacedUnit, move: Move):
 		await attack_animation(attacker, defender, move, skill_heal_amount)
 	else:
 		var skill_damage: int = move.get_damage_dealt(attacker.unit, defender.unit)
-		defender.unit.take_damage(skill_damage)
-		await attack_animation(attacker, defender, move, skill_damage)
+		var skill_hit_chance: float = move.get_hit_chance(attacker.unit, defender.unit)
+		if randf() <= skill_hit_chance:
+			defender.unit.take_damage(skill_damage)
+			await attack_animation(attacker, defender, move, skill_damage)
+		else:
+			await attack_animation(attacker, defender, move, 0, true)
+			
 	await get_tree().create_timer(0.25).timeout
 	
 	# Counter
 	if move.move_type == "Attack" and defender.unit.is_alive() and attacker.unit.is_alive() and unit_in_range(defender, attacker):
 		var counter_damage: int = defender.unit.get_counter_damage(attacker.unit)
 		if counter_damage > 0:
-			attacker.unit.take_damage(counter_damage)
-			await attack_animation(defender, attacker, null, counter_damage)
+			var counter_hit_chance: int = defender.unit.get_counter_hit_chance(attacker.unit)
+			if randf() <= counter_hit_chance:
+				attacker.unit.take_damage(counter_damage)
+				await attack_animation(defender, attacker, null, counter_damage)
+			else:
+				await attack_animation(defender, attacker, null, 0, true)
 			await get_tree().create_timer(0.25).timeout
 			
 	# Follow-up
@@ -320,8 +329,12 @@ func use_skill(attacker: PlacedUnit, defender: PlacedUnit, move: Move):
 		if followup_attacker and followup_attacker.unit.is_alive() and followup_defender.unit.is_alive() and unit_in_range(followup_attacker, followup_defender):
 			var followup_damage: int = followup_attacker.unit.get_counter_damage(followup_defender.unit)
 			if followup_damage > 0:
-				followup_defender.unit.take_damage(followup_damage)
-				await attack_animation(followup_attacker, followup_defender, null, followup_damage)
+				var followup_hit_chance: int = followup_attacker.unit.get_counter_hit_chance(followup_defender.unit)
+				if randf() <= followup_hit_chance:
+					followup_defender.unit.take_damage(followup_damage)
+					await attack_animation(followup_attacker, followup_defender, null, followup_damage)
+				else:
+					await attack_animation(followup_attacker, followup_defender, null, 0, true)
 				await get_tree().create_timer(0.25).timeout
 	
 	await get_tree().create_timer(0.25).timeout
@@ -333,8 +346,8 @@ func use_skill(attacker: PlacedUnit, defender: PlacedUnit, move: Move):
 	if not defender.unit.is_alive():
 		unit_grid.erase_unit(defender.coords)
 		
-func attack_animation(attacker: PlacedUnit, target: PlacedUnit, move: Move, damage: int):
-	await attacker.attack_animation(target, move, damage)
+func attack_animation(attacker: PlacedUnit, target: PlacedUnit, move: Move, damage: int, miss: bool = false):
+	await attacker.attack_animation(target, move, damage, miss)
 
 func place_player_units():
 	if not SaveData.save:
@@ -440,7 +453,7 @@ func display_hovered_skill_target():
 		var damage_taken: int = 0
 		
 		var outgoing_hit_chance: float = move_selected.get_hit_chance(unit_selected.unit, hovered_unit.unit)
-		var incoming_hit_chance: float = move_selected.get_hit_chance(hovered_unit.unit, unit_selected.unit)
+		var incoming_hit_chance: float = hovered_unit.unit.get_counter_hit_chance(unit_selected.unit)
 		
 		outgoing_hit_percent_label.text = str(round(outgoing_hit_chance*100))+"%"
 		incoming_hit_percent_label.text = str(round(incoming_hit_chance*100))+"%"
