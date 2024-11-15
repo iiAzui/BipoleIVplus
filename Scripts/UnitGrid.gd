@@ -40,6 +40,11 @@ func move_unit(from: Vector2i, to: Vector2i):
 	set_unit_coords(unit, to)
 	print("moved ", unit.name, " from ", from, " to ", to)
 
+func erase_unit(coords: Vector2i):
+	if coords in grid:
+		grid[coords].queue_free()
+		grid.erase(coords)
+
 func set_unit_coords(unit: PlacedUnit, coords: Vector2i):
 	unit.coords = coords
 	unit.position = Vector3(coords.x, unit.position.y, coords.y)

@@ -66,3 +66,6 @@ func take_damage(damage: int):
 func get_counter_damage(target: Unit) -> int:
 	var def_or_res: int = target.defense if primary_type == "Physical" else target.resistance
 	return max(0, int(attack * 1.25 - def_or_res / 2.0))
+
+func is_alive():
+	return hp > 0

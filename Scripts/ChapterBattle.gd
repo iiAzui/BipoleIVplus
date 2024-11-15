@@ -249,14 +249,45 @@ func attack_pressed():
 		change_cursor_mode(CursorMode.SELECT)
 		map_cursor.modulate = Color.TRANSPARENT
 		
+		battle_camera.combat_view(attacker, defender)
+		await get_tree().create_timer(0.25).timeout
+		
 		# Skill
 		var skill_damage: int = move.get_damage_dealt(attacker.unit, defender.unit)
 		defender.unit.take_damage(skill_damage)
 		await attack_animation(attacker, defender, move, skill_damage)
+		await get_tree().create_timer(0.25).timeout
 		
-		if defender.unit.hp == 0:
-			unit_grid.grid.erase(defender.coords)
-			defender.queue_free()
+		if defender.unit.is_alive() and attacker.unit.is_alive() and unit_in_range(defender, attacker):
+			var counter_damage: int = defender.unit.get_counter_damage(attacker.unit)
+			if counter_damage > 0:
+				defender.unit.take_damage(skill_damage)
+				await attack_animation(defender, attacker, null, counter_damage)
+				await get_tree().create_timer(0.25).timeout
+			
+		var followup_attacker: PlacedUnit
+		var followup_defender: PlacedUnit
+		if attacker.unit.speed > defender.unit.speed:
+			followup_attacker = attacker
+			followup_defender = defender
+		elif attacker.unit.speed < defender.unit.speed:
+			followup_attacker = defender
+			followup_defender = attacker
+			
+		if followup_attacker and followup_attacker.unit.is_alive() and followup_defender.unit.is_alive() and unit_in_range(followup_attacker, followup_defender):
+			var followup_damage: int = followup_attacker.unit.get_counter_damage(followup_defender.unit)
+			if followup_damage > 0:
+				followup_defender.unit.take_damage(followup_damage)
+				await attack_animation(followup_attacker, followup_defender, null, followup_damage)
+				await get_tree().create_timer(0.25).timeout
+		
+		await get_tree().create_timer(0.25).timeout
+		battle_camera.standard_view()
+		
+		if not attacker.unit.is_alive():
+			unit_grid.erase_unit(attacker.coords)
+		if not defender.unit.is_alive():
+			unit_grid.erase_unit(defender.coords)
 		
 		change_cursor_mode(CursorMode.SELECT)
 		show_range(unit_selected)
@@ -264,12 +295,8 @@ func attack_pressed():
 		printerr("a move should be selected while in attack mode! there is none selected")
 		
 func attack_animation(attacker: PlacedUnit, target: PlacedUnit, move: Move, damage: int):
-	battle_camera.combat_view(attacker, target)
-	await get_tree().create_timer(0.25).timeout
 	await attacker.attack_animation(target, move, damage)
-	await get_tree().create_timer(0.25).timeout
-	battle_camera.standard_view()
-		
+
 func place_player_units():
 	if not SaveData.save:
 		printerr("no save data loaded but trying to load units!")
@@ -383,19 +410,14 @@ func display_hovered_skill_target():
 		outgoing_hit_percent_label.text = str(round(outgoing_hit_chance*100))+"%"
 		incoming_hit_percent_label.text = str(round(incoming_hit_chance*100))+"%"
 		
-		var range: int = abs(hovered_unit.coords.x - unit_selected.coords.x) + abs(hovered_unit.coords.y - unit_selected.coords.y)
-		print("target range: ", range)
-		var in_counter_range: bool = false
-		for move in hovered_unit.unit.moves:
-			print(move.display_name, " range: ", move.min_range, "-", move.max_range)
-			if range >= move.min_range and range <= move.max_range:
-				in_counter_range = true
-				damage_taken += enemy_counter_damage
-				break
+		var in_counter_range: bool = unit_in_range(unit_selected, hovered_unit)
+		if in_counter_range:
+			damage_taken += enemy_counter_damage
+			
 				
 		damage_preview_panel.skill_preview.display(skill_damage, true)
 		damage_preview_panel.counter_preview.display(enemy_counter_damage if in_counter_range else 0, false)
-				
+		
 		if unit_selected.unit.speed > hovered_unit.unit.speed:
 			damage_dealt += ally_counter_damage
 			damage_preview_panel.followup_preview.display(ally_counter_damage, true)
@@ -446,6 +468,17 @@ func change_cursor_mode(mode: CursorMode):
 		
 	if move_path_line: move_path_line.visible = cursor_mode == CursorMode.MOVING
 	if attack_path_line: attack_path_line.visible = cursor_mode == CursorMode.ATTACKING
+	
+func unit_in_range(attacker: PlacedUnit, defender: PlacedUnit) -> bool:
+	var range: int = abs(defender.coords.x - attacker.coords.x) + abs(defender.coords.y - attacker.coords.y)
+	print("target range: ", range)
+	var in_counter_range: bool = false
+	for move in hovered_unit.unit.moves:
+		print(move.display_name, " range: ", move.min_range, "-", move.max_range)
+		if range >= move.min_range and range <= move.max_range:
+			return true
+			
+	return false
 	
 func auto_select_move():	
 	# Loop through the moves until one can hit the target unit
