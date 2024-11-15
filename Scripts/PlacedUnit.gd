@@ -66,7 +66,6 @@ func attack_animation(target: PlacedUnit, move: Move, damage: int):
 func damage_animation(damage: int):
 	var popup: DamagePopup = DAMAGE_POPUP.instantiate() as DamagePopup
 	add_child(popup)
-	popup.global_position = global_position
 	popup.animate(self, damage)
 	await get_tree().create_tween().tween_property(sprite_3d, "modulate", Color(1, 0.5, 0.5), 0.125).finished
 	await get_tree().create_timer(0.125).timeout

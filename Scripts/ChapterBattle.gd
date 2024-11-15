@@ -245,14 +245,15 @@ func attack_pressed():
 		
 		hovered_unit = unit_selected
 		select_move(-1)
-		change_cursor_mode(CursorMode.SELECT)
 		show_range(null)
+		change_cursor_mode(CursorMode.SELECT)
 		map_cursor.modulate = Color.TRANSPARENT
 		
 		# Skill
 		var skill_damage: int = move.get_damage_dealt(attacker.unit, defender.unit)
 		await attack_animation(attacker, defender, move, skill_damage)
 		
+		change_cursor_mode(CursorMode.SELECT)
 		show_range(unit_selected)
 	else:
 		printerr("a move should be selected while in attack mode! there is none selected")
