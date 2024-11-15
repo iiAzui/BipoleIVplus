@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d273u7ss6tahe"]
+[gd_scene load_steps=20 format=3 uid="uid://d273u7ss6tahe"]
 
 [ext_resource type="Script" path="res://Scripts/ChapterBattle.gd" id="1_4h1kv"]
 [ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter1.tres" id="2_5jyhv"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/Overworld/selection.png" id="4_23hxa"]
 [ext_resource type="PackedScene" uid="uid://c4ojdylljxwvf" path="res://Scenes/UI/HoritzontalUnitPreview.tscn" id="4_hpppt"]
 [ext_resource type="Script" path="res://Scripts/MoveSelectPanel.gd" id="5_4jc8v"]
+[ext_resource type="Script" path="res://Scripts/BattleCamera.gd" id="7_g4c8c"]
 [ext_resource type="Script" path="res://Scripts/DamagePreview.gd" id="9_4q3fu"]
 [ext_resource type="Script" path="res://Scripts/DamagePreviewPanel.gd" id="9_tool6"]
 
@@ -48,7 +49,7 @@ ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.75
 
-[node name="3DChapterBattle" type="Node3D" node_paths=PackedStringArray("allied_unit_preview", "enemy_unit_preview", "damage_preview_panel", "move_select_panel", "attack_button", "unit_grid", "map_cursor", "range_display_grid")]
+[node name="3DChapterBattle" type="Node3D" node_paths=PackedStringArray("allied_unit_preview", "enemy_unit_preview", "damage_preview_panel", "move_select_panel", "attack_button", "unit_grid", "map_cursor", "range_display_grid", "outgoing_hit_percent", "incoming_hit_percent", "outgoing_hit_percent_label", "incoming_hit_percent_label", "battle_camera")]
 script = ExtResource("1_4h1kv")
 placements = ExtResource("2_5jyhv")
 allied_unit_preview = NodePath("CanvasLayer/Screen/AlliedUnitPreview")
@@ -59,6 +60,11 @@ attack_button = NodePath("CanvasLayer/Screen/AttackButton")
 unit_grid = NodePath("UnitGrid")
 map_cursor = NodePath("MapCursor")
 range_display_grid = NodePath("RangeDisplayGrid")
+outgoing_hit_percent = NodePath("CanvasLayer/Screen/OutgoingHitChance")
+incoming_hit_percent = NodePath("CanvasLayer/Screen/IncomingHitChance")
+outgoing_hit_percent_label = NodePath("CanvasLayer/Screen/OutgoingHitChance/VBoxContainer/HitPercentLabel")
+incoming_hit_percent_label = NodePath("CanvasLayer/Screen/IncomingHitChance/VBoxContainer/HitPercentLabel")
+battle_camera = NodePath("Node3D")
 
 [node name="MapClickBody" type="StaticBody3D" parent="."]
 
@@ -91,12 +97,17 @@ render_priority = 1
 texture = ExtResource("4_23hxa")
 script = ExtResource("4_6ei7i")
 
-[node name="PerspectiveCamera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.267238, 0.96363, 0, -0.96363, 0.267238, 8.5, 20.55, 13.8)
+[node name="Node3D" type="Node3D" parent="." node_paths=PackedStringArray("camera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 6.5)
+script = ExtResource("7_g4c8c")
+camera = NodePath("PerspectiveCamera")
+
+[node name="PerspectiveCamera" type="Camera3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.267238, 0.963631, 0, -0.963631, 0.267238, -0.5, 20, 7)
 fov = 45.0
 
-[node name="OrthoCamera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.5, 20.55, 7.695)
+[node name="OrthoCamera" type="Camera3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.5, 20.55, 1.195)
 projection = 1
 fov = 45.0
 size = 17.0
@@ -186,6 +197,74 @@ size_flags_horizontal = 8
 theme_override_font_sizes/font_size = 32
 text = ">
 "
+
+[node name="OutgoingHitChance" type="PanelContainer" parent="CanvasLayer/Screen" node_paths=PackedStringArray("move_name_label", "prev_arrow", "next_arrow")]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 618.0
+offset_top = 188.0
+offset_right = 751.0
+offset_bottom = 268.0
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("5_4jc8v")
+move_name_label = NodePath("VBoxContainer/HitPercentLabel")
+prev_arrow = NodePath("")
+next_arrow = NodePath("")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Screen/OutgoingHitChance"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HitLabel" type="Label" parent="CanvasLayer/Screen/OutgoingHitChance/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 16
+text = "HIT"
+vertical_alignment = 1
+
+[node name="HitPercentLabel" type="Label" parent="CanvasLayer/Screen/OutgoingHitChance/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "85%"
+
+[node name="IncomingHitChance" type="PanelContainer" parent="CanvasLayer/Screen" node_paths=PackedStringArray("move_name_label", "prev_arrow", "next_arrow")]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1171.0
+offset_top = 187.0
+offset_right = 1304.0
+offset_bottom = 267.0
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("5_4jc8v")
+move_name_label = NodePath("VBoxContainer/HitPercentLabel")
+prev_arrow = NodePath("")
+next_arrow = NodePath("")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Screen/IncomingHitChance"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HitLabel" type="Label" parent="CanvasLayer/Screen/IncomingHitChance/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 16
+text = "HIT"
+vertical_alignment = 1
+
+[node name="HitPercentLabel" type="Label" parent="CanvasLayer/Screen/IncomingHitChance/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "85%"
 
 [node name="AttackButton" type="Button" parent="CanvasLayer/Screen"]
 layout_mode = 1

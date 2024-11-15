@@ -18,6 +18,12 @@ extends Node3D
 @export var range_display_grid: Node3D
 @export var move_path_line: Line2D
 @export var attack_path_line: Line2D
+@export var outgoing_hit_percent: Control
+@export var incoming_hit_percent: Control
+@export var outgoing_hit_percent_label: Label
+@export var incoming_hit_percent_label: Label
+
+@export var battle_camera: BattleCamera
 
 const MOVE_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/MoveTileHighlight.tscn")
 const ATTACK_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/AttackTileHighlight.tscn")
@@ -94,6 +100,8 @@ func _ready() -> void:
 	move_cursor_to(Vector2i.ZERO)
 	damage_preview_panel.hide()
 	attack_button.hide()
+	outgoing_hit_percent.hide()
+	incoming_hit_percent.hide()
 	
 	#call_deferred("grab_focus")
 
@@ -228,6 +236,7 @@ func attack_pressed():
 	
 	if move_selected:
 		## TODO: implement attacking, and selecting move for that matter
+		await attack_animation()
 		unit_selected.moved = true # Cannot move after attack
 		unit_selected.attacked = true
 		print("used skill ", move_selected.display_name)
@@ -237,6 +246,13 @@ func attack_pressed():
 		show_range(unit_selected)
 	else:
 		printerr("a move should be selected while in attack mode! there is none selected")
+		
+func attack_animation():
+	battle_camera.combat_view(unit_selected, hovered_unit)
+	await get_tree().create_timer(0.25).timeout
+	await unit_selected.attack_animation(hovered_unit, move_selected)
+	await get_tree().create_timer(0.25).timeout
+	battle_camera.standard_view()
 		
 func place_player_units():
 	if not SaveData.save:
@@ -296,7 +312,7 @@ func move_cursor_to(coords: Vector2i):
 	if cursor_coords in skill_range_tiles:
 		var hovered_tiles_left: int = skill_range_tiles[cursor_coords]
 		#print("hovered tile steps left: ", hovered_tiles_left)
-		print("hover range: ", displayed_max_attack_range - hovered_tiles_left)
+		#print("hover range: ", displayed_max_attack_range - hovered_tiles_left)
 	
 	if cursor_mode == CursorMode.SELECT:
 		allied_unit_preview.display_unit(hovered_unit)
@@ -334,46 +350,58 @@ func move_cursor_to(coords: Vector2i):
 			recalculate_path_to(cursor_coords)
 
 func display_hovered_skill_target():
-	if hovered_unit and move_selected and hovered_unit.allied == (move_selected.move_type == "Support"):
+	if (cursor_coords in attackable_tiles or cursor_coords in supportable_tiles) and hovered_unit and move_selected and hovered_unit.allied == (move_selected.move_type == "Support"):
 		enemy_unit_preview.display_unit(hovered_unit)
-		if move_selected:
-			var skill_damage: int = move_selected.get_damage_dealt(unit_selected.unit, hovered_unit.unit)
-			var counter_damage: int = hovered_unit.unit.get_counter_damage(unit_selected.unit)
-			var ally_counter_damage: int = unit_selected.unit.get_counter_damage(hovered_unit.unit) 
-			var enemy_counter_damage: int = hovered_unit.unit.get_counter_damage(unit_selected.unit)
-			
-			var damage_dealt: int = skill_damage
-			var damage_taken: int = 0
-			
-			var range: int = abs(hovered_unit.coords.x - unit_selected.coords.x) + abs(hovered_unit.coords.y - unit_selected.coords.y)
-			var in_counter_range: bool = false
-			for move in hovered_unit.unit.moves:
-				if range >= move.min_range and range <= move.max_range:
-					in_counter_range = true
-					damage_taken += enemy_counter_damage
-					break
-					
-			damage_preview_panel.skill_preview.display(skill_damage, true)
-			damage_preview_panel.counter_preview.display(enemy_counter_damage if in_counter_range else 0, false)
-					
-			if unit_selected.unit.speed > hovered_unit.unit.speed:
-				damage_dealt += ally_counter_damage
-				damage_preview_panel.followup_preview.display(ally_counter_damage, true)
-			elif unit_selected.unit.speed < hovered_unit.unit.speed:
+		
+		var skill_damage: int = move_selected.get_damage_dealt(unit_selected.unit, hovered_unit.unit)
+		var counter_damage: int = hovered_unit.unit.get_counter_damage(unit_selected.unit)
+		var ally_counter_damage: int = unit_selected.unit.get_counter_damage(hovered_unit.unit) 
+		var enemy_counter_damage: int = hovered_unit.unit.get_counter_damage(unit_selected.unit)
+		
+		var damage_dealt: int = skill_damage
+		var damage_taken: int = 0
+		
+		var outgoing_hit_chance: float = move_selected.get_hit_chance(unit_selected.unit, hovered_unit.unit)
+		var incoming_hit_chance: float = move_selected.get_hit_chance(hovered_unit.unit, unit_selected.unit)
+		
+		outgoing_hit_percent_label.text = str(round(outgoing_hit_chance*100))+"%"
+		incoming_hit_percent_label.text = str(round(incoming_hit_chance*100))+"%"
+		
+		var range: int = abs(hovered_unit.coords.x - unit_selected.coords.x) + abs(hovered_unit.coords.y - unit_selected.coords.y)
+		print("target range: ", range)
+		var in_counter_range: bool = false
+		for move in hovered_unit.unit.moves:
+			print(move.display_name, " range: ", move.min_range, "-", move.max_range)
+			if range >= move.min_range and range <= move.max_range:
+				in_counter_range = true
 				damage_taken += enemy_counter_damage
-				damage_preview_panel.followup_preview.display(enemy_counter_damage, false)
-			else:
-				damage_preview_panel.followup_preview.display(0, false)
-			
-			allied_unit_preview.display_damage_preview(unit_selected, damage_taken)
-			enemy_unit_preview.display_damage_preview(hovered_unit, damage_dealt)
-			move_selected.get_hit_chance(unit_selected.unit, hovered_unit.unit)
-			damage_preview_panel.show()
-			attack_button.show()
+				break
+				
+		damage_preview_panel.skill_preview.display(skill_damage, true)
+		damage_preview_panel.counter_preview.display(enemy_counter_damage if in_counter_range else 0, false)
+				
+		if unit_selected.unit.speed > hovered_unit.unit.speed:
+			damage_dealt += ally_counter_damage
+			damage_preview_panel.followup_preview.display(ally_counter_damage, true)
+		elif unit_selected.unit.speed < hovered_unit.unit.speed:
+			damage_taken += enemy_counter_damage
+			damage_preview_panel.followup_preview.display(enemy_counter_damage, false)
+		else:
+			damage_preview_panel.followup_preview.display(0, false)
+		
+		allied_unit_preview.display_damage_preview(unit_selected, damage_taken)
+		enemy_unit_preview.display_damage_preview(hovered_unit, damage_dealt)
+		damage_preview_panel.show()
+		outgoing_hit_percent.show()
+		incoming_hit_percent.show()
+		attack_button.show()
+		outgoing_hit_percent_label
 	else:
 		enemy_unit_preview.display_unit(null)
 		damage_preview_panel.hide()
 		attack_button.hide()
+		outgoing_hit_percent.hide()
+		incoming_hit_percent.hide()
 
 func change_cursor_mode(mode: CursorMode):
 	cursor_mode = mode
@@ -387,6 +415,8 @@ func change_cursor_mode(mode: CursorMode):
 		move_select_panel.show_move(null)
 		damage_preview_panel.hide()
 		attack_button.hide()
+		outgoing_hit_percent.hide()
+		incoming_hit_percent.hide()
 	elif mode == CursorMode.MOVING:
 		map_cursor.modulate = map_cursor.move_color
 		start_path()
@@ -463,12 +493,8 @@ func select_move(move_index: int):
 		move_select_panel.hide_arrows()
 	
 func next_move():
-	if not unit_selected:
+	if not unit_selected or len(unit_selected.unit.moves) < 2:
 		return
-	
-	if len(unit_selected.unit.moves) < 2:
-		return
-	
 	move_selected_index += 1
 	if move_selected_index >= len(unit_selected.unit.moves):
 		move_selected_index = 0
@@ -478,7 +504,15 @@ func next_move():
 	select_move(move_selected_index)
 	
 func prev_move():
-	pass
+	if not unit_selected or len(unit_selected.unit.moves) < 2:
+		return
+	move_selected_index -= 1
+	if move_selected_index >= len(unit_selected.unit.moves):
+		move_selected_index = 0
+	elif move_selected_index < 0:
+		move_selected_index = len(unit_selected.unit.moves) - 1
+		
+	select_move(move_selected_index)
 	
 func start_path():
 	current_path.clear()

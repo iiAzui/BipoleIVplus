@@ -38,9 +38,6 @@ var coords: Vector2i
 			unit.max_hp = unit.hp
 			unit.character_changed.connect(update_unit_visual)
 			unit.level_changed.connect(update_unit_visual)
-			
-
-@onready var sprite: Sprite2D = $Sprite2D
 
 func _ready() -> void:
 	update_unit_visual()
@@ -56,3 +53,16 @@ func update_unit_visual():
 			health_bar.max_value = unit.max_hp
 			health_bar.texture_progress = HEALTH_BAR_PLAYER if allied else HEALTH_BAR_ENEMY
 			level_label.text = str(unit.level)
+
+func attack_animation(target: PlacedUnit, move: Move):
+	var start_point: Vector3 = global_position
+	var attack_point: Vector3 = lerp(global_position, target.global_position, 0.5)
+	await get_tree().create_tween().tween_property(self, "global_position", attack_point, 0.125).finished
+	target.damage_animation()
+	await get_tree().create_timer(0.125).timeout
+	await get_tree().create_tween().tween_property(self, "global_position", start_point, 0.25).finished
+
+func damage_animation():
+	await get_tree().create_tween().tween_property(sprite_3d, "modulate", Color(1, 0.5, 0.5), 0.125).finished
+	await get_tree().create_timer(0.125).timeout
+	await get_tree().create_tween().tween_property(sprite_3d, "modulate", Color.WHITE, 0.25).finished

@@ -75,6 +75,7 @@ texture_progress = ExtResource("3_ig5or")
 
 [node name="LevelBackground" type="ColorRect" parent="SubViewport/Control"]
 z_index = 1
+layout_mode = 0
 offset_left = 2.0
 offset_top = 43.0
 offset_right = 22.0
