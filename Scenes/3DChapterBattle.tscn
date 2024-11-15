@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://d273u7ss6tahe"]
+[gd_scene load_steps=21 format=3 uid="uid://d273u7ss6tahe"]
 
 [ext_resource type="Script" path="res://Scripts/ChapterBattle.gd" id="1_4h1kv"]
 [ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter1.tres" id="2_5jyhv"]
 [ext_resource type="Shader" path="res://Shaders/Map.gdshader" id="2_a7bsw"]
 [ext_resource type="Script" path="res://Scripts/UnitGrid.gd" id="3_7lps6"]
+[ext_resource type="Script" path="res://Scripts/UnitAI.gd" id="3_a7cdn"]
 [ext_resource type="Script" path="res://Scripts/MapCursor.gd" id="4_6ei7i"]
 [ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/Overworld/selection.png" id="4_23hxa"]
 [ext_resource type="PackedScene" uid="uid://c4ojdylljxwvf" path="res://Scenes/UI/HoritzontalUnitPreview.tscn" id="4_hpppt"]
@@ -49,9 +50,10 @@ ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.75
 
-[node name="3DChapterBattle" type="Node3D" node_paths=PackedStringArray("allied_unit_preview", "enemy_unit_preview", "damage_preview_panel", "move_select_panel", "attack_button", "unit_grid", "map_cursor", "range_display_grid", "outgoing_hit_percent", "incoming_hit_percent", "outgoing_hit_percent_label", "incoming_hit_percent_label", "battle_camera")]
+[node name="3DChapterBattle" type="Node3D" node_paths=PackedStringArray("unit_ai", "allied_unit_preview", "enemy_unit_preview", "damage_preview_panel", "move_select_panel", "attack_button", "unit_grid", "map_cursor", "range_display_grid", "outgoing_hit_percent", "incoming_hit_percent", "outgoing_hit_percent_label", "incoming_hit_percent_label", "battle_camera")]
 script = ExtResource("1_4h1kv")
 placements = ExtResource("2_5jyhv")
+unit_ai = NodePath("UnitAI")
 allied_unit_preview = NodePath("CanvasLayer/Screen/AlliedUnitPreview")
 enemy_unit_preview = NodePath("CanvasLayer/Screen/EnemyUnitPreview")
 damage_preview_panel = NodePath("CanvasLayer/Screen/DamagePreviewPanel")
@@ -65,6 +67,11 @@ incoming_hit_percent = NodePath("CanvasLayer/Screen/IncomingHitChance")
 outgoing_hit_percent_label = NodePath("CanvasLayer/Screen/OutgoingHitChance/VBoxContainer/HitPercentLabel")
 incoming_hit_percent_label = NodePath("CanvasLayer/Screen/IncomingHitChance/VBoxContainer/HitPercentLabel")
 battle_camera = NodePath("Node3D")
+
+[node name="UnitAI" type="Node" parent="." node_paths=PackedStringArray("unit_grid", "chapter_battle")]
+script = ExtResource("3_a7cdn")
+unit_grid = NodePath("../UnitGrid")
+chapter_battle = NodePath("..")
 
 [node name="MapClickBody" type="StaticBody3D" parent="."]
 
@@ -82,7 +89,6 @@ skeleton = NodePath("../..")
 
 [node name="UnitGrid" type="Node3D" parent="."]
 script = ExtResource("3_7lps6")
-use_3d = null
 
 [node name="RangeDisplayGrid" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)

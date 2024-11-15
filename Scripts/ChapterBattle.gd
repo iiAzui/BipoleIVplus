@@ -6,6 +6,7 @@ extends Node3D
 # this method of transfer works better for the retro files, 
 # since I don't want to figure out how to make a whole scene based off that data
 @export var placements: ChapterPlacements
+@export var unit_ai: UnitAI
 
 @export var allied_unit_preview: UnitPreview
 @export var enemy_unit_preview: UnitPreview
@@ -106,6 +107,9 @@ func _ready() -> void:
 	#call_deferred("grab_focus")
 
 func _unhandled_input(event: InputEvent) -> void:
+	if not is_player_turn:
+		return
+	
 	if event.is_action_pressed("Left"):
 		move_cursor(Vector2i.LEFT)
 	elif event.is_action_pressed("Right"):
@@ -148,6 +152,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		on_move_pressed()
 	elif event.is_action_pressed("Skill"):
 		on_skill_pressed()
+	elif event.is_action_pressed("EndTurn"):
+		start_enemy_turn()
 	elif event.is_action_pressed("1"):
 		select_move(0)
 	elif event.is_action_pressed("2"):
@@ -162,6 +168,25 @@ func _unhandled_input(event: InputEvent) -> void:
 		select_move(5)
 	elif event.is_action_pressed("7"):
 		select_move(6)
+		
+func start_player_turn():
+	is_player_turn = true
+	for unit in unit_grid.allied_units:
+		unit.moved = false
+		unit.attacked = false
+		
+func start_enemy_turn():
+	if not is_player_turn:
+		return false
+	
+	is_player_turn = false
+	for unit in unit_grid.enemy_units:
+		unit.moved = false
+		unit.attacked = false
+	
+	await unit_ai.retro_ai_all_enemies()
+	
+	start_player_turn()
 		
 func on_move_pressed():
 	if cursor_mode == CursorMode.MOVING:
@@ -239,9 +264,6 @@ func attack_pressed():
 		var attacker: PlacedUnit = unit_selected
 		var defender: PlacedUnit = hovered_unit
 		var move: Move = move_selected
-		unit_selected.moved = true # Cannot move after attack
-		unit_selected.attacked = true
-		print("used skill ", move_selected.display_name)
 		
 		hovered_unit = unit_selected
 		select_move(-1)
@@ -249,50 +271,59 @@ func attack_pressed():
 		change_cursor_mode(CursorMode.SELECT)
 		map_cursor.modulate = Color.TRANSPARENT
 		
-		battle_camera.combat_view(attacker, defender)
-		await get_tree().create_timer(0.25).timeout
-		
-		# Skill
-		var skill_damage: int = move.get_damage_dealt(attacker.unit, defender.unit)
-		defender.unit.take_damage(skill_damage)
-		await attack_animation(attacker, defender, move, skill_damage)
-		await get_tree().create_timer(0.25).timeout
-		
-		if defender.unit.is_alive() and attacker.unit.is_alive() and unit_in_range(defender, attacker):
-			var counter_damage: int = defender.unit.get_counter_damage(attacker.unit)
-			if counter_damage > 0:
-				defender.unit.take_damage(skill_damage)
-				await attack_animation(defender, attacker, null, counter_damage)
-				await get_tree().create_timer(0.25).timeout
-			
-		var followup_attacker: PlacedUnit
-		var followup_defender: PlacedUnit
-		if attacker.unit.speed > defender.unit.speed:
-			followup_attacker = attacker
-			followup_defender = defender
-		elif attacker.unit.speed < defender.unit.speed:
-			followup_attacker = defender
-			followup_defender = attacker
-			
-		if followup_attacker and followup_attacker.unit.is_alive() and followup_defender.unit.is_alive() and unit_in_range(followup_attacker, followup_defender):
-			var followup_damage: int = followup_attacker.unit.get_counter_damage(followup_defender.unit)
-			if followup_damage > 0:
-				followup_defender.unit.take_damage(followup_damage)
-				await attack_animation(followup_attacker, followup_defender, null, followup_damage)
-				await get_tree().create_timer(0.25).timeout
-		
-		await get_tree().create_timer(0.25).timeout
-		battle_camera.standard_view()
-		
-		if not attacker.unit.is_alive():
-			unit_grid.erase_unit(attacker.coords)
-		if not defender.unit.is_alive():
-			unit_grid.erase_unit(defender.coords)
+		await use_skill(attacker, defender, move)
 		
 		change_cursor_mode(CursorMode.SELECT)
 		show_range(unit_selected)
+		
 	else:
 		printerr("a move should be selected while in attack mode! there is none selected")
+	
+func use_skill(attacker: PlacedUnit, defender: PlacedUnit, move: Move):
+	attacker.moved = true # Cannot move after attack
+	attacker.attacked = true
+	print("used skill ", move.display_name)
+	
+	battle_camera.combat_view(attacker, defender)
+	await get_tree().create_timer(0.25).timeout
+	
+	# Skill
+	var skill_damage: int = move.get_damage_dealt(attacker.unit, defender.unit)
+	defender.unit.take_damage(skill_damage)
+	await attack_animation(attacker, defender, move, skill_damage)
+	await get_tree().create_timer(0.25).timeout
+	
+	if defender.unit.is_alive() and attacker.unit.is_alive() and unit_in_range(defender, attacker):
+		var counter_damage: int = defender.unit.get_counter_damage(attacker.unit)
+		if counter_damage > 0:
+			attacker.unit.take_damage(counter_damage)
+			await attack_animation(defender, attacker, null, counter_damage)
+			await get_tree().create_timer(0.25).timeout
+		
+	var followup_attacker: PlacedUnit
+	var followup_defender: PlacedUnit
+	if attacker.unit.speed > defender.unit.speed:
+		followup_attacker = attacker
+		followup_defender = defender
+	elif attacker.unit.speed < defender.unit.speed:
+		followup_attacker = defender
+		followup_defender = attacker
+		
+	if followup_attacker and followup_attacker.unit.is_alive() and followup_defender.unit.is_alive() and unit_in_range(followup_attacker, followup_defender):
+		var followup_damage: int = followup_attacker.unit.get_counter_damage(followup_defender.unit)
+		if followup_damage > 0:
+			followup_defender.unit.take_damage(followup_damage)
+			await attack_animation(followup_attacker, followup_defender, null, followup_damage)
+			await get_tree().create_timer(0.25).timeout
+	
+	await get_tree().create_timer(0.25).timeout
+	battle_camera.standard_view()
+	
+	# if either unit died, remove them from the grid
+	if not attacker.unit.is_alive():
+		unit_grid.erase_unit(attacker.coords)
+	if not defender.unit.is_alive():
+		unit_grid.erase_unit(defender.coords)
 		
 func attack_animation(attacker: PlacedUnit, target: PlacedUnit, move: Move, damage: int):
 	await attacker.attack_animation(target, move, damage)
@@ -331,10 +362,6 @@ func place_enemy_units():
 		placed_unit.allied = false
 		placed_unit.unit = unit
 		unit_grid.place_unit(placed_unit, unit_coords)
-		
-		
-func is_coords_in_bounds(coords: Vector2i):
-	return coords.x >= 0 and coords.x < RETRO_WIDTH and coords.y >= 0 and coords.y < RETRO_HEIGHT
 		
 func move_cursor(offset: Vector2i):
 	move_cursor_to(cursor_coords + offset)
@@ -473,7 +500,7 @@ func unit_in_range(attacker: PlacedUnit, defender: PlacedUnit) -> bool:
 	var range: int = abs(defender.coords.x - attacker.coords.x) + abs(defender.coords.y - attacker.coords.y)
 	print("target range: ", range)
 	var in_counter_range: bool = false
-	for move in hovered_unit.unit.moves:
+	for move in attacker.unit.moves:
 		print(move.display_name, " range: ", move.min_range, "-", move.max_range)
 		if range >= move.min_range and range <= move.max_range:
 			return true
@@ -734,7 +761,6 @@ func show_range(unit: PlacedUnit):
 		var other_unit: PlacedUnit = unit_grid.get_unit_at(coords)
 		if not other_unit or other_unit.allied == unit.allied:
 			place_highlight(SUPPORT_TILE_HIGHLIGHT, coords)
-
 		
 func place_highlight(highlight_scene: PackedScene, coords: Vector2i):
 	var highlight: Node3D = highlight_scene.instantiate()
@@ -822,3 +848,6 @@ func is_tile_impassable(coords: Vector2i):
 	
 	# otherwise this tile is open	
 	return false
+
+func is_coords_in_bounds(coords: Vector2i):
+	return coords.x >= 0 and coords.x < RETRO_WIDTH and coords.y >= 0 and coords.y < RETRO_HEIGHT

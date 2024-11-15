@@ -7,11 +7,18 @@ extends Node3D
 # to get a unit at (x, y), use the key of Vector2i(x, y)
 var grid: Dictionary
 
+# Allied units that are still alive
+var allied_units: Array[PlacedUnit] = []
+# Enemy units that are still alive
+var enemy_units: Array[PlacedUnit] = []
+
 const PLACED_UNIT_SCENE: PackedScene = preload("res://Scenes/UI/PlacedUnit.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	grid = {}
+	allied_units.clear()
+	enemy_units.clear()
 	
 	# Get all units already in this scene and initialize them in the grid array based on their node position
 	for unit: PlacedUnit in get_children():
@@ -31,6 +38,10 @@ func place_unit(unit: PlacedUnit, coords: Vector2i):
 	grid[coords] = unit
 	set_unit_coords(unit, coords)
 	add_child(unit)
+	if unit.allied:
+		allied_units.append(unit)
+	else:
+		enemy_units.append(unit)
 	print("placed ", unit.name, " at ", coords)
 	
 func move_unit(from: Vector2i, to: Vector2i):
@@ -42,8 +53,12 @@ func move_unit(from: Vector2i, to: Vector2i):
 
 func erase_unit(coords: Vector2i):
 	if coords in grid:
+		var unit = grid[coords]
+		allied_units.erase(unit)
+		enemy_units.erase(unit)
 		grid[coords].queue_free()
 		grid.erase(coords)
+	
 
 func set_unit_coords(unit: PlacedUnit, coords: Vector2i):
 	unit.coords = coords
