@@ -9,6 +9,7 @@ extends Node3D
 
 @export var allied_unit_preview: UnitPreview
 @export var enemy_unit_preview: UnitPreview
+@export var damage_preview_panel: DamagePreviewPanel
 @export var move_select_panel: MoveSelectPanel
 
 @export var unit_grid: UnitGrid
@@ -90,6 +91,7 @@ func _ready() -> void:
 	allied_unit_preview.display_unit(null)
 	enemy_unit_preview.display_unit(null)
 	move_cursor_to(Vector2i.ZERO)
+	damage_preview_panel.hide()
 	
 	#call_deferred("grab_focus")
 
@@ -122,6 +124,10 @@ func _unhandled_input(event: InputEvent) -> void:
 					# Otherwise, hover the clicked tile
 					else:
 						move_cursor_to(coords)
+		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			prev_move()
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			next_move()
 	elif event.is_action_pressed("Esc"):
 		if cursor_mode != CursorMode.SELECT:
 			change_cursor_mode(CursorMode.SELECT)
@@ -319,10 +325,41 @@ func display_hovered_skill_target():
 	if hovered_unit and move_selected and hovered_unit.allied == (move_selected.move_type == "Support"):
 		enemy_unit_preview.display_unit(hovered_unit)
 		if move_selected:
-			enemy_unit_preview.display_damage_preview(hovered_unit, move_selected.get_damage_dealt(unit_selected.unit, hovered_unit.unit))
+			var skill_damage: int = move_selected.get_damage_dealt(unit_selected.unit, hovered_unit.unit)
+			var counter_damage: int = hovered_unit.unit.get_counter_damage(unit_selected.unit)
+			var ally_counter_damage: int = unit_selected.unit.get_counter_damage(hovered_unit.unit) 
+			var enemy_counter_damage: int = hovered_unit.unit.get_counter_damage(unit_selected.unit)
+			
+			var damage_dealt: int = skill_damage
+			var damage_taken: int = 0
+			
+			var range: int = abs(hovered_unit.coords.x - unit_selected.coords.x) + abs(hovered_unit.coords.y - unit_selected.coords.y)
+			var in_counter_range: bool = false
+			for move in hovered_unit.unit.moves:
+				if range >= move.min_range and range <= move.max_range:
+					in_counter_range = true
+					damage_taken += enemy_counter_damage
+					break
+					
+			damage_preview_panel.skill_preview.display(skill_damage, true)
+			damage_preview_panel.counter_preview.display(enemy_counter_damage if in_counter_range else 0, false)
+					
+			if unit_selected.unit.speed > hovered_unit.unit.speed:
+				damage_dealt += ally_counter_damage
+				damage_preview_panel.followup_preview.display(ally_counter_damage, true)
+			elif unit_selected.unit.speed < hovered_unit.unit.speed:
+				damage_taken += enemy_counter_damage
+				damage_preview_panel.followup_preview.display(enemy_counter_damage, false)
+			else:
+				damage_preview_panel.followup_preview.display(0, false)
+			
+			allied_unit_preview.display_damage_preview(unit_selected, damage_taken)
+			enemy_unit_preview.display_damage_preview(hovered_unit, damage_dealt)
 			move_selected.get_hit_chance(unit_selected.unit, hovered_unit.unit)
+			damage_preview_panel.show()
 	else:
 		enemy_unit_preview.display_unit(null)
+		damage_preview_panel.hide()
 
 func change_cursor_mode(mode: CursorMode):
 	cursor_mode = mode
@@ -331,7 +368,10 @@ func change_cursor_mode(mode: CursorMode):
 		select_move(-1)
 		end_move_path()
 		unit_selected = null
+		allied_unit_preview.display_unit(hovered_unit)
+		enemy_unit_preview.display_unit(null)
 		move_select_panel.show_move(null)
+		damage_preview_panel.hide()
 	elif mode == CursorMode.MOVING:
 		map_cursor.modulate = map_cursor.move_color
 		start_path()
@@ -397,11 +437,23 @@ func select_move(move_index: int):
 	move_selected_index = move_index
 	move_selected = unit_selected.unit.moves[move_index]
 	print("selected move ", move_selected.display_name, " (slot ", move_index, ")")
+	map_cursor.modulate = map_cursor.support_color if move_selected.move_type == "Support" else map_cursor.attack_color
+	display_hovered_skill_target()
 	
 	show_range(unit_selected) # update range to not include move range in case havent moved yet
 	move_select_panel.show_move(move_selected)
+	if len(unit_selected.unit.moves) > 1:
+		move_select_panel.show_arrows()
+	else:
+		move_select_panel.hide_arrows()
 	
 func next_move():
+	if not unit_selected:
+		return
+	
+	if len(unit_selected.unit.moves) < 2:
+		return
+	
 	move_selected_index += 1
 	if move_selected_index >= len(unit_selected.unit.moves):
 		move_selected_index = 0

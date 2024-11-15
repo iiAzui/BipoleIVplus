@@ -4,6 +4,7 @@ extends Sprite3D
 @export var select_color: Color = Color.WHITE
 @export var move_color: Color = Color.BLUE
 @export var attack_color: Color = Color.RED
+@export var support_color: Color = Color.GREEN
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

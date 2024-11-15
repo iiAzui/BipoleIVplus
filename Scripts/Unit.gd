@@ -59,3 +59,7 @@ var exp: int = 0 # Level up every 100 EXP
 
 func _init() -> void:
 	print("init ", resource_name)
+	
+func get_counter_damage(target: Unit) -> int:
+	var def_or_res: int = target.defense if primary_type == "Physical" else target.resistance
+	return max(0, int(attack * 1.25 - def_or_res / 2.0))
