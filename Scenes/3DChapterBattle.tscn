@@ -48,13 +48,14 @@ ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.75
 
-[node name="3DChapterBattle" type="Node3D" node_paths=PackedStringArray("allied_unit_preview", "enemy_unit_preview", "damage_preview_panel", "move_select_panel", "unit_grid", "map_cursor", "range_display_grid")]
+[node name="3DChapterBattle" type="Node3D" node_paths=PackedStringArray("allied_unit_preview", "enemy_unit_preview", "damage_preview_panel", "move_select_panel", "attack_button", "unit_grid", "map_cursor", "range_display_grid")]
 script = ExtResource("1_4h1kv")
 placements = ExtResource("2_5jyhv")
 allied_unit_preview = NodePath("CanvasLayer/Screen/AlliedUnitPreview")
 enemy_unit_preview = NodePath("CanvasLayer/Screen/EnemyUnitPreview")
 damage_preview_panel = NodePath("CanvasLayer/Screen/DamagePreviewPanel")
 move_select_panel = NodePath("CanvasLayer/Screen/MoveSelectPanel")
+attack_button = NodePath("CanvasLayer/Screen/AttackButton")
 unit_grid = NodePath("UnitGrid")
 map_cursor = NodePath("MapCursor")
 range_display_grid = NodePath("RangeDisplayGrid")
@@ -186,6 +187,22 @@ theme_override_font_sizes/font_size = 32
 text = ">
 "
 
+[node name="AttackButton" type="Button" parent="CanvasLayer/Screen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = 192.0
+offset_right = 175.0
+offset_bottom = 262.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "ATTACK!"
+
 [node name="DamagePreviewPanel" type="PanelContainer" parent="CanvasLayer/Screen" node_paths=PackedStringArray("skill_preview", "counter_preview", "followup_preview")]
 layout_mode = 1
 anchors_preset = 7
@@ -289,6 +306,7 @@ environment = SubResource("Environment_m2r1f")
 
 [connection signal="pressed" from="CanvasLayer/Screen/MoveSelectPanel/LeftButton" to="." method="prev_move"]
 [connection signal="pressed" from="CanvasLayer/Screen/MoveSelectPanel/RightButton" to="." method="next_move"]
+[connection signal="pressed" from="CanvasLayer/Screen/AttackButton" to="." method="attack_pressed"]
 
 [editable path="CanvasLayer/Screen/EnemyUnitPreview"]
 [editable path="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/ATKStatDisplay"]

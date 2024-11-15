@@ -11,6 +11,7 @@ extends Node3D
 @export var enemy_unit_preview: UnitPreview
 @export var damage_preview_panel: DamagePreviewPanel
 @export var move_select_panel: MoveSelectPanel
+@export var attack_button: Button
 
 @export var unit_grid: UnitGrid
 @export var map_cursor: MapCursor
@@ -92,6 +93,7 @@ func _ready() -> void:
 	enemy_unit_preview.display_unit(null)
 	move_cursor_to(Vector2i.ZERO)
 	damage_preview_panel.hide()
+	attack_button.hide()
 	
 	#call_deferred("grab_focus")
 
@@ -191,40 +193,50 @@ func on_tile_pressed():
 		change_cursor_mode(CursorMode.SELECT)
 		show_range(hovered_unit)
 	elif cursor_mode == CursorMode.ATTACKING:
-		if not move_selected:
-			auto_select_move()
-			
-		if not (cursor_coords in attackable_tiles) and not (cursor_coords in supportable_tiles):
-			move_cursor_to(unit_selected.coords)
-			hovered_unit = unit_selected
-			change_cursor_mode(CursorMode.SELECT)
-			show_range(hovered_unit)
-			return
-			
-		# If there isn't a unit here, return
-		if not hovered_unit:
-			move_cursor_to(unit_selected.coords)
-			hovered_unit = unit_selected
-			change_cursor_mode(CursorMode.SELECT)
-			show_range(hovered_unit)
-			return
-			
-		if hovered_unit.allied != (move_selected.move_type == "Support"):
-			change_cursor_mode(CursorMode.SELECT)
-			show_range(hovered_unit)
-			return
+		attack_pressed()
 		
-		if move_selected:
-			## TODO: implement attacking, and selecting move for that matter
-			unit_selected.moved = true # Cannot move after attack
-			unit_selected.attacked = true
-			print("used skill ", move_selected.display_name)
-			change_cursor_mode(CursorMode.SELECT)
-			hovered_unit = unit_selected
-			select_move(-1)
-			show_range(unit_selected)
-		else:
-			printerr("a move should be selected while in attack mode! there is none selected")
+func attack_pressed():
+	if cursor_mode != CursorMode.ATTACKING:
+		printerr("attack somehow pressed while not in attack mode")
+		return
+	
+	if not move_selected:
+		auto_select_move()
+		
+	if not (cursor_coords in attackable_tiles) and not (cursor_coords in supportable_tiles):
+		#move_cursor_to(unit_selected.coords)
+		#hovered_unit = unit_selected
+		#change_cursor_mode(CursorMode.SELECT)
+		#show_range(hovered_unit)
+		print("clicked outside of attackable/supportable tiles")
+		return
+		
+	# If there isn't a unit here, return
+	if not hovered_unit:
+		#move_cursor_to(unit_selected.coords)
+		#hovered_unit = unit_selected
+		#change_cursor_mode(CursorMode.SELECT)
+		#show_range(hovered_unit)
+		print("no unit here")
+		return
+		
+	if hovered_unit.allied != (move_selected.move_type == "Support"):
+		#change_cursor_mode(CursorMode.SELECT)
+		#show_range(hovered_unit)
+		print("wrong unit select type for selected move")
+		return
+	
+	if move_selected:
+		## TODO: implement attacking, and selecting move for that matter
+		unit_selected.moved = true # Cannot move after attack
+		unit_selected.attacked = true
+		print("used skill ", move_selected.display_name)
+		change_cursor_mode(CursorMode.SELECT)
+		hovered_unit = unit_selected
+		select_move(-1)
+		show_range(unit_selected)
+	else:
+		printerr("a move should be selected while in attack mode! there is none selected")
 		
 func place_player_units():
 	if not SaveData.save:
@@ -357,9 +369,11 @@ func display_hovered_skill_target():
 			enemy_unit_preview.display_damage_preview(hovered_unit, damage_dealt)
 			move_selected.get_hit_chance(unit_selected.unit, hovered_unit.unit)
 			damage_preview_panel.show()
+			attack_button.show()
 	else:
 		enemy_unit_preview.display_unit(null)
 		damage_preview_panel.hide()
+		attack_button.hide()
 
 func change_cursor_mode(mode: CursorMode):
 	cursor_mode = mode
@@ -372,6 +386,7 @@ func change_cursor_mode(mode: CursorMode):
 		enemy_unit_preview.display_unit(null)
 		move_select_panel.show_move(null)
 		damage_preview_panel.hide()
+		attack_button.hide()
 	elif mode == CursorMode.MOVING:
 		map_cursor.modulate = map_cursor.move_color
 		start_path()
