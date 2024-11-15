@@ -20,26 +20,10 @@ func retro_ai(acting_unit: PlacedUnit):
 	if await try_skill(acting_unit, false, true):
 		return
 		
-	# Then try to move
-	try_move(acting_unit)
-		
-	# Then try again to use attack
-	if await try_skill(acting_unit, true, false):
-		return
-		
-	# Then try again to use supports
-	if await try_skill(acting_unit, false, true):
-		return
-
-# Try to move, prioritizing moving towards a unit on the opposite team.
-# Returns the amount of tiles moved
-func try_move(acting_unit: PlacedUnit) -> int:
 	if acting_unit.moved:
-		return false
+		return
 		
-	# Move in a random direction
-	# Prioritize directions that have at least one unit on the opposite team
-	
+	# Then try to move
 	var starting_coords: Vector2i = acting_unit.coords
 	current_path.clear()
 	current_path.append(starting_coords)
@@ -50,10 +34,14 @@ func try_move(acting_unit: PlacedUnit) -> int:
 			break
 		steps_left -= 1
 		
-	unit_grid.move_unit(starting_coords, acting_unit.coords)
-		
+		# Then try again to use attack. if skill used, break loop
+		if await try_skill(acting_unit, true, false):
+			break
+			
+		# Then try again to use support. if skill used, break loop
+		if await try_skill(acting_unit, false, true):
+			return
 	acting_unit.moved = true
-	return acting_unit.unit.speed - steps_left
 	
 # used bewteen try_take_step calls to prevent backtracking during a move.
 var current_path: Array[Vector2i]
@@ -61,7 +49,10 @@ var current_path: Array[Vector2i]
 # Try to take a step in a random direction. Prioritize moving towards a unit on the opposite team.
 # Will not move onto tiles already on the current move path.
 # Return true if a step was taken, as well as add that step to the current path
-func try_take_step(acting_unit: PlacedUnit, ) -> bool:
+func try_take_step(acting_unit: PlacedUnit) -> bool:
+	if acting_unit.moved:
+		return false
+	
 	var targets: Array[PlacedUnit] = unit_grid.enemy_units if acting_unit.allied else unit_grid.allied_units
 	var directions: Array[Vector2i] = [Vector2i.RIGHT, Vector2i.LEFT, Vector2i.UP, Vector2i.DOWN]
 	directions.shuffle()
@@ -71,14 +62,14 @@ func try_take_step(acting_unit: PlacedUnit, ) -> bool:
 		for target_unit in targets:
 			if acting_unit.coords.distance_squared_to(target_unit.coords) > (acting_unit.coords + direction).distance_squared_to(target_unit.coords):
 				if not chapter_battle.is_tile_impassable(acting_unit.coords + direction) and not (acting_unit.coords + direction) in current_path:
-					acting_unit.coords = acting_unit.coords + direction
+					unit_grid.move_unit(acting_unit.coords, acting_unit.coords + direction)
 					current_path.append(acting_unit.coords)
 					return true
 					
 	# If no direction with an enemy in that direction was chosen, try each of the directions again but without caring if there's an enemy unit that way.
 	for direction: Vector2i in directions:
 		if not chapter_battle.is_tile_impassable(acting_unit.coords + direction) and not (acting_unit.coords + direction) in current_path:
-			acting_unit.coords = acting_unit.coords + direction
+			unit_grid.move_unit(acting_unit.coords, acting_unit.coords + direction)
 			current_path.append(acting_unit.coords)
 			return true
 				
