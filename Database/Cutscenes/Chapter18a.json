@@ -5,77 +5,95 @@
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "...",
+		"name_left": "Proton",
 		"bgcolor": "green"
 	},
 	{
 		"left": "proton",
-		"text": "It seems we must go through this Xuirist camp to proceed."
+		"speaker": "left",
+		"text": "It seems we must go through this Xuirist camp to proceed.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "Prepare for battle!"
+		"speaker": "left",
+		"text": "Prepare for battle!",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "You there!"
+		"text": "???: You there!"
 	},
 	{
 		"left": "proton",
-		"text": "???"
-	},
-	{
-		"left": "proton",
-		"right": "xuirer",
-		"text": "I can sense that you are a Proto-Xuir."
-	},
-	{
-		"left": "proton",
-		"right": "xuirer",
-		"text": "..."
-	},
-	{
-		"left": "proton",
-		"right": "xuirer",
-		"text": "Do not be afraid, I am not here to harm you."
+		"speaker": "left",
+		"text": "???",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirer",
-		"text": "I am Xuirer, a traveling Xuirist."
+		"text": "???: I can sense that you are a Proto-Xuir."
 	},
 	{
 		"left": "proton",
 		"right": "xuirer",
-		"speaker": "right",
-		"text": "However, the huntings of the Proto-Xuirs... I can't support it."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirer",
-		"speaker": "right",
-		"text": "Why do we wish to wish to destroy what we worship?"
+		"text": "???: Do not be afraid, I am not here to harm you."
+	},
+	{
+		"left": "proton",
+		"right": "xuirer",
+		"text": "???: I am Xuirer, a traveling Xuirist."
 	},
 	{
 		"left": "proton",
 		"right": "xuirer",
 		"speaker": "right",
-		"text": "The Proto-Xuirs should be worshipped, for the Xuirs are an extension of the True Xuir's power."
-	},
-	{
-		"left": "proton",
-		"right": "xuirer",
-		"text": "..."
+		"text": "However, the huntings of the Proto-Xuirs... I can't support it.",
+		"name_right": "Xuirer"
 	},
 	{
 		"left": "proton",
 		"right": "xuirer",
 		"speaker": "right",
-		"text": "Holy Proto-Xuir, I wish to join you on your quest around the world."
+		"text": "Why do we wish to wish to destroy what we worship?",
+		"name_right": "Xuirer"
+	},
+	{
+		"left": "proton",
+		"right": "xuirer",
+		"speaker": "right",
+		"text": "The Proto-Xuirs should be worshipped, for the Xuirs are an extension of the True Xuir's power.",
+		"name_right": "Xuirer"
+	},
+	{
+		"left": "proton",
+		"right": "xuirer",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirer",
+		"speaker": "right",
+		"text": "Holy Proto-Xuir, I wish to join you on your quest around the world.",
+		"name_right": "Xuirer"
 	},
 	{
 		"text": "[Recruit Xuirer?] (Q) Recruit (W) Do not recruit"
@@ -84,64 +102,80 @@
 		"left": "proton",
 		"right": "xuirer",
 		"speaker": "right",
-		"text": "I pray for your victory, Proto-Xuir."
+		"text": "I pray for your victory, Proto-Xuir.",
+		"name_right": "Xuirer"
 	},
 	{
 		"text": "[Xuirist Cavern]"
 	},
 	{
 		"left": "omegaxuirist",
+		"speaker": "left",
 		"text": "...",
+		"name_left": "Omega",
 		"bgcolor": "dim grey"
 	},
 	{
 		"left": "omegaxuirist",
-		"text": "A camp in central Nolavillia has just been destroyed."
+		"speaker": "left",
+		"text": "A camp in central Nolavillia has just been destroyed.",
+		"name_left": "Omega"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "right",
-		"text": "..."
+		"text": "...",
+		"name_right": "Break"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "right",
-		"text": "Destory them."
+		"text": "Destory them.",
+		"name_right": "Break"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
-		"text": "I will send troops out to surround them."
+		"speaker": "left",
+		"text": "I will send troops out to surround them.",
+		"name_left": "Omega"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
-		"text": "They'll have no escape, this is be far stronger the past battles."
-	},
-	{
-		"left": "omegaxuirist",
-		"right": "break",
-		"speaker": "right",
-		"text": "It better be."
-	},
-	{
-		"left": "omegaxuirist",
-		"right": "break",
-		"speaker": "right",
-		"text": "Remember, Omega..."
+		"speaker": "left",
+		"text": "They'll have no escape, this is be far stronger the past battles.",
+		"name_left": "Omega"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "right",
-		"text": "If you fail, they will be destroyed."
+		"text": "It better be.",
+		"name_right": "Break"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
-		"text": "..."
+		"speaker": "right",
+		"text": "Remember, Omega...",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "If you fail, they will be destroyed.",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Omega"
 	},
 	{
 		"text": "[Chapter 19a] [Xuir Plain, Central Nolavillia]",

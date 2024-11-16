@@ -1,7 +1,9 @@
 [
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "It's getting dark, we'll stop by at nearby town soon.",
+		"name_left": "Proton",
 		"bgcolor": "dark green"
 	},
 	{
@@ -13,103 +15,120 @@
 	},
 	{
 		"left": "proton",
-		"text": "I did not expect the town to be so busy this late at night..."
+		"speaker": "left",
+		"text": "I did not expect the town to be so busy this late at night...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "Hey, you just get here?"
+		"text": "???: Hey, you just get here?"
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "Yes, we have just arrived."
+		"speaker": "left",
+		"text": "Yes, we have just arrived.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "Then you probably haven't heard the news yet, have you?"
+		"text": "???: Then you probably haven't heard the news yet, have you?"
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "News?"
+		"speaker": "left",
+		"text": "News?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "The Holy Itucher has been discovered at the Nation of Altar."
+		"text": "???: The Holy Itucher has been discovered at the Nation of Altar."
 	},
 	{
 		"left": "quest",
 		"right": "bladen",
-		"text": "The Holy Itucher!?"
+		"speaker": "left",
+		"text": "The Holy Itucher!?",
+		"name_left": "Quest"
 	},
 	{
 		"left": "quest",
 		"right": "bladen",
-		"text": "You mean to tell me that an artifact was discovered while I was away on this mission!?"
+		"speaker": "left",
+		"text": "You mean to tell me that an artifact was discovered while I was away on this mission!?",
+		"name_left": "Quest"
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "You all know the legends, right?"
+		"text": "???: You all know the legends, right?"
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "'bout how the \"worthy one to wield the Holy Itucher will be granted the power of the Dimensionals\"?"
+		"text": "???: 'bout how the \"worthy one to wield the Holy Itucher will be granted the power of the Dimensionals\"?"
 	},
 	{
 		"left": "quest",
 		"right": "bladen",
-		"text": "Of course I do, I'm the Head of Artifact Research in the Territory of Static!"
+		"speaker": "left",
+		"text": "Of course I do, I'm the Head of Artifact Research in the Territory of Static!",
+		"name_left": "Quest"
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "As you can tell, everyone in town is rushing to head to the Nation of Altar."
+		"text": "???: As you can tell, everyone in town is rushing to head to the Nation of Altar."
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "What about you?"
+		"speaker": "left",
+		"text": "What about you?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "I'm on my way to the Nation of Altar myself."
+		"text": "???: I'm on my way to the Nation of Altar myself."
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "My cousin works there at the temple, so I'll know the way there better than the others."
+		"text": "???: My cousin works there at the temple, so I'll know the way there better than the others."
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "I can help you guys get there if you have the gold, you know?"
+		"text": "???: I can help you guys get there if you have the gold, you know?"
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "You'll do that and miss out on getting it for yourself?"
+		"speaker": "left",
+		"text": "You'll do that and miss out on getting it for yourself?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "Me? The chosen one? Don't make me laugh."
+		"text": "???: Me? The chosen one? Don't make me laugh."
 	},
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "If I'm not getting the power I might as well get some money."
+		"text": "???: If I'm not getting the power I might as well get some money."
 	},
 	{
 		"left": "proton",
 		"right": "quest",
 		"speaker": "right",
-		"text": "Hiring him or not, we should head there immediately. Who knows what could happen if the Itucher got into the wrong hands."
+		"text": "Hiring him or not, we should head there immediately. Who knows what could happen if the Itucher got into the wrong hands.",
+		"name_right": "Quest"
 	},
 	{
 		"text": "[Recruit ????] (Q) Recruit (W) Do not recruit"
@@ -117,16 +136,20 @@
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "Alright then, good luck getting to Altar."
+		"text": "???: Alright then, good luck getting to Altar."
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "Even though it's nightime, will need to head to Altar immediately.",
+		"name_left": "Proton",
 		"bgcolor": "dark green"
 	},
 	{
 		"left": "proton",
-		"text": "The world will be in danger if the Holy Itucher is used for evil."
+		"speaker": "left",
+		"text": "The world will be in danger if the Holy Itucher is used for evil.",
+		"name_left": "Proton"
 	},
 	{
 		"text": "[Chapter 07] [Cos Path, Territory of Cos]",

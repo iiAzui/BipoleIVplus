@@ -5,16 +5,22 @@
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "There's some slimes up ahead, prepare for battle!",
+		"name_left": "Proton",
 		"bgcolor": "green"
 	},
 	{
 		"left": "proton",
-		"text": "We'll be reaching the Territory of Cos soon."
+		"speaker": "left",
+		"text": "We'll be reaching the Territory of Cos soon.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "If we need reinforcements, there will be a member of the Elemental Offense Squad at a nearby town.",
+		"name_left": "Proton",
 		"startchapter": "Chapter03"
 	}
 ]

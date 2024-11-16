@@ -47,11 +47,20 @@ def export_chapter(cutscene_name: str):
         if cutscenes.current_string:
             match = re.search(speaker_pattern, cutscenes.current_string)
             if match:
-                if match.group(0)[:-2].lower() == cutscenes.current_right.lower():
+                if match.group(0)[:-2].lower().replace(" ","") in cutscenes.current_left.lower().replace(" ",""):
+                    line["speaker"] = "left"
+                    line["text"] = re.sub(speaker_pattern, "", cutscenes.current_string)
+                    line["name_left"] = match.group(0)[:-2]
+                elif match.group(0)[:-2].lower().replace(" ","") in cutscenes.current_right.lower().replace(" ",""):
                     line["speaker"] = "right"
-
+                    line["text"] = re.sub(speaker_pattern, "", cutscenes.current_string)
+                    line["name_right"] = match.group(0)[:-2]           
+                else:
+                    line["text"] = cutscenes.current_string      
+            else:
+                line["text"] = cutscenes.current_string    
             
-            line["text"] = re.sub(speaker_pattern, "", cutscenes.current_string)
+            
 
         if screensetup.bg_color_changed:
             line["bgcolor"] = screensetup.bg_color_changed
@@ -79,7 +88,7 @@ def export_chapter(cutscene_name: str):
 
     json_data = json.dumps(dialogue_lines, indent="\t")
     
-    file_path = os.path.join("./Database/Cutscenes", f"{ref_name}.json")
+    file_path = os.path.join("./Database/Cutscenes", f"{ref_name}-converted.json")
     with open(file_path, "w") as file:
         file.write(json_data)
 

@@ -5,16 +5,22 @@
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "We need to return quickly.",
+		"name_left": "Proton",
 		"bgcolor": "dark green"
 	},
 	{
 		"left": "proton",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "We're almost there."
+		"speaker": "left",
+		"text": "We're almost there.",
+		"name_left": "Proton"
 	},
 	{
 		"text": "[Chapter 10a] [Outer Static, Territory of Static]",

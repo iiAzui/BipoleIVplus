@@ -5,24 +5,27 @@
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "We've arrived at the town...",
+		"name_left": "Proton",
 		"bgcolor": "grey"
 	},
 	{
 		"left": "proton",
 		"right": "lacirtcele",
-		"text": "Wha' suuup?"
+		"text": "???: Wha' suuup?"
 	},
 	{
 		"left": "proton",
 		"right": "lacirtcele",
-		"text": "It's me, Lacirtcele Sus of the Elemental Offense Squad."
+		"text": "???: It's me, Lacirtcele Sus of the Elemental Offense Squad."
 	},
 	{
 		"left": "proton",
 		"right": "lacirtcele",
 		"speaker": "right",
-		"text": "I heard y'all might need some help."
+		"text": "I heard y'all might need some help.",
+		"name_right": "Lacirtcele"
 	},
 	{
 		"text": "[Recruit Lacirtcele?] (Q) Recruit (W) Do not recruit"
@@ -31,11 +34,14 @@
 		"left": "proton",
 		"right": "lacirtcele",
 		"speaker": "right",
-		"text": "No problem man, see y'all later."
+		"text": "No problem man, see y'all later.",
+		"name_right": "Lacirtcele"
 	},
 	{
 		"left": "proton",
-		"text": "We should get going."
+		"speaker": "left",
+		"text": "We should get going.",
+		"name_left": "Proton"
 	},
 	{
 		"text": "[The group continues onwards]",
@@ -43,7 +49,9 @@
 	},
 	{
 		"left": "proton",
-		"text": "Everyone get prepared, we should be reaching Sine soon."
+		"speaker": "left",
+		"text": "Everyone get prepared, we should be reaching Sine soon.",
+		"name_left": "Proton"
 	},
 	{
 		"text": "[Chapter 04] [Sine Castle Town, Territory of Sine]",

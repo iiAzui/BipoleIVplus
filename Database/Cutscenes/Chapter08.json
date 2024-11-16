@@ -4,13 +4,15 @@
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "What happened here...",
+		"name_left": "Proton",
 		"bgcolor": "dark red"
 	},
 	{
 		"left": "proton",
 		"right": "Bladeous",
-		"text": "..."
+		"text": "???: ..."
 	},
 	{
 		"left": "proton",
@@ -20,73 +22,93 @@
 	{
 		"left": "proton",
 		"right": "Bladeous",
-		"text": "Hey, don't attack us!"
+		"speaker": "left",
+		"text": "Hey, don't attack us!",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "Bladeous",
-		"text": "..."
+		"text": "???: ..."
 	},
 	{
 		"left": "proton",
 		"right": "Bladeous",
-		"text": "Everyone, prepare for battle!"
-	},
-	{
-		"left": "proton",
-		"right": "Bladeous",
-		"speaker": "right",
-		"text": "The Itucher..."
+		"speaker": "left",
+		"text": "Everyone, prepare for battle!",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "Bladeous",
 		"speaker": "right",
-		"text": "I couldn't control it..."
+		"text": "The Itucher...",
+		"name_right": "Bladeous"
 	},
 	{
 		"left": "proton",
 		"right": "Bladeous",
 		"speaker": "right",
-		"text": "And now... they have it..."
+		"text": "I couldn't control it...",
+		"name_right": "Bladeous"
 	},
 	{
 		"left": "proton",
 		"right": "Bladeous",
 		"speaker": "right",
-		"text": "The Nolavillians..."
+		"text": "And now... they have it...",
+		"name_right": "Bladeous"
 	},
 	{
 		"left": "proton",
 		"right": "Bladeous",
 		"speaker": "right",
-		"text": "At the... Shadow Realm..."
+		"text": "The Nolavillians...",
+		"name_right": "Bladeous"
 	},
 	{
 		"left": "proton",
 		"right": "Bladeous",
 		"speaker": "right",
-		"text": "Please... stop them..."
+		"text": "At the... Shadow Realm...",
+		"name_right": "Bladeous"
 	},
 	{
 		"left": "proton",
-		"text": "..."
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "Please... stop them...",
+		"name_right": "Bladeous"
 	},
 	{
 		"left": "proton",
-		"text": "We'll be heading to Nolavillia as soon as we can."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "We'll be heading to Nolavillia as soon as we can.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "scien",
-		"text": "Nolavillia... I haven't been there since the incident..."
+		"speaker": "left",
+		"text": "Nolavillia... I haven't been there since the incident...",
+		"name_left": "Scien"
 	},
 	{
 		"left": "quest",
-		"text": "Nolavillia, huh. I'll go wherever the artifacts are."
+		"speaker": "left",
+		"text": "Nolavillia, huh. I'll go wherever the artifacts are.",
+		"name_left": "Quest"
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "We'll need to go back to Static to get resources and a means of transportation.",
+		"name_left": "Proton",
 		"startchapter": "Chapter09a"
 	}
 ]

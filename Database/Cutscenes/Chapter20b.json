@@ -5,67 +5,83 @@
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "We'll be passing through the Nolavillian Mountain Range soon.",
+		"name_left": "Proton",
 		"bgcolor": "green"
 	},
 	{
 		"left": "proton",
-		"text": "The path through the mountain range is very narrow, keep on guard for ambushes."
+		"speaker": "left",
+		"text": "The path through the mountain range is very narrow, keep on guard for ambushes.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "And it seems there's already a group of people ahead of us, likely trying to ambush us..."
-	},
-	{
-		"left": "proton",
-		"right": "dael",
-		"text": "You! State your purpose!"
-	},
-	{
-		"left": "proton",
-		"right": "dael",
-		"text": "We're here to retrieve the Holy Itucher."
+		"speaker": "left",
+		"text": "And it seems there's already a group of people ahead of us, likely trying to ambush us...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "dael",
-		"text": "Thats must mean the Holy Itucher is past this mountain range..."
+		"text": "???: You! State your purpose!"
 	},
 	{
 		"left": "proton",
 		"right": "dael",
-		"text": "Though I appreciate your help, we must kill you."
+		"speaker": "left",
+		"text": "We're here to retrieve the Holy Itucher.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "dael",
-		"text": "We're here to obtain the Holy Itucher for prince Neo of Shade, and it would be troublesome if you found it before us."
+		"text": "???: Thats must mean the Holy Itucher is past this mountain range..."
 	},
 	{
 		"left": "proton",
 		"right": "dael",
-		"text": "..."
+		"text": "???: Though I appreciate your help, we must kill you."
+	},
+	{
+		"left": "proton",
+		"right": "dael",
+		"text": "???: We're here to obtain the Holy Itucher for prince Neo of Shade, and it would be troublesome if you found it before us."
+	},
+	{
+		"left": "proton",
+		"right": "dael",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "dael",
 		"speaker": "right",
-		"text": "I've... lost... ?"
+		"text": "I've... lost... ?",
+		"name_right": "Dael"
 	},
 	{
 		"left": "proton",
 		"right": "dael",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "dael",
 		"speaker": "right",
-		"text": "I won't... let you get... any more... information..."
+		"text": "I won't... let you get... any more... information...",
+		"name_right": "Dael"
 	},
 	{
 		"text": "[Dael disintegrates himself with a spell]"
@@ -78,7 +94,8 @@
 		"left": "proton",
 		"right": "dnefed",
 		"speaker": "right",
-		"text": "Umm... we're not that loyal, can we stay alive? We could work for you."
+		"text": "Umm... we're not that loyal, can we stay alive? We could work for you.",
+		"name_right": "Dnefed"
 	},
 	{
 		"text": "[Recruit the Shadian soldiers?] (Q) Recruit (W) Do not recruit"
@@ -89,28 +106,31 @@
 	{
 		"left": "proton",
 		"right": "revolt",
-		"text": "..."
+		"text": "???: ..."
 	},
 	{
 		"left": "proton",
 		"right": "revolt",
-		"text": "You've helped me greatly, Proton."
+		"text": "???: You've helped me greatly, Proton."
 	},
 	{
 		"left": "proton",
 		"right": "revolt",
-		"text": "Who are you?."
+		"speaker": "left",
+		"text": "Who are you?.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "revolt",
-		"text": "I am Revolt, and you have just defeated Dael and his army for me."
+		"text": "???: I am Revolt, and you have just defeated Dael and his army for me."
 	},
 	{
 		"left": "proton",
 		"right": "revolt",
 		"speaker": "right",
-		"text": "I'm in a very good mood today, so I'll grant you this..."
+		"text": "I'm in a very good mood today, so I'll grant you this...",
+		"name_right": "Revolt"
 	},
 	{
 		"text": "[Proton learned Aura]"
@@ -124,75 +144,93 @@
 	},
 	{
 		"left": "omegaxuirist",
+		"speaker": "left",
 		"text": "...",
+		"name_left": "Omega",
 		"bgcolor": "dim grey"
 	},
 	{
 		"left": "omegaxuirist",
-		"text": "Preperations are now complete."
+		"speaker": "left",
+		"text": "Preperations are now complete.",
+		"name_left": "Omega"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "right",
-		"text": "Good."
+		"text": "Good.",
+		"name_right": "Break"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "right",
-		"text": "We'll kill every last one of them fools."
+		"text": "We'll kill every last one of them fools.",
+		"name_right": "Break"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "right",
-		"text": "Those who oppose lord Prime shall no longer live..."
+		"text": "Those who oppose lord Prime shall no longer live...",
+		"name_right": "Break"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "right",
-		"text": "And the Holy Itucher shall finally become ours!"
+		"text": "And the Holy Itucher shall finally become ours!",
+		"name_right": "Break"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
-		"text": "..."
-	},
-	{
-		"left": "omegaxuirist",
-		"right": "break",
-		"speaker": "right",
-		"text": "And one more thing..."
-	},
-	{
-		"left": "omegaxuirist",
-		"right": "break",
-		"speaker": "right",
-		"text": "*They* must partake in the battle."
-	},
-	{
-		"left": "omegaxuirist",
-		"right": "break",
-		"text": "..!"
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Omega"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "right",
-		"text": "No excuses. Either they partake or I'll destroy them myself."
+		"text": "And one more thing...",
+		"name_right": "Break"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "right",
-		"text": "Which would you rather want, Omega?"
+		"text": "*They* must partake in the battle.",
+		"name_right": "Break"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
-		"text": "..."
+		"speaker": "left",
+		"text": "..!",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "No excuses. Either they partake or I'll destroy them myself.",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "Which would you rather want, Omega?",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Omega"
 	},
 	{
 		"text": "...",

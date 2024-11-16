@@ -1,12 +1,16 @@
 [
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "There's a member of the Elemental Offense Squad at a village we'll be passing by.",
+		"name_left": "Proton",
 		"bgcolor": "dark green"
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "It will be important that we have enough power to stop any evil which may be at The Nation of Altar.",
+		"name_left": "Proton",
 		"bgcolor": "dark green"
 	},
 	{
@@ -16,13 +20,13 @@
 	{
 		"left": "proton",
 		"right": "wodahs",
-		"text": "So, you guys are heading to Altar?",
+		"text": "???: So, you guys are heading to Altar?",
 		"bgcolor": "dim grey"
 	},
 	{
 		"left": "proton",
 		"right": "wodahs",
-		"text": "I just finished a mission in Quad so I'll be able to help you if you need it.",
+		"text": "???: I just finished a mission in Quad so I'll be able to help you if you need it.",
 		"bgcolor": "dim grey"
 	},
 	{
@@ -31,11 +35,13 @@
 	{
 		"left": "proton",
 		"right": "wodahs",
-		"text": "Alright then, I'll be heading back to Static."
+		"text": "???: Alright then, I'll be heading back to Static."
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "We're almost at Altar, but there's some bandits up ahead.",
+		"name_left": "Proton",
 		"bgcolor": "dark green"
 	},
 	{

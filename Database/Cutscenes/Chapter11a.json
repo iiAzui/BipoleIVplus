@@ -6,36 +6,50 @@
 	{
 		"left": "proton",
 		"right": "scien",
-		"text": "Survived"
+		"speaker": "left",
+		"text": "Survived",
+		"name_left": "Proton"
 	},
 	{
 		"left": "romra",
 		"right": "tnemecalperii",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Romra"
 	},
 	{
 		"left": "tnemecalperiii",
 		"right": "lacirtcele",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Tnemecalper III"
 	},
 	{
 		"left": "damagein",
 		"right": "wob",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Damagein"
 	},
 	{
 		"left": "bladen",
 		"right": "playablebladeous",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Bladen"
 	},
 	{
 		"left": "azure",
 		"right": "erif",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Azure"
 	},
 	{
 		"left": "vruh",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Vruh"
 	},
 	{
 		"text": "..."
@@ -48,16 +62,22 @@
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "We'll be sailing around the Territory of Castle and will head northeast to Nolavillia from there.",
+		"name_left": "Proton",
 		"bgcolor": "navy"
 	},
 	{
 		"left": "proton",
-		"text": "But we'll need to be careful, the Bipole Sea is a dangerous place."
+		"speaker": "left",
+		"text": "But we'll need to be careful, the Bipole Sea is a dangerous place.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "We should be safe for now...",
+		"name_left": "Proton",
 		"bgcolor": "navy"
 	},
 	{
@@ -66,32 +86,36 @@
 	{
 		"left": "proton",
 		"right": "recils",
-		"text": "What are you guys doing?"
+		"text": "???: What are you guys doing?"
 	},
 	{
 		"left": "proton",
 		"right": "recils",
-		"text": "Going to Nolavillia to reclaim the Holy Itucher."
+		"speaker": "left",
+		"text": "Going to Nolavillia to reclaim the Holy Itucher.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "recils",
-		"text": "Someone's taken it already?"
+		"text": "???: Someone's taken it already?"
 	},
 	{
 		"left": "proton",
 		"right": "recils",
-		"text": "Yeah, some evil scientists."
+		"speaker": "left",
+		"text": "Yeah, some evil scientists.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "recils",
-		"text": "..."
+		"text": "???: ..."
 	},
 	{
 		"left": "proton",
 		"right": "recils",
-		"text": "You guys mind if I join you? This would look pretty good on my r\u0117sum\u00e9."
+		"text": "???: You guys mind if I join you? This would look pretty good on my r\u0117sum\u00e9."
 	},
 	{
 		"text": "[Recruit ???] (Q) Recruit (W) Do not recruit"
@@ -99,7 +123,7 @@
 	{
 		"left": "proton",
 		"right": "recils",
-		"text": "Okay then."
+		"text": "???: Okay then."
 	},
 	{
 		"text": "[Chapter 12a] [Bipole Sea, Bipole Sea]",

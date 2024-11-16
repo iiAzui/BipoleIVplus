@@ -8,12 +8,16 @@
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "Everyone, I have talked with the king and he has provided us a ship.",
+		"name_left": "Proton",
 		"bgcolor": "grey"
 	},
 	{
 		"left": "proton",
-		"text": "We will set sail as soon as everyone is ready."
+		"speaker": "left",
+		"text": "We will set sail as soon as everyone is ready.",
+		"name_left": "Proton"
 	},
 	{
 		"text": "[Static Town Port, Territory of Static]",
@@ -22,35 +26,39 @@
 	{
 		"left": "proton",
 		"right": "fael",
-		"text": "Hello, are you Proton Xurr?",
+		"text": "???: Hello, are you Proton Xurr?",
 		"bgcolor": "navy"
 	},
 	{
 		"left": "proton",
 		"right": "fael",
-		"text": "I am."
+		"speaker": "left",
+		"text": "I am.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "fael",
-		"text": "I am Fael Illyure of the Elemental Offense Squad."
+		"text": "???: I am Fael Illyure of the Elemental Offense Squad."
 	},
 	{
 		"left": "proton",
 		"right": "erif",
-		"text": "And I am Erif Blaze of the Elemental Offense Squad."
-	},
-	{
-		"left": "proton",
-		"right": "erif",
-		"speaker": "right",
-		"text": "We have been assigned to assist you on your voyage to the Nolavillian Continent."
+		"text": "???: And I am Erif Blaze of the Elemental Offense Squad."
 	},
 	{
 		"left": "proton",
 		"right": "erif",
 		"speaker": "right",
-		"text": "However, due to another assignment going on, only one of us can help you."
+		"text": "We have been assigned to assist you on your voyage to the Nolavillian Continent.",
+		"name_right": "Erif"
+	},
+	{
+		"left": "proton",
+		"right": "erif",
+		"speaker": "right",
+		"text": "However, due to another assignment going on, only one of us can help you.",
+		"name_right": "Erif"
 	},
 	{
 		"left": "fael",
@@ -61,7 +69,8 @@
 		"left": "proton",
 		"right": "fael",
 		"speaker": "right",
-		"text": "Bruh."
+		"text": "Bruh.",
+		"name_right": "Fael"
 	},
 	{
 		"left": "proton",
@@ -69,47 +78,52 @@
 		"text": "(...)"
 	},
 	{
-		"text": "DID SOMEBODY SAY \"BRUH\"!?"
+		"text": "???: DID SOMEBODY SAY \"BRUH\"!?"
 	},
 	{
 		"left": "proton",
 		"right": "vruh",
-		"text": "Bruh-huh!"
+		"text": "???: Bruh-huh!"
 	},
 	{
 		"left": "proton",
 		"right": "vruh",
-		"text": "I am the great Vruh E. Momen LXIX!"
-	},
-	{
-		"left": "proton",
-		"right": "vruh",
-		"speaker": "right",
-		"text": "I search the world for epic \"Bruh Moments\", and your sir... have just said \"Bruh\"!"
+		"text": "???: I am the great Vruh E. Momen LXIX!"
 	},
 	{
 		"left": "proton",
 		"right": "vruh",
 		"speaker": "right",
-		"text": "Such wholesomeness! Such gaming!"
+		"text": "I search the world for epic \"Bruh Moments\", and your sir... have just said \"Bruh\"!",
+		"name_right": "Vruh"
 	},
 	{
 		"left": "proton",
 		"right": "vruh",
 		"speaker": "right",
-		"text": "Such... D R I P"
+		"text": "Such wholesomeness! Such gaming!",
+		"name_right": "Vruh"
 	},
 	{
 		"left": "proton",
 		"right": "vruh",
 		"speaker": "right",
-		"text": "This is truly poggers!"
+		"text": "Such... D R I P",
+		"name_right": "Vruh"
 	},
 	{
 		"left": "proton",
 		"right": "vruh",
 		"speaker": "right",
-		"text": "Oh what an adventure this will be!"
+		"text": "This is truly poggers!",
+		"name_right": "Vruh"
+	},
+	{
+		"left": "proton",
+		"right": "vruh",
+		"speaker": "right",
+		"text": "Oh what an adventure this will be!",
+		"name_right": "Vruh"
 	},
 	{
 		"text": "[Q] You're hired [W] We never recruited you"
@@ -118,29 +132,35 @@
 		"left": "proton",
 		"right": "vruh",
 		"speaker": "right",
-		"text": "Oh, so that's how it is..."
+		"text": "Oh, so that's how it is...",
+		"name_right": "Vruh"
 	},
 	{
 		"left": "proton",
 		"right": "vruh",
 		"speaker": "right",
-		"text": "You shall repent in the fires of the Xuir Wrath for all of eternity, with no hope of ever escaping to freedom, for you have disturbed the way of the Bruh."
+		"text": "You shall repent in the fires of the Xuir Wrath for all of eternity, with no hope of ever escaping to freedom, for you have disturbed the way of the Bruh.",
+		"name_right": "Vruh"
 	},
 	{
 		"left": "proton",
 		"right": "vruh",
 		"speaker": "right",
-		"text": "I wait for the day in which I may witness your untimely gameend so in which I could perform the dance of the defaults upon your soulless husk of a body."
+		"text": "I wait for the day in which I may witness your untimely gameend so in which I could perform the dance of the defaults upon your soulless husk of a body.",
+		"name_right": "Vruh"
 	},
 	{
 		"left": "proton",
 		"right": "vruh",
 		"speaker": "right",
-		"text": "/s"
+		"text": "/s",
+		"name_right": "Vruh"
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "...",
+		"name_left": "Proton",
 		"startchapter": "Chapter11a"
 	}
 ]

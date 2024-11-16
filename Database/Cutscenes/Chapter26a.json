@@ -5,140 +5,196 @@
 	},
 	{
 		"left": "deathpepper",
+		"speaker": "left",
 		"text": "Proton...",
+		"name_left": "Death Pepper",
 		"bgcolor": "dark gray"
 	},
 	{
 		"left": "deathpepper",
-		"text": "I've heard much about you, and you've caused us a lot of trouble..."
+		"speaker": "left",
+		"text": "I've heard much about you, and you've caused us a lot of trouble...",
+		"name_left": "Death Pepper"
 	},
 	{
 		"left": "deathpepper",
-		"text": "I don't understand though, why would you return here after all of these years?"
+		"speaker": "left",
+		"text": "I don't understand though, why would you return here after all of these years?",
+		"name_left": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "We can't let you have the Holy Itucher, you'll surely destroy the world as we know it."
+		"speaker": "left",
+		"text": "We can't let you have the Holy Itucher, you'll surely destroy the world as we know it.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "And this is revenge for what you've done to Specians and the Xuirs."
+		"speaker": "left",
+		"text": "And this is revenge for what you've done to Specians and the Xuirs.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "What I've done to the Xuirs?"
+		"speaker": "right",
+		"text": "What I've done to the Xuirs?",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "The only thing I've done for the Xuirs is help them."
+		"speaker": "right",
+		"text": "The only thing I've done for the Xuirs is help them.",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "What do you mean?"
+		"speaker": "left",
+		"text": "What do you mean?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "The Proto-Xuirs are a pained existence, an incomplete and failed life form."
+		"speaker": "right",
+		"text": "The Proto-Xuirs are a pained existence, an incomplete and failed life form.",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "The Proto-Xuirs will only be free once a complete Xuir is created, the lifeform that they were meant to be!"
+		"speaker": "right",
+		"text": "The Proto-Xuirs will only be free once a complete Xuir is created, the lifeform that they were meant to be!",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "Being incomplete doensn't devalue your existence. This is just an excuse to justify your actions."
+		"speaker": "left",
+		"text": "Being incomplete doensn't devalue your existence. This is just an excuse to justify your actions.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "It doesn't? Well, take a look at this..."
+		"speaker": "right",
+		"text": "It doesn't? Well, take a look at this...",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper_big2",
-		"text": "What do you think of this, Proton?"
+		"speaker": "right",
+		"text": "What do you think of this, Proton?",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper_big2",
-		"text": "You're... a Proto-Xuir?"
+		"speaker": "left",
+		"text": "You're... a Proto-Xuir?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper_big2",
-		"text": "Why do you think I've dedicated myself to the Xuir Research?"
+		"speaker": "right",
+		"text": "Why do you think I've dedicated myself to the Xuir Research?",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper_big2",
-		"text": "I am an incomplete creation of the past researchers, an existence of failure."
+		"speaker": "right",
+		"text": "I am an incomplete creation of the past researchers, an existence of failure.",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper_big2",
-		"text": "This existence is pain. Proton, surely you've considered the fact that you were the result of unsuccessful experiements, that your very existence is a literal embodiment of failure."
+		"speaker": "right",
+		"text": "This existence is pain. Proton, surely you've considered the fact that you were the result of unsuccessful experiements, that your very existence is a literal embodiment of failure.",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper_big2",
-		"text": "I wish to fix this failure, no matter the cost."
+		"speaker": "right",
+		"text": "I wish to fix this failure, no matter the cost.",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper_big2",
-		"text": "I will create the being that were supposed to be, the one that we could've been..."
+		"speaker": "right",
+		"text": "I will create the being that were supposed to be, the one that we could've been...",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper_big2",
-		"text": "And only then, will be free from our burden of an failed existence and be able to die in the peace of knowing that our failure had been fixed."
+		"speaker": "right",
+		"text": "And only then, will be free from our burden of an failed existence and be able to die in the peace of knowing that our failure had been fixed.",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "We must fix our existence, Proton."
+		"speaker": "right",
+		"text": "We must fix our existence, Proton.",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "Sadly, it seems you do not understand."
+		"speaker": "right",
+		"text": "Sadly, it seems you do not understand.",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "Like the others, all who oppose me must be defeated in the sake of mending our existence."
+		"speaker": "right",
+		"text": "Like the others, all who oppose me must be defeated in the sake of mending our existence.",
+		"name_right": "Death Pepper"
 	},
 	{},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "Why... why.. must this happen..."
+		"speaker": "right",
+		"text": "Why... why.. must this happen...",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
 		"right": "deathpepper",
-		"text": "The Xuir... must be... completed..."
+		"speaker": "right",
+		"text": "The Xuir... must be... completed...",
+		"name_right": "Death Pepper"
 	},
 	{
 		"left": "proton",
-		"text": "Everyone, search the area."
+		"speaker": "left",
+		"text": "Everyone, search the area.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "The Holy Itucher should be somewhere around here."
+		"speaker": "left",
+		"text": "The Holy Itucher should be somewhere around here.",
+		"name_left": "Proton"
 	},
 	{
 		"text": "(...)"

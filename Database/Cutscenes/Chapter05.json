@@ -1,12 +1,16 @@
 [
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "Looks like some bandits are in our way.",
+		"name_left": "Proton",
 		"bgcolor": "green"
 	},
 	{
 		"left": "proton",
-		"text": "We'll need to defeat them to go back to Static."
+		"speaker": "left",
+		"text": "We'll need to defeat them to go back to Static.",
+		"name_left": "Proton"
 	},
 	{
 		"text": "[Chapter 06] [Outer Static, Territory of Static]",

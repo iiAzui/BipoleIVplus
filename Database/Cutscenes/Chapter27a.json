@@ -1,49 +1,68 @@
 [
 	{
 		"left": "quest",
+		"speaker": "left",
 		"text": "...",
+		"name_left": "Quest",
 		"bgcolor": "dark grey"
 	},
 	{
 		"left": "quest",
-		"text": "Hmmm? What's this?"
+		"speaker": "left",
+		"text": "Hmmm? What's this?",
+		"name_left": "Quest"
 	},
 	{
 		"text": "(Quest pulls a lever on the wall, opening up a container)"
 	},
 	{
 		"left": "quest",
-		"text": "Is this..."
+		"speaker": "left",
+		"text": "Is this...",
+		"name_left": "Quest"
 	},
 	{
 		"left": "quest",
-		"text": "Yes! It is!"
+		"speaker": "left",
+		"text": "Yes! It is!",
+		"name_left": "Quest"
 	},
 	{
 		"left": "quest",
-		"text": "The Holy Itucher..."
+		"speaker": "left",
+		"text": "The Holy Itucher...",
+		"name_left": "Quest"
 	},
 	{
 		"left": "quest",
-		"text": "It's here, right in front of me..."
+		"speaker": "left",
+		"text": "It's here, right in front of me...",
+		"name_left": "Quest"
 	},
 	{
 		"left": "quest",
-		"text": "My life's work of study and research..."
+		"speaker": "left",
+		"text": "My life's work of study and research...",
+		"name_left": "Quest"
 	},
 	{
 		"left": "quest",
-		"text": "After all of these years..."
+		"speaker": "left",
+		"text": "After all of these years...",
+		"name_left": "Quest"
 	},
 	{
 		"left": "quest",
-		"text": "It's finally..."
+		"speaker": "left",
+		"text": "It's finally...",
+		"name_left": "Quest"
 	},
 	{
 		"left": "quest",
 		"right": "proton",
 		"speaker": "right",
-		"text": "Quest, did you find the Itu..."
+		"text": "Quest, did you find the Itu...",
+		"name_right": "Proton"
 	},
 	{
 		"text": "(Proton is blasted back by an explosion around Quest)",
@@ -51,22 +70,30 @@
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "Wh...",
+		"name_left": "Proton",
 		"bgcolor": "indigo"
 	},
 	{
 		"left": "proton",
-		"text": "Quest! Don't activate the Itucher!"
+		"speaker": "left",
+		"text": "Quest! Don't activate the Itucher!",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "questitucher",
-		"text": "..."
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Quest"
 	},
 	{
 		"left": "proton",
 		"right": "questitucher",
-		"text": "Quest!"
+		"speaker": "left",
+		"text": "Quest!",
+		"name_left": "Proton"
 	},
 	{
 		"text": "(Quest stabs Proton with the Holy Itucher)"
@@ -74,77 +101,104 @@
 	{
 		"left": "proton",
 		"right": "questitucher",
-		"text": "..."
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Quest"
 	},
 	{
 		"left": "proton",
 		"right": "scien",
 		"speaker": "right",
-		"text": "Proton!"
+		"text": "Proton!",
+		"name_right": "Scien"
 	},
 	{
 		"left": "proton",
 		"right": "scien",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"text": "[Proton has been defeated]"
 	},
 	{
 		"left": "scien",
-		"text": "Proton!!!"
+		"speaker": "left",
+		"text": "Proton!!!",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "questitucher",
-		"text": "..."
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Quest"
 	},
 	{
 		"left": "scien",
 		"right": "questitucher",
-		"text": "Quest, he must be possessed by the Holy Itucher..."
+		"speaker": "left",
+		"text": "Quest, he must be possessed by the Holy Itucher...",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "questitucher",
-		"text": "He's already killed Proton..."
+		"speaker": "left",
+		"text": "He's already killed Proton...",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "questitucher",
-		"text": "What will happen if he escapes to the rest of the world..."
+		"speaker": "left",
+		"text": "What will happen if he escapes to the rest of the world...",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "questitucher",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "questitucher",
-		"text": "It must be done..."
+		"speaker": "left",
+		"text": "It must be done...",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "questitucher",
-		"text": "The Forbidden Ritual of Nation..."
+		"speaker": "left",
+		"text": "The Forbidden Ritual of Nation...",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "questitucher",
-		"text": "For the sake of the world..."
+		"speaker": "left",
+		"text": "For the sake of the world...",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "questitucher",
-		"text": "I'm sorry, Proton..."
+		"speaker": "left",
+		"text": "I'm sorry, Proton...",
+		"name_left": "Scien"
 	},
 	{
 		"text": "(Scien places his mask on Proton's corpse)"
 	},
 	{
 		"left": "questitucher",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Quest"
 	},
 	{
 		"text": "(Scien glows brightly before fading into the air)",
@@ -159,41 +213,43 @@
 	},
 	{
 		"left": "xuirman",
-		"text": "..."
+		"text": "Proton: ..."
 	},
 	{
 		"left": "xuirman",
-		"text": "Am I... alive?"
-	},
-	{
-		"left": "xuirman",
-		"right": "questitucher",
-		"text": "..."
+		"text": "Proton: Am I... alive?"
 	},
 	{
 		"left": "xuirman",
 		"right": "questitucher",
-		"text": "Scien..."
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Quest"
 	},
 	{
 		"left": "xuirman",
 		"right": "questitucher",
-		"text": "Did he..."
+		"text": "Proton: Scien..."
 	},
 	{
 		"left": "xuirman",
 		"right": "questitucher",
-		"text": "..."
+		"text": "Proton: Did he..."
 	},
 	{
 		"left": "xuirman",
 		"right": "questitucher",
-		"text": "This is for the sake of the world..."
+		"text": "Proton: ..."
 	},
 	{
 		"left": "xuirman",
 		"right": "questitucher",
-		"text": "Quest, you must be stopped."
+		"text": "Proton: This is for the sake of the world..."
+	},
+	{
+		"left": "xuirman",
+		"right": "questitucher",
+		"text": "Proton: Quest, you must be stopped."
 	},
 	{
 		"text": "(Proton awakens Integer)"
@@ -207,22 +263,28 @@
 	{
 		"left": "xuirman",
 		"right": "questitucher",
-		"text": "..."
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Quest"
 	},
 	{
 		"left": "xuirman",
 		"right": "questitucher",
-		"text": "Proton..."
+		"speaker": "right",
+		"text": "Proton...",
+		"name_right": "Quest"
 	},
 	{
 		"left": "xuirman",
 		"right": "questitucher",
-		"text": "Stop me..."
+		"speaker": "right",
+		"text": "Stop me...",
+		"name_right": "Quest"
 	},
 	{
 		"left": "xuirman",
 		"right": "questitucher",
-		"text": "..."
+		"text": "Proton: ..."
 	},
 	{
 		"text": "(Proton seals Quest in the Holy Itucher)",
@@ -230,24 +292,24 @@
 	},
 	{
 		"left": "xuirman",
-		"text": "...",
+		"text": "Proton: ...",
 		"bgcolor": "dark grey"
 	},
 	{
 		"left": "xuirman",
-		"text": "There have been many losses throughout our journey..."
+		"text": "Proton: There have been many losses throughout our journey..."
 	},
 	{
 		"left": "xuirman",
-		"text": "It is because of these sacrifices that we are here today..."
+		"text": "Proton: It is because of these sacrifices that we are here today..."
 	},
 	{
 		"left": "xuirman",
-		"text": "We must not forget those who have been lost in the fight for the Holy Itucher..."
+		"text": "Proton: We must not forget those who have been lost in the fight for the Holy Itucher..."
 	},
 	{
 		"left": "xuirman",
-		"text": "..."
+		"text": "Proton: ..."
 	},
 	{
 		"text": "(And so the Static Army returned to the Continent of Bipole, successfully retrieving the Holy Itucher...)",
@@ -255,214 +317,316 @@
 	},
 	{
 		"left": "proton",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Proton"
 	},
 	{
 		"left": "quest",
-		"text": "Defeated "
+		"speaker": "left",
+		"text": "Defeated ",
+		"name_left": "Quest"
 	},
 	{
 		"left": "scien",
-		"text": "Defeated "
+		"speaker": "left",
+		"text": "Defeated ",
+		"name_left": "Scien"
 	},
 	{
 		"left": "romra",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Romra"
 	},
 	{
 		"left": "tnemecalperi",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Tnemecalper I"
 	},
 	{
 		"left": "tnemecalperii",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Tnemecalper II"
 	},
 	{
 		"left": "tnemecalperiii",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Tnemecalper III"
 	},
 	{
 		"left": "tnemecalperiv",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Tnemecalper IV"
 	},
 	{
 		"left": "lacirtcele",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Lacirtcele"
 	},
 	{
 		"left": "damagein",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Damagein"
 	},
 	{
 		"left": "healia",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Healia"
 	},
 	{
 		"left": "wob",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Wob"
 	},
 	{
 		"left": "bladen",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Bladen"
 	},
 	{
 		"left": "wodahs",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Wodahs"
 	},
 	{
 		"left": "playablebladeous",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Bladeous"
 	},
 	{
 		"left": "azure",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Azure"
 	},
 	{
 		"left": "fael",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Fael"
 	},
 	{
 		"left": "erif",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Erif"
 	},
 	{
 		"left": "vruh",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Vruh"
 	},
 	{
 		"left": "recils",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Recils"
 	},
 	{
 		"left": "repins",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Repins"
 	},
 	{
 		"left": "relaeh",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Relaeh"
 	},
 	{
 		"left": "eulb",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Eulb"
 	},
 	{
 		"left": "lias",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Lias"
 	},
 	{
 		"left": "fieht",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Fieht"
 	},
 	{
 		"left": "rethgif",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Rethgif"
 	},
 	{
 		"left": "eg",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Eg"
 	},
 	{
 		"left": "elbon",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Elbon"
 	},
 	{
 		"left": "b",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "B"
 	},
 	{
 		"left": "xuirventh",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Xuirventh"
 	},
 	{
 		"left": "xuirfth",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Xuirfth"
 	},
 	{
 		"left": "xuirer",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Xuirer"
 	},
 	{
 		"left": "dliug",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Dliug"
 	},
 	{
 		"left": "exa",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Exa"
 	},
 	{
 		"left": "yranecrem",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Yranecrem"
 	},
 	{
 		"left": "geomer",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Geomer"
 	},
 	{
 		"left": "box",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Box"
 	},
 	{
 		"left": "NOTOS",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "NOTOS"
 	},
 	{
 		"left": "yungpoggers",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Yung Poggers"
 	},
 	{
 		"left": "dnefed",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Dnefed"
 	},
 	{
 		"left": "thgif",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Thgif"
 	},
 	{
 		"left": "gnirif",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Gnirif"
 	},
 	{
 		"left": "cigam",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Cigam"
 	},
 	{
 		"left": "omegaxuirist",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Omega"
 	},
 	{
 		"left": "fiyghtrr",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Fiyghtrr"
 	},
 	{
 		"left": "recalper",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Recalper"
 	},
 	{
 		"left": "tabmoc",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Tabmoc"
 	},
 	{
 		"left": "xuirurth",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Xuirurth"
 	},
 	{
 		"left": "repins_big2",
-		"text": "Not Recruited "
+		"text": "Repins Blaze: Not Recruited "
 	},
 	{
 		"left": "ahcem",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Ahcem"
 	},
 	{
 		"left": "cayenne",
-		"text": "Not Recruited "
+		"speaker": "left",
+		"text": "Not Recruited ",
+		"name_left": "Cayenne"
 	},
 	{
 		"left": "xuirman",
-		"text": "Survived"
+		"text": "Proton Xurr: Survived"
 	},
 	{
 		"left": "integer",
-		"text": "Survived"
+		"speaker": "left",
+		"text": "Survived",
+		"name_left": "Integer"
 	}
 ]

@@ -1,0 +1,141 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyg16goh4fsw2"]
+
+[ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_1rjgr"]
+[ext_resource type="Script" path="res://Scripts/dialogue.gd" id="1_dodj1"]
+[ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Sprites/Portraits/proton_big.png" id="2_di4rn"]
+
+[node name="Dialogue" type="Control" node_paths=PackedStringArray("dialogue_text", "name_left", "name_right", "portrait_left", "portrait_right", "color_background")]
+custom_minimum_size = Vector2(1200, 960)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_1rjgr")
+script = ExtResource("1_dodj1")
+first_cutscene_name = "Prologue"
+dialogue_text = NodePath("InnerBox/PanelContainer/MarginContainer/Control/DialogueText")
+name_left = NodePath("InnerBox/PanelContainer/MarginContainer/NameLeft")
+name_right = NodePath("InnerBox/PanelContainer/MarginContainer/NameRight")
+portrait_left = NodePath("InnerBox/Portraits/PortraitLeft")
+portrait_right = NodePath("InnerBox/Portraits/PortraitRight")
+color_background = NodePath("BgColorRect")
+
+[node name="BgColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.329158, 0.329158, 0.329158, 1)
+
+[node name="InnerBox" type="Control" parent="."]
+custom_minimum_size = Vector2(1200, 960)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Portraits" type="Control" parent="InnerBox"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -840.0
+offset_bottom = -300.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PortraitLeft" type="TextureRect" parent="InnerBox/Portraits"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -400.0
+offset_right = 400.0
+grow_vertical = 0
+texture = ExtResource("2_di4rn")
+expand_mode = 1
+
+[node name="PortraitRight" type="TextureRect" parent="InnerBox/Portraits"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -400.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("2_di4rn")
+expand_mode = 1
+flip_h = true
+
+[node name="PanelContainer" type="PanelContainer" parent="InnerBox"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -300.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="InnerBox/PanelContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="NameLeft" type="Label" parent="InnerBox/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 28
+text = "Proton"
+
+[node name="NameRight" type="Label" parent="InnerBox/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 28
+text = "Scien"
+
+[node name="Control" type="Control" parent="InnerBox/PanelContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="DialogueText" type="Label" parent="InnerBox/PanelContainer/MarginContainer/Control"]
+custom_minimum_size = Vector2(960, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -173.0
+offset_right = 480.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "This is the dialogue text. Yap yap yap yap yap yap yap yap yap yap yap  yap yap yap yap yap yap yap yap yap  yap yap yap yap yap yap yap yap yap yap"
+autowrap_mode = 3

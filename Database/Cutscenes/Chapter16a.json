@@ -6,46 +6,64 @@
 	{
 		"left": "proton",
 		"right": "scien",
-		"text": "Survived"
+		"speaker": "left",
+		"text": "Survived",
+		"name_left": "Proton"
 	},
 	{
 		"left": "romra",
 		"right": "tnemecalperii",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Romra"
 	},
 	{
 		"left": "tnemecalperiii",
 		"right": "lacirtcele",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Tnemecalper III"
 	},
 	{
 		"left": "damagein",
 		"right": "wob",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Damagein"
 	},
 	{
 		"left": "bladen",
 		"right": "playablebladeous",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Bladen"
 	},
 	{
 		"left": "azure",
 		"right": "erif",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Azure"
 	},
 	{
 		"left": "vruh",
 		"right": "repins",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Vruh"
 	},
 	{
 		"left": "relaeh",
 		"right": "lias",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Relaeh"
 	},
 	{
 		"left": "fieht",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Fieht"
 	},
 	{
 		"text": "..."
@@ -58,217 +76,229 @@
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "So we're finally here...",
+		"name_left": "Proton",
 		"bgcolor": "green"
 	},
 	{
 		"left": "proton",
 		"right": "scien",
 		"speaker": "right",
-		"text": "It feels strange, being back in Nolavillia."
+		"text": "It feels strange, being back in Nolavillia.",
+		"name_right": "Scien"
 	},
 	{
 		"left": "proton",
 		"right": "scien",
 		"speaker": "right",
-		"text": "I feel like a stranger, like I don't deserve to return here..."
+		"text": "I feel like a stranger, like I don't deserve to return here...",
+		"name_right": "Scien"
 	},
 	{
 		"left": "proton",
 		"right": "scien",
 		"speaker": "right",
-		"text": "..."
+		"text": "...",
+		"name_right": "Scien"
 	},
 	{
 		"left": "tluc",
-		"text": "Do I see what I think I see!?"
+		"text": "???: Do I see what I think I see!?"
 	},
 	{
 		"left": "tluc",
-		"text": "F- F- F- FOREIGNERS!?"
+		"text": "???: F- F- F- FOREIGNERS!?"
 	},
 	{
 		"left": "tluc",
-		"text": "F- F- F- FOREIGNERS!? On MY Xuirist territory?"
+		"text": "???: F- F- F- FOREIGNERS!? On MY Xuirist territory?"
 	},
 	{
 		"left": "tluc",
-		"text": "*laughs maniacally*"
+		"text": "???: *laughs maniacally*"
 	},
 	{
 		"left": "tluc",
-		"text": "YOU THERE!"
-	},
-	{
-		"left": "tluc",
-		"right": "proton",
-		"speaker": "right",
-		"text": "Me?"
-	},
-	{
-		"left": "tluc",
-		"right": "proton",
-		"text": "Yes, you!"
-	},
-	{
-		"left": "tluc",
-		"right": "proton",
-		"text": "Why are you on the shores of Xuirist land?"
+		"text": "???: YOU THERE!"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
 		"speaker": "right",
-		"text": "We've come from the Bipole continent, and we just need to pass through and get to the Nation of Nation."
+		"text": "Me?",
+		"name_right": "Proton"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "Tomfoolery!"
+		"text": "???: Yes, you!"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "I know your Razzions are trying to invade us!"
-	},
-	{
-		"left": "tluc",
-		"right": "proton",
-		"text": "The one and only true god of this world is the True Xuir!"
-	},
-	{
-		"left": "tluc",
-		"right": "proton",
-		"text": "Those who worship the false god of Bobbish must be exterminated!"
+		"text": "???: Why are you on the shores of Xuirist land?"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
 		"speaker": "right",
-		"text": "The True Xuir?"
+		"text": "We've come from the Bipole continent, and we just need to pass through and get to the Nation of Nation.",
+		"name_right": "Proton"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "What about him?"
+		"text": "???: Tomfoolery!"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "Hmm?"
+		"text": "???: I know your Razzions are trying to invade us!"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "Wait... your arm..."
+		"text": "???: The one and only true god of this world is the True Xuir!"
+	},
+	{
+		"left": "tluc",
+		"right": "proton",
+		"text": "???: Those who worship the false god of Bobbish must be exterminated!"
+	},
+	{
+		"left": "tluc",
+		"right": "proton",
+		"speaker": "right",
+		"text": "The True Xuir?",
+		"name_right": "Proton"
+	},
+	{
+		"left": "tluc",
+		"right": "proton",
+		"text": "???: What about him?"
+	},
+	{
+		"left": "tluc",
+		"right": "proton",
+		"text": "???: Hmm?"
+	},
+	{
+		"left": "tluc",
+		"right": "proton",
+		"text": "???: Wait... your arm..."
 	},
 	{
 		"left": "tluc",
 		"right": "protonarm",
-		"text": "That is the mark of the Proto-Xuirs."
+		"text": "???: That is the mark of the Proto-Xuirs."
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
 		"speaker": "right",
-		"text": "Now, may we pass?"
+		"text": "Now, may we pass?",
+		"name_right": "Proton"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "Heh heh heh..."
+		"text": "???: Heh heh heh..."
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "HAH HAH HAH HAH!!!!"
+		"text": "???: HAH HAH HAH HAH!!!!"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "HAAAAAHAHAHAHAHAHAHAHAHA!!!!"
+		"text": "???: HAAAAAHAHAHAHAHAHAHAHAHA!!!!"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "YOU FOOL!"
+		"text": "???: YOU FOOL!"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "YOU COMPLETE IDIOT!!!"
+		"text": "???: YOU COMPLETE IDIOT!!!"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
 		"speaker": "right",
-		"text": "Huh?"
+		"text": "Huh?",
+		"name_right": "Proton"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "We've been searching for you Proto-Xuirs, and now you've come running at us!"
+		"text": "???: We've been searching for you Proto-Xuirs, and now you've come running at us!"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "And funniest thing is, you weren't even on the list of escaped Proto-Xuirs to capture!"
+		"text": "???: And funniest thing is, you weren't even on the list of escaped Proto-Xuirs to capture!"
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "May the false Xuirs perish and my paycheck be raised..."
+		"text": "???: May the false Xuirs perish and my paycheck be raised..."
 	},
 	{
 		"left": "tluc",
 		"right": "proton",
-		"text": "ATTACK!!!"
+		"text": "???: ATTACK!!!"
 	},
 	{
 		"left": "rethgif",
-		"text": "Eg, do I think I see what I see?"
+		"text": "???: Eg, do I think I see what I see?"
 	},
 	{
 		"left": "rethgif",
 		"right": "eg",
 		"speaker": "right",
-		"text": "Likely."
+		"text": "Likely.",
+		"name_right": "Eg"
 	},
 	{
 		"left": "rethgif",
 		"right": "eg",
-		"text": "This is amazing!"
+		"text": "???: This is amazing!"
 	},
 	{
 		"left": "rethgif",
 		"right": "eg",
-		"text": "It's been a while since I've been in a battle. this big..."
+		"text": "???: It's been a while since I've been in a battle. this big..."
 	},
 	{
 		"left": "rethgif",
 		"right": "eg",
-		"text": "We must fight in this battle!"
+		"text": "???: We must fight in this battle!"
 	},
 	{
 		"left": "rethgif",
 		"right": "eg",
-		"text": "If we don't fight, I might end up consuming large amounts of laundry cleaner again; and that would be something that I'd rather not experience."
+		"text": "???: If we don't fight, I might end up consuming large amounts of laundry cleaner again; and that would be something that I'd rather not experience."
 	},
 	{
 		"left": "rethgif",
 		"right": "proton",
-		"text": "You there!"
+		"text": "???: You there!"
 	},
 	{
 		"left": "rethgif",
 		"right": "proton",
 		"speaker": "right",
-		"text": "What!? More enemies?"
+		"text": "What!? More enemies?",
+		"name_right": "Proton"
 	},
 	{
 		"left": "rethgif",
 		"right": "proton",
-		"text": "Will you allow the great Rethgif to fight alongside your forces?"
+		"text": "???: Will you allow the great Rethgif to fight alongside your forces?"
 	},
 	{
 		"text": "[Recruit Rethgif and Eg] (Q) Recruit (W) Do not recruit"
@@ -276,7 +306,9 @@
 	{
 		"left": "rethgif",
 		"right": "proton",
-		"text": "Okay then, I'll just fight along with the other team."
+		"speaker": "left",
+		"text": "Okay then, I'll just fight along with the other team.",
+		"name_left": "Rethgif"
 	},
 	{
 		"text": "[Rethgif and Eg have joined the enemy team]"
@@ -294,44 +326,64 @@
 	},
 	{
 		"left": "tluc",
-		"text": "I've somehow managed to survive this encounter..."
+		"speaker": "left",
+		"text": "I've somehow managed to survive this encounter...",
+		"name_left": "Tluc"
 	},
 	{
 		"left": "tluc",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Tluc"
 	},
 	{
 		"left": "tluc",
-		"text": "I pledge my life to the True Xuir..."
+		"speaker": "left",
+		"text": "I pledge my life to the True Xuir...",
+		"name_left": "Tluc"
 	},
 	{
 		"left": "tluc",
+		"speaker": "left",
 		"text": "XUIRIST CONNECTION!!!",
+		"name_left": "Tluc",
 		"bgcolor": "dark red"
 	},
 	{
 		"left": "tluc",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Tluc"
 	},
 	{
 		"left": "tluc",
-		"text": "This is a dire message to all Xuirists..."
+		"speaker": "left",
+		"text": "This is a dire message to all Xuirists...",
+		"name_left": "Tluc"
 	},
 	{
 		"left": "tluc",
-		"text": "The Generation 3 Proto-Xuir No 2 has been discovered, alive, on the western land border of the continent."
+		"speaker": "left",
+		"text": "The Generation 3 Proto-Xuir No 2 has been discovered, alive, on the western land border of the continent.",
+		"name_left": "Tluc"
 	},
 	{
 		"left": "tluc",
-		"text": "Our squadron has been defeated, and the Proto Xuir is guarded by others."
+		"speaker": "left",
+		"text": "Our squadron has been defeated, and the Proto Xuir is guarded by others.",
+		"name_left": "Tluc"
 	},
 	{
 		"left": "tluc",
-		"text": "They are currently heading to the Nation of Nation, block off all paths to the Nolavillian Mountain Range immediately. "
+		"speaker": "left",
+		"text": "They are currently heading to the Nation of Nation, block off all paths to the Nolavillian Mountain Range immediately. ",
+		"name_left": "Tluc"
 	},
 	{
 		"left": "tluc",
-		"text": "We must exterminate these false Xuirs."
+		"speaker": "left",
+		"text": "We must exterminate these false Xuirs.",
+		"name_left": "Tluc"
 	},
 	{
 		"text": "..."
@@ -349,73 +401,101 @@
 	{
 		"left": "break",
 		"right": "omegaxuirist",
+		"speaker": "left",
 		"text": "What is it, Omega?",
+		"name_left": "Break",
 		"bgcolor": "dim grey"
 	},
 	{
 		"left": "break",
 		"right": "omegaxuirist",
-		"text": "..."
-	},
-	{
-		"left": "break",
-		"right": "omegaxuirist",
-		"text": "The Proto-Xuir is here."
-	},
-	{
-		"left": "break",
-		"right": "omegaxuirist",
-		"text": "What do you mean?"
-	},
-	{
-		"left": "break",
-		"right": "omegaxuirist",
-		"text": "Proto-Xuir G3 N2 has been discovered."
-	},
-	{
-		"left": "break",
-		"right": "omegaxuirist",
-		"text": "What!?"
-	},
-	{
-		"left": "break",
-		"right": "omegaxuirist",
-		"text": "How could he have survived for two decades without being discovered..."
-	},
-	{
-		"left": "break",
-		"right": "omegaxuirist",
-		"text": "Tluc has been defeated by him, it seems the Proto-Xuir has a team of his own."
-	},
-	{
-		"left": "break",
-		"right": "omegaxuirist",
-		"text": "You must capture him immediately."
-	},
-	{
-		"left": "break",
-		"right": "omegaxuirist",
-		"text": "They're heading to the Nation of Nation, we'll be to capture them when they pass by the cavern."
-	},
-	{
-		"left": "break",
-		"right": "omegaxuirist",
-		"text": "They'll also be passing by many Xuirist villages, its possible they may not even reach us without being captured."
-	},
-	{
-		"left": "break",
-		"right": "omegaxuirist",
-		"text": "Do not fail."
-	},
-	{
-		"left": "break",
-		"right": "omegaxuirist",
-		"text": "And do not forget the past."
-	},
-	{
-		"left": "break",
-		"right": "omegaxuirist",
+		"speaker": "right",
 		"text": "...",
+		"name_right": "Omega"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "right",
+		"text": "The Proto-Xuir is here.",
+		"name_right": "Omega"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "left",
+		"text": "What do you mean?",
+		"name_left": "Break"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "right",
+		"text": "Proto-Xuir G3 N2 has been discovered.",
+		"name_right": "Omega"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "left",
+		"text": "What!?",
+		"name_left": "Break"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "left",
+		"text": "How could he have survived for two decades without being discovered...",
+		"name_left": "Break"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "right",
+		"text": "Tluc has been defeated by him, it seems the Proto-Xuir has a team of his own.",
+		"name_right": "Omega"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "left",
+		"text": "You must capture him immediately.",
+		"name_left": "Break"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "right",
+		"text": "They're heading to the Nation of Nation, we'll be to capture them when they pass by the cavern.",
+		"name_right": "Omega"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "right",
+		"text": "They'll also be passing by many Xuirist villages, its possible they may not even reach us without being captured.",
+		"name_right": "Omega"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "left",
+		"text": "Do not fail.",
+		"name_left": "Break"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "left",
+		"text": "And do not forget the past.",
+		"name_left": "Break"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Omega",
 		"startchapter": "Chapter17c"
 	}
 ]

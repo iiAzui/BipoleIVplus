@@ -6,21 +6,29 @@
 	{
 		"left": "scien",
 		"right": "proton",
+		"speaker": "left",
 		"text": "There are some Slimes blocking out way.",
+		"name_left": "Scien",
 		"bgcolor": "green"
 	},
 	{
 		"left": "scien",
 		"right": "proton",
-		"text": "We'll need to defeat them to continue onwards."
+		"speaker": "left",
+		"text": "We'll need to defeat them to continue onwards.",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
-		"text": "We've defeated the enemy slimes."
+		"speaker": "left",
+		"text": "We've defeated the enemy slimes.",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
+		"speaker": "left",
 		"text": "We'll need to be careful, there will likely be more ahead.",
+		"name_left": "Scien",
 		"startchapter": "Chapter02"
 	}
 ]

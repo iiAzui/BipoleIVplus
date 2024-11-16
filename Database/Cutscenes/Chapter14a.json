@@ -2,101 +2,115 @@
 	{
 		"left": "proton",
 		"right": "bigbrainneville",
-		"text": "Hmmm.....",
+		"text": "???: Hmmm.....",
 		"bgcolor": "navy"
 	},
 	{
 		"left": "proton",
 		"right": "bigbrainneville",
-		"text": "It seems like Diver Neville has lost..."
+		"text": "???: It seems like Diver Neville has lost..."
 	},
 	{
 		"left": "proton",
 		"right": "bigbrainneville",
-		"text": "Well then, I guess it's my turn!"
+		"text": "???: Well then, I guess it's my turn!"
 	},
 	{
 		"left": "proton",
 		"right": "bigbrainneville",
-		"text": "Everyone, CHARGE!!!"
+		"text": "???: Everyone, CHARGE!!!"
 	},
 	{
 		"left": "proton",
-		"text": "I think I see a boat coming towards us..."
+		"speaker": "left",
+		"text": "I think I see a boat coming towards us...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "..."
-	},
-	{
-		"left": "proton",
-		"right": "eulb",
-		"text": "Hey, you know where this is?"
-	},
-	{
-		"left": "proton",
-		"right": "eulb",
-		"text": "The Bipole Sea, nearing Nolavillia."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "eulb",
-		"text": "Oh god, what do I do now..."
+		"text": "???: Hey, you know where this is?"
 	},
 	{
 		"left": "proton",
 		"right": "eulb",
-		"text": "?"
+		"speaker": "left",
+		"text": "The Bipole Sea, nearing Nolavillia.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "eulb",
-		"text": "This is pretty far away from Altar, right?"
+		"text": "???: Oh god, what do I do now..."
 	},
 	{
 		"left": "proton",
 		"right": "eulb",
-		"text": "I was escaping from there but then a storm hit me and I ended up here."
+		"speaker": "left",
+		"text": "?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "eulb",
-		"text": "Is is okay if you could take me to whereever you're going?"
+		"text": "???: This is pretty far away from Altar, right?"
 	},
 	{
 		"left": "proton",
 		"right": "eulb",
-		"text": "We're going to Nolavillia to retrieve the Holy Itucher."
+		"text": "???: I was escaping from there but then a storm hit me and I ended up here."
 	},
 	{
 		"left": "proton",
 		"right": "eulb",
-		"text": "I'm warning you, it could get dangerous."
+		"text": "???: Is is okay if you could take me to whereever you're going?"
 	},
 	{
 		"left": "proton",
 		"right": "eulb",
-		"text": "Wait, why would you want the Itucher?"
+		"speaker": "left",
+		"text": "We're going to Nolavillia to retrieve the Holy Itucher.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "eulb",
-		"text": "It like destroyed Altar Town and stuff."
+		"speaker": "left",
+		"text": "I'm warning you, it could get dangerous.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "eulb",
-		"text": "Well, some evil scientists have gotten it and the world is in danger."
+		"text": "???: Wait, why would you want the Itucher?"
 	},
 	{
 		"left": "proton",
 		"right": "eulb",
-		"text": "The world is in danger?"
+		"text": "???: It like destroyed Altar Town and stuff."
 	},
 	{
 		"left": "proton",
 		"right": "eulb",
-		"text": "I guess I should probably help you stop that."
+		"speaker": "left",
+		"text": "Well, some evil scientists have gotten it and the world is in danger.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "eulb",
+		"text": "???: The world is in danger?"
+	},
+	{
+		"left": "proton",
+		"right": "eulb",
+		"text": "???: I guess I should probably help you stop that."
 	},
 	{
 		"text": "[Recruit ???] (Q) Recruit (W) Do not recruit"
@@ -104,7 +118,7 @@
 	{
 		"left": "proton",
 		"right": "eulb",
-		"text": "Okay..."
+		"text": "???: Okay..."
 	},
 	{
 		"text": "[Chapter 15a] [Bipole Sea, Bipole Sea]",

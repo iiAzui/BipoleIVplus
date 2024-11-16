@@ -1,0 +1,453 @@
+[
+	{
+		"text": "[Year 1279 AN] [Shadow Realm Research Center]",
+		"bgcolor": "black"
+	},
+	{
+		"left": "deathpepper",
+		"speaker": "left",
+		"text": "Scien!",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "Yes?",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "Has the second protype awakened it's Xuir Arts yet?",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "Not yet, sir.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "Then it's likely another failure.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "Prepare the new extraction room, I might as well get some life energy from this.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "And who knows, the torture might awaken one of it's arts.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "Sir...",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "Sir... I will not.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "You dare defy my orders?",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "I've worked at this research center for the past seven years, but I can no longer handle this suffering.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "I will likely die, but at least this will reduce the suffering of others.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "I've suspected that you'd betray me.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "Don't think that I haven't noticed that the Forbidden Ritual you had given was fake.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "You attempted the Forbidden Ritual of Nation!?",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "The only reason you're still alive is because of your of your efficiency, though it seems that you'll no longer cooperate with us.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "It's a shame that I'll have to kill you now, the only other person that could replace you is Break, and let's say that I'm not his biggest fan.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "...",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "It's been eight painful years since you destroyed my town for the Forbidden Ritual...",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "For these eight years, I've lacked the courage to stop the pain, to not continue to work with you...",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "I should have done this earlier, but this is something I can no longer live with.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "Though it will not make up for my past actions, I will do everything I can to save even one soul from this place.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "(Scien grabs a young child)",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "What do you think you're doing!?",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "If he stays here, he will die in three days when the extraction finishes. With this, he will have a chance of surival.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "none",
+		"text": "(Scien activates a device)",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "BREAK! DEACTIVATE THE DEVICE!",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "break",
+		"speaker": "right",
+		"text": "The device seems to be malfunctioning...",
+		"name_right": "Break"
+	},
+	{
+		"left": "deathpepper",
+		"right": "break",
+		"speaker": "left",
+		"text": "Wait, does that mean...",
+		"name_left": "Death Pepper",
+		"name_right": "Break"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "You fool! There's no way you'll survive with a broken teleporter! Who knows where it'll take you.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "You'll probably starve in the middle of the ocean.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "If so, I will accept that fate as punishment.",
+		"name_left": "Death Pepper",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"text": "(The teleporter activates and Scien disappears with the child)"
+	},
+	{
+		"left": "deathpepper",
+		"speaker": "left",
+		"text": "They got away, what a waste of resources...",
+		"name_left": "Death Pepper"
+	},
+	{
+		"text": "..."
+	},
+	{
+		"text": "[1298 AN, 19 years later] [Static Castle, The Territories of Bipole]"
+	},
+	{
+		"text": "???: *knock* *knock* *knock*",
+		"bgcolor": "gray"
+	},
+	{
+		"text": "???: Who is it?"
+	},
+	{
+		"left": "proton",
+		"text": "???: Greeetings, Quest."
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "I am Proton Xurr of the Knights of Static.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "right",
+		"text": "Ah, the Nolavillian Knight.",
+		"name_right": "Quest"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "left",
+		"text": "Xuir, actually.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "right",
+		"text": "My apologies.",
+		"name_right": "Quest"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "right",
+		"text": "Anyway, why are you here?",
+		"name_right": "Quest"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "left",
+		"text": "There is a large band of bandits, known as the Guild of Retool, who have threatened the allied territory of Sine with an attack.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "left",
+		"text": "The King has request us, as well as the head of the knights, Sir Scien, to assist Sine against the forces.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "right",
+		"text": "I would decline, but I suppose this is an order from the King.",
+		"name_right": "Quest"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "right",
+		"text": "*sigh*",
+		"name_right": "Quest"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "right",
+		"text": "I'll meet you at the front gates in an hour, is that alright?",
+		"name_right": "Quest"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "left",
+		"text": "Yes, we will await you there.",
+		"name_left": "Proton"
+	},
+	{
+		"text": "[1 hour later...]",
+		"bgcolor": "black"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "left",
+		"text": "So you finally arrive...",
+		"name_left": "Proton",
+		"bgcolor": "green"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "left",
+		"text": "Shall we get going?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "right",
+		"text": "Actually, there's this knight who has offered to aid us...",
+		"name_right": "Quest"
+	},
+	{
+		"left": "romra",
+		"right": "proton",
+		"text": "???: Hello, I'm Romra!"
+	},
+	{
+		"left": "romra",
+		"right": "proton",
+		"speaker": "left",
+		"text": "I'm a newly certified knight, and I wish to one day join the Static Elemental Offense Squad.",
+		"name_left": "Romra"
+	},
+	{
+		"left": "romra",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Of course, I'll need all of the training I can get to do so.",
+		"name_left": "Romra"
+	},
+	{
+		"left": "romra",
+		"right": "proton",
+		"speaker": "left",
+		"text": "If you would allow it, I would like to partake in this mission along side you.",
+		"name_left": "Romra"
+	},
+	{
+		"recruitment_choice": "Romra",
+		"recruitment_choice_text_prompt_todo_implement": "[Recruit Romra?] (Q) Recruit (W) Do not recruit",
+		"true": [
+			{
+				"text": "Romra: Yes! Thank you!",
+				"left": "romra_big",
+				"right": "proton_big"
+			}
+		],
+		"false": [
+			{
+				"text": "Romra: Oh, sorry for bothering you.",
+				"left": "romra_big",
+				"right": "proton_big"
+			}
+		]
+	},
+	{
+		"left": "romra",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Oh, sorry for bothering you.",
+		"name_left": "Romra"
+	},
+	{
+		"left": "scien",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Let's get going.",
+		"name_left": "Scien",
+		"startchapter": "Chapter01"
+	}
+]

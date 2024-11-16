@@ -6,82 +6,114 @@
 	{
 		"left": "proton",
 		"right": "scien",
-		"text": "Survived"
+		"speaker": "left",
+		"text": "Survived",
+		"name_left": "Proton"
 	},
 	{
 		"left": "romra",
 		"right": "tnemecalperii",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Romra"
 	},
 	{
 		"left": "tnemecalperiii",
 		"right": "lacirtcele",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Tnemecalper III"
 	},
 	{
 		"left": "damagein",
 		"right": "wob",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Damagein"
 	},
 	{
 		"left": "bladen",
 		"right": "playablebladeous",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Bladen"
 	},
 	{
 		"left": "azure",
 		"right": "erif",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Azure"
 	},
 	{
 		"left": "vruh",
 		"right": "repins",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Vruh"
 	},
 	{
 		"left": "relaeh",
 		"right": "lias",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Relaeh"
 	},
 	{
 		"left": "fieht",
 		"right": "eg",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Fieht"
 	},
 	{
 		"left": "b",
 		"right": "elbon",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "B"
 	},
 	{
 		"left": "xuirfth",
 		"right": "dliug",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Xuirfth"
 	},
 	{
 		"left": "exa",
 		"right": "geomer",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Exa"
 	},
 	{
 		"left": "box",
 		"right": "yungpoggers",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Box"
 	},
 	{
 		"left": "dnefed",
 		"right": "gnirif",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Dnefed"
 	},
 	{
 		"left": "cigam",
 		"right": "fiyghtrr",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Cigam"
 	},
 	{
 		"left": "recalper",
 		"right": "xuirurth",
-		"text": "Not Recruited"
+		"speaker": "left",
+		"text": "Not Recruited",
+		"name_left": "Recalper"
 	},
 	{
 		"text": "[Chapter 22a] [Enterance, Shadow Realm Research Center]",
@@ -89,7 +121,9 @@
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "...",
+		"name_left": "Proton",
 		"bgcolor": "dim gray"
 	},
 	{
@@ -101,33 +135,39 @@
 	},
 	{
 		"left": "if",
-		"text": "It seems we may have some intruders.",
+		"text": "???: It seems we may have some intruders.",
 		"bgcolor": "light gray"
 	},
 	{
 		"left": "if",
-		"text": "I wonder why they're here... is it because of the Holy Itucher..."
+		"text": "???: I wonder why they're here... is it because of the Holy Itucher..."
 	},
 	{
 		"left": "if",
-		"text": "But how could they have found out? Did they defeat Bladeous?"
+		"text": "???: But how could they have found out? Did they defeat Bladeous?"
 	},
 	{
 		"left": "if",
-		"text": "Well, let's see how they do against us."
+		"text": "???: Well, let's see how they do against us."
 	},
 	{},
 	{
 		"left": "proton",
-		"text": "Hmmm, what's this? It looks like a box..."
+		"speaker": "left",
+		"text": "Hmmm, what's this? It looks like a box...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "(I don't think I'm able to open this box)"
+		"speaker": "left",
+		"text": "(I don't think I'm able to open this box)",
+		"name_left": "Proton"
 	},
 	{
 		"text": "(...)",

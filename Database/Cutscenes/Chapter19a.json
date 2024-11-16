@@ -1,21 +1,29 @@
 [
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "...",
+		"name_left": "Proton",
 		"bgcolor": "green"
 	},
 	{
 		"left": "proton",
-		"text": "I think we're being followed."
+		"speaker": "left",
+		"text": "I think we're being followed.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "Prepare for battle!"
+		"speaker": "left",
+		"text": "Prepare for battle!",
+		"name_left": "Proton"
 	},
 	{},
 	{
 		"left": "proton",
-		"text": "I think that's all of the Xuirists here."
+		"speaker": "left",
+		"text": "I think that's all of the Xuirists here.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
@@ -24,52 +32,54 @@
 	{
 		"left": "proton",
 		"right": "dliug",
-		"text": "Errr... I've had enough of 'em crazy Xuirists."
+		"text": "???: Errr... I've had enough of 'em crazy Xuirists."
 	},
 	{
 		"left": "proton",
 		"right": "dliug",
-		"text": "Ya can't pay me 'nough to do this stuff."
+		"text": "???: Ya can't pay me 'nough to do this stuff."
 	},
 	{
 		"left": "proton",
 		"right": "dliug",
-		"text": "You 'ere!"
+		"text": "???: You 'ere!"
 	},
 	{
 		"left": "proton",
 		"right": "dliug",
-		"text": "Me?"
+		"speaker": "left",
+		"text": "Me?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "dliug",
-		"text": "The hell else would I be talkin' to?"
+		"text": "???: The hell else would I be talkin' to?"
 	},
 	{
 		"left": "proton",
 		"right": "dliug",
-		"text": "Ya probably hate the Xuirists, don't 'ya?"
+		"text": "???: Ya probably hate the Xuirists, don't 'ya?"
 	},
 	{
 		"left": "proton",
 		"right": "dliug",
-		"text": "'ey sent me out here to kill ya', after all."
+		"text": "???: 'ey sent me out here to kill ya', after all."
 	},
 	{
 		"left": "proton",
 		"right": "dliug",
-		"text": "Anyway, I've had 'nough of 'em crazy Xuirists."
+		"text": "???: Anyway, I've had 'nough of 'em crazy Xuirists."
 	},
 	{
 		"left": "proton",
 		"right": "dliug",
-		"text": "Ya can't pay me 'nough to do another of 'em Xuir Rituals."
+		"text": "???: Ya can't pay me 'nough to do another of 'em Xuir Rituals."
 	},
 	{
 		"left": "proton",
 		"right": "dliug",
-		"text": "Since 'yer look like ya gonna fight 'em anyways, why not let us help ya?"
+		"text": "???: Since 'yer look like ya gonna fight 'em anyways, why not let us help ya?"
 	},
 	{
 		"text": "[Recruit the Mercenaries?] (Q) Recruit (W) Do not recruit"
@@ -77,44 +87,51 @@
 	{
 		"left": "proton",
 		"right": "dliug",
-		"text": "That's a shame, ain't it?"
+		"text": "???: That's a shame, ain't it?"
 	},
 	{
 		"left": "proton",
-		"text": "..."
-	},
-	{
-		"left": "proton",
-		"right": "geomer",
-		"text": "It seems you may be struggling..."
-	},
-	{
-		"left": "proton",
-		"right": "geomer",
-		"text": "Who are you?"
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "geomer",
-		"text": "I am Geomer, a disciple in Geom theory."
+		"text": "???: It seems you may be struggling..."
 	},
 	{
 		"left": "proton",
 		"right": "geomer",
-		"speaker": "right",
-		"text": "You see, those Xuirists that you were just fighting were using Geom Energy."
+		"speaker": "left",
+		"text": "Who are you?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "geomer",
+		"text": "???: I am Geomer, a disciple in Geom theory."
 	},
 	{
 		"left": "proton",
 		"right": "geomer",
 		"speaker": "right",
-		"text": "Geom Energy is a very powerful force, and it seems you are unfamiliar to it."
+		"text": "You see, those Xuirists that you were just fighting were using Geom Energy.",
+		"name_right": "Geomer"
 	},
 	{
 		"left": "proton",
 		"right": "geomer",
 		"speaker": "right",
-		"text": "As one wishing to spread the knowledge of Geom, I offer to aid you in combat using my Geom powers."
+		"text": "Geom Energy is a very powerful force, and it seems you are unfamiliar to it.",
+		"name_right": "Geomer"
+	},
+	{
+		"left": "proton",
+		"right": "geomer",
+		"speaker": "right",
+		"text": "As one wishing to spread the knowledge of Geom, I offer to aid you in combat using my Geom powers.",
+		"name_right": "Geomer"
 	},
 	{
 		"text": "[Recruit Geomer?] (Q) Recruit (W) Do not recruit"
@@ -123,53 +140,66 @@
 		"left": "proton",
 		"right": "geomer",
 		"speaker": "right",
-		"text": "You fear knowledge, for you cannot comprehend it."
+		"text": "You fear knowledge, for you cannot comprehend it.",
+		"name_right": "Geomer"
 	},
 	{
 		"text": "[Xuirist Cavern]"
 	},
 	{
 		"left": "omegaxuirist",
+		"speaker": "left",
 		"text": "...",
+		"name_left": "Omega",
 		"bgcolor": "dim grey"
 	},
 	{
 		"left": "omegaxuirist",
-		"text": "...they have failed again."
+		"speaker": "left",
+		"text": "...they have failed again.",
+		"name_left": "Omega"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "right",
-		"text": "..."
+		"text": "...",
+		"name_right": "Break"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "right",
-		"text": "Must I remind you of what will happen?"
+		"text": "Must I remind you of what will happen?",
+		"name_right": "Break"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "right",
-		"text": "If you are out of troops to send out, then you must fight the Proto-Xuir to the death yourself."
+		"text": "If you are out of troops to send out, then you must fight the Proto-Xuir to the death yourself.",
+		"name_right": "Break"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
-		"text": "He will be approaching our camp soon, I'll gather all of our troops here and slay him in our final battle."
+		"speaker": "left",
+		"text": "He will be approaching our camp soon, I'll gather all of our troops here and slay him in our final battle.",
+		"name_left": "Omega"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
-		"text": "I will not fail."
+		"speaker": "left",
+		"text": "I will not fail.",
+		"name_left": "Omega"
 	},
 	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "right",
 		"text": "You better keep your word.",
+		"name_right": "Break",
 		"startchapter": "Chapter20b"
 	}
 ]

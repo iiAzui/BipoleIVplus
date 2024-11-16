@@ -1,76 +1,99 @@
 [
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "The Guild of Retool will be here any minute, stay on guard.",
+		"name_left": "Proton",
 		"bgcolor": "green"
 	},
 	{
 		"left": "retool",
-		"text": "Hah hah hah!,"
+		"speaker": "left",
+		"text": "Hah hah hah!,",
+		"name_left": "Retool"
 	},
 	{
 		"left": "retool",
-		"text": "I heard they were getting reinforcements but this is nothing!"
+		"speaker": "left",
+		"text": "I heard they were getting reinforcements but this is nothing!",
+		"name_left": "Retool"
 	},
 	{
 		"left": "retool",
-		"text": "Nothing to be afraid of, let's get 'em!"
+		"speaker": "left",
+		"text": "Nothing to be afraid of, let's get 'em!",
+		"name_left": "Retool"
 	},
 	{},
 	{
 		"left": "retool",
-		"text": "Ah... I'm not going to die here..."
+		"speaker": "left",
+		"text": "Ah... I'm not going to die here...",
+		"name_left": "Retool"
 	},
 	{
 		"left": "retool",
-		"text": "It's time to retreat..."
+		"speaker": "left",
+		"text": "It's time to retreat...",
+		"name_left": "Retool"
 	},
 	{
 		"text": "[The Guild of Retool retreats]."
 	},
 	{
 		"left": "proton",
-		"text": "We did it..."
+		"speaker": "left",
+		"text": "We did it...",
+		"name_left": "Proton"
 	},
 	{
-		"text": "Hmm... that was a high amount of damage..."
-	},
-	{
-		"left": "proton",
-		"text": "Who's there!?"
-	},
-	{
-		"left": "proton",
-		"right": "damagein",
-		"text": "It is I, the great Damagein Elite!"
+		"text": "???: Hmm... that was a high amount of damage..."
 	},
 	{
 		"left": "proton",
-		"right": "damagein",
-		"text": "..."
+		"speaker": "left",
+		"text": "Who's there!?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "damagein",
-		"text": "...who?"
+		"text": "???: It is I, the great Damagein Elite!"
 	},
 	{
 		"left": "proton",
 		"right": "damagein",
-		"speaker": "right",
-		"text": "I, the great Damagein, have dedicated my life towards seeking one thing... DAMAGE!"
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "damagein",
-		"speaker": "right",
-		"text": "And I have just witnessed YOU deal DAMAGE to those bandits!"
+		"speaker": "left",
+		"text": "...who?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "damagein",
 		"speaker": "right",
-		"text": "So I will ask, might I join your army in order to witness more damage?"
+		"text": "I, the great Damagein, have dedicated my life towards seeking one thing... DAMAGE!",
+		"name_right": "Damagein"
+	},
+	{
+		"left": "proton",
+		"right": "damagein",
+		"speaker": "right",
+		"text": "And I have just witnessed YOU deal DAMAGE to those bandits!",
+		"name_right": "Damagein"
+	},
+	{
+		"left": "proton",
+		"right": "damagein",
+		"speaker": "right",
+		"text": "So I will ask, might I join your army in order to witness more damage?",
+		"name_right": "Damagein"
 	},
 	{
 		"text": "[Recruit Damagein?] (Q) Recruit (W) Do not recruit"
@@ -79,15 +102,16 @@
 		"left": "proton",
 		"right": "damagein",
 		"speaker": "right",
-		"text": "Very well then, I will seek damage elsewhere."
+		"text": "Very well then, I will seek damage elsewhere.",
+		"name_right": "Damagein"
 	},
 	{
-		"text": "Are you the people who protected this town?"
+		"text": "???: Are you the people who protected this town?"
 	},
 	{
 		"left": "proton",
 		"right": "healia",
-		"text": "I am Healia Aid, and I wish to join your army for saving my hometown."
+		"text": "???: I am Healia Aid, and I wish to join your army for saving my hometown."
 	},
 	{
 		"text": "[Recruit Healia?] (Q) Recruit (W) Do not recruit"
@@ -96,7 +120,8 @@
 		"left": "proton",
 		"right": "healia",
 		"speaker": "right",
-		"text": "Understood, I wish you all a safe journey."
+		"text": "Understood, I wish you all a safe journey.",
+		"name_right": "Healia"
 	},
 	{
 		"text": "[Chapter 05] [Cos Path, Territory of Cos]",

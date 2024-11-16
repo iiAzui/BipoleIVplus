@@ -1,12 +1,16 @@
 [
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "...",
+		"name_left": "Proton",
 		"bgcolor": "navy"
 	},
 	{
 		"left": "proton",
-		"text": "I think I see someone."
+		"speaker": "left",
+		"text": "I think I see someone.",
+		"name_left": "Proton"
 	},
 	{
 		"text": "(A small boat passes by Proton's ship)"
@@ -14,42 +18,44 @@
 	{
 		"left": "proton",
 		"right": "relaeh",
-		"text": "..."
+		"text": "???: ..."
 	},
 	{
 		"left": "proton",
 		"right": "relaeh",
-		"text": "Are you going to Altar?"
+		"text": "???: Are you going to Altar?"
 	},
 	{
 		"left": "proton",
 		"right": "relaeh",
-		"text": "If so, I don't recommend going there."
+		"text": "???: If so, I don't recommend going there."
 	},
 	{
 		"left": "proton",
 		"right": "relaeh",
-		"text": "No, we are going to Nolavillia."
+		"speaker": "left",
+		"text": "No, we are going to Nolavillia.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "relaeh",
-		"text": "Nolavillia?"
+		"text": "???: Nolavillia?"
 	},
 	{
 		"left": "proton",
 		"right": "relaeh",
-		"text": "I suppose I could live there..."
+		"text": "???: I suppose I could live there..."
 	},
 	{
 		"left": "proton",
 		"right": "relaeh",
-		"text": "I used to live at Altar, but my town was destroyed by the Holy Itucher."
+		"text": "???: I used to live at Altar, but my town was destroyed by the Holy Itucher."
 	},
 	{
 		"left": "proton",
 		"right": "relaeh",
-		"text": "Would you mind if I joined you guys on your journey to Nolavillia?"
+		"text": "???: Would you mind if I joined you guys on your journey to Nolavillia?"
 	},
 	{
 		"text": "[Recruit ???] (Q) Recruit (W) Do not recruit"
@@ -57,82 +63,86 @@
 	{
 		"left": "proton",
 		"right": "relaeh",
-		"text": "Oh."
+		"text": "???: Oh."
 	},
 	{
 		"left": "proton",
 		"right": "relaeh",
-		"text": "Oh yeah, did I tell you I was being chased by pirates?"
+		"text": "???: Oh yeah, did I tell you I was being chased by pirates?"
 	},
 	{
 		"left": "proton",
 		"right": "relaeh",
-		"text": "What!?"
+		"speaker": "left",
+		"text": "What!?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "kaptainkneville",
-		"text": "HAR! HAR! HAR! HAR! HARRRRR!!!"
+		"text": "???: HAR! HAR! HAR! HAR! HARRRRR!!!"
 	},
 	{
 		"left": "proton",
 		"right": "kaptainkneville",
-		"text": "I AM THE GREAT KAPTAIN K'NEVILLE!!!"
+		"text": "???: I AM THE GREAT KAPTAIN K'NEVILLE!!!"
 	},
 	{
 		"left": "proton",
 		"right": "kaptainkneville",
-		"text": "THE GREATEST WARRIOR IN THE REALM!!!"
+		"text": "K'Neville: THE GREATEST WARRIOR IN THE REALM!!!"
 	},
 	{
 		"left": "proton",
 		"right": "kaptainkneville",
-		"text": "THE MASTER OF THE ECONOMY!!!"
+		"text": "K'Neville: THE MASTER OF THE ECONOMY!!!"
 	},
 	{
 		"left": "proton",
 		"right": "kaptainkneville",
-		"text": "THE KING OF THE UNKNOWN AMOUNT OF SEAS!!!"
+		"text": "K'Neville: THE KING OF THE UNKNOWN AMOUNT OF SEAS!!!"
 	},
 	{
 		"left": "proton",
 		"right": "kaptainkneville",
-		"text": "FEAR ME!!!"
+		"text": "K'Neville: FEAR ME!!!"
 	},
 	{
 		"left": "proton",
 		"right": "kaptainkneville",
-		"text": "...AND MY UNTHREATENING CREW!!!"
+		"text": "K'Neville: ...AND MY UNTHREATENING CREW!!!"
 	},
 	{
 		"left": "proton",
 		"right": "diverneville",
-		"text": "What poppin' gang."
+		"text": "???: What poppin' gang."
 	},
 	{
 		"left": "proton",
 		"right": "kaptainkneville",
-		"text": "HAR! HAR! HAR! HAR! HARRRRR!!!"
+		"text": "K'Neville: HAR! HAR! HAR! HAR! HARRRRR!!!"
 	},
 	{
 		"left": "proton",
 		"right": "kaptainkneville",
-		"text": "LEEEEEEETS LOOT 'EM!!!!!!"
+		"text": "K'Neville: LEEEEEEETS LOOT 'EM!!!!!!"
 	},
 	{
 		"left": "proton",
 		"right": "diverneville",
-		"text": "Where we droppin' bois?"
+		"text": "???: Where we droppin' bois?"
 	},
 	{
 		"left": "proton",
 		"right": "diverneville",
-		"text": "SKREEEEEEEEEEEEEEEEE!!!!!!!!!!!"
+		"text": "???: SKREEEEEEEEEEEEEEEEE!!!!!!!!!!!"
 	},
 	{
 		"left": "proton",
 		"right": "diverneville",
-		"text": "Everyone! Prepare for battle!"
+		"speaker": "left",
+		"text": "Everyone! Prepare for battle!",
+		"name_left": "Proton"
 	},
 	{},
 	{

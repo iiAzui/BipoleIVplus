@@ -5,72 +5,91 @@
 	},
 	{
 		"left": "break",
+		"speaker": "left",
 		"text": "...",
+		"name_left": "Break",
 		"bgcolor": "light gray"
 	},
 	{
 		"left": "break",
-		"text": "It seems you vermin have managed to make it to the fourth sector."
+		"speaker": "left",
+		"text": "It seems you vermin have managed to make it to the fourth sector.",
+		"name_left": "Break"
 	},
 	{
 		"left": "break",
-		"text": "Good thing it'll be your last."
+		"speaker": "left",
+		"text": "Good thing it'll be your last.",
+		"name_left": "Break"
 	},
 	{},
 	{
 		"left": "break",
-		"text": "Erghhh..."
+		"speaker": "left",
+		"text": "Erghhh...",
+		"name_left": "Break"
 	},
 	{
 		"left": "break",
-		"text": "This isn't looking too good..."
+		"speaker": "left",
+		"text": "This isn't looking too good...",
+		"name_left": "Break"
 	},
 	{
 		"text": "[Break flees from the lab]"
 	},
 	{
 		"left": "proton",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"text": "[Proton opens a door and a loud alarm sounds]"
 	},
 	{
 		"left": "proton",
-		"text": "...what was that?"
+		"speaker": "left",
+		"text": "...what was that?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "cayenne",
-		"text": "Hello"
+		"text": "???: Hello"
 	},
 	{
 		"left": "proton",
 		"right": "cayenne",
-		"text": "Who are you?"
+		"speaker": "left",
+		"text": "Who are you?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "cayenne",
-		"text": "I am Cayenne, a mechanical created by Death Pepper."
-	},
-	{
-		"left": "proton",
-		"right": "cayenne",
-		"speaker": "right",
-		"text": "Death Pepper, the leader of this lab, awaits in the next sector."
-	},
-	{
-		"left": "proton",
-		"right": "cayenne",
-		"speaker": "right",
-		"text": "But do not worry, I am not your enemy."
+		"text": "???: I am Cayenne, a mechanical created by Death Pepper."
 	},
 	{
 		"left": "proton",
 		"right": "cayenne",
 		"speaker": "right",
-		"text": "I can assist you in your battle against Death Pepper, if you would allow it."
+		"text": "Death Pepper, the leader of this lab, awaits in the next sector.",
+		"name_right": "Cayenne"
+	},
+	{
+		"left": "proton",
+		"right": "cayenne",
+		"speaker": "right",
+		"text": "But do not worry, I am not your enemy.",
+		"name_right": "Cayenne"
+	},
+	{
+		"left": "proton",
+		"right": "cayenne",
+		"speaker": "right",
+		"text": "I can assist you in your battle against Death Pepper, if you would allow it.",
+		"name_right": "Cayenne"
 	},
 	{
 		"text": "[Recruit Cayenne] (Q) Recruit (W) Do not recruit"
@@ -79,7 +98,8 @@
 		"left": "proton",
 		"right": "cayenne",
 		"speaker": "right",
-		"text": "Okay then..."
+		"text": "Okay then...",
+		"name_right": "Cayenne"
 	},
 	{
 		"text": "(...)"
@@ -89,35 +109,51 @@
 	},
 	{
 		"left": "quest",
-		"text": "Soon, the Itucher will be ours."
+		"speaker": "left",
+		"text": "Soon, the Itucher will be ours.",
+		"name_left": "Quest"
 	},
 	{
 		"left": "scien",
-		"text": "It's time to finally end this."
+		"speaker": "left",
+		"text": "It's time to finally end this.",
+		"name_left": "Scien"
 	},
 	{
 		"left": "romra",
-		"text": "The final sector... that sounds a little intimidating..."
+		"speaker": "left",
+		"text": "The final sector... that sounds a little intimidating...",
+		"name_left": "Romra"
 	},
 	{
 		"left": "proton",
-		"text": "It's been a long journey, but it's finally coming to an end..."
+		"speaker": "left",
+		"text": "It's been a long journey, but it's finally coming to an end...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "After all of these years, we're ending this at the very place it started it..."
+		"speaker": "left",
+		"text": "After all of these years, we're ending this at the very place it started it...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "For everyone who suffered..."
+		"speaker": "left",
+		"text": "For everyone who suffered...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "For everyone who died..."
+		"speaker": "left",
+		"text": "For everyone who died...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "We must win!"
+		"speaker": "left",
+		"text": "We must win!",
+		"name_left": "Proton"
 	},
 	{
 		"text": "[Proton opens the door and everyone charges into the sector]",

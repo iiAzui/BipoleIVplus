@@ -5,7 +5,9 @@
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "It's getting dark, we'll have to camp out here for the night.",
+		"name_left": "Proton",
 		"bgcolor": "dark green"
 	},
 	{
@@ -14,84 +16,108 @@
 	},
 	{
 		"left": "proton",
-		"text": "Hmmm? What's that noise?"
+		"speaker": "left",
+		"text": "Hmmm? What's that noise?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
+		"speaker": "left",
 		"text": "...",
+		"name_left": "Proton",
 		"bgcolor": "dark green"
 	},
 	{
 		"left": "proton",
-		"text": "!?"
+		"speaker": "left",
+		"text": "!?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "Everyone! We're surrounded by Xuirists!"
+		"speaker": "left",
+		"text": "Everyone! We're surrounded by Xuirists!",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "Prepare for battle!"
+		"speaker": "left",
+		"text": "Prepare for battle!",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "We've managed to survive the attack, but it seems like the Xuirists will keep hunting us while we're in Nolavillia."
+		"speaker": "left",
+		"text": "We've managed to survive the attack, but it seems like the Xuirists will keep hunting us while we're in Nolavillia.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"text": "We should head to Nation as quickly as possible."
+		"speaker": "left",
+		"text": "We should head to Nation as quickly as possible.",
+		"name_left": "Proton"
 	},
 	{
-		"text": "Hey, you there!"
-	},
-	{
-		"left": "proton",
-		"text": "?"
-	},
-	{
-		"left": "proton",
-		"right": "xuirventh",
-		"text": "Could you open the cage I'm stuck in?"
+		"text": "???: Hey, you there!"
 	},
 	{
 		"left": "proton",
-		"right": "xuirventh",
-		"text": "Why are you in that cage?"
-	},
-	{
-		"left": "proton",
-		"right": "xuirventh",
-		"text": "The Xuirists captured me after I escaped from the Shadow Realm."
+		"speaker": "left",
+		"text": "?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "I think they were going to sacrifice me."
+		"text": "???: Could you open the cage I'm stuck in?"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "The Shadow Realm?"
+		"speaker": "left",
+		"text": "Why are you in that cage?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "Yeah, I'm something called a \"Proto-Xuir\", a failed clone of some dimensional called the \"True Xuir\"."
+		"text": "???: The Xuirists captured me after I escaped from the Shadow Realm."
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "You're a Xuir?"
+		"text": "???: I think they were going to sacrifice me."
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "Yeah I just said that."
+		"speaker": "left",
+		"text": "The Shadow Realm?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "..."
+		"text": "???: Yeah, I'm something called a \"Proto-Xuir\", a failed clone of some dimensional called the \"True Xuir\"."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "You're a Xuir?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: Yeah I just said that."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"text": "[Proton opens the cage]"
@@ -99,183 +125,218 @@
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "Thanks."
+		"text": "???: Thanks."
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "I'd stick around, but there's something I have to do."
+		"text": "???: I'd stick around, but there's something I have to do."
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "There are some other Proto-Xuirs that escaped with me, and one of them was captured by the Xuirists."
+		"text": "???: There are some other Proto-Xuirs that escaped with me, and one of them was captured by the Xuirists."
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "There's other Proto-Xuirs?"
+		"speaker": "left",
+		"text": "There's other Proto-Xuirs?",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "Yeah, it's not like I'm the only one."
+		"text": "???: Yeah, it's not like I'm the only one."
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "Nolavillia is truly a strange place, to think that there would be so many other Xuirs..."
+		"speaker": "left",
+		"text": "Nolavillia is truly a strange place, to think that there would be so many other Xuirs...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "Huh?"
+		"text": "???: Huh?"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "Sorry, this is my first time in Nolavillia since I escaped from the Shadow Realm 20 years ago."
+		"speaker": "left",
+		"text": "Sorry, this is my first time in Nolavillia since I escaped from the Shadow Realm 20 years ago.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "Are you also a Proto-Xuir?"
+		"text": "???: Are you also a Proto-Xuir?"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "Yes."
+		"speaker": "left",
+		"text": "Yes.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "20 years ago... are you Xuirond?"
+		"text": "???: 20 years ago... are you Xuirond?"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "I don't this so."
+		"speaker": "left",
+		"text": "I don't this so.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "My engraving says G3 N2."
+		"speaker": "left",
+		"text": "My engraving says G3 N2.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "Ah, so you are Xuirond."
+		"text": "???: Ah, so you are Xuirond."
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "We thought you died years ago."
+		"text": "???: We thought you died years ago."
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "Of course, we don't really remember you since we were still young."
+		"text": "???: Of course, we don't really remember you since we were still young."
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "Generation 3 Number 7."
-	},
-	{
-		"left": "proton",
-		"right": "xuirventh",
-		"speaker": "right",
-		"text": "We weren't given names so, Xuirventh is just a name I made up a few years ago."
-	},
-	{
-		"left": "proton",
-		"right": "xuirventh",
-		"speaker": "right",
-		"text": "So, what do you go by these days, Xuirond?"
-	},
-	{
-		"left": "proton",
-		"right": "xuirventh",
-		"text": "Proton."
+		"text": "???: I'm Xuirventh: Generation 3 Number 7."
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
 		"speaker": "right",
-		"text": "Fancy name, doesn't have to do with numbers either."
-	},
-	{
-		"left": "proton",
-		"right": "xuirventh",
-		"text": "..."
-	},
-	{
-		"left": "proton",
-		"right": "xuirventh",
-		"speaker": "right",
-		"text": "You said you left, Nolavillia, but why did you come back."
+		"text": "We weren't given names so, Xuirventh is just a name I made up a few years ago.",
+		"name_right": "Xuirventh"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
 		"speaker": "right",
-		"text": "Two decades later seems like a pretty strange time to return."
+		"text": "So, what do you go by these days, Xuirond?",
+		"name_right": "Xuirventh"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "I'm here to stop the Shadow Realm Research Center."
-	},
-	{
-		"left": "proton",
-		"right": "xuirventh",
-		"speaker": "right",
-		"text": "Huh?"
-	},
-	{
-		"left": "proton",
-		"right": "xuirventh",
-		"text": "The Research Center has recently obtained a powerful item called the Holy Itucher."
-	},
-	{
-		"left": "proton",
-		"right": "xuirventh",
-		"text": "With such power, they could easily end the world."
+		"speaker": "left",
+		"text": "Proton.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
 		"speaker": "right",
-		"text": "..."
+		"text": "Fancy name, doesn't have to do with numbers either.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
 		"speaker": "right",
-		"text": "If you're heading to the Shadow Realm, you'll need to go to the Nation of Nation."
+		"text": "You said you left, Nolavillia, but why did you come back.",
+		"name_right": "Xuirventh"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
 		"speaker": "right",
-		"text": "But on you're way, you'll likely pass by the Xuirist Cavern."
+		"text": "Two decades later seems like a pretty strange time to return.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "I'm here to stop the Shadow Realm Research Center.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
 		"speaker": "right",
-		"text": "If you want to team up and help me free Xuirfth, I'll probably be able to convince them to help you stop the Shadow Realm."
+		"text": "Huh?",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "The Research Center has recently obtained a powerful item called the Holy Itucher.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "With such power, they could easily end the world.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
 		"speaker": "right",
-		"text": "You'll probably have to fight those Xuirists anyways."
+		"text": "...",
+		"name_right": "Xuirventh"
 	},
 	{
 		"left": "proton",
 		"right": "xuirventh",
-		"text": "..."
+		"speaker": "right",
+		"text": "If you're heading to the Shadow Realm, you'll need to go to the Nation of Nation.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "But on you're way, you'll likely pass by the Xuirist Cavern.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "If you want to team up and help me free Xuirfth, I'll probably be able to convince them to help you stop the Shadow Realm.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "You'll probably have to fight those Xuirists anyways.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"text": "[Recruit Xuirventh] (Q) Recruit (W) Do not recruit"
@@ -284,7 +345,8 @@
 		"left": "proton",
 		"right": "xuirventh",
 		"speaker": "right",
-		"text": "Well, I've gotta go fight some Xuirists."
+		"text": "Well, I've gotta go fight some Xuirists.",
+		"name_right": "Xuirventh"
 	},
 	{
 		"text": "[Bonus Conversation Unlocked]"
@@ -292,49 +354,65 @@
 	{
 		"left": "scien",
 		"right": "proton",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "proton",
 		"speaker": "right",
-		"text": "Scien, are you alright?"
+		"text": "Scien, are you alright?",
+		"name_right": "Proton"
 	},
 	{
 		"left": "scien",
 		"right": "proton",
-		"text": "The Nation of Nation, the Altar must still stand..."
+		"speaker": "left",
+		"text": "The Nation of Nation, the Altar must still stand...",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "proton",
 		"speaker": "right",
-		"text": "?"
+		"text": "?",
+		"name_right": "Proton"
 	},
 	{
 		"left": "scien",
 		"right": "proton",
-		"text": "That person, Xuirventh, they said they escaped from the Shadow Realm."
+		"speaker": "left",
+		"text": "That person, Xuirventh, they said they escaped from the Shadow Realm.",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "proton",
-		"text": "The only safe place in Nolavillia to hide from the Shadow Realm is in Nation."
+		"speaker": "left",
+		"text": "The only safe place in Nolavillia to hide from the Shadow Realm is in Nation.",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "proton",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "proton",
-		"text": "We need to keep going."
+		"speaker": "left",
+		"text": "We need to keep going.",
+		"name_left": "Scien"
 	},
 	{
 		"left": "scien",
 		"right": "proton",
-		"text": "We must retrieve the Itucher before they can destroy Nation and the rest of the world."
+		"speaker": "left",
+		"text": "We must retrieve the Itucher before they can destroy Nation and the rest of the world.",
+		"name_left": "Scien"
 	},
 	{
 		"text": "[Scien and Proton leveled up!]",
@@ -357,53 +435,73 @@
 	},
 	{
 		"left": "omegaxuirist",
+		"speaker": "left",
 		"text": "....",
+		"name_left": "Omega",
 		"bgcolor": "dim grey"
 	},
 	{
 		"left": "break",
 		"right": "omegaxuirist",
-		"text": "Omega, has the dispatch responded yet?"
+		"speaker": "left",
+		"text": "Omega, has the dispatch responded yet?",
+		"name_left": "Break"
 	},
 	{
 		"left": "break",
 		"right": "omegaxuirist",
-		"text": "No, sir."
+		"speaker": "right",
+		"text": "No, sir.",
+		"name_right": "Omega"
 	},
 	{
 		"left": "break",
 		"right": "omegaxuirist",
-		"text": "It is likely that they have been defeated."
+		"speaker": "right",
+		"text": "It is likely that they have been defeated.",
+		"name_right": "Omega"
 	},
 	{
 		"left": "break",
 		"right": "omegaxuirist",
-		"text": "..."
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Break"
 	},
 	{
 		"left": "break",
 		"right": "omegaxuirist",
-		"text": "Omega, you do realize that failure will not be accepted."
+		"speaker": "left",
+		"text": "Omega, you do realize that failure will not be accepted.",
+		"name_left": "Break"
 	},
 	{
 		"left": "break",
 		"right": "omegaxuirist",
-		"text": "Yes, yes I do."
+		"speaker": "right",
+		"text": "Yes, yes I do.",
+		"name_right": "Omega"
 	},
 	{
 		"left": "break",
 		"right": "omegaxuirist",
-		"text": "If you fail, I will destroy them."
+		"speaker": "left",
+		"text": "If you fail, I will destroy them.",
+		"name_left": "Break"
 	},
 	{
 		"left": "break",
 		"right": "omegaxuirist",
-		"text": "..."
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Omega"
 	},
 	{
 		"left": "break",
 		"right": "omegaxuirist",
+		"speaker": "left",
 		"text": "Do not fail.",
+		"name_left": "Break",
 		"startchapter": "Chapter18a"
 	}
 ]
