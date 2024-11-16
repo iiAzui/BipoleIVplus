@@ -42,33 +42,30 @@ texture = SubResource("ViewportTexture_c5eei")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true
-size = Vector2i(80, 80)
+size = Vector2i(64, 64)
 
 [node name="Control" type="Control" parent="SubViewport"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = -6.375
-offset_top = 6.01
-offset_right = 73.625
-offset_bottom = 86.01
+offset_right = 64.0
+offset_bottom = 64.0
 
 [node name="HealthBeforeDamageBar" type="TextureProgressBar" parent="SubViewport/Control"]
 texture_filter = 1
-custom_minimum_size = Vector2(45, 12)
+custom_minimum_size = Vector2(40, 12)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -48.0
-offset_top = -26.0
-offset_right = -3.0
-offset_bottom = -14.0
+offset_left = -41.0
+offset_top = -16.0
+offset_right = -1.0
+offset_bottom = -4.0
 grow_horizontal = 0
 grow_vertical = 0
 size_flags_horizontal = 4
-min_value = 1.0
 value = 85.0
 nine_patch_stretch = true
 stretch_margin_left = 3
@@ -82,21 +79,20 @@ tint_progress = Color(1, 1, 1, 0.501961)
 
 [node name="HealthBar" type="TextureProgressBar" parent="SubViewport/Control"]
 texture_filter = 1
-custom_minimum_size = Vector2(45, 12)
+custom_minimum_size = Vector2(40, 12)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -48.0
-offset_top = -26.0
-offset_right = -3.0
-offset_bottom = -14.0
+offset_left = -41.0
+offset_top = -16.0
+offset_right = -1.0
+offset_bottom = -4.0
 grow_horizontal = 0
 grow_vertical = 0
 size_flags_horizontal = 4
-min_value = 1.0
 value = 45.0
 nine_patch_stretch = true
 stretch_margin_left = 3
@@ -109,10 +105,10 @@ texture_progress = ExtResource("3_ig5or")
 [node name="LevelBackground" type="ColorRect" parent="SubViewport/Control"]
 z_index = 1
 layout_mode = 0
-offset_left = 13.0
-offset_top = 51.0
-offset_right = 31.0
-offset_bottom = 69.0
+offset_left = 2.0
+offset_top = 43.0
+offset_right = 22.0
+offset_bottom = 63.0
 color = Color(0.23, 0.23, 0.23, 1)
 
 [node name="NinePatchRect" type="NinePatchRect" parent="SubViewport/Control/LevelBackground"]

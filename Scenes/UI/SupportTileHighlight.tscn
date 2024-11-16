@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8douukehi6gq"]
-
-[ext_resource type="PackedScene" uid="uid://dyjwfbpxkygh8" path="res://Scenes/UI/MoveTileHighlight.tscn" id="1_7anmo"]
-
-[node name="SupportTileHighlight" instance=ExtResource("1_7anmo")]
-modulate = Color(0.088, 0.88, 0.2596, 0.858824)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dyjwfbpxkygh8"]
 
-[ext_resource type="Texture2D" uid="uid://crnnp5oyg88ix" path="res://Sprites/UI/TileMoveHighlight.png" id="1_8g71h"]
+[ext_resource type="Texture2D" uid="uid://crnnp5oyg88ix" path="res://Sprites/UI/TileMoveHighlight.png" id="1_lw4xn"]
 
 [sub_resource type="Gradient" id="Gradient_6u3wv"]
 offsets = PackedFloat32Array(0)
@@ -11,11 +11,11 @@ gradient = SubResource("Gradient_6u3wv")
 width = 50
 height = 50
 
-[node name="MoveTileHighlight" type="Sprite3D"]
+[node name="RangeTileHighlight" type="Sprite3D"]
 modulate = Color(0.140351, 0.616508, 0.873457, 0.858824)
 pixel_size = 0.0156
 axis = 1
-texture = ExtResource("1_8g71h")
+texture = ExtResource("1_lw4xn")
 
 [node name="Sprite2D2" type="Sprite3D" parent="."]
 pixel_size = 0.0156

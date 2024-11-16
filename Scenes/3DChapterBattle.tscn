@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://d273u7ss6tahe"]
+[gd_scene load_steps=22 format=3 uid="uid://d273u7ss6tahe"]
 
 [ext_resource type="Script" path="res://Scripts/ChapterBattle.gd" id="1_4h1kv"]
 [ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter01.tres" id="2_5jyhv"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/Overworld/selection.png" id="4_23hxa"]
 [ext_resource type="PackedScene" uid="uid://c4ojdylljxwvf" path="res://Scenes/UI/HoritzontalUnitPreview.tscn" id="4_hpppt"]
 [ext_resource type="Script" path="res://Scripts/MoveSelectPanel.gd" id="5_4jc8v"]
+[ext_resource type="Script" path="res://Scripts/RangeDisplayGrid.gd" id="6_qvrnl"]
 [ext_resource type="Script" path="res://Scripts/BattleCamera.gd" id="7_g4c8c"]
 [ext_resource type="Script" path="res://Scripts/DamagePreview.gd" id="9_4q3fu"]
 [ext_resource type="Script" path="res://Scripts/DamagePreviewPanel.gd" id="9_tool6"]
@@ -54,18 +55,18 @@ ambient_light_energy = 0.75
 script = ExtResource("1_4h1kv")
 placements = ExtResource("2_5jyhv")
 unit_ai = NodePath("UnitAI")
-allied_unit_preview = NodePath("CanvasLayer/Screen/AlliedUnitPreview")
-enemy_unit_preview = NodePath("CanvasLayer/Screen/EnemyUnitPreview")
-damage_preview_panel = NodePath("CanvasLayer/Screen/DamagePreviewPanel")
-move_select_panel = NodePath("CanvasLayer/Screen/MoveSelectPanel")
-attack_button = NodePath("CanvasLayer/Screen/AttackButton")
+allied_unit_preview = NodePath("UICanvasLayer/Screen/AlliedUnitPreview")
+enemy_unit_preview = NodePath("UICanvasLayer/Screen/EnemyUnitPreview")
+damage_preview_panel = NodePath("UICanvasLayer/Screen/DamagePreviewPanel")
+move_select_panel = NodePath("UICanvasLayer/Screen/MoveSelectPanel")
+attack_button = NodePath("UICanvasLayer/Screen/AttackButton")
 unit_grid = NodePath("UnitGrid")
 map_cursor = NodePath("MapCursor")
 range_display_grid = NodePath("RangeDisplayGrid")
-outgoing_hit_percent = NodePath("CanvasLayer/Screen/OutgoingHitChance")
-incoming_hit_percent = NodePath("CanvasLayer/Screen/IncomingHitChance")
-outgoing_hit_percent_label = NodePath("CanvasLayer/Screen/OutgoingHitChance/VBoxContainer/HitPercentLabel")
-incoming_hit_percent_label = NodePath("CanvasLayer/Screen/IncomingHitChance/VBoxContainer/HitPercentLabel")
+outgoing_hit_percent = NodePath("UICanvasLayer/Screen/OutgoingHitChance")
+incoming_hit_percent = NodePath("UICanvasLayer/Screen/IncomingHitChance")
+outgoing_hit_percent_label = NodePath("UICanvasLayer/Screen/OutgoingHitChance/VBoxContainer/HitPercentLabel")
+incoming_hit_percent_label = NodePath("UICanvasLayer/Screen/IncomingHitChance/VBoxContainer/HitPercentLabel")
 battle_camera = NodePath("Node3D")
 
 [node name="UnitAI" type="Node" parent="." node_paths=PackedStringArray("unit_grid", "chapter_battle")]
@@ -92,6 +93,11 @@ script = ExtResource("3_7lps6")
 
 [node name="RangeDisplayGrid" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
+script = ExtResource("6_qvrnl")
+move_color = Color(0.141176, 0.615686, 0.87451, 0.858824)
+attack_color = Color(1, 0.282353, 0.258824, 0.858824)
+support_color = Color(0.1392, 0.87, 0.28536, 0.858824)
+danger_zone_color = Color(0.68, 0, 0.204, 0.717647)
 
 [node name="MapCursor" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
@@ -119,9 +125,9 @@ projection = 1
 fov = 45.0
 size = 17.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UICanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Screen" type="Control" parent="CanvasLayer"]
+[node name="Screen" type="Control" parent="UICanvasLayer"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -130,7 +136,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="AlliedUnitPreview" parent="CanvasLayer/Screen" instance=ExtResource("4_hpppt")]
+[node name="AlliedUnitPreview" parent="UICanvasLayer/Screen" instance=ExtResource("4_hpppt")]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -141,7 +147,7 @@ offset_right = 720.0
 offset_bottom = -32.0
 grow_vertical = 0
 
-[node name="EnemyUnitPreview" parent="CanvasLayer/Screen" instance=ExtResource("4_hpppt")]
+[node name="EnemyUnitPreview" parent="UICanvasLayer/Screen" instance=ExtResource("4_hpppt")]
 z_index = 4
 layout_mode = 1
 anchors_preset = 3
@@ -156,22 +162,22 @@ offset_bottom = -32.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="MarginContainer" parent="CanvasLayer/Screen/EnemyUnitPreview" index="0"]
+[node name="MarginContainer" parent="UICanvasLayer/Screen/EnemyUnitPreview" index="0"]
 layout_direction = 3
 
-[node name="StatsVBoxContainer" parent="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer" index="1"]
+[node name="StatsVBoxContainer" parent="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer" index="1"]
 layout_direction = 2
 
-[node name="HealthBeforeDamageBar" parent="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="2"]
+[node name="HealthBeforeDamageBar" parent="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="2"]
 fill_mode = 0
 
-[node name="HealthBar" parent="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="3"]
+[node name="HealthBar" parent="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="3"]
 fill_mode = 0
 
-[node name="EXPBar" parent="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer" index="2"]
+[node name="EXPBar" parent="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer" index="2"]
 fill_mode = 0
 
-[node name="MoveSelectPanel" type="PanelContainer" parent="CanvasLayer/Screen" node_paths=PackedStringArray("move_name_label", "prev_arrow", "next_arrow")]
+[node name="MoveSelectPanel" type="PanelContainer" parent="UICanvasLayer/Screen" node_paths=PackedStringArray("move_name_label", "prev_arrow", "next_arrow")]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -187,20 +193,20 @@ move_name_label = NodePath("MoveNameLabel")
 prev_arrow = NodePath("LeftButton")
 next_arrow = NodePath("RightButton")
 
-[node name="LeftButton" type="Button" parent="CanvasLayer/Screen/MoveSelectPanel"]
+[node name="LeftButton" type="Button" parent="UICanvasLayer/Screen/MoveSelectPanel"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 32
 text = "<"
 
-[node name="MoveNameLabel" type="Label" parent="CanvasLayer/Screen/MoveSelectPanel"]
+[node name="MoveNameLabel" type="Label" parent="UICanvasLayer/Screen/MoveSelectPanel"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 24
 text = "MoveName"
 
-[node name="RightButton" type="Button" parent="CanvasLayer/Screen/MoveSelectPanel"]
+[node name="RightButton" type="Button" parent="UICanvasLayer/Screen/MoveSelectPanel"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -208,7 +214,7 @@ theme_override_font_sizes/font_size = 32
 text = ">
 "
 
-[node name="OutgoingHitChance" type="PanelContainer" parent="CanvasLayer/Screen" node_paths=PackedStringArray("move_name_label")]
+[node name="OutgoingHitChance" type="PanelContainer" parent="UICanvasLayer/Screen" node_paths=PackedStringArray("move_name_label")]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -222,11 +228,11 @@ mouse_filter = 1
 script = ExtResource("5_4jc8v")
 move_name_label = NodePath("VBoxContainer/HitPercentLabel")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Screen/OutgoingHitChance"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UICanvasLayer/Screen/OutgoingHitChance"]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="HitLabel" type="Label" parent="CanvasLayer/Screen/OutgoingHitChance/VBoxContainer"]
+[node name="HitLabel" type="Label" parent="UICanvasLayer/Screen/OutgoingHitChance/VBoxContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -234,13 +240,13 @@ theme_override_font_sizes/font_size = 16
 text = "HIT"
 vertical_alignment = 1
 
-[node name="HitPercentLabel" type="Label" parent="CanvasLayer/Screen/OutgoingHitChance/VBoxContainer"]
+[node name="HitPercentLabel" type="Label" parent="UICanvasLayer/Screen/OutgoingHitChance/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 32
 text = "85%"
 
-[node name="IncomingHitChance" type="PanelContainer" parent="CanvasLayer/Screen" node_paths=PackedStringArray("move_name_label")]
+[node name="IncomingHitChance" type="PanelContainer" parent="UICanvasLayer/Screen" node_paths=PackedStringArray("move_name_label")]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -254,11 +260,11 @@ mouse_filter = 1
 script = ExtResource("5_4jc8v")
 move_name_label = NodePath("VBoxContainer/HitPercentLabel")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Screen/IncomingHitChance"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UICanvasLayer/Screen/IncomingHitChance"]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="HitLabel" type="Label" parent="CanvasLayer/Screen/IncomingHitChance/VBoxContainer"]
+[node name="HitLabel" type="Label" parent="UICanvasLayer/Screen/IncomingHitChance/VBoxContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -266,13 +272,13 @@ theme_override_font_sizes/font_size = 16
 text = "HIT"
 vertical_alignment = 1
 
-[node name="HitPercentLabel" type="Label" parent="CanvasLayer/Screen/IncomingHitChance/VBoxContainer"]
+[node name="HitPercentLabel" type="Label" parent="UICanvasLayer/Screen/IncomingHitChance/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 32
 text = "85%"
 
-[node name="AttackButton" type="Button" parent="CanvasLayer/Screen"]
+[node name="AttackButton" type="Button" parent="UICanvasLayer/Screen"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -288,7 +294,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 28
 text = "ATTACK!"
 
-[node name="DamagePreviewPanel" type="PanelContainer" parent="CanvasLayer/Screen" node_paths=PackedStringArray("skill_preview", "counter_preview", "followup_preview")]
+[node name="DamagePreviewPanel" type="PanelContainer" parent="UICanvasLayer/Screen" node_paths=PackedStringArray("skill_preview", "counter_preview", "followup_preview")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -307,18 +313,18 @@ skill_preview = NodePath("VBoxContainer/SkillDamage")
 counter_preview = NodePath("VBoxContainer/CounterDamage")
 followup_preview = NodePath("VBoxContainer/FollowupDamage")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Screen/DamagePreviewPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UICanvasLayer/Screen/DamagePreviewPanel"]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="SkillDamage" type="PanelContainer" parent="CanvasLayer/Screen/DamagePreviewPanel/VBoxContainer" node_paths=PackedStringArray("damage_label")]
+[node name="SkillDamage" type="PanelContainer" parent="UICanvasLayer/Screen/DamagePreviewPanel/VBoxContainer" node_paths=PackedStringArray("damage_label")]
 custom_minimum_size = Vector2(300, 70)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nc2w7")
 script = ExtResource("9_4q3fu")
 damage_label = NodePath("DamageLabel")
 
-[node name="DamageLabel" type="Label" parent="CanvasLayer/Screen/DamagePreviewPanel/VBoxContainer/SkillDamage"]
+[node name="DamageLabel" type="Label" parent="UICanvasLayer/Screen/DamagePreviewPanel/VBoxContainer/SkillDamage"]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 28
@@ -327,14 +333,14 @@ label_settings = SubResource("LabelSettings_jdv3k")
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="CounterDamage" type="PanelContainer" parent="CanvasLayer/Screen/DamagePreviewPanel/VBoxContainer" node_paths=PackedStringArray("damage_label")]
+[node name="CounterDamage" type="PanelContainer" parent="UICanvasLayer/Screen/DamagePreviewPanel/VBoxContainer" node_paths=PackedStringArray("damage_label")]
 custom_minimum_size = Vector2(300, 70)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nc2w7")
 script = ExtResource("9_4q3fu")
 damage_label = NodePath("DamageLabel")
 
-[node name="DamageLabel" type="Label" parent="CanvasLayer/Screen/DamagePreviewPanel/VBoxContainer/CounterDamage"]
+[node name="DamageLabel" type="Label" parent="UICanvasLayer/Screen/DamagePreviewPanel/VBoxContainer/CounterDamage"]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 28
@@ -343,14 +349,14 @@ label_settings = SubResource("LabelSettings_jdv3k")
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="FollowupDamage" type="PanelContainer" parent="CanvasLayer/Screen/DamagePreviewPanel/VBoxContainer" node_paths=PackedStringArray("damage_label")]
+[node name="FollowupDamage" type="PanelContainer" parent="UICanvasLayer/Screen/DamagePreviewPanel/VBoxContainer" node_paths=PackedStringArray("damage_label")]
 custom_minimum_size = Vector2(300, 70)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_nc2w7")
 script = ExtResource("9_4q3fu")
 damage_label = NodePath("DamageLabel")
 
-[node name="DamageLabel" type="Label" parent="CanvasLayer/Screen/DamagePreviewPanel/VBoxContainer/FollowupDamage"]
+[node name="DamageLabel" type="Label" parent="UICanvasLayer/Screen/DamagePreviewPanel/VBoxContainer/FollowupDamage"]
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 28
@@ -359,7 +365,7 @@ label_settings = SubResource("LabelSettings_jdv3k")
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="AttackWindow" type="Control" parent="CanvasLayer/Screen"]
+[node name="AttackWindow" type="Control" parent="UICanvasLayer/Screen"]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -368,7 +374,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Screen/AttackWindow"]
+[node name="PanelContainer" type="PanelContainer" parent="UICanvasLayer/Screen/AttackWindow"]
 custom_minimum_size = Vector2(700, 500)
 layout_mode = 1
 anchors_preset = 8
@@ -389,14 +395,14 @@ transform = Transform3D(1, 0, 0, 0, 0.451594, 0.892224, 0, -0.892224, 0.451594, 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_m2r1f")
 
-[connection signal="pressed" from="CanvasLayer/Screen/MoveSelectPanel/LeftButton" to="." method="prev_move"]
-[connection signal="pressed" from="CanvasLayer/Screen/MoveSelectPanel/RightButton" to="." method="next_move"]
-[connection signal="pressed" from="CanvasLayer/Screen/AttackButton" to="." method="attack_pressed"]
+[connection signal="pressed" from="UICanvasLayer/Screen/MoveSelectPanel/LeftButton" to="." method="prev_move"]
+[connection signal="pressed" from="UICanvasLayer/Screen/MoveSelectPanel/RightButton" to="." method="next_move"]
+[connection signal="pressed" from="UICanvasLayer/Screen/AttackButton" to="." method="attack_pressed"]
 
-[editable path="CanvasLayer/Screen/EnemyUnitPreview"]
-[editable path="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/ATKStatDisplay"]
-[editable path="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/DEFStatDisplay"]
-[editable path="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/RESStatDisplay"]
-[editable path="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/SPDStatDisplay"]
-[editable path="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/AGLStatDisplay"]
-[editable path="CanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/ACRStatDisplay"]
+[editable path="UICanvasLayer/Screen/EnemyUnitPreview"]
+[editable path="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/ATKStatDisplay"]
+[editable path="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/DEFStatDisplay"]
+[editable path="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/RESStatDisplay"]
+[editable path="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/SPDStatDisplay"]
+[editable path="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/AGLStatDisplay"]
+[editable path="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/ACRStatDisplay"]

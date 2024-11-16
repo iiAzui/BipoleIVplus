@@ -13,10 +13,9 @@ extends Node3D
 @export var damage_preview_panel: DamagePreviewPanel
 @export var move_select_panel: MoveSelectPanel
 @export var attack_button: Button
-
 @export var unit_grid: UnitGrid
 @export var map_cursor: MapCursor
-@export var range_display_grid: Node3D
+@export var range_display_grid: RangeDisplayGrid
 @export var move_path_line: Line2D
 @export var attack_path_line: Line2D
 @export var outgoing_hit_percent: Control
@@ -25,10 +24,6 @@ extends Node3D
 @export var incoming_hit_percent_label: Label
 
 @export var battle_camera: BattleCamera
-
-const MOVE_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/MoveTileHighlight.tscn")
-const ATTACK_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/AttackTileHighlight.tscn")
-const SUPPORT_TILE_HIGHLIGHT: PackedScene = preload("res://Scenes/UI/SupportTileHighlight.tscn")
 
 const RETRO_WIDTH: int = 19
 const RETRO_HEIGHT: int = 14
@@ -222,8 +217,8 @@ func on_tile_pressed():
 			elif !hovered_unit.attacked:
 				change_cursor_mode(CursorMode.ATTACKING)
 	elif cursor_mode == CursorMode.MOVING:
-		# If there's a unit here, go to attack mode and select the first skill that can hit the hovered unit
-		if hovered_unit:
+		# If there's another unit here, go to attack mode and select the first skill that can hit the hovered unit
+		if hovered_unit and hovered_unit != unit_selected:
 			change_cursor_mode(CursorMode.ATTACKING)
 			var range = abs(hovered_unit.coords.x - unit_selected.coords.x) + abs(hovered_unit.coords.y - unit_selected.coords.y)
 			for i in len(unit_selected.unit.moves):
@@ -296,6 +291,8 @@ func attack_pressed():
 		hovered_unit = unit_selected
 		select_move(-1)
 		show_range(null)
+		attacker.display_damage_preview(0)
+		defender.display_damage_preview(0)
 		change_cursor_mode(CursorMode.SELECT)
 		map_cursor.modulate = Color.TRANSPARENT
 		
@@ -430,6 +427,9 @@ func move_cursor(offset: Vector2i):
 func move_cursor_to(coords: Vector2i):
 	if coords == cursor_coords:
 		return
+		
+	if (unit_selected): unit_selected.display_damage_preview(0)
+	if (hovered_unit): hovered_unit.display_damage_preview(0)
 	
 	cursor_coords = coords
 	cursor_coords.x = clamp(cursor_coords.x, 0, RETRO_WIDTH-1)
@@ -515,15 +515,19 @@ func display_hovered_skill_target():
 		else:
 			damage_preview_panel.followup_preview.display(0, false)
 		
+		unit_selected.display_damage_preview(damage_taken)
+		hovered_unit.display_damage_preview(damage_dealt)
 		allied_unit_preview.display_damage_preview(unit_selected, damage_taken)
 		enemy_unit_preview.display_damage_preview(hovered_unit, damage_dealt)
 		damage_preview_panel.show()
 		outgoing_hit_percent.show()
-		incoming_hit_percent.show()
+		if (in_counter_range): incoming_hit_percent.show()
 		attack_button.show()
 		outgoing_hit_percent_label
 	else:
 		enemy_unit_preview.display_unit(null)
+		if (unit_selected): unit_selected.display_damage_preview(0)
+		if (hovered_unit): hovered_unit.display_damage_preview(0)
 		damage_preview_panel.hide()
 		attack_button.hide()
 		outgoing_hit_percent.hide()
@@ -745,8 +749,7 @@ func end_move_path():
 	if move_path_line: move_path_line.visible = false
 
 func show_range(unit: PlacedUnit):	
-	for child in range_display_grid.get_children():
-		child.queue_free()
+	range_display_grid.clear()
 		
 	moveable_tiles.clear()
 	skill_range_tiles.clear()
@@ -796,7 +799,7 @@ func show_range(unit: PlacedUnit):
 	attackable_tiles.erase(unit.coords)
 	
 	for coords in moveable_tiles.keys():
-		place_highlight(MOVE_TILE_HIGHLIGHT, coords)
+		range_display_grid.show_highlight(coords, range_display_grid.move_color)
 	
 	for coords in attackable_tiles.keys():
 		# Don't show the attack square if unit can move here, blue square should be shown instead
@@ -809,7 +812,7 @@ func show_range(unit: PlacedUnit):
 		if other_unit and other_unit.allied == unit.allied:
 			continue
 			
-		place_highlight(ATTACK_TILE_HIGHLIGHT, coords)
+		range_display_grid.show_highlight(coords, range_display_grid.attack_color)
 		
 	for coords in supportable_tiles.keys():
 		# if player can move or attack here, don't show a support highlight
@@ -821,13 +824,8 @@ func show_range(unit: PlacedUnit):
 		# there has to be an ally here to show the supportable highlight
 		var other_unit: PlacedUnit = unit_grid.get_unit_at(coords)
 		if not other_unit or other_unit.allied == unit.allied:
-			place_highlight(SUPPORT_TILE_HIGHLIGHT, coords)
-		
-func place_highlight(highlight_scene: PackedScene, coords: Vector2i):
-	var highlight: Node3D = highlight_scene.instantiate()
-	highlight.position = Vector3(coords.x, 0, coords.y);
-	range_display_grid.add_child(highlight)
-	
+			range_display_grid.show_highlight(coords, range_display_grid.support_color)
+
 # Mark how many moves remaining at the coords, and spreads movable/attackable range to adjacent tiles
 func spread_range(coords: Vector2i, unit: PlacedUnit, move_remaining: int):
 	# Can't move on this tile if it is solid / there is a unit here

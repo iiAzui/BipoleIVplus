@@ -3,6 +3,7 @@ class_name PlacedUnit
 extends Node3D
 
 @export var health_bar: TextureProgressBar
+@export var health_before_damage_bar: TextureProgressBar
 @export var level_label: Label
 @export var sprite_3d: Sprite3D
 
@@ -57,9 +58,15 @@ func update_unit_visual():
 			shader_mat.set_shader_parameter("texture_albedo", unit.character.overworld_sprite)
 		if health_bar:
 			health_bar.value = unit.hp
-			health_bar.max_value = unit.max_hp
+			health_bar.max_value = unit.max_hp + 1
+			health_before_damage_bar.max_value = unit.max_hp
 			health_bar.texture_progress = HEALTH_BAR_PLAYER if allied else HEALTH_BAR_ENEMY
+			health_before_damage_bar.texture_progress = HEALTH_BAR_PLAYER if allied else HEALTH_BAR_ENEMY
 			level_label.text = str(unit.level)
+
+func display_damage_preview(incoming_damage: int):
+	health_before_damage_bar.value = unit.hp if incoming_damage > 0 else 0
+	health_bar.value = max(0, unit.hp - incoming_damage)
 
 func move_animation(path: Array[Vector2i]):
 	if len(path) == 0:
