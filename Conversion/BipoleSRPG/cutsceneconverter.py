@@ -5,10 +5,13 @@ import placeunits
 
 import os
 import json
+import re
 
 cutscenes.Chapter = "Prologue1"
 
 prev_index = -1
+
+speaker_pattern = r'([a-zA-Z ?\'])+: '
 
 def export_chapter(cutscene_name: str):
     global prev_index
@@ -37,19 +40,25 @@ def export_chapter(cutscene_name: str):
 
         line = {}
 
-        if cutscenes.current_string:
-            line["text"] = cutscenes.current_string
         if cutscenes.current_left:
             line["left"] = cutscenes.current_left
         if cutscenes.current_right:
             line["right"] = cutscenes.current_right
+        if cutscenes.current_string:
+            match = re.search(speaker_pattern, cutscenes.current_string)
+            if match:
+                if match.group(0)[:-2].lower() == cutscenes.current_right.lower():
+                    line["speaker"] = "right"
+
+            
+            line["text"] = re.sub(speaker_pattern, "", cutscenes.current_string)
 
         if screensetup.bg_color_changed:
             line["bgcolor"] = screensetup.bg_color_changed
             screensetup.bg_color_changed = None
 
         if cutscenes.Chapter != cutscene_name:
-            line["startchapter"] = cutscenes.Chapter
+            line["startchapter"] = cutscenes.Chapter.replace(" ","")
 
         if placeunits.battle_started:
             line["battle"] = ref_name
@@ -57,6 +66,8 @@ def export_chapter(cutscene_name: str):
         if select.instant_level_ups:
             line["instant_level_ups"] = select.instant_level_ups
             select.instant_level_ups = []
+
+        
 
         dialogue_lines.append(line)
 

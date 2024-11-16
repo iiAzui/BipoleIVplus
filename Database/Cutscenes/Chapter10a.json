@@ -7,128 +7,140 @@
 		"bgcolor": "black"
 	},
 	{
-		"text": "Proton: Everyone, I have talked with the kingand he has provided us a ship.",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "Everyone, I have talked with the king and he has provided us a ship.",
 		"bgcolor": "grey"
 	},
 	{
-		"text": "Proton: We will set sail as soon as everyone is ready.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "We will set sail as soon as everyone is ready."
 	},
 	{
 		"text": "[Static Town Port, Territory of Static]",
 		"bgcolor": "black"
 	},
 	{
-		"text": "???: Hello, are you Proton Xurr?",
-		"left": "proton_big",
-		"right": "fael_big",
+		"left": "proton",
+		"right": "fael",
+		"text": "Hello, are you Proton Xurr?",
 		"bgcolor": "navy"
 	},
 	{
-		"text": "Proton: I am.",
-		"left": "proton_big",
-		"right": "fael_big"
+		"left": "proton",
+		"right": "fael",
+		"text": "I am."
 	},
 	{
-		"text": "???: I am Fael Illyure of the ElementalOffense Squad.",
-		"left": "proton_big",
-		"right": "fael_big"
+		"left": "proton",
+		"right": "fael",
+		"text": "I am Fael Illyure of the Elemental Offense Squad."
 	},
 	{
-		"text": "???: And I am Erif Blaze of the ElementalOffense Squad.",
-		"left": "proton_big",
-		"right": "erif_big"
+		"left": "proton",
+		"right": "erif",
+		"text": "And I am Erif Blaze of the Elemental Offense Squad."
 	},
 	{
-		"text": "Erif: We have been assigned to assist you onyour voyage to the Nolavillian Continent.",
-		"left": "proton_big",
-		"right": "erif_big"
+		"left": "proton",
+		"right": "erif",
+		"speaker": "right",
+		"text": "We have been assigned to assist you on your voyage to the Nolavillian Continent."
 	},
 	{
-		"text": "Erif: However, due to another assignment going on,only one of us can help you.",
-		"left": "proton_big",
-		"right": "erif_big"
+		"left": "proton",
+		"right": "erif",
+		"speaker": "right",
+		"text": "However, due to another assignment going on, only one of us can help you."
 	},
 	{
-		"text": "[Q] Recruit Fael[W] Recruit Erif[E] Don't recruit either",
-		"left": "fael_big",
-		"right": "erif_big"
+		"left": "fael",
+		"right": "erif",
+		"text": "[Q] Recruit Fael [W] Recruit Erif [E] Don't recruit either"
 	},
 	{
-		"text": "Fael: Bruh.",
-		"left": "proton_big",
-		"right": "fael_big"
+		"left": "proton",
+		"right": "fael",
+		"speaker": "right",
+		"text": "Bruh."
 	},
 	{
-		"text": "(...)",
-		"left": "proton_big",
-		"right": "fael_big"
+		"left": "proton",
+		"right": "fael",
+		"text": "(...)"
 	},
 	{
-		"text": "???: DID SOMEBODY SAY \"BRUH\"!?"
+		"text": "DID SOMEBODY SAY \"BRUH\"!?"
 	},
 	{
-		"text": "???: Bruh-huh!",
-		"left": "proton_big",
-		"right": "vruh_big"
+		"left": "proton",
+		"right": "vruh",
+		"text": "Bruh-huh!"
 	},
 	{
-		"text": "???: I am the great Vruh E. Momen LXIX!",
-		"left": "proton_big",
-		"right": "vruh_big"
+		"left": "proton",
+		"right": "vruh",
+		"text": "I am the great Vruh E. Momen LXIX!"
 	},
 	{
-		"text": "Vruh: I search the world for epic \"BruhMoments\", and your sir... have just said\"Bruh\"!",
-		"left": "proton_big",
-		"right": "vruh_big"
+		"left": "proton",
+		"right": "vruh",
+		"speaker": "right",
+		"text": "I search the world for epic \"Bruh Moments\", and your sir... have just said \"Bruh\"!"
 	},
 	{
-		"text": "Vruh: Such wholesomeness! Such gaming!",
-		"left": "proton_big",
-		"right": "vruh_big"
+		"left": "proton",
+		"right": "vruh",
+		"speaker": "right",
+		"text": "Such wholesomeness! Such gaming!"
 	},
 	{
-		"text": "Vruh: Such... D R I P",
-		"left": "proton_big",
-		"right": "vruh_big"
+		"left": "proton",
+		"right": "vruh",
+		"speaker": "right",
+		"text": "Such... D R I P"
 	},
 	{
-		"text": "Vruh: This is truly poggers!",
-		"left": "proton_big",
-		"right": "vruh_big"
+		"left": "proton",
+		"right": "vruh",
+		"speaker": "right",
+		"text": "This is truly poggers!"
 	},
 	{
-		"text": "Vruh: Oh what an adventure this will be!",
-		"left": "proton_big",
-		"right": "vruh_big"
+		"left": "proton",
+		"right": "vruh",
+		"speaker": "right",
+		"text": "Oh what an adventure this will be!"
 	},
 	{
-		"text": "[Q] You're hired[W] We never recruited you"
+		"text": "[Q] You're hired [W] We never recruited you"
 	},
 	{
-		"text": "Vruh: Oh, so that's how it is...",
-		"left": "proton_big",
-		"right": "vruh_big"
+		"left": "proton",
+		"right": "vruh",
+		"speaker": "right",
+		"text": "Oh, so that's how it is..."
 	},
 	{
-		"text": "Vruh: You shall repent in the fires of the Xuir Wrathfor all of eternity, with no hope of ever escapingto freedom, for you have disturbed the way of the Bruh.",
-		"left": "proton_big",
-		"right": "vruh_big"
+		"left": "proton",
+		"right": "vruh",
+		"speaker": "right",
+		"text": "You shall repent in the fires of the Xuir Wrath for all of eternity, with no hope of ever escaping to freedom, for you have disturbed the way of the Bruh."
 	},
 	{
-		"text": "Vruh: I wait for the day in which I may witness youruntimely gameend so in which I could perform the danceof the defaults upon your soulless husk of a body.",
-		"left": "proton_big",
-		"right": "vruh_big"
+		"left": "proton",
+		"right": "vruh",
+		"speaker": "right",
+		"text": "I wait for the day in which I may witness your untimely gameend so in which I could perform the dance of the defaults upon your soulless husk of a body."
 	},
 	{
-		"text": "Vruh: /s",
-		"left": "proton_big",
-		"right": "vruh_big"
+		"left": "proton",
+		"right": "vruh",
+		"speaker": "right",
+		"text": "/s"
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big",
-		"startchapter": "Chapter 11a"
+		"left": "proton",
+		"text": "...",
+		"startchapter": "Chapter11a"
 	}
 ]

@@ -1,8 +1,11 @@
 import turtle
 import os
+import cutscenes
 current_directory = os.getcwd()
 
 bg_color_changed = None
+
+# TODO: possible improvement: exporting branches by running the function for each branches' onkey. probably more work than just copyi and pasting the lines over in separate lists though.
 
 class FakeBattleScreen:
     def bgcolor(self, color):

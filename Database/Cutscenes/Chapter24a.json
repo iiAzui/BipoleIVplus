@@ -1,28 +1,28 @@
 [
 	{
-		"text": "[Chapter 24a][Sector 3, Shadow Realm Research Center]",
+		"text": "[Chapter 24a] [Sector 3, Shadow Realm Research Center]",
 		"bgcolor": "black"
 	},
 	{
-		"text": "???: Alas, the others were unable to stop our enemy...",
-		"left": "else_big",
+		"left": "else",
+		"text": "Alas, the others were unable to stop our enemy...",
 		"bgcolor": "light gray"
 	},
 	{
-		"text": "???: Like everything in life, it's always the \"else\",isn't it?",
-		"left": "else_big"
+		"left": "else",
+		"text": "Like everything in life, it's always the \"else\", isn't it?"
 	},
 	{
-		"text": "???: Anyhow, it seems that I'll have to do whatever theothers can't do.",
-		"left": "else_big"
+		"left": "else",
+		"text": "Anyhow, it seems that I'll have to do whatever the others can't do."
 	},
 	{
-		"text": "???: Foolish Xuirs! Prepare to feel the wrath of myarsenal of often-unused weaponry and spells!",
-		"left": "else_big"
+		"left": "else",
+		"text": "Foolish Xuirs! Prepare to feel the wrath of my arsenal of often-unused weaponry and spells!"
 	},
 	{},
 	{
 		"text": "(...)",
-		"startchapter": "Chapter 25b"
+		"startchapter": "Chapter25b"
 	}
 ]

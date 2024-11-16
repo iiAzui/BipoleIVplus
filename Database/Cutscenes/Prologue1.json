@@ -1,179 +1,180 @@
 [
 	{
-		"text": "[Year 1279 AN][Shadow Realm Research Center]",
+		"text": "[Year 1279 AN] [Shadow Realm Research Center]",
 		"bgcolor": "black"
 	},
 	{
-		"text": "Death Pepper: Scien!",
-		"left": "deathpepper_big"
+		"left": "deathpepper",
+		"text": "Scien!"
 	},
 	{
-		"text": "Scien: Yes?",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "Yes?"
 	},
 	{
-		"text": "Death Pepper: Has the second protype awakened it's Xuir Arts yet?",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "Has the second protype awakened it's Xuir Arts yet?"
 	},
 	{
-		"text": "Scien: Not yet, sir.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "Not yet, sir."
 	},
 	{
-		"text": "Death Pepper: Then it's likely another failure.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "Then it's likely another failure."
 	},
 	{
-		"text": "Death Pepper: Prepare the new extraction room, I might as well get somelife energy from this.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "Prepare the new extraction room, I might as well get some life energy from this."
 	},
 	{
-		"text": "Death Pepper: And who knows, the torture might awaken one of it's arts.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "And who knows, the torture might awaken one of it's arts."
 	},
 	{
-		"text": "Scien: Sir...",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "Sir..."
 	},
 	{
-		"text": "Scien: Sir... I will not.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "Sir... I will not."
 	},
 	{
-		"text": "Death Pepper: You dare defy my orders?",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "You dare defy my orders?"
 	},
 	{
-		"text": "Scien: I've worked at this research center for the past seven years,but I can no longer handle this suffering.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "I've worked at this research center for the past seven years, but I can no longer handle this suffering."
 	},
 	{
-		"text": "Scien: I will likely die, but atleast this will reduce the sufferingof others.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "I will likely die, but atleast this will reduce the suffering of others."
 	},
 	{
-		"text": "Death Pepper: ...",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "..."
 	},
 	{
-		"text": "Death Pepper: I've suspected that you'd betray me.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "I've suspected that you'd betray me."
 	},
 	{
-		"text": "Death Pepper: Don't think that I haven't noticed that the ForbiddenRitual you had given was fake.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "Don't think that I haven't noticed that the Forbidden Ritual you had given was fake."
 	},
 	{
-		"text": "Scien: You attempted the Forbidden Ritual of Nation!?",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "You attempted the Forbidden Ritual of Nation!?"
 	},
 	{
-		"text": "Death Pepper: The only reason you're still alive is because of yourof your efficiency, though it seems that you'll no longercooperate with us.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "The only reason you're still alive is because of your of your efficiency, though it seems that you'll no longer cooperate with us."
 	},
 	{
-		"text": "Death Pepper: It's a shame that I'll have to kill you now, the onlyother person that could replace you is Break, and let's say that I'mnot his biggest fan.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "It's a shame that I'll have to kill you now. The only other person that could replace you is Break, and let's say that I'm not his biggest fan."
 	},
 	{
-		"text": "Scien: ...",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "..."
 	},
 	{
-		"text": "Scien: It's been eight painful years since you destroyed my town forthe Forbidden Ritual...",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "It's been eight painful years since you destroyed my town for the Forbidden Ritual..."
 	},
 	{
-		"text": "Scien: For these eight years, I've lacked the courage to stop thepain, to not continue to work with you...",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "For these eight years, I've lacked the courage to stop the pain, to not continue to work with you..."
 	},
 	{
-		"text": "Scien: I should have done this earlier, but it is something I canno longer live with.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "I should have done this earlier, but it is something I can no longer live with."
 	},
 	{
-		"text": "Scien: Though it will not make up for my past actions, I will doeverything I can to save even one soul from this place.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "Though it will not make up for my past actions, I will do everything I can to save even one soul from this place."
 	},
 	{
-		"text": "(Scien grabs a young child)",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "(Scien grabs a young child)"
 	},
 	{
-		"text": "Death Pepper: What do you think you're doing!?",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "What do you think you're doing!?"
 	},
 	{
-		"text": "Scien: If he stays here, he will die in three days when theextraction finishes. With this, he will have a chance ofsurival.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "If he stays here, he will die in three days when the extraction finishes. With this, he will have a chance of surival."
 	},
 	{
-		"text": "(Scien activates a device)",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "(Scien activates a device)"
 	},
 	{
-		"text": "Death Pepper: BREAK! DEACTIVATE THE DEVICE!",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "BREAK! DEACTIVATE THE DEVICE!"
 	},
 	{
-		"text": "Break: The device seems to be malfunctioning...",
-		"left": "deathpepper_big",
-		"right": "break_big"
+		"left": "deathpepper",
+		"right": "break",
+		"speaker": "right",
+		"text": "The device seems to be malfunctioning..."
 	},
 	{
-		"text": "Death Pepper: Wait, does that mean...",
-		"left": "deathpepper_big",
-		"right": "break_big"
+		"left": "deathpepper",
+		"right": "break",
+		"text": "Wait, does that mean..."
 	},
 	{
-		"text": "Death Pepper: You fool! There's no way you'll survive witha broken teleporter! Who knows where it'll take you.",
-		"left": "deathpepper_big",
-		"right": "break_big"
+		"left": "deathpepper",
+		"right": "break",
+		"text": "You fool! There's no way you'll survive with a broken teleporter! Who knows where it'll take you."
 	},
 	{
-		"text": "Death Pepper: You'll probably starve in the middle of the ocean.",
-		"left": "deathpepper_big",
-		"right": "break_big"
+		"left": "deathpepper",
+		"right": "break",
+		"text": "You'll probably starve in the middle of the ocean."
 	},
 	{
-		"text": "Scien: If so, I will accept that fate as punishment.",
-		"left": "deathpepper_big",
-		"right": "scien_big2"
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "If so, I will accept that fate as punishment."
 	},
 	{
-		"text": "(The teleporter activates and Scien disappears with the child)",
-		"left": "deathpepper_big"
+		"left": "deathpepper",
+		"text": "(The teleporter activates and Scien disappears with the child)"
 	},
 	{
-		"text": "Death Pepper: They got away, what a waste of resources...",
-		"left": "deathpepper_big",
+		"left": "deathpepper",
+		"text": "They got away, what a waste of resources...",
 		"startchapter": "Prologue2"
 	}
 ]

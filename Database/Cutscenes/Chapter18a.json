@@ -1,141 +1,151 @@
 [
 	{
-		"text": "[Chapter 18a][PSA Conventions Zone, Central Nolavillia]",
+		"text": "[Chapter 18a] [PSA Conventions Zone, Central Nolavillia]",
 		"bgcolor": "black"
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "...",
 		"bgcolor": "green"
 	},
 	{
-		"text": "Proton: It seems we must go through this Xuiristcamp to proceed.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "It seems we must go through this Xuirist camp to proceed."
 	},
 	{
-		"text": "Proton: Prepare for battle!",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "Prepare for battle!"
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "..."
 	},
 	{
-		"text": "???: You there!",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "You there!"
 	},
 	{
-		"text": "Proton: ???",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "???"
 	},
 	{
-		"text": "???: I can sense that you are a Proto-Xuir.",
-		"left": "proton_big",
-		"right": "xuirer_big"
+		"left": "proton",
+		"right": "xuirer",
+		"text": "I can sense that you are a Proto-Xuir."
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big",
-		"right": "xuirer_big"
+		"left": "proton",
+		"right": "xuirer",
+		"text": "..."
 	},
 	{
-		"text": "???: Do not be afraid, I am not here to harm you.",
-		"left": "proton_big",
-		"right": "xuirer_big"
+		"left": "proton",
+		"right": "xuirer",
+		"text": "Do not be afraid, I am not here to harm you."
 	},
 	{
-		"text": "???: I am Xuirer, a traveling Xuirist.",
-		"left": "proton_big",
-		"right": "xuirer_big"
+		"left": "proton",
+		"right": "xuirer",
+		"text": "I am Xuirer, a traveling Xuirist."
 	},
 	{
-		"text": "Xuirer: However, the huntings of the Proto-Xuirs...I can't support it.",
-		"left": "proton_big",
-		"right": "xuirer_big"
+		"left": "proton",
+		"right": "xuirer",
+		"speaker": "right",
+		"text": "However, the huntings of the Proto-Xuirs... I can't support it."
 	},
 	{
-		"text": "Xuirer: Why do we wish to wish to destroy what we worship?",
-		"left": "proton_big",
-		"right": "xuirer_big"
+		"left": "proton",
+		"right": "xuirer",
+		"speaker": "right",
+		"text": "Why do we wish to wish to destroy what we worship?"
 	},
 	{
-		"text": "Xuirer: The Proto-Xuirs should be worshipped, for the Xuirsare an extension of the True Xuir's power.",
-		"left": "proton_big",
-		"right": "xuirer_big"
+		"left": "proton",
+		"right": "xuirer",
+		"speaker": "right",
+		"text": "The Proto-Xuirs should be worshipped, for the Xuirs are an extension of the True Xuir's power."
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big",
-		"right": "xuirer_big"
+		"left": "proton",
+		"right": "xuirer",
+		"text": "..."
 	},
 	{
-		"text": "Xuirer: Holy Proto-Xuir, I wish to join you on your questaround the world.",
-		"left": "proton_big",
-		"right": "xuirer_big"
+		"left": "proton",
+		"right": "xuirer",
+		"speaker": "right",
+		"text": "Holy Proto-Xuir, I wish to join you on your quest around the world."
 	},
 	{
-		"text": "[Recruit Xuirer?](Q) Recruit(W) Do not recruit"
+		"text": "[Recruit Xuirer?] (Q) Recruit (W) Do not recruit"
 	},
 	{
-		"text": "Xuirer: I pray for your victory, Proto-Xuir.",
-		"left": "proton_big",
-		"right": "xuirer_big"
+		"left": "proton",
+		"right": "xuirer",
+		"speaker": "right",
+		"text": "I pray for your victory, Proto-Xuir."
 	},
 	{
 		"text": "[Xuirist Cavern]"
 	},
 	{
-		"text": "Omega: ...",
-		"left": "omegaxuirist_big",
+		"left": "omegaxuirist",
+		"text": "...",
 		"bgcolor": "dim grey"
 	},
 	{
-		"text": "Omega: A camp in central Nolavillia has just been destroyed.",
-		"left": "omegaxuirist_big"
+		"left": "omegaxuirist",
+		"text": "A camp in central Nolavillia has just been destroyed."
 	},
 	{
-		"text": "Break: ...",
-		"left": "omegaxuirist_big",
-		"right": "break_big"
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "..."
 	},
 	{
-		"text": "Break: Destory them.",
-		"left": "omegaxuirist_big",
-		"right": "break_big"
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "Destory them."
 	},
 	{
-		"text": "Omega: I will send troops out to surround them.",
-		"left": "omegaxuirist_big",
-		"right": "break_big"
+		"left": "omegaxuirist",
+		"right": "break",
+		"text": "I will send troops out to surround them."
 	},
 	{
-		"text": "Omega: They'll have no escape, this is be far strongerthe past battles.",
-		"left": "omegaxuirist_big",
-		"right": "break_big"
+		"left": "omegaxuirist",
+		"right": "break",
+		"text": "They'll have no escape, this is be far stronger the past battles."
 	},
 	{
-		"text": "Break: It better be.",
-		"left": "omegaxuirist_big",
-		"right": "break_big"
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "It better be."
 	},
 	{
-		"text": "Break: Remember, Omega...",
-		"left": "omegaxuirist_big",
-		"right": "break_big"
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "Remember, Omega..."
 	},
 	{
-		"text": "Break: If you fail, they will be destroyed.",
-		"left": "omegaxuirist_big",
-		"right": "break_big"
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "If you fail, they will be destroyed."
 	},
 	{
-		"text": "Omega: ...",
-		"left": "omegaxuirist_big",
-		"right": "break_big"
+		"left": "omegaxuirist",
+		"right": "break",
+		"text": "..."
 	},
 	{
-		"text": "[Chapter 19a][Xuir Plain, Central Nolavillia]",
+		"text": "[Chapter 19a] [Xuir Plain, Central Nolavillia]",
 		"bgcolor": "black",
-		"startchapter": "Chapter 19a"
+		"startchapter": "Chapter19a"
 	}
 ]

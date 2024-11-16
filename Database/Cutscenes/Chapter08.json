@@ -1,86 +1,92 @@
 [
 	{
-		"text": "(The town is ravaged, with the ground iscovered in destroyed buildings and flames...)"
+		"text": "(The town is ravaged, with the ground is covered in destroyed buildings and flames...)"
 	},
 	{
-		"text": "Proton: What happened here...",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "What happened here...",
 		"bgcolor": "dark red"
 	},
 	{
-		"text": "???: ...",
-		"left": "proton_big",
-		"right": "Bladeous_big"
+		"left": "proton",
+		"right": "Bladeous",
+		"text": "..."
 	},
 	{
-		"text": "(??? attacks Proton)",
-		"left": "proton_big",
-		"right": "Bladeous_big"
+		"left": "proton",
+		"right": "Bladeous",
+		"text": "(??? attacks Proton)"
 	},
 	{
-		"text": "Proton: Hey, don't attack us!",
-		"left": "proton_big",
-		"right": "Bladeous_big"
+		"left": "proton",
+		"right": "Bladeous",
+		"text": "Hey, don't attack us!"
 	},
 	{
-		"text": "???: ...",
-		"left": "proton_big",
-		"right": "Bladeous_big"
+		"left": "proton",
+		"right": "Bladeous",
+		"text": "..."
 	},
 	{
-		"text": "Proton: Everyone, prepare for battle!",
-		"left": "proton_big",
-		"right": "Bladeous_big"
+		"left": "proton",
+		"right": "Bladeous",
+		"text": "Everyone, prepare for battle!"
 	},
 	{
-		"text": "Bladeous: The Itucher...",
-		"left": "proton_big",
-		"right": "Bladeous_big"
+		"left": "proton",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "The Itucher..."
 	},
 	{
-		"text": "Bladeous: I couldn't control it...",
-		"left": "proton_big",
-		"right": "Bladeous_big"
+		"left": "proton",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "I couldn't control it..."
 	},
 	{
-		"text": "Bladeous: And now... they have it...",
-		"left": "proton_big",
-		"right": "Bladeous_big"
+		"left": "proton",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "And now... they have it..."
 	},
 	{
-		"text": "Bladeous: The Nolavillians...",
-		"left": "proton_big",
-		"right": "Bladeous_big"
+		"left": "proton",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "The Nolavillians..."
 	},
 	{
-		"text": "Bladeous: At the... Shadow Realm...",
-		"left": "proton_big",
-		"right": "Bladeous_big"
+		"left": "proton",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "At the... Shadow Realm..."
 	},
 	{
-		"text": "Bladeous: Please... stop them...",
-		"left": "proton_big",
-		"right": "Bladeous_big"
+		"left": "proton",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "Please... stop them..."
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "..."
 	},
 	{
-		"text": "Proton: We'll be heading to Nolavilliaas soon as we can.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "We'll be heading to Nolavillia as soon as we can."
 	},
 	{
-		"text": "Scien: Nolavillia... I haven't been theresince the incident...",
-		"left": "scien_big"
+		"left": "scien",
+		"text": "Nolavillia... I haven't been there since the incident..."
 	},
 	{
-		"text": "Quest: Nolavillia, huh. I'll go whereverthe artifacts are.",
-		"left": "quest_big"
+		"left": "quest",
+		"text": "Nolavillia, huh. I'll go wherever the artifacts are."
 	},
 	{
-		"text": "Proton: We'll need to go back to Static toget resources and a means of transportation.",
-		"left": "proton_big",
-		"startchapter": "Chapter 09a"
+		"left": "proton",
+		"text": "We'll need to go back to Static to get resources and a means of transportation.",
+		"startchapter": "Chapter09a"
 	}
 ]

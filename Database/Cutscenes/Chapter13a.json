@@ -1,143 +1,143 @@
 [
 	{
-		"text": "Proton: ...",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "...",
 		"bgcolor": "navy"
 	},
 	{
-		"text": "Proton: I think I see someone.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "I think I see someone."
 	},
 	{
 		"text": "(A small boat passes by Proton's ship)"
 	},
 	{
-		"text": "???: ...",
-		"left": "proton_big",
-		"right": "relaeh_big"
+		"left": "proton",
+		"right": "relaeh",
+		"text": "..."
 	},
 	{
-		"text": "???: Are you going to Altar?",
-		"left": "proton_big",
-		"right": "relaeh_big"
+		"left": "proton",
+		"right": "relaeh",
+		"text": "Are you going to Altar?"
 	},
 	{
-		"text": "???: If so, I don't recommend going there.",
-		"left": "proton_big",
-		"right": "relaeh_big"
+		"left": "proton",
+		"right": "relaeh",
+		"text": "If so, I don't recommend going there."
 	},
 	{
-		"text": "Proton: No, we are going to Nolavillia.",
-		"left": "proton_big",
-		"right": "relaeh_big"
+		"left": "proton",
+		"right": "relaeh",
+		"text": "No, we are going to Nolavillia."
 	},
 	{
-		"text": "???: Nolavillia?",
-		"left": "proton_big",
-		"right": "relaeh_big"
+		"left": "proton",
+		"right": "relaeh",
+		"text": "Nolavillia?"
 	},
 	{
-		"text": "???: I suppose I could live there...",
-		"left": "proton_big",
-		"right": "relaeh_big"
+		"left": "proton",
+		"right": "relaeh",
+		"text": "I suppose I could live there..."
 	},
 	{
-		"text": "???: I used to live at Altar, but my townwas destroyed by the Holy Itucher.",
-		"left": "proton_big",
-		"right": "relaeh_big"
+		"left": "proton",
+		"right": "relaeh",
+		"text": "I used to live at Altar, but my town was destroyed by the Holy Itucher."
 	},
 	{
-		"text": "???: Would you mind if I joined you guys on yourjourney to Nolavillia?",
-		"left": "proton_big",
-		"right": "relaeh_big"
+		"left": "proton",
+		"right": "relaeh",
+		"text": "Would you mind if I joined you guys on your journey to Nolavillia?"
 	},
 	{
-		"text": "[Recruit ???](Q) Recruit(W) Do not recruit"
+		"text": "[Recruit ???] (Q) Recruit (W) Do not recruit"
 	},
 	{
-		"text": "???: Oh.",
-		"left": "proton_big",
-		"right": "relaeh_big"
+		"left": "proton",
+		"right": "relaeh",
+		"text": "Oh."
 	},
 	{
-		"text": "???: Oh yeah, did I tell you I was being chasedby pirates?",
-		"left": "proton_big",
-		"right": "relaeh_big"
+		"left": "proton",
+		"right": "relaeh",
+		"text": "Oh yeah, did I tell you I was being chased by pirates?"
 	},
 	{
-		"text": "Proton: What!?",
-		"left": "proton_big",
-		"right": "relaeh_big"
+		"left": "proton",
+		"right": "relaeh",
+		"text": "What!?"
 	},
 	{
-		"text": "???: HAR! HAR! HAR! HAR! HARRRRR!!!",
-		"left": "proton_big",
-		"right": "kaptainkneville_big"
+		"left": "proton",
+		"right": "kaptainkneville",
+		"text": "HAR! HAR! HAR! HAR! HARRRRR!!!"
 	},
 	{
-		"text": "???: I AM THE GREAT KAPTAIN K'NEVILLE!!!",
-		"left": "proton_big",
-		"right": "kaptainkneville_big"
+		"left": "proton",
+		"right": "kaptainkneville",
+		"text": "I AM THE GREAT KAPTAIN K'NEVILLE!!!"
 	},
 	{
-		"text": "K'Neville: THE GREATEST WARRIOR IN THE REALM!!!",
-		"left": "proton_big",
-		"right": "kaptainkneville_big"
+		"left": "proton",
+		"right": "kaptainkneville",
+		"text": "THE GREATEST WARRIOR IN THE REALM!!!"
 	},
 	{
-		"text": "K'Neville: THE MASTER OF THE ECONOMY!!!",
-		"left": "proton_big",
-		"right": "kaptainkneville_big"
+		"left": "proton",
+		"right": "kaptainkneville",
+		"text": "THE MASTER OF THE ECONOMY!!!"
 	},
 	{
-		"text": "K'Neville: THE KING OF THE UNKNOWN AMOUNT OF SEAS!!!",
-		"left": "proton_big",
-		"right": "kaptainkneville_big"
+		"left": "proton",
+		"right": "kaptainkneville",
+		"text": "THE KING OF THE UNKNOWN AMOUNT OF SEAS!!!"
 	},
 	{
-		"text": "K'Neville: FEAR ME!!!",
-		"left": "proton_big",
-		"right": "kaptainkneville_big"
+		"left": "proton",
+		"right": "kaptainkneville",
+		"text": "FEAR ME!!!"
 	},
 	{
-		"text": "K'Neville: ...AND MY UNTHREATENING CREW!!!",
-		"left": "proton_big",
-		"right": "kaptainkneville_big"
+		"left": "proton",
+		"right": "kaptainkneville",
+		"text": "...AND MY UNTHREATENING CREW!!!"
 	},
 	{
-		"text": "???: What poppin' gang.",
-		"left": "proton_big",
-		"right": "diverneville_big"
+		"left": "proton",
+		"right": "diverneville",
+		"text": "What poppin' gang."
 	},
 	{
-		"text": "K'Neville: HAR! HAR! HAR! HAR! HARRRRR!!!",
-		"left": "proton_big",
-		"right": "kaptainkneville_big"
+		"left": "proton",
+		"right": "kaptainkneville",
+		"text": "HAR! HAR! HAR! HAR! HARRRRR!!!"
 	},
 	{
-		"text": "K'Neville: LEEEEEEETS LOOT 'EM!!!!!!",
-		"left": "proton_big",
-		"right": "kaptainkneville_big"
+		"left": "proton",
+		"right": "kaptainkneville",
+		"text": "LEEEEEEETS LOOT 'EM!!!!!!"
 	},
 	{
-		"text": "???: Where we droppin' bois?",
-		"left": "proton_big",
-		"right": "diverneville_big"
+		"left": "proton",
+		"right": "diverneville",
+		"text": "Where we droppin' bois?"
 	},
 	{
-		"text": "???: SKREEEEEEEEEEEEEEEEE!!!!!!!!!!!",
-		"left": "proton_big",
-		"right": "diverneville_big"
+		"left": "proton",
+		"right": "diverneville",
+		"text": "SKREEEEEEEEEEEEEEEEE!!!!!!!!!!!"
 	},
 	{
-		"text": "Proton: Everyone! Prepare for battle!",
-		"left": "proton_big",
-		"right": "diverneville_big"
+		"left": "proton",
+		"right": "diverneville",
+		"text": "Everyone! Prepare for battle!"
 	},
 	{},
 	{
-		"text": "[Chapter 14a][Bipole Sea, Bipole Sea]",
+		"text": "[Chapter 14a] [Bipole Sea, Bipole Sea]",
 		"bgcolor": "black",
-		"startchapter": "Chapter 14a"
+		"startchapter": "Chapter14a"
 	}
 ]

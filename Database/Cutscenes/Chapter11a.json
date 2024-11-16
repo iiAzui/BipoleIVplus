@@ -4,38 +4,38 @@
 		"bgcolor": "black"
 	},
 	{
-		"text": "Proton: SurvivedQuest: SurvivedScien: Survived",
-		"left": "proton_big",
-		"right": "scien_big"
+		"left": "proton",
+		"right": "scien",
+		"text": "Survived"
 	},
 	{
-		"text": "Romra: Not RecruitedTnemecalper I: Not RecruitedTnemecalper II: Not Recruited",
-		"left": "romra_big",
-		"right": "tnemecalperii_big"
+		"left": "romra",
+		"right": "tnemecalperii",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Tnemecalper III: Not RecruitedTnemecalper IV: Not RecruitedLacirtcele: Not Recruited",
-		"left": "tnemecalperiii_big",
-		"right": "lacirtcele_big"
+		"left": "tnemecalperiii",
+		"right": "lacirtcele",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Damagein: Not RecruitedHealia: Not RecruitedWob: Not Recruited",
-		"left": "damagein_big",
-		"right": "wob_big"
+		"left": "damagein",
+		"right": "wob",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Bladen: Not RecruitedWodahs: Not RecruitedBladeous: Not Recruited",
-		"left": "bladen_big",
-		"right": "playablebladeous_big"
+		"left": "bladen",
+		"right": "playablebladeous",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Azure: Not RecruitedFael: Not RecruitedErif: Not Recruited",
-		"left": "azure_big",
-		"right": "erif_big"
+		"left": "azure",
+		"right": "erif",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Vruh: Not Recruited",
-		"left": "vruh_big"
+		"left": "vruh",
+		"text": "Not Recruited"
 	},
 	{
 		"text": "..."
@@ -44,66 +44,66 @@
 		"text": "[Act II]"
 	},
 	{
-		"text": "[Chapter 11a][Bipole Sea, Bipole Sea]"
+		"text": "[Chapter 11a] [Bipole Sea, Bipole Sea]"
 	},
 	{
-		"text": "Proton: We'll be sailing around the Territoryof Castle and will head northeast to Nolavilliafrom there.",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "We'll be sailing around the Territory of Castle and will head northeast to Nolavillia from there.",
 		"bgcolor": "navy"
 	},
 	{
-		"text": "Proton: But we'll need to be careful, theBipole Sea is a dangerous place.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "But we'll need to be careful, the Bipole Sea is a dangerous place."
 	},
 	{
-		"text": "Proton: We should be safe for now...",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "We should be safe for now...",
 		"bgcolor": "navy"
 	},
 	{
 		"text": "[A small boat passes by Proton's ship]"
 	},
 	{
-		"text": "???: What are you guys doing?",
-		"left": "proton_big",
-		"right": "recils_big"
+		"left": "proton",
+		"right": "recils",
+		"text": "What are you guys doing?"
 	},
 	{
-		"text": "Proton: Going to Nolavillia to reclaim the HolyItucher.",
-		"left": "proton_big",
-		"right": "recils_big"
+		"left": "proton",
+		"right": "recils",
+		"text": "Going to Nolavillia to reclaim the Holy Itucher."
 	},
 	{
-		"text": "???: Someone's taken it already?",
-		"left": "proton_big",
-		"right": "recils_big"
+		"left": "proton",
+		"right": "recils",
+		"text": "Someone's taken it already?"
 	},
 	{
-		"text": "Proton: Yeah, some evil scientists.",
-		"left": "proton_big",
-		"right": "recils_big"
+		"left": "proton",
+		"right": "recils",
+		"text": "Yeah, some evil scientists."
 	},
 	{
-		"text": "???: ...",
-		"left": "proton_big",
-		"right": "recils_big"
+		"left": "proton",
+		"right": "recils",
+		"text": "..."
 	},
 	{
-		"text": "???: You guys mind if I join you? This would lookpretty good on my r\u0117sum\u00e9.",
-		"left": "proton_big",
-		"right": "recils_big"
+		"left": "proton",
+		"right": "recils",
+		"text": "You guys mind if I join you? This would look pretty good on my r\u0117sum\u00e9."
 	},
 	{
-		"text": "[Recruit ???](Q) Recruit(W) Do not recruit"
+		"text": "[Recruit ???] (Q) Recruit (W) Do not recruit"
 	},
 	{
-		"text": "???: Okay then.",
-		"left": "proton_big",
-		"right": "recils_big"
+		"left": "proton",
+		"right": "recils",
+		"text": "Okay then."
 	},
 	{
-		"text": "[Chapter 12a][Bipole Sea, Bipole Sea]",
+		"text": "[Chapter 12a] [Bipole Sea, Bipole Sea]",
 		"bgcolor": "black",
-		"startchapter": "Chapter 12a"
+		"startchapter": "Chapter12a"
 	}
 ]

@@ -1,47 +1,47 @@
 [
 	{
-		"text": "Proton: ...",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "...",
 		"bgcolor": "navy"
 	},
 	{
-		"text": "Proton: I think I see someone.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "I think I see someone."
 	},
 	{
 		"text": "(A small boat passes by Proton's ship)"
 	},
 	{
-		"text": "???: ...",
-		"left": "proton_big",
-		"right": "repins_big"
+		"left": "proton",
+		"right": "repins",
+		"text": "..."
 	},
 	{
-		"text": "Proton: Hello.",
-		"left": "proton_big",
-		"right": "repins_big"
+		"left": "proton",
+		"right": "repins",
+		"text": "Hello."
 	},
 	{
-		"text": "???: Hello.",
-		"left": "proton_big",
-		"right": "repins_big"
+		"left": "proton",
+		"right": "repins",
+		"text": "Hello."
 	},
 	{
-		"text": "???: Sorry, but I must be on my way.",
-		"left": "proton_big",
-		"right": "repins_big"
+		"left": "proton",
+		"right": "repins",
+		"text": "Sorry, but I must be on my way."
 	},
 	{
-		"text": "(??? leaves the area)",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "(??? leaves the area)"
 	},
 	{
-		"text": "Proton: There are some enemies approaching, preparefor battle!",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "There are some enemies approaching, prepare for battle!"
 	},
 	{
-		"text": "[Chapter 13a][Bipole Sea, Bipole Sea]",
+		"text": "[Chapter 13a] [Bipole Sea, Bipole Sea]",
 		"bgcolor": "black",
-		"startchapter": "Chapter 13a"
+		"startchapter": "Chapter13a"
 	}
 ]

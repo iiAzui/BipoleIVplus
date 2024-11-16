@@ -1,24 +1,24 @@
 [
 	{
-		"text": "[Chapter 09a][Cos Path, Territory of Cos]",
+		"text": "[Chapter 09a] [Cos Path, Territory of Cos]",
 		"bgcolor": "black"
 	},
 	{
-		"text": "Proton: We need to return quickly.",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "We need to return quickly.",
 		"bgcolor": "dark green"
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "..."
 	},
 	{
-		"text": "Proton: We're almost there.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "We're almost there."
 	},
 	{
-		"text": "[Chapter 10a][Outer Static, Territory of Static]",
+		"text": "[Chapter 10a] [Outer Static, Territory of Static]",
 		"bgcolor": "black",
-		"startchapter": "Chapter 10a"
+		"startchapter": "Chapter10a"
 	}
 ]

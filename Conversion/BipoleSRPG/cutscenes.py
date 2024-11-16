@@ -62,7 +62,7 @@ def Text1(text,portrait):
     global current_left
     global current_right
     current_string = text
-    current_left = portrait
+    current_left = portrait[:-4] if portrait[-4:] == "_big" else portrait
     current_right = ""
 
 def Text2(text,portrait1,portrait2):
@@ -70,8 +70,8 @@ def Text2(text,portrait1,portrait2):
     global current_left
     global current_right
     current_string = text
-    current_left = portrait1
-    current_right = portrait2
+    current_left = portrait1[:-4] if portrait1[-4:] == "_big" else portrait1
+    current_right = portrait2[:-4] if portrait2[-4:] == "_big" else portrait2
 
 def Text3(text):
     global current_string
@@ -83,11 +83,11 @@ def Text3(text):
 
 def line2(text):
     global current_string
-    current_string += text
+    current_string += " "+text
 
 def line3(text):
     global current_string
-    current_string += text
+    current_string += " "+text
 
 def ClearInputs():
     global Qinput

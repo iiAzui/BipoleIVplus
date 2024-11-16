@@ -3,7 +3,7 @@
 		"text": "..."
 	},
 	{
-		"text": "[1298 AN, 19 years later]\n[Static Castle, The Territories of Bipole]"
+		"text": "[1298 AN, 19 years later] [Static Castle, The Territories of Bipole]"
 	},
 	{
 		"text": "*knock* *knock* *knock*",
@@ -57,13 +57,13 @@
 		"left": "proton",
 		"right": "quest",
 		"speaker": "right",
-		"text": "I would decline, but I suppose this is an order from the King."
+		"text": "*sigh*"
 	},
 	{
 		"left": "proton",
 		"right": "quest",
 		"speaker": "right",
-		"text": "*sigh*"
+		"text": "I would decline, but I suppose this is an order from the King."
 	},
 	{
 		"left": "proton",
@@ -118,12 +118,22 @@
 		"text": "If you would allow it, I would like to partake in this mission along side you."
 	},
 	{
-		"text": "[Recruit Romra?] (Q) Recruit (W) Do not recruit"
-	},
-	{
-		"left": "romra",
-		"right": "proton",
-		"text": "Oh, sorry for bothering you."
+		"recruitment_choice": "Romra",
+		"recruitment_choice_text_prompt_todo_implement": "[Recruit Romra?] (Q) Recruit (W) Do not recruit",
+		"true": [
+			{
+				"text": "Romra: Yes! Thank you!",
+				"left": "romra_big",
+				"right": "proton_big"
+			}
+		],
+		"false": [
+			{
+				"text": "Romra: Oh, sorry for bothering you.",
+				"left": "romra_big",
+				"right": "proton_big"
+			}
+		]
 	},
 	{
 		"left": "scien",

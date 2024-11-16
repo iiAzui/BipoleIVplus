@@ -4,92 +4,92 @@
 		"bgcolor": "black"
 	},
 	{
-		"text": "Proton: SurvivedQuest: SurvivedScien: Survived",
-		"left": "proton_big",
-		"right": "scien_big"
+		"left": "proton",
+		"right": "scien",
+		"text": "Survived"
 	},
 	{
-		"text": "Romra: Not RecruitedTnemecalper I: Not RecruitedTnemecalper II: Not Recruited",
-		"left": "romra_big",
-		"right": "tnemecalperii_big"
+		"left": "romra",
+		"right": "tnemecalperii",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Tnemecalper III: Not RecruitedTnemecalper IV: Not RecruitedLacirtcele: Not Recruited",
-		"left": "tnemecalperiii_big",
-		"right": "lacirtcele_big"
+		"left": "tnemecalperiii",
+		"right": "lacirtcele",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Damagein: Not RecruitedHealia: Not RecruitedWob: Not Recruited",
-		"left": "damagein_big",
-		"right": "wob_big"
+		"left": "damagein",
+		"right": "wob",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Bladen: Not RecruitedWodahs: Not RecruitedBladeous: Not Recruited",
-		"left": "bladen_big",
-		"right": "playablebladeous_big"
+		"left": "bladen",
+		"right": "playablebladeous",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Azure: Not RecruitedFael: Not RecruitedErif: Not Recruited",
-		"left": "azure_big",
-		"right": "erif_big"
+		"left": "azure",
+		"right": "erif",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Vruh: Not RecruitedRecils: Not RecruitedRepins: Not Recruited",
-		"left": "vruh_big",
-		"right": "repins_big"
+		"left": "vruh",
+		"right": "repins",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Relaeh: Not RecruitedEulb: Not RecruitedLias: Not Recruited",
-		"left": "relaeh_big",
-		"right": "lias_big"
+		"left": "relaeh",
+		"right": "lias",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Fieht: Not RecruitedRethgif: Not RecruitedEg: Not Recruited",
-		"left": "fieht_big",
-		"right": "eg_big"
+		"left": "fieht",
+		"right": "eg",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "B: Not RecruitedXuirventh: Not RecruitedElbon: Not Recruited",
-		"left": "b_big",
-		"right": "elbon_big"
+		"left": "b",
+		"right": "elbon",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Xuirfth: Not RecruitedXuirer: Not RecruitedDliug: Not Recruited",
-		"left": "xuirfth_big",
-		"right": "dliug_big"
+		"left": "xuirfth",
+		"right": "dliug",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Exa: Not RecruitedXuirer: Not RecruitedGeomer: Not Recruited",
-		"left": "exa_big",
-		"right": "geomer_big"
+		"left": "exa",
+		"right": "geomer",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Box: Not RecruitedNOTOS: Not RecruitedYung Poggers: Not Recruited",
-		"left": "box_big",
-		"right": "yungpoggers_big"
+		"left": "box",
+		"right": "yungpoggers",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Dnefed: Not RecruitedThgif: Not RecruitedGnirif: Not Recruited",
-		"left": "dnefed_big",
-		"right": "gnirif_big"
+		"left": "dnefed",
+		"right": "gnirif",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Cigam: Not RecruitedOmega: Not RecruitedFiyghtrr: Not Recruited",
-		"left": "cigam_big",
-		"right": "fiyghtrr_big"
+		"left": "cigam",
+		"right": "fiyghtrr",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "Recalper: Not RecruitedTabmoc: Not RecruitedXuirurth: Not Recruited",
-		"left": "recalper_big",
-		"right": "xuirurth_big"
+		"left": "recalper",
+		"right": "xuirurth",
+		"text": "Not Recruited"
 	},
 	{
-		"text": "[Chapter 22a][Enterance, Shadow Realm Research Center]",
+		"text": "[Chapter 22a] [Enterance, Shadow Realm Research Center]",
 		"bgcolor": "black"
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "...",
 		"bgcolor": "dim gray"
 	},
 	{
@@ -100,37 +100,37 @@
 		"bgcolor": "black"
 	},
 	{
-		"text": "???: It seems we may have some intruders.",
-		"left": "if_big",
+		"left": "if",
+		"text": "It seems we may have some intruders.",
 		"bgcolor": "light gray"
 	},
 	{
-		"text": "???: I wonder why they're here... is it becauseof the Holy Itucher...",
-		"left": "if_big"
+		"left": "if",
+		"text": "I wonder why they're here... is it because of the Holy Itucher..."
 	},
 	{
-		"text": "???: But how could they have found out? Did theydefeat Bladeous?",
-		"left": "if_big"
+		"left": "if",
+		"text": "But how could they have found out? Did they defeat Bladeous?"
 	},
 	{
-		"text": "???: Well, let's see how they do against us.",
-		"left": "if_big"
+		"left": "if",
+		"text": "Well, let's see how they do against us."
 	},
 	{},
 	{
-		"text": "Proton: Hmmm, what's this? It looks like a box...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "Hmmm, what's this? It looks like a box..."
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "..."
 	},
 	{
-		"text": "Proton: (I don't think I'm able to open this box)",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "(I don't think I'm able to open this box)"
 	},
 	{
 		"text": "(...)",
-		"startchapter": "Chapter 23a"
+		"startchapter": "Chapter23a"
 	}
 ]

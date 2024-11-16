@@ -1,47 +1,47 @@
 [
 	{
-		"text": "K'Neville: Yerrrrr....",
-		"left": "proton_big",
-		"right": "kaptainkneville_big",
+		"left": "proton",
+		"right": "kaptainkneville",
+		"text": "Yerrrrr....",
 		"bgcolor": "navy"
 	},
 	{
-		"text": "K'Neville: Do I have to do everything myself?",
-		"left": "proton_big",
-		"right": "kaptainkneville_big",
+		"left": "proton",
+		"right": "kaptainkneville",
+		"text": "Do I have to do everything myself?",
 		"bgcolor": "navy"
 	},
 	{
-		"text": "K'Neville: ARGHHHHH!!!",
-		"left": "proton_big",
-		"right": "kaptainkneville_big"
+		"left": "proton",
+		"right": "kaptainkneville",
+		"text": "ARGHHHHH!!!"
 	},
 	{
-		"text": "K'Neville: WE BE RETREAT'N!!!",
-		"left": "proton_big",
-		"right": "kaptainkneville_big"
+		"left": "proton",
+		"right": "kaptainkneville",
+		"text": "WE BE RETREAT'N!!!"
 	},
 	{
 		"text": "(The K'Neville Pirates retreat)"
 	},
 	{
-		"text": "Proton: It looks like they've retreated.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "It looks like they've retreated."
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "..."
 	},
 	{
-		"text": "Proton: Huh, what's that?.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "Huh, what's that?."
 	},
 	{
 		"text": "(Proton sees a boat in the distance)"
 	},
 	{
-		"text": "Proton: Is that a house?",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "Is that a house?"
 	},
 	{
 		"text": "(A small house is ontop of the boat)"
@@ -50,201 +50,204 @@
 		"text": "(Proton knocks on the door of the house)"
 	},
 	{
-		"text": "???: Hello?",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"text": "Hello?"
 	},
 	{
-		"text": "Proton: Hello, I was wondering, what is this?",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"text": "Hello, I was wondering, what is this?"
 	},
 	{
-		"text": "???: My house?",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"text": "My house?"
 	},
 	{
-		"text": "Proton: Your house is in the middle of a dangeroussea?",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"text": "Your house is in the middle of a dangerous sea?"
 	},
 	{
-		"text": "???: Why are you so suprised?",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"text": "Why are you so suprised?"
 	},
 	{
-		"text": "Proton: How do you even get water?",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"text": "How do you even get water?"
 	},
 	{
-		"text": "???: Do you not see water around you?",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"text": "Do you not see water around you?"
 	},
 	{
-		"text": "Quest: You should not be alive right now.",
-		"left": "quest_big",
-		"right": "lias_big"
+		"left": "quest",
+		"right": "lias",
+		"text": "You should not be alive right now."
 	},
 	{
-		"text": "Proton: Sure.",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"text": "Sure."
 	},
 	{
 		"text": "(Proton starts to leave)"
 	},
 	{
-		"text": "Lias: Wait, what are you guys even doing in themiddle of the sea?",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"speaker": "right",
+		"text": "Wait, what are you guys even doing in the middle of the sea?"
 	},
 	{
-		"text": "Proton: We're traveling to Nolavillia to retrieve the HolyItucher.",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"text": "We're traveling to Nolavillia to retrieve the Holy Itucher."
 	},
 	{
-		"text": "Lias: Sounds fun, can I go?",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"speaker": "right",
+		"text": "Sounds fun, can I go?"
 	},
 	{
-		"text": "Proton: ?",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"text": "?"
 	},
 	{
-		"text": "Lias: What? It sounds like fun.",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"speaker": "right",
+		"text": "What? It sounds like fun."
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"text": "..."
 	},
 	{
-		"text": "[Recruit ???](Q) Recruit(W) Do not recruit"
+		"text": "[Recruit ???] (Q) Recruit (W) Do not recruit"
 	},
 	{
-		"text": "Proton: No.",
-		"left": "proton_big",
-		"right": "lias_big"
+		"left": "proton",
+		"right": "lias",
+		"text": "No."
 	},
 	{
 		"text": "(Proton leaves)"
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "..."
 	},
 	{
-		"text": "Proton: Hey, I think I see someone in thewater.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "Hey, I think I see someone in the water."
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "..."
 	},
 	{
-		"text": "???: Hey, could you help me?",
-		"left": "proton_big",
-		"right": "fieht_big"
+		"left": "proton",
+		"right": "fieht",
+		"text": "Hey, could you help me?"
 	},
 	{
-		"text": "Proton: Why are you in the middle of the ocean?",
-		"left": "proton_big",
-		"right": "fieht_big"
+		"left": "proton",
+		"right": "fieht",
+		"text": "Why are you in the middle of the ocean?"
 	},
 	{
-		"text": "???: Because I was stealing from Kaptain K'Neville'sships then a battle started so I jumped off.",
-		"left": "proton_big",
-		"right": "fieht_big"
+		"left": "proton",
+		"right": "fieht",
+		"text": "Because I was stealing from Kaptain K'Neville's ships then a battle started so I jumped off."
 	},
 	{
-		"text": "Proton: You were stealing from Kaptain K'Neville?",
-		"left": "proton_big",
-		"right": "fieht_big"
+		"left": "proton",
+		"right": "fieht",
+		"text": "You were stealing from Kaptain K'Neville?"
 	},
 	{
-		"text": "???: Everything he has is already stolen anyways.",
-		"left": "proton_big",
-		"right": "fieht_big"
+		"left": "proton",
+		"right": "fieht",
+		"text": "Everything he has is already stolen anyways."
 	},
 	{
-		"text": "???: ...",
-		"left": "proton_big",
-		"right": "fieht_big"
+		"left": "proton",
+		"right": "fieht",
+		"text": "..."
 	},
 	{
-		"text": "???: Could you help me out?",
-		"left": "proton_big",
-		"right": "fieht_big"
+		"left": "proton",
+		"right": "fieht",
+		"text": "Could you help me out?"
 	},
 	{
 		"text": "(Proton brings ??? onto the ship)"
 	},
 	{
-		"text": "???: Thanks.",
-		"left": "proton_big",
-		"right": "fieht_big"
+		"left": "proton",
+		"right": "fieht",
+		"text": "Thanks."
 	},
 	{
-		"text": "Proton: We're going to Nolavillia to retrieve theHoly Itucher.",
-		"left": "proton_big",
-		"right": "fieht_big"
+		"left": "proton",
+		"right": "fieht",
+		"text": "We're going to Nolavillia to retrieve the Holy Itucher."
 	},
 	{
-		"text": "???: You getting paid to do it?",
-		"left": "proton_big",
-		"right": "fieht_big"
+		"left": "proton",
+		"right": "fieht",
+		"text": "You getting paid to do it?"
 	},
 	{
-		"text": "Proton: Yeah.",
-		"left": "proton_big",
-		"right": "fieht_big"
+		"left": "proton",
+		"right": "fieht",
+		"text": "Yeah."
 	},
 	{
-		"text": "???: Cool, can I join you guys?",
-		"left": "proton_big",
-		"right": "fieht_big"
+		"left": "proton",
+		"right": "fieht",
+		"text": "Cool, can I join you guys?"
 	},
 	{
-		"text": "[Recruit ???](Q) Recruit(W) Do not recruit"
+		"text": "[Recruit ???] (Q) Recruit (W) Do not recruit"
 	},
 	{
-		"text": "(Proton throws ??? back into the ocean)",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "(Proton throws ??? back into the ocean)"
 	},
 	{
-		"text": "Proton: .",
-		"left": "proton_big",
+		"left": "proton",
+		"text": ".",
 		"bgcolor": "black"
 	},
 	{
-		"text": "Proton: ..",
-		"left": "proton_big"
+		"left": "proton",
+		"text": ".."
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "..."
 	},
 	{
-		"text": "Proton: ...!",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "...!"
 	},
 	{
-		"text": "Proton: I see land!",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "I see land!",
 		"bgcolor": "navy"
 	},
 	{
-		"text": "Proton: I think we've finally make it toNolavillia!",
-		"left": "proton_big",
-		"startchapter": "Chapter 16a"
+		"left": "proton",
+		"text": "I think we've finally make it to Nolavillia!",
+		"startchapter": "Chapter16a"
 	}
 ]

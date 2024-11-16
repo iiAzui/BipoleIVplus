@@ -1,101 +1,106 @@
 [
 	{
-		"text": "Proton: The Guild of Retool will be here any minute,stay on guard.",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "The Guild of Retool will be here any minute, stay on guard.",
 		"bgcolor": "green"
 	},
 	{
-		"text": "Retool: Hah hah hah!,",
-		"left": "retool_big"
+		"left": "retool",
+		"text": "Hah hah hah!,"
 	},
 	{
-		"text": "Retool: I heard they were getting reinforcementsbut this is nothing!",
-		"left": "retool_big"
+		"left": "retool",
+		"text": "I heard they were getting reinforcements but this is nothing!"
 	},
 	{
-		"text": "Retool: Nothing to be afraid of, let's get 'em!",
-		"left": "retool_big"
+		"left": "retool",
+		"text": "Nothing to be afraid of, let's get 'em!"
 	},
 	{},
 	{
-		"text": "Retool: Ah... I'm not going to die here...",
-		"left": "retool_big"
+		"left": "retool",
+		"text": "Ah... I'm not going to die here..."
 	},
 	{
-		"text": "Retool: It's time to retreat...",
-		"left": "retool_big"
+		"left": "retool",
+		"text": "It's time to retreat..."
 	},
 	{
 		"text": "[The Guild of Retool retreats]."
 	},
 	{
-		"text": "Proton: We did it...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "We did it..."
 	},
 	{
-		"text": "???: Hmm... that was a high amount of damage..."
+		"text": "Hmm... that was a high amount of damage..."
 	},
 	{
-		"text": "Proton: Who's there!?",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "Who's there!?"
 	},
 	{
-		"text": "???: It is I, the great Damagein Elite!",
-		"left": "proton_big",
-		"right": "damagein_big"
+		"left": "proton",
+		"right": "damagein",
+		"text": "It is I, the great Damagein Elite!"
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big",
-		"right": "damagein_big"
+		"left": "proton",
+		"right": "damagein",
+		"text": "..."
 	},
 	{
-		"text": "Proton: ...who?",
-		"left": "proton_big",
-		"right": "damagein_big"
+		"left": "proton",
+		"right": "damagein",
+		"text": "...who?"
 	},
 	{
-		"text": "Damagein: I, the great Damagein, have dedicated my lifetowards seeking one thing... DAMAGE!",
-		"left": "proton_big",
-		"right": "damagein_big"
+		"left": "proton",
+		"right": "damagein",
+		"speaker": "right",
+		"text": "I, the great Damagein, have dedicated my life towards seeking one thing... DAMAGE!"
 	},
 	{
-		"text": "Damagein: And I have just witnessed YOU deal DAMAGEto those bandits!",
-		"left": "proton_big",
-		"right": "damagein_big"
+		"left": "proton",
+		"right": "damagein",
+		"speaker": "right",
+		"text": "And I have just witnessed YOU deal DAMAGE to those bandits!"
 	},
 	{
-		"text": "Damagein: So I will ask, might I join your army in orderto witness more damage?",
-		"left": "proton_big",
-		"right": "damagein_big"
+		"left": "proton",
+		"right": "damagein",
+		"speaker": "right",
+		"text": "So I will ask, might I join your army in order to witness more damage?"
 	},
 	{
-		"text": "[Recruit Damagein?](Q) Recruit(W) Do not recruit"
+		"text": "[Recruit Damagein?] (Q) Recruit (W) Do not recruit"
 	},
 	{
-		"text": "Damagein: Very well then, I will seek damage elsewhere.",
-		"left": "proton_big",
-		"right": "damagein_big"
+		"left": "proton",
+		"right": "damagein",
+		"speaker": "right",
+		"text": "Very well then, I will seek damage elsewhere."
 	},
 	{
-		"text": "???: Are you the people who protected this town?"
+		"text": "Are you the people who protected this town?"
 	},
 	{
-		"text": "???: I am Healia Aid, and I wish to join your armyfor saving my hometown.",
-		"left": "proton_big",
-		"right": "healia_big"
+		"left": "proton",
+		"right": "healia",
+		"text": "I am Healia Aid, and I wish to join your army for saving my hometown."
 	},
 	{
-		"text": "[Recruit Healia?](Q) Recruit(W) Do not recruit"
+		"text": "[Recruit Healia?] (Q) Recruit (W) Do not recruit"
 	},
 	{
-		"text": "Healia: Understood, I wish you all a safejourney.",
-		"left": "proton_big",
-		"right": "healia_big"
+		"left": "proton",
+		"right": "healia",
+		"speaker": "right",
+		"text": "Understood, I wish you all a safe journey."
 	},
 	{
-		"text": "[Chapter 05][Cos Path, Territory of Cos]",
+		"text": "[Chapter 05] [Cos Path, Territory of Cos]",
 		"bgcolor": "black",
-		"startchapter": "Chapter 05"
+		"startchapter": "Chapter05"
 	}
 ]

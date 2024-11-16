@@ -1,81 +1,85 @@
 [
 	{
-		"text": "[Chapter 25b][Sector 4, Shadow Realm Research Center]",
+		"text": "[Chapter 25b] [Sector 4, Shadow Realm Research Center]",
 		"bgcolor": "black"
 	},
 	{
-		"text": "Break: ...",
-		"left": "break_big",
+		"left": "break",
+		"text": "...",
 		"bgcolor": "light gray"
 	},
 	{
-		"text": "Break: It seems you vermin have managed to make itto the fourth sector.",
-		"left": "break_big"
+		"left": "break",
+		"text": "It seems you vermin have managed to make it to the fourth sector."
 	},
 	{
-		"text": "Break: Good thing it'll be your last.",
-		"left": "break_big"
+		"left": "break",
+		"text": "Good thing it'll be your last."
 	},
 	{},
 	{
-		"text": "Break: Erghhh...",
-		"left": "break_big"
+		"left": "break",
+		"text": "Erghhh..."
 	},
 	{
-		"text": "Break: This isn't looking too good...",
-		"left": "break_big"
+		"left": "break",
+		"text": "This isn't looking too good..."
 	},
 	{
 		"text": "[Break flees from the lab]"
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "..."
 	},
 	{
 		"text": "[Proton opens a door and a loud alarm sounds]"
 	},
 	{
-		"text": "Proton: ...what was that?",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "...what was that?"
 	},
 	{
-		"text": "???: Hello",
-		"left": "proton_big",
-		"right": "cayenne_big"
+		"left": "proton",
+		"right": "cayenne",
+		"text": "Hello"
 	},
 	{
-		"text": "Proton: Who are you?",
-		"left": "proton_big",
-		"right": "cayenne_big"
+		"left": "proton",
+		"right": "cayenne",
+		"text": "Who are you?"
 	},
 	{
-		"text": "???: I am Cayenne, a mechanical created by Death Pepper.",
-		"left": "proton_big",
-		"right": "cayenne_big"
+		"left": "proton",
+		"right": "cayenne",
+		"text": "I am Cayenne, a mechanical created by Death Pepper."
 	},
 	{
-		"text": "Cayenne: Death Pepper, the leader of this lab, awaits in thenext sector.",
-		"left": "proton_big",
-		"right": "cayenne_big"
+		"left": "proton",
+		"right": "cayenne",
+		"speaker": "right",
+		"text": "Death Pepper, the leader of this lab, awaits in the next sector."
 	},
 	{
-		"text": "Cayenne: But do not worry, I am not your enemy.",
-		"left": "proton_big",
-		"right": "cayenne_big"
+		"left": "proton",
+		"right": "cayenne",
+		"speaker": "right",
+		"text": "But do not worry, I am not your enemy."
 	},
 	{
-		"text": "Cayenne: I can assist you in your battle against Death Pepper,if you would allow it.",
-		"left": "proton_big",
-		"right": "cayenne_big"
+		"left": "proton",
+		"right": "cayenne",
+		"speaker": "right",
+		"text": "I can assist you in your battle against Death Pepper, if you would allow it."
 	},
 	{
-		"text": "[Recruit Cayenne](Q) Recruit(W) Do not recruit"
+		"text": "[Recruit Cayenne] (Q) Recruit (W) Do not recruit"
 	},
 	{
-		"text": "Cayenne: Okay then...",
-		"left": "proton_big",
-		"right": "cayenne_big"
+		"left": "proton",
+		"right": "cayenne",
+		"speaker": "right",
+		"text": "Okay then..."
 	},
 	{
 		"text": "(...)"
@@ -84,39 +88,39 @@
 		"text": "[Everyone stands in front of the enterance of the fifth sector]"
 	},
 	{
-		"text": "Quest: Soon, the Itucher will be ours.",
-		"left": "quest_big"
+		"left": "quest",
+		"text": "Soon, the Itucher will be ours."
 	},
 	{
-		"text": "Scien: It's time to finally end this.",
-		"left": "scien_big"
+		"left": "scien",
+		"text": "It's time to finally end this."
 	},
 	{
-		"text": "Romra: The final sector... that sounds a little intimidating...",
-		"left": "romra_big"
+		"left": "romra",
+		"text": "The final sector... that sounds a little intimidating..."
 	},
 	{
-		"text": "Proton: It's been a long journey, but it's finally coming toan end...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "It's been a long journey, but it's finally coming to an end..."
 	},
 	{
-		"text": "Proton: After all of these years, we're ending this at the veryplace it started it...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "After all of these years, we're ending this at the very place it started it..."
 	},
 	{
-		"text": "Proton: For everyone who suffered...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "For everyone who suffered..."
 	},
 	{
-		"text": "Proton: For everyone who died...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "For everyone who died..."
 	},
 	{
-		"text": "Proton: We must win!",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "We must win!"
 	},
 	{
 		"text": "[Proton opens the door and everyone charges into the sector]",
-		"startchapter": "Chapter 26a"
+		"startchapter": "Chapter26a"
 	}
 ]

@@ -1,51 +1,53 @@
 [
 	{
-		"text": "[Chapter 03][Cos Castle Town, Territory of Cos]",
+		"text": "[Chapter 03] [Cos Castle Town, Territory of Cos]",
 		"bgcolor": "black"
 	},
 	{
-		"text": "Proton: We've arrived at the town...",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "We've arrived at the town...",
 		"bgcolor": "grey"
 	},
 	{
-		"text": "???: Wha' suuup?",
-		"left": "proton_big",
-		"right": "lacirtcele_big"
+		"left": "proton",
+		"right": "lacirtcele",
+		"text": "Wha' suuup?"
 	},
 	{
-		"text": "???: It's me, Lacirtcele Sus of the ElementalOffense Squad.",
-		"left": "proton_big",
-		"right": "lacirtcele_big"
+		"left": "proton",
+		"right": "lacirtcele",
+		"text": "It's me, Lacirtcele Sus of the Elemental Offense Squad."
 	},
 	{
-		"text": "Lacirtcele: I heard y'all might need some help.",
-		"left": "proton_big",
-		"right": "lacirtcele_big"
+		"left": "proton",
+		"right": "lacirtcele",
+		"speaker": "right",
+		"text": "I heard y'all might need some help."
 	},
 	{
-		"text": "[Recruit Lacirtcele?](Q) Recruit(W) Do not recruit"
+		"text": "[Recruit Lacirtcele?] (Q) Recruit (W) Do not recruit"
 	},
 	{
-		"text": "Lacirtcele: No problem man, see y'all later.",
-		"left": "proton_big",
-		"right": "lacirtcele_big"
+		"left": "proton",
+		"right": "lacirtcele",
+		"speaker": "right",
+		"text": "No problem man, see y'all later."
 	},
 	{
-		"text": "Proton: We should get going.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "We should get going."
 	},
 	{
 		"text": "[The group continues onwards]",
 		"bgcolor": "green"
 	},
 	{
-		"text": "Proton: Everyone get prepared, we shouldbe reaching Sine soon.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "Everyone get prepared, we should be reaching Sine soon."
 	},
 	{
-		"text": "[Chapter 04][Sine Castle Town, Territory of Sine]",
+		"text": "[Chapter 04] [Sine Castle Town, Territory of Sine]",
 		"bgcolor": "black",
-		"startchapter": "Chapter 04"
+		"startchapter": "Chapter04"
 	}
 ]

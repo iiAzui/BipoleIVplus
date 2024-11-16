@@ -1,204 +1,212 @@
 [
 	{
-		"text": "Omega: They are here...",
-		"left": "omegaxuirist_big",
-		"right": "break_big",
+		"left": "omegaxuirist",
+		"right": "break",
+		"text": "They are here...",
 		"bgcolor": "dim grey"
 	},
 	{
-		"text": "Proton: It seems there is another Xuirist camp here, butwe must proceed.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "It seems there is another Xuirist camp here, but we must proceed."
 	},
 	{},
 	{
-		"text": "Break: Omega's been defeated, I've got to get out of here!",
-		"left": "break_big"
+		"left": "break",
+		"text": "Omega's been defeated, I've got to get out of here!"
 	},
 	{
 		"text": "(Break flees!)"
 	},
 	{
-		"text": "Omega: They're gone... they're all gone...",
-		"left": "proton_big",
-		"right": "omegaxuirist_big"
+		"left": "proton",
+		"right": "omegaxuirist",
+		"text": "They're gone... they're all gone..."
 	},
 	{
-		"text": "Omega: ...",
-		"left": "proton_big",
-		"right": "omegaxuirist_big"
+		"left": "proton",
+		"right": "omegaxuirist",
+		"text": "..."
 	},
 	{
-		"text": "Omega: I've been defeated. You win, Proton.",
-		"left": "proton_big",
-		"right": "omegaxuirist_big"
+		"left": "proton",
+		"right": "omegaxuirist",
+		"text": "I've been defeated. You win, Proton."
 	},
 	{
 		"text": "(Omega kneels before Proton)"
 	},
 	{
-		"text": "Omega: Kill me however you wish.",
-		"left": "proton_big",
-		"right": "omegaxuirist_big"
+		"left": "proton",
+		"right": "omegaxuirist",
+		"text": "Kill me however you wish."
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big",
-		"right": "omegaxuirist_big"
+		"left": "proton",
+		"right": "omegaxuirist",
+		"text": "..."
 	},
 	{
-		"text": "Proton: An honorable death for a Xuirist, you will be executed.",
-		"left": "proton_big",
-		"right": "omegaxuirist_big"
+		"left": "proton",
+		"right": "omegaxuirist",
+		"text": "An honorable death for a Xuirist, you will be executed."
 	},
 	{
-		"text": "(Proton executes Omega)",
-		"left": "proton_big",
-		"right": "omegaxuirist_big"
+		"left": "proton",
+		"right": "omegaxuirist",
+		"text": "(Proton executes Omega)"
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "..."
 	},
 	{
-		"text": "Scien: We'll be reaching the Village of Binding soon,it will be the final chance for us to prepare beforeentering the Shadow Realm.",
-		"left": "proton_big",
-		"right": "scien_big"
+		"left": "proton",
+		"right": "scien",
+		"speaker": "right",
+		"text": "We'll be reaching the Village of Binding soon, it will be the final chance for us to prepare before entering the Shadow Realm."
 	},
 	{
 		"text": "[Village of Binding, Nation of Nation]",
 		"bgcolor": "black"
 	},
 	{
-		"text": "Proton: We've arrived.",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "We've arrived.",
 		"bgcolor": "grey"
 	},
 	{
-		"text": "Proton: ...",
-		"left": "proton_big",
+		"left": "proton",
+		"text": "...",
 		"bgcolor": "grey"
 	},
 	{
-		"text": "???: You there! Are you what I think you are!?",
-		"left": "proton_big",
-		"right": "fiyghtrr_big"
+		"left": "proton",
+		"right": "fiyghtrr",
+		"text": "You there! Are you what I think you are!?"
 	},
 	{
-		"text": "Proton: Huh?",
-		"left": "proton_big",
-		"right": "fiyghtrr_big"
+		"left": "proton",
+		"right": "fiyghtrr",
+		"text": "Huh?"
 	},
 	{
-		"text": "???: You must be here to stop the Shadow Realm, are you?",
-		"left": "proton_big",
-		"right": "fiyghtrr_big"
+		"left": "proton",
+		"right": "fiyghtrr",
+		"text": "You must be here to stop the Shadow Realm, are you?"
 	},
 	{
-		"text": "Proton: Yes, actually.",
-		"left": "proton_big",
-		"right": "fiyghtrr_big"
+		"left": "proton",
+		"right": "fiyghtrr",
+		"text": "Yes, actually."
 	},
 	{
-		"text": "???: Great!",
-		"left": "proton_big",
-		"right": "fiyghtrr_big"
+		"left": "proton",
+		"right": "fiyghtrr",
+		"text": "Great!"
 	},
 	{
-		"text": "???: I am Fiyghtrr, and I have been training years for this moment!",
-		"left": "proton_big",
-		"right": "fiyghtrr_big"
+		"left": "proton",
+		"right": "fiyghtrr",
+		"text": "I am Fiyghtrr, and I have been training years for this moment!"
 	},
 	{
-		"text": "Fiyghtrr: Allow me to join you on your attack on the Shadow Realm!",
-		"left": "proton_big",
-		"right": "fiyghtrr_big"
+		"left": "proton",
+		"right": "fiyghtrr",
+		"speaker": "right",
+		"text": "Allow me to join you on your attack on the Shadow Realm!"
 	},
 	{
-		"text": "[Recruit Fiyghtrr?](Q) Recruit(W) Do not recruit"
+		"text": "[Recruit Fiyghtrr?] (Q) Recruit (W) Do not recruit"
 	},
 	{
-		"text": "Fiyghtrr: ...what?",
-		"left": "proton_big",
-		"right": "fiyghtrr_big"
+		"left": "proton",
+		"right": "fiyghtrr",
+		"speaker": "right",
+		"text": "...what?"
 	},
 	{
-		"text": "???: YOU THERE!!!",
-		"left": "proton_big",
-		"right": "recalper_big"
+		"left": "proton",
+		"right": "recalper",
+		"text": "YOU THERE!!!"
 	},
 	{
-		"text": "Proton: (Why does this keep happening to me...)",
-		"left": "proton_big",
-		"right": "recalper_big"
+		"left": "proton",
+		"right": "recalper",
+		"text": "(Why does this keep happening to me...)"
 	},
 	{
-		"text": "???: Your army looks like it's lacking members.",
-		"left": "proton_big",
-		"right": "recalper_big"
+		"left": "proton",
+		"right": "recalper",
+		"text": "Your army looks like it's lacking members."
 	},
 	{
-		"text": "???: Might you need a...",
-		"left": "proton_big",
-		"right": "recalper_big"
+		"left": "proton",
+		"right": "recalper",
+		"text": "Might you need a..."
 	},
 	{
-		"text": "???: Might you need a... REPLACEMENT UNIT?",
-		"left": "proton_big",
-		"right": "recalper_big"
+		"left": "proton",
+		"right": "recalper",
+		"text": "Might you need a... REPLACEMENT UNIT?"
 	},
 	{
-		"text": "???: Of course you do! Everyone needs a replacement unit!",
-		"left": "proton_big",
-		"right": "recalper_big"
+		"left": "proton",
+		"right": "recalper",
+		"text": "Of course you do! Everyone needs a replacement unit!"
 	},
 	{
-		"text": "???: And you are in luck!",
-		"left": "proton_big",
-		"right": "recalper_big"
+		"left": "proton",
+		"right": "recalper",
+		"text": "And you are in luck!"
 	},
 	{
-		"text": "???: You see, I am Recalper: THE ULTIMATE REPLACEMENT UNIT!!!",
-		"left": "proton_big",
-		"right": "recalper_big"
+		"left": "proton",
+		"right": "recalper",
+		"text": "You see,THE ULTIMATE REPLACEMENT UNIT!!!"
 	},
 	{
-		"text": "Recalper: That's right! Got a void in your army after one of yourcomrades died in the field?",
-		"left": "proton_big",
-		"right": "recalper_big"
+		"left": "proton",
+		"right": "recalper",
+		"speaker": "right",
+		"text": "That's right! Got a void in your army after one of your comrades died in the field?"
 	},
 	{
-		"text": "Recalper: That void will instantly be sealed up by my greatness!",
-		"left": "proton_big",
-		"right": "recalper_big"
+		"left": "proton",
+		"right": "recalper",
+		"speaker": "right",
+		"text": "That void will instantly be sealed up by my greatness!"
 	},
 	{
-		"text": "Recalper: No one replaces the deceased like I do!",
-		"left": "proton_big",
-		"right": "recalper_big"
+		"left": "proton",
+		"right": "recalper",
+		"speaker": "right",
+		"text": "No one replaces the deceased like I do!"
 	},
 	{
-		"text": "Recalper: So, what do you think? Want to recruit me into yourpainfully empty army?",
-		"left": "proton_big",
-		"right": "recalper_big"
+		"left": "proton",
+		"right": "recalper",
+		"speaker": "right",
+		"text": "So, what do you think? Want to recruit me into your painfully empty army?"
 	},
 	{
-		"text": "[Recruit Recalper?](Q) Recruit(W) Do not recruit"
+		"text": "[Recruit Recalper?] (Q) Recruit (W) Do not recruit"
 	},
 	{
-		"text": "Recalper: What!? Don't you know that you can't replacethe replacement!?",
-		"left": "proton_big",
-		"right": "recalper_big"
+		"left": "proton",
+		"right": "recalper",
+		"speaker": "right",
+		"text": "What!? Don't you know that you can't replace the replacement!?"
 	},
 	{
-		"text": "Proton: It's time to enter the Shadow Realm...",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "It's time to enter the Shadow Realm..."
 	},
 	{
-		"text": "Proton: We'll activate the portal at the Location of Binding andenter from there.",
-		"left": "proton_big"
+		"left": "proton",
+		"text": "We'll activate the portal at the Location of Binding and enter from there."
 	},
 	{
 		"text": "...",
-		"startchapter": "Chapter 22a"
+		"startchapter": "Chapter22a"
 	}
 ]

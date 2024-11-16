@@ -11,7 +11,7 @@ resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("2_c2tvl")
 shader_parameter/use_billboard = true
-shader_parameter/acted = true
+shader_parameter/acted = false
 shader_parameter/texture_albedo = ExtResource("2_puuba")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_c5eei"]

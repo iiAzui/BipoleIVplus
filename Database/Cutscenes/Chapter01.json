@@ -1,26 +1,26 @@
 [
 	{
-		"text": "[Chapter 01][Static Path, Territory of Static]",
+		"text": "[Chapter 01] [Static Path, Territory of Static]",
 		"bgcolor": "black"
 	},
 	{
-		"text": "Scien: There are some Slimes blocking out way.",
-		"left": "scien_big",
-		"right": "proton_big",
+		"left": "scien",
+		"right": "proton",
+		"text": "There are some Slimes blocking out way.",
 		"bgcolor": "green"
 	},
 	{
-		"text": "Scien: We'll need to defeat them to continueonwards.",
-		"left": "scien_big",
-		"right": "proton_big"
+		"left": "scien",
+		"right": "proton",
+		"text": "We'll need to defeat them to continue onwards."
 	},
 	{
-		"text": "Scien: We've defeated the enemy slimes.",
-		"left": "scien_big"
+		"left": "scien",
+		"text": "We've defeated the enemy slimes."
 	},
 	{
-		"text": "Scien: We'll need to be careful, there will likely bemore ahead.",
-		"left": "scien_big",
-		"startchapter": "Chapter 02"
+		"left": "scien",
+		"text": "We'll need to be careful, there will likely be more ahead.",
+		"startchapter": "Chapter02"
 	}
 ]
