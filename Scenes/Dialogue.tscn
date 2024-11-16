@@ -16,7 +16,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_1rjgr")
 script = ExtResource("1_dodj1")
-first_cutscene_name = "Prologue"
 dialogue_text = NodePath("InnerBox/PanelContainer/MarginContainer/Control/DialogueText")
 name_left = NodePath("InnerBox/PanelContainer/MarginContainer/NameLeft")
 name_right = NodePath("InnerBox/PanelContainer/MarginContainer/NameRight")

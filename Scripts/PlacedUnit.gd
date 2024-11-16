@@ -108,6 +108,10 @@ func damage_animation(damage: int, move: Move, miss: bool, is_heal: bool = false
 	else:
 		await get_tree().create_tween().tween_method(set_overlay_blend, 0.5, 0, 0.4).finished
 	
+func take_damage_with_animation(damage: int):
+	unit.take_damage(damage)
+	await damage_animation(damage, null, false, false)
+	
 func set_overlay_blend(value: float):
 	#print(value)
 	shader_mat.set_shader_parameter("overlay_blend", value)

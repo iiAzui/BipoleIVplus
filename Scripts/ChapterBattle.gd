@@ -164,6 +164,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		select_move(5)
 	elif event.is_action_pressed("7"):
 		select_move(6)
+	elif event.is_action_pressed("DebugDamageAllEnemies"):
+		for unit in unit_grid.enemy_units:
+			damage_and_clear_if_dead(unit, 9999)
+		
+func damage_and_clear_if_dead(unit: PlacedUnit, damage: int):
+	await unit.take_damage_with_animation(damage)
+	clear_if_dead(unit)
 		
 func start_player_turn():
 	for unit in unit_grid.enemy_units:
@@ -364,21 +371,30 @@ func use_skill(attacker: PlacedUnit, defender: PlacedUnit, move: Move):
 					await attack_animation(followup_attacker, followup_defender, null, followup_damage)
 				else:
 					await attack_animation(followup_attacker, followup_defender, null, 0, true)
-				await get_tree().create_timer(0.25).timeout
-	
-	await get_tree().create_timer(0.25).timeout
-	if is_player_turn:
-		battle_camera.standard_view()
+				await get_tree().create_timer(0.25).timeout	
 	
 	# if either unit died, remove them from the grid
-	if not attacker.unit.is_alive():
-		unit_grid.erase_unit(attacker.coords)
+	clear_if_dead(attacker)
+	clear_if_dead(defender)
+		
+	if accept_battle_inputs:
+		await get_tree().create_timer(0.25).timeout
+		if is_player_turn:
+			battle_camera.standard_view()
+	
+# Clear unit if dead. ALso check if all allies/enemies are dead and win/lose the game accordingly.
+func clear_if_dead(placed_unit: PlacedUnit):
+	if not placed_unit.unit.is_alive():
+		unit_grid.erase_unit(placed_unit.coords)
 	else:
-		attacker.update_unit_visual()
-	if not defender.unit.is_alive():
-		unit_grid.erase_unit(defender.coords)
-	else:
-		defender.update_unit_visual()
+		placed_unit.update_unit_visual()
+		
+	if unit_grid.allied_units.is_empty():
+		lose()
+		return
+	elif unit_grid.enemy_units.is_empty():
+		win()
+		return
 		
 func attack_animation(attacker: PlacedUnit, target: PlacedUnit, move: Move, damage: int, miss: bool = false):
 	await attacker.attack_animation(target, move, damage, miss)
@@ -890,6 +906,17 @@ func spread_attack_range(coords: Vector2i, unit: PlacedUnit, range_remaining: in
 	spread_attack_range(coords + Vector2i.DOWN, unit, range_remaining)
 	spread_attack_range(coords + Vector2i.LEFT, unit, range_remaining)
 	
+# or ending the battle after the player wins
+func win():
+	accept_battle_inputs = false
+	await get_tree().create_timer(1.0).timeout
+	get_tree().change_scene_to_file("res://Scenes/Dialogue.tscn")
+	
+func lose():
+	accept_battle_inputs = false
+	await get_tree().create_timer(1.0).timeout
+	get_tree().change_scene_to_file("res://Scenes/TitleScreen.tscn")
+
 # Return true if this tile is either out of bounds or there is a solid tile here (for non retro mode).
 func is_tile_solid(coords: Vector2i):
 	return not is_coords_in_bounds(coords);

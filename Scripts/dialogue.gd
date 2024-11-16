@@ -1,8 +1,6 @@
 extends Control
 class_name Dialogue
 
-@export var first_cutscene_name: String = "Prologue1"
-
 @export var dialogue_text: Label
 @export var name_left: Label
 @export var name_right: Label
@@ -11,7 +9,7 @@ class_name Dialogue
 @export var color_background: ColorRect
 
 # TODO: probably want to move this to the save file
-static var current_chapter: String = "Chapter1"
+static var current_chapter: String = "Chapter01"
 
 # All current dialogue
 var dialogue: Array
@@ -20,47 +18,65 @@ var dialogue: Array
 var current_branch: Array
 
 # The path of dialogue line indexes to reach the current branch when combined with line_branch_stack to get the branch taken.
-var line_index_stack: Array[int]
+static var line_index_stack: Array[int] = []
 # The path of branch names to reach the current branch.
-var line_branch_stack: Array[String]
+static var line_branch_stack: Array[String] = []
 
 # The line # of the current branch currently bring shown.
-var line_index: int
+static var line_index: int = -1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	play_cutscene(first_cutscene_name)
+	play_cutscene()
 	
-func play_cutscene(cutscene_name: String):
-	current_chapter = cutscene_name
-	var dialogue_file = FileAccess.open("res://Database/Cutscenes/"+cutscene_name+".json", FileAccess.READ)
+func play_cutscene():
+	load_cutscene_file()
+	if not dialogue or dialogue.is_empty():
+		return
+		
+	print("loaded cutscene for chapter ", current_chapter)
+	print("line index stack: ", line_index_stack)
+	print("line branch stack: ", line_branch_stack)
+	print("line index: ", line_index)
+	print("current branch: ", current_branch)
+	
+	display_next_line(false)
+	
+func load_cutscene_file():
+	var dialogue_file = FileAccess.open("res://Database/Cutscenes/"+current_chapter+".json", FileAccess.READ)
 	if not dialogue_file:
-		printerr("cutscene not found: ", cutscene_name)
+		dialogue = []
+		printerr("cutscene not found: ", current_chapter)
 		return
 	var json_string = dialogue_file.get_as_text()
 	dialogue_file.close()
 	var json = JSON.new()
 	json.parse(json_string)
 	dialogue = json.data
-
-	line_index_stack = []
-	line_branch_stack = []
-	current_branch = dialogue
-	line_index = -1
-	display_next_line()
+	find_branch()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		display_next_line()
 	
-func display_next_line() -> void:
-	if line_index >= 0:
+func display_next_line(close_current_line: bool = true) -> void:
+	if line_index >= 0 and close_current_line:
 		var line_being_closed = current_branch[line_index]
 		if line_being_closed.has("battle"):
 			get_tree().change_scene_to_file("res://Scenes/3DChapterBattle.tscn")
+			return
 		elif line_being_closed.has("startchapter"):
-			play_cutscene(line_being_closed["startchapter"])
+			var new_chapter: String = line_being_closed["startchapter"].replace(" ", "")
+			if current_chapter == new_chapter:
+				printerr("trying to reload back into current chapter!")
+				return
+			current_chapter = new_chapter
+			line_index_stack.clear()
+			line_branch_stack.clear()
+			line_index = -1
+			load_cutscene_file()
+			play_cutscene()
 			return
 	
 	line_index += 1
@@ -70,13 +86,8 @@ func display_next_line() -> void:
 			return
 	
 		# retrace the steps to get back to the dialogue before the last branch was taken
-		current_branch = dialogue
-		for i in len(line_index_stack)-1:
-			var index_of_next_branch = line_index_stack[i]
-			var branch_name := line_branch_stack[i]
-			var branch: Dictionary = current_branch[index_of_next_branch]
-			current_branch = branch[branch_name]
-			
+		find_branch()
+		
 		# go to the next line after the lbranch that is being exited
 		# and remove the index and branch name from the branch path stack
 		line_index = line_index_stack.pop_back() + 1
@@ -84,6 +95,7 @@ func display_next_line() -> void:
 		display_next_line()
 		return
 		
+	print("index stack: ", line_index_stack, ", branch stack: ", line_branch_stack, ", current line: ", line_index)
 	var line: Dictionary = current_branch[line_index]
 	
 	# NOTE: may want to add actual backgrounds eventually instead of solid colors
@@ -127,7 +139,16 @@ func display_next_line() -> void:
 			display_next_line()
 			return
 		
-	#print("index stack: ", line_index_stack, ", branch stack: ", line_branch_stack, ", current line: ", line_index)
+	
+
+func find_branch():
+	current_branch = dialogue
+	for i in len(line_index_stack)-1:
+		var index_of_next_branch = line_index_stack[i]
+		var branch_name := line_branch_stack[i]
+		var branch: Dictionary = current_branch[index_of_next_branch]
+		current_branch = branch[branch_name]
+		print("index_of_next_branch: ", index_of_next_branch, ", branch_name: ", branch_name)
 
 func try_get_character(name: String) -> Character:
 	if ResourceLoader.exists("res://Database/Characters/"+name+".tres", "Character"):
