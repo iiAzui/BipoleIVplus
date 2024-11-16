@@ -1,0 +1,20 @@
+[
+	{
+		"text": "[Chapter 02][Outer Static, Territory of Static]",
+		"bgcolor": "black"
+	},
+	{
+		"text": "Proton: There's some slimes up ahead, preparefor battle!",
+		"left": "proton_big",
+		"bgcolor": "green"
+	},
+	{
+		"text": "Proton: We'll be reaching the Territory of Cos soon.",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: If we need reinforcements, there will be amember of the Elemental Offense Squad at a nearbytown.",
+		"left": "proton_big",
+		"startchapter": "Chapter 03"
+	}
+]

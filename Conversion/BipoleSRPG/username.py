@@ -1,3 +1,5 @@
+UserName = ""
+
 def SetUserName(name):
     global UserName
     UserName = name

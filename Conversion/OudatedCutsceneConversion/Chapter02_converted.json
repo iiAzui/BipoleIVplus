@@ -1,0 +1,26 @@
+[
+    {
+        "chapterlevel": "3",
+        "bgcolor": "black",
+        "text": "[Chapter 02]"
+    },
+    {
+        "text": "[Outer Static, Territory of Static]",
+        "bgcolor": "green"
+    },
+    {
+        "portrait_left": "Proton",
+        "text": "Proton: There's some slimes up ahead, prepare for battle!",
+        "battle": "Chapter2",
+        "startbattlenextinput": true
+    },
+    {
+        "portrait_left": "Proton",
+        "text": "Proton: We'll be reaching the Territory of Cos soon."
+    },
+    {
+        "portrait_left": "Proton",
+        "text": "Proton: If we need reinforcements, there will be a member of the Elemental Offense Squad at a nearby town.",
+        "startchapter": "Chapter 03"
+    }
+]

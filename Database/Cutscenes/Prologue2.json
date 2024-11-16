@@ -1,0 +1,127 @@
+[
+	{
+		"text": "..."
+	},
+	{
+		"text": "[1298 AN, 19 years later][Static Castle, The Territories of Bipole]"
+	},
+	{
+		"text": "???: *knock* *knock* *knock*",
+		"bgcolor": "gray"
+	},
+	{
+		"text": "???: Who is it?"
+	},
+	{
+		"text": "???: Greeetings, Quest.",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: I am Proton Xurr of the Knights of Static.",
+		"left": "proton_big"
+	},
+	{
+		"text": "Quest: Ah, the Nolavillian Knight.",
+		"left": "proton_big",
+		"right": "quest_big"
+	},
+	{
+		"text": "Proton: Xuir, actually.",
+		"left": "proton_big",
+		"right": "quest_big"
+	},
+	{
+		"text": "Quest: My apologies.",
+		"left": "proton_big",
+		"right": "quest_big"
+	},
+	{
+		"text": "Quest: Anyway, why are you here?",
+		"left": "proton_big",
+		"right": "quest_big"
+	},
+	{
+		"text": "Proton: There is a large band of bandits, known as theGuild of Retool, who have threatened the allied territoryof Sine with an attack.",
+		"left": "proton_big",
+		"right": "quest_big"
+	},
+	{
+		"text": "Proton: The King has request us, as well as the head of theknights, Sir Scien, to assist Sine against the forces.",
+		"left": "proton_big",
+		"right": "quest_big"
+	},
+	{
+		"text": "Quest: I would decline, but I suppose this is an orderfrom the King.",
+		"left": "proton_big",
+		"right": "quest_big"
+	},
+	{
+		"text": "Quest: *sigh*",
+		"left": "proton_big",
+		"right": "quest_big"
+	},
+	{
+		"text": "Quest: I'll meet you at the front gates in an hour,is that alright?",
+		"left": "proton_big",
+		"right": "quest_big"
+	},
+	{
+		"text": "Proton: Yes, we will await you there.",
+		"left": "proton_big",
+		"right": "quest_big"
+	},
+	{
+		"text": "[1 hour later...]",
+		"bgcolor": "black"
+	},
+	{
+		"text": "Proton: So you finally arrive...",
+		"left": "proton_big",
+		"right": "quest_big",
+		"bgcolor": "green"
+	},
+	{
+		"text": "Proton: Shall we get going?",
+		"left": "proton_big",
+		"right": "quest_big"
+	},
+	{
+		"text": "Quest: Actually, there's this knight who hasoffered to aid us...",
+		"left": "proton_big",
+		"right": "quest_big"
+	},
+	{
+		"text": "???: Hello, I'm Romra!",
+		"left": "romra_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "Romra: I'm a newly certified knight, and I wishto one day join the Static Elemental OffenseSquad.",
+		"left": "romra_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "Romra: Of course, I'll need all of the trainingI can get to do so.",
+		"left": "romra_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "Romra: If you would allow it, I would like topartake in this mission along side you.",
+		"left": "romra_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "[Recruit Romra?](Q) Recruit(W) Do not recruit"
+	},
+	{
+		"text": "Romra: Oh, sorry for bothering you.",
+		"left": "romra_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "Scien: Let's get going.",
+		"left": "scien_big",
+		"right": "proton_big",
+		"startchapter": "Chapter 01"
+	}
+]

@@ -2,20 +2,23 @@ import units
 import os
 current_directory = os.getcwd()
 
+battle_started = False
+
 def PlacePlayerUnits():
-    SetPosX = -650
-    SetPosY = -250
-    for character in units.UnitsAlive:
-        print(character.DisplayName)
-        character.TurtleName.showturtle()
-        character.TurtleName.speed(0)
-        character.TurtleName.penup()
-        character.TurtleName.setpos(SetPosX,SetPosY)
-        if SetPosX == 250:
-            SetPosY -= 50
-            SetPosX = -650
-        else:
-            SetPosX += 50
+    # SetPosX = -650
+    # SetPosY = -250
+    # for character in units.UnitsAlive:
+    #     print(character.DisplayName)
+    #     character.TurtleName.showturtle()
+    #     character.TurtleName.speed(0)
+    #     character.TurtleName.penup()
+    #     character.TurtleName.setpos(SetPosX,SetPosY)
+    #     if SetPosX == 250:
+    #         SetPosY -= 50
+    #         SetPosX = -650
+    #     else:
+    #         SetPosX += 50
+    pass
 
 def PlaceEnemies(placements):
     # EnemyPosX = -500
@@ -26,23 +29,25 @@ def PlaceEnemies(placements):
     #     character.TurtleName.penup()
     #     character.TurtleName.setpos(EnemyPosX,100)
     #     EnemyPosX += 50
-    PlaceX = -650
-    PlaceY = 350
-    print("Placing Enemies:")
-    for character in placements:
-        if character == None:
-            print("=Empty=")
-        else:
-            print(character.DisplayName)
-            character.TurtleName.penup()
-            character.TurtleName.speed(0)
-            character.TurtleName.goto(PlaceX, PlaceY)
-            character.TurtleName.showturtle()
-        if PlaceX == 250:
-            PlaceX = -650
-            PlaceY -= 50
-        else:
-            PlaceX += 50
+    # PlaceX = -650
+    # PlaceY = 350
+    # print("Placing Enemies:")
+    # for character in placements:
+    #     if character == None:
+    #         print("=Empty=")
+    #     else:
+    #         print(character.DisplayName)
+    #         character.TurtleName.penup()
+    #         character.TurtleName.speed(0)
+    #         character.TurtleName.goto(PlaceX, PlaceY)
+    #         character.TurtleName.showturtle()
+    #     if PlaceX == 250:
+    #         PlaceX = -650
+    #         PlaceY -= 50
+    #     else:
+    #         PlaceX += 50
+    battle_started = true
+    pass
 
 # None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None, is one full row
 

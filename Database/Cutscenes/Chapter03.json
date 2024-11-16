@@ -1,0 +1,51 @@
+[
+	{
+		"text": "[Chapter 03][Cos Castle Town, Territory of Cos]",
+		"bgcolor": "black"
+	},
+	{
+		"text": "Proton: We've arrived at the town...",
+		"left": "proton_big",
+		"bgcolor": "grey"
+	},
+	{
+		"text": "???: Wha' suuup?",
+		"left": "proton_big",
+		"right": "lacirtcele_big"
+	},
+	{
+		"text": "???: It's me, Lacirtcele Sus of the ElementalOffense Squad.",
+		"left": "proton_big",
+		"right": "lacirtcele_big"
+	},
+	{
+		"text": "Lacirtcele: I heard y'all might need some help.",
+		"left": "proton_big",
+		"right": "lacirtcele_big"
+	},
+	{
+		"text": "[Recruit Lacirtcele?](Q) Recruit(W) Do not recruit"
+	},
+	{
+		"text": "Lacirtcele: No problem man, see y'all later.",
+		"left": "proton_big",
+		"right": "lacirtcele_big"
+	},
+	{
+		"text": "Proton: We should get going.",
+		"left": "proton_big"
+	},
+	{
+		"text": "[The group continues onwards]",
+		"bgcolor": "green"
+	},
+	{
+		"text": "Proton: Everyone get prepared, we shouldbe reaching Sine soon.",
+		"left": "proton_big"
+	},
+	{
+		"text": "[Chapter 04][Sine Castle Town, Territory of Sine]",
+		"bgcolor": "black",
+		"startchapter": "Chapter 04"
+	}
+]

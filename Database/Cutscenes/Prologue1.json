@@ -1,0 +1,179 @@
+[
+	{
+		"text": "[Year 1279 AN][Shadow Realm Research Center]",
+		"bgcolor": "black"
+	},
+	{
+		"text": "Death Pepper: Scien!",
+		"left": "deathpepper_big"
+	},
+	{
+		"text": "Scien: Yes?",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Death Pepper: Has the second protype awakened it's Xuir Arts yet?",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Scien: Not yet, sir.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Death Pepper: Then it's likely another failure.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Death Pepper: Prepare the new extraction room, I might as well get somelife energy from this.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Death Pepper: And who knows, the torture might awaken one of it's arts.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Scien: Sir...",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Scien: Sir... I will not.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Death Pepper: You dare defy my orders?",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Scien: I've worked at this research center for the past seven years,but I can no longer handle this suffering.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Scien: I will likely die, but atleast this will reduce the sufferingof others.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Death Pepper: ...",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Death Pepper: I've suspected that you'd betray me.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Death Pepper: Don't think that I haven't noticed that the ForbiddenRitual you had given was fake.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Scien: You attempted the Forbidden Ritual of Nation!?",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Death Pepper: The only reason you're still alive is because of yourof your efficiency, though it seems that you'll no longercooperate with us.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Death Pepper: It's a shame that I'll have to kill you now, the onlyother person that could replace you is Break, and let's say that I'mnot his biggest fan.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Scien: ...",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Scien: It's been eight painful years since you destroyed my town forthe Forbidden Ritual...",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Scien: For these eight years, I've lacked the courage to stop thepain, to not continue to work with you...",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Scien: I should have done this earlier, but it is something I canno longer live with.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Scien: Though it will not make up for my past actions, I will doeverything I can to save even one soul from this place.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "(Scien grabs a young child)",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Death Pepper: What do you think you're doing!?",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Scien: If he stays here, he will die in three days when theextraction finishes. With this, he will have a chance ofsurival.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "(Scien activates a device)",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Death Pepper: BREAK! DEACTIVATE THE DEVICE!",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "Break: The device seems to be malfunctioning...",
+		"left": "deathpepper_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Death Pepper: Wait, does that mean...",
+		"left": "deathpepper_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Death Pepper: You fool! There's no way you'll survive witha broken teleporter! Who knows where it'll take you.",
+		"left": "deathpepper_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Death Pepper: You'll probably starve in the middle of the ocean.",
+		"left": "deathpepper_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Scien: If so, I will accept that fate as punishment.",
+		"left": "deathpepper_big",
+		"right": "scien_big2"
+	},
+	{
+		"text": "(The teleporter activates and Scien disappears with the child)",
+		"left": "deathpepper_big"
+	},
+	{
+		"text": "Death Pepper: They got away, what a waste of resources...",
+		"left": "deathpepper_big",
+		"startchapter": "Prologue2"
+	}
+]
