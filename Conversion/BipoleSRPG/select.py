@@ -1,3 +1,9 @@
+instant_level_ups = []
+
+def InstantLevelUp(unit, amount):
+    instant_level_ups.append({"unit": unit.DisplayName, "amount": amount})
+
+
 # import turtle
 # import screensetup
 # import units

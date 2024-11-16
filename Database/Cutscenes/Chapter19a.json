@@ -1,0 +1,167 @@
+[
+	{
+		"text": "Proton: ...",
+		"left": "proton_big",
+		"bgcolor": "green"
+	},
+	{
+		"text": "Proton: I think we're being followed.",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: Prepare for battle!",
+		"left": "proton_big"
+	},
+	{},
+	{
+		"text": "Proton: I think that's all of the Xuirists here.",
+		"left": "proton_big"
+	},
+	{
+		"text": "...",
+		"left": "proton_big"
+	},
+	{
+		"text": "???: Errr... I've had enough of 'em crazy Xuirists.",
+		"left": "proton_big",
+		"right": "dliug_big"
+	},
+	{
+		"text": "???: Ya can't pay me 'nough to do this stuff.",
+		"left": "proton_big",
+		"right": "dliug_big"
+	},
+	{
+		"text": "???: You 'ere!",
+		"left": "proton_big",
+		"right": "dliug_big"
+	},
+	{
+		"text": "Proton: Me?",
+		"left": "proton_big",
+		"right": "dliug_big"
+	},
+	{
+		"text": "???: The hell else would I be talkin' to?",
+		"left": "proton_big",
+		"right": "dliug_big"
+	},
+	{
+		"text": "???: Ya probably hate the Xuirists, don't 'ya?",
+		"left": "proton_big",
+		"right": "dliug_big"
+	},
+	{
+		"text": "???: 'ey sent me out here to kill ya', after all.",
+		"left": "proton_big",
+		"right": "dliug_big"
+	},
+	{
+		"text": "???: Anyway, I've had 'nough of 'em crazy Xuirists.",
+		"left": "proton_big",
+		"right": "dliug_big"
+	},
+	{
+		"text": "???: Ya can't pay me 'nough to do another of 'em XuirRituals.",
+		"left": "proton_big",
+		"right": "dliug_big"
+	},
+	{
+		"text": "???: Since 'yer look like ya gonna fight 'em anyways, whynot let us help ya?",
+		"left": "proton_big",
+		"right": "dliug_big"
+	},
+	{
+		"text": "[Recruit the Mercenaries?](Q) Recruit(W) Do not recruit"
+	},
+	{
+		"text": "???: That's a shame, ain't it?",
+		"left": "proton_big",
+		"right": "dliug_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big"
+	},
+	{
+		"text": "???: It seems you may be struggling...",
+		"left": "proton_big",
+		"right": "geomer_big"
+	},
+	{
+		"text": "Proton: Who are you?",
+		"left": "proton_big",
+		"right": "geomer_big"
+	},
+	{
+		"text": "???: I am Geomer, a disciple in Geom theory.",
+		"left": "proton_big",
+		"right": "geomer_big"
+	},
+	{
+		"text": "Geomer: You see, those Xuirists that you were justfighting were using Geom Energy.",
+		"left": "proton_big",
+		"right": "geomer_big"
+	},
+	{
+		"text": "Geomer: Geom Energy is a very powerful force, and itseems you are unfamiliar to it.",
+		"left": "proton_big",
+		"right": "geomer_big"
+	},
+	{
+		"text": "Geomer: As one wishing to spread the knowledge of Geom,I offer to aid you in combat using my Geom powers.",
+		"left": "proton_big",
+		"right": "geomer_big"
+	},
+	{
+		"text": "[Recruit Geomer?](Q) Recruit(W) Do not recruit"
+	},
+	{
+		"text": "Geomer: You fear knowledge, for you cannot comprehend it.",
+		"left": "proton_big",
+		"right": "geomer_big"
+	},
+	{
+		"text": "[Xuirist Cavern]"
+	},
+	{
+		"text": "Omega: ...",
+		"left": "omegaxuirist_big",
+		"bgcolor": "dim grey"
+	},
+	{
+		"text": "Omega: ...they have failed again.",
+		"left": "omegaxuirist_big"
+	},
+	{
+		"text": "Break: ...",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Break: Must I remind you of what will happen?",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Break: If you are out of troops to send out, then you must fight theProto-Xuir to the death yourself.",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Omega: He will be approaching our camp soon, I'll gather all of our troopshere and slay him in our final battle.",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Omega: I will not fail.",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Break: You better keep your word.",
+		"left": "omegaxuirist_big",
+		"right": "break_big",
+		"startchapter": "Chapter 20b"
+	}
+]

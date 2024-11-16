@@ -1,10 +1,10 @@
 [
 	{
-		"text": "[Chapter 01]\n[Static Path, Territory of Static]",
+		"text": "[Chapter 01][Static Path, Territory of Static]",
 		"bgcolor": "black"
 	},
 	{
-		"text": "Scien: There are some Slimes blocking our way.",
+		"text": "Scien: There are some Slimes blocking out way.",
 		"left": "scien_big",
 		"right": "proton_big",
 		"bgcolor": "green"

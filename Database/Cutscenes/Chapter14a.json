@@ -1,0 +1,114 @@
+[
+	{
+		"text": "???: Hmmm.....",
+		"left": "proton_big",
+		"right": "bigbrainneville_big",
+		"bgcolor": "navy"
+	},
+	{
+		"text": "???: It seems like Diver Neville has lost...",
+		"left": "proton_big",
+		"right": "bigbrainneville_big"
+	},
+	{
+		"text": "???: Well then, I guess it's my turn!",
+		"left": "proton_big",
+		"right": "bigbrainneville_big"
+	},
+	{
+		"text": "???: Everyone, CHARGE!!!",
+		"left": "proton_big",
+		"right": "bigbrainneville_big"
+	},
+	{
+		"text": "Proton: I think I see a boat coming towards us...",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big"
+	},
+	{
+		"text": "???: Hey, you know where this is?",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "Proton: The Bipole Sea, nearing Nolavillia.",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "???: Oh god, what do I do now...",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "Proton: ?",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "???: This is pretty far away from Altar, right?",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "???: I was escaping from there but then a stormhit me and I ended up here.",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "???: Is is okay if you could take me to whereeveryou're going?",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "Proton: We're going to Nolavillia to retrieve the HolyItucher.",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "Proton: I'm warning you, it could get dangerous.",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "???: Wait, why would you want the Itucher?",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "???: It like destroyed Altar Town and stuff.",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "Proton: Well, some evil scientists have gottenit and the world is in danger.",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "???: The world is in danger?",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "???: I guess I should probably help you stop that.",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "[Recruit ???](Q) Recruit(W) Do not recruit"
+	},
+	{
+		"text": "???: Okay...",
+		"left": "proton_big",
+		"right": "eulb_big"
+	},
+	{
+		"text": "[Chapter 15a][Bipole Sea, Bipole Sea]",
+		"bgcolor": "black",
+		"startchapter": "Chapter 15a"
+	}
+]

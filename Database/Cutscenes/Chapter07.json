@@ -1,0 +1,46 @@
+[
+	{
+		"text": "Proton: There's a member of the ElementalOffense Squad at a village we'll be passingby.",
+		"left": "proton_big",
+		"bgcolor": "dark green"
+	},
+	{
+		"text": "Proton: It will be important that we haveenough power to stop any evil which may beat The Nation of Altar.",
+		"left": "proton_big",
+		"bgcolor": "dark green"
+	},
+	{
+		"text": "[Obscure Village, Territory of Cos]",
+		"bgcolor": "black"
+	},
+	{
+		"text": "???: So, you guys are heading to Altar?",
+		"left": "proton_big",
+		"right": "wodahs_big",
+		"bgcolor": "dim grey"
+	},
+	{
+		"text": "???: I just finished a mission in Quad soI'll be able to help you if you need it.",
+		"left": "proton_big",
+		"right": "wodahs_big",
+		"bgcolor": "dim grey"
+	},
+	{
+		"text": "[Recruit ????](Q) Recruit(W) Do not recruit"
+	},
+	{
+		"text": "???: Alright then, I'll be headingback to Static.",
+		"left": "proton_big",
+		"right": "wodahs_big"
+	},
+	{
+		"text": "Proton: We're almost at Altar, but there's somebandits up ahead.",
+		"left": "proton_big",
+		"bgcolor": "dark green"
+	},
+	{
+		"text": "[Chapter 08][Altar Town, Nation of Altar]",
+		"bgcolor": "black",
+		"startchapter": "Chapter 08"
+	}
+]

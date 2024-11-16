@@ -1,0 +1,466 @@
+[
+	{
+		"text": "Quest: ...",
+		"left": "quest_big",
+		"bgcolor": "dark grey"
+	},
+	{
+		"text": "Quest: Hmmm? What's this?",
+		"left": "quest_big"
+	},
+	{
+		"text": "(Quest pulls a lever on the wall, opening up a container)"
+	},
+	{
+		"text": "Quest: Is this...",
+		"left": "quest_big"
+	},
+	{
+		"text": "Quest: Yes! It is!",
+		"left": "quest_big"
+	},
+	{
+		"text": "Quest: The Holy Itucher...",
+		"left": "quest_big"
+	},
+	{
+		"text": "Quest: It's here, right in front of me...",
+		"left": "quest_big"
+	},
+	{
+		"text": "Quest: My life's work of study and research...",
+		"left": "quest_big"
+	},
+	{
+		"text": "Quest: After all of these years...",
+		"left": "quest_big"
+	},
+	{
+		"text": "Quest: It's finally...",
+		"left": "quest_big"
+	},
+	{
+		"text": "Proton: Quest, did you find the Itu...",
+		"left": "quest_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "(Proton is blasted back by an explosion around Quest)",
+		"bgcolor": "red"
+	},
+	{
+		"text": "Proton: Wh...",
+		"left": "proton_big",
+		"bgcolor": "indigo"
+	},
+	{
+		"text": "Proton: Quest! Don't activate the Itucher!",
+		"left": "proton_big"
+	},
+	{
+		"text": "Quest: ...",
+		"left": "proton_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Proton: Quest!",
+		"left": "proton_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "(Quest stabs Proton with the Holy Itucher)"
+	},
+	{
+		"text": "Quest: ...",
+		"left": "proton_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Scien: Proton!",
+		"left": "proton_big",
+		"right": "scien_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big",
+		"right": "scien_big"
+	},
+	{
+		"text": "[Proton has been defeated]"
+	},
+	{
+		"text": "Scien: Proton!!!",
+		"left": "scien_big"
+	},
+	{
+		"text": "Quest: ...",
+		"left": "scien_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Scien: Quest, he must be possessed by the Holy Itucher...",
+		"left": "scien_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Scien: He's already killed Proton...",
+		"left": "scien_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Scien: What will happen if he escapes to the rest of the world...",
+		"left": "scien_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Scien: ...",
+		"left": "scien_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Scien: It must be done...",
+		"left": "scien_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Scien: The Forbidden Ritual of Nation...",
+		"left": "scien_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Scien: For the sake of the world...",
+		"left": "scien_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Scien: I'm sorry, Proton...",
+		"left": "scien_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "(Scien places his mask on Proton's corpse)"
+	},
+	{
+		"text": "Quest: ...",
+		"left": "questitucher_big"
+	},
+	{
+		"text": "(Scien glows brightly before fading into the air)",
+		"bgcolor": "yellow"
+	},
+	{
+		"text": "[Scien has been defeated]"
+	},
+	{
+		"text": "(Proton's body disappears and is replaced by a suitof armor)",
+		"bgcolor": "indigo"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "xuirman_big"
+	},
+	{
+		"text": "Proton: Am I... alive?",
+		"left": "xuirman_big"
+	},
+	{
+		"text": "Quest: ...",
+		"left": "xuirman_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Proton: Scien...",
+		"left": "xuirman_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Proton: Did he...",
+		"left": "xuirman_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "xuirman_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Proton: This is for the sake of the world...",
+		"left": "xuirman_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Proton: Quest, you must be stopped.",
+		"left": "xuirman_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "(Proton awakens Integer)"
+	},
+	{
+		"text": "[Integer joined your party]"
+	},
+	{
+		"text": "[Quest has left your party]"
+	},
+	{
+		"text": "Quest: ...",
+		"left": "xuirman_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Quest: Proton...",
+		"left": "xuirman_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Quest: Stop me...",
+		"left": "xuirman_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "xuirman_big",
+		"right": "questitucher_big"
+	},
+	{
+		"text": "(Proton seals Quest in the Holy Itucher)",
+		"bgcolor": "yellow"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "xuirman_big",
+		"bgcolor": "dark grey"
+	},
+	{
+		"text": "Proton: There have been many losses throughout our journey...",
+		"left": "xuirman_big"
+	},
+	{
+		"text": "Proton: It is because of these sacrifices that we are here today...",
+		"left": "xuirman_big"
+	},
+	{
+		"text": "Proton: We must not forget those who have been lost in the fight forthe Holy Itucher...",
+		"left": "xuirman_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "xuirman_big"
+	},
+	{
+		"text": "(And so the Static Army returned to the Continent of Bipole, successfullyretrieving the Holy Itucher...)",
+		"bgcolor": "black"
+	},
+	{
+		"text": "Proton: Not Recruited ",
+		"left": "proton_big"
+	},
+	{
+		"text": "Quest: Defeated ",
+		"left": "quest_big"
+	},
+	{
+		"text": "Scien: Defeated ",
+		"left": "scien_big"
+	},
+	{
+		"text": "Romra: Not Recruited ",
+		"left": "romra_big"
+	},
+	{
+		"text": "Tnemecalper I: Not Recruited ",
+		"left": "tnemecalperi_big"
+	},
+	{
+		"text": "Tnemecalper II: Not Recruited ",
+		"left": "tnemecalperii_big"
+	},
+	{
+		"text": "Tnemecalper III: Not Recruited ",
+		"left": "tnemecalperiii_big"
+	},
+	{
+		"text": "Tnemecalper IV: Not Recruited ",
+		"left": "tnemecalperiv_big"
+	},
+	{
+		"text": "Lacirtcele: Not Recruited ",
+		"left": "lacirtcele_big"
+	},
+	{
+		"text": "Damagein: Not Recruited ",
+		"left": "damagein_big"
+	},
+	{
+		"text": "Healia: Not Recruited ",
+		"left": "healia_big"
+	},
+	{
+		"text": "Wob: Not Recruited ",
+		"left": "wob_big"
+	},
+	{
+		"text": "Bladen: Not Recruited ",
+		"left": "bladen_big"
+	},
+	{
+		"text": "Wodahs: Not Recruited ",
+		"left": "wodahs_big"
+	},
+	{
+		"text": "Bladeous: Not Recruited ",
+		"left": "playablebladeous_big"
+	},
+	{
+		"text": "Azure: Not Recruited ",
+		"left": "azure_big"
+	},
+	{
+		"text": "Fael: Not Recruited ",
+		"left": "fael_big"
+	},
+	{
+		"text": "Erif: Not Recruited ",
+		"left": "erif_big"
+	},
+	{
+		"text": "Vruh: Not Recruited ",
+		"left": "vruh_big"
+	},
+	{
+		"text": "Recils: Not Recruited ",
+		"left": "recils_big"
+	},
+	{
+		"text": "Repins: Not Recruited ",
+		"left": "repins_big"
+	},
+	{
+		"text": "Relaeh: Not Recruited ",
+		"left": "relaeh_big"
+	},
+	{
+		"text": "Eulb: Not Recruited ",
+		"left": "eulb_big"
+	},
+	{
+		"text": "Lias: Not Recruited ",
+		"left": "lias_big"
+	},
+	{
+		"text": "Fieht: Not Recruited ",
+		"left": "fieht_big"
+	},
+	{
+		"text": "Rethgif: Not Recruited ",
+		"left": "rethgif_big"
+	},
+	{
+		"text": "Eg: Not Recruited ",
+		"left": "eg_big"
+	},
+	{
+		"text": "Elbon: Not Recruited ",
+		"left": "elbon_big"
+	},
+	{
+		"text": "B: Not Recruited ",
+		"left": "b_big"
+	},
+	{
+		"text": "Xuirventh: Not Recruited ",
+		"left": "xuirventh_big"
+	},
+	{
+		"text": "Xuirfth: Not Recruited ",
+		"left": "xuirfth_big"
+	},
+	{
+		"text": "Xuirer: Not Recruited ",
+		"left": "xuirer_big"
+	},
+	{
+		"text": "Dliug: Not Recruited ",
+		"left": "dliug_big"
+	},
+	{
+		"text": "Exa: Not Recruited ",
+		"left": "exa_big"
+	},
+	{
+		"text": "Yranecrem: Not Recruited ",
+		"left": "yranecrem_big"
+	},
+	{
+		"text": "Geomer: Not Recruited ",
+		"left": "geomer_big"
+	},
+	{
+		"text": "Box: Not Recruited ",
+		"left": "box_big"
+	},
+	{
+		"text": "NOTOS: Not Recruited ",
+		"left": "NOTOS_big"
+	},
+	{
+		"text": "Yung Poggers: Not Recruited ",
+		"left": "yungpoggers_big"
+	},
+	{
+		"text": "Dnefed: Not Recruited ",
+		"left": "dnefed_big"
+	},
+	{
+		"text": "Thgif: Not Recruited ",
+		"left": "thgif_big"
+	},
+	{
+		"text": "Gnirif: Not Recruited ",
+		"left": "gnirif_big"
+	},
+	{
+		"text": "Cigam: Not Recruited ",
+		"left": "cigam_big"
+	},
+	{
+		"text": "Omega: Not Recruited ",
+		"left": "omegaxuirist_big"
+	},
+	{
+		"text": "Fiyghtrr: Not Recruited ",
+		"left": "fiyghtrr_big"
+	},
+	{
+		"text": "Recalper: Not Recruited ",
+		"left": "recalper_big"
+	},
+	{
+		"text": "Tabmoc: Not Recruited ",
+		"left": "tabmoc_big"
+	},
+	{
+		"text": "Xuirurth: Not Recruited ",
+		"left": "xuirurth_big"
+	},
+	{
+		"text": "Repins Blaze: Not Recruited ",
+		"left": "repins_big2"
+	},
+	{
+		"text": "Ahcem: Not Recruited ",
+		"left": "ahcem_big"
+	},
+	{
+		"text": "Cayenne: Not Recruited ",
+		"left": "cayenne_big"
+	},
+	{
+		"text": "Proton Xurr: Survived",
+		"left": "xuirman_big"
+	},
+	{
+		"text": "Integer: Survived",
+		"left": "integer_big"
+	}
+]

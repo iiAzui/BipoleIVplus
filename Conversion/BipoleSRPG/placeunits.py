@@ -46,7 +46,7 @@ def PlaceEnemies(placements):
     #         PlaceY -= 50
     #     else:
     #         PlaceX += 50
-    battle_started = true
+    battle_started = True
     pass
 
 # None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None, is one full row

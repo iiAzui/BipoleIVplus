@@ -1,0 +1,151 @@
+[
+	{
+		"text": "[Chapter 26a][Sector 5, Shadow Realm Research Center]",
+		"bgcolor": "black"
+	},
+	{
+		"text": "Death Pepper: Proton...",
+		"left": "deathpepper_big",
+		"bgcolor": "dark gray"
+	},
+	{
+		"text": "Death Pepper: I've heard much about you, and you've causedus a lot of trouble...",
+		"left": "deathpepper_big"
+	},
+	{
+		"text": "Death Pepper: I don't understand though, why would you returnhere after all of these years?",
+		"left": "deathpepper_big"
+	},
+	{
+		"text": "Proton: We can't let you have the Holy Itucher, you'll surelydestroy the world as we know it.",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Proton: And this is revenge for what you've done to Specians and the Xuirs.",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Death Pepper: What I've done to the Xuirs?",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Death Pepper: The only thing I've done for the Xuirs is help them.",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Proton: What do you mean?",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Death Pepper: The Proto-Xuirs are a pained existence, an incomplete and failedlife form.",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Death Pepper: The Proto-Xuirs will only be free once a complete Xuir is created,the lifeform that they were meant to be!",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Proton: Being incomplete doensn't devalue your existence. This is just an excuseto justify your actions.",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Death Pepper: It doesn't? Well, take a look at this...",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Death Pepper: What do you think of this, Proton?",
+		"left": "proton_big",
+		"right": "deathpepper_big2"
+	},
+	{
+		"text": "Proton: You're... a Proto-Xuir?",
+		"left": "proton_big",
+		"right": "deathpepper_big2"
+	},
+	{
+		"text": "Death Pepper: Why do you think I've dedicated myself to the XuirResearch?",
+		"left": "proton_big",
+		"right": "deathpepper_big2"
+	},
+	{
+		"text": "Death Pepper: I am an incomplete creation of the past researchers, an existenceof failure.",
+		"left": "proton_big",
+		"right": "deathpepper_big2"
+	},
+	{
+		"text": "Death Pepper: This existence is pain. Proton, surely you've considered thefact that you were the result of unsuccessful experiements, that your veryexistence is a literal embodiment of failure.",
+		"left": "proton_big",
+		"right": "deathpepper_big2"
+	},
+	{
+		"text": "Death Pepper: I wish to fix this failure, no matter the cost.",
+		"left": "proton_big",
+		"right": "deathpepper_big2"
+	},
+	{
+		"text": "Death Pepper: I will create the being that were supposed to be, the onethat we could've been...",
+		"left": "proton_big",
+		"right": "deathpepper_big2"
+	},
+	{
+		"text": "Death Pepper: And only then, will be free from our burden of an failed existenceand be able to die in the peace of knowing that our failure had been fixed.",
+		"left": "proton_big",
+		"right": "deathpepper_big2"
+	},
+	{
+		"text": "Death Pepper: We must fix our existence, Proton.",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Death Pepper: Sadly, it seems you do not understand.",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Death Pepper: Like the others, all who oppose me must be defeated in the sakeof mending our existence.",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{},
+	{
+		"text": "Death Pepper: Why... why.. must this happen...",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Death Pepper: The Xuir... must be... completed...",
+		"left": "proton_big",
+		"right": "deathpepper_big"
+	},
+	{
+		"text": "Proton: Everyone, search the area.",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: The Holy Itucher should be somewhere around here.",
+		"left": "proton_big"
+	},
+	{
+		"text": "(...)"
+	},
+	{
+		"text": "[Chapter 27a][Sector 5, Shadow Realm Research Center]",
+		"bgcolor": "black",
+		"startchapter": "Chapter 27a"
+	}
+]

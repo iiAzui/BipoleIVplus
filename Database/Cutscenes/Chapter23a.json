@@ -1,0 +1,24 @@
+[
+	{
+		"text": "[Chapter 23a][Sector 2, Shadow Realm Research Center]",
+		"bgcolor": "black"
+	},
+	{
+		"text": "???: So they've gotten past the first sector...",
+		"left": "elif_big",
+		"bgcolor": "light gray"
+	},
+	{
+		"text": "???: If was always too arbituary though, I believe my moreoverarching requirements may be more successful...",
+		"left": "elif_big"
+	},
+	{
+		"text": "???: So behold! The founder of the Sci-Triptych SectoralBoard: I, Elif!",
+		"left": "elif_big"
+	},
+	{},
+	{
+		"text": "(...)",
+		"startchapter": "Chapter 24a"
+	}
+]

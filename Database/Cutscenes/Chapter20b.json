@@ -1,0 +1,194 @@
+[
+	{
+		"text": "[Chapter 20b][Nolavillian Mountain Range, Northern Nolavillia]",
+		"bgcolor": "black"
+	},
+	{
+		"text": "Proton: We'll be passing through the Nolavillian MountainRange soon.",
+		"left": "proton_big",
+		"bgcolor": "green"
+	},
+	{
+		"text": "Proton: The path through the mountain range is very narrow,keep on guard for ambushes.",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: And it seems there's already a group of people ahead ofus, likely trying to ambush us...",
+		"left": "proton_big"
+	},
+	{
+		"text": "???: You! State your purpose!",
+		"left": "proton_big",
+		"right": "dael_big"
+	},
+	{
+		"text": "Proton: We're here to retrieve the Holy Itucher.",
+		"left": "proton_big",
+		"right": "dael_big"
+	},
+	{
+		"text": "???: Thats must mean the Holy Itucher is past this mountain range...",
+		"left": "proton_big",
+		"right": "dael_big"
+	},
+	{
+		"text": "???: Though I appreciate your help, we must kill you.",
+		"left": "proton_big",
+		"right": "dael_big"
+	},
+	{
+		"text": "???: We're here to obtain the Holy Itucher for prince Neo of Shade,and it would be troublesome if you found it before us.",
+		"left": "proton_big",
+		"right": "dael_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big",
+		"right": "dael_big"
+	},
+	{
+		"text": "Dael: I've... lost... ?",
+		"left": "proton_big",
+		"right": "dael_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big",
+		"right": "dael_big"
+	},
+	{
+		"text": "Dael: I won't... let you get... any more...information...",
+		"left": "proton_big",
+		"right": "dael_big"
+	},
+	{
+		"text": "[Dael disintegrates himself with a spell]"
+	},
+	{
+		"text": "Proton...",
+		"left": "proton_big"
+	},
+	{
+		"text": "Dnefed: Umm... we're not that loyal, can we stay alive? We couldwork for you.",
+		"left": "proton_big",
+		"right": "dnefed_big"
+	},
+	{
+		"text": "[Recruit the Shadian soldiers?](Q) Recruit(W) Do not recruit"
+	},
+	{
+		"text": "(Proton defeats the rest of the soldiers)"
+	},
+	{
+		"text": "???: ...",
+		"left": "proton_big",
+		"right": "revolt"
+	},
+	{
+		"text": "???: You've helped me greatly, Proton.",
+		"left": "proton_big",
+		"right": "revolt"
+	},
+	{
+		"text": "Proton: Who are you?.",
+		"left": "proton_big",
+		"right": "revolt"
+	},
+	{
+		"text": "???: I am Revolt, and you have just defeated Dael and his army for me.",
+		"left": "proton_big",
+		"right": "revolt"
+	},
+	{
+		"text": "Revolt: I'm in a very good mood today, so I'll grant you this...",
+		"left": "proton_big",
+		"right": "revolt"
+	},
+	{
+		"text": "[Proton learned Aura]"
+	},
+	{
+		"text": "(Revolt disappears)"
+	},
+	{
+		"text": "[Xuirist Cavern]",
+		"bgcolor": "black"
+	},
+	{
+		"text": "Omega: ...",
+		"left": "omegaxuirist_big",
+		"bgcolor": "dim grey"
+	},
+	{
+		"text": "Omega: Preperations are now complete.",
+		"left": "omegaxuirist_big"
+	},
+	{
+		"text": "Break: Good.",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Break: We'll kill every last one of them fools.",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Break: Those who oppose lord Prime shall no longer live...",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Break: And the Holy Itucher shall finally become ours!",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Omega: ...",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Break: And one more thing...",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Break: *They* must partake in the battle.",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Omega: ..!",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Break: No excuses. Either they partake or I'lldestroy them myself.",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Break: Which would you rather want, Omega?",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "Omega: ...",
+		"left": "omegaxuirist_big",
+		"right": "break_big"
+	},
+	{
+		"text": "...",
+		"bgcolor": "green"
+	},
+	{
+		"text": "[Chapter 21a][Nolavillian Mountain Range, Northern Nolavillia]",
+		"bgcolor": "black",
+		"startchapter": "Chapter 21a"
+	}
+]

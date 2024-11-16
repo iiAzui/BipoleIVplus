@@ -1,0 +1,250 @@
+[
+	{
+		"text": "K'Neville: Yerrrrr....",
+		"left": "proton_big",
+		"right": "kaptainkneville_big",
+		"bgcolor": "navy"
+	},
+	{
+		"text": "K'Neville: Do I have to do everything myself?",
+		"left": "proton_big",
+		"right": "kaptainkneville_big",
+		"bgcolor": "navy"
+	},
+	{
+		"text": "K'Neville: ARGHHHHH!!!",
+		"left": "proton_big",
+		"right": "kaptainkneville_big"
+	},
+	{
+		"text": "K'Neville: WE BE RETREAT'N!!!",
+		"left": "proton_big",
+		"right": "kaptainkneville_big"
+	},
+	{
+		"text": "(The K'Neville Pirates retreat)"
+	},
+	{
+		"text": "Proton: It looks like they've retreated.",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: Huh, what's that?.",
+		"left": "proton_big"
+	},
+	{
+		"text": "(Proton sees a boat in the distance)"
+	},
+	{
+		"text": "Proton: Is that a house?",
+		"left": "proton_big"
+	},
+	{
+		"text": "(A small house is ontop of the boat)"
+	},
+	{
+		"text": "(Proton knocks on the door of the house)"
+	},
+	{
+		"text": "???: Hello?",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "Proton: Hello, I was wondering, what is this?",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "???: My house?",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "Proton: Your house is in the middle of a dangeroussea?",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "???: Why are you so suprised?",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "Proton: How do you even get water?",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "???: Do you not see water around you?",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "Quest: You should not be alive right now.",
+		"left": "quest_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "Proton: Sure.",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "(Proton starts to leave)"
+	},
+	{
+		"text": "Lias: Wait, what are you guys even doing in themiddle of the sea?",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "Proton: We're traveling to Nolavillia to retrieve the HolyItucher.",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "Lias: Sounds fun, can I go?",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "Proton: ?",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "Lias: What? It sounds like fun.",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "[Recruit ???](Q) Recruit(W) Do not recruit"
+	},
+	{
+		"text": "Proton: No.",
+		"left": "proton_big",
+		"right": "lias_big"
+	},
+	{
+		"text": "(Proton leaves)"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: Hey, I think I see someone in thewater.",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big"
+	},
+	{
+		"text": "???: Hey, could you help me?",
+		"left": "proton_big",
+		"right": "fieht_big"
+	},
+	{
+		"text": "Proton: Why are you in the middle of the ocean?",
+		"left": "proton_big",
+		"right": "fieht_big"
+	},
+	{
+		"text": "???: Because I was stealing from Kaptain K'Neville'sships then a battle started so I jumped off.",
+		"left": "proton_big",
+		"right": "fieht_big"
+	},
+	{
+		"text": "Proton: You were stealing from Kaptain K'Neville?",
+		"left": "proton_big",
+		"right": "fieht_big"
+	},
+	{
+		"text": "???: Everything he has is already stolen anyways.",
+		"left": "proton_big",
+		"right": "fieht_big"
+	},
+	{
+		"text": "???: ...",
+		"left": "proton_big",
+		"right": "fieht_big"
+	},
+	{
+		"text": "???: Could you help me out?",
+		"left": "proton_big",
+		"right": "fieht_big"
+	},
+	{
+		"text": "(Proton brings ??? onto the ship)"
+	},
+	{
+		"text": "???: Thanks.",
+		"left": "proton_big",
+		"right": "fieht_big"
+	},
+	{
+		"text": "Proton: We're going to Nolavillia to retrieve theHoly Itucher.",
+		"left": "proton_big",
+		"right": "fieht_big"
+	},
+	{
+		"text": "???: You getting paid to do it?",
+		"left": "proton_big",
+		"right": "fieht_big"
+	},
+	{
+		"text": "Proton: Yeah.",
+		"left": "proton_big",
+		"right": "fieht_big"
+	},
+	{
+		"text": "???: Cool, can I join you guys?",
+		"left": "proton_big",
+		"right": "fieht_big"
+	},
+	{
+		"text": "[Recruit ???](Q) Recruit(W) Do not recruit"
+	},
+	{
+		"text": "(Proton throws ??? back into the ocean)",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: .",
+		"left": "proton_big",
+		"bgcolor": "black"
+	},
+	{
+		"text": "Proton: ..",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: ...!",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: I see land!",
+		"left": "proton_big",
+		"bgcolor": "navy"
+	},
+	{
+		"text": "Proton: I think we've finally make it toNolavillia!",
+		"left": "proton_big",
+		"startchapter": "Chapter 16a"
+	}
+]

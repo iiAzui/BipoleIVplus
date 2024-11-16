@@ -1,0 +1,16 @@
+[
+	{
+		"text": "Proton: Looks like some bandits are in our way.",
+		"left": "proton_big",
+		"bgcolor": "green"
+	},
+	{
+		"text": "Proton: We'll need to defeat them to go back toStatic.",
+		"left": "proton_big"
+	},
+	{
+		"text": "[Chapter 06][Outer Static, Territory of Static]",
+		"bgcolor": "black",
+		"startchapter": "Chapter 06"
+	}
+]

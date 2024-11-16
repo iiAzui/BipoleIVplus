@@ -1,0 +1,47 @@
+[
+	{
+		"text": "Proton: ...",
+		"left": "proton_big",
+		"bgcolor": "navy"
+	},
+	{
+		"text": "Proton: I think I see someone.",
+		"left": "proton_big"
+	},
+	{
+		"text": "(A small boat passes by Proton's ship)"
+	},
+	{
+		"text": "???: ...",
+		"left": "proton_big",
+		"right": "repins_big"
+	},
+	{
+		"text": "Proton: Hello.",
+		"left": "proton_big",
+		"right": "repins_big"
+	},
+	{
+		"text": "???: Hello.",
+		"left": "proton_big",
+		"right": "repins_big"
+	},
+	{
+		"text": "???: Sorry, but I must be on my way.",
+		"left": "proton_big",
+		"right": "repins_big"
+	},
+	{
+		"text": "(??? leaves the area)",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: There are some enemies approaching, preparefor battle!",
+		"left": "proton_big"
+	},
+	{
+		"text": "[Chapter 13a][Bipole Sea, Bipole Sea]",
+		"bgcolor": "black",
+		"startchapter": "Chapter 13a"
+	}
+]

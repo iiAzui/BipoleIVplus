@@ -1,13 +1,18 @@
-import os
-import json
-
+import select
 import cutscenes
 import screensetup
 import placeunits
 
+import os
+import json
+
 cutscenes.Chapter = "Prologue1"
 
+prev_index = -1
+
 def export_chapter(cutscene_name: str):
+    global prev_index
+    
     ref_name = cutscene_name.replace(' ', '')
     print("exporting ", ref_name)
 
@@ -20,6 +25,11 @@ def export_chapter(cutscene_name: str):
         cutscenes.current_right = ""
 
         cutscenes.Cutscene()
+
+        if cutscenes.CutsceneIndex == prev_index:
+            print("index didn't change, leaving now")
+            cutscenes.cutscene_ended = True
+            break
 
         if cutscenes.cutscene_ended:
             cutscenes.Chapter = None
@@ -44,11 +54,17 @@ def export_chapter(cutscene_name: str):
         if placeunits.battle_started:
             line["battle"] = ref_name
 
+        if select.instant_level_ups:
+            line["instant_level_ups"] = select.instant_level_ups
+            select.instant_level_ups = []
+
         dialogue_lines.append(line)
 
         max_iters_left -= 1
         if max_iters_left <= 0:
             break
+
+        prev_index = cutscenes.CutsceneIndex
 
     json_data = json.dumps(dialogue_lines, indent="\t")
     
@@ -57,7 +73,7 @@ def export_chapter(cutscene_name: str):
         file.write(json_data)
 
 max_iters_left = 2000
-while cutscenes.Chapter:
+while cutscenes.Chapter and not cutscenes.cutscene_ended:
     export_chapter(cutscenes.Chapter)
     max_iters_left -= 1
     if max_iters_left <= 0:

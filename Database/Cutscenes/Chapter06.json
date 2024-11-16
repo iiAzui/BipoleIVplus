@@ -1,0 +1,135 @@
+[
+	{
+		"text": "Proton: It's getting dark, we'll stop by atnearby town soon.",
+		"left": "proton_big",
+		"bgcolor": "dark green"
+	},
+	{
+		"text": "[Outer Town, Territory of Static]",
+		"bgcolor": "dim grey"
+	},
+	{
+		"text": "(The streets are full of people, shouting andmoving chaotically)"
+	},
+	{
+		"text": "Proton: I did not expect the town to be so busythis late at night...",
+		"left": "proton_big"
+	},
+	{
+		"text": "???: Hey, you just get here?",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "Proton: Yes, we have just arrived.",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "???: Then you probably haven't heard the newsyet, have you?",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "Proton: News?",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "???: The Holy Itucher has been discovered atthe Nation of Altar.",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "Quest: The Holy Itucher!?",
+		"left": "quest_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "Quest: You mean to tell me that an artifactwas discovered while I was away on this mission!?",
+		"left": "quest_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "???: You all know the legends, right?",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "???: 'bout how the \"worthy one to wield theHoly Itucher will be granted the power of theDimensionals\"?",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "Quest: Of course I do, I'm the Head of ArtifactResearch in the Territory of Static!",
+		"left": "quest_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "???: As you can tell, everyone in town is rushingto head to the Nation of Altar.",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "Proton: What about you?",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "???: I'm on my way to the Nation of Altarmyself.",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "???: My cousin works there at the temple, soI'll know the way there better than the others.",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "???: I can help you guys get there if youhave the gold, you know?",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "Proton: You'll do that and miss out on gettingit for yourself?",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "???: Me? The chosen one? Don't make me laugh.",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "???: If I'm not getting the power I might aswell get some money.",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "Quest: Hiring him or not, we should head thereimmediately. Who knows what could happen if theItucher got into the wrong hands.",
+		"left": "proton_big",
+		"right": "quest_big"
+	},
+	{
+		"text": "[Recruit ????](Q) Recruit(W) Do not recruit"
+	},
+	{
+		"text": "???: Alright then, good luck getting toAltar.",
+		"left": "proton_big",
+		"right": "bladen_big"
+	},
+	{
+		"text": "Proton: Even though it's nightime, will need to headto Altar immediately.",
+		"left": "proton_big",
+		"bgcolor": "dark green"
+	},
+	{
+		"text": "Proton: The world will be in danger if the Holy Itucheris used for evil.",
+		"left": "proton_big"
+	},
+	{
+		"text": "[Chapter 07][Cos Path, Territory of Cos]",
+		"bgcolor": "black",
+		"startchapter": "Chapter 07"
+	}
+]

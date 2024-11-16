@@ -52,6 +52,7 @@ current_string = ""
 current_left = ""
 current_right = ""
 cutscene_ended = False
+battle_started = False
 
 def register_shape(spritename):
     pass
@@ -146,9 +147,11 @@ def Cutscene():
     global Winput
     global Einput
     global ChapterLevel
-    # select.DisableKeys()
+
+    global battle_started
+    global cutscene_ended
+    # ()
     # screensetup.BattleScreen.tracer(1)
-    print(CutsceneIndex)
     if Chapter == None:
         screensetup.BattleScreen.bgcolor("black")
         Text3("[Act 1]")
@@ -489,7 +492,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter1Enemies
             UnitFormation = placeunits.Chapter1Placement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif units.Scien in units.UnitsAlive and CutsceneIndex > 2:
             if CutsceneIndex == 3:
                 Text1("Scien: We've defeated the enemy slimes.",units.Scien.Portrait)
@@ -541,7 +544,6 @@ def Cutscene():
                 CutsceneIndex += 1
                 
             elif CutsceneIndex == 10:
-                print(CutsceneIndex, "= 10")
                 Text3("[The Tnemecalpers joined your party]")
                 units.UnitsAlive.append(units.TnemecalperI)
                 units.UnitsRecruited.append(units.TnemecalperI)
@@ -580,7 +582,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter2Enemies
             UnitFormation = placeunits.Chapter2Placement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 2:
             Text1("Proton: We'll be reaching the Territory of Cos soon.", units.Proton.Portrait)
             CutsceneIndex += 1
@@ -656,7 +658,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter3Enemies
             UnitFormation = placeunits.Chapter3Placement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 10:
             Text1("Proton: Everyone get prepared, we should",units.Proton.Portrait)
             line2("be reaching Sine soon.")
@@ -799,14 +801,14 @@ def Cutscene():
             CutsceneIndex += 1
             
         elif CutsceneIndex == 2:
-            select.TextboxMaker.clear()
-            time.sleep(1)
+            
+            
             UnitsToPlace = placeunits.Chapter4Enemies
             UnitFormation = placeunits.Chapter4Placement
             placeunits.PlacePlayerUnits()
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
-            time.sleep(2)
+            
             Text1("Retool: Hah hah hah!,",units.Retool.Portrait)
             CutsceneIndex += 1
             
@@ -821,10 +823,10 @@ def Cutscene():
             
         elif CutsceneIndex == 5:
             CutsceneIndex += 1
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            select.CancelAction()
+            
+            
+            
+            
         elif CutsceneIndex == 6:
             Text1("Retool: Ah... I'm not going to die here...",units.Retool.Portrait)
             CutsceneIndex += 1
@@ -1031,7 +1033,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter5Enemies
             UnitFormation = placeunits.Chapter5Placement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 3:
             if units.TnemecalperIII in units.UnitsAlive:
                 Text2("Tnemecalper III: ALLY DETECTED!",units.TnemecalperIII.Portrait,units.Proton.Portrait)
@@ -1446,7 +1448,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter6Enemies
             UnitFormation = placeunits.Chapter6Placement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 29:
             if units.TnemecalperIV in units.UnitsAlive:
                 Text3("[Bonus Conversation Unlocked]")
@@ -1578,7 +1580,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter7Enemies
             UnitFormation = placeunits.Chapter7Placement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 10:
             if units.Bladen in units.UnitsAlive and units.Healia in units.UnitsAlive:
                 Text3("[Bonus Conversation Unlocked]")
@@ -1661,9 +1663,9 @@ def Cutscene():
             
         elif CutsceneIndex == 25:
             Text2("Bladen: I...",units.Healia.Portrait,units.Bladen.Portrait)
-            time.sleep(1)
+            
             Text2("Bladen: I don't...",units.Healia.Portrait,units.Bladen.Portrait)
-            time.sleep(1)
+            
             Text2("Bladen: I don't care.",units.Healia.Portrait,units.Bladen.Portrait)
             CutsceneIndex += 1
             
@@ -1774,7 +1776,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter8Enemies
             UnitFormation = placeunits.Chapter8Placement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif moves.Purify in units.Proton.Supports and CutsceneIndex <= 39 and len(units.UnitsAlive) != 1:
             if CutsceneIndex == 12:
                 Text2("Bladeous: You there...",units.Proton.Portrait,units.BladeousBoss.Portrait)
@@ -2179,7 +2181,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter9aEnemies
             UnitFormation = placeunits.Chapter9aPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 2:
             Text1("Proton: ...",units.Proton.Portrait)
             CutsceneIndex += 1
@@ -2280,7 +2282,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter9bEnemies
             UnitFormation = placeunits.Chapter9bPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 3:
             Text1("Proton: Let's keep going.",units.Proton.Portrait)
             CutsceneIndex = 0
@@ -2301,7 +2303,7 @@ def Cutscene():
             UnitFormation = placeunits.Chapter10aPlacement
             BattleStarted = False
             CutsceneIndex += 1
-            BattleStart()
+            battle_started = True
         elif CutsceneIndex == 2 and units.Azure not in units.UnitsRecruited:
             screensetup.BattleScreen.bgcolor("black")
             Text3("[Static Town, Territory of Static]")
@@ -2426,21 +2428,21 @@ def Cutscene():
                 
             elif CutsceneIndex == 22:
                 Text2("Vruh: Such",units.Proton.Portrait,units.Vruh.Portrait)
-                time.sleep(1)
+                
                 Text2("Vruh: Such.",units.Proton.Portrait,units.Vruh.Portrait)
-                time.sleep(1)
+                
                 Text2("Vruh: Such..",units.Proton.Portrait,units.Vruh.Portrait)
-                time.sleep(1)
+                
                 Text2("Vruh: Such...",units.Proton.Portrait,units.Vruh.Portrait)
-                time.sleep(1.5)
+                
                 Text2("Vruh: Such... D",units.Proton.Portrait,units.Vruh.Portrait)
-                time.sleep(0.3)
+                
                 Text2("Vruh: Such... D R",units.Proton.Portrait,units.Vruh.Portrait)
-                time.sleep(0.3)
+                
                 Text2("Vruh: Such... D R I",units.Proton.Portrait,units.Vruh.Portrait)
-                time.sleep(0.3)
+                
                 Text2("Vruh: Such... D R I P",units.Proton.Portrait,units.Vruh.Portrait)
-                time.sleep(0.3)
+                
                 CutsceneIndex += 1
                 
             elif CutsceneIndex == 23:
@@ -2497,7 +2499,7 @@ def Cutscene():
                 elif CutsceneIndex == 30:
                     Text1("Proton: ...",units.Proton.Portrait)
                     CutsceneIndex = 0
-                    Chapter = "Chapter 11"
+                    Chapter = "Chapter 11a"
                     
         elif RecruitFael == True:
             if CutsceneIndex == 15:
@@ -2539,14 +2541,14 @@ def Cutscene():
             CutsceneIndex += 1
             
         elif CutsceneIndex == 2:
-            select.TextboxMaker.clear()
-            time.sleep(1)
+            
+            
             UnitsToPlace = placeunits.Chapter10bEnemies
             UnitFormation = placeunits.Chapter10bPlacement
             placeunits.PlacePlayerUnits()
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
-            time.sleep(2)
+            
             Text1("Wallimos: So the mortals arrive...",units.Wallimos.Portrait)
             CutsceneIndex += 1
             
@@ -2560,10 +2562,10 @@ def Cutscene():
             
         elif CutsceneIndex == 5:
             CutsceneIndex += 1
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            select.CancelAction()
+            
+            
+            
+            
         elif CutsceneIndex == 6:
             Text1("Proton: We somehow did it...",units.Proton.Portrait)
             CutsceneIndex += 1
@@ -2598,14 +2600,14 @@ def Cutscene():
             CutsceneIndex += 1
             
         elif CutsceneIndex == 2:
-            select.TextboxMaker.clear()
-            time.sleep(1)
+            
+            
             UnitsToPlace = placeunits.Chapter10cEnemies
             UnitFormation = placeunits.Chapter10cPlacement
             placeunits.PlacePlayerUnits()
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
-            time.sleep(2)
+            
             Text1("Fael: Proton Xurr, you are currently under",units.Fael.Portrait)
             line2("investigation due to the deaths of all of your")
             line3("allies.")
@@ -2635,10 +2637,10 @@ def Cutscene():
             
         elif CutsceneIndex == 8:
             CutsceneIndex += 1
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            select.CancelAction()
+            
+            
+            
+            
         elif CutsceneIndex == 9:
             Text1("Fael: So in the end... I still failed...",units.Fael.Portrait)
             CutsceneIndex += 1
@@ -2817,7 +2819,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter11aEnemies
             UnitFormation = placeunits.Chapter11aPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 13:
             screensetup.BattleScreen.bgcolor("navy")
             Text1("Proton: We should be safe for now...",units.Proton.Portrait)
@@ -3050,7 +3052,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter11bEnemies
             UnitFormation = placeunits.Chapter11bPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 5:
             Text1("Proton: ...",units.Proton.Portrait)
             CutsceneIndex = 0
@@ -3215,7 +3217,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter12aEnemies
             UnitFormation = placeunits.Chapter12aPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif units.Wodahs in units.UnitsAlive and units.Repins in units.UnitsAlive:
             if CutsceneIndex == 24:
                 Text3("[Bonus Conversation Unlocked]")
@@ -3375,7 +3377,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter12bEnemies
             UnitFormation = placeunits.Chapter12bPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 2:
             Text1("Proton: ...",units.Proton.Portrait)
             CutsceneIndex = 0
@@ -3536,13 +3538,13 @@ def Cutscene():
             CutsceneIndex += 1
             
         elif CutsceneIndex == 30:
-            select.TextboxMaker.clear()
-            time.sleep(0.5)
+            
+            
             UnitsToPlace = placeunits.Chapter13aEnemies
             UnitFormation = placeunits.Chapter13aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
-            time.sleep(1.5)
+            
             Text2("???: SKREEEEEEEEEEEEEEEEE!!!!!!!!!!!",units.Proton.Portrait,units.DiverNeville.Portrait)
             CutsceneIndex += 1
             
@@ -3552,10 +3554,10 @@ def Cutscene():
             
         elif CutsceneIndex == 32:
             CutsceneIndex += 1
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            select.CancelAction()
+            
+            
+            
+            
         elif CutsceneIndex > 32 and units.Healia in units.UnitsAlive and units.Erif in units.UnitsAlive:
             if CutsceneIndex == 33:
                 Text3("[Bonus Conversation Unlocked]")
@@ -3679,7 +3681,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter13bEnemies
             UnitFormation = placeunits.Chapter13bPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 6:
             Text1("Proton: ...",units.Proton.Portrait)
             CutsceneIndex = 0
@@ -3713,7 +3715,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter14aEnemies
             UnitFormation = placeunits.Chapter14aPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex > 4 and CutsceneIndex <= 24 and units.Repins in units.UnitsAlive and units.Wodahs in units.UnitsAlive:
             if CutsceneIndex == 5:
                 Text3("[Bonus Conversation Unlocked]")
@@ -4140,7 +4142,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter14bEnemies
             UnitFormation = placeunits.Chapter14bPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 3:
             Text1("Proton: ...",units.Proton.Portrait)
             CutsceneIndex = 0
@@ -4167,7 +4169,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter15aEnemies
             UnitFormation = placeunits.Chapter15aPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 3:
             Text2("K'Neville: ARGHHHHH!!!",units.Proton.Portrait,units.KaptainKNeville.Portrait)
             CutsceneIndex += 1
@@ -4466,7 +4468,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter15aEnemies
             UnitFormation = placeunits.Chapter15aPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 3:
             Text2("K'Neville: ARGHHHHH...",units.Proton.Portrait,units.KaptainKNeville.Portrait)
             CutsceneIndex += 1
@@ -4487,8 +4489,7 @@ def Cutscene():
             screensetup.BattleScreen.bgcolor("black")
             Text3("[End of Act II]")
             CutsceneIndex += 1
-            
-            print(units.UnitsRecruited)
+    
         elif CutsceneIndex == 1:
             Text2("Proton: Survived",units.Proton.Portrait,units.Scien.Portrait)
             if units.Quest in units.UnitsAlive:
@@ -4711,13 +4712,13 @@ def Cutscene():
                 CutsceneIndex += 1
                 
         elif CutsceneIndex == 17:
-            select.TextboxMaker.clear()
-            time.sleep(1)
+            
+            
             UnitsToPlace = placeunits.Chapter16aEnemies
             UnitFormation = placeunits.Chapter16aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
-            time.sleep(2)
+            
             Text1("???: Do I see what I think I see!?",units.Tluc.Portrait)
             CutsceneIndex += 1
             
@@ -4851,12 +4852,12 @@ def Cutscene():
             CutsceneIndex += 1
             
         elif CutsceneIndex == 46:
-            select.TextboxMaker.clear()
-            time.sleep(1)
+            
+            
             UnitsToPlace = placeunits.RethgifandEgEnemies
             UnitFormation = placeunits.RethgifandEgEnemiesPlacement
             placeunits.PlaceEnemies(UnitFormation)
-            time.sleep(2)
+            
             Text1("???: Eg, do I think I see what I see?",units.Rethgif.Portrait)
             CutsceneIndex += 1
             
@@ -4937,10 +4938,10 @@ def Cutscene():
                 
         elif CutsceneIndex == 58:
             CutsceneIndex += 1
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            select.CancelAction()
+            
+            
+            
+            
         elif CutsceneIndex <= 69 and units.Damagein in units.UnitsAlive and units.Relaeh in units.UnitsAlive:
             if CutsceneIndex == 59:
                 Text3("[Bonus Conversation Unlocked]")
@@ -5193,14 +5194,14 @@ def Cutscene():
             
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("green")
-            select.TextboxMaker.clear()
-            time.sleep(1)
+            
+            
             placeunits.PlacePlayerUnits()
             UnitsToPlace = placeunits.Chapter16aEnemies
             UnitFormation = placeunits.Chapter16aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
-            time.sleep(0.2)
+            
             Text1("Tluc: Do I see what I think I see!?",units.Tluc.Portrait)
             CutsceneIndex += 1
             
@@ -5226,12 +5227,12 @@ def Cutscene():
             CutsceneIndex += 1
             
         elif CutsceneIndex == 7:
-            select.TextboxMaker.clear()
-            time.sleep(1)
+            
+            
             UnitsToPlace = placeunits.RethgifandEgEnemies
             UnitFormation = placeunits.RethgifandEgEnemiesPlacement
             placeunits.PlaceEnemies(UnitFormation)
-            time.sleep(2)
+            
             Text1("???: Eg, do I think I see what I see?",units.Rethgif.Portrait)
             CutsceneIndex += 1
             
@@ -5254,10 +5255,10 @@ def Cutscene():
             units.EnemyUnitsAlive.append(units.RethgifEnemy)
             units.EnemyUnitsAlive.append(units.EgEnemy)
             CutsceneIndex += 1
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            select.CancelAction()
+            
+            
+            
+            
         elif CutsceneIndex == 12:
             Text2("Eg: Pain...", units.Proton.Portrait,units.Eg.Portrait)
             CutsceneIndex += 1
@@ -5903,7 +5904,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter17aEnemies
             UnitFormation = placeunits.Chapter17aPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 121:
             Text1("Proton: We've managed to survive the attack, but it seems",units.Proton.Portrait)
             line2("like the Xuirists will keep hunting us while we're in")
@@ -6541,7 +6542,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter17aEnemies
             UnitFormation = placeunits.Chapter17aPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 121:
             Text1("Proton: We've managed to survive the attack, but it seems",units.Proton.Portrait)
             line2("like the Xuirists will keep hunting us while we're in")
@@ -7044,7 +7045,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter17aEnemies
             UnitFormation = placeunits.Chapter17aPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 121:
             Text1("Proton: We've managed to survive the attack, but it seems",units.Proton.Portrait)
             line2("like the Xuirists will keep hunting us while we're in")
@@ -7561,7 +7562,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter17dEnemies
             UnitFormation = placeunits.Chapter17dPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 12:
             Text2("B: Hmmm...",units.Proton.Portrait,units.B.Portrait)
             CutsceneIndex += 1
@@ -7604,7 +7605,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter18aEnemies
             UnitFormation = placeunits.Chapter18aPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif units.Xuirventh in units.UnitsAlive and CutsceneIndex < 19:
             if CutsceneIndex == 4:
                 Text1("Xuirventh: ...",units.Xuirventh.Portrait)
@@ -7955,7 +7956,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter18aEnemies
             UnitFormation = placeunits.Chapter18aPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 2:
             Text1("Proton: ...",units.Proton.Portrait)
             CutsceneIndex = 0
@@ -7972,19 +7973,6 @@ def Cutscene():
              
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("green")
-            SetPosX = -650
-            SetPosY = 50
-            for character in units.UnitsAlive:
-                print(character.DisplayName)
-                character.TurtleName.showturtle()
-                character.TurtleName.speed(0)
-                character.TurtleName.penup()
-                character.TurtleName.setpos(SetPosX,SetPosY)
-                if SetPosX == 250:
-                    SetPosY -= 50
-                    SetPosX = -250
-                else:
-                    SetPosX += 50
             Text1("Proton: ...",units.Proton.Portrait)
             CutsceneIndex += 1
             
@@ -7993,22 +7981,22 @@ def Cutscene():
             CutsceneIndex += 1
             
         elif CutsceneIndex == 3:
-            select.TextboxMaker.clear()
-            time.sleep(1)
+            
+            
             UnitsToPlace = placeunits.Chapter19aEnemies
             UnitFormation = placeunits.Chapter19aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
-            time.sleep(2)
+            
             Text1("Proton: Prepare for battle!",units.Proton.Portrait)
             CutsceneIndex += 1
             
         elif CutsceneIndex == 4:
             CutsceneIndex += 1
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            select.CancelAction()
+            
+            
+            
+            
         elif CutsceneIndex == 5:
             Text1("Proton: I think that's all of the Xuirists here.",units.Proton.Portrait)
             CutsceneIndex += 1
@@ -8311,22 +8299,22 @@ def Cutscene():
             CutsceneIndex += 1
             Cutscene()
         elif CutsceneIndex == 2:
-            select.TextboxMaker.clear()
-            time.sleep(1)
+            
+            
             UnitsToPlace = placeunits.Chapter19aEnemies
             UnitFormation = placeunits.Chapter19aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
-            time.sleep(2)
+            
             Text1("Proton: ...",units.Proton.Portrait)
             CutsceneIndex += 1
             
         elif CutsceneIndex == 3:
             CutsceneIndex += 1
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            select.CancelAction()
+            
+            
+            
+            
         elif CutsceneIndex == 4:
             Text1("Proton: ...",units.Proton.Portrait)
             Chapter = "Chapter 20b"
@@ -8497,7 +8485,7 @@ def Cutscene():
             UnitFormation = placeunits.Chapter20aPlacement
             BattleStarted = False
             CutsceneIndex += 1
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 34:
             Text1("Proton: That should be all of the bandits...",units.Proton.Portrait)
             CutsceneIndex += 1
@@ -8869,7 +8857,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter20bEnemies
             UnitFormation = placeunits.Chapter20bPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 11:
             Text2("Dael: I've... lost... ?",units.Proton.Portrait,units.Dael.Portrait)
             CutsceneIndex += 1
@@ -9252,7 +9240,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter20bEnemies
             UnitFormation = placeunits.Chapter20bPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 2:
             Text2("Dael: Who... is this...",units.Proton.Portrait,units.Dael.Portrait)
             CutsceneIndex += 1
@@ -9292,19 +9280,19 @@ def Cutscene():
              
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("dim grey")
-            select.TextboxMaker.clear()
+            
             UnitsToPlace = placeunits.Chapter21aEnemies
             UnitFormation = placeunits.Chapter21aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
-            time.sleep(3)
+            
             Text2("Omega: They are here...",units.OmegaXuirist.Portrait,units.Break.Portrait)
             CutsceneIndex += 1
               
         elif CutsceneIndex == 2:
-            select.TextboxMaker.clear()
+            
             placeunits.PlacePlayerUnits()
-            time.sleep(2)
+            
             Text1("Proton: It seems there is another Xuirist camp here, but",units.Proton.Portrait)
             line2("we must proceed.")
             CutsceneIndex += 1
@@ -9312,12 +9300,12 @@ def Cutscene():
         elif CutsceneIndex == 3:
             CutsceneIndex += 1
             BattleStarted = True
-            select.DisableKeys
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            time.sleep(1)
-            select.CancelAction()
+            # 
+            
+            
+            
+            
+            
         elif CutsceneIndex == 4:
             Text1("Break: Omega's been defeated, I've got to get out of here!",units.Break.Portrait)
             CutsceneIndex += 1
@@ -9982,19 +9970,19 @@ def Cutscene():
              
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("dim grey")
-            select.TextboxMaker.clear()
+            
             UnitsToPlace = placeunits.Chapter21aEnemies
             UnitFormation = placeunits.Chapter21aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
-            time.sleep(3)
+            
             Text2("Omega: Someone's here...",units.OmegaXuirist.Portrait,units.Break.Portrait)
             CutsceneIndex += 1
               
         elif CutsceneIndex == 2:
-            select.TextboxMaker.clear()
+            
             placeunits.PlacePlayerUnits()
-            time.sleep(2)
+            
             Text1("Proton: ...",units.Proton.Portrait)
             line2("we must proceed.")
             CutsceneIndex += 1
@@ -10002,12 +9990,12 @@ def Cutscene():
         elif CutsceneIndex == 3:
             CutsceneIndex += 1
             BattleStarted = True
-            select.DisableKeys
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            time.sleep(1)
-            select.CancelAction()
+            
+            
+            
+            
+            
+            
         elif CutsceneIndex == 4:
             Text1("Break: Agh! Who is this guy? I've got to get out of here!",units.Break.Portrait)
             CutsceneIndex += 1
@@ -11478,13 +11466,13 @@ def Cutscene():
             
         elif CutsceneIndex == 71:
             screensetup.BattleScreen.bgcolor("light gray")
-            select.TextboxMaker.clear()
+            
             UnitsToPlace = placeunits.Chapter22aEnemies
             UnitFormation = placeunits.Chapter22aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
             placeunits.PlacePlayerUnits()
-            time.sleep(2)
+            
             Text1("???: It seems we may have some intruders.",units.IfBoss.Portrait)
             CutsceneIndex += 1
             
@@ -11505,12 +11493,12 @@ def Cutscene():
         elif CutsceneIndex == 75:
             CutsceneIndex += 1
             BattleStarted = True
-            select.DisableKeys
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            time.sleep(1)
-            select.CancelAction()
+            # 
+            
+            
+            
+            
+            
         elif units.Dnefed in units.UnitsAlive and units.Fieht in units.UnitsAlive and CutsceneIndex <= 86:
             if CutsceneIndex == 76:
                 Text3("[Bonus Conversation Unlocked]")
@@ -11924,13 +11912,13 @@ def Cutscene():
             
         elif CutsceneIndex == 71:
             screensetup.BattleScreen.bgcolor("light gray")
-            select.TextboxMaker.clear()
+            
             UnitsToPlace = placeunits.Chapter22aEnemies
             UnitFormation = placeunits.Chapter22aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
             placeunits.PlacePlayerUnits()
-            time.sleep(2)
+            
             Text1("???: Who is this? An intruder?",units.IfBoss.Portrait)
             CutsceneIndex += 1
             
@@ -11951,12 +11939,12 @@ def Cutscene():
         elif CutsceneIndex == 75:
             CutsceneIndex += 1
             BattleStarted = True
-            select.DisableKeys
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            time.sleep(1)
-            select.CancelAction()
+            
+            
+            
+            
+            
+            
         elif CutsceneIndex == 76:
             Text1("If: This power...",units.IfBoss.Portrait)
             CutsceneIndex += 1
@@ -12011,13 +11999,13 @@ def Cutscene():
             
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("light gray")
-            select.TextboxMaker.clear()
+            
             UnitsToPlace = placeunits.Chapter23aEnemies
             UnitFormation = placeunits.Chapter23aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
             placeunits.PlacePlayerUnits()
-            time.sleep(2)
+            
             Text1("???: So they've gotten past the first sector...",units.ElifBoss.Portrait)
             CutsceneIndex += 1
             
@@ -12034,12 +12022,12 @@ def Cutscene():
         elif CutsceneIndex == 4:
             CutsceneIndex += 1
             BattleStarted = True
-            select.DisableKeys
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            time.sleep(1)
-            select.CancelAction()
+            
+            
+            
+            
+            
+            
         elif units.Omega in units.UnitsAlive and CutsceneIndex <= 36:
             if CutsceneIndex == 5:
                 Text3("[Bonus Conversation Unlocked]")
@@ -12337,13 +12325,13 @@ def Cutscene():
             
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("light gray")
-            select.TextboxMaker.clear()
+            
             UnitsToPlace = placeunits.Chapter23aEnemies
             UnitFormation = placeunits.Chapter23aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
             placeunits.PlacePlayerUnits()
-            time.sleep(2)
+            
             Text1("the next target: Huh, who's there?",units.ElifBoss.Portrait)
             CutsceneIndex += 1
             
@@ -12359,12 +12347,12 @@ def Cutscene():
         elif CutsceneIndex == 4:
             CutsceneIndex += 1
             BattleStarted = True
-            select.DisableKeys
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            time.sleep(1)
-            select.CancelAction()
+            
+            
+            
+            
+            
+            
         elif CutsceneIndex == 5:
             Text1("the second one: Wh...",units.ElifBoss.Portrait)
             CutsceneIndex += 1
@@ -12411,13 +12399,13 @@ def Cutscene():
             
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("light gray")
-            select.TextboxMaker.clear()
+            
             UnitsToPlace = placeunits.Chapter24aEnemies
             UnitFormation = placeunits.Chapter24aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
             placeunits.PlacePlayerUnits()
-            time.sleep(2)
+            
             Text1("???: Alas, the others were unable to stop our enemy...",units.ElseBoss.Portrait)
             CutsceneIndex += 1
             
@@ -12439,12 +12427,12 @@ def Cutscene():
         elif CutsceneIndex == 5:
             CutsceneIndex += 1
             BattleStarted = True
-            select.DisableKeys
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            time.sleep(1)
-            select.CancelAction()
+            
+            
+            
+            
+            
+            
         elif CutsceneIndex == 6:
             Text3("(...)")
             CutsceneIndex = 0
@@ -12464,13 +12452,13 @@ def Cutscene():
             
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("light gray")
-            select.TextboxMaker.clear()
+            
             UnitsToPlace = placeunits.Chapter24aEnemies
             UnitFormation = placeunits.Chapter24aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
             placeunits.PlacePlayerUnits()
-            time.sleep(2)
+            
             Text1("him: Who's this?",units.ElseBoss.Portrait)
             CutsceneIndex += 1
             
@@ -12489,12 +12477,12 @@ def Cutscene():
         elif CutsceneIndex == 5:
             CutsceneIndex += 1
             BattleStarted = True
-            select.DisableKeys
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            time.sleep(1)
-            select.CancelAction()
+            
+            
+            
+            
+            
+            
         elif CutsceneIndex == 6:
             Text1("3: ...",units.ElseBoss.Portrait)
             CutsceneIndex += 1
@@ -12692,7 +12680,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter25aEnemies
             UnitFormation = placeunits.Chapter25aPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 37:
             Text1("Break: H... HOW...",units.BreakItucher.Portrait)
             CutsceneIndex += 1
@@ -12876,13 +12864,13 @@ def Cutscene():
             
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("light gray")
-            select.TextboxMaker.clear()
+            
             UnitsToPlace = placeunits.Chapter25bEnemies
             UnitFormation = placeunits.Chapter25bPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
             placeunits.PlacePlayerUnits()
-            time.sleep(2)
+            
             Text1("Break: ...",units.Break.Portrait)
             CutsceneIndex += 1
              
@@ -12898,12 +12886,12 @@ def Cutscene():
         elif CutsceneIndex == 4:
             CutsceneIndex += 1
             BattleStarted = True
-            select.DisableKeys
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            time.sleep(1)
-            select.CancelAction()
+            
+            
+            
+            
+            
+            
         elif CutsceneIndex == 5:
             Text1("Break: Erghhh...",units.Break.Portrait)
             CutsceneIndex += 1
@@ -13416,13 +13404,13 @@ def Cutscene():
             
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("light gray")
-            select.TextboxMaker.clear()
+            
             UnitsToPlace = placeunits.Chapter25bEnemies
             UnitFormation = placeunits.Chapter25bPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
             placeunits.PlacePlayerUnits()
-            time.sleep(2)
+            
             Text1("him, again: AHHH!!!",units.Break.Portrait)
             CutsceneIndex += 1
              
@@ -13437,12 +13425,12 @@ def Cutscene():
         elif CutsceneIndex == 4:
             CutsceneIndex += 1
             BattleStarted = True
-            select.DisableKeys
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            time.sleep(1)
-            select.CancelAction()
+            
+            
+            
+            
+            
+            
         elif CutsceneIndex == 5:
             Text1("gone: ...",units.Break.Portrait)
             CutsceneIndex += 1
@@ -13469,13 +13457,13 @@ def Cutscene():
             
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("dark gray")
-            select.TextboxMaker.clear()
+            
             UnitsToPlace = placeunits.Chapter26aEnemies
             UnitFormation = placeunits.Chapter26aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
             placeunits.PlacePlayerUnits()
-            time.sleep(2)
+            
             Text1("Death Pepper: Proton...",units.DeathPepper.Portrait)
             CutsceneIndex += 1
              
@@ -13587,12 +13575,12 @@ def Cutscene():
         elif CutsceneIndex == 25:
             CutsceneIndex += 1
             BattleStarted = True
-            select.DisableKeys
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            time.sleep(1)
-            select.CancelAction()
+            
+            
+            
+            
+            
+            
         elif CutsceneIndex == 26:
             Text2("Death Pepper: Why... why.. must this happen...",units.Proton.Portrait,units.DeathPepper.Portrait)
             CutsceneIndex += 1
@@ -13652,13 +13640,13 @@ def Cutscene():
             
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("dark gray")
-            select.TextboxMaker.clear()
+            
             UnitsToPlace = placeunits.Chapter26aEnemies
             UnitFormation = placeunits.Chapter26aPlacement
             units.EnemyUnitsAlive = UnitsToPlace
             placeunits.PlaceEnemies(UnitFormation)
             placeunits.PlacePlayerUnits()
-            time.sleep(2)
+            
             Text1("juhhwlqjv",units.DeathPepper.Portrait)
             CutsceneIndex += 1
              
@@ -13677,12 +13665,12 @@ def Cutscene():
         elif CutsceneIndex == 5:
             CutsceneIndex += 1
             BattleStarted = True
-            select.DisableKeys
-            select.TextboxMaker.clear()
-            statprint.SideSquare()
-            select.Status = 0
-            time.sleep(1)
-            select.CancelAction()
+            
+            
+            
+            
+            
+            
         elif CutsceneIndex == 6:
             Text2("kh",units.Proton.Portrait,units.DeathPepper.Portrait)
             CutsceneIndex += 1
@@ -13915,7 +13903,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter27aEnemies
             UnitFormation = placeunits.Chapter27aPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 48:
             Text2("Quest: ...",units.XuirMan.Portrait,units.QuestBoss.Portrait)
             CutsceneIndex += 1
@@ -14134,7 +14122,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter27bEnemies
             UnitFormation = placeunits.Chapter27bPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 11:
             Text2("Repins: N... NO...",units.Proton.Portrait,units.RepinsBoss1.Portrait)
             CutsceneIndex += 1
@@ -14373,7 +14361,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter27c1Enemies
             UnitFormation = placeunits.Chapter27c1Placement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 16:
             Text2("Repins: ...",units.Proton.Portrait,units.RepinsBoss2.Portrait)
             CutsceneIndex += 1
@@ -14388,7 +14376,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter27c2Enemies
             UnitFormation = placeunits.Chapter27c2Placement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 19:
             Text2("Repins: ...",units.Proton.Portrait,units.RepinsBoss2.Portrait)
             CutsceneIndex += 1
@@ -14403,7 +14391,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter27c3Enemies
             UnitFormation = placeunits.Chapter27c3Placement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 22:
             Text2("Repins: ...",units.Proton.Portrait,units.RepinsBoss2.Portrait)
             CutsceneIndex += 1
@@ -14427,7 +14415,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter27c4Enemies
             UnitFormation = placeunits.Chapter27c4Placement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 27:
             Text2("Repins: ...",units.Proton.Portrait,units.RepinsBoss2.Portrait)
             CutsceneIndex += 1
@@ -14708,7 +14696,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter27dEnemies
             UnitFormation = placeunits.Chapter27dPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 15:
             Text2("Vruh: This... truly is...",units.Proton.Portrait,units.Vruh.Portrait)
             CutsceneIndex += 1
@@ -14925,7 +14913,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter27eEnemies
             UnitFormation = placeunits.Chapter27ePlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 10:
             Text2("Etamitlu: ...",units.Proton.Portrait,units.Etamitlu.Portrait)
             CutsceneIndex += 1
@@ -15307,45 +15295,45 @@ def Cutscene():
         elif CutsceneIndex == 153:
             Text3("[And so Quest became possessed by the Holy Itucher,")
             line2("unable to control it's power]")
-            time.sleep(3)
+            
             CutsceneIndex += 1
             
         elif CutsceneIndex == 154:
             Text3("[The rest of the Static Army was slaughtered by Quest]")
-            time.sleep(3)
+            
             CutsceneIndex += 1
             
         elif CutsceneIndex == 155:
             Text3("[Quest's actions defied the writings of the Neville Prophecy,")
             line2("causing a distortion in the timeline and caused the unleashing")
             line3("of the Xuir Wrath]")
-            time.sleep(6)
+            
             CutsceneIndex += 1
             
         elif CutsceneIndex == 156:
             Text3("[Quest was unable to stop the Xuir Wrath, and was defeated by")
             line2("The One Who Consumes All]")
-            time.sleep(4)
+            
             CutsceneIndex += 1
             
         elif CutsceneIndex == 157:
             Text3("[...]")
-            time.sleep(3)
+            
             CutsceneIndex += 1
             
         elif CutsceneIndex == 158:
             Text3("[If only you were able to prevent this, " + username.UserName + "...]")
-            time.sleep(6)
+            
             CutsceneIndex += 1
             
         elif CutsceneIndex == 159:
             Text3("[This is a lot to deal with, you know?]")
-            time.sleep(3)
+            
             CutsceneIndex += 1
             
         elif CutsceneIndex == 160:
             Text3("[-Azure]")
-            time.sleep(3)
+            
             CutsceneIndex += 1
             
         elif CutsceneIndex == 161:
@@ -15682,7 +15670,7 @@ def Cutscene():
             UnitsToPlace = placeunits.Chapter27fEnemies
             UnitFormation = placeunits.Chapter27fPlacement
             BattleStarted = False
-            (screensetup.BattleScreen).onkey(BattleStart, "space")
+            battle_started = True
         elif CutsceneIndex == 16:
             Text1("THE ONE WHO CONSUMES ALL: ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓!!!!",units.Proton.Portrait)
             CutsceneIndex += 1
@@ -15692,70 +15680,70 @@ def Cutscene():
             line2("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓")
             line3("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓")
             CutsceneIndex += 1
-            time.sleep(1)
+            
             Cutscene()
         elif CutsceneIndex == 17:
             Text1("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓",units.Proton.Portrait)
             line2("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓")
             line3("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓")
             CutsceneIndex += 1
-            time.sleep(1)
+            
             Cutscene()
         elif CutsceneIndex == 18:
             Text1("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓",units.Proton.Portrait)
             line2("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓")
             line3("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓")
             CutsceneIndex += 1
-            time.sleep(1)
+            
             Cutscene()
         elif CutsceneIndex == 19:
             Text1("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓",units.Proton.Portrait)
             line2("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓")
             line3("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓")
             CutsceneIndex += 1
-            time.sleep(0.5)
+            
             Cutscene()
         elif CutsceneIndex == 20:
             Text1("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓",units.Proton.Portrait)
             line2("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓")
             line3("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓")
             CutsceneIndex += 1
-            time.sleep(0.5)
+            
             Cutscene()
         elif CutsceneIndex == 21:
             Text1("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓",units.Proton.Portrait)
             line2("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓")
             line3("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓")
             CutsceneIndex += 1
-            time.sleep(0.5)
+            
             Cutscene()
         elif CutsceneIndex == 22:
             for x in range(2):
                 Text1("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓",units.Proton.Portrait)
                 line2("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓")
                 line3("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓")
-                time.sleep(0.2)
+                
                 Text1("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓",units.Proton.Portrait)
                 line2("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓")
                 line3("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓")
-                time.sleep(0.2)
+                
                 Text1("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓",units.Proton.Portrait)
                 line2("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓")
                 line3("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓")
-                time.sleep(0.2)
+                
             for x in range(3):
                 Text1("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓",units.Proton.Portrait)
                 line2("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓")
                 line3("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓")
-                time.sleep(0.1)
+                
                 Text1("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓",units.Proton.Portrait)
                 line2("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓")
                 line3("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓")
-                time.sleep(0.1)
+                
                 Text1("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓",units.Proton.Portrait)
                 line2("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓")
                 line3("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓")
-                time.sleep(0.1)
+                
             for x in range(5):
                 Text1("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓",units.Proton.Portrait)
                 line2("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓")
@@ -16111,7 +16099,7 @@ def LoadData():
         Cutscene()
 
 def SkipCutscene():
-    select.DisableKeys
+    
     global Chapter
     global CutsceneIndex
     global CanSkipCutscene
@@ -16146,15 +16134,15 @@ def BattleStart():
     global BattleStarted
     if BattleStarted == False:
         BattleStarted = True
-        select.DisableKeys
-        select.TextboxMaker.clear()
-        statprint.SideSquare()
+        
+        
+        
         placeunits.PlacePlayerUnits()
         units.EnemyUnitsAlive = UnitsToPlace
         placeunits.PlaceEnemies(UnitFormation)
-        select.Status = 0
-        time.sleep(1)
-        select.CancelAction()
+        
+        
+        
     else:
         print("Don't hold down space, the battle already started")
 
@@ -16162,132 +16150,132 @@ def BattleStart():
 
 def RomraRecruitYes():
     global RecruitRomra
-    select.DisableKeys()
+    ()
     RecruitRomra = True
     Cutscene()
 def RomraRecruitNo():
     global RecruitRomra
-    select.DisableKeys()
+    ()
     RecruitRomra = False
     Cutscene()
 
 def LacirtceleRecruitYes():
     global RecruitLacirtcele
-    select.DisableKeys()
+    ()
     RecruitLacirtcele = True
     Cutscene()
 def LacirtceleRecruitNo():
     global RecruitLacirtcele
-    select.DisableKeys()
+    ()
     RecruitLacirtcele = False
     Cutscene()
 
 def DamageinRecruitYes():
     global RecruitDamagein
-    select.DisableKeys()
+    ()
     RecruitDamagein = True
     Cutscene()
 def DamageinRecruitNo():
     global RecruitDamagein
-    select.DisableKeys()
+    ()
     RecruitDamagein = False
     Cutscene()
 
 def HealiaRecruitYes():
     global RecruitHealia
-    select.DisableKeys()
+    ()
     RecruitHealia = True
     Cutscene()
 def HealiaRecruitNo():
     global RecruitHealia
-    select.DisableKeys()
+    ()
     RecruitHealia = False
     Cutscene()
 
 def WobRecruitYes():
     global RecruitWob
-    select.DisableKeys()
+    ()
     RecruitWob = True
     Cutscene()
 def WobRecruitNo():
     global RecruitWob
-    select.DisableKeys()
+    ()
     RecruitWob = False
     Cutscene()
 
 def BladenRecruitYes():
     global RecruitBladen
-    select.DisableKeys()
+    ()
     RecruitBladen = True
     Cutscene()
 def BladenRecruitNo():
     global RecruitBladen
-    select.DisableKeys()
+    ()
     RecruitBladen = False
     Cutscene()
 
 def WodahsRecruitYes():
     global RecruitWodahs
-    select.DisableKeys()
+    ()
     RecruitWodahs = True
     Cutscene()
 def WodahsRecruitNo():
     global RecruitWodahs
-    select.DisableKeys()
+    ()
     RecruitWodahs = False
     Cutscene()
 
 def FaelRecruitYes():
     global RecruitFael
-    select.DisableKeys()
+    ()
     RecruitFael = True
     Cutscene()
 def ErifRecruitYes():
     global RecruitErif
-    select.DisableKeys()
+    ()
     RecruitErif = True
     Cutscene()
 def RecruitNeither():
-    select.DisableKeys()
+    ()
     Cutscene()
 def VruhRecruitYes():
     global RecruitVruh
-    select.DisableKeys()
+    ()
     RecruitVruh = True
     Cutscene()
 
 def RepinsRecruitYes():
     global RecruitRepins
-    select.DisableKeys()
+    ()
     RecruitRepins = True
     Cutscene()
 
 def RelaehRecruitYes():
     global RecruitRelaeh
-    select.DisableKeys()
+    ()
     RecruitRelaeh = True
     Cutscene()
 
 def LiasRecruitYes():
     global RecruitLias
-    select.DisableKeys()
+    ()
     RecruitLias = True
     Cutscene()
 
 def QinputYes():
     global Qinput
-    select.DisableKeys()
+    ()
     Qinput = True
     Cutscene()
 
 def WinputYes():
     global Winput
-    select.DisableKeys()
+    ()
     Winput = True
     Cutscene()
 
 def EinputYes():
     global Einput
-    select.DisableKeys()
+    ()
     Einput = True
     Cutscene()

@@ -1,0 +1,134 @@
+[
+	{
+		"bgcolor": "dark green"
+	},
+	{
+		"text": "[Static Town, Territory of Static]",
+		"bgcolor": "black"
+	},
+	{
+		"text": "Proton: Everyone, I have talked with the kingand he has provided us a ship.",
+		"left": "proton_big",
+		"bgcolor": "grey"
+	},
+	{
+		"text": "Proton: We will set sail as soon as everyone is ready.",
+		"left": "proton_big"
+	},
+	{
+		"text": "[Static Town Port, Territory of Static]",
+		"bgcolor": "black"
+	},
+	{
+		"text": "???: Hello, are you Proton Xurr?",
+		"left": "proton_big",
+		"right": "fael_big",
+		"bgcolor": "navy"
+	},
+	{
+		"text": "Proton: I am.",
+		"left": "proton_big",
+		"right": "fael_big"
+	},
+	{
+		"text": "???: I am Fael Illyure of the ElementalOffense Squad.",
+		"left": "proton_big",
+		"right": "fael_big"
+	},
+	{
+		"text": "???: And I am Erif Blaze of the ElementalOffense Squad.",
+		"left": "proton_big",
+		"right": "erif_big"
+	},
+	{
+		"text": "Erif: We have been assigned to assist you onyour voyage to the Nolavillian Continent.",
+		"left": "proton_big",
+		"right": "erif_big"
+	},
+	{
+		"text": "Erif: However, due to another assignment going on,only one of us can help you.",
+		"left": "proton_big",
+		"right": "erif_big"
+	},
+	{
+		"text": "[Q] Recruit Fael[W] Recruit Erif[E] Don't recruit either",
+		"left": "fael_big",
+		"right": "erif_big"
+	},
+	{
+		"text": "Fael: Bruh.",
+		"left": "proton_big",
+		"right": "fael_big"
+	},
+	{
+		"text": "(...)",
+		"left": "proton_big",
+		"right": "fael_big"
+	},
+	{
+		"text": "???: DID SOMEBODY SAY \"BRUH\"!?"
+	},
+	{
+		"text": "???: Bruh-huh!",
+		"left": "proton_big",
+		"right": "vruh_big"
+	},
+	{
+		"text": "???: I am the great Vruh E. Momen LXIX!",
+		"left": "proton_big",
+		"right": "vruh_big"
+	},
+	{
+		"text": "Vruh: I search the world for epic \"BruhMoments\", and your sir... have just said\"Bruh\"!",
+		"left": "proton_big",
+		"right": "vruh_big"
+	},
+	{
+		"text": "Vruh: Such wholesomeness! Such gaming!",
+		"left": "proton_big",
+		"right": "vruh_big"
+	},
+	{
+		"text": "Vruh: Such... D R I P",
+		"left": "proton_big",
+		"right": "vruh_big"
+	},
+	{
+		"text": "Vruh: This is truly poggers!",
+		"left": "proton_big",
+		"right": "vruh_big"
+	},
+	{
+		"text": "Vruh: Oh what an adventure this will be!",
+		"left": "proton_big",
+		"right": "vruh_big"
+	},
+	{
+		"text": "[Q] You're hired[W] We never recruited you"
+	},
+	{
+		"text": "Vruh: Oh, so that's how it is...",
+		"left": "proton_big",
+		"right": "vruh_big"
+	},
+	{
+		"text": "Vruh: You shall repent in the fires of the Xuir Wrathfor all of eternity, with no hope of ever escapingto freedom, for you have disturbed the way of the Bruh.",
+		"left": "proton_big",
+		"right": "vruh_big"
+	},
+	{
+		"text": "Vruh: I wait for the day in which I may witness youruntimely gameend so in which I could perform the danceof the defaults upon your soulless husk of a body.",
+		"left": "proton_big",
+		"right": "vruh_big"
+	},
+	{
+		"text": "Vruh: /s",
+		"left": "proton_big",
+		"right": "vruh_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big",
+		"startchapter": "Chapter 11a"
+	}
+]

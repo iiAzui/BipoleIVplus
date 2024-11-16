@@ -1,0 +1,395 @@
+[
+	{
+		"text": "[Chapter 17c][Sazuki Field, Western Nolavillia]",
+		"bgcolor": "black"
+	},
+	{
+		"text": "Proton: It's getting dark, we'll have to camp outhere for the night.",
+		"left": "proton_big",
+		"bgcolor": "dark green"
+	},
+	{
+		"text": "[The next day...]",
+		"bgcolor": "black"
+	},
+	{
+		"text": "Proton: Hmmm? What's that noise?",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big",
+		"bgcolor": "dark green"
+	},
+	{
+		"text": "Proton: !?",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: Everyone! We're surrounded by Xuirists!",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: Prepare for battle!",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: We've managed to survive the attack, but it seemslike the Xuirists will keep hunting us while we're inNolavillia.",
+		"left": "proton_big"
+	},
+	{
+		"text": "Proton: We should head to Nation as quickly as possible.",
+		"left": "proton_big"
+	},
+	{
+		"text": "???: Hey, you there!"
+	},
+	{
+		"text": "Proton: ?",
+		"left": "proton_big"
+	},
+	{
+		"text": "???: Could you open the cage I'm stuck in?",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: Why are you in that cage?",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: The Xuirists captured me after I escaped from theShadow Realm.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: I think they were going to sacrifice me.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: The Shadow Realm?",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: Yeah, I'm something called a \"Proto-Xuir\", a failedclone of some dimensional called the \"True Xuir\".",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: You're a Xuir?",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: Yeah I just said that.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "[Proton opens the cage]"
+	},
+	{
+		"text": "???: Thanks.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: I'd stick around, but there's something I haveto do.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: There are some other Proto-Xuirs that escaped with me,and one of them was captured by the Xuirists.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: There's other Proto-Xuirs?",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: Yeah, it's not like I'm the only one.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: Nolavillia is truly a strange place, to thinkthat there would be so many other Xuirs...",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: Huh?",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: Sorry, this is my first time in Nolavillia sinceI escaped from the Shadow Realm 20 years ago.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: Are you also a Proto-Xuir?",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: Yes.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: 20 years ago... are you Xuirond?",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: I don't this so.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: My engraving says G3 N2.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: Ah, so you are Xuirond.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: We thought you died years ago.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: Of course, we don't really remember you sincewe were still young.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "???: I'm Xuirventh: Generation 3 Number 7.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Xuirventh: We weren't given names so, Xuirventh isjust a name I made up a few years ago.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Xuirventh: So, what do you go by these days, Xuirond?",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: Proton.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Xuirventh: Fancy name, doesn't have to do with numberseither.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Xuirventh: You said you left, Nolavillia, but why did youcome back.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Xuirventh: Two decades later seems like a pretty strange timeto return.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: I'm here to stop the Shadow Realm Research Center.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Xuirventh: Huh?",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: The Research Center has recently obtained a powerful itemcalled the Holy Itucher.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: With such power, they could easily end the world.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Xuirventh: ...",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Xuirventh: If you're heading to the Shadow Realm, you'll need togo to the Nation of Nation.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Xuirventh: But on you're way, you'll likely pass by the XuiristCavern.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Xuirventh: If you want to team up and help me free Xuirfth,I'll probably be able to convince them to help you stopthe Shadow Realm.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Xuirventh: You'll probably have to fight those Xuirists anyways.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "Proton: ...",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "[Recruit Xuirventh](Q) Recruit(W) Do not recruit"
+	},
+	{
+		"text": "Xuirventh: Well, I've gotta go fight some Xuirists.",
+		"left": "proton_big",
+		"right": "xuirventh_big"
+	},
+	{
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"text": "Scien: ...",
+		"left": "scien_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "Proton: Scien, are you alright?",
+		"left": "scien_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "Scien: The Nation of Nation, the Altar must still stand...",
+		"left": "scien_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "Proton: ?",
+		"left": "scien_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "Scien: That person, Xuirventh, they said they escaped fromthe Shadow Realm.",
+		"left": "scien_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "Scien: The only safe place in Nolavillia to hide from the ShadowRealm is in Nation.",
+		"left": "scien_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "Scien: ...",
+		"left": "scien_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "Scien: We need to keep going.",
+		"left": "scien_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "Scien: We must retrieve the Itucher before they can destroy Nation andthe rest of the world.",
+		"left": "scien_big",
+		"right": "proton_big"
+	},
+	{
+		"text": "[Scien and Proton leveled up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Scien",
+				"amount": 3
+			},
+			{
+				"unit": "Proton",
+				"amount": 3
+			}
+		]
+	},
+	{
+		"text": "..."
+	},
+	{
+		"text": "[Xuirist Cavern]"
+	},
+	{
+		"text": "Omega: ....",
+		"left": "omegaxuirist_big",
+		"bgcolor": "dim grey"
+	},
+	{
+		"text": "Break: Omega, has the dispatch responded yet?",
+		"left": "break_big",
+		"right": "omegaxuirist_big"
+	},
+	{
+		"text": "Omega: No, sir.",
+		"left": "break_big",
+		"right": "omegaxuirist_big"
+	},
+	{
+		"text": "Omega: It is likely that they have been defeated.",
+		"left": "break_big",
+		"right": "omegaxuirist_big"
+	},
+	{
+		"text": "Break: ...",
+		"left": "break_big",
+		"right": "omegaxuirist_big"
+	},
+	{
+		"text": "Break: Omega, you do realize that failure will not beaccepted.",
+		"left": "break_big",
+		"right": "omegaxuirist_big"
+	},
+	{
+		"text": "Omega: Yes, yes I do.",
+		"left": "break_big",
+		"right": "omegaxuirist_big"
+	},
+	{
+		"text": "Break: If you fail, I will destroy them.",
+		"left": "break_big",
+		"right": "omegaxuirist_big"
+	},
+	{
+		"text": "Omega: ...",
+		"left": "break_big",
+		"right": "omegaxuirist_big"
+	},
+	{
+		"text": "Break: Do not fail.",
+		"left": "break_big",
+		"right": "omegaxuirist_big",
+		"startchapter": "Chapter 18a"
+	}
+]
