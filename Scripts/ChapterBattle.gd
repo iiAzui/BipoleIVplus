@@ -36,6 +36,7 @@ const RETRO_HEIGHT: int = 14
 const TILE_SIZE: float = 64.0
 
 var is_player_turn: bool = true
+var accept_battle_inputs: bool = true # disable during animations
 
 ## Current coordinates of the player's cursor. Used for unit selection, move destination, attack target, etc.
 var cursor_coords: Vector2i = Vector2i(-1, -1)
@@ -107,7 +108,7 @@ func _ready() -> void:
 	#call_deferred("grab_focus")
 
 func _unhandled_input(event: InputEvent) -> void:
-	if not is_player_turn:
+	if not is_player_turn or not accept_battle_inputs:
 		return
 	
 	if event.is_action_pressed("Left"):
@@ -175,8 +176,13 @@ func start_player_turn():
 		unit.attacked = false
 		unit.update_unit_visual()
 	is_player_turn = true
+	battle_camera.standard_view()
+	show_range(hovered_unit)
 		
 func start_enemy_turn():
+	show_range(null)
+	map_cursor.visible = false
+	
 	if not is_player_turn:
 		return false
 	
@@ -188,6 +194,7 @@ func start_enemy_turn():
 	
 	await unit_ai.retro_ai_all_enemies()
 	
+	map_cursor.visible = true
 	start_player_turn()
 		
 func on_move_pressed():
@@ -233,7 +240,15 @@ func on_tile_pressed():
 			show_range(hovered_unit)
 			return
 			
+			
+		accept_battle_inputs = false
+		show_range(null)
+			
+		await unit_selected.move_animation(current_path)
 		unit_grid.move_unit(unit_selected.coords, cursor_coords)
+		
+		accept_battle_inputs = true
+		
 		unit_selected.moved = true
 		hovered_unit = unit_selected
 		change_cursor_mode(CursorMode.SELECT)
@@ -284,7 +299,11 @@ func attack_pressed():
 		change_cursor_mode(CursorMode.SELECT)
 		map_cursor.modulate = Color.TRANSPARENT
 		
+		accept_battle_inputs = false
+		
 		await use_skill(attacker, defender, move)
+		
+		accept_battle_inputs = true
 		
 		change_cursor_mode(CursorMode.SELECT)
 		show_range(unit_selected)
@@ -351,7 +370,8 @@ func use_skill(attacker: PlacedUnit, defender: PlacedUnit, move: Move):
 				await get_tree().create_timer(0.25).timeout
 	
 	await get_tree().create_timer(0.25).timeout
-	battle_camera.standard_view()
+	if is_player_turn:
+		battle_camera.standard_view()
 	
 	# if either unit died, remove them from the grid
 	if not attacker.unit.is_alive():

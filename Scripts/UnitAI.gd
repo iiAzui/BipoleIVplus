@@ -14,14 +14,22 @@ func retro_ai_all_enemies():
 func retro_ai(acting_unit: PlacedUnit):
 	print(acting_unit.unit.character.display_name, " is acting")
 	
-	# Try to use attacks first on units in range
-	if await try_skill(acting_unit, true, false):
+	
+	var action: Dictionary
+	
+	# First try to use attack
+	action = find_usable_skill(acting_unit, true, false)
+	if action:
+		await chapter_battle.use_skill(acting_unit, action["target"], action["skill"])
 		return
 		
-	# Then try to use supports on units in range
-	if await try_skill(acting_unit, false, true):
+	# Then try to use support
+	action = find_usable_skill(acting_unit, false, true)
+	if action:
+		await chapter_battle.use_skill(acting_unit, action["target"], action["skill"])
 		return
 		
+	# can't do anything more if already moved
 	if acting_unit.moved:
 		return
 		
@@ -37,14 +45,23 @@ func retro_ai(acting_unit: PlacedUnit):
 			break
 		steps_left -= 1
 		
-		# Then try again to use attack. if skill used, break loop
-		if await try_skill(acting_unit, true, false):
+		# Then try again to use attack. if skill found, break loop
+		action = find_usable_skill(acting_unit, true, false)
+		if action:
 			break
 			
-		# Then try again to use support. if skill used, break loop
-		if await try_skill(acting_unit, false, true):
-			return
+		# Then try again to use support. if skill found, break loop
+		action = find_usable_skill(acting_unit, false, true)
+		if action:
+			break
+	
+	# Animate move to target move location
+	await acting_unit.move_animation(current_path)
 	acting_unit.moved = true
+	
+	# Use the action if one was found
+	if action:
+		await chapter_battle.use_skill(acting_unit, action["target"], action["skill"])
 	
 # used bewteen try_take_step calls to prevent backtracking during a move.
 var current_path: Array[Vector2i]
@@ -61,7 +78,8 @@ func try_take_step(acting_unit: PlacedUnit) -> bool:
 	var targets: Array[PlacedUnit] = unit_grid.enemy_units if acting_unit.allied else unit_grid.allied_units
 	targets.sort_custom(func(a: PlacedUnit, b: PlacedUnit): return a.coords.distance_squared_to(acting_unit.coords) < b.coords.distance_squared_to(acting_unit.coords))
 	
-	print("closest target to ", acting_unit.unit.character.display_name, " is ", targets[0].unit.character.display_name)
+	if not targets.is_empty():
+		print("closest target to ", acting_unit.unit.character.display_name, " is ", targets[0].unit.character.display_name)
 	
 	# Loop through possible directions in random order
 	var directions: Array[Vector2i] = [Vector2i.RIGHT, Vector2i.LEFT, Vector2i.UP, Vector2i.DOWN]
@@ -96,10 +114,10 @@ func try_take_step(acting_unit: PlacedUnit) -> bool:
 	return false
 
 # Try to use a skill on units in range. Return true if attacked, false if no valid target found.
-func try_skill(acting_unit: PlacedUnit, use_attacks: bool = true, use_supports: bool = true) -> bool:
-	# can't attack if already attacked
+func find_usable_skill(acting_unit: PlacedUnit, use_attacks: bool = true, use_supports: bool = true) -> Dictionary:
+	# can't use skill if already used a skill this turn
 	if acting_unit.attacked:
-		return false
+		return {}
 		
 	var possible_actions: Array
 	
@@ -136,11 +154,10 @@ func try_skill(acting_unit: PlacedUnit, use_attacks: bool = true, use_supports: 
 	if not possible_actions.is_empty():
 		var action = possible_actions[0]
 		if action["damage"] > 0:
-			await chapter_battle.use_skill(acting_unit, action["target"], action["skill"])
-			return true
+			return action
 		else:
 			print("all possible attacks would deal 0 damage / heal 0 hp")
-			return false
+			return {}
 	else:
 		print("no possible attacks" if not use_supports else ("no possible supports" if not use_attacks else "no possible skills"))
-		return false
+		return {}

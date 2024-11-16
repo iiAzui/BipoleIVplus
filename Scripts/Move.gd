@@ -50,6 +50,6 @@ func get_heal_amount(attacker: Unit, defender: Unit) -> int:
 
 # Get the percentage that this attack will hit the target.
 func get_hit_chance(attacker: Unit, defender: Unit) -> float:
-	var chance: float = min(1.0, (float(attacker.accuracy) * hit - float(defender.agility)) / 10.0) 
+	var chance: float = clamp((float(attacker.accuracy) * hit - float(defender.agility)) / 10.0, 0.0, 1.0) 
 	print(attacker.character.display_name, " has a ", chance*100, "% chance to hit ", defender.character.display_name, " with ", display_name)
 	return chance

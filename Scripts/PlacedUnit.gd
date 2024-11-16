@@ -59,6 +59,17 @@ func update_unit_visual():
 			health_bar.texture_progress = HEALTH_BAR_PLAYER if allied else HEALTH_BAR_ENEMY
 			level_label.text = str(unit.level)
 
+func move_animation(path: Array[Vector2i]):
+	if len(path) == 0:
+		printerr("trying to do move anim with empty path list")
+		return
+		
+	position = Vector3(path[0].x, 0, path[0].y)
+	for i in len(path)-1:
+		var next_point = path[i+1]
+		var next_position := Vector3(next_point.x, 0, next_point.y)
+		await get_tree().create_tween().tween_property(self, "position", next_position, 0.25/float(unit.speed)).finished;
+
 # if move is null this is probably a generic attack (counter attack / follow up)
 func attack_animation(target: PlacedUnit, move: Move, damage: int, miss: bool):
 	var start_point: Vector3 = global_position

@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dohpx0hyxduwi"]
+
+[ext_resource type="Shader" path="res://Shaders/UnitSprite.gdshader" id="1_70tgq"]
+[ext_resource type="Texture2D" uid="uid://byuwl7nxtgnq4" path="res://Sprites/Overworld/romra_small.png" id="2_iow7o"]
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_70tgq")
+shader_parameter/use_billboard = true
+shader_parameter/acted = false
+shader_parameter/texture_albedo = ExtResource("2_iow7o")
