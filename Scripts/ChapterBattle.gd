@@ -215,6 +215,17 @@ func on_tile_pressed():
 			elif !hovered_unit.attacked:
 				change_cursor_mode(CursorMode.ATTACKING)
 	elif cursor_mode == CursorMode.MOVING:
+		# If there's a unit here, go to attack mode and select the first skill that can hit the hovered unit
+		if hovered_unit:
+			change_cursor_mode(CursorMode.ATTACKING)
+			var range = abs(hovered_unit.coords.x - unit_selected.coords.x) + abs(hovered_unit.coords.y - unit_selected.coords.y)
+			for i in len(unit_selected.unit.moves):
+				var move: Move = unit_selected.unit.moves[i]
+				if (move.move_type == "Support") == hovered_unit.allied and range >= move.min_range and range <= move.max_range:
+					select_move(i);
+					break
+			return
+		
 		# if pressing tile outside of move range (or trying to move in place), return
 		if not cursor_coords in moveable_tiles:
 			move_cursor_to(unit_selected.coords)
@@ -467,7 +478,7 @@ func display_hovered_skill_target():
 		outgoing_hit_percent_label.text = str(round(outgoing_hit_chance*100))+"%"
 		incoming_hit_percent_label.text = str(round(incoming_hit_chance*100))+"%"
 		
-		var in_counter_range: bool = unit_in_range(unit_selected, hovered_unit)
+		var in_counter_range: bool = unit_in_range(hovered_unit, unit_selected)
 		if in_counter_range:
 			damage_taken += enemy_counter_damage
 			
@@ -475,10 +486,10 @@ func display_hovered_skill_target():
 		damage_preview_panel.skill_preview.display(skill_damage, true)
 		damage_preview_panel.counter_preview.display(enemy_counter_damage if in_counter_range else 0, false)
 		
-		if unit_selected.unit.speed > hovered_unit.unit.speed:
+		if unit_selected.unit.speed > hovered_unit.unit.speed and unit_in_range(unit_selected, hovered_unit):
 			damage_dealt += ally_counter_damage
 			damage_preview_panel.followup_preview.display(ally_counter_damage, true)
-		elif unit_selected.unit.speed < hovered_unit.unit.speed:
+		elif unit_selected.unit.speed < hovered_unit.unit.speed and unit_in_range(hovered_unit, unit_selected):
 			damage_taken += enemy_counter_damage
 			damage_preview_panel.followup_preview.display(enemy_counter_damage, false)
 		else:

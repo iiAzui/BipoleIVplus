@@ -15,7 +15,8 @@ func new_game():
 	get_tree().change_scene_to_file("res://Scenes/Dialogue.tscn")
 	
 func continue_game():
-	pass
+	Dialogue.current_chapter = "Chapter01"
+	get_tree().change_scene_to_file("res://Scenes/3DChapterBattle.tscn")
 	
 func settings():
 	pass
