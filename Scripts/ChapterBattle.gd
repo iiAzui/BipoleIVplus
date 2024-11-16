@@ -377,6 +377,9 @@ func place_player_units():
 			place_coords.y += 1
 		
 func place_enemy_units():
+	# TODO: probably want to get chapter name from save file
+	placements = ResourceLoader.load("res://Database/ChapterPlacements/"+Dialogue.current_chapter+".tres", "ChapterPlacements")
+	
 	if not placements:
 		printerr("no placements defined but trying to load placements from file!")
 		return

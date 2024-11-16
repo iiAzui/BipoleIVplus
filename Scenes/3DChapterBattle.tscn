@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://d273u7ss6tahe"]
 
 [ext_resource type="Script" path="res://Scripts/ChapterBattle.gd" id="1_4h1kv"]
-[ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter1.tres" id="2_5jyhv"]
+[ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter01.tres" id="2_5jyhv"]
 [ext_resource type="Shader" path="res://Shaders/Map.gdshader" id="2_a7bsw"]
 [ext_resource type="Script" path="res://Scripts/UnitGrid.gd" id="3_7lps6"]
 [ext_resource type="Script" path="res://Scripts/UnitAI.gd" id="3_a7cdn"]

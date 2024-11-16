@@ -1,4 +1,5 @@
 extends Control
+class_name Dialogue
 
 @export var first_cutscene_name: String = "Prologue1"
 
@@ -8,6 +9,9 @@ extends Control
 @export var portrait_left: TextureRect
 @export var portrait_right: TextureRect
 @export var color_background: ColorRect
+
+# TODO: probably want to move this to the save file
+static var current_chapter: String = "Chapter1"
 
 # All current dialogue
 var dialogue: Array
@@ -28,6 +32,7 @@ func _ready() -> void:
 	play_cutscene(first_cutscene_name)
 	
 func play_cutscene(cutscene_name: String):
+	current_chapter = cutscene_name
 	var dialogue_file = FileAccess.open("res://Database/Cutscenes/"+cutscene_name+".json", FileAccess.READ)
 	if not dialogue_file:
 		printerr("cutscene not found: ", cutscene_name)
@@ -52,8 +57,11 @@ func _process(delta: float) -> void:
 func display_next_line() -> void:
 	if line_index >= 0:
 		var line_being_closed = current_branch[line_index]
-		if line_being_closed.has("startchapter"):
+		if line_being_closed.has("battle"):
+			get_tree().change_scene_to_file("res://Scenes/3DChapterBattle.tscn")
+		elif line_being_closed.has("startchapter"):
 			play_cutscene(line_being_closed["startchapter"])
+			return
 	
 	line_index += 1
 	if line_index >= len(current_branch):
@@ -119,13 +127,13 @@ func display_next_line() -> void:
 			display_next_line()
 			return
 		
-	print("index stack: ", line_index_stack, ", branch stack: ", line_branch_stack, ", current line: ", line_index)
+	#print("index stack: ", line_index_stack, ", branch stack: ", line_branch_stack, ", current line: ", line_index)
 
 func try_get_character(name: String) -> Character:
 	if ResourceLoader.exists("res://Database/Characters/"+name+".tres", "Character"):
 		return ResourceLoader.load("res://Database/Characters/"+name+".tres", "Character")
 	
-	print("could not get character of name ", name)
+	#print("could not get character of name ", name)
 	return null
 		
 
@@ -153,13 +161,16 @@ func check_condition(condition: Dictionary) -> bool:
 	return true
 
 func get_portrait(name: String) -> Texture2D:
+	if not name:
+		return
+	
 	if ResourceLoader.exists("res://Sprites/Portraits/"+name.to_lower()+"_big.png", "Texture2D"):
 		return ResourceLoader.load("res://Sprites/Portraits/"+name.to_lower()+"_big.png", "Texture2D")
 		
 	if ResourceLoader.exists("res://Sprites/Portraits/"+name.to_lower()+".png", "Texture2D"):
 		return ResourceLoader.load("res://Sprites/Portraits/"+name.to_lower()+".png", "Texture2D")
 	
-	print("could not get portrait of name ", name)
+	print("could not get portrait of name \"", name, "\"")
 	return null
 
 # The name of the portrait to set for the given portrait texture rect.

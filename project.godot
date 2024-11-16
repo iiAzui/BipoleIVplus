@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bipole Iv+"
-run/main_scene="res://Scenes/3DChapterBattle.tscn"
+run/main_scene="res://Scenes/TitleScreen.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 

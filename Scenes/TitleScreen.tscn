@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://cvxn8mcgfjkv6"]
+
+[ext_resource type="Script" path="res://Scripts/TitleScreen.gd" id="1_iosyy"]
+[ext_resource type="Texture2D" uid="uid://e8dtyqahcdu4" path="res://Sprites/UI/bipoleivlogo.png" id="2_jhvcq"]
+[ext_resource type="Shader" path="res://Shaders/TitleScreen.gdshader" id="2_xdsgr"]
+
+[sub_resource type="Gradient" id="Gradient_e4kwa"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.294118, 0.726471)
+colors = PackedColorArray(0.190313, 0.364569, 0.138444, 1, 0.24465, 0.45851, 0.180921, 1, 0.299951, 0.555245, 0.223733, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_g2mll"]
+noise_type = 4
+seed = 2
+frequency = 0.02
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_wrylo"]
+seamless = true
+color_ramp = SubResource("Gradient_e4kwa")
+noise = SubResource("FastNoiseLite_g2mll")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_et2ef"]
+shader = ExtResource("2_xdsgr")
+shader_parameter/tile_size = 128.0
+shader_parameter/uv_scroll = Vector2(0.05, -0.125)
+shader_parameter/color_texture = SubResource("NoiseTexture2D_wrylo")
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iosyy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_et2ef")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.183502, 0.40499, 0.102403, 1)
+
+[node name="Bipoleivlogo" type="Sprite2D" parent="."]
+position = Vector2(616, 297)
+texture = ExtResource("2_jhvcq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 256.0
+offset_top = 31.0
+offset_right = 656.0
+offset_bottom = 284.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="NewGameButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "New Game"
+
+[node name="LoadGameButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Load Game"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Settings
+"
+
+[connection signal="pressed" from="VBoxContainer/NewGameButton" to="." method="new_game"]
+[connection signal="pressed" from="VBoxContainer/LoadGameButton" to="." method="continue_game"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="settings"]

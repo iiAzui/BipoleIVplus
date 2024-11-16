@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_he3e0"]
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="2_kf0lt"]
 [ext_resource type="PackedScene" uid="uid://bh2c3tqr6mxhh" path="res://Scenes/2DChapterBattle.tscn" id="3_xloaw"]
-[ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter1.tres" id="4_f4exf"]
+[ext_resource type="Resource" uid="uid://d1m3itt8bbv5e" path="res://Database/ChapterPlacements/Chapter01.tres" id="4_f4exf"]
 [ext_resource type="Texture2D" uid="uid://q6s74u6bktan" path="res://Setup/Outsidebox.png" id="5_gas08"]
 [ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Sprites/Portraits/proton_big.png" id="6_6h22j"]
 [ext_resource type="Texture2D" uid="uid://bkgi1kjten1uk" path="res://Sprites/Overworld/selection.png" id="7_xtpq6"]
