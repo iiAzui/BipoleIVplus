@@ -4,6 +4,7 @@ uniform sampler2D color_texture : source_color, repeat_enable;
 uniform float tile_size = 64;
 uniform vec2 uv_scroll = vec2(-0.25, -0.25);
 
+
 varying vec2 position;
 
 void vertex() {
@@ -11,7 +12,8 @@ void vertex() {
 }
 
 void fragment() {
-	COLOR = texture(color_texture, vec2(position.x / tile_size, position.y / tile_size) + uv_scroll * TIME);
+	vec4 texture_color = texture(color_texture, vec2(position.x / tile_size, position.y / tile_size) + uv_scroll * TIME);
+	COLOR = texture_color;
 }
 
 //void light() {

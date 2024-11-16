@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://da2b80p3dhtok"]
+[gd_scene load_steps=9 format=3 uid="uid://da2b80p3dhtok"]
 
 [ext_resource type="Script" path="res://Scripts/PlacedUnit.gd" id="1_w2poa"]
+[ext_resource type="Material" uid="uid://dohpx0hyxduwi" path="res://Materials/PlacedUnit.tres" id="2_3t1k3"]
 [ext_resource type="Texture2D" uid="uid://byuwl7nxtgnq4" path="res://Sprites/Overworld/romra_small.png" id="2_puuba"]
 [ext_resource type="Texture2D" uid="uid://da0sx8yo2kgbx" path="res://Sprites/UI/HealthBarBorder.png" id="3_7q2pf"]
 [ext_resource type="Texture2D" uid="uid://cg000ewm2cd5g" path="res://Sprites/UI/HealthBarEnemy.tres" id="3_ig5or"]
@@ -22,6 +23,7 @@ sprite_3d = NodePath("Sprite3D")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+material_override = ExtResource("2_3t1k3")
 pixel_size = 0.02
 billboard = 1
 alpha_cut = 2

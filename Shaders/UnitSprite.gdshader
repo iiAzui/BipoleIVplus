@@ -13,12 +13,16 @@ const bool weighted_grayscale = false;	// Determines whether to use normal or we
 
 uniform bool acted;
 uniform sampler2D texture_albedo : source_color, filter_nearest;
+uniform vec3 overlay_color = vec3(1);
+uniform float overlay_blend = 0;
+
 void fragment() {
 	if (acted) {
-		vec4 color = texture(texture_albedo, UV);
+		vec3 color = texture(texture_albedo, UV).rgb;
 		ALBEDO = vec3((color.r + color.g + color.b) * 0.25);
 	} else {
-		ALBEDO = texture(texture_albedo, UV).rgb;
+		vec3 texture_color = texture(texture_albedo, UV).rgb;
+		ALBEDO = mix(texture_color, overlay_color, overlay_blend);
 	}
 	ALPHA = texture(texture_albedo, UV).a;
 }

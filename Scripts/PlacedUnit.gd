@@ -24,6 +24,8 @@ var attacked: bool = false
 # (UnitGrid should manage this value closely)
 var coords: Vector2i
 
+var shader_mat: ShaderMaterial
+
 @export var unit: Unit:
 	set(value):
 		if unit:
@@ -40,6 +42,7 @@ var coords: Vector2i
 			unit.level_changed.connect(update_unit_visual)
 
 func _ready() -> void:
+	shader_mat = sprite_3d.material_override as ShaderMaterial
 	update_unit_visual()
 
 # for editor reflecting current unit
@@ -48,7 +51,6 @@ func update_unit_visual():
 		if not sprite_3d:
 			sprite_3d = $Sprite3D
 		sprite_3d.texture = unit.character.overworld_sprite
-		var shader_mat: ShaderMaterial = sprite_3d.material_override as ShaderMaterial
 		if shader_mat:
 			if allied:
 				shader_mat.set_shader_parameter("acted", attacked)
@@ -80,15 +82,28 @@ func attack_animation(target: PlacedUnit, move: Move, damage: int, miss: bool):
 	await get_tree().create_tween().tween_property(self, "global_position", start_point, 0.25).finished
 
 func damage_animation(damage: int, move: Move, miss: bool, is_heal: bool = false):
+	# just use whatever value is already in the health bar to use to animate bewteen old and new value
+	var modulate_color: Color = Color(0, 0.9, 0) if is_heal else Color(0.9, 0, 0)
+	
+	shader_mat.set_shader_parameter("overlay_color", modulate_color)
+	if miss:
+		pass
+	else:
+		get_tree().create_tween().tween_method(set_overlay_blend, 0, 0.5, 0.4)
+	
 	var popup: DamagePopup = DAMAGE_POPUP.instantiate() as DamagePopup
 	add_child(popup)
 	popup.animate(self, damage, miss)
-	# just use whatever value is already in the health bar to use to animate bewteen old and new value
 	animate_health_bar(health_bar.value, unit.hp)
-	var modulate_color: Color = Color(0.3, 1, 0.3) if is_heal else Color(1, 0.3, 0.3)
-	await get_tree().create_tween().tween_property(sprite_3d, "modulate", modulate_color, 0.125).finished
-	await get_tree().create_timer(0.125).timeout
-	await get_tree().create_tween().tween_property(sprite_3d, "modulate", Color.WHITE, 0.25).finished
+	
+	if miss:
+		pass
+	else:
+		await get_tree().create_tween().tween_method(set_overlay_blend, 0.5, 0, 0.4).finished
+	
+func set_overlay_blend(value: float):
+	#print(value)
+	shader_mat.set_shader_parameter("overlay_blend", value)
 	
 func animate_health_bar(old_health: int, new_health: int):
 	health_bar.value = old_health
