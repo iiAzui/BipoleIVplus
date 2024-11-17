@@ -11,7 +11,7 @@ import re
 cutscenes.Chapter = "Prologue1"
 
 # won't export these ones
-skip_chapters = ["Chapter01", "Chapter02", "Chapter03"]
+skip_chapters = ["Prologue1", "Prologue2", "Chapter01", "Chapter02", "Chapter03"]
 
 prev_index = -1
 

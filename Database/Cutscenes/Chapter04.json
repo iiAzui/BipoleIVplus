@@ -99,145 +99,174 @@
 		"name_right": "Damagein"
 	},
 	{
-		"text": "[Recruit Damagein?] (Q) Recruit (W) Do not recruit"
-	},
-	{
-		"left": "proton",
-		"right": "damagein",
-		"speaker": "right",
-		"text": "It's time for some damage!",
-		"name_right": "Damagein"
-	},
-	{
-		"text": "[Damagein joined your party]"
-	},
-	{
-		"text": "???: Are you the people who protected this town?"
-	},
-	{
-		"left": "proton",
-		"right": "healia",
-		"text": "???: I am Healia Aid, and I wish to join your army for saving my hometown."
-	},
-	{
-		"text": "[Recruit Healia?] (Q) Recruit (W) Do not recruit"
-	},
-	{
-		"left": "proton",
-		"right": "healia",
-		"speaker": "right",
-		"text": "Thank you, I will make sure to do my part.",
-		"name_right": "Healia"
-	},
-	{
-		"text": "[Healia joined your party]"
-	},
-	{
-		"text": "[Bonus Conversation Unlocked]"
-	},
-	{
-		"left": "scien",
-		"right": "lacirtcele",
-		"speaker": "left",
-		"text": "Hello, Lacirtcele.",
-		"name_left": "Scien"
-	},
-	{
-		"left": "scien",
-		"right": "lacirtcele",
-		"speaker": "right",
-		"text": "Sup.",
-		"name_right": "Lacirtcele"
-	},
-	{
-		"left": "scien",
-		"right": "lacirtcele",
-		"speaker": "left",
-		"text": "Have you prepared our letter to send back to Static?",
-		"name_left": "Scien"
-	},
-	{
-		"left": "scien",
-		"right": "lacirtcele",
-		"speaker": "right",
-		"text": "Nah.",
-		"name_right": "Lacirtcele"
-	},
-	{
-		"left": "scien",
-		"right": "lacirtcele",
-		"speaker": "right",
-		"text": "I'll get to it later though trust me fam.",
-		"name_right": "Lacirtcele"
-	},
-	{
-		"left": "scien",
-		"right": "lacirtcele",
-		"speaker": "left",
-		"text": "I would rather not trust you.",
-		"name_left": "Scien"
-	},
-	{
-		"left": "scien",
-		"right": "lacirtcele",
-		"speaker": "left",
-		"text": "This is a very important letter, you know?",
-		"name_left": "Scien"
-	},
-	{
-		"left": "scien",
-		"right": "lacirtcele",
-		"speaker": "right",
-		"text": "I do not \"know\".",
-		"name_right": "Lacirtcele"
-	},
-	{
-		"left": "scien",
-		"right": "lacirtcele",
-		"speaker": "right",
-		"text": "I may purposely choose not to \"know\".",
-		"name_right": "Lacirtcele"
-	},
-	{
-		"left": "scien",
-		"right": "lacirtcele",
-		"speaker": "left",
-		"text": "I may \"purposely\" remove you from the Elemental Offense Sqaud.",
-		"name_left": "Scien"
-	},
-	{
-		"left": "scien",
-		"right": "lacirtcele",
-		"speaker": "right",
-		"text": "That might be bad.",
-		"name_right": "Lacirtcele"
-	},
-	{
-		"left": "scien",
-		"right": "lacirtcele",
-		"speaker": "left",
-		"text": "Yes, it would be \"bad\".",
-		"name_left": "Scien"
-	},
-	{
-		"left": "scien",
-		"right": "lacirtcele",
-		"speaker": "left",
-		"text": "Now prepare that letter.",
-		"name_left": "Scien"
-	},
-	{
-		"text": "[Scien and Lacirtcele leveled up!]",
-		"startchapter": "Chapter05",
-		"instant_level_ups": [
+		"recruitment_choice": "Damagein",
+		"true": [
 			{
-				"unit": "Scien",
-				"amount": 1
+				"left": "proton",
+				"right": "damagein",
+				"speaker": "right",
+				"text": "It's time for some damage!"
 			},
 			{
-				"unit": "Lacirtcele",
-				"amount": 1
+				"recruit": "Damagein"
+			}
+		],
+		"false": [
+			{
+				"left": "proton",
+				"right": "damagein",
+				"speaker": "right",
+				"text": "Very well then, I will seek damage elsewhere."
 			}
 		]
+	},
+	{
+		"text": "Are you the people who protected this town?",
+		"name_right": "???",
+		"speaker": "right"
+	},
+	{
+		"left": "proton",
+		"right": "healia",
+		"text": "I am Healia Aid, and I wish to join your army for saving my hometown.",
+		"speaker": "right"
+	},
+	{
+		"recruitment_choice": "Healia",
+		"true": [
+			{
+				"left": "proton",
+				"right": "healia",
+				"speaker": "right",
+				"text": "Thank you, I will make sure to do my part."
+			},
+			{
+				"recruit": "Healia"
+			}
+		],
+		"false": [
+			{
+				"left": "proton",
+				"right": "healia",
+				"speaker": "right",
+				"text": "Understood, I wish you all a safe journey."
+			}
+		]
+	},
+	{
+		"bonus_convo": true,
+		"hint": "If bonus convo is true and condition is true, this branch and all sub branches should be considered a bonus conversation, and [Bonus Conversation Unlocked!] should show before true branch is entered",
+		"condition": {
+			"units_recruited": ["Quest", "Romra"]
+		},
+		"true": [
+			{
+				"left": "scien",
+				"right": "lacirtcele",
+				"speaker": "left",
+				"text": "Hello, Lacirtcele.",
+				"name_left": "Scien"
+			},
+			{
+				"left": "scien",
+				"right": "lacirtcele",
+				"speaker": "right",
+				"text": "Sup.",
+				"name_right": "Lacirtcele"
+			},
+			{
+				"left": "scien",
+				"right": "lacirtcele",
+				"speaker": "left",
+				"text": "Have you prepared our letter to send back to Static?",
+				"name_left": "Scien"
+			},
+			{
+				"left": "scien",
+				"right": "lacirtcele",
+				"speaker": "right",
+				"text": "Nah.",
+				"name_right": "Lacirtcele"
+			},
+			{
+				"left": "scien",
+				"right": "lacirtcele",
+				"speaker": "right",
+				"text": "I'll get to it later though trust me fam.",
+				"name_right": "Lacirtcele"
+			},
+			{
+				"left": "scien",
+				"right": "lacirtcele",
+				"speaker": "left",
+				"text": "I would rather not trust you.",
+				"name_left": "Scien"
+			},
+			{
+				"left": "scien",
+				"right": "lacirtcele",
+				"speaker": "left",
+				"text": "This is a very important letter, you know?",
+				"name_left": "Scien"
+			},
+			{
+				"left": "scien",
+				"right": "lacirtcele",
+				"speaker": "right",
+				"text": "I do not \"know\".",
+				"name_right": "Lacirtcele"
+			},
+			{
+				"left": "scien",
+				"right": "lacirtcele",
+				"speaker": "right",
+				"text": "I may purposely choose not to \"know\".",
+				"name_right": "Lacirtcele"
+			},
+			{
+				"left": "scien",
+				"right": "lacirtcele",
+				"speaker": "left",
+				"text": "I may \"purposely\" remove you from the Elemental Offense Sqaud.",
+				"name_left": "Scien"
+			},
+			{
+				"left": "scien",
+				"right": "lacirtcele",
+				"speaker": "right",
+				"text": "That might be bad.",
+				"name_right": "Lacirtcele"
+			},
+			{
+				"left": "scien",
+				"right": "lacirtcele",
+				"speaker": "left",
+				"text": "Yes, it would be \"bad\".",
+				"name_left": "Scien"
+			},
+			{
+				"left": "scien",
+				"right": "lacirtcele",
+				"speaker": "left",
+				"text": "Now prepare that letter.",
+				"name_left": "Scien"
+			},
+			{
+				"text": "[Scien and Lacirtcele leveled up!]",
+				"instant_level_ups": [
+					{
+						"unit": "Scien",
+						"amount": 1
+					},
+					{
+						"unit": "Lacirtcele",
+						"amount": 1
+					}
+				]
+			}
+		]
+	},
+	{
+		"startchapter": "Chapter05"
 	}
 ]

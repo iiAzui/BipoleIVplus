@@ -103,7 +103,7 @@ func display_next_line(close_current_line: bool = true) -> void:
 		var bgcolor_string = line["bgcolor"]
 		if bgcolor_string == "black":
 			color_background.color = Color.BLACK
-		elif bgcolor_string == "gray":
+		elif bgcolor_string == "gray" or bgcolor_string == "grey":
 			color_background.color = Color.DARK_GRAY
 		elif bgcolor_string == "green":
 			color_background.color = Color.DARK_GREEN
