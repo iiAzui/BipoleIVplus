@@ -1,12 +1,11 @@
-[gd_resource type="Resource" script_class="SaveData" load_steps=7 format=3 uid="uid://g4bb60ja48co"]
+[gd_resource type="Resource" script_class="SaveData" load_steps=6 format=3 uid="uid://g4bb60ja48co"]
 
 [ext_resource type="Script" path="res://Scripts/SaveData.gd" id="1_xkpom"]
 [ext_resource type="Script" path="res://Scripts/Unit.gd" id="2_d00s4"]
 [ext_resource type="Resource" uid="uid://b5p2rqkgpy6ux" path="res://Database/RecruitedUnits/Proton.tres" id="3_vteu7"]
 [ext_resource type="Resource" uid="uid://ded8fjmb2up5u" path="res://Database/RecruitedUnits/Quest.tres" id="4_lkni0"]
 [ext_resource type="Resource" uid="uid://cawtheoidgonv" path="res://Database/RecruitedUnits/Scien.tres" id="5_4wwhn"]
-[ext_resource type="Resource" uid="uid://dw4ca1e0dgrdt" path="res://Database/RecruitedUnits/Romra.tres" id="6_7i853"]
 
 [resource]
 script = ExtResource("1_xkpom")
-units = Array[ExtResource("2_d00s4")]([ExtResource("3_vteu7"), ExtResource("4_lkni0"), ExtResource("5_4wwhn"), ExtResource("6_7i853")])
+units = Array[ExtResource("2_d00s4")]([ExtResource("3_vteu7"), ExtResource("4_lkni0"), ExtResource("5_4wwhn")])

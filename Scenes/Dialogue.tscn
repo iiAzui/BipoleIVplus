@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyg16goh4fsw2"]
+[gd_scene load_steps=6 format=3 uid="uid://dyg16goh4fsw2"]
 
 [ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_1rjgr"]
 [ext_resource type="Script" path="res://Scripts/Dialogue.gd" id="1_dodj1"]
 [ext_resource type="Texture2D" uid="uid://rfokq3kgb05p" path="res://Sprites/Portraits/proton_big.png" id="2_di4rn"]
+[ext_resource type="Script" path="res://Scripts/DialogueChoiceBox.gd" id="4_ku2e4"]
+[ext_resource type="PackedScene" uid="uid://b2w4x0o8akwfu" path="res://Scenes/UI/DialogueChoice.tscn" id="5_2jmd1"]
 
-[node name="Dialogue" type="Control" node_paths=PackedStringArray("dialogue_text", "name_left", "name_right", "portrait_left", "portrait_right", "color_background")]
+[node name="Dialogue" type="Control" node_paths=PackedStringArray("dialogue_text", "name_left", "name_right", "portrait_left", "portrait_right", "color_background", "choices")]
 custom_minimum_size = Vector2(1200, 960)
 layout_mode = 3
 anchors_preset = 15
@@ -22,6 +24,7 @@ name_right = NodePath("InnerBox/PanelContainer/MarginContainer/NameRight")
 portrait_left = NodePath("InnerBox/Portraits/PortraitLeft")
 portrait_right = NodePath("InnerBox/Portraits/PortraitRight")
 color_background = NodePath("BgColorRect")
+choices = NodePath("InnerBox/Choice")
 
 [node name="BgColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -136,5 +139,41 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 24
-text = "This is the dialogue text. Yap yap yap yap yap yap yap yap yap yap yap  yap yap yap yap yap yap yap yap yap  yap yap yap yap yap yap yap yap yap yap"
+text = "Recruit Romra?"
 autowrap_mode = 3
+
+[node name="Choice" type="PanelContainer" parent="InnerBox" node_paths=PackedStringArray("choice_container")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.0
+offset_top = -150.0
+offset_right = 168.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_ku2e4")
+choice_container = NodePath("MarginContainer/VBoxContainer")
+
+[node name="MarginContainer" type="MarginContainer" parent="InnerBox/Choice"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InnerBox/Choice/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Button" parent="InnerBox/Choice/MarginContainer/VBoxContainer" instance=ExtResource("5_2jmd1")]
+layout_mode = 2
+
+[node name="Button2" parent="InnerBox/Choice/MarginContainer/VBoxContainer" instance=ExtResource("5_2jmd1")]
+layout_mode = 2
+text = "Don't recruit"

@@ -423,8 +423,9 @@
 		"true": [
 			{
 				"text": "Romra: Yes! Thank you!",
-				"left": "romra_big",
-				"right": "proton_big"
+				"left": "romra",
+				"right": "proton",
+				"speaker": "right"
 			},
 			{
 				"the_displayed_text_should_be_todo_implement": "[Romra has joined your party!]",
@@ -434,8 +435,9 @@
 		"false": [
 			{
 				"text": "Romra: Oh, sorry for bothering you.",
-				"left": "romra_big",
-				"right": "proton_big"
+				"left": "romra",
+				"right": "proton",
+				"speaker": "right"
 			}
 		]
 	},

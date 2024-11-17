@@ -7,6 +7,7 @@ class_name Dialogue
 @export var portrait_left: TextureRect
 @export var portrait_right: TextureRect
 @export var color_background: ColorRect
+@export var choices: DialogueChoiceBox
 
 # TODO: probably want to move this to the save file
 static var current_chapter: String = "Chapter01"
@@ -24,6 +25,14 @@ static var line_branch_stack: Array[String] = []
 
 # The line # of the current branch currently bring shown.
 static var line_index: int = -1
+
+# True when the player is making a choice (recruitment, etc)
+var choosing: bool = false
+
+# True if currently skipping - will skip over all dialogue except conditionals and choices
+var skipping: bool = false
+var skip_timer: float = 0.0
+const SKIP_DELAY: float = 0.05
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -57,8 +66,22 @@ func load_cutscene_file():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
-		display_next_line()
+	if skipping and not choosing:
+		skip_timer += delta
+		if skip_timer > SKIP_DELAY:
+			skip_timer -= SKIP_DELAY
+			display_next_line()
+			
+	
+func _input(event: InputEvent) -> void:
+	if not choosing:
+		if event.is_action_pressed("ui_accept"):
+			display_next_line()
+		if event is InputEventMouseButton and event.is_released() and event.button_index == MOUSE_BUTTON_LEFT:
+			display_next_line()
+			
+	if event.is_action_pressed("Skip"):
+		skipping = !skipping
 	
 func display_next_line(close_current_line: bool = true) -> void:
 	if line_index >= 0 and close_current_line:
@@ -109,18 +132,28 @@ func display_next_line(close_current_line: bool = true) -> void:
 			color_background.color = Color.DARK_GREEN
 		else:
 			printerr("unrecognzied background color: ", bgcolor_string)
+			
+	if line.has("recruitment_choice"):
+		var unit_name: String = line["recruitment_choice"]
+		var unit: Unit = ResourceLoader.load("res://Database/RecruitedUnits/"+unit_name+".tres", "Unit") as Unit
+		if not unit:
+			printerr("unit to recruit not found in Database/RecruitedUnits: ", unit_name)
+			display_next_line()
+			return
+			
+		choosing = true
+		skipping = false
+		choices.start_new_choice_prompt()
+		line["text"] = "Recruit "+unit.character.display_name+"?"
+		choices.add_choice("Recruit", choose_choice_option.bind("true"))
+		choices.add_choice("Do not recruit", choose_choice_option.bind("false"))
+		choices.show()
 	
 	# "condition" key signifies a branch start
 	if line.has("condition"):
 		var condition_is_true: bool = check_condition(line["condition"])
 		var branch_name = "true" if condition_is_true else "false"
-		if line.has(branch_name):
-			current_branch = line[branch_name]
-			line_index_stack.push_back(line_index)
-			line_branch_stack.push_back(branch_name)
-			line_index = -1
-			display_next_line()
-			return
+		enter_branch(branch_name)
 			
 	else:
 		dialogue_text.text = line["text"] if line.has("text") else ""
@@ -139,7 +172,20 @@ func display_next_line(close_current_line: bool = true) -> void:
 			display_next_line()
 			return
 		
-	
+func choose_choice_option(branch_name: String):
+	choices.hide()
+	choosing = false
+	enter_branch(branch_name)
+		
+# Enter a new branch on the current line
+func enter_branch(branch_name: String):
+	if current_branch[line_index].has(branch_name):
+		current_branch = current_branch[line_index][branch_name]
+		line_index_stack.push_back(line_index)
+		line_branch_stack.push_back(branch_name)
+		line_index = -1
+		display_next_line()
+		return
 
 func find_branch():
 	current_branch = dialogue
