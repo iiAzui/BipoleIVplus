@@ -7,33 +7,62 @@
 		"text": "(The town is ravaged, with the ground is covered in destroyed buildings and flames...)"
 	},
 	{
-		"left": "proton",
+		"left": "bladen",
 		"speaker": "left",
-		"text": "What happened here...",
-		"name_left": "Proton",
+		"text": "...",
+		"name_left": "Bladen",
 		"bgcolor": "dark red"
 	},
 	{
-		"left": "proton",
+		"left": "bladen",
+		"speaker": "left",
+		"text": "What happened here?",
+		"name_left": "Bladen"
+	},
+	{
+		"left": "bladen",
 		"right": "Bladeous",
 		"text": "???: ..."
 	},
 	{
-		"left": "proton",
-		"right": "Bladeous",
-		"text": "(??? attacks Proton)"
-	},
-	{
-		"left": "proton",
+		"left": "bladen",
 		"right": "Bladeous",
 		"speaker": "left",
-		"text": "Hey, don't attack us!",
-		"name_left": "Proton"
+		"text": "(Is that Bladeous?)",
+		"name_left": "Bladen"
 	},
 	{
-		"left": "proton",
+		"left": "bladen",
 		"right": "Bladeous",
-		"text": "???: ..."
+		"speaker": "left",
+		"text": "Hey! What happened here?",
+		"name_left": "Bladen"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"text": "(Bladeous attacks Bladen)"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "left",
+		"text": "Hey! What's happened to you?",
+		"name_left": "Bladen"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "left",
+		"text": "You aren't the one who did this, are you?",
+		"name_left": "Bladen"
 	},
 	{
 		"left": "proton",
@@ -44,46 +73,196 @@
 		"battle": "Chapter08"
 	},
 	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "Bladen...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Bladen"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "The Itucher isn't... here anymore...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "They took it... the Nolavillians...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "left",
+		"text": "Nolavillians?",
+		"name_left": "Bladen"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "I tried to stop them... and I activated the Itucher...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "But I wasn't... worthy...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "I... couldn't control it's power...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "My allies... the townspeople... I...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "I... killed them all...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "But I couldn't even... defeat the Nolavillians...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "It was pointless... I failed...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "And who knows... what will happen now...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "The Shadow Realm... that's where they're taking it...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "They said it would be... the key to creating an artificial dimensional...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "bladen",
+		"right": "Bladeous",
+		"speaker": "right",
+		"text": "The fourth generation... Xuir...",
+		"name_right": "Bladeous"
+	},
+	{
+		"left": "proton",
+		"right": "Bladeous",
+		"speaker": "left",
+		"text": "Xuir!?",
+		"name_left": "Proton"
+	},
+	{
 		"left": "proton",
 		"right": "Bladeous",
 		"speaker": "right",
-		"text": "The Itucher...",
+		"text": "It's... starting to take over... again...",
 		"name_right": "Bladeous"
 	},
 	{
 		"left": "proton",
 		"right": "Bladeous",
 		"speaker": "right",
-		"text": "I couldn't control it...",
+		"text": "Seal me in the temple... while I'm still weakened...",
 		"name_right": "Bladeous"
 	},
 	{
-		"left": "proton",
+		"left": "bladen",
 		"right": "Bladeous",
-		"speaker": "right",
-		"text": "And now... they have it...",
-		"name_right": "Bladeous"
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Bladen"
 	},
 	{
-		"left": "proton",
+		"left": "bladen",
 		"right": "Bladeous",
-		"speaker": "right",
-		"text": "The Nolavillians...",
-		"name_right": "Bladeous"
+		"speaker": "left",
+		"text": "...understood.",
+		"name_left": "Bladen"
 	},
 	{
-		"left": "proton",
-		"right": "Bladeous",
-		"speaker": "right",
-		"text": "At the... Shadow Realm...",
-		"name_right": "Bladeous"
+		"text": "(Bladen puts Bladeous in the Altar Temple and performs a sealing spell on it.)"
 	},
 	{
-		"left": "proton",
-		"right": "Bladeous",
-		"speaker": "right",
-		"text": "Please... stop them...",
-		"name_right": "Bladeous"
+		"left": "bladen",
+		"right": "proton",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Bladen"
+	},
+	{
+		"left": "bladen",
+		"right": "proton",
+		"speaker": "left",
+		"text": "...I know what I need to do.",
+		"name_left": "Bladen"
+	},
+	{
+		"left": "bladen",
+		"right": "proton",
+		"speaker": "left",
+		"text": "I've been avoiding this for too long, but it was inevidable.",
+		"name_left": "Bladen"
+	},
+	{
+		"left": "bladen",
+		"right": "proton",
+		"speaker": "left",
+		"text": "I'm going to go to Nolavillia and take back the Holy Itucher.",
+		"name_left": "Bladen"
+	},
+	{
+		"left": "bladen",
+		"right": "proton",
+		"speaker": "left",
+		"text": "My family's been the guardians of the Altar Temple, but I've never wanted to do it...",
+		"name_left": "Bladen"
+	},
+	{
+		"left": "bladen",
+		"right": "proton",
+		"speaker": "left",
+		"text": "...but the whole world is at stake here.",
+		"name_left": "Bladen"
 	},
 	{
 		"left": "proton",
@@ -109,12 +288,37 @@
 		"text": "Nolavillia, huh. I'll go wherever the artifacts are.",
 		"name_left": "Quest"
 	},
+	{
+		"left": "romra",
+		"speaker": "left",
+		"text": "Going to Nolavillia? I wonder if it'll help me get stronger...",
+		"name_left": "Romra"
+	},
+	{
+		"left": "lacirtcele",
+		"speaker": "left",
+		"text": "Nolavillia... rad name bruh.",
+		"name_left": "Lacirtcele"
+	},
+	{
+		"left": "damagein",
+		"speaker": "left",
+		"text": "Nolavillia? I hope they have lots of damage!",
+		"name_left": "Damagein"
+	},
+	{
+		"left": "healia",
+		"speaker": "left",
+		"text": "Nolavillia, I wonder what it's like...",
+		"name_left": "Healia"
+	},
 	{},
-	{},
-	{},
-	{},
-	{},
-	{},
+	{
+		"left": "wodahs",
+		"speaker": "left",
+		"text": "Guess I'm going to Nolavillia now.",
+		"name_left": "Wodahs"
+	},
 	{},
 	{},
 	{},

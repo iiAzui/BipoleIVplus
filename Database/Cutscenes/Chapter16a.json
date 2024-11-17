@@ -21,7 +21,7 @@
 		"left": "tnemecalperiii",
 		"right": "lacirtcele",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Tnemecalper III"
 	},
 	{
@@ -49,14 +49,14 @@
 		"left": "vruh",
 		"right": "repins",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Vruh"
 	},
 	{
 		"left": "relaeh",
 		"right": "lias",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Relaeh"
 	},
 	{
@@ -307,14 +307,92 @@
 		"left": "rethgif",
 		"right": "proton",
 		"speaker": "left",
-		"text": "Okay then, I'll just fight along with the other team.",
+		"text": "Eg, it's time for battle!",
 		"name_left": "Rethgif"
 	},
 	{
-		"text": "[Rethgif and Eg have joined the enemy team]"
+		"text": "[Rethgif and Eg have joined your party]"
 	},
 	{},
-	{},
+	{
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "damagein",
+		"right": "relaeh",
+		"speaker": "left",
+		"text": "Relaeh.",
+		"name_left": "Damagein"
+	},
+	{
+		"left": "damagein",
+		"right": "relaeh",
+		"speaker": "right",
+		"text": "Yes?",
+		"name_right": "Relaeh"
+	},
+	{
+		"left": "damagein",
+		"right": "relaeh",
+		"speaker": "left",
+		"text": "Why do you heal?",
+		"name_left": "Damagein"
+	},
+	{
+		"left": "damagein",
+		"right": "relaeh",
+		"speaker": "right",
+		"text": "Why do I heal?",
+		"name_right": "Relaeh"
+	},
+	{
+		"left": "damagein",
+		"right": "relaeh",
+		"speaker": "left",
+		"text": "Yeah.",
+		"name_left": "Damagein"
+	},
+	{
+		"left": "damagein",
+		"right": "relaeh",
+		"speaker": "right",
+		"text": "There's a lot of people who harm, but not many who heal.",
+		"name_right": "Relaeh"
+	},
+	{
+		"left": "damagein",
+		"right": "relaeh",
+		"speaker": "right",
+		"text": "I think it's important to have a balance between harming and healing.",
+		"name_right": "Relaeh"
+	},
+	{
+		"left": "damagein",
+		"right": "relaeh",
+		"speaker": "left",
+		"text": "So you heal so you can allow more damage...",
+		"name_left": "Damagein"
+	},
+	{
+		"left": "damagein",
+		"right": "relaeh",
+		"speaker": "left",
+		"text": "Interesting...",
+		"name_left": "Damagein"
+	},
+	{
+		"text": "[Damagein and Relaeh leveled up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Damagein",
+				"amount": 3
+			},
+			{
+				"unit": "Relaeh",
+				"amount": 3
+			}
+		]
+	},
 	{},
 	{
 		"text": "...",
@@ -498,6 +576,6 @@
 		"speaker": "right",
 		"text": "...",
 		"name_right": "Omega",
-		"startchapter": "Chapter17c"
+		"startchapter": "Chapter17b"
 	}
 ]

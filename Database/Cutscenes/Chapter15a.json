@@ -169,108 +169,18 @@
 		"left": "proton",
 		"right": "lias",
 		"speaker": "left",
-		"text": "No.",
-		"name_left": "Proton"
-	},
-	{
-		"text": "(Proton leaves)"
-	},
-	{},
-	{
-		"left": "proton",
-		"speaker": "left",
-		"text": "...",
+		"text": "Sure, you can come with us.",
 		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"speaker": "left",
-		"text": "Hey, I think I see someone in the water.",
-		"name_left": "Proton"
+		"right": "lias",
+		"speaker": "right",
+		"text": "Cool.",
+		"name_right": "Lias"
 	},
 	{
-		"left": "proton",
-		"speaker": "left",
-		"text": "...",
-		"name_left": "Proton"
-	},
-	{
-		"left": "proton",
-		"right": "fieht",
-		"text": "???: Hey, could you help me?"
-	},
-	{
-		"left": "proton",
-		"right": "fieht",
-		"speaker": "left",
-		"text": "Why are you in the middle of the ocean?",
-		"name_left": "Proton"
-	},
-	{
-		"left": "proton",
-		"right": "fieht",
-		"text": "???: Because I was stealing from Kaptain K'Neville's ships then a battle started so I jumped off."
-	},
-	{
-		"left": "proton",
-		"right": "fieht",
-		"speaker": "left",
-		"text": "You were stealing from Kaptain K'Neville?",
-		"name_left": "Proton"
-	},
-	{
-		"left": "proton",
-		"right": "fieht",
-		"text": "???: Everything he has is already stolen anyways."
-	},
-	{
-		"left": "proton",
-		"right": "fieht",
-		"text": "???: ..."
-	},
-	{
-		"left": "proton",
-		"right": "fieht",
-		"text": "???: Could you help me out?"
-	},
-	{
-		"text": "(Proton brings ??? onto the ship)"
-	},
-	{
-		"left": "proton",
-		"right": "fieht",
-		"text": "???: Thanks."
-	},
-	{
-		"left": "proton",
-		"right": "fieht",
-		"speaker": "left",
-		"text": "We're going to Nolavillia to retrieve the Holy Itucher.",
-		"name_left": "Proton"
-	},
-	{
-		"left": "proton",
-		"right": "fieht",
-		"text": "???: You getting paid to do it?"
-	},
-	{
-		"left": "proton",
-		"right": "fieht",
-		"speaker": "left",
-		"text": "Yeah.",
-		"name_left": "Proton"
-	},
-	{
-		"left": "proton",
-		"right": "fieht",
-		"text": "???: Cool, can I join you guys?"
-	},
-	{
-		"text": "[Recruit ???] (Q) Recruit (W) Do not recruit"
-	},
-	{
-		"left": "proton",
-		"text": "(Proton throws ??? back into the ocean)"
+		"text": "[Lias has joined your party]"
 	},
 	{},
 	{

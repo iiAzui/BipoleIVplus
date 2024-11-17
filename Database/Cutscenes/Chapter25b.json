@@ -98,10 +98,12 @@
 		"left": "proton",
 		"right": "cayenne",
 		"speaker": "right",
-		"text": "Okay then...",
+		"text": "Understood.",
 		"name_right": "Cayenne"
 	},
-	{},
+	{
+		"text": "[Cayenne has joined your party]"
+	},
 	{
 		"text": "(...)"
 	},
@@ -130,46 +132,146 @@
 	{},
 	{},
 	{},
+	{
+		"left": "lacirtcele",
+		"speaker": "left",
+		"text": "Bruh...",
+		"name_left": "Lacirtcele"
+	},
+	{
+		"left": "damagein",
+		"speaker": "left",
+		"text": "It's time for the ultimate damage!",
+		"name_left": "Damagein"
+	},
+	{
+		"left": "healia",
+		"speaker": "left",
+		"text": "I sure didn't think I'd end up here after leaving Sine.",
+		"name_left": "Healia"
+	},
+	{},
+	{
+		"left": "bladen",
+		"speaker": "left",
+		"text": "Really can't escape fate, can you?",
+		"name_left": "Bladen"
+	},
+	{
+		"left": "wodahs",
+		"speaker": "left",
+		"text": "So much for a solo mission.",
+		"name_left": "Wodahs"
+	},
+	{},
+	{
+		"left": "fael",
+		"speaker": "left",
+		"text": "So we're finally here...",
+		"name_left": "Fael"
+	},
+	{},
+	{},
+	{},
+	{
+		"left": "repins",
+		"speaker": "left",
+		"text": "The Holy Itucher... it's finally within reach...",
+		"name_left": "Repins"
+	},
+	{
+		"left": "relaeh",
+		"speaker": "left",
+		"text": "We must bring an end to this destruction.",
+		"name_left": "Relaeh"
+	},
+	{},
+	{
+		"left": "lias",
+		"speaker": "left",
+		"text": "I've spent too much time at sea... but now that I'm here, I might as well help save the world.",
+		"name_left": "Lias"
+	},
+	{},
+	{},
+	{},
+	{
+		"left": "elbon",
+		"speaker": "left",
+		"text": "Ugh, must a noble as I do something like this?",
+		"name_left": "Elbon"
+	},
+	{},
+	{
+		"left": "xuirventh",
+		"speaker": "left",
+		"text": "It's time to end this lab!",
+		"name_left": "Xuirventh"
+	},
+	{
+		"left": "xuirfth",
+		"speaker": "left",
+		"text": "We've returned to where it all begun. Now it's time to end it.",
+		"name_left": "Xuirfth"
+	},
+	{},
+	{
+		"left": "dliug",
+		"speaker": "left",
+		"text": "Argh! Death to the Xuirists!",
+		"name_left": "Dliug"
+	},
+	{
+		"left": "exa",
+		"speaker": "left",
+		"text": "It is time for them to learn what fear feels like.",
+		"name_left": "Exa"
+	},
+	{
+		"left": "yranecrem",
+		"speaker": "left",
+		"text": "Will this finally end the cycle of destruction?",
+		"name_left": "Yranecrem"
+	},
+	{},
+	{
+		"left": "box",
+		"speaker": "left",
+		"text": "Huh, how did I end up here?",
+		"name_left": "Box"
+	},
+	{
+		"left": "NOTOS",
+		"speaker": "left",
+		"text": "Hahahaha! Let's see how they fair against me!",
+		"name_left": "NOTOS"
+	},
 	{},
 	{},
 	{},
 	{},
 	{},
+	{
+		"left": "fiyghtrr",
+		"speaker": "left",
+		"text": "After this, we'll finally get revenge for what they've done to Nation!",
+		"name_left": "Fiyghtrr"
+	},
 	{},
 	{},
+	{
+		"left": "xuirurth",
+		"speaker": "left",
+		"text": "This battle is for Xuirventh, Xuirfth, and all of the the Xuirs that suffered by Death Pepper's rule!",
+		"name_left": "Xuirurth"
+	},
 	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
+	{
+		"left": "ahcem",
+		"speaker": "left",
+		"text": "It's time to stop 'em!",
+		"name_left": "Ahcem"
+	},
 	{
 		"left": "proton",
 		"speaker": "left",

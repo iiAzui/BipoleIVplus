@@ -1,0 +1,502 @@
+[
+	{
+		"text": "[Chapter 20a] [Xuir Plain, Central Nolavillia]",
+		"bgcolor": "black"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "We'll be passing through the Nolavillian Mountain Range soon.",
+		"name_left": "Proton",
+		"bgcolor": "green"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "The path through the mountain range is very narrow, keep on guard for ambushes.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "And it seems there's already a group of people ahead of us, likely trying to ambush us.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "Hey, I recognize them!",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "You do?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "Of course I do!",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "Those are Shadian soldiers. I think they're being led by Dael, the head knight of prince Neo's army.",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "But why would they be here though?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "Who knows... We just need to pass by them, right?",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "Yes, I would prefer to avoid conflict.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "elbon",
+		"speaker": "left",
+		"text": "Hey! Dael!",
+		"name_left": "Elbon"
+	},
+	{
+		"left": "elbon",
+		"right": "dael",
+		"speaker": "right",
+		"text": "Hmm? What is this rat doing here?",
+		"name_right": "Dael"
+	},
+	{
+		"left": "elbon",
+		"right": "dael",
+		"speaker": "left",
+		"text": "Is it fine if we pass by your camp?",
+		"name_left": "Elbon"
+	},
+	{
+		"left": "elbon",
+		"right": "dael",
+		"speaker": "right",
+		"text": "And why might you need to do that?",
+		"name_right": "Dael"
+	},
+	{
+		"left": "elbon",
+		"right": "dael",
+		"speaker": "left",
+		"text": "Prince Neo sent me here to retrieve Healia Aid, but I must entertain these Bipolians on their journey before they hand her over.",
+		"name_left": "Elbon"
+	},
+	{
+		"left": "elbon",
+		"right": "dael",
+		"speaker": "right",
+		"text": "*sigh* Such a pathetic method for a pathetic fool.",
+		"name_right": "Dael"
+	},
+	{
+		"left": "elbon",
+		"right": "dael",
+		"speaker": "right",
+		"text": "As much as I hate you, I don't wish to disturb Prince Neo's plans.",
+		"name_right": "Dael"
+	},
+	{
+		"left": "elbon",
+		"right": "dael",
+		"speaker": "right",
+		"text": "Now run along with your circus, Elbon.",
+		"name_right": "Dael"
+	},
+	{
+		"text": "(Proton's army safely passes through Dael's camp)"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "Wow, that actually worked.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "Of course it worked, I am the great Elbon Rich!",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "My power and fame are one to be feared! ",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "It seemed to me more like it was Neo's power and fame that were feared, but I suppose you did get us pass safely.",
+		"name_left": "Proton"
+	},
+	{
+		"text": "???: AHHHHHHHH!!!"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "Huh, who was that?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "box",
+		"text": "???: Bandits! Bandits are up ahead!"
+	},
+	{
+		"left": "proton",
+		"right": "box",
+		"speaker": "left",
+		"text": "Bandits?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "box",
+		"text": "???: They've chased me down the mountain range!"
+	},
+	{
+		"left": "proton",
+		"right": "box",
+		"text": "???: I am a mere merchant, I can't fight off a horde of bandits! Please help me!"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "right",
+		"text": "If there's bandits ahead, we'll need to fight them to get past anyways.",
+		"name_right": "Quest"
+	},
+	{
+		"left": "proton",
+		"right": "quest",
+		"speaker": "left",
+		"text": "You're right, prepare for battle!",
+		"name_left": "Proton"
+	},
+	{
+		"text": "[Box has joined your party]",
+		"battle": "Chapter20a"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "That should be all of the bandits...",
+		"name_left": "Proton"
+	},
+	{
+		"text": "???: You there!"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "Huh? Is someone there? (Why does this keep happening...)",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "NOTOS",
+		"text": "???: You hold great power, Proton."
+	},
+	{
+		"left": "proton",
+		"right": "NOTOS",
+		"speaker": "left",
+		"text": "Who are you?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "NOTOS",
+		"text": "???: I am Neville of the OS, also known as NOTOS."
+	},
+	{
+		"left": "proton",
+		"right": "NOTOS",
+		"speaker": "right",
+		"text": "I came here after I sensed great power, and you have great potential within your abilities",
+		"name_right": "NOTOS"
+	},
+	{
+		"left": "proton",
+		"right": "NOTOS",
+		"speaker": "right",
+		"text": "I wish to witness more of your battles, its not everyday that I find someone like you.",
+		"name_right": "NOTOS"
+	},
+	{
+		"left": "proton",
+		"right": "NOTOS",
+		"speaker": "right",
+		"text": "And don't worry, I've already added myself to your party.",
+		"name_right": "NOTOS"
+	},
+	{
+		"left": "proton",
+		"right": "NOTOS",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"text": "[Xuirist Cavern]",
+		"bgcolor": "black"
+	},
+	{
+		"left": "omegaxuirist",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Omega",
+		"bgcolor": "dim grey"
+	},
+	{
+		"left": "omegaxuirist",
+		"speaker": "left",
+		"text": "Preperations are now complete.",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "Good.",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "We'll kill every last one of them fools.",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "Those who oppose lord Prime shall no longer live...",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "And the Holy Itucher shall finally become ours!",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "And one more thing...",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "*They* must partake in the battle.",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "left",
+		"text": "..!",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "No excuses. Either they partake or I'll destroy them myself.",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "Which would you rather want, Omega?",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Omega"
+	},
+	{
+		"text": "...",
+		"bgcolor": "green"
+	},
+	{
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "left",
+		"text": "The Holy Itucher, the ultimate weapon...",
+		"name_left": "Yranecrem"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "left",
+		"text": "How much destruction do you think it's caused?",
+		"name_left": "Yranecrem"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Why has no one destroyed it, is it indestructable?",
+		"name_left": "Yranecrem"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Proton, if you obtain the Holy Itucher...",
+		"name_left": "Yranecrem"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "left",
+		"text": "I can only hope that you destroy it.",
+		"name_left": "Yranecrem"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "left",
+		"text": "The wars and battles fought over the weapon must be stopped, and that reponsibility will soon fall upon you.",
+		"name_left": "Yranecrem"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Proton"
+	},
+	{
+		"text": "[Yranecrem and Proton leveled up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Yranecrem",
+				"amount": 3
+			},
+			{
+				"unit": "Proton",
+				"amount": 3
+			}
+		]
+	},
+	{},
+	{
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "dliug",
+		"right": "wodahs",
+		"speaker": "left",
+		"text": "Hey kid, what're we even fightin' for?",
+		"name_left": "Dliug"
+	},
+	{
+		"left": "dliug",
+		"right": "wodahs",
+		"speaker": "right",
+		"text": "What do you mean?",
+		"name_right": "Wodahs"
+	},
+	{
+		"left": "dliug",
+		"right": "wodahs",
+		"speaker": "left",
+		"text": "Therr army, what's our goal?",
+		"name_left": "Dliug"
+	},
+	{
+		"left": "dliug",
+		"right": "wodahs",
+		"speaker": "right",
+		"text": "I think we're trying to attack the Shadow Realm to retrieve the Holy Itucher.",
+		"name_right": "Wodahs"
+	},
+	{
+		"left": "dliug",
+		"right": "wodahs",
+		"speaker": "left",
+		"text": "Oooooooh noooooooooo...",
+		"name_left": "Dliug"
+	},
+	{
+		"left": "dliug",
+		"right": "wodahs",
+		"speaker": "left",
+		"text": "I might be regrettin' joinin'...",
+		"name_left": "Dliug"
+	},
+	{
+		"text": "[Dliug and Wodahs up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Dliug",
+				"amount": 3
+			},
+			{
+				"unit": "Wodahs",
+				"amount": 3
+			}
+		]
+	},
+	{},
+	{},
+	{
+		"startchapter": "Chapter21a"
+	}
+]

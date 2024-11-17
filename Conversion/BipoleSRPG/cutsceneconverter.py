@@ -10,7 +10,7 @@ import re
 cutscenes.Chapter = "Prologue1"
 
 # won't export these ones
-skip_chapters = "Chapter01"
+skip_chapters = ["Chapter01", "Chapter02", "Chapter04"]
 
 prev_index = -1
 
@@ -82,6 +82,7 @@ def export_chapter(cutscene_name: str):
 
         if len(screensetup.current_branches) > 0:
             print("branches found: ", screensetup.current_branches)
+            screensetup.current_branches[0]()
             screensetup.current_branches.clear()
 
         dialogue_lines.append(line)
@@ -95,7 +96,7 @@ def export_chapter(cutscene_name: str):
     json_data = json.dumps(dialogue_lines, indent="\t")
     
     if not ref_name in skip_chapters:
-        file_path = os.path.join("./Database/Cutscenes", f"{ref_name}-converted.json")
+        file_path = os.path.join("./Database/Cutscenes", f"{ref_name}.json")
         with open(file_path, "w") as file:
             file.write(json_data)
 

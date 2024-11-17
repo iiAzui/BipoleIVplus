@@ -37,13 +37,107 @@
 		"text": "???: Hello."
 	},
 	{
-		"left": "proton",
+		"left": "wodahs",
 		"right": "repins",
-		"text": "???: Sorry, but I must be on my way."
+		"speaker": "left",
+		"text": "Repins, is that you?",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Wodahs? What are you doing here?",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Hunting after the Itucher.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "I'm coming back from Altar, someone's already taken the Itucher.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "I've went to Altar as well, but we know where the Itucher's been moved to.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "You do!?",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "You could come with us if you'd like, since you've always been obsessed with finding the Itucher and all.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Also, the King of Static will pay all of us who help retrieve it.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Are you serious!?",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Repins"
 	},
 	{
 		"left": "proton",
-		"text": "(??? leaves the area)"
+		"right": "repins",
+		"speaker": "right",
+		"text": "PLEASE ALLOW ME TO HELP YOU RETRIEVE THE HOLY ITUCHER!!!",
+		"name_right": "Repins"
+	},
+	{
+		"text": "[Recruit Repins] (Q) Recruit (W) Do not recruit"
+	},
+	{
+		"left": "proton",
+		"right": "repins",
+		"speaker": "right",
+		"text": "I've... I've waited so long for this..",
+		"name_right": "Repins"
+	},
+	{
+		"left": "proton",
+		"right": "repins",
+		"speaker": "right",
+		"text": "THANK YOU! THANK YOU SO MUCH!!!",
+		"name_right": "Repins"
+	},
+	{
+		"text": "[Repins has joined your party]"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
@@ -53,6 +147,195 @@
 		"battle": "Chapter12a"
 	},
 	{
-		"startchapter": "Chapter13a"
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Hey Repins.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Hey.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "How long's it been since the academy?",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "About 2 years.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Dang, time really flies.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Anything happend back at Static?",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "I was actually able to become a member of the Elemental Offense Squad.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Suprisingly, they're pretty chill.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "I mostly do solo missions though, so I don't really get to hang out much.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Anything I should know about them?",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Hmm...",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Lacirtcele thinks he's cool, he's not.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Fael is boring, all he ever talks about is archery and work.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Erif is also boring, all she every talks about is the Quad Genocide and her dead family.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "And there's some generic-looking guy who I haven't even bothered talking to.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "There's probably a few more that I've forgotten but haven't actually met all of them yet.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "As for other people here, Proton is pretty chill.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Quest is boring and only ever talks about finding the Holy Itucher, kind of like you used to.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "I am genuienly terrified by Scien.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Romra exists.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Damagein is crazy, stay away from him.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Healia is Sine noble, or something. I'd like to see her say that to Erif.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Bladen is sus, I don't trust him.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "And of course, there's me.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "I'm epic.",
+		"name_left": "Wodahs"
+	},
+	{
+		"text": "[Wodahs and Repins leveled up!]",
+		"startchapter": "Chapter13a",
+		"instant_level_ups": [
+			{
+				"unit": "Wodahs",
+				"amount": 2
+			},
+			{
+				"unit": "Repins",
+				"amount": 2
+			}
+		]
 	}
 ]

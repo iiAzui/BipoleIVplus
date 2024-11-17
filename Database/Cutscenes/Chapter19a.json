@@ -91,65 +91,67 @@
 	{
 		"left": "proton",
 		"right": "dliug",
-		"text": "???: That's a shame, ain't it?"
+		"text": "???: Now we can loot all the gold 'em Xuirist got! Exa! Yranecrem! Get over 'ere!"
 	},
-	{},
+	{
+		"text": "[Dliug has joined your party] [Exa has joined your party] [Yranecrem has joined your party]"
+	},
 	{
 		"left": "proton",
 		"speaker": "left",
 		"text": "...",
 		"name_left": "Proton"
 	},
+	{},
 	{
-		"left": "proton",
-		"right": "geomer",
-		"text": "???: It seems you may be struggling..."
+		"text": "[Bonus Conversation Unlocked]"
 	},
 	{
-		"left": "proton",
-		"right": "geomer",
+		"left": "xuirventh",
+		"right": "xuirfth",
 		"speaker": "left",
-		"text": "Who are you?",
-		"name_left": "Proton"
+		"text": "Xuirfth, its good to see you alive.",
+		"name_left": "Xuirventh"
 	},
 	{
-		"left": "proton",
-		"right": "geomer",
-		"text": "???: I am Geomer, a disciple in Geom theory."
+		"left": "xuirventh",
+		"right": "xuirfth",
+		"text": "Xuifth: Same to you."
 	},
 	{
-		"left": "proton",
-		"right": "geomer",
+		"left": "xuirventh",
+		"right": "xuirfth",
 		"speaker": "right",
-		"text": "You see, those Xuirists that you were just fighting were using Geom Energy.",
-		"name_right": "Geomer"
+		"text": "But to think that we'd meet Xuirond, that's even bigger of a suprise...",
+		"name_right": "Xuirfth"
 	},
 	{
-		"left": "proton",
-		"right": "geomer",
+		"left": "xuirventh",
+		"right": "xuirfth",
 		"speaker": "right",
-		"text": "Geom Energy is a very powerful force, and it seems you are unfamiliar to it.",
-		"name_right": "Geomer"
+		"text": "This truly is a strange week.",
+		"name_right": "Xuirfth"
 	},
 	{
-		"left": "proton",
-		"right": "geomer",
+		"left": "xuirventh",
+		"right": "xuirfth",
 		"speaker": "right",
-		"text": "As one wishing to spread the knowledge of Geom, I offer to aid you in combat using my Geom powers.",
-		"name_right": "Geomer"
+		"text": "I wonder what other suprises are to come...",
+		"name_right": "Xuirfth"
 	},
 	{
-		"text": "[Recruit Geomer?] (Q) Recruit (W) Do not recruit"
+		"text": "[Xuirventh and Xuirfth leveled up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Xuirventh",
+				"amount": 3
+			},
+			{
+				"unit": "Xuirfth",
+				"amount": 3
+			}
+		]
 	},
-	{
-		"left": "proton",
-		"right": "geomer",
-		"speaker": "right",
-		"text": "You fear knowledge, for you cannot comprehend it.",
-		"name_right": "Geomer"
-	},
-	{},
-	{},
 	{},
 	{
 		"text": "[Xuirist Cavern]"
@@ -208,6 +210,6 @@
 		"speaker": "right",
 		"text": "You better keep your word.",
 		"name_right": "Break",
-		"startchapter": "Chapter20b"
+		"startchapter": "Chapter20a"
 	}
 ]

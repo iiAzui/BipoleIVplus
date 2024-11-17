@@ -25,107 +25,480 @@
 		"text": "???: Everyone, CHARGE!!!",
 		"battle": "Chapter14a"
 	},
-	{},
-	{},
 	{
-		"left": "proton",
-		"speaker": "left",
-		"text": "I think I see a boat coming towards us...",
-		"name_left": "Proton"
+		"text": "[Bonus Conversation Unlocked]"
 	},
 	{
-		"left": "proton",
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Hey.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Hey.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Remember that time I shot my eye?",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Yes, very clearly.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "It was the first day of combat academy when we were being tested on how well we could use the weapons.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "And you somehow shot your own eye when trying to use the bow.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Afterwards, you drew that hitmarker on on your eyepatch.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Correct corrrect correct!",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "And I was just thinking, what would my life have been like if I was able to use the bow but was unable to use my fists?",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Would I have punched my own eye out?",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Don't ask me, I still have no idea how you would even shoot your own eye.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Well, it's one of the only things I've ever succesfully hit in the center.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Anyways, I'm glad I was sent to the hospital before I had to do the dagger testing.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "That could have gone very bad.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Honestly, I have no idea how you've made it into the Elemental Offense Squad not knowing how to use any weapons.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Some may call it luck, I call it fate.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "It was fate that you have no combat ability outside of punching?",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "It's fate that I'm this gamer (insert explosion) transition).",
+		"name_left": "Wodahs"
+	},
+	{
+		"text": "[Wodahs and Repins leveled up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Wodahs",
+				"amount": 2
+			},
+			{
+				"unit": "Repins",
+				"amount": 2
+			}
+		]
+	},
+	{
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "left",
+		"text": "FAEL!",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "right",
+		"text": "Huh?",
+		"name_right": "Fael"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "left",
+		"text": "How does one use a bow?",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "right",
+		"text": "You don't know how to use a bow?",
+		"name_right": "Fael"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "left",
+		"text": "Let me be more precise...",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "left",
+		"text": "How does one not shoot themself when firing a bow?",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "right",
+		"text": "How DOES one shoot themself when firing a bow?",
+		"name_right": "Fael"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
 		"speaker": "left",
 		"text": "...",
-		"name_left": "Proton"
+		"name_left": "Wodahs"
 	},
 	{
-		"left": "proton",
-		"right": "eulb",
-		"text": "???: Hey, you know where this is?"
-	},
-	{
-		"left": "proton",
-		"right": "eulb",
+		"left": "wodahs",
+		"right": "fael",
 		"speaker": "left",
-		"text": "The Bipole Sea, nearing Nolavillia.",
-		"name_left": "Proton"
+		"text": "...very epically.",
+		"name_left": "Wodahs"
 	},
 	{
-		"left": "proton",
-		"right": "eulb",
-		"text": "???: Oh god, what do I do now..."
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "right",
+		"text": "Wait, don't tell me you've...",
+		"name_right": "Fael"
 	},
 	{
-		"left": "proton",
-		"right": "eulb",
+		"left": "wodahs",
+		"right": "fael",
 		"speaker": "left",
-		"text": "?",
-		"name_left": "Proton"
+		"text": "FAKE NEWS!!!",
+		"name_left": "Wodahs"
 	},
 	{
-		"left": "proton",
-		"right": "eulb",
-		"text": "???: This is pretty far away from Altar, right?"
-	},
-	{
-		"left": "proton",
-		"right": "eulb",
-		"text": "???: I was escaping from there but then a storm hit me and I ended up here."
-	},
-	{
-		"left": "proton",
-		"right": "eulb",
-		"text": "???: Is is okay if you could take me to whereever you're going?"
-	},
-	{
-		"left": "proton",
-		"right": "eulb",
+		"left": "wodahs",
+		"right": "fael",
 		"speaker": "left",
-		"text": "We're going to Nolavillia to retrieve the Holy Itucher.",
-		"name_left": "Proton"
+		"text": "I would NEVER shoot myself with a bow!",
+		"name_left": "Wodahs"
 	},
 	{
-		"left": "proton",
-		"right": "eulb",
+		"left": "wodahs",
+		"right": "fael",
 		"speaker": "left",
-		"text": "I'm warning you, it could get dangerous.",
-		"name_left": "Proton"
+		"text": "...or atleast un-epically.",
+		"name_left": "Wodahs"
 	},
 	{
-		"left": "proton",
-		"right": "eulb",
-		"text": "???: Wait, why would you want the Itucher?"
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Wodahs, it was not very \"epic\".",
+		"name_right": "Repins"
 	},
 	{
-		"left": "proton",
-		"right": "eulb",
-		"text": "???: It like destroyed Altar Town and stuff."
-	},
-	{
-		"left": "proton",
-		"right": "eulb",
+		"left": "wodahs",
+		"right": "repins",
 		"speaker": "left",
-		"text": "Well, some evil scientists have gotten it and the world is in danger.",
-		"name_left": "Proton"
+		"text": "!?",
+		"name_left": "Wodahs"
 	},
 	{
-		"left": "proton",
-		"right": "eulb",
-		"text": "???: The world is in danger?"
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Na... nani!?",
+		"name_left": "Wodahs"
 	},
 	{
-		"left": "proton",
-		"right": "eulb",
-		"text": "???: I guess I should probably help you stop that."
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "How could that not be epic??????",
+		"name_left": "Wodahs"
 	},
 	{
-		"text": "[Recruit ???] (Q) Recruit (W) Do not recruit"
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "You shot yourself with your own bow, how is that even remotely \"epic\"?",
+		"name_right": "Repins"
 	},
 	{
-		"left": "proton",
-		"right": "eulb",
-		"text": "???: Okay..."
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "!?",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "M... my... social status.....",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "It just dropped... by 10%...",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Atleast it wasn't a failure.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "right",
+		"text": "That's the definition of a fail.",
+		"name_right": "Fael"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "left",
+		"text": "Not as much as your name.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "right",
+		"text": "!?",
+		"name_right": "Fael"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "left",
+		"text": "Critical hit, get destroyed.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "What was this conversation even originally about?",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "left",
+		"text": "Me, epically, asking how to use a bow without without epically shooting myself.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "right",
+		"text": "Well, I'm not actually sure what advice to give, you for that.",
+		"name_right": "Fael"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "right",
+		"text": "Don't aim the bow at yourself?",
+		"name_right": "Fael"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "right",
+		"text": "Not sure why you'd do that but...",
+		"name_right": "Fael"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "left",
+		"text": "No no no no no...",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "left",
+		"text": "I wouldn't do something so simple like that.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "left",
+		"text": "I use the bow normally, but then have the arrows somehow end up hitting me.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Fael"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "right",
+		"text": "...how?",
+		"name_right": "Fael"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "left",
+		"text": "Here, let me show y...",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "N O .",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Do not ever let him even near a bow.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "right",
+		"text": "Okay?",
+		"name_right": "Fael"
+	},
+	{
+		"left": "wodahs",
+		"right": "fael",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Fael"
+	},
+	{
+		"left": "fael",
+		"speaker": "left",
+		"text": "(This is why I don't talk to Wodahs...)",
+		"name_left": "Fael"
+	},
+	{
+		"left": "wodahs",
+		"speaker": "left",
+		"text": "(Fael is such a bad archer, he doesn't even know how to shoot himself smh...)",
+		"name_left": "Wodahs"
+	},
+	{
+		"text": "[Wodahs, Fael, and Repins leveled up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Wodahs",
+				"amount": 2
+			},
+			{
+				"unit": "Fael",
+				"amount": 2
+			},
+			{
+				"unit": "Repins",
+				"amount": 2
+			}
+		]
 	},
 	{
 		"startchapter": "Chapter15a"

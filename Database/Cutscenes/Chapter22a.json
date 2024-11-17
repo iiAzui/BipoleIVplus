@@ -21,7 +21,7 @@
 		"left": "tnemecalperiii",
 		"right": "lacirtcele",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Tnemecalper III"
 	},
 	{
@@ -49,14 +49,14 @@
 		"left": "vruh",
 		"right": "repins",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Vruh"
 	},
 	{
 		"left": "relaeh",
 		"right": "lias",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Relaeh"
 	},
 	{
@@ -70,14 +70,14 @@
 		"left": "b",
 		"right": "elbon",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "B"
 	},
 	{
 		"left": "xuirfth",
 		"right": "dliug",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Xuirfth"
 	},
 	{
@@ -105,14 +105,14 @@
 		"left": "cigam",
 		"right": "fiyghtrr",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Cigam"
 	},
 	{
 		"left": "recalper",
 		"right": "xuirurth",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Recalper"
 	},
 	{
@@ -156,7 +156,85 @@
 	{},
 	{},
 	{},
-	{},
+	{
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "left",
+		"text": "You've come from the Continent of Bipole, correct?",
+		"name_left": "Yranecrem"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "right",
+		"text": "Yes.",
+		"name_right": "Proton"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "left",
+		"text": "How have things been back there?",
+		"name_left": "Yranecrem"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "left",
+		"text": "I haven't been to the continent in 10 years.",
+		"name_left": "Yranecrem"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "right",
+		"text": "You've been to the Bipole Continent?",
+		"name_right": "Proton"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Yes, I was actually from the Bipole continent.",
+		"name_left": "Yranecrem"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "left",
+		"text": "After the Quad Genocide though, I fled from Quad and joined a mercenary group to survive.",
+		"name_left": "Yranecrem"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "left",
+		"text": "And after the mercenaries did an voyage to Nolavillia, I've been here ever since.",
+		"name_left": "Yranecrem"
+	},
+	{
+		"left": "yranecrem",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Dliug and Exa are also from Nolavillia, though I don't know why they've joined the mercenaries.",
+		"name_left": "Yranecrem"
+	},
+	{
+		"text": "[Yranecrem and Proton leveled up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Yranecrem",
+				"amount": 4
+			},
+			{
+				"unit": "Proton",
+				"amount": 4
+			}
+		]
+	},
 	{
 		"left": "proton",
 		"speaker": "left",
@@ -171,9 +249,62 @@
 	},
 	{
 		"left": "proton",
-		"speaker": "left",
-		"text": "(I don't think I'm able to open this box)",
-		"name_left": "Proton"
+		"right": "fael",
+		"speaker": "right",
+		"text": "Wait, I think I can open the box.",
+		"name_right": "Fael"
+	},
+	{
+		"left": "proton",
+		"right": "fael",
+		"speaker": "right",
+		"text": "Look at the hole in the wall next to where the box is.",
+		"name_right": "Fael"
+	},
+	{
+		"left": "proton",
+		"right": "fael",
+		"speaker": "right",
+		"text": "There's something that looks like a button at the other end.",
+		"name_right": "Fael"
+	},
+	{
+		"left": "proton",
+		"right": "fael",
+		"speaker": "right",
+		"text": "Now if I use my bow...",
+		"name_right": "Fael"
+	},
+	{
+		"text": "(Fael shoots the button and the box glows red)"
+	},
+	{
+		"left": "proton",
+		"right": "fael",
+		"speaker": "right",
+		"text": "Ummm... is that supposed to happen?",
+		"name_right": "Fael"
+	},
+	{
+		"text": "(The box unfolds and reveals that it is a mechanical entity)"
+	},
+	{
+		"left": "fael",
+		"right": "ahcem",
+		"text": "???: Freedom, finally..."
+	},
+	{
+		"left": "fael",
+		"right": "ahcem",
+		"text": "???: Now, it is time to get revenge on that Death Pepper... but it seems like you're also on you're way to do that..."
+	},
+	{
+		"left": "fael",
+		"right": "ahcem",
+		"text": "???: In that case, I suppose I'll have to take my revenge along side you... this won't be a problem, will it?"
+	},
+	{
+		"text": "[Ahcem joins your party!]"
 	},
 	{
 		"text": "(...)",

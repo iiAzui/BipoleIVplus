@@ -140,9 +140,11 @@
 	{
 		"left": "proton",
 		"right": "bladen",
-		"text": "???: Alright then, good luck getting to Altar."
+		"text": "???: You've made the right choice. My name's Bladen, by the way."
 	},
-	{},
+	{
+		"text": "[Bladen has joined your party]"
+	},
 	{
 		"left": "proton",
 		"speaker": "left",

@@ -151,10 +151,12 @@
 		"left": "romra",
 		"right": "proton",
 		"speaker": "left",
-		"text": "Oh, sorry for bothering you.",
+		"text": "Yes! Thank you!",
 		"name_left": "Romra"
 	},
-	{},
+	{
+		"text": "[Romra has joined your party]"
+	},
 	{
 		"left": "scien",
 		"right": "proton",

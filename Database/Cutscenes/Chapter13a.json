@@ -67,11 +67,25 @@
 	{
 		"left": "proton",
 		"right": "relaeh",
-		"text": "???: Oh."
+		"speaker": "left",
+		"text": "You can come along if you'd like.",
+		"name_left": "Proton"
 	},
-	{},
-	{},
-	{},
+	{
+		"left": "proton",
+		"right": "relaeh",
+		"speaker": "left",
+		"text": "We're also on our way to stop the Holy Itucher from evil.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "relaeh",
+		"text": "???: You're going to stop the Holy Itucher? It must be stopped, allow me to help you stop it."
+	},
+	{
+		"text": "[Relaeh has joined your party]"
+	},
 	{
 		"left": "proton",
 		"right": "relaeh",

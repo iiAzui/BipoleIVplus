@@ -74,98 +74,11 @@
 		"left": "proton",
 		"right": "fael",
 		"speaker": "right",
-		"text": "Bruh.",
+		"text": "I will not fail.",
 		"name_right": "Fael"
 	},
 	{
-		"left": "proton",
-		"right": "fael",
-		"text": "(...)"
-	},
-	{
-		"text": "???: DID SOMEBODY SAY \"BRUH\"!?"
-	},
-	{
-		"left": "proton",
-		"right": "vruh",
-		"text": "???: Bruh-huh!"
-	},
-	{
-		"left": "proton",
-		"right": "vruh",
-		"text": "???: I am the great Vruh E. Momen LXIX!"
-	},
-	{
-		"left": "proton",
-		"right": "vruh",
-		"speaker": "right",
-		"text": "I search the world for epic \"Bruh Moments\", and your sir... have just said \"Bruh\"!",
-		"name_right": "Vruh"
-	},
-	{
-		"left": "proton",
-		"right": "vruh",
-		"speaker": "right",
-		"text": "Such wholesomeness! Such gaming!",
-		"name_right": "Vruh"
-	},
-	{
-		"left": "proton",
-		"right": "vruh",
-		"speaker": "right",
-		"text": "Such... D R I P",
-		"name_right": "Vruh"
-	},
-	{
-		"left": "proton",
-		"right": "vruh",
-		"speaker": "right",
-		"text": "This is truly poggers!",
-		"name_right": "Vruh"
-	},
-	{
-		"left": "proton",
-		"right": "vruh",
-		"speaker": "right",
-		"text": "Oh what an adventure this will be!",
-		"name_right": "Vruh"
-	},
-	{
-		"text": "[Q] You're hired [W] We never recruited you"
-	},
-	{
-		"left": "proton",
-		"right": "vruh",
-		"speaker": "right",
-		"text": "Oh, so that's how it is...",
-		"name_right": "Vruh"
-	},
-	{
-		"left": "proton",
-		"right": "vruh",
-		"speaker": "right",
-		"text": "You shall repent in the fires of the Xuir Wrath for all of eternity, with no hope of ever escaping to freedom, for you have disturbed the way of the Bruh.",
-		"name_right": "Vruh"
-	},
-	{
-		"left": "proton",
-		"right": "vruh",
-		"speaker": "right",
-		"text": "I wait for the day in which I may witness your untimely gameend so in which I could perform the dance of the defaults upon your soulless husk of a body.",
-		"name_right": "Vruh"
-	},
-	{
-		"left": "proton",
-		"right": "vruh",
-		"speaker": "right",
-		"text": "/s",
-		"name_right": "Vruh"
-	},
-	{
-		"left": "proton",
-		"speaker": "left",
-		"text": "...",
-		"name_left": "Proton",
+		"text": "[Fael joined your party]",
 		"startchapter": "Chapter11a"
 	}
 ]

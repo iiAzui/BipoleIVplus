@@ -4917,15 +4917,15 @@ def Cutscene():
         elif CutsceneIndex == 57:
             if Qinput == True:
                 Text3("[Rethgif and Eg have joined your party]")
-                units.UnitsAlive.append(units.Rethgif)
-                units.UnitsRecruited.append(units.Rethgif)
-                units.UnitsAlive.append(units.Eg)
-                units.UnitsRecruited.append(units.Eg)
-                units.RethgifEnemy.TurtleName.hideturtle()
-                units.EgEnemy.TurtleName.hideturtle()
-                UnitsToPlace = placeunits.RethgifandEgAllies
-                UnitFormation = placeunits.RethgifandEgAlliesPlacement
-                placeunits.PlaceEnemies(UnitFormation)
+                # units.UnitsAlive.append(units.Rethgif)
+                # units.UnitsRecruited.append(units.Rethgif)
+                # units.UnitsAlive.append(units.Eg)
+                # units.UnitsRecruited.append(units.Eg)
+                # units.RethgifEnemy.TurtleName.hideturtle()
+                # units.EgEnemy.TurtleName.hideturtle()
+                # UnitsToPlace = placeunits.RethgifandEgAllies
+                # UnitFormation = placeunits.RethgifandEgAlliesPlacement
+                # placeunits.PlaceEnemies(UnitFormation)
                 CutsceneIndex += 1
                 ClearInputs()
                 

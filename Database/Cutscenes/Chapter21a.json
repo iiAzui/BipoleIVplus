@@ -156,96 +156,231 @@
 		"left": "proton",
 		"right": "fiyghtrr",
 		"speaker": "right",
-		"text": "...what?",
+		"text": "It's time!",
 		"name_right": "Fiyghtrr"
 	},
+	{
+		"text": "[Fiyghtrr has joined your party]"
+	},
+	{},
 	{},
 	{
 		"left": "proton",
-		"right": "recalper",
-		"text": "???: YOU THERE!!!"
-	},
-	{
-		"left": "proton",
-		"right": "recalper",
+		"right": "xuirurth",
 		"speaker": "left",
-		"text": "(Why does this keep happening to me...)",
+		"text": "You must be Xuirurth.",
 		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"right": "recalper",
-		"text": "???: Your army looks like it's lacking members."
-	},
-	{
-		"left": "proton",
-		"right": "recalper",
-		"text": "???: Might you need a..."
-	},
-	{
-		"left": "proton",
-		"right": "recalper",
-		"text": "???: Might you need a... REPLACEMENT UNIT?"
-	},
-	{
-		"left": "proton",
-		"right": "recalper",
-		"text": "???: Of course you do! Everyone needs a replacement unit!"
-	},
-	{
-		"left": "proton",
-		"right": "recalper",
-		"text": "???: And you are in luck!"
-	},
-	{
-		"left": "proton",
-		"right": "recalper",
-		"text": "???: You see, I am Recalper: THE ULTIMATE REPLACEMENT UNIT!!!"
-	},
-	{
-		"left": "proton",
-		"right": "recalper",
+		"right": "xuirurth",
 		"speaker": "right",
-		"text": "That's right! Got a void in your army after one of your comrades died in the field?",
-		"name_right": "Recalper"
+		"text": "Yes.",
+		"name_right": "Xuirurth"
 	},
 	{
 		"left": "proton",
-		"right": "recalper",
-		"speaker": "right",
-		"text": "That void will instantly be sealed up by my greatness!",
-		"name_right": "Recalper"
+		"right": "xuirurth",
+		"speaker": "left",
+		"text": "I am Proton Xurr, you might know me as Xuirond.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"right": "recalper",
+		"right": "xuirurth",
 		"speaker": "right",
-		"text": "No one replaces the deceased like I do!",
-		"name_right": "Recalper"
+		"text": "Xuirond?",
+		"name_right": "Xuirurth"
 	},
 	{
 		"left": "proton",
-		"right": "recalper",
-		"speaker": "right",
-		"text": "So, what do you think? Want to recruit me into your painfully empty army?",
-		"name_right": "Recalper"
-	},
-	{
-		"text": "[Recruit Recalper?] (Q) Recruit (W) Do not recruit"
+		"right": "xuirurth",
+		"speaker": "left",
+		"text": "Yes.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"right": "recalper",
+		"right": "xuirurth",
+		"speaker": "left",
+		"text": "Xuirventh and Xuirfth told me about it.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirurth",
 		"speaker": "right",
-		"text": "What!? Don't you know that you can't replace the replacement!?",
-		"name_right": "Recalper"
+		"text": "Why are you here?",
+		"name_right": "Xuirurth"
+	},
+	{
+		"left": "proton",
+		"right": "xuirurth",
+		"speaker": "left",
+		"text": "I've come to take back the Holy Itucher from the Shadow. Realm.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirurth",
+		"speaker": "right",
+		"text": "So the Shadow Realm has obtained the holy weapon...",
+		"name_right": "Xuirurth"
+	},
+	{
+		"left": "proton",
+		"right": "xuirurth",
+		"speaker": "right",
+		"text": "Though I just escaped, it would pain me not to help you stop them.",
+		"name_right": "Xuirurth"
+	},
+	{
+		"left": "proton",
+		"right": "xuirurth",
+		"speaker": "left",
+		"text": "We'll be leaving soon, but you're free to join us.",
+		"name_left": "Proton"
+	},
+	{
+		"text": "[Xuirurth joined your party!]"
 	},
 	{},
 	{},
-	{},
-	{},
-	{},
-	{},
+	{
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "So, we're finally going to get the Itucher...",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "I thought you would've been more excited.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "I'm still processing the fact it's actually happening...",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "And what I'll do once I return home...",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Where is your home anyways? You've never told me where you're from.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "I'm from Quad, but I moved to Static after the genocide.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "I haven't been to either in years, though.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "You should come back to Static every once in a while. If you want, you could probably join with a good rank the army since you've helped us get the Itucher.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Probably won't be able to join the EOS though, Erif's already got the fire element covered and probably won't retire anytime soon.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Erif?",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Huh, you know her?",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Red hair, sword user, literally hot, won't stop talking about the Quad Genocide, has two brothers...",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "Yeah, I've met her before.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "Hmm... that means you've got ties to multiple EOS members.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "left",
+		"text": "You could definitely get some promotions in the army with that.",
+		"name_left": "Wodahs"
+	},
+	{
+		"left": "wodahs",
+		"right": "repins",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Repins"
+	},
+	{
+		"text": "[Wodahs and Repins leveled up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Wodahs",
+				"amount": 3
+			},
+			{
+				"unit": "Repins",
+				"amount": 3
+			}
+		]
+	},
 	{},
 	{
 		"left": "proton",

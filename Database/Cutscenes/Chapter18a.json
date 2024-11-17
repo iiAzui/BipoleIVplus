@@ -24,89 +24,89 @@
 		"battle": "Chapter18a"
 	},
 	{
-		"left": "proton",
+		"left": "xuirventh",
 		"speaker": "left",
 		"text": "...",
-		"name_left": "Proton"
+		"name_left": "Xuirventh"
 	},
 	{
-		"left": "proton",
-		"text": "???: You there!"
+		"left": "xuirventh",
+		"right": "xuirfth",
+		"text": "???: ..."
 	},
 	{
-		"left": "proton",
+		"left": "xuirventh",
+		"right": "xuirfth",
 		"speaker": "left",
-		"text": "???",
-		"name_left": "Proton"
+		"text": "Xuirfth, is that you?",
+		"name_left": "Xuirventh"
 	},
 	{
-		"left": "proton",
-		"right": "xuirer",
-		"text": "???: I can sense that you are a Proto-Xuir."
+		"left": "xuirventh",
+		"right": "xuirfth",
+		"speaker": "right",
+		"text": "Xuirventh?",
+		"name_right": "Xuirfth"
 	},
 	{
-		"left": "proton",
-		"right": "xuirer",
+		"left": "xuirventh",
+		"right": "xuirfth",
 		"speaker": "left",
-		"text": "...",
-		"name_left": "Proton"
+		"text": "These Bipolains helped me take down the camp.",
+		"name_left": "Xuirventh"
 	},
 	{
-		"left": "proton",
-		"right": "xuirer",
-		"text": "???: Do not be afraid, I am not here to harm you."
-	},
-	{
-		"left": "proton",
-		"right": "xuirer",
-		"text": "???: I am Xuirer, a traveling Xuirist."
-	},
-	{
-		"left": "proton",
-		"right": "xuirer",
-		"speaker": "right",
-		"text": "However, the huntings of the Proto-Xuirs... I can't support it.",
-		"name_right": "Xuirer"
-	},
-	{
-		"left": "proton",
-		"right": "xuirer",
-		"speaker": "right",
-		"text": "Why do we wish to wish to destroy what we worship?",
-		"name_right": "Xuirer"
-	},
-	{
-		"left": "proton",
-		"right": "xuirer",
-		"speaker": "right",
-		"text": "The Proto-Xuirs should be worshipped, for the Xuirs are an extension of the True Xuir's power.",
-		"name_right": "Xuirer"
-	},
-	{
-		"left": "proton",
-		"right": "xuirer",
+		"left": "xuirventh",
+		"right": "xuirfth",
 		"speaker": "left",
-		"text": "...",
+		"text": "And they're being lead by Xuirond.",
+		"name_left": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirfth",
+		"speaker": "left",
+		"text": "Hello, you must be the other Proto-Xuir.",
 		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"right": "xuirer",
-		"speaker": "right",
-		"text": "Holy Proto-Xuir, I wish to join you on your quest around the world.",
-		"name_right": "Xuirer"
-	},
-	{
-		"text": "[Recruit Xuirer?] (Q) Recruit (W) Do not recruit"
+		"right": "xuirfth",
+		"speaker": "left",
+		"text": "I am Proto-Xuir G3 N2 and my name is Proton Xurr, though it seems like you two call me \"Xuirond\".",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"right": "xuirer",
+		"right": "xuirfth",
 		"speaker": "right",
-		"text": "I pray for your victory, Proto-Xuir.",
-		"name_right": "Xuirer"
+		"text": "How are you alive? Everyone at the Shadow Realm said that you were killed by a teleporter.",
+		"name_right": "Xuirfth"
 	},
-	{},
+	{
+		"left": "proton",
+		"right": "xuirfth",
+		"speaker": "left",
+		"text": "The teleporter that Scien and I used was broken, but we were lucky enough to be teleported onto the Bipole Continent.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "We should get going. If Xuirurth has avoided being captured, he should be at the Shadow Alter in the Nation of Nation.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "Yes, let's get going.",
+		"name_left": "Proton"
+	},
+	{
+		"text": "[Xuirfth joins your party]"
+	},
 	{
 		"text": "[Xuirist Cavern]"
 	},
@@ -179,7 +179,127 @@
 		"text": "...",
 		"name_left": "Omega"
 	},
-	{},
+	{
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "left",
+		"text": "Lias, I've been thinking about what you've said earlier in the Bipole Sea...",
+		"name_left": "Quest"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "right",
+		"text": "Ummm... what did I say?",
+		"name_right": "Lias"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "left",
+		"text": "You said that you were surviving in the sea by drinking the sea water.",
+		"name_left": "Quest"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "left",
+		"text": "That is true, yes?",
+		"name_left": "Quest"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "right",
+		"text": "Yeah.",
+		"name_right": "Lias"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "left",
+		"text": "Drinking sea water is extremely dangerous, and I thought you were lying at first.",
+		"name_left": "Quest"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "left",
+		"text": "But then I realized you might have some sort of immunity to the pollution inside of the water.",
+		"name_left": "Quest"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "right",
+		"text": "Immunity?",
+		"name_right": "Lias"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "left",
+		"text": "Yes.",
+		"name_left": "Quest"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "left",
+		"text": "When was the last time you've gotten sick?",
+		"name_left": "Quest"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "right",
+		"text": "Hmmmm...",
+		"name_right": "Lias"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "right",
+		"text": "Now that I think of it, I don't think I've ever gotten sick.",
+		"name_right": "Lias"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "left",
+		"text": "you have an absurdly powerful immune system.",
+		"name_left": "Quest"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "left",
+		"text": "If we ever encounter an enemy that battles with infections, you might more resistant against them.",
+		"name_left": "Quest"
+	},
+	{
+		"left": "quest",
+		"right": "lias",
+		"speaker": "right",
+		"text": "That's good to know.",
+		"name_right": "Lias"
+	},
+	{
+		"text": "[Quest and Lias leveled up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Quest",
+				"amount": 3
+			},
+			{
+				"unit": "Lias",
+				"amount": 3
+			}
+		]
+	},
 	{},
 	{
 		"startchapter": "Chapter19a"

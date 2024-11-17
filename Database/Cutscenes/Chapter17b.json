@@ -1,0 +1,784 @@
+[
+	{
+		"text": "[Chapter 17b] [Sazuki Field, Western Nolavillia]",
+		"bgcolor": "black"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "It's getting dark, we'll have to camp out here for the night.",
+		"name_left": "Proton",
+		"bgcolor": "dark green"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "!?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "I see someone coming towards us, prepare for potential combat.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "You! Identify youself!",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"text": "???: Well this place is quite putrid, isn't it?"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"text": "???: I am the great Elbon Rich of the Nation of Shade."
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "Nation of Shade? How did you get here?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "I've followed your boat since it left Bipole.",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "You see, I'm here on a mission as well, a mission that I would argue is more important than yours.",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "I am here to retrive Healia Aid of the Territory of Sine and to bring her back to the Bipole continent.",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "Uhhh.... something about an arranged marriage?",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "healia",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "What!?",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "Look, I couldn't care less of what it is but I'm getting paid to do this.",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "healia",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "What are my parents trying to do this time?",
+		"name_left": "Healia"
+	},
+	{
+		"text": "(Elbon hands Healia a letter)"
+	},
+	{
+		"left": "healia",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "Wait what is this?",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "\"As you know, our house is declining in power and we must restore it or we will lose our status. Luckly for us, we have found a Shadeian noble who is willing to help us...\"",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "\"Through this arranged marriage, we will hopefully return to our family's former glory\".",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "You must return immediately so I can get paid.",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "healia",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "What am I even supposed to do?",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "Mabye you should return so I can get paid.",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "healia",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "I do not want to spend a second more on this horrid continent.",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "healia",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Healia"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "She's busy helping us save to world, could we deal with this later?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "Will I get paid to wait?",
+		"name_right": "Elbon"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "left",
+		"text": "You won't get paid if the world ends.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "elbon",
+		"speaker": "right",
+		"text": "Well then, I suppose I must \"save the world\" for whatever so I can get paid the money that I deserve.",
+		"name_right": "Elbon"
+	},
+	{
+		"text": "[Elbon joins your party]"
+	},
+	{
+		"text": "[The next day...]",
+		"bgcolor": "black"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "Hmmm? What's that noise?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton",
+		"bgcolor": "dark green"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "!?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "Everyone! We're surrounded by Xuirists!",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "Prepare for battle!",
+		"name_left": "Proton",
+		"battle": "Chapter17b"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "We've managed to survive the attack, but it seems like the Xuirists will keep hunting us while we're in Nolavillia.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "We should head to Nation as quickly as possible.",
+		"name_left": "Proton"
+	},
+	{
+		"text": "???: Hey, you there!"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: Could you open the cage I'm stuck in?"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "Why are you in that cage?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: The Xuirists captured me after I escaped from the Shadow Realm."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: I think they were going to sacrifice me."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "The Shadow Realm?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: Yeah, I'm something called a \"Proto-Xuir\", a failed clone of some dimensional called the \"True Xuir\"."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "You're a Xuir?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: Yeah I just said that."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"text": "[Proton opens the cage]"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: Thanks."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: I'd stick around, but there's something I have to do."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: There are some other Proto-Xuirs that escaped with me, and one of them was captured by the Xuirists."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "There's other Proto-Xuirs?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: Yeah, it's not like I'm the only one."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "Nolavillia is truly a strange place, to think that there would be so many other Xuirs...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: Huh?"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "Sorry, this is my first time in Nolavillia since I escaped from the Shadow Realm 20 years ago.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: Are you also a Proto-Xuir?"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "Yes.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: 20 years ago... are you Xuirond?"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "I don't this so.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "My engraving says G3 N2.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: Ah, so you are Xuirond."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: We thought you died years ago."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: Of course, we don't really remember you since we were still young."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"text": "???: I'm Xuirventh: Generation 3 Number 7."
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "We weren't given names so, Xuirventh is just a name I made up a few years ago.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "So, what do you go by these days, Xuirond?",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "Proton.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "Fancy name, doesn't have to do with numbers either.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "You said you left, Nolavillia, but why did you come back.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "Two decades later seems like a pretty strange time to return.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "I'm here to stop the Shadow Realm Research Center.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "Huh?",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "The Research Center has recently obtained a powerful item called the Holy Itucher.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "With such power, they could easily end the world.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "If you're heading to the Shadow Realm, you'll need to go to the Nation of Nation.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "But on you're way, you'll likely pass by the Xuirist Cavern.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "If you want to team up and help me free Xuirfth, I'll probably be able to convince them to help you stop the Shadow Realm.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "You'll probably have to fight those Xuirists anyways.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"text": "[Recruit Xuirventh] (Q) Recruit (W) Do not recruit"
+	},
+	{
+		"left": "proton",
+		"right": "xuirventh",
+		"speaker": "right",
+		"text": "Time to stop some Xuirists.",
+		"name_right": "Xuirventh"
+	},
+	{
+		"text": "[Xuirventh has joined your party]"
+	},
+	{},
+	{
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "lacirtcele",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "Yo... this place is like... weird... after us.",
+		"name_left": "Lacirtcele"
+	},
+	{
+		"left": "lacirtcele",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "These vibes ain't good... we shoud probably get off of this continent...",
+		"name_left": "Lacirtcele"
+	},
+	{
+		"left": "lacirtcele",
+		"right": "bladen",
+		"speaker": "right",
+		"text": "If we leave, the world will probably end.",
+		"name_right": "Bladen"
+	},
+	{
+		"left": "lacirtcele",
+		"right": "bladen",
+		"speaker": "right",
+		"text": "I don't want to be here any more than you do, but if we're the only ones who can save the world, we kind of need to be here.",
+		"name_right": "Bladen"
+	},
+	{
+		"left": "lacirtcele",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Lacirtcele"
+	},
+	{
+		"left": "lacirtcele",
+		"right": "bladen",
+		"speaker": "right",
+		"text": "You're an elite warrior, aren't you? Shouldn't you be used to this?",
+		"name_right": "Bladen"
+	},
+	{
+		"left": "lacirtcele",
+		"right": "bladen",
+		"speaker": "right",
+		"text": "I've run away from protecting this world for most of my life but now that EOS member is telling me he's scared?",
+		"name_right": "Bladen"
+	},
+	{
+		"left": "lacirtcele",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Lacirtcele"
+	},
+	{
+		"left": "lacirtcele",
+		"right": "bladen",
+		"speaker": "right",
+		"text": "You're pathetic.",
+		"name_right": "Bladen"
+	},
+	{
+		"text": "[Lacirtcele and Bladen leveled up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Lacirtcele",
+				"amount": 3
+			},
+			{
+				"unit": "Bladen",
+				"amount": 3
+			}
+		]
+	},
+	{
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "scien",
+		"right": "proton",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Scien"
+	},
+	{
+		"left": "scien",
+		"right": "proton",
+		"speaker": "right",
+		"text": "Scien, are you alright?",
+		"name_right": "Proton"
+	},
+	{
+		"left": "scien",
+		"right": "proton",
+		"speaker": "left",
+		"text": "The Nation of Nation, the Altar must still stand...",
+		"name_left": "Scien"
+	},
+	{
+		"left": "scien",
+		"right": "proton",
+		"speaker": "right",
+		"text": "?",
+		"name_right": "Proton"
+	},
+	{
+		"left": "scien",
+		"right": "proton",
+		"speaker": "left",
+		"text": "That person, Xuirventh, they said they escaped from the Shadow Realm.",
+		"name_left": "Scien"
+	},
+	{
+		"left": "scien",
+		"right": "proton",
+		"speaker": "left",
+		"text": "The only safe place in Nolavillia to hide from the Shadow Realm is in Nation.",
+		"name_left": "Scien"
+	},
+	{
+		"left": "scien",
+		"right": "proton",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Scien"
+	},
+	{
+		"left": "scien",
+		"right": "proton",
+		"speaker": "left",
+		"text": "We need to keep going.",
+		"name_left": "Scien"
+	},
+	{
+		"left": "scien",
+		"right": "proton",
+		"speaker": "left",
+		"text": "We must retrieve the Itucher before they can destroy Nation and the rest of the world.",
+		"name_left": "Scien"
+	},
+	{
+		"text": "[Scien and Proton leveled up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Scien",
+				"amount": 3
+			},
+			{
+				"unit": "Proton",
+				"amount": 3
+			}
+		]
+	},
+	{
+		"text": "..."
+	},
+	{
+		"text": "[Xuirist Cavern]"
+	},
+	{
+		"left": "omegaxuirist",
+		"speaker": "left",
+		"text": "....",
+		"name_left": "Omega",
+		"bgcolor": "dim grey"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "left",
+		"text": "Omega, has the dispatch responded yet?",
+		"name_left": "Break"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "right",
+		"text": "No, sir.",
+		"name_right": "Omega"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "right",
+		"text": "It is likely that they have been defeated.",
+		"name_right": "Omega"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Break"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "left",
+		"text": "Omega, you do realize that failure will not be accepted.",
+		"name_left": "Break"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "right",
+		"text": "Yes, yes I do.",
+		"name_right": "Omega"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "left",
+		"text": "If you fail, I will destroy them.",
+		"name_left": "Break"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Omega"
+	},
+	{
+		"left": "break",
+		"right": "omegaxuirist",
+		"speaker": "left",
+		"text": "Do not fail.",
+		"name_left": "Break",
+		"startchapter": "Chapter18a"
+	}
+]

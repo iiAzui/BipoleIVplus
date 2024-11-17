@@ -39,9 +39,11 @@
 	{
 		"left": "proton",
 		"right": "wodahs",
-		"text": "???: Alright then, I'll be heading back to Static."
+		"text": "???: Got it."
 	},
-	{},
+	{
+		"text": "[Wodahs has joined your party]"
+	},
 	{
 		"left": "proton",
 		"speaker": "left",
@@ -51,6 +53,153 @@
 		"battle": "Chapter07"
 	},
 	{
-		"startchapter": "Chapter08"
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "Hello, Bladen.",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "right",
+		"text": "Hey.",
+		"name_right": "Bladen"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "Bladen, you said your cousin lives in the Nation of Altar, yes?",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "right",
+		"text": "Yeah, he lives at the Altar Temple.",
+		"name_right": "Bladen"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "The Altar Temple, huh. He must be pretty important to be living there.",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "right",
+		"text": "He's the head of defense at the temple, he guards the valuables and such.",
+		"name_right": "Bladen"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "I wonder how he deals with all of the pressure of such an important job...",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "I come from a noble Sine family, and my parents expect me to do something grand.",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "But how am I suppposed to fix our current political situation?",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "Ever since my parent's involvement in the Quad Genocide became known, they've kept expecting more and more of me...",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "It's not my fault that they wanted to make some money by investing in the genocide following the economic recession from the...",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "...western territories' involvement with the unauthorized voyages to the Forbidden Sea, which led to the Minor Civil War of 1282 AN.",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "Why don't they just not get involved in the genocide and just do some stocks or something?",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "Don't you think that would be safer both financially and socially?",
+		"name_left": "Healia"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "right",
+		"text": "I don't care.",
+		"name_right": "Bladen"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "right",
+		"text": "I was paid to take you paying fools to Altar, where you will probably die to the defenses.",
+		"name_right": "Bladen"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "right",
+		"text": "I could not care less about the economic affairs of the Sine nobility.",
+		"name_right": "Bladen"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "right",
+		"text": "If you have nothing relevant to say, then leave me alone.",
+		"name_right": "Bladen"
+	},
+	{
+		"left": "healia",
+		"right": "bladen",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Healia"
+	},
+	{
+		"text": "[Healia and Bladen leveled up!]",
+		"startchapter": "Chapter08",
+		"instant_level_ups": [
+			{
+				"unit": "Healia",
+				"amount": 1
+			},
+			{
+				"unit": "Bladen",
+				"amount": 1
+			}
+		]
 	}
 ]

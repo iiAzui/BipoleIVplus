@@ -21,7 +21,7 @@
 		"left": "tnemecalperiii",
 		"right": "lacirtcele",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Tnemecalper III"
 	},
 	{
@@ -81,51 +81,105 @@
 		"name_left": "Proton",
 		"bgcolor": "navy"
 	},
-	{},
 	{
-		"text": "[A small boat passes by Proton's ship]"
+		"text": "[Bonus Conversation Unlocked]"
 	},
 	{
 		"left": "proton",
-		"right": "recils",
-		"text": "???: What are you guys doing?"
+		"right": "fael",
+		"speaker": "right",
+		"text": "Hey Proton.",
+		"name_right": "Fael"
 	},
 	{
 		"left": "proton",
-		"right": "recils",
+		"right": "fael",
 		"speaker": "left",
-		"text": "Going to Nolavillia to reclaim the Holy Itucher.",
+		"text": "Hey.",
 		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"right": "recils",
-		"text": "???: Someone's taken it already?"
+		"right": "fael",
+		"speaker": "right",
+		"text": "It feels strange, leaving Bipole.",
+		"name_right": "Fael"
 	},
 	{
 		"left": "proton",
-		"right": "recils",
+		"right": "fael",
+		"speaker": "right",
+		"text": "I've never left the continent before.",
+		"name_right": "Fael"
+	},
+	{
+		"left": "proton",
+		"right": "fael",
 		"speaker": "left",
-		"text": "Yeah, some evil scientists.",
+		"text": "This will be my first time going back to Nolavilla.",
 		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"right": "recils",
-		"text": "???: ..."
+		"right": "fael",
+		"speaker": "left",
+		"text": "I don't remember anything from when I was there, so it feels strange for me too.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
-		"right": "recils",
-		"text": "???: You guys mind if I join you? This would look pretty good on my r\u0117sum\u00e9."
-	},
-	{
-		"text": "[Recruit ???] (Q) Recruit (W) Do not recruit"
+		"right": "fael",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Fael"
 	},
 	{
 		"left": "proton",
-		"right": "recils",
-		"text": "???: Okay then."
+		"right": "fael",
+		"speaker": "right",
+		"text": "I never expected to be leaving the continent, always thought I'd die before it would have the chance.",
+		"name_right": "Fael"
+	},
+	{
+		"left": "proton",
+		"right": "fael",
+		"speaker": "left",
+		"text": "Why's that?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "fael",
+		"speaker": "right",
+		"text": "Well, I don't actually like archery, but I'm good at it.",
+		"name_right": "Fael"
+	},
+	{
+		"left": "proton",
+		"right": "fael",
+		"speaker": "right",
+		"text": "So after my parents made me join the army and the EOS, I thought I would live my life fighting until I died on the battlefield.",
+		"name_right": "Fael"
+	},
+	{
+		"left": "proton",
+		"right": "fael",
+		"speaker": "right",
+		"text": "But I'm glad that I'll be able to go to Nolavillia, I've always wanted to explore the world.",
+		"name_right": "Fael"
+	},
+	{
+		"text": "[Proton and Fael leveled up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Proton",
+				"amount": 2
+			},
+			{
+				"unit": "Fael",
+				"amount": 2
+			}
+		]
 	},
 	{
 		"startchapter": "Chapter12a"
