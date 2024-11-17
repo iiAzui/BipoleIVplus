@@ -28,17 +28,28 @@
 		"name_right": "Lacirtcele"
 	},
 	{
-		"text": "[Recruit Lacirtcele?] (Q) Recruit (W) Do not recruit"
-	},
-	{
-		"left": "proton",
-		"right": "lacirtcele",
-		"speaker": "right",
-		"text": "Like... poggers, bruh.",
-		"name_right": "Lacirtcele"
-	},
-	{
-		"text": "[Lacirtcele has joined your party]"
+		"recruitment_choice": "Lacirtcele",
+		"true": [
+			{
+				"left": "proton",
+				"right": "lacirtcele",
+				"speaker": "right",
+				"text": "Like... poggers, bruh.",
+				"name_right": "Lacirtcele"
+			},
+			{
+				"recruit": "Lacirtcele"
+			}
+		],
+		"false": [
+			{
+				"left": "proton",
+				"right": "lacirtcele",
+				"speaker": "right",
+				"text": "Like... poggers, bruh.",
+				"name_right": "Lacirtcele"
+			}
+		]
 	},
 	{
 		"left": "proton",
@@ -58,12 +69,13 @@
 		"name_left": "Proton"
 	},
 	{
+		"bonus_convo": true,
+		"hint": "If bonus convo is true and condition is true, this branch and all sub branches should be considered a bonus conversation, and [Bonus Conversation Unlocked!] should show before true branch is entered",
 		"condition": {
 			"units_recruited": ["Quest", "Romra"]
 		},
 		"true": [
 			{
-				"bonus_convo_start": true,
 				"left": "romra",
 				"right": "quest",
 				"speaker": "left",
