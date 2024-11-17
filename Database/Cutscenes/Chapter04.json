@@ -1,5 +1,9 @@
 [
 	{
+		"text": "[Chapter 04] [Sine Castle Town, Territory of Sine]",
+		"bgcolor": "black"
+	},
+	{
 		"left": "proton",
 		"speaker": "left",
 		"text": "The Guild of Retool will be here any minute, stay on guard.",
@@ -24,7 +28,6 @@
 		"text": "Nothing to be afraid of, let's get 'em!",
 		"name_left": "Retool"
 	},
-	{},
 	{
 		"left": "retool",
 		"speaker": "left",
@@ -38,7 +41,7 @@
 		"name_left": "Retool"
 	},
 	{
-		"text": "[The Guild of Retool retreats]."
+		"text": "[The Guild of Retool retreats!]"
 	},
 	{
 		"left": "proton",
@@ -47,7 +50,9 @@
 		"name_left": "Proton"
 	},
 	{
-		"text": "???: Hmm... that was a high amount of damage..."
+		"text": "Hmm... that was a high amount of damage...",
+		"speaker": "right",
+		"name_right": "???"
 	},
 	{
 		"left": "proton",
@@ -58,14 +63,9 @@
 	{
 		"left": "proton",
 		"right": "damagein",
-		"text": "???: It is I, the great Damagein Elite!"
-	},
-	{
-		"left": "proton",
-		"right": "damagein",
-		"speaker": "left",
-		"text": "...",
-		"name_left": "Proton"
+		"text": "It is I, the great Damagein Elite!",
+		"speaker": "right",
+		"name_right": "Damagein"
 	},
 	{
 		"left": "proton",
@@ -99,22 +99,60 @@
 		"text": "[Recruit Damagein?] (Q) Recruit (W) Do not recruit"
 	},
 	{
-		"left": "proton",
-		"right": "damagein",
-		"speaker": "right",
-		"text": "Very well then, I will seek damage elsewhere.",
-		"name_right": "Damagein"
+		"recruitment_choice": "Damagein",
+		"true": [
+			{
+				"left": "proton",
+				"right": "damagein",
+				"speaker": "right",
+				"text": "It's time for some damage!"
+			},
+			{
+				"recruit": ["Damagein"]
+			}
+		],
+		"false": [
+			{
+				"left": "proton",
+				"right": "damagein",
+				"speaker": "right",
+				"text": "Very well then, I will seek damage elsewhere."
+			}
+		]
 	},
 	{
-		"text": "???: Are you the people who protected this town?"
+		"text": "Are you the people who protected this town?",
+		"speaker": "right",
+		"name_right": "???"
 	},
 	{
 		"left": "proton",
 		"right": "healia",
-		"text": "???: I am Healia Aid, and I wish to join your army for saving my hometown."
+		"text": "I am Healia Aid, and I wish to join your army for saving my hometown.",
+		"speaker": "right",
+		"name_right": "Healia"
 	},
 	{
-		"text": "[Recruit Healia?] (Q) Recruit (W) Do not recruit"
+		"choice": "Recruit Healia?",
+		"true": [
+			{
+				"left": "proton",
+				"right": "healia",
+				"speaker": "right",
+				"text": "It's time for some damage!"
+			},
+			{
+				"recruit": ["Healia"]
+			}
+		],
+		"false": [
+			{
+				"left": "proton",
+				"right": "healia",
+				"speaker": "right",
+				"text": "Understood, I wish you all a safe journey."
+			}
+		]
 	},
 	{
 		"left": "proton",
@@ -124,8 +162,6 @@
 		"name_right": "Healia"
 	},
 	{
-		"text": "[Chapter 05] [Cos Path, Territory of Cos]",
-		"bgcolor": "black",
 		"startchapter": "Chapter05"
 	}
 ]

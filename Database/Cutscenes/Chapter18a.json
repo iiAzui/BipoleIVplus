@@ -20,7 +20,8 @@
 		"left": "proton",
 		"speaker": "left",
 		"text": "Prepare for battle!",
-		"name_left": "Proton"
+		"name_left": "Proton",
+		"battle": "Chapter18a"
 	},
 	{
 		"left": "proton",
@@ -105,6 +106,7 @@
 		"text": "I pray for your victory, Proto-Xuir.",
 		"name_right": "Xuirer"
 	},
+	{},
 	{
 		"text": "[Xuirist Cavern]"
 	},
@@ -177,9 +179,9 @@
 		"text": "...",
 		"name_left": "Omega"
 	},
+	{},
+	{},
 	{
-		"text": "[Chapter 19a] [Xuir Plain, Central Nolavillia]",
-		"bgcolor": "black",
 		"startchapter": "Chapter19a"
 	}
 ]

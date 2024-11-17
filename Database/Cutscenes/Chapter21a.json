@@ -1,5 +1,9 @@
 [
 	{
+		"text": "[Chapter 21a] [Nolavillian Mountain Range, Northern Nolavillia]",
+		"bgcolor": "black"
+	},
+	{
 		"left": "omegaxuirist",
 		"right": "break",
 		"speaker": "left",
@@ -155,6 +159,7 @@
 		"text": "...what?",
 		"name_right": "Fiyghtrr"
 	},
+	{},
 	{
 		"left": "proton",
 		"right": "recalper",
@@ -235,6 +240,13 @@
 		"text": "What!? Don't you know that you can't replace the replacement!?",
 		"name_right": "Recalper"
 	},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
 	{
 		"left": "proton",
 		"speaker": "left",

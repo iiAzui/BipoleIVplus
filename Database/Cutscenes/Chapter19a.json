@@ -1,5 +1,9 @@
 [
 	{
+		"text": "[Chapter 19a] [Xuir Plain, Central Nolavillia]",
+		"bgcolor": "black"
+	},
+	{
 		"left": "proton",
 		"speaker": "left",
 		"text": "...",
@@ -89,6 +93,7 @@
 		"right": "dliug",
 		"text": "???: That's a shame, ain't it?"
 	},
+	{},
 	{
 		"left": "proton",
 		"speaker": "left",
@@ -143,6 +148,9 @@
 		"text": "You fear knowledge, for you cannot comprehend it.",
 		"name_right": "Geomer"
 	},
+	{},
+	{},
+	{},
 	{
 		"text": "[Xuirist Cavern]"
 	},

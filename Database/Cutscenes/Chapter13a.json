@@ -1,5 +1,9 @@
 [
 	{
+		"text": "[Chapter 13a] [Bipole Sea, Bipole Sea]",
+		"bgcolor": "black"
+	},
+	{
 		"left": "proton",
 		"speaker": "left",
 		"text": "...",
@@ -65,6 +69,9 @@
 		"right": "relaeh",
 		"text": "???: Oh."
 	},
+	{},
+	{},
+	{},
 	{
 		"left": "proton",
 		"right": "relaeh",
@@ -146,8 +153,6 @@
 	},
 	{},
 	{
-		"text": "[Chapter 14a] [Bipole Sea, Bipole Sea]",
-		"bgcolor": "black",
 		"startchapter": "Chapter14a"
 	}
 ]

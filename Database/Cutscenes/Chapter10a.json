@@ -1,6 +1,11 @@
 [
 	{
-		"bgcolor": "dark green"
+		"text": "[Chapter 10a] [Outer Static, Territory of Static]",
+		"bgcolor": "black"
+	},
+	{
+		"bgcolor": "dark green",
+		"battle": "Chapter10a"
 	},
 	{
 		"text": "[Static Town, Territory of Static]",

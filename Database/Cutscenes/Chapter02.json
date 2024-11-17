@@ -8,7 +8,8 @@
 		"speaker": "left",
 		"text": "There's some slimes up ahead, prepare for battle!",
 		"name_left": "Proton",
-		"bgcolor": "green"
+		"bgcolor": "green",
+		"battle": "Chapter02"
 	},
 	{
 		"left": "proton",

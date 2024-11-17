@@ -1,5 +1,9 @@
 [
 	{
+		"text": "[Chapter 08] [Altar Town, Nation of Altar]",
+		"bgcolor": "black"
+	},
+	{
 		"text": "(The town is ravaged, with the ground is covered in destroyed buildings and flames...)"
 	},
 	{
@@ -36,7 +40,8 @@
 		"right": "Bladeous",
 		"speaker": "left",
 		"text": "Everyone, prepare for battle!",
-		"name_left": "Proton"
+		"name_left": "Proton",
+		"battle": "Chapter08"
 	},
 	{
 		"left": "proton",
@@ -104,6 +109,19 @@
 		"text": "Nolavillia, huh. I'll go wherever the artifacts are.",
 		"name_left": "Quest"
 	},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
 	{
 		"left": "proton",
 		"speaker": "left",

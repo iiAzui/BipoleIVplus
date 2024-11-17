@@ -13,12 +13,16 @@
 	{
 		"left": "proton",
 		"right": "lacirtcele",
-		"text": "???: Wha' suuup?"
+		"text": "Wha' suuup?",
+		"speaker": "right",
+		"name_right": "???"
 	},
 	{
 		"left": "proton",
 		"right": "lacirtcele",
-		"text": "???: It's me, Lacirtcele Sus of the Elemental Offense Squad."
+		"text": "It's me, Lacirtcele Sus of the Elemental Offense Squad.",
+		"speaker": "right",
+		"name_right": "Lacirtcele"
 	},
 	{
 		"left": "proton",
@@ -28,14 +32,28 @@
 		"name_right": "Lacirtcele"
 	},
 	{
-		"text": "[Recruit Lacirtcele?] (Q) Recruit (W) Do not recruit"
-	},
-	{
-		"left": "proton",
-		"right": "lacirtcele",
-		"speaker": "right",
-		"text": "No problem man, see y'all later.",
-		"name_right": "Lacirtcele"
+		"recruitment_choice": "Lacirtcele",
+		"true": [
+			{
+				"text": "Lacirtcele: Like... poggers, bruh.",
+				"left": "proton",
+				"right": "lacirtcele",
+				"speaker": "right",
+				"name_right": "Lacirtcele"
+			},
+			{
+				"recruit": ["Lacirtcele"]
+			}
+		],
+		"false": [
+			{
+				"left": "proton",
+				"right": "lacirtcele",
+				"speaker": "right",
+				"text": "No problem man, see y'all later.",
+				"name_right": "Lacirtcele"
+			}
+		]
 	},
 	{
 		"left": "proton",
@@ -45,7 +63,8 @@
 	},
 	{
 		"text": "[The group continues onwards]",
-		"bgcolor": "green"
+		"bgcolor": "green",
+		"battle": "Chapter03"
 	},
 	{
 		"left": "proton",
@@ -54,8 +73,6 @@
 		"name_left": "Proton"
 	},
 	{
-		"text": "[Chapter 04] [Sine Castle Town, Territory of Sine]",
-		"bgcolor": "black",
 		"startchapter": "Chapter04"
 	}
 ]

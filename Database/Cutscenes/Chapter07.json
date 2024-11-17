@@ -1,5 +1,9 @@
 [
 	{
+		"text": "[Chapter 07] [Cos Path, Territory of Cos]",
+		"bgcolor": "black"
+	},
+	{
 		"left": "proton",
 		"speaker": "left",
 		"text": "There's a member of the Elemental Offense Squad at a village we'll be passing by.",
@@ -37,16 +41,16 @@
 		"right": "wodahs",
 		"text": "???: Alright then, I'll be heading back to Static."
 	},
+	{},
 	{
 		"left": "proton",
 		"speaker": "left",
 		"text": "We're almost at Altar, but there's some bandits up ahead.",
 		"name_left": "Proton",
-		"bgcolor": "dark green"
+		"bgcolor": "dark green",
+		"battle": "Chapter07"
 	},
 	{
-		"text": "[Chapter 08] [Altar Town, Nation of Altar]",
-		"bgcolor": "black",
 		"startchapter": "Chapter08"
 	}
 ]

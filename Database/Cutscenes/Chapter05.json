@@ -1,5 +1,9 @@
 [
 	{
+		"text": "[Chapter 05] [Cos Path, Territory of Cos]",
+		"bgcolor": "black"
+	},
+	{
 		"left": "proton",
 		"speaker": "left",
 		"text": "Looks like some bandits are in our way.",
@@ -10,11 +14,11 @@
 		"left": "proton",
 		"speaker": "left",
 		"text": "We'll need to defeat them to go back to Static.",
-		"name_left": "Proton"
+		"name_left": "Proton",
+		"battle": "Chapter05"
 	},
+	{},
 	{
-		"text": "[Chapter 06] [Outer Static, Territory of Static]",
-		"bgcolor": "black",
 		"startchapter": "Chapter06"
 	}
 ]

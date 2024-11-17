@@ -465,7 +465,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 27:
             Text2("Scien: Let's get going.",units.Scien.Portrait, units.Proton.Portrait)
             CutsceneIndex = 0
@@ -508,7 +508,7 @@ def Cutscene():
         elif len(units.UnitsAlive) > 1 and CutsceneIndex == 3:
             CutsceneIndex = 0
             Chapter = "Chapter 02"
-            Cutscene()
+            # Cutscene()
         elif len(units.UnitsAlive) == 1 and CutsceneIndex > 2:
             if CutsceneIndex == 3:
                 Text1("Proton: It seems that all of the others have",units.Proton.Portrait)
@@ -646,7 +646,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 8:
             Text1("Proton: We should get going.",units.Proton.Portrait)
             CutsceneIndex += 1
@@ -672,7 +672,7 @@ def Cutscene():
             else:
                 CutsceneIndex = 0
                 Chapter = "Chapter 04"
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 12:
             Text2("Romra: Hey.",units.Romra.Portrait,units.Quest.Portrait)
             CutsceneIndex += 1
@@ -903,7 +903,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 21:
             Text3("???: Are you the people who protected this town?")
             CutsceneIndex += 1
@@ -940,7 +940,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 26: 
             if units.Scien in units.UnitsAlive and units.Lacirtcele in units.UnitsAlive:
                 Text3("[Bonus Conversation Unlocked]")
@@ -949,7 +949,7 @@ def Cutscene():
             else:
                 Chapter = "Chapter 05"
                 CutsceneIndex = 0
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 27:
             Text2("Scien: Hello, Lacirtcele.",units.Scien.Portrait,units.Lacirtcele.Portrait)
             CutsceneIndex += 1
@@ -1042,7 +1042,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex = 34
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 4:
             Text2("Proton: Huh?",units.TnemecalperIII.Portrait,units.Proton.Portrait)
             CutsceneIndex += 1
@@ -1189,7 +1189,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 34:
             if units.Proton in units.UnitsAlive and units.TnemecalperII in units.UnitsAlive:
                 Text3("[Bonus Conversation Unlocked]")
@@ -1198,7 +1198,7 @@ def Cutscene():
             else:
                 Chapter = "Chapter 06"
                 CutsceneIndex = 0
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 35:
             screensetup.BattleScreen.bgcolor("green")
             Text2("Proton: ...",units.Proton.Portrait,units.TnemecalperII.Portrait)
@@ -1434,7 +1434,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 27:
             screensetup.BattleScreen.bgcolor("dark green")
             Text1("Proton: Even though it's nightime, will need to head",units.Proton.Portrait)
@@ -1457,7 +1457,7 @@ def Cutscene():
             else:
                 CutsceneIndex = 0
                 Chapter = "Chapter 07"
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 30:
             Text2("Proton: Greetings.",units.Proton.Portrait,units.TnemecalperIV.Portrait)
             CutsceneIndex += 1
@@ -1571,7 +1571,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 9:
             screensetup.BattleScreen.bgcolor("dark green")
             Text1("Proton: We're almost at Altar, but there's some",units.Proton.Portrait)
@@ -1589,7 +1589,7 @@ def Cutscene():
             else:
                 CutsceneIndex = 0
                 Chapter = "Chapter 08"
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 11:
             Text2("Healia: Hello, Bladen.",units.Healia.Portrait,units.Bladen.Portrait)
             CutsceneIndex += 1
@@ -2031,7 +2031,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 43:
             if units.Quest in units.UnitsAlive:
                 Text1("Quest: Nolavillia, huh. I'll go wherever",units.Quest.Portrait)
@@ -2040,7 +2040,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 44:
             if units.Romra in units.UnitsAlive:
                 Text1("Romra: Going to Nolavillia? I wonder if it'll",units.Romra.Portrait)
@@ -2049,7 +2049,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 45:
             if units.Lacirtcele in units.UnitsAlive:
                 Text1("Lacirtcele: Nolavillia... rad name bruh.",units.Lacirtcele.Portrait)
@@ -2057,7 +2057,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 46:
             if units.Damagein in units.UnitsAlive:
                 Text1("Damagein: Nolavillia? I hope they have lots",units.Damagein.Portrait)
@@ -2066,7 +2066,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 47:
             if units.Healia in units.UnitsAlive:
                 Text1("Healia: Nolavillia, I wonder what it's like...",units.Healia.Portrait)
@@ -2074,7 +2074,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 48:
             if units.Wob in units.UnitsAlive:
                 Text1("Wob: Nolavillia? Sounds fun, I'm going.",units.Wob.Portrait)
@@ -2082,7 +2082,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 49:
             if units.Wodahs in units.UnitsAlive:
                 Text1("Wodahs: Guess I'm going to Nolavillia now.",units.Wodahs.Portrait)
@@ -2090,7 +2090,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 50:
             if len(units.UnitsAlive) == 1:
                 Text1("The Link: All of your allies have died...",units.Azure.Portrait)
@@ -2098,7 +2098,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 51:
             if len(units.UnitsAlive) == 1:
                 Text1("The Link: If it weren't for your destiny in",units.Azure.Portrait)
@@ -2108,7 +2108,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 52:
             if len(units.UnitsAlive) == 1:
                 Text1("The Link: You will fufill your purpose and reclaim",units.Azure.Portrait)
@@ -2117,7 +2117,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 53:
             if len(units.UnitsAlive) == 1:
                 Text1("The Link: Then, I will execute you.",units.Azure.Portrait)
@@ -2125,7 +2125,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 54:
             if len(units.UnitsAlive) == 1:
                 Text1("Azure: As the Link of this realm, I swear upon",units.Azure.Portrait)
@@ -2134,7 +2134,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 55:
             if len(units.UnitsAlive) == 1:
                 Text3("[Azure joined your party]")
@@ -2149,7 +2149,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 56:
             if units.Azure in units.UnitsRecruited:
                 Text3("[The Genocide Route has been activated]")
@@ -2158,7 +2158,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 57:
             Text1("Proton: We'll need to go back to Static to",units.Proton.Portrait)
             line2("get resources and a means of transportation.")
@@ -2260,7 +2260,7 @@ def Cutscene():
                 Chapter = "Chapter 10c"
             else:
                 Chapter = "Chapter 10a"
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 09b": #=====================Chapter09b===============================================================
         ChapterLevel = 11
         if CutsceneIndex == 0:
@@ -2957,7 +2957,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 31:
             CutsceneIndex = 32
-            Cutscene()
+            # Cutscene()
         elif len(units.UnitsAlive) <= 5:
             if CutsceneIndex == 32:
                 Text3("[A small boat passes by Proton's ship]")
@@ -3019,11 +3019,11 @@ def Cutscene():
                     CutsceneIndex = 0
                     Chapter = "Chapter 12a"
                     ClearInputs()
-                    Cutscene()
+                    # Cutscene()
         else:
             CutsceneIndex = 0
             Chapter = "Chapter 12a"
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 11b": #=====================Chapter11b===============================================================
         ChapterLevel = 15
         if CutsceneIndex == 0:
@@ -3196,7 +3196,7 @@ def Cutscene():
                     
                 else:
                     CutsceneIndex += 1
-                    Cutscene()
+                    # Cutscene()
             elif CutsceneIndex == 22:
                 Text1("Proton: ...",units.Proton.Portrait)
                 CutsceneIndex = 23
@@ -3305,28 +3305,28 @@ def Cutscene():
                  
             elif CutsceneIndex == 42:
                 CutsceneIndex +=1
-                Cutscene()
+                # Cutscene()
             elif CutsceneIndex == 43 and units.Scien in units.UnitsAlive:
                 Text2("Wodahs: I am genuienly terrified by Scien.",units.Wodahs.Portrait,units.Repins.Portrait)
                 CutsceneIndex += 1
                  
             elif CutsceneIndex == 43:
                 CutsceneIndex +=1
-                Cutscene()
+                # Cutscene()
             elif CutsceneIndex == 44 and units.Romra in units.UnitsAlive:
                 Text2("Wodahs: Romra exists.",units.Wodahs.Portrait,units.Repins.Portrait)
                 CutsceneIndex += 1
                  
             elif CutsceneIndex == 44:
                 CutsceneIndex +=1
-                Cutscene()
+                # Cutscene()
             elif CutsceneIndex == 45 and units.Damagein in units.UnitsAlive:
                 Text2("Wodahs: Damagein is crazy, stay away from him.",units.Wodahs.Portrait,units.Repins.Portrait)
                 CutsceneIndex += 1
                  
             elif CutsceneIndex == 45:
                 CutsceneIndex +=1
-                Cutscene()
+                # Cutscene()
             elif CutsceneIndex == 46 and units.Healia in units.UnitsAlive:
                 Text2("Wodahs: Healia is Sine noble, or something. I'd like to",units.Wodahs.Portrait,units.Repins.Portrait)
                 line2("see her say that to Erif.")
@@ -3334,14 +3334,14 @@ def Cutscene():
                  
             elif CutsceneIndex == 46:
                 CutsceneIndex +=1
-                Cutscene()
+                # Cutscene()
             elif CutsceneIndex == 47 and units.Bladen in units.UnitsAlive:
                 Text2("Wodahs: Bladen is sus, I don't trust him.",units.Wodahs.Portrait,units.Repins.Portrait)
                 CutsceneIndex += 1
                 
             elif CutsceneIndex == 47:
                 CutsceneIndex +=1
-                Cutscene()
+                # Cutscene()
             elif CutsceneIndex == 48:
                 Text2("Wodahs: And of course, there's me.",units.Wodahs.Portrait,units.Repins.Portrait)
                 CutsceneIndex += 1
@@ -3360,7 +3360,7 @@ def Cutscene():
         else:
             CutsceneIndex = 0
             Chapter = "Chapter 13a"
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 12b": #=====================Chapter12b===============================================================
         ChapterLevel = 17
         if CutsceneIndex == 0:
@@ -3382,7 +3382,7 @@ def Cutscene():
             Text1("Proton: ...",units.Proton.Portrait)
             CutsceneIndex = 0
             Chapter = "Chapter 13b"
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 13a": #=====================Chapter13a===============================================================
         ChapterLevel = 19
         if CutsceneIndex == 0:
@@ -3463,7 +3463,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 15:
             if RecruitRelaeh == True:
                 Text2("???: You're going to stop the Holy Itucher? It must be",units.Proton.Portrait, units.Relaeh.Portrait)
@@ -3472,7 +3472,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 16:
             if RecruitRelaeh == True:
                 Text3("[Relaeh has joined your party]")
@@ -3482,7 +3482,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 17:
             Text2("???: Oh yeah, did I tell you I was being chased",units.Proton.Portrait,units.Relaeh.Portrait)
             line2("by pirates?")
@@ -3648,7 +3648,7 @@ def Cutscene():
         else:
             CutsceneIndex = 0
             Chapter = "Chapter 14a"
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 13b": #=====================Chapter13b===============================================================
         ChapterLevel = 19
         if CutsceneIndex == 0:
@@ -3686,7 +3686,7 @@ def Cutscene():
             Text1("Proton: ...",units.Proton.Portrait)
             CutsceneIndex = 0
             Chapter = "Chapter 14b"
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 14a": #=====================Chapter14a===============================================================
         ChapterLevel = 21
         if CutsceneIndex == 0:
@@ -3814,7 +3814,7 @@ def Cutscene():
                 
         elif CutsceneIndex > 4 and CutsceneIndex <= 24:
             CutsceneIndex = 25
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex > 24 and CutsceneIndex < 72 and units.Wodahs in units.UnitsAlive and units.Fael in units.UnitsAlive and units.Repins in units.UnitsAlive:
             if CutsceneIndex == 25:
                 Text3("[Bonus Conversation Unlocked]")
@@ -4017,7 +4017,7 @@ def Cutscene():
                 
         elif CutsceneIndex > 24 and CutsceneIndex < 72:
             CutsceneIndex = 72
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex >= 72 and len(units.UnitsAlive) <= 7:
             if CutsceneIndex == 72:
                 Text1("Proton: I think I see a boat coming towards us...",units.Proton.Portrait)
@@ -4117,11 +4117,11 @@ def Cutscene():
                     CutsceneIndex = 0
                     Chapter = "Chapter 15a"
                     ClearInputs()
-                    Cutscene()
+                    # Cutscene()
         elif CutsceneIndex >= 72:
             CutsceneIndex = 0
             Chapter = "Chapter 15a"
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 14b": #=====================Chapter14b===============================================================
         ChapterLevel = 21
         if CutsceneIndex == 0:
@@ -4315,7 +4315,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex > 32 and CutsceneIndex <= 51 and len(units.UnitsAlive) <= 8:
             if CutsceneIndex == 33:
                 Text1("Proton: ...",units.Proton.Portrait)
@@ -4415,10 +4415,10 @@ def Cutscene():
                 else:
                     CutsceneIndex += 1
                     ClearInputs()
-                    Cutscene()
+                    # Cutscene()
         elif CutsceneIndex > 32 and CutsceneIndex <= 51 :
             CutsceneIndex = 52
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 52:
             screensetup.BattleScreen.bgcolor("black")
             Text1("Proton: .",units.Proton.Portrait)
@@ -4993,7 +4993,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 69:
             CutsceneIndex = 70
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex <= 79 and units.Wob in units.UnitsAlive and units.Erif in units.UnitsAlive:
             if CutsceneIndex == 70:
                 Text3("[Bonus Conversation Unlocked]")
@@ -5041,7 +5041,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 79:
             CutsceneIndex = 80
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 80:
             screensetup.BattleScreen.bgcolor("black")
             Text3("...")
@@ -5461,7 +5461,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 37:
             if units.Scien in units.UnitsAlive:
                 Text2("Scien: I think she brings up a good point. If I could be",units.Scien.Portrait,units.Erif.Portrait)
@@ -5470,7 +5470,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 38:
             if units.Romra in units.UnitsAlive:
                 Text2("Romra: We're the army. We need keep our people safe,",units.Romra.Portrait,units.Erif.Portrait)
@@ -5479,7 +5479,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 39:
             if units.Lacirtcele in units.UnitsAlive:
                 Text2("Lacirtcele: I think, we should like... execute her. She's",units.Lacirtcele.Portrait,units.Erif.Portrait)
@@ -5488,7 +5488,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 40:
             if units.Wob in units.UnitsAlive:
                 Text2("Wob: Trust me, you don't want another Quad Genocide.",units.Wob.Portrait,units.Erif.Portrait)
@@ -5496,7 +5496,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 41:
             if units.Bladen in units.UnitsAlive:
                 Text2("Bladen: Yeah, we should probably execute her.",units.Bladen.Portrait,units.Erif.Portrait)
@@ -5504,7 +5504,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 42:
             if units.Wodahs in units.UnitsAlive:
                 Text2("Wodahs: I'm gonna have to side with Erif on this one.",units.Wodahs.Portrait,units.Erif.Portrait)
@@ -5512,7 +5512,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 43:
             if units.PlayableBladeous in units.UnitsAlive:
                 Text2("Bladeous: We can't risk another genocide.",units.PlayableBladeous.Portrait,units.Erif.Portrait)
@@ -5520,7 +5520,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 44:
             if units.Recils in units.UnitsAlive:
                 Text2("Recils: Another genocide would be bad for the economy.",units.Recils.Portrait,units.Erif.Portrait)
@@ -5528,7 +5528,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 45:
             if units.Relaeh in units.UnitsAlive:
                 Text2("Relaeh: Altar could not handle a potential genocide, we",units.Relaeh.Portrait,units.Erif.Portrait)
@@ -5537,7 +5537,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 46:
             if units.Eulb in units.UnitsAlive:
                 Text2("Eulb: W... wha? Ummm... sure?",units.Eulb.Portrait,units.Erif.Portrait)
@@ -5545,7 +5545,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 47:
             if units.Fieht in units.UnitsAlive:
                 Text2("Fieht: Definently execute her. I've seen the Quad",units.Fieht.Portrait,units.Erif.Portrait)
@@ -5554,7 +5554,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 48:
             if units.Rethgif in units.UnitsAlive:
                 Text2("Rethgif: Though I don't know anything about Bipole, this",units.Rethgif.Portrait,units.Erif.Portrait)
@@ -5563,7 +5563,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 49:
             if units.Eg in units.UnitsAlive:
                 Text2("Eg: Execute.",units.Eg.Portrait,units.Erif.Portrait)
@@ -5571,7 +5571,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 50:
             Text2("Healia: ...",units.Healia.Portrait,units.Erif.Portrait)
             CutsceneIndex += 1
@@ -5874,7 +5874,7 @@ def Cutscene():
             else:
                 CutsceneIndex += 1
                 ClearInputs()
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 115:
             screensetup.BattleScreen.bgcolor("black")
             Text3("[The next day...]")
@@ -6142,7 +6142,7 @@ def Cutscene():
             else:
                 CutsceneIndex += 1
                 ClearInputs()
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex < 185 and units.Eg in units.UnitsAlive and units.Rethgif in units.UnitsAlive:
             if CutsceneIndex == 172:
                 Text3("[Bonus Conversation Unlocked]")
@@ -6202,7 +6202,7 @@ def Cutscene():
                 
         elif CutsceneIndex < 185:
             CutsceneIndex = 185
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex < 196 and units.Lacirtcele in units.UnitsAlive and units.Bladen in units.UnitsAlive:
             if CutsceneIndex == 185:
                 Text3("[Bonus Conversation Unlocked]")
@@ -6258,7 +6258,7 @@ def Cutscene():
                 
         elif CutsceneIndex < 196:
             CutsceneIndex = 196
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex < 207 and units.Proton in units.UnitsAlive and units.Scien in units.UnitsAlive:
             if CutsceneIndex == 196:
                 Text3("[Bonus Conversation Unlocked]")
@@ -6311,7 +6311,7 @@ def Cutscene():
                 
         elif CutsceneIndex < 207:
             CutsceneIndex = 207
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 207:
             Text3("...")
             CutsceneIndex += 1
@@ -6780,7 +6780,7 @@ def Cutscene():
             else:
                 CutsceneIndex += 1
                 ClearInputs()
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex < 185 and units.Eg in units.UnitsAlive and units.Rethgif in units.UnitsAlive:
             if CutsceneIndex == 172:
                 Text3("[Bonus Conversation Unlocked]")
@@ -6840,7 +6840,7 @@ def Cutscene():
                 
         elif CutsceneIndex < 185:
             CutsceneIndex = 185
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex < 196 and units.Lacirtcele in units.UnitsAlive and units.Bladen in units.UnitsAlive:
             if CutsceneIndex == 185:
                 Text3("[Bonus Conversation Unlocked]")
@@ -6896,7 +6896,7 @@ def Cutscene():
                 
         elif CutsceneIndex < 196:
             CutsceneIndex = 196
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex < 207 and units.Proton in units.UnitsAlive and units.Scien in units.UnitsAlive:
             if CutsceneIndex == 196:
                 Text3("[Bonus Conversation Unlocked]")
@@ -6949,7 +6949,7 @@ def Cutscene():
                 
         elif CutsceneIndex < 207:
             CutsceneIndex = 207
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 207:
             Text3("...")
             CutsceneIndex += 1
@@ -7283,7 +7283,7 @@ def Cutscene():
             else:
                 CutsceneIndex += 1
                 ClearInputs()
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex < 185 and units.Eg in units.UnitsAlive and units.Rethgif in units.UnitsAlive:
             if CutsceneIndex == 172:
                 Text3("[Bonus Conversation Unlocked]")
@@ -7343,7 +7343,7 @@ def Cutscene():
                 
         elif CutsceneIndex < 185:
             CutsceneIndex = 185
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex < 196 and units.Lacirtcele in units.UnitsAlive and units.Bladen in units.UnitsAlive:
             if CutsceneIndex == 185:
                 Text3("[Bonus Conversation Unlocked]")
@@ -7399,7 +7399,7 @@ def Cutscene():
                 
         elif CutsceneIndex < 196:
             CutsceneIndex = 196
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex < 207 and units.Proton in units.UnitsAlive and units.Scien in units.UnitsAlive:
             if CutsceneIndex == 196:
                 Text3("[Bonus Conversation Unlocked]")
@@ -7452,7 +7452,7 @@ def Cutscene():
                 
         elif CutsceneIndex < 207:
             CutsceneIndex = 207
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 207:
             Text3("...")
             CutsceneIndex += 1
@@ -7749,7 +7749,7 @@ def Cutscene():
                 else:
                     CutsceneIndex += 1
                     ClearInputs()
-                    Cutscene()
+                    # Cutscene()
         elif CutsceneIndex == 19:
             Text3("[Xuirist Cavern]")
             CutsceneIndex += 1
@@ -7876,7 +7876,7 @@ def Cutscene():
                 
         elif CutsceneIndex < 47:
             CutsceneIndex = 47
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex < 60 and units.Romra in units.UnitsAlive and units.B in units.UnitsAlive:
             if CutsceneIndex == 47:
                 Text3("[Bonus Conversation Unlocked]")
@@ -7936,11 +7936,11 @@ def Cutscene():
                 
         elif CutsceneIndex < 60:
             CutsceneIndex = 60
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 60:
             Chapter = "Chapter 19a"
             CutsceneIndex = 0
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 18b": #=====================Chapter18b===============================================================
         ChapterLevel = 90
         if CutsceneIndex == 0:
@@ -8081,7 +8081,7 @@ def Cutscene():
             else:
                 CutsceneIndex += 1
                 ClearInputs()
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 20:
             Text1("Proton: ...",units.Proton.Portrait)
             CutsceneIndex += 1
@@ -8141,10 +8141,10 @@ def Cutscene():
                 else:
                     CutsceneIndex += 1
                     ClearInputs()
-                    Cutscene()
+                    # Cutscene()
         elif CutsceneIndex < 30:
             CutsceneIndex = 30
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex < 37 and units.Xuirventh in units.UnitsAlive and units.Xuirfth in units.UnitsAlive:
             if CutsceneIndex == 30:
                 Text3("[Bonus Conversation Unlocked]")
@@ -8179,7 +8179,7 @@ def Cutscene():
                 
         elif CutsceneIndex < 37:
             CutsceneIndex = 37
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex < 47 and units.Vruh in units.UnitsAlive:
             if CutsceneIndex == 37:
                 Text3("[Bonus Conversation Unlocked]")
@@ -8228,7 +8228,7 @@ def Cutscene():
                 
         elif CutsceneIndex < 47:
             CutsceneIndex = 47
-            Cutscene()  
+            # Cutscene()  
         elif CutsceneIndex == 47:
             Text3("[Xuirist Cavern]")
             CutsceneIndex += 1
@@ -8297,7 +8297,7 @@ def Cutscene():
                 else:
                     SetPosX += 50
             CutsceneIndex += 1
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 2:
             
             
@@ -8638,7 +8638,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 123:
             CutsceneIndex = 135
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex <= 143 and units.B in units.UnitsAlive and units.Xuirer in units.UnitsAlive:
             if CutsceneIndex == 135:
                 Text3("[Bonus Conversation Unlocked]")
@@ -8681,7 +8681,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 143:
             CutsceneIndex = 144
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex <= 151 and units.Dliug in units.UnitsAlive and units.Wodahs in units.UnitsAlive:
             if CutsceneIndex == 144:
                 Text3("[Bonus Conversation Unlocked]")
@@ -8720,7 +8720,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 151:
             CutsceneIndex = 152
-            Cutscene()  
+            # Cutscene()  
         elif CutsceneIndex <= 159 and units.Fael in units.UnitsAlive and units.Erif in units.UnitsAlive:
             if CutsceneIndex == 152:
                 Text3("[Bonus Conversation Unlocked]")
@@ -8761,7 +8761,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 159:
             CutsceneIndex = 160
-            Cutscene()  
+            # Cutscene()  
         elif CutsceneIndex <= 166 and units.Vruh in units.UnitsAlive:
             if CutsceneIndex == 160:
                 Text1("Vruh: ...", units.Vruh.Portrait)
@@ -8796,11 +8796,11 @@ def Cutscene():
                 
         elif CutsceneIndex <= 166:
             CutsceneIndex = 167
-            Cutscene()  
+            # Cutscene()  
         elif CutsceneIndex == 167:
             CutsceneIndex = 0
             Chapter = "Chapter 21a"
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 20b": #=====================Chapter20b===============================================================
         ChapterLevel = 36
         if CutsceneIndex == 0:
@@ -8917,7 +8917,7 @@ def Cutscene():
             else:
                 CutsceneIndex += 1
                 ClearInputs()
-                Cutscene()
+                # Cutscene()
         elif units.Dnefed not in units.UnitsRecruited and CutsceneIndex <= 26:
             if CutsceneIndex == 20:
                 register_shape("revolt")
@@ -8951,10 +8951,10 @@ def Cutscene():
                 
         elif units.Dnefed in units.UnitsRecruited and CutsceneIndex <= 26:
             CutsceneIndex = 27
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 27:
             CutsceneIndex = 100
-            Cutscene()
+            # Cutscene()
 
         elif CutsceneIndex == 100:
             Text3("[Xuirist Cavern]")
@@ -9062,7 +9062,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 123:
             CutsceneIndex = 135
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex <= 143 and units.B in units.UnitsAlive and units.Xuirer in units.UnitsAlive:
             if CutsceneIndex == 135:
                 Text3("[Bonus Conversation Unlocked]")
@@ -9105,7 +9105,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 143:
             CutsceneIndex = 144
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex <= 151 and units.Dliug in units.UnitsAlive and units.Wodahs in units.UnitsAlive:
             if CutsceneIndex == 144:
                 Text3("[Bonus Conversation Unlocked]")
@@ -9144,7 +9144,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 151:
             CutsceneIndex = 152
-            Cutscene()  
+            # Cutscene()  
         elif CutsceneIndex <= 159 and units.Fael in units.UnitsAlive and units.Erif in units.UnitsAlive:
             if CutsceneIndex == 152:
                 Text3("[Bonus Conversation Unlocked]")
@@ -9185,7 +9185,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 159:
             CutsceneIndex = 160
-            Cutscene()  
+            # Cutscene()  
         elif CutsceneIndex <= 166 and units.Vruh in units.UnitsAlive:
             if CutsceneIndex == 160:
                 Text1("Vruh: ...", units.Vruh.Portrait)
@@ -9220,11 +9220,11 @@ def Cutscene():
                 
         elif CutsceneIndex <= 166:
             CutsceneIndex = 167
-            Cutscene()  
+            # Cutscene()  
         elif CutsceneIndex == 167:
             CutsceneIndex = 0
             Chapter = "Chapter 21a"
-            Cutscene()  
+            # Cutscene()  
     elif Chapter == "Chapter 20c": #=====================Chapter20c===============================================================
         ChapterLevel = 108
         if CutsceneIndex == 0:
@@ -9268,7 +9268,7 @@ def Cutscene():
         elif CutsceneIndex == 8:
             CutsceneIndex = 0
             Chapter = "Chapter 21b"
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 21a": #=====================Chapter21a===============================================================
         ChapterLevel = 38
         if CutsceneIndex == 0:
@@ -9411,7 +9411,7 @@ def Cutscene():
                 else:
                     CutsceneIndex += 1
                     ClearInputs()
-                    Cutscene()
+                    # Cutscene()
         elif CutsceneIndex <= 20:
             if CutsceneIndex == 12:
                 Text2("Proton: Farewell, Xuirist.",units.Proton.Portrait,units.OmegaXuirist.Portrait)
@@ -9506,7 +9506,7 @@ def Cutscene():
             else:
                 CutsceneIndex += 1
                 ClearInputs()
-                Cutscene()
+                # Cutscene()
         elif len(units.UnitsAlive) <= 7 and CutsceneIndex <= 50:
             if CutsceneIndex == 36:
                 Text2("???: YOU THERE!!!",units.Proton.Portrait,units.Recalper.Portrait)
@@ -9586,10 +9586,10 @@ def Cutscene():
                 else:
                     CutsceneIndex += 1
                     ClearInputs()
-                    Cutscene()
+                    # Cutscene()
         elif CutsceneIndex <= 50:
             CutsceneIndex = 51
-            Cutscene()
+            # Cutscene()
         elif units.Recils in units.UnitsAlive and CutsceneIndex <= 60:
             if CutsceneIndex == 51:
                 Text2("???: Hey.",units.Recils.Portrait,units.Tabmoc.Portrait)
@@ -9648,10 +9648,10 @@ def Cutscene():
                 else:
                     CutsceneIndex += 1
                     ClearInputs()
-                    Cutscene()
+                    # Cutscene()
         elif CutsceneIndex <= 60:
             CutsceneIndex = 61
-            Cutscene()
+            # Cutscene()
         elif units.Xuirfth in units.UnitsRecruited and CutsceneIndex <= 72:
             if CutsceneIndex == 61:
                 Text2("Proton: You must be Xuirurth.",units.Proton.Portrait,units.Xuirurth.Portrait)
@@ -9707,7 +9707,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 72:
             CutsceneIndex = 73
-            Cutscene()
+            # Cutscene()
         elif units.Eg in units.UnitsAlive and units.Lacirtcele in units.UnitsAlive and CutsceneIndex <= 84:
             if CutsceneIndex == 73:
                 Text3("[Bonus Conversation Unlocked]")
@@ -9761,7 +9761,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 84:
             CutsceneIndex = 85
-            Cutscene()
+            # Cutscene()
         elif units.YungPoggers in units.UnitsAlive and units.Xuirer in units.UnitsAlive and CutsceneIndex <= 90:
             if CutsceneIndex == 85:
                 Text3("[Bonus Conversation Unlocked]")
@@ -9791,7 +9791,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 90:
             CutsceneIndex = 91
-            Cutscene()
+            # Cutscene()
         elif units.Wodahs in units.UnitsAlive and units.Repins in units.UnitsAlive and CutsceneIndex <= 109:
             if CutsceneIndex == 91:
                 Text3("[Bonus Conversation Unlocked]")
@@ -9881,7 +9881,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 109:
             CutsceneIndex = 110
-            Cutscene()
+            # Cutscene()
         elif units.Erif in units.UnitsAlive and units.Yranecrem in units.UnitsAlive and CutsceneIndex <= 124:
             if CutsceneIndex == 110:
                 Text3("[Bonus Conversation Unlocked]")
@@ -9944,7 +9944,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 124:
             CutsceneIndex = 125
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 125:
             Text1("Proton: It's time to enter the Shadow Realm...",units.Proton.Portrait)
             CutsceneIndex += 1 
@@ -10007,7 +10007,7 @@ def Cutscene():
         elif CutsceneIndex == 6:
             CutsceneIndex = 0
             Chapter = "Chapter 22b"
-            Cutscene()  
+            # Cutscene()  
     elif Chapter == "Chapter 22a": #=====================Chapter22a===============================================================
         ChapterLevel = 41
         if CutsceneIndex == 0:
@@ -11454,7 +11454,7 @@ def Cutscene():
                     
         elif CutsceneIndex <= 68:
             CutsceneIndex = 69
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 69:
             Text3("(...)")
             CutsceneIndex += 1
@@ -11549,7 +11549,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 86:
             CutsceneIndex = 87
-            Cutscene()
+            # Cutscene()
         elif units.Eulb in units.UnitsAlive and units.Thgif in units.UnitsAlive and CutsceneIndex <= 95:
             if CutsceneIndex == 87:
                 Text3("[Bonus Conversation Unlocked]")
@@ -11594,7 +11594,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 95:
             CutsceneIndex = 96
-            Cutscene()
+            # Cutscene()
         elif units.Exa in units.UnitsAlive and units.Rethgif in units.UnitsAlive and CutsceneIndex <= 115:
             if CutsceneIndex == 96:
                 Text3("[Bonus Conversation Unlocked]")
@@ -11683,7 +11683,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 115:
             CutsceneIndex = 116
-            Cutscene()
+            # Cutscene()
         elif units.Erif in units.UnitsAlive and units.Repins2 in units.UnitsAlive and CutsceneIndex <= 134:
             if CutsceneIndex == 116:
                 Text3("[Bonus Conversation Unlocked]")
@@ -11769,7 +11769,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 134:
             CutsceneIndex = 135
-            Cutscene()
+            # Cutscene()
         elif units.Yranecrem in units.UnitsAlive and CutsceneIndex <= 145:
             if CutsceneIndex == 135:
                 Text3("[Bonus Conversation Unlocked]")
@@ -11822,7 +11822,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 145:
             CutsceneIndex = 146
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 146:
             Text1("Proton: Hmmm, what's this? It looks like a box...",units.Proton.Portrait)
             CutsceneIndex += 1
@@ -11987,7 +11987,7 @@ def Cutscene():
             
         elif CutsceneIndex == 86:
             Chapter = "Chapter 23b"
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 23a": #=====================Chapter23a===============================================================
         ChapterLevel = 44
         if CutsceneIndex == 0:
@@ -12166,7 +12166,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 36:
             CutsceneIndex = 37
-            Cutscene()
+            # Cutscene()
         elif units.Erif in units.UnitsAlive and units.Repins2 in units.UnitsAlive and CutsceneIndex <= 67:
             if CutsceneIndex == 37:
                 Text3("[Bonus Conversation Unlocked]")
@@ -12308,7 +12308,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 67:
             CutsceneIndex = 68
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 68:
             Text3("(...)")
             CutsceneIndex = 0
@@ -12387,7 +12387,7 @@ def Cutscene():
             
         elif CutsceneIndex == 13:
             Chapter = "Chapter 24b"
-            Cutscene()   
+            # Cutscene()   
     elif Chapter == "Chapter 24a": #=====================Chapter24a===============================================================
         ChapterLevel = 47
         if CutsceneIndex == 0:
@@ -12505,7 +12505,7 @@ def Cutscene():
             
         elif CutsceneIndex == 11:
             Chapter = "Chapter 25c"
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 25a": #=====================Chapter25a===============================================================
         ChapterLevel = 50
         if CutsceneIndex == 0:
@@ -12566,7 +12566,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 11:
             CutsceneIndex = 12
-            Cutscene()
+            # Cutscene()
         elif units.B in units.UnitsAlive and CutsceneIndex <= 14:
             if CutsceneIndex == 12:
                 Text2("B: Unique Spell?",units.B.Portrait,units.Break.Portrait)
@@ -12583,7 +12583,7 @@ def Cutscene():
                 
         elif CutsceneIndex <= 14:
             CutsceneIndex = 15
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 15:
             Text3("[Break activates the Unique Spell tome]",)
             CutsceneIndex += 1
@@ -12969,7 +12969,7 @@ def Cutscene():
             else:
                 CutsceneIndex += 1
                 ClearInputs()
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 20:
             Text3("(...)")
             CutsceneIndex += 1
@@ -12985,7 +12985,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 23:
             if units.Scien in units.UnitsAlive:
                 Text1("Scien: It's time to finally end this.",units.Scien.Portrait)
@@ -12993,7 +12993,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 24:
             if units.Quest in units.UnitsAlive:
                 Text1("Romra: The final sector... that sounds a little intimidating...",units.Romra.Portrait)
@@ -13001,7 +13001,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 25:
             if units.TnemecalperI in units.UnitsAlive:
                 Text1("Tnemecalper I: Congratulations.",units.TnemecalperI.Portrait)
@@ -13009,7 +13009,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 26:
             if units.TnemecalperII in units.UnitsAlive:
                 Text1("Tnemecalper II: Congratulations.",units.TnemecalperII.Portrait)
@@ -13017,7 +13017,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 27:
             if units.TnemecalperIII in units.UnitsAlive:
                 Text1("Tnemecalper III: Congratulations.",units.TnemecalperIII.Portrait)
@@ -13025,7 +13025,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 28:
             if units.TnemecalperIV in units.UnitsAlive:
                 Text1("Tnemecalper IV: Congratulations.",units.TnemecalperIV.Portrait)
@@ -13033,7 +13033,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 29:
             if units.Lacirtcele in units.UnitsAlive:
                 Text1("Lacirtcele: Bruh...",units.Lacirtcele.Portrait)
@@ -13041,7 +13041,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 30:
             if units.Damagein in units.UnitsAlive:
                 Text1("Damagein: It's time for the ultimate damage!",units.Damagein.Portrait)
@@ -13049,7 +13049,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 31:
             if units.Healia in units.UnitsAlive:
                 Text1("Healia: I sure didn't think I'd end up here after leaving",units.Healia.Portrait)
@@ -13058,7 +13058,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 32:
             if units.Wob in units.UnitsAlive:
                 Text1("Wob: I wonder if I can officially join the army after this...",units.Wob.Portrait)
@@ -13066,7 +13066,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 33:
             if units.Bladen in units.UnitsAlive:
                 Text1("Bladen: Really can't escape fate, can you?",units.Bladen.Portrait)
@@ -13074,7 +13074,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 34:
             if units.Wodahs in units.UnitsAlive:
                 Text1("Wodahs: So much for a solo mission.",units.Wodahs.Portrait)
@@ -13082,7 +13082,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 35:
             if units.PlayableBladeous in units.UnitsAlive:
                 Text1("Bladeous: ...",units.PlayableBladeous.Portrait)
@@ -13090,7 +13090,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 36:
             if units.Fael in units.UnitsAlive:
                 Text1("Fael: So we're finally here...",units.Fael.Portrait)
@@ -13098,7 +13098,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 37:
             if units.Erif in units.UnitsAlive:
                 Text1("Erif: Our expedition is reaching it's end...",units.Erif.Portrait)
@@ -13106,7 +13106,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 38:
             if units.Vruh in units.UnitsAlive:
                 Text1("Vruh: The ultimate bruh moment awaits...",units.Vruh.Portrait)
@@ -13114,7 +13114,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 39:
             if units.Recils in units.UnitsAlive:
                 Text1("Recils: I'm feeling good about this.",units.Recils.Portrait)
@@ -13122,7 +13122,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 40:
             if units.Repins in units.UnitsAlive:
                 Text1("Repins: The Holy Itucher... it's finally within reach...",units.Repins.Portrait)
@@ -13130,7 +13130,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 41:
             if units.Relaeh in units.UnitsAlive:
                 Text1("Relaeh: We must bring an end to this destruction.",units.Relaeh.Portrait)
@@ -13138,7 +13138,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 42:
             if units.Eulb in units.UnitsAlive:
                 Text1("Eulb: Errr... guess I'm here now?",units.Eulb.Portrait)
@@ -13146,7 +13146,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 43:
             if units.Lias in units.UnitsAlive:
                 Text1("Lias: I've spent too much time at sea... but now that I'm here,",units.Lias.Portrait)
@@ -13155,7 +13155,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 44:
             if units.Eulb in units.UnitsAlive:
                 Text1("Fieht: The fifth sector... sounds like they'll have some valuables!",units.Fieht.Portrait)
@@ -13163,7 +13163,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 45:
             if units.Rethgif in units.UnitsAlive:
                 Text1("Rethgif: This isn't just a fight for the world, this is a fight",units.Rethgif.Portrait)
@@ -13172,7 +13172,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 46:
             if units.Eg in units.UnitsAlive:
                 Text1("Eg: Conclusion.",units.Eg.Portrait)
@@ -13180,7 +13180,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 47:
             if units.Elbon in units.UnitsAlive:
                 Text1("Elbon: Ugh, must a noble as I do something like this?",units.Elbon.Portrait)
@@ -13188,7 +13188,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 48:
             if units.B in units.UnitsAlive:
                 Text1("B: The timeline seems to be following it's destination",units.B.Portrait)
@@ -13197,7 +13197,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 49:
             if units.Xuirventh in units.UnitsAlive:
                 Text1("Xuirventh: It's time to end this lab!",units.Xuirventh.Portrait)                
@@ -13205,7 +13205,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 50:
             if units.Xuirfth in units.UnitsAlive:
                 Text1("Xuirfth: We've returned to where it all begun. Now it's",units.Xuirfth.Portrait)
@@ -13214,7 +13214,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 51:
             if units.Xuirer in units.UnitsAlive:
                 Text1("Xuirer: The process is flowing correctly... the timelines are aligning...",units.Xuirer.Portrait)
@@ -13223,7 +13223,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 52:
             if units.Dliug in units.UnitsAlive:
                 Text1("Dliug: Argh! Death to the Xuirists!",units.Dliug.Portrait)
@@ -13231,7 +13231,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 53:
             if units.Exa in units.UnitsAlive:
                 Text1("Exa: It is time for them to learn what fear feels like.",units.Exa.Portrait)
@@ -13239,7 +13239,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 54:
             if units.Yranecrem in units.UnitsAlive:
                 Text1("Yranecrem: Will this finally end the cycle of destruction?",units.Yranecrem.Portrait)
@@ -13247,7 +13247,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 55:
             if units.Geomer in units.UnitsAlive:
                 Text1("Geomer: The power of Geom will prevail!",units.Geomer.Portrait)
@@ -13255,7 +13255,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 56:
             if units.Box in units.UnitsAlive:
                 Text1("Box: Huh, how did I end up here?",units.Box.Portrait)
@@ -13263,7 +13263,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 57:
             if units.NOTOS in units.UnitsAlive:
                 Text1("NOTOS: Hahahaha! Let's see how they fair against me!",units.NOTOS.Portrait)
@@ -13271,7 +13271,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 58:
             if units.YungPoggers in units.UnitsAlive:
                 Text1("Yung Poggers: The preparations are nearing completion. The process will soon be",units.YungPoggers.Portrait)
@@ -13280,7 +13280,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 59:
             if units.Dnefed in units.UnitsAlive:
                 Text1("Dnefed: So I ended up at the Itucher anyways, huh.",units.Dnefed.Portrait)
@@ -13288,7 +13288,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 60:
             if units.Thgif in units.UnitsAlive:
                 Text1("Thgif: With or without Dael, we still end up here. Funny how",units.Thgif.Portrait)
@@ -13297,7 +13297,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 61:
             if units.Gnirif in units.UnitsAlive:
                 Text1("Gnirif: So we can't escape the hunt of the Itucher,",units.Gnirif.Portrait)
@@ -13306,7 +13306,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 62:
             if units.Cigam in units.UnitsAlive:
                 Text1("Cigam: It seems fate cannot be escaped from, really something to",units.Cigam.Portrait)
@@ -13315,7 +13315,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 63:
             if units.Fiyghtrr in units.UnitsAlive:
                 Text1("Fiyghtrr: After this, we'll finally get revenge for what they've",units.Fiyghtrr.Portrait)
@@ -13324,7 +13324,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 64:
             if units.Recalper in units.UnitsAlive:
                 Text1("Recalper: They'll sure need a replacement after what I do them!",units.Recalper.Portrait)
@@ -13332,7 +13332,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 65:
             if units.Tabmoc in units.UnitsAlive:
                 Text1("Tabmoc: The Itucher, huh. This better be a good challenge.",units.Tabmoc.Portrait)
@@ -13340,7 +13340,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 66:
             if units.Xuirurth in units.UnitsAlive:
                 Text1("Xuirurth: This battle is for Xuirventh, Xuirfth, and all of the",units.Xuirurth.Portrait)
@@ -13349,7 +13349,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 67:
             if units.Repins2 in units.UnitsAlive:
                 Text1("Repins: The Holy Itucher... finally...",units.Repins2.Portrait)
@@ -13357,7 +13357,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 68:
             if units.Ahcem in units.UnitsAlive:
                 Text1("Ahcem: It's time to stop 'em!",units.Ahcem.Portrait)
@@ -13365,7 +13365,7 @@ def Cutscene():
                 
             else:
                 CutsceneIndex += 1
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 69:
             Text1("Proton: It's been a long journey, but it's finally coming to",units.Proton.Portrait)
             line2("an end...")
@@ -13445,7 +13445,7 @@ def Cutscene():
               
         elif CutsceneIndex == 8:
             Chapter = "Chapter 26d"
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 26a": #=====================Chapter26a===============================================================
         ChapterLevel = 50
         if CutsceneIndex == 0:
@@ -13604,31 +13604,31 @@ def Cutscene():
         elif units.Quest in units.UnitsAlive and units.Scien in units.UnitsAlive:
             CutsceneIndex = 0
             Chapter = "Chapter 27a"
-            Cutscene()
+            # Cutscene()
         elif moves.BothDead in units.Repins.Attacks:
             CutsceneIndex = 0
             Chapter = "Chapter 27c"
-            Cutscene()
+            # Cutscene()
         elif moves.OneDead in units.Repins.Attacks:
             CutsceneIndex = 0
             Chapter = "Chapter 27b"
-            Cutscene()
+            # Cutscene()
         elif units.Ahcem in units.UnitsAlive and units.Ahcem.Level >= 57:
             CutsceneIndex = 0
             Chapter = "Chapter 27e"
-            Cutscene()
+            # Cutscene()
         elif units.Quest in units.UnitsAlive:
             CutsceneIndex = 0
             Chapter = "Bad Ending"
-            Cutscene()
+            # Cutscene()
         elif units.Vruh in units.UnitsAlive:
             CutsceneIndex = 0
             Chapter = "Chapter 27d"
-            Cutscene()
+            # Cutscene()
         else:
             CutsceneIndex = 0
             Chapter = "Neutral Ending"
-            Cutscene()
+            # Cutscene()
     elif Chapter == "Chapter 26b": #=====================Chapter26b===============================================================
         ChapterLevel = 150
         if CutsceneIndex == 0:
@@ -13678,10 +13678,10 @@ def Cutscene():
         elif CutsceneIndex == 7:
             if units.Azure in units.UnitsAlive:
                 Chapter = "Azure Ending"
-                Cutscene()
+                # Cutscene()
             else:
                 Chapter = "Chapter 27f"
-                Cutscene()
+                # Cutscene()
     elif Chapter == "Chapter 27a": #=====================Chapter27a===============================================================
         ChapterLevel = 51
         if CutsceneIndex == 0:
@@ -15076,7 +15076,7 @@ def Cutscene():
     elif Chapter == "Bad Ending": #=====================BadEnding===============================================================
         if CutsceneIndex == 0:
             CutsceneIndex += 1
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("dark grey")
             Text1("Quest: ...",units.Quest.Portrait)
@@ -15343,7 +15343,7 @@ def Cutscene():
     elif Chapter == "Neutral Ending": #=====================NeutralEnding===============================================================
         if CutsceneIndex == 0:
             CutsceneIndex += 1
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 1:
             screensetup.BattleScreen.bgcolor("dark grey")
             Text1("Proton: ...",units.Proton.Portrait)
@@ -15681,42 +15681,42 @@ def Cutscene():
             line3("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓")
             CutsceneIndex += 1
             
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 17:
             Text1("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓",units.Proton.Portrait)
             line2("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓")
             line3("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓")
             CutsceneIndex += 1
             
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 18:
             Text1("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓",units.Proton.Portrait)
             line2("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓")
             line3("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓")
             CutsceneIndex += 1
             
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 19:
             Text1("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓",units.Proton.Portrait)
             line2("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓")
             line3("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓")
             CutsceneIndex += 1
             
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 20:
             Text1("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓",units.Proton.Portrait)
             line2("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓")
             line3("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓")
             CutsceneIndex += 1
             
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 21:
             Text1("▓▓▓ ▓ ▓▓▓▓▓ ▓ ▓▓▓▓▓▓ ▓▓▓▓ ▓▓▓ ▓ ▓▓▓▓ ▓▓▓▓ ▓▓ ▓▓▓",units.Proton.Portrait)
             line2("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓")
             line3("▓ ▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓ ▓▓▓▓▓▓▓ ▓ ▓▓▓▓ ▓")
             CutsceneIndex += 1
             
-            Cutscene()
+            # Cutscene()
         elif CutsceneIndex == 22:
             for x in range(2):
                 Text1("▓▓▓ ▓ ▓▓▓▓ ▓▓ ▓▓▓▓ ▓▓▓▓▓▓ ▓▓ ▓▓ ▓▓▓▓▓ ▓▓▓ ▓▓▓ ▓▓",units.Proton.Portrait)
@@ -15793,7 +15793,7 @@ def Cutscene():
                     
             else:
                 CutsceneIndex = 5
-                Cutscene()
+                # Cutscene()
         elif CutsceneIndex == 5:
             register_shape("pernicious_big")
             Text1("i am pernicious",pernicious)
@@ -16096,7 +16096,7 @@ def LoadData():
             print("listofattacks",unit.Attacks)
             print("listofsupports",unit.Supports)
         
-        Cutscene()
+        # Cutscene()
 
 def SkipCutscene():
     
@@ -16109,24 +16109,24 @@ def SkipCutscene():
         if Chapter == "Prologue1": #=====================Prologue1===============================================================
             Chapter = "Prologue2"
             CutsceneIndex = 0
-            Cutscene()
+            # Cutscene()
         elif Chapter == "Prologue2" and CutsceneIndex !=25 and CutsceneIndex !=26: #=====================Prologue2===============================================================
             screensetup.BattleScreen.bgcolor("green")
             if CutsceneIndex <= 24:
                 CutsceneIndex = 24
-            Cutscene()
+            # Cutscene()
         # elif Chapter == "Chapter 01" and CutsceneIndex != 3 and CutsceneIndex < 3: #=====================Chapter01===============================================================
         #     CutsceneIndex = 2
-        #     Cutscene()
+        #     # Cutscene()
         # elif Chapter == "Chapter 01" and len(units.UnitsAlive) == 1 and CutsceneIndex > 3: #=====================Chapter01(only proton survived)===============================================================
         #     register_shape("azurehooded_big")
         #     CutsceneIndex = 10
-        #     Cutscene()
+        #     # Cutscene()
         # elif Chapter == "Chapter 01" and TnemecalpersJoined == True and CutsceneIndex != 10: #=====================Chapter01(only proton sruvived)===============================================================
         #     register_shape("azurehooded_big")
         #     CutsceneIndex = 0
         #     Chapter = "Chapter 02"
-        #     Cutscene()
+        #     # Cutscene()
 
 def BattleStart():
     global UnitsToPlace
@@ -16152,130 +16152,130 @@ def RomraRecruitYes():
     global RecruitRomra
     ()
     RecruitRomra = True
-    Cutscene()
+    # Cutscene()
 def RomraRecruitNo():
     global RecruitRomra
     ()
     RecruitRomra = False
-    Cutscene()
+    # Cutscene()
 
 def LacirtceleRecruitYes():
     global RecruitLacirtcele
     ()
     RecruitLacirtcele = True
-    Cutscene()
+    # Cutscene()
 def LacirtceleRecruitNo():
     global RecruitLacirtcele
     ()
     RecruitLacirtcele = False
-    Cutscene()
+    # Cutscene()
 
 def DamageinRecruitYes():
     global RecruitDamagein
     ()
     RecruitDamagein = True
-    Cutscene()
+    # Cutscene()
 def DamageinRecruitNo():
     global RecruitDamagein
     ()
     RecruitDamagein = False
-    Cutscene()
+    # Cutscene()
 
 def HealiaRecruitYes():
     global RecruitHealia
     ()
     RecruitHealia = True
-    Cutscene()
+    # Cutscene()
 def HealiaRecruitNo():
     global RecruitHealia
     ()
     RecruitHealia = False
-    Cutscene()
+    # Cutscene()
 
 def WobRecruitYes():
     global RecruitWob
     ()
     RecruitWob = True
-    Cutscene()
+    # Cutscene()
 def WobRecruitNo():
     global RecruitWob
     ()
     RecruitWob = False
-    Cutscene()
+    # Cutscene()
 
 def BladenRecruitYes():
     global RecruitBladen
     ()
     RecruitBladen = True
-    Cutscene()
+    # Cutscene()
 def BladenRecruitNo():
     global RecruitBladen
     ()
     RecruitBladen = False
-    Cutscene()
+    # Cutscene()
 
 def WodahsRecruitYes():
     global RecruitWodahs
     ()
     RecruitWodahs = True
-    Cutscene()
+    # Cutscene()
 def WodahsRecruitNo():
     global RecruitWodahs
     ()
     RecruitWodahs = False
-    Cutscene()
+    # Cutscene()
 
 def FaelRecruitYes():
     global RecruitFael
     ()
     RecruitFael = True
-    Cutscene()
+    # Cutscene()
 def ErifRecruitYes():
     global RecruitErif
     ()
     RecruitErif = True
-    Cutscene()
+    # Cutscene()
 def RecruitNeither():
     ()
-    Cutscene()
+    # Cutscene()
 def VruhRecruitYes():
     global RecruitVruh
     ()
     RecruitVruh = True
-    Cutscene()
+    # Cutscene()
 
 def RepinsRecruitYes():
     global RecruitRepins
     ()
     RecruitRepins = True
-    Cutscene()
+    # Cutscene()
 
 def RelaehRecruitYes():
     global RecruitRelaeh
     ()
     RecruitRelaeh = True
-    Cutscene()
+    # Cutscene()
 
 def LiasRecruitYes():
     global RecruitLias
     ()
     RecruitLias = True
-    Cutscene()
+    # Cutscene()
 
 def QinputYes():
     global Qinput
     ()
     Qinput = True
-    Cutscene()
+    # Cutscene()
 
 def WinputYes():
     global Winput
     ()
     Winput = True
-    Cutscene()
+    # Cutscene()
 
 def EinputYes():
     global Einput
     ()
     Einput = True
-    Cutscene()
+    # Cutscene()

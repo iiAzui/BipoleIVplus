@@ -71,7 +71,8 @@
 		"left": "proton",
 		"speaker": "left",
 		"text": "But we'll need to be careful, the Bipole Sea is a dangerous place.",
-		"name_left": "Proton"
+		"name_left": "Proton",
+		"battle": "Chapter11a"
 	},
 	{
 		"left": "proton",
@@ -80,6 +81,7 @@
 		"name_left": "Proton",
 		"bgcolor": "navy"
 	},
+	{},
 	{
 		"text": "[A small boat passes by Proton's ship]"
 	},
@@ -126,8 +128,6 @@
 		"text": "???: Okay then."
 	},
 	{
-		"text": "[Chapter 12a] [Bipole Sea, Bipole Sea]",
-		"bgcolor": "black",
 		"startchapter": "Chapter12a"
 	}
 ]

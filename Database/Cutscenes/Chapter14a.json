@@ -1,5 +1,9 @@
 [
 	{
+		"text": "[Chapter 14a] [Bipole Sea, Bipole Sea]",
+		"bgcolor": "black"
+	},
+	{
 		"left": "proton",
 		"right": "bigbrainneville",
 		"text": "???: Hmmm.....",
@@ -18,8 +22,11 @@
 	{
 		"left": "proton",
 		"right": "bigbrainneville",
-		"text": "???: Everyone, CHARGE!!!"
+		"text": "???: Everyone, CHARGE!!!",
+		"battle": "Chapter14a"
 	},
+	{},
+	{},
 	{
 		"left": "proton",
 		"speaker": "left",
@@ -121,8 +128,6 @@
 		"text": "???: Okay..."
 	},
 	{
-		"text": "[Chapter 15a] [Bipole Sea, Bipole Sea]",
-		"bgcolor": "black",
 		"startchapter": "Chapter15a"
 	}
 ]

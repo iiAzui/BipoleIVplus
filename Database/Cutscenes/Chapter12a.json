@@ -1,5 +1,9 @@
 [
 	{
+		"text": "[Chapter 12a] [Bipole Sea, Bipole Sea]",
+		"bgcolor": "black"
+	},
+	{
 		"left": "proton",
 		"speaker": "left",
 		"text": "...",
@@ -45,11 +49,10 @@
 		"left": "proton",
 		"speaker": "left",
 		"text": "There are some enemies approaching, prepare for battle!",
-		"name_left": "Proton"
+		"name_left": "Proton",
+		"battle": "Chapter12a"
 	},
 	{
-		"text": "[Chapter 13a] [Bipole Sea, Bipole Sea]",
-		"bgcolor": "black",
 		"startchapter": "Chapter13a"
 	}
 ]

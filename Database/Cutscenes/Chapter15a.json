@@ -1,5 +1,9 @@
 [
 	{
+		"text": "[Chapter 15a] [Bipole Sea, Bipole Sea]",
+		"bgcolor": "black"
+	},
+	{
 		"left": "proton",
 		"right": "kaptainkneville",
 		"text": "K'Neville: Yerrrrr....",
@@ -9,7 +13,8 @@
 		"left": "proton",
 		"right": "kaptainkneville",
 		"text": "K'Neville: Do I have to do everything myself?",
-		"bgcolor": "navy"
+		"bgcolor": "navy",
+		"battle": "Chapter15a"
 	},
 	{
 		"left": "proton",
@@ -170,6 +175,7 @@
 	{
 		"text": "(Proton leaves)"
 	},
+	{},
 	{
 		"left": "proton",
 		"speaker": "left",
@@ -266,6 +272,7 @@
 		"left": "proton",
 		"text": "(Proton throws ??? back into the ocean)"
 	},
+	{},
 	{
 		"left": "proton",
 		"speaker": "left",

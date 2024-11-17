@@ -425,6 +425,10 @@
 				"text": "Romra: Yes! Thank you!",
 				"left": "romra_big",
 				"right": "proton_big"
+			},
+			{
+				"the_displayed_text_should_be_todo_implement": "[Romra has joined your party!]",
+				"recruit": ["Romra"]
 			}
 		],
 		"false": [
@@ -434,13 +438,6 @@
 				"right": "proton_big"
 			}
 		]
-	},
-	{
-		"left": "romra",
-		"right": "proton",
-		"speaker": "left",
-		"text": "Oh, sorry for bothering you.",
-		"name_left": "Romra"
 	},
 	{
 		"left": "scien",

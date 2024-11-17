@@ -1,5 +1,9 @@
 [
 	{
+		"text": "[Chapter 27a] [Sector 5, Shadow Realm Research Center]",
+		"bgcolor": "black"
+	},
+	{
 		"left": "quest",
 		"speaker": "left",
 		"text": "...",
@@ -258,7 +262,8 @@
 		"text": "[Integer joined your party]"
 	},
 	{
-		"text": "[Quest has left your party]"
+		"text": "[Quest has left your party]",
+		"battle": "Chapter27a"
 	},
 	{
 		"left": "xuirman",

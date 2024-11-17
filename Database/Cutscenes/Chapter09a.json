@@ -8,7 +8,8 @@
 		"speaker": "left",
 		"text": "We need to return quickly.",
 		"name_left": "Proton",
-		"bgcolor": "dark green"
+		"bgcolor": "dark green",
+		"battle": "Chapter09a"
 	},
 	{
 		"left": "proton",
@@ -23,8 +24,6 @@
 		"name_left": "Proton"
 	},
 	{
-		"text": "[Chapter 10a] [Outer Static, Territory of Static]",
-		"bgcolor": "black",
 		"startchapter": "Chapter10a"
 	}
 ]

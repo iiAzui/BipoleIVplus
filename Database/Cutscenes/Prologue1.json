@@ -1,0 +1,243 @@
+[
+	{
+		"text": "[Year 1279 AN] [Shadow Realm Research Center]",
+		"bgcolor": "black"
+	},
+	{
+		"left": "deathpepper",
+		"speaker": "left",
+		"text": "Scien!",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "Yes?",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "Has the second protype awakened it's Xuir Arts yet?",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "Not yet, sir.",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "Then it's likely another failure.",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "Prepare the new extraction room, I might as well get some life energy from this.",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "And who knows, the torture might awaken one of it's arts.",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "Sir...",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "Sir... I will not.",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "You dare defy my orders?",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "I've worked at this research center for the past seven years, but I can no longer handle this suffering.",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "I will likely die, but atleast this will reduce the suffering of others.",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "I've suspected that you'd betray me.",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "Don't think that I haven't noticed that the Forbidden Ritual you had given was fake.",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "You attempted the Forbidden Ritual of Nation!?",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "The only reason you're still alive is because of your of your efficiency, though it seems that you'll no longer cooperate with us.",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "It's a shame that I'll have to kill you now, the only other person that could replace you is Break, and let's say that I'm not his biggest fan.",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "It's been eight painful years since you destroyed my town for the Forbidden Ritual...",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "For these eight years, I've lacked the courage to stop the pain, to not continue to work with you...",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "I should have done this earlier, but it is something I can no longer live with.",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "Though it will not make up for my past actions, I will do everything I can to save even one soul from this place.",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "(Scien grabs a young child)"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "What do you think you're doing!?",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "If he stays here, he will die in three days when the extraction finishes. With this, he will have a chance of surival.",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"text": "(Scien activates a device)"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "left",
+		"text": "BREAK! DEACTIVATE THE DEVICE!",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "break",
+		"speaker": "right",
+		"text": "The device seems to be malfunctioning...",
+		"name_right": "Break"
+	},
+	{
+		"left": "deathpepper",
+		"right": "break",
+		"speaker": "left",
+		"text": "Wait, does that mean...",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "break",
+		"speaker": "left",
+		"text": "You fool! There's no way you'll survive with a broken teleporter! Who knows where it'll take you.",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "break",
+		"speaker": "left",
+		"text": "You'll probably starve in the middle of the ocean.",
+		"name_left": "Death Pepper"
+	},
+	{
+		"left": "deathpepper",
+		"right": "scien_big2",
+		"speaker": "right",
+		"text": "If so, I will accept that fate as punishment.",
+		"name_right": "Scien"
+	},
+	{
+		"left": "deathpepper",
+		"text": "(The teleporter activates and Scien disappears with the child)"
+	},
+	{
+		"left": "deathpepper",
+		"speaker": "left",
+		"text": "They got away, what a waste of resources...",
+		"name_left": "Death Pepper",
+		"startchapter": "Prologue2"
+	}
+]

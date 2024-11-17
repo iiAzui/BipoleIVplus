@@ -43,7 +43,8 @@
 		"left": "proton",
 		"speaker": "left",
 		"text": "Prepare for battle!",
-		"name_left": "Proton"
+		"name_left": "Proton",
+		"battle": "Chapter17c"
 	},
 	{
 		"left": "proton",
@@ -348,6 +349,9 @@
 		"text": "Well, I've gotta go fight some Xuirists.",
 		"name_right": "Xuirventh"
 	},
+	{},
+	{},
+	{},
 	{
 		"text": "[Bonus Conversation Unlocked]"
 	},

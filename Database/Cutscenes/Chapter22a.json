@@ -126,6 +126,7 @@
 		"name_left": "Proton",
 		"bgcolor": "dim gray"
 	},
+	{},
 	{
 		"text": "(...)"
 	},
@@ -150,6 +151,11 @@
 		"left": "if",
 		"text": "???: Well, let's see how they do against us."
 	},
+	{},
+	{},
+	{},
+	{},
+	{},
 	{},
 	{
 		"left": "proton",

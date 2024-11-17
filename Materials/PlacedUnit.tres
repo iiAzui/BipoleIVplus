@@ -9,6 +9,6 @@ render_priority = 0
 shader = ExtResource("1_70tgq")
 shader_parameter/use_billboard = true
 shader_parameter/acted = false
-shader_parameter/overlay_color = Vector4(0, 0, 0, 0)
+shader_parameter/overlay_color = Vector3(1, 1, 1)
 shader_parameter/overlay_blend = 0.0
 shader_parameter/texture_albedo = ExtResource("2_iow7o")

@@ -9,6 +9,9 @@ import re
 
 cutscenes.Chapter = "Prologue1"
 
+# won't export these ones
+skip_chapters = "Chapter01"
+
 prev_index = -1
 
 speaker_pattern = r'([a-zA-Z ?\'])+: '
@@ -69,14 +72,17 @@ def export_chapter(cutscene_name: str):
         if cutscenes.Chapter != cutscene_name:
             line["startchapter"] = cutscenes.Chapter.replace(" ","")
 
-        if placeunits.battle_started:
+        if cutscenes.battle_started:
             line["battle"] = ref_name
+            cutscenes.battle_started = False
 
         if select.instant_level_ups:
             line["instant_level_ups"] = select.instant_level_ups
             select.instant_level_ups = []
 
-        
+        if len(screensetup.current_branches) > 0:
+            print("branches found: ", screensetup.current_branches)
+            screensetup.current_branches.clear()
 
         dialogue_lines.append(line)
 
@@ -88,9 +94,10 @@ def export_chapter(cutscene_name: str):
 
     json_data = json.dumps(dialogue_lines, indent="\t")
     
-    file_path = os.path.join("./Database/Cutscenes", f"{ref_name}-converted.json")
-    with open(file_path, "w") as file:
-        file.write(json_data)
+    if not ref_name in skip_chapters:
+        file_path = os.path.join("./Database/Cutscenes", f"{ref_name}-converted.json")
+        with open(file_path, "w") as file:
+            file.write(json_data)
 
 max_iters_left = 2000
 while cutscenes.Chapter and not cutscenes.cutscene_ended:
