@@ -29,7 +29,6 @@ func show_highlight(coords: Vector2i, highlight_color: Color):
 		var highlight: Sprite3D = grid[coords]
 		highlight.visible = true
 		highlight.modulate = highlight_color
-		print("showing ", highlight_color, " at ", coords)
 	else:
 		printerr("coords ", coords, " not found in grid")
 

@@ -137,7 +137,7 @@ func display_next_line(close_current_line: bool = true) -> void:
 		var unit_name: String = line["recruitment_choice"]
 		var unit: Unit = ResourceLoader.load("res://Database/RecruitedUnits/"+unit_name+".tres", "Unit") as Unit
 		if not unit:
-			printerr("unit to recruit not found in Database/RecruitedUnits: ", unit_name)
+			printerr("recruitment choice unit not found in Database/RecruitedUnits: ", unit_name)
 			display_next_line()
 			return
 			
@@ -148,6 +148,27 @@ func display_next_line(close_current_line: bool = true) -> void:
 		choices.add_choice("Recruit", choose_choice_option.bind("true"))
 		choices.add_choice("Do not recruit", choose_choice_option.bind("false"))
 		choices.show()
+		
+	if line.has("recruit"):
+		var recruits: Array
+		var recruit: Variant = line["recruit"]
+		if recruit is Array:
+			recruits = recruit
+		elif recruit is String:
+			recruits = [recruit]
+		else:
+			printerr("invalid recruit type: ", recruit)
+		
+		for unit_name in recruits:
+			var unit: Unit = ResourceLoader.load("res://Database/RecruitedUnits/"+unit_name+".tres", "Unit") as Unit
+			if unit:
+				SaveData.save.units.append(unit)
+				print("recruited ", unit.character.display_name)
+				if not line.has("text"):
+					line["text"] = "["+unit.character.display_name+" has joined your party!]"
+			else:
+				printerr("unit to recruit not found: ", unit_name)
+		
 	
 	# "condition" key signifies a branch start
 	if line.has("condition"):
@@ -155,7 +176,8 @@ func display_next_line(close_current_line: bool = true) -> void:
 		var branch_name = "true" if condition_is_true else "false"
 		enter_branch(branch_name)
 			
-	else:
+	# if no condition for entering a branch, display text if any
+	elif line.has("text"):
 		dialogue_text.text = line["text"] if line.has("text") else ""
 		
 		var left_character = try_get_character(line["left"] if line.has("left") else "")	
@@ -168,9 +190,10 @@ func display_next_line(close_current_line: bool = true) -> void:
 		name_right.text = right_name_string
 		set_portrait(portrait_right, right_character.portrait if right_character else (get_portrait(line["right"]) if line.has("right") else null))
 		
-		if not line.has("text"):
-			display_next_line()
-			return
+	# if no text or condition, warn empty line and continue
+	else:
+		printerr("empty/redundant line")
+		display_next_line()
 		
 func choose_choice_option(branch_name: String):
 	choices.hide()

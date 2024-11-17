@@ -377,10 +377,9 @@ func use_skill(attacker: PlacedUnit, defender: PlacedUnit, move: Move):
 	clear_if_dead(attacker)
 	clear_if_dead(defender)
 		
-	if accept_battle_inputs:
+	if is_player_turn:
 		await get_tree().create_timer(0.25).timeout
-		if is_player_turn:
-			battle_camera.standard_view()
+		battle_camera.standard_view()
 	
 # Clear unit if dead. ALso check if all allies/enemies are dead and win/lose the game accordingly.
 func clear_if_dead(placed_unit: PlacedUnit):
