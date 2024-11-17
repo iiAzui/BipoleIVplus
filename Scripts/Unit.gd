@@ -54,8 +54,8 @@ signal level_changed
 @export var agl_growth: Vector2i = Vector2i(50, 1)
 @export var acr_growth: Vector2i = Vector2i(50, 1)
 
-var max_hp: int
-var exp: int = 0 # Level up every 100 EXP
+@export var max_hp: int
+@export var exp: int = 0 # Level up every 100 EXP
 
 func _init() -> void:
 	print("init ", resource_name)
@@ -77,3 +77,29 @@ func get_counter_hit_chance(defender: Unit):
 
 func is_alive():
 	return hp > 0
+
+func gain_xp(amount: int):
+	exp += amount
+
+# Returns an array of the total stat changes, as a lit of [HP, ATK, DEF, RES, AGL, ACR] points gained.
+func level_up() -> Array[int]:
+	level += 1
+	
+	var stats: Array[String] = ["max_hp", "attack", "defense", "resistance", "agility", "accuracy"]
+	var growths: Array[String] = ["hp_growth", "atk_growth", "def_growth", "res_growth", "agl_growth", "acr_growth"]
+	var stat_gains: Array[int] = []
+	stat_gains.resize(6)
+	
+	for i in 6:
+		var growth: Vector2i = self.get(growths[i])
+		var chance = float(growth.x)/100
+		if randf() < chance:
+			var gain: int = randi_range(1, growth.y)
+			stat_gains[i] = gain
+			self.set(stats[i], self.get(stats[i]) + gain)
+			if stats[i] == "max_hp":
+				hp += gain
+		else:
+			stat_gains[i] = 0
+		
+	return stat_gains

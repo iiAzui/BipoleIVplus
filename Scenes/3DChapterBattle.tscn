@@ -168,16 +168,17 @@ layout_direction = 3
 [node name="StatsVBoxContainer" parent="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer" index="1"]
 layout_direction = 2
 
-[node name="HealthBeforeDamageBar" parent="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="2"]
+[node name="HealthBeforeDamageBar" parent="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="0"]
 fill_mode = 0
 
-[node name="HealthBar" parent="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="3"]
+[node name="HealthBar" parent="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" index="1"]
 fill_mode = 0
 
 [node name="EXPBar" parent="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer" index="2"]
 fill_mode = 0
 
 [node name="MoveSelectPanel" type="PanelContainer" parent="UICanvasLayer/Screen" node_paths=PackedStringArray("move_name_label", "prev_arrow", "next_arrow")]
+visible = false
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -215,6 +216,7 @@ text = ">
 "
 
 [node name="OutgoingHitChance" type="PanelContainer" parent="UICanvasLayer/Screen" node_paths=PackedStringArray("move_name_label")]
+visible = false
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -247,6 +249,7 @@ theme_override_font_sizes/font_size = 32
 text = "85%"
 
 [node name="IncomingHitChance" type="PanelContainer" parent="UICanvasLayer/Screen" node_paths=PackedStringArray("move_name_label")]
+visible = false
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -279,6 +282,7 @@ theme_override_font_sizes/font_size = 32
 text = "85%"
 
 [node name="AttackButton" type="Button" parent="UICanvasLayer/Screen"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -295,6 +299,7 @@ theme_override_font_sizes/font_size = 28
 text = "ATTACK!"
 
 [node name="DamagePreviewPanel" type="PanelContainer" parent="UICanvasLayer/Screen" node_paths=PackedStringArray("skill_preview", "counter_preview", "followup_preview")]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -376,6 +381,7 @@ environment = SubResource("Environment_m2r1f")
 [connection signal="pressed" from="UICanvasLayer/Screen/AttackButton" to="." method="attack_pressed"]
 
 [editable path="UICanvasLayer/Screen/EnemyUnitPreview"]
+[editable path="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/StatDisplay"]
 [editable path="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/ATKStatDisplay"]
 [editable path="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/DEFStatDisplay"]
 [editable path="UICanvasLayer/Screen/EnemyUnitPreview/MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/RESStatDisplay"]

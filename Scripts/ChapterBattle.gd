@@ -22,13 +22,17 @@ extends Node3D
 @export var incoming_hit_percent: Control
 @export var outgoing_hit_percent_label: Label
 @export var incoming_hit_percent_label: Label
-
 @export var battle_camera: BattleCamera
+
+# Also known as level determinant for the chapter
+@export var chapter_level: int = 100
 
 const RETRO_WIDTH: int = 19
 const RETRO_HEIGHT: int = 14
 
 const TILE_SIZE: float = 64.0
+
+const EXP_GAIN_MULT: float = 1.0
 
 var is_player_turn: bool = true
 var accept_battle_inputs: bool = true # disable during animations
@@ -165,12 +169,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("7"):
 		select_move(6)
 	elif event.is_action_pressed("DebugDamageAllEnemies"):
-		for unit in unit_grid.enemy_units:
-			damage_and_clear_if_dead(unit, 9999)
+		for enemy_target in unit_grid.enemy_units.duplicate():
+			damage_and_clear_if_dead(enemy_target, null, 9999)
 		
-func damage_and_clear_if_dead(unit: PlacedUnit, damage: int):
-	await unit.take_damage_with_animation(damage)
-	clear_if_dead(unit)
+func damage_and_clear_if_dead(target: PlacedUnit, attacker: PlacedUnit, damage: int):
+	target.take_damage_with_animation(damage)
+	check_for_defeat(attacker, target)
 		
 func start_player_turn():
 	for unit in unit_grid.enemy_units:
@@ -373,20 +377,37 @@ func use_skill(attacker: PlacedUnit, defender: PlacedUnit, move: Move):
 					await attack_animation(followup_attacker, followup_defender, null, 0, true)
 				await get_tree().create_timer(0.25).timeout	
 	
-	# if either unit died, remove them from the grid
-	clear_if_dead(attacker)
-	clear_if_dead(defender)
+	# if either unit died, remove them from the grid and increase XP of the killed
+	await check_for_defeat(attacker, defender)
+	
+	# check other to see if queue freed yet or not
+	if is_instance_valid(defender) and is_instance_valid(attacker):
+		await check_for_defeat(defender, attacker)
 		
 	if is_player_turn:
 		await get_tree().create_timer(0.25).timeout
 		battle_camera.standard_view()
 	
 # Clear unit if dead. ALso check if all allies/enemies are dead and win/lose the game accordingly.
-func clear_if_dead(placed_unit: PlacedUnit):
-	if not placed_unit.unit.is_alive():
-		unit_grid.erase_unit(placed_unit.coords)
+# Also reward XP to the attacker if the defender is defeated.
+func check_for_defeat(attacker: PlacedUnit, defender: PlacedUnit):
+	if not defender.unit.is_alive():
+		unit_grid.erase_unit(defender.coords)
+		defender.death_animation()
+		
+		if attacker:
+			var exp_gain: int = roundi(float(defender.unit.exp_reward) * EXP_GAIN_MULT)
+			attacker.unit.gain_xp(exp_gain)
+			await exp_animation(attacker, exp_gain)
+			await get_tree().create_timer(0.25).timeout
+			while attacker.unit.exp > 100:
+				attacker.unit.exp -= 100
+				var stat_gains: Array[int] = attacker.unit.level_up()
+				await levelup_animation(attacker, stat_gains)
+				await get_tree().create_timer(0.25).timeout
+		
 	else:
-		placed_unit.update_unit_visual()
+		defender.update_unit_visual()
 		
 	if unit_grid.allied_units.is_empty():
 		lose()
@@ -394,6 +415,18 @@ func clear_if_dead(placed_unit: PlacedUnit):
 	elif unit_grid.enemy_units.is_empty():
 		win()
 		return
+	
+func exp_animation(placed_unit: PlacedUnit, exp_gained: int):
+	# TODO: eventually there iwill probably be a brief animation here instead of just showing the unit preview
+	allied_unit_preview.display_unit(placed_unit)
+	allied_unit_preview.show_exp_gain(exp_gained)
+	await get_tree().create_timer(0.25).timeout
+		
+func levelup_animation(placed_unit: PlacedUnit, stat_gains: Array[int]):
+	# TODO: brief animation (probably)
+	allied_unit_preview.display_unit(placed_unit)
+	allied_unit_preview.show_levelup(stat_gains)
+	await get_tree().create_timer(0.75).timeout
 		
 func attack_animation(attacker: PlacedUnit, target: PlacedUnit, move: Move, damage: int, miss: bool = false):
 	await attacker.attack_animation(target, move, damage, miss)

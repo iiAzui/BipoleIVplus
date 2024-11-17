@@ -93,10 +93,6 @@ func damage_animation(damage: int, move: Move, miss: bool, is_heal: bool = false
 	var modulate_color: Color = Color(0, 0.9, 0) if is_heal else Color(0.9, 0, 0)
 	
 	shader_mat.set_shader_parameter("overlay_color", modulate_color)
-	if miss:
-		pass
-	else:
-		get_tree().create_tween().tween_method(set_overlay_blend, 0, 0.5, 0.4)
 	
 	var popup: DamagePopup = DAMAGE_POPUP.instantiate() as DamagePopup
 	add_child(popup)
@@ -106,11 +102,18 @@ func damage_animation(damage: int, move: Move, miss: bool, is_heal: bool = false
 	if miss:
 		pass
 	else:
-		await get_tree().create_tween().tween_method(set_overlay_blend, 0.5, 0, 0.4).finished
+		get_tree().create_tween().tween_method(set_overlay_blend, 0.5, 0, 0.4)
 	
 func take_damage_with_animation(damage: int):
 	unit.take_damage(damage)
 	await damage_animation(damage, null, false, false)
+	
+func death_animation():
+	shader_mat.set_shader_parameter("overlay_color", Color.BLACK)
+	set_overlay_blend(0)
+	get_tree().create_tween().tween_method(set_overlay_blend, 0, 1, 0.5)
+	await get_tree().create_timer(0.75).timeout
+	queue_free()
 	
 func set_overlay_blend(value: float):
 	#print(value)

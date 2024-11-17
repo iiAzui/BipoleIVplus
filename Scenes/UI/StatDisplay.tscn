@@ -1,11 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://re8l7ocsynq6"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_07i8a"]
-font_size = 20
-font_color = Color(0.103744, 0.103744, 0.103744, 1)
-outline_color = Color(0, 0, 0, 1)
+[ext_resource type="Script" path="res://Scripts/StatDisplay.gd" id="1_xtntj"]
 
-[node name="StatDisplay" type="Control"]
+[node name="StatDisplay" type="Control" node_paths=PackedStringArray("label", "growth_label")]
 custom_minimum_size = Vector2(96, 28)
 layout_mode = 3
 anchors_preset = 0
@@ -13,27 +10,47 @@ offset_right = 96.0
 offset_bottom = 28.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
+script = ExtResource("1_xtntj")
+label = NodePath("Label")
+growth_label = NodePath("GrowthLabel")
 
 [node name="HeaderLabel" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_left = 4.0
-offset_top = 2.0
+offset_top = 1.0
 offset_right = 34.0
+offset_bottom = -1.0
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.201527, 0.201527, 0.201527, 1)
 text = "ATK"
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(66, 24)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 41.0
-grow_horizontal = 2
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -12.0
+offset_right = 106.0
+offset_bottom = 12.0
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "123"
-label_settings = SubResource("LabelSettings_07i8a")
-vertical_alignment = 1
+
+[node name="GrowthLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 72.0
+offset_top = -15.0
+offset_right = 102.0
+offset_bottom = 14.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.623529, 0.0117647, 1)
+theme_override_font_sizes/font_size = 20
+text = "+5"

@@ -53,10 +53,9 @@ func move_unit(from: Vector2i, to: Vector2i):
 
 func erase_unit(coords: Vector2i):
 	if coords in grid:
-		var unit = grid[coords]
+		var unit: PlacedUnit = grid[coords]
 		allied_units.erase(unit)
 		enemy_units.erase(unit)
-		grid[coords].queue_free()
 		grid.erase(coords)
 	
 

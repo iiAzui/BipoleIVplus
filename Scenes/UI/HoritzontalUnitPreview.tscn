@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c4ojdylljxwvf"]
+[gd_scene load_steps=11 format=3 uid="uid://c4ojdylljxwvf"]
 
 [ext_resource type="Theme" uid="uid://dyye235a7qia8" path="res://Theme/theme.tres" id="1_gb0mt"]
 [ext_resource type="Script" path="res://Scripts/UnitPreview.gd" id="2_6y0t3"]
@@ -16,25 +16,34 @@ border_width_right = 8
 border_width_bottom = 8
 border_color = Color(0.41598, 0.41598, 0.41598, 1)
 
-[node name="HorizontalUnitPreview" type="PanelContainer" node_paths=PackedStringArray("display_name_label", "portrait_texture_rect", "health_label", "health_bar", "health_before_damage_bar", "level_label", "exp_label", "exp_bar", "atk_label", "def_label", "res_label", "spd_label", "agl_label", "acr_label")]
-offset_right = 608.0
+[sub_resource type="LabelSettings" id="LabelSettings_cwsc8"]
+font_size = 32
+font_color = Color(0, 0.905882, 0, 1)
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="HorizontalUnitPreview" type="PanelContainer" node_paths=PackedStringArray("display_name_label", "portrait_texture_rect", "health_bar", "health_before_damage_bar", "level_label", "exp_display", "exp_bar", "hp_display", "atk_display", "def_display", "res_display", "spd_display", "agl_display", "acr_display", "levelup_notification")]
+offset_right = 624.0
 offset_bottom = 219.0
 theme = ExtResource("1_gb0mt")
 script = ExtResource("2_6y0t3")
 display_name_label = NodePath("MarginContainer/HBoxContainer/PortraitVBoxContainer/DisplayNameLabel")
 portrait_texture_rect = NodePath("MarginContainer/HBoxContainer/PortraitVBoxContainer/PortraitPanelContainer/TextureRect")
-health_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/HealthLabel")
 health_bar = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/HealthBar")
 health_before_damage_bar = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/HealthBeforeDamageBar")
 level_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/LevelLabel")
-exp_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/EXPLabel")
+exp_display = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/EXPStatDisplay")
 exp_bar = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/EXPBar")
-atk_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/ATKStatDisplay/Label")
-def_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/DEFStatDisplay/Label")
-res_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/RESStatDisplay/Label")
-spd_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/SPDStatDisplay/Label")
-agl_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/AGLStatDisplay/Label")
-acr_label = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/ACRStatDisplay/Label")
+hp_display = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/HPStatDisplay")
+atk_display = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/ATKStatDisplay")
+def_display = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/DEFStatDisplay")
+res_display = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/RESStatDisplay")
+spd_display = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/SPDStatDisplay")
+agl_display = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/AGLStatDisplay")
+acr_display = NodePath("MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/ACRStatDisplay")
+levelup_notification = NodePath("LevelupNotification")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -83,20 +92,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="HealthHeaderLabel" type="Label" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 18
-text = "HP"
-
-[node name="HealthLabel" type="Label" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 20
-text = "75/100"
-horizontal_alignment = 2
-
 [node name="HealthBeforeDamageBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer"]
 editor_description = "Drawn underneath (before) the health bar to show the current HP during attack previews."
 custom_minimum_size = Vector2(0, 25)
@@ -130,21 +125,66 @@ stretch_margin_bottom = 3
 texture_over = ExtResource("5_wc2m6")
 texture_progress = ExtResource("6_ifilo")
 
+[node name="HPStatDisplay" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer" instance=ExtResource("8_qqols")]
+layout_mode = 2
+
+[node name="HeaderLabel" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/HPStatDisplay" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_bottom = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "HP"
+
+[node name="Label" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/HPStatDisplay" index="1"]
+offset_left = 36.0
+offset_top = -14.0
+offset_bottom = 14.0
+theme_override_font_sizes/font_size = 20
+text = "123/456"
+
+[node name="GrowthLabel" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/HPStatDisplay" index="2"]
+offset_left = 123.0
+offset_top = -14.0
+offset_right = 149.0
+
 [node name="LevelContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/StatsVBoxContainer"]
-custom_minimum_size = Vector2(380, 45)
+custom_minimum_size = Vector2(400, 45)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 
+[node name="EXPStatDisplay" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer" instance=ExtResource("8_qqols")]
+layout_mode = 2
+
+[node name="HeaderLabel" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/EXPStatDisplay" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_bottom = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "EXP"
+
+[node name="Label" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/EXPStatDisplay" index="1"]
+offset_left = 43.0
+offset_top = -14.0
+offset_right = 126.0
+offset_bottom = 14.0
+theme_override_font_sizes/font_size = 20
+text = "99/100"
+
+[node name="GrowthLabel" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/EXPStatDisplay" index="2"]
+offset_left = 127.0
+offset_top = -14.0
+offset_right = 189.0
+theme_override_colors/font_color = Color(0.130283, 0.490985, 0.977096, 1)
+text = "+512"
+
 [node name="LevelLabel" type="Label" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer"]
 layout_mode = 2
 size_flags_vertical = 0
+theme_override_font_sizes/font_size = 18
 text = "Lv 1"
-
-[node name="EXPLabel" type="Label" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "25/100 EXP"
 horizontal_alignment = 2
 
 [node name="EXPBar" type="TextureProgressBar" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer"]
@@ -205,6 +245,21 @@ layout_mode = 2
 [node name="HeaderLabel" parent="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow2/ACRStatDisplay" index="0"]
 text = "ACR"
 
+[node name="LevelupNotification" type="Control" parent="."]
+layout_mode = 2
+
+[node name="LevelupLabel" type="Label" parent="LevelupNotification"]
+layout_mode = 2
+offset_left = 18.0
+offset_top = -52.0
+offset_right = 578.0
+offset_bottom = -7.0
+theme_override_font_sizes/font_size = 32
+text = "LEVEL UP!"
+label_settings = SubResource("LabelSettings_cwsc8")
+
+[editable path="MarginContainer/HBoxContainer/StatsVBoxContainer/HealthContainer/HPStatDisplay"]
+[editable path="MarginContainer/HBoxContainer/StatsVBoxContainer/LevelContainer/EXPStatDisplay"]
 [editable path="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/ATKStatDisplay"]
 [editable path="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/DEFStatDisplay"]
 [editable path="MarginContainer/HBoxContainer/StatsVBoxContainer/StatRow/RESStatDisplay"]
