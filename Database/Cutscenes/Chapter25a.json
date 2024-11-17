@@ -1,324 +1,264 @@
 [
 	{
-		"text": "[Chapter 27a] [Sector 5, Shadow Realm Research Center]",
+		"text": "[Chapter 25a] [Sector 4, Shadow Realm Research Center]",
 		"bgcolor": "black"
 	},
 	{
-		"left": "quest",
+		"left": "break",
 		"speaker": "left",
 		"text": "...",
-		"name_left": "Quest",
-		"bgcolor": "dark grey"
+		"name_left": "Break",
+		"bgcolor": "light gray"
 	},
 	{
-		"left": "quest",
+		"left": "break",
 		"speaker": "left",
-		"text": "Hmmm? What's this?",
-		"name_left": "Quest"
+		"text": "Omega, you still dare live after that?",
+		"name_left": "Break"
 	},
 	{
-		"text": "(Quest pulls a lever on the wall, opening up a container)"
-	},
-	{
-		"left": "quest",
+		"left": "omegaxuirist",
+		"right": "break",
 		"speaker": "left",
-		"text": "Is this...",
-		"name_left": "Quest"
+		"text": "...",
+		"name_left": "Omega"
 	},
 	{
-		"left": "quest",
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "Since you've directly disobeyed by orders and fought against out security...",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "I'm allowed to kill you.",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "In fact, I'm encouraged to.",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "I think this would be a great time to test out what that Xuirer gave me...",
+		"name_right": "Break"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "The Unique Spell, I believe it was called.",
+		"name_right": "Break"
+	},
+	{
+		"text": "[Break activates the Unique Spell tome]"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "break",
+		"speaker": "right",
+		"text": "Ahh... this power...",
+		"name_right": "Break"
+	},
+	{
+		"text": "[Break suddenly appears behind Omega and stabs him]"
+	},
+	{
+		"left": "omegaxuirist",
 		"speaker": "left",
-		"text": "Yes! It is!",
-		"name_left": "Quest"
+		"text": "So... this is my fate...",
+		"name_left": "Omega"
 	},
 	{
-		"left": "quest",
-		"speaker": "left",
-		"text": "The Holy Itucher...",
-		"name_left": "Quest"
-	},
-	{
-		"left": "quest",
-		"speaker": "left",
-		"text": "It's here, right in front of me...",
-		"name_left": "Quest"
-	},
-	{
-		"left": "quest",
-		"speaker": "left",
-		"text": "My life's work of study and research...",
-		"name_left": "Quest"
-	},
-	{
-		"left": "quest",
-		"speaker": "left",
-		"text": "After all of these years...",
-		"name_left": "Quest"
-	},
-	{
-		"left": "quest",
-		"speaker": "left",
-		"text": "It's finally...",
-		"name_left": "Quest"
-	},
-	{
-		"left": "quest",
+		"left": "omegaxuirist",
 		"right": "proton",
 		"speaker": "right",
-		"text": "Quest, did you find the Itu...",
+		"text": "Omega!",
 		"name_right": "Proton"
 	},
 	{
-		"text": "(Proton is blasted back by an explosion around Quest)",
-		"bgcolor": "red"
-	},
-	{
-		"left": "proton",
+		"left": "omegaxuirist",
+		"right": "proton",
 		"speaker": "left",
-		"text": "Wh...",
-		"name_left": "Proton",
-		"bgcolor": "indigo"
+		"text": "Proton... I'm suprised I even lived so long...",
+		"name_left": "Omega"
 	},
 	{
-		"left": "proton",
+		"left": "omegaxuirist",
+		"right": "proton",
 		"speaker": "left",
-		"text": "Quest! Don't activate the Itucher!",
-		"name_left": "Proton"
+		"text": "I accept my death... there's no use in opposing the Neville Prophecy...",
+		"name_left": "Omega"
 	},
 	{
-		"left": "proton",
-		"right": "questitucher",
-		"speaker": "right",
-		"text": "...",
-		"name_right": "Quest"
-	},
-	{
-		"left": "proton",
-		"right": "questitucher",
+		"left": "omegaxuirist",
+		"right": "proton",
 		"speaker": "left",
-		"text": "Quest!",
-		"name_left": "Proton"
+		"text": "\"The founder of the Xuirists shall be slain by the enemy's blade\"...",
+		"name_left": "Omega"
 	},
 	{
-		"text": "(Quest stabs Proton with the Holy Itucher)"
-	},
-	{
-		"left": "proton",
-		"right": "questitucher",
-		"speaker": "right",
-		"text": "...",
-		"name_right": "Quest"
-	},
-	{
-		"left": "proton",
-		"right": "scien",
-		"speaker": "right",
-		"text": "Proton!",
-		"name_right": "Scien"
-	},
-	{
-		"left": "proton",
-		"right": "scien",
+		"left": "omegaxuirist",
+		"right": "proton",
 		"speaker": "left",
 		"text": "...",
-		"name_left": "Proton"
+		"name_left": "Omega"
 	},
 	{
-		"text": "[Proton has been defeated]"
-	},
-	{
-		"left": "scien",
+		"left": "omegaxuirist",
+		"right": "proton",
 		"speaker": "left",
-		"text": "Proton!!!",
-		"name_left": "Scien"
+		"text": "It was a painful life...",
+		"name_left": "Omega"
 	},
 	{
-		"left": "scien",
-		"right": "questitucher",
-		"speaker": "right",
-		"text": "...",
-		"name_right": "Quest"
-	},
-	{
-		"left": "scien",
-		"right": "questitucher",
+		"left": "omegaxuirist",
+		"right": "proton",
 		"speaker": "left",
-		"text": "Quest, he must be possessed by the Holy Itucher...",
-		"name_left": "Scien"
+		"text": "Finally... I'll be with them again...",
+		"name_left": "Omega"
 	},
 	{
-		"left": "scien",
-		"right": "questitucher",
+		"left": "omegaxuirist",
+		"right": "proton",
 		"speaker": "left",
-		"text": "He's already killed Proton...",
-		"name_left": "Scien"
+		"text": "My family...",
+		"name_left": "Omega"
 	},
 	{
-		"left": "scien",
-		"right": "questitucher",
-		"speaker": "left",
-		"text": "What will happen if he escapes to the rest of the world...",
-		"name_left": "Scien"
-	},
-	{
-		"left": "scien",
-		"right": "questitucher",
+		"left": "omegaxuirist",
+		"right": "proton",
 		"speaker": "left",
 		"text": "...",
-		"name_left": "Scien"
+		"name_left": "Omega"
 	},
 	{
-		"left": "scien",
-		"right": "questitucher",
+		"text": "[Omega has died]"
+	},
+	{
+		"left": "break",
 		"speaker": "left",
-		"text": "It must be done...",
-		"name_left": "Scien"
+		"text": "Hehehehehe!!!",
+		"name_left": "Break"
 	},
 	{
-		"left": "scien",
-		"right": "questitucher",
+		"left": "break",
 		"speaker": "left",
-		"text": "The Forbidden Ritual of Nation...",
-		"name_left": "Scien"
+		"text": "HEHEHEHEHEHEHEHEHE!!!!!!!",
+		"name_left": "Break"
 	},
 	{
-		"left": "scien",
-		"right": "questitucher",
+		"left": "break",
 		"speaker": "left",
-		"text": "For the sake of the world...",
-		"name_left": "Scien"
+		"text": "THIS POWER!!!!!!",
+		"name_left": "Break"
 	},
 	{
-		"left": "scien",
-		"right": "questitucher",
+		"left": "break",
 		"speaker": "left",
-		"text": "I'm sorry, Proton...",
-		"name_left": "Scien"
+		"text": "WITH THIS POWER...",
+		"name_left": "Break"
 	},
 	{
-		"text": "(Scien places his mask on Proton's corpse)"
+		"text": "[A large explosion detonates around Break]",
+		"bgcolor": "maroon"
 	},
 	{
-		"left": "questitucher",
+		"text": "Break: EVEN I..."
+	},
+	{
+		"text": "[A bright, purple light pierces through the dust of the explosion]",
+		"bgcolor": "dark slate blue"
+	},
+	{
+		"left": "break2",
 		"speaker": "left",
-		"text": "...",
-		"name_left": "Quest"
+		"text": "...CAN WIELD THE HOLY ITUCHER!!!",
+		"name_left": "Break",
+		"battle": "Chapter25a"
 	},
 	{
-		"text": "(Scien glows brightly before fading into the air)",
-		"bgcolor": "yellow"
+		"left": "break2",
+		"speaker": "left",
+		"text": "H... HOW...",
+		"name_left": "Break"
 	},
 	{
-		"text": "[Scien has been defeated]"
+		"left": "break2",
+		"speaker": "left",
+		"text": "HOW COULD I HAVE LOST...",
+		"name_left": "Break"
 	},
 	{
-		"text": "(Proton's body disappears and is replaced by a suit of armor)",
-		"bgcolor": "indigo"
+		"left": "break2",
+		"speaker": "left",
+		"text": "I HAVE THE HOLY ITUCHER... I HAVE THE POWER OF THE GODS...",
+		"name_left": "Break"
 	},
 	{
-		"left": "xuirman",
-		"text": "Proton: ..."
+		"left": "break2",
+		"speaker": "left",
+		"text": "THIS... THIS SHOULDN'T BE POSSIBLE!!!",
+		"name_left": "Break"
 	},
 	{
-		"left": "xuirman",
-		"text": "Proton: Am I... alive?"
+		"text": "(Beams of pulsating purple light start to shoot out of cuts across Break's body)",
+		"bgcolor": "dark violet"
 	},
 	{
-		"left": "xuirman",
-		"right": "questitucher",
-		"speaker": "right",
-		"text": "...",
-		"name_right": "Quest"
+		"left": "break2",
+		"speaker": "left",
+		"text": "NO!!!!! NO!!!!!!!! NO!!!!!!!!!!!!!!!!!!",
+		"name_left": "Break"
 	},
 	{
-		"left": "xuirman",
-		"right": "questitucher",
-		"text": "Proton: Scien..."
-	},
-	{
-		"left": "xuirman",
-		"right": "questitucher",
-		"text": "Proton: Did he..."
-	},
-	{
-		"left": "xuirman",
-		"right": "questitucher",
-		"text": "Proton: ..."
-	},
-	{
-		"left": "xuirman",
-		"right": "questitucher",
-		"text": "Proton: This is for the sake of the world..."
-	},
-	{
-		"left": "xuirman",
-		"right": "questitucher",
-		"text": "Proton: Quest, you must be stopped."
-	},
-	{
-		"text": "(Proton awakens Integer)"
-	},
-	{
-		"text": "[Integer joined your party]"
-	},
-	{
-		"text": "[Quest has left your party]",
-		"battle": "Chapter27a"
-	},
-	{
-		"left": "xuirman",
-		"right": "questitucher",
-		"speaker": "right",
-		"text": "...",
-		"name_right": "Quest"
-	},
-	{
-		"left": "xuirman",
-		"right": "questitucher",
-		"speaker": "right",
-		"text": "Proton...",
-		"name_right": "Quest"
-	},
-	{
-		"left": "xuirman",
-		"right": "questitucher",
-		"speaker": "right",
-		"text": "Stop me...",
-		"name_right": "Quest"
-	},
-	{
-		"left": "xuirman",
-		"right": "questitucher",
-		"text": "Proton: ..."
-	},
-	{
-		"text": "(Proton seals Quest in the Holy Itucher)",
-		"bgcolor": "yellow"
-	},
-	{
-		"left": "xuirman",
-		"text": "Proton: ...",
-		"bgcolor": "dark grey"
-	},
-	{
-		"left": "xuirman",
-		"text": "Proton: There have been many losses throughout our journey..."
-	},
-	{
-		"left": "xuirman",
-		"text": "Proton: It is because of these sacrifices that we are here today..."
-	},
-	{
-		"left": "xuirman",
-		"text": "Proton: We must not forget those who have been lost in the fight for the Holy Itucher..."
-	},
-	{
-		"left": "xuirman",
-		"text": "Proton: ..."
-	},
-	{
-		"text": "(And so the Static Army returned to the Continent of Bipole, successfully retrieving the Holy Itucher...)",
+		"text": "(Break is brightly consumed by the light and disintegrates)",
 		"bgcolor": "black"
+	},
+	{
+		"text": "(The Holy Itucher lies on the ground where Break was)",
+		"bgcolor": "dark gray"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"text": "(Proton picks up the Holy Itucher)"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "Many sacrifices were made on our journey here...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "But it is finally over...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "Our mission is complete, we'll be returning to the Territory of Static.",
+		"name_left": "Proton"
 	},
 	{
 		"left": "proton",
@@ -347,25 +287,25 @@
 	{
 		"left": "tnemecalperi",
 		"speaker": "left",
-		"text": "Not Recruited ",
+		"text": "Survived",
 		"name_left": "Tnemecalper I"
 	},
 	{
 		"left": "tnemecalperii",
 		"speaker": "left",
-		"text": "Not Recruited ",
+		"text": "Survived",
 		"name_left": "Tnemecalper II"
 	},
 	{
 		"left": "tnemecalperiii",
 		"speaker": "left",
-		"text": "Not Recruited ",
+		"text": "Survived",
 		"name_left": "Tnemecalper III"
 	},
 	{
 		"left": "tnemecalperiv",
 		"speaker": "left",
-		"text": "Not Recruited ",
+		"text": "Survived",
 		"name_left": "Tnemecalper IV"
 	},
 	{
@@ -389,7 +329,7 @@
 	{
 		"left": "wob",
 		"speaker": "left",
-		"text": "Not Recruited ",
+		"text": "Survived",
 		"name_left": "Wob"
 	},
 	{
@@ -443,7 +383,7 @@
 	{
 		"left": "repins",
 		"speaker": "left",
-		"text": "Survived",
+		"text": "Not Recruited ",
 		"name_left": "Repins"
 	},
 	{
@@ -581,7 +521,7 @@
 	{
 		"left": "omegaxuirist",
 		"speaker": "left",
-		"text": "Not Recruited ",
+		"text": "Defeated ",
 		"name_left": "Omega"
 	},
 	{
@@ -610,7 +550,7 @@
 	},
 	{
 		"left": "repins_big2",
-		"text": "Repins Blaze: Not Recruited "
+		"text": "Repins Blaze: Survived"
 	},
 	{
 		"left": "ahcem",
@@ -621,17 +561,17 @@
 	{
 		"left": "cayenne",
 		"speaker": "left",
-		"text": "Survived",
+		"text": "Not Recruited ",
 		"name_left": "Cayenne"
 	},
 	{
 		"left": "xuirman",
-		"text": "Proton Xurr: Survived"
+		"text": "Proton Xurr: Not Recruited "
 	},
 	{
 		"left": "integer",
 		"speaker": "left",
-		"text": "Survived",
+		"text": "Not Recruited ",
 		"name_left": "Integer"
 	}
 ]

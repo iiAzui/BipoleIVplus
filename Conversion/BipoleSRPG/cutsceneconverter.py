@@ -2,6 +2,7 @@ import select
 import cutscenes
 import screensetup
 import placeunits
+import units
 
 import os
 import json
@@ -10,11 +11,25 @@ import re
 cutscenes.Chapter = "Prologue1"
 
 # won't export these ones
-skip_chapters = ["Chapter01", "Chapter02", "Chapter04"]
+skip_chapters = ["Chapter01", "Chapter02", "Chapter03"]
 
 prev_index = -1
 
 speaker_pattern = r'([a-zA-Z ?\'])+: '
+
+units.UnitsAlive.append(units.Proton)
+units.UnitsAlive.append(units.Quest)
+units.UnitsRecruited.append(units.Quest)
+units.UnitsAlive.append(units.Scien)
+units.UnitsRecruited.append(units.Scien)
+units.UnitsAlive.append(units.TnemecalperI)
+units.UnitsAlive.append(units.TnemecalperII)
+units.UnitsAlive.append(units.TnemecalperIII)
+units.UnitsAlive.append(units.TnemecalperIV)
+units.UnitsRecruited.append(units.TnemecalperI)
+units.UnitsRecruited.append(units.TnemecalperII)
+units.UnitsRecruited.append(units.TnemecalperIII)
+units.UnitsRecruited.append(units.TnemecalperIV)
 
 def export_chapter(cutscene_name: str):
     global prev_index
@@ -85,7 +100,8 @@ def export_chapter(cutscene_name: str):
             screensetup.current_branches[0]()
             screensetup.current_branches.clear()
 
-        dialogue_lines.append(line)
+        if len(line.keys()) > 0:
+            dialogue_lines.append(line)
 
         max_iters_left -= 1
         if max_iters_left <= 0:

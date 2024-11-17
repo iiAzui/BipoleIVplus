@@ -24,6 +24,102 @@
 		"name_left": "Proton"
 	},
 	{
-		"startchapter": "Chapter10a"
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperi",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Tnemecalper I"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperi",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperi",
+		"text": "(Tnemecalper I starts clapping)"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperi",
+		"speaker": "right",
+		"text": "CLAP CLAP CLAP CLAP CLAP",
+		"name_right": "Tnemecalper I"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperi",
+		"speaker": "left",
+		"text": "Huh?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperi",
+		"speaker": "right",
+		"text": "CLAP CLAP CLAP CLAP CLAP",
+		"name_right": "Tnemecalper I"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperi",
+		"speaker": "right",
+		"text": "MESSAGE RECIEVED! MESSAGE RECIEVED!",
+		"name_right": "Tnemecalper I"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperi",
+		"speaker": "right",
+		"text": " Great job! You've failed the genocide route! I hope you learned the \"power of friendship\"!",
+		"name_right": "Tnemecalper I"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperi",
+		"speaker": "right",
+		"text": "  Now go save the world!                                -The Link",
+		"name_right": "Tnemecalper I"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperi",
+		"speaker": "right",
+		"text": "CLAP CLAP CLAP CLAP CLAP",
+		"name_right": "Tnemecalper I"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperi",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperi",
+		"speaker": "left",
+		"text": "...okay?",
+		"name_left": "Proton"
+	},
+	{
+		"text": "[Proton and Tnemecalper I leveled up!]",
+		"startchapter": "Chapter10a",
+		"instant_level_ups": [
+			{
+				"unit": "Proton",
+				"amount": 1
+			},
+			{
+				"unit": "Tnemecalper I",
+				"amount": 1
+			}
+		]
 	}
 ]

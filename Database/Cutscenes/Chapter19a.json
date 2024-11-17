@@ -22,7 +22,6 @@
 		"text": "Prepare for battle!",
 		"name_left": "Proton"
 	},
-	{},
 	{
 		"left": "proton",
 		"speaker": "left",
@@ -102,7 +101,6 @@
 		"text": "...",
 		"name_left": "Proton"
 	},
-	{},
 	{
 		"text": "[Bonus Conversation Unlocked]"
 	},
@@ -152,7 +150,6 @@
 			}
 		]
 	},
-	{},
 	{
 		"text": "[Xuirist Cavern]"
 	},

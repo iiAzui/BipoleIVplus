@@ -49,20 +49,27 @@
 	{
 		"left": "proton",
 		"right": "erif",
-		"text": "???: And I am Erif Blaze of the Elemental Offense Squad."
+		"text": "???: And I am Eri..."
+	},
+	{
+		"left": "wob",
+		"right": "erif",
+		"speaker": "left",
+		"text": "Hey Erif.",
+		"name_left": "Wob"
+	},
+	{
+		"left": "wob",
+		"right": "erif",
+		"speaker": "left",
+		"text": "Why are YOU here?",
+		"name_left": "Wob"
 	},
 	{
 		"left": "proton",
 		"right": "erif",
 		"speaker": "right",
-		"text": "We have been assigned to assist you on your voyage to the Nolavillian Continent.",
-		"name_right": "Erif"
-	},
-	{
-		"left": "proton",
-		"right": "erif",
-		"speaker": "right",
-		"text": "However, due to another assignment going on, only one of us can help you.",
+		"text": "Proton, I do not trust my brother to be safe on his own, please allow me to go with him.",
 		"name_right": "Erif"
 	},
 	{

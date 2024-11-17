@@ -22,7 +22,6 @@
 		"text": "Good thing it'll be your last.",
 		"name_left": "Break"
 	},
-	{},
 	{
 		"left": "break",
 		"speaker": "left",
@@ -128,10 +127,6 @@
 		"text": "The final sector... that sounds a little intimidating...",
 		"name_left": "Romra"
 	},
-	{},
-	{},
-	{},
-	{},
 	{
 		"left": "lacirtcele",
 		"speaker": "left",
@@ -150,7 +145,6 @@
 		"text": "I sure didn't think I'd end up here after leaving Sine.",
 		"name_left": "Healia"
 	},
-	{},
 	{
 		"left": "bladen",
 		"speaker": "left",
@@ -163,16 +157,12 @@
 		"text": "So much for a solo mission.",
 		"name_left": "Wodahs"
 	},
-	{},
 	{
 		"left": "fael",
 		"speaker": "left",
 		"text": "So we're finally here...",
 		"name_left": "Fael"
 	},
-	{},
-	{},
-	{},
 	{
 		"left": "repins",
 		"speaker": "left",
@@ -185,23 +175,18 @@
 		"text": "We must bring an end to this destruction.",
 		"name_left": "Relaeh"
 	},
-	{},
 	{
 		"left": "lias",
 		"speaker": "left",
 		"text": "I've spent too much time at sea... but now that I'm here, I might as well help save the world.",
 		"name_left": "Lias"
 	},
-	{},
-	{},
-	{},
 	{
 		"left": "elbon",
 		"speaker": "left",
 		"text": "Ugh, must a noble as I do something like this?",
 		"name_left": "Elbon"
 	},
-	{},
 	{
 		"left": "xuirventh",
 		"speaker": "left",
@@ -214,7 +199,6 @@
 		"text": "We've returned to where it all begun. Now it's time to end it.",
 		"name_left": "Xuirfth"
 	},
-	{},
 	{
 		"left": "dliug",
 		"speaker": "left",
@@ -233,7 +217,6 @@
 		"text": "Will this finally end the cycle of destruction?",
 		"name_left": "Yranecrem"
 	},
-	{},
 	{
 		"left": "box",
 		"speaker": "left",
@@ -246,26 +229,18 @@
 		"text": "Hahahaha! Let's see how they fair against me!",
 		"name_left": "NOTOS"
 	},
-	{},
-	{},
-	{},
-	{},
-	{},
 	{
 		"left": "fiyghtrr",
 		"speaker": "left",
 		"text": "After this, we'll finally get revenge for what they've done to Nation!",
 		"name_left": "Fiyghtrr"
 	},
-	{},
-	{},
 	{
 		"left": "xuirurth",
 		"speaker": "left",
 		"text": "This battle is for Xuirventh, Xuirfth, and all of the the Xuirs that suffered by Death Pepper's rule!",
 		"name_left": "Xuirurth"
 	},
-	{},
 	{
 		"left": "ahcem",
 		"speaker": "left",

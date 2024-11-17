@@ -17,8 +17,302 @@
 		"name_left": "Proton",
 		"battle": "Chapter05"
 	},
-	{},
 	{
-		"startchapter": "Chapter06"
+		"left": "tnemecalperiii",
+		"right": "proton",
+		"speaker": "left",
+		"text": "ALLY DETECTED! ALLY DETECTED!",
+		"name_left": "Tnemecalper III"
+	},
+	{
+		"left": "tnemecalperiii",
+		"right": "proton",
+		"speaker": "right",
+		"text": "Huh?",
+		"name_right": "Proton"
+	},
+	{
+		"left": "tnemecalperiii",
+		"right": "proton",
+		"speaker": "left",
+		"text": "ALLY DETECTED! ALLY DETECTED!",
+		"name_left": "Tnemecalper III"
+	},
+	{
+		"left": "tnemecalperiii",
+		"right": "proton",
+		"speaker": "right",
+		"text": "Am I supposed to find a new ally?",
+		"name_right": "Proton"
+	},
+	{
+		"left": "tnemecalperiii",
+		"right": "proton",
+		"text": "(Tnemecalper III points towards a village)"
+	},
+	{
+		"left": "tnemecalperiii",
+		"right": "proton",
+		"speaker": "right",
+		"text": "I'm supposed to go there?",
+		"name_right": "Proton"
+	},
+	{
+		"left": "tnemecalperiii",
+		"right": "proton",
+		"speaker": "left",
+		"text": "ALLY DETECTED! ALLY DETECTED!",
+		"name_left": "Tnemecalper III"
+	},
+	{
+		"left": "tnemecalperiii",
+		"right": "proton",
+		"speaker": "right",
+		"text": "Sure.",
+		"name_right": "Proton"
+	},
+	{
+		"text": "[Obscure Village, Territory of Cos]",
+		"bgcolor": "grey"
+	},
+	{
+		"left": "wob",
+		"text": "???: I'm bored..."
+	},
+	{
+		"left": "wob",
+		"text": "???: Maybe I should walk to another random village..."
+	},
+	{
+		"left": "wob",
+		"text": "???: ..."
+	},
+	{
+		"left": "wob",
+		"text": "???: Oh, it looks like there's a group of people entering the village."
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperiii",
+		"speaker": "left",
+		"text": "So... what do I do now that I'm here at the village?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"text": "???: Hey! You there!"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"text": "???: You guys are from the army, right?"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"speaker": "left",
+		"text": "Yeah.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"text": "???: Can I join you guys on your mission?"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"speaker": "left",
+		"text": "Aren't you just a kid?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"text": "???: I'm not a kid, I'm like... 12."
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"text": "???: I'm Wob, and I'm going to be part of the Static army next year! But the wait is so boring that I started walking to random villages! So let me join you guys!"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"speaker": "right",
+		"text": "I feel like an NPC...",
+		"name_right": "Wob"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"speaker": "left",
+		"text": "Wait, you're joining the Static army next year? Doesn't that mean you live in Static?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"speaker": "right",
+		"text": "Yeah, but I got bored and walked to this random village.",
+		"name_right": "Wob"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"speaker": "left",
+		"text": "These roads are dangerous, how are you unharmed?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"speaker": "right",
+		"text": "I know how to defend myself, my sister taught me how to use a bow.",
+		"name_right": "Wob"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"speaker": "left",
+		"text": "You seem more competent than I originally thought.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"speaker": "right",
+		"text": "Yeah! Let me join your mission!",
+		"name_right": "Wob"
+	},
+	{
+		"text": "[Recruit Wob?] (Q) Recruit (W) Do not recruit"
+	},
+	{
+		"left": "proton",
+		"right": "wob",
+		"speaker": "right",
+		"text": "Yes! Let's go!",
+		"name_right": "Wob"
+	},
+	{
+		"text": "[Wob has joined your party]"
+	},
+	{
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton",
+		"bgcolor": "green"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "left",
+		"text": "Hello?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "right",
+		"text": "This is a greeting.",
+		"name_right": "Tnemecalper II"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "right",
+		"text": "This is a message.",
+		"name_right": "Tnemecalper II"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "left",
+		"text": "Do you know how to... converse?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "right",
+		"text": "This is a message:",
+		"name_right": "Tnemecalper II"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "right",
+		"text": "Congratulations! Keep keeping your allies alive!                                    -The Link",
+		"name_right": "Tnemecalper II"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "left",
+		"text": "Are you even alive?",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "right",
+		"text": "This is a explanation:",
+		"name_right": "Tnemecalper II"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "right",
+		"text": "   explanation",
+		"name_right": "Tnemecalper II"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "left",
+		"text": "This is:",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperii",
+		"speaker": "left",
+		"text": "                 depressing.",
+		"name_left": "Proton"
+	},
+	{
+		"text": "[Proton and Tnemecalper II leveled up!]",
+		"startchapter": "Chapter06",
+		"instant_level_ups": [
+			{
+				"unit": "Proton",
+				"amount": 1
+			},
+			{
+				"unit": "Tnemecalper II",
+				"amount": 1
+			}
+		]
 	}
 ]

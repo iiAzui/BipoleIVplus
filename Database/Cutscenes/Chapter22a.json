@@ -14,7 +14,7 @@
 		"left": "romra",
 		"right": "tnemecalperii",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Romra"
 	},
 	{
@@ -28,7 +28,7 @@
 		"left": "damagein",
 		"right": "wob",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Damagein"
 	},
 	{
@@ -49,7 +49,7 @@
 		"left": "vruh",
 		"right": "repins",
 		"speaker": "left",
-		"text": "Survived",
+		"text": "Not Recruited",
 		"name_left": "Vruh"
 	},
 	{
@@ -126,7 +126,263 @@
 		"name_left": "Proton",
 		"bgcolor": "dim gray"
 	},
-	{},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "Wait, there's someone at the enterance.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "repins_big2",
+		"text": "???: Is someone there?"
+	},
+	{
+		"left": "repins_big2",
+		"text": "???: Hm... Are they here to get the Itucher?"
+	},
+	{
+		"left": "repins_big2",
+		"text": "???: ..."
+	},
+	{
+		"left": "wob",
+		"speaker": "left",
+		"text": "Wait, is that..",
+		"name_left": "Wob"
+	},
+	{
+		"left": "wob",
+		"speaker": "left",
+		"text": "No, that's not possible...",
+		"name_left": "Wob"
+	},
+	{
+		"left": "proton",
+		"speaker": "left",
+		"text": "You there, get out of the way. We're here to get the Holy Itucher but I'd prefer to minimize the violence.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "repins_big2",
+		"text": "???: Sorry, that's something that I can't do."
+	},
+	{
+		"left": "proton",
+		"right": "repins_big2",
+		"text": "???: The sacrifices that I've made to come here... all of these years... I'm not going to be stopped by the likes of you."
+	},
+	{
+		"left": "proton",
+		"right": "repins_big2",
+		"text": "???: I, Repins Blaze, shall wield the Holy Itucher."
+	},
+	{
+		"left": "proton",
+		"right": "repins_big2",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "left",
+		"text": "Repins?",
+		"name_left": "Wob"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "Wob? Why is he here?",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "left",
+		"text": "Repins? Aren't you... dead?",
+		"name_left": "Wob"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "(This group, I remember it now... Wob was there at the Bipole Sea...)",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "I've become a villain, Wob...",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "The things that I've done, they truly are selfish.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "So forgive me for what I'm going to do...",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "left",
+		"text": "What are you talking about?",
+		"name_left": "Wob"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "left",
+		"text": "I don't know what you did or how you're alive, but fighting here won't help anything.",
+		"name_left": "Wob"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "left",
+		"text": "You won't be able to get the Itucher on your own, the research center is too secure for that.",
+		"name_left": "Wob"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "left",
+		"text": "You can work with us. We can get the Itucher and go back to Static.",
+		"name_left": "Wob"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "I want this to be over.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "I want to go back to when we were all alive, back before the genocide.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "But that's not possible.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "Wob, what will happen after you get the Itucher?",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "I wanted to rebuild Quad and live a peaceful life again, but that's not possible anymore.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "Even if I get the Itucher own my own... you guys won't stop, will you?",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "I won't be able to win a battle against your army...",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "I can't kill you, Wob.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "Everything that I've done, it really was useless, wasn't it?",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "I give up, I've lost.",
+		"name_right": "Repins"
+	},
+	{
+		"left": "wob",
+		"right": "repins_big2",
+		"speaker": "right",
+		"text": "And with my now failed existence, I'll help you.",
+		"name_right": "Repins"
+	},
+	{
+		"text": "[Repins joined your party]"
+	},
 	{
 		"text": "(...)"
 	},
@@ -151,11 +407,6 @@
 		"left": "if",
 		"text": "???: Well, let's see how they do against us."
 	},
-	{},
-	{},
-	{},
-	{},
-	{},
 	{
 		"text": "[Bonus Conversation Unlocked]"
 	},

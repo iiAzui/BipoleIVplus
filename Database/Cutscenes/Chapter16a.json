@@ -14,7 +14,7 @@
 		"left": "romra",
 		"right": "tnemecalperii",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Romra"
 	},
 	{
@@ -28,7 +28,7 @@
 		"left": "damagein",
 		"right": "wob",
 		"speaker": "left",
-		"text": "Not Recruited",
+		"text": "Survived",
 		"name_left": "Damagein"
 	},
 	{
@@ -49,7 +49,7 @@
 		"left": "vruh",
 		"right": "repins",
 		"speaker": "left",
-		"text": "Survived",
+		"text": "Not Recruited",
 		"name_left": "Vruh"
 	},
 	{
@@ -313,7 +313,6 @@
 	{
 		"text": "[Rethgif and Eg have joined your party]"
 	},
-	{},
 	{
 		"text": "[Bonus Conversation Unlocked]"
 	},
@@ -393,7 +392,6 @@
 			}
 		]
 	},
-	{},
 	{
 		"text": "...",
 		"bgcolor": "black"

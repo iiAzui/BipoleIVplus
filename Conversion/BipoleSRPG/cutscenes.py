@@ -97,8 +97,6 @@ def ClearInputs():
     Winput = False
     Einput = False
 
-
-
 def EndingCharacter(unit,how1,how2,how3):
     global CutsceneIndex
     CutsceneIndex += 1
@@ -11341,7 +11339,7 @@ def Cutscene():
                     CutsceneIndex += 1
                     
                 elif CutsceneIndex == 68:
-                    Text2("[Repins joined your party]")
+                    Text3("[Repins joined your party]")
                     units.UnitsAlive.append(units.Repins2)
                     units.UnitsRecruited.append(units.Repins2)
                     CutsceneIndex += 1

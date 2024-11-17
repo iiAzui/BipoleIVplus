@@ -13,16 +13,12 @@
 	{
 		"left": "proton",
 		"right": "lacirtcele",
-		"text": "Wha' suuup?",
-		"speaker": "right",
-		"name_right": "???"
+		"text": "???: Wha' suuup?"
 	},
 	{
 		"left": "proton",
 		"right": "lacirtcele",
-		"text": "It's me, Lacirtcele Sus of the Elemental Offense Squad.",
-		"speaker": "right",
-		"name_right": "Lacirtcele"
+		"text": "???: It's me, Lacirtcele Sus of the Elemental Offense Squad."
 	},
 	{
 		"left": "proton",
@@ -32,28 +28,17 @@
 		"name_right": "Lacirtcele"
 	},
 	{
-		"recruitment_choice": "Lacirtcele",
-		"true": [
-			{
-				"text": "Lacirtcele: Like... poggers, bruh.",
-				"left": "proton",
-				"right": "lacirtcele",
-				"speaker": "right",
-				"name_right": "Lacirtcele"
-			},
-			{
-				"recruit": ["Lacirtcele"]
-			}
-		],
-		"false": [
-			{
-				"left": "proton",
-				"right": "lacirtcele",
-				"speaker": "right",
-				"text": "No problem man, see y'all later.",
-				"name_right": "Lacirtcele"
-			}
-		]
+		"text": "[Recruit Lacirtcele?] (Q) Recruit (W) Do not recruit"
+	},
+	{
+		"left": "proton",
+		"right": "lacirtcele",
+		"speaker": "right",
+		"text": "Like... poggers, bruh.",
+		"name_right": "Lacirtcele"
+	},
+	{
+		"text": "[Lacirtcele has joined your party]"
 	},
 	{
 		"left": "proton",
@@ -71,6 +56,180 @@
 		"speaker": "left",
 		"text": "Everyone get prepared, we should be reaching Sine soon.",
 		"name_left": "Proton"
+	},
+	{
+		"condition": {
+			"units_recruited": ["Quest", "Romra"]
+		},
+		"true": [
+			{
+				"bonus_convo_start": true,
+				"left": "romra",
+				"right": "quest",
+				"speaker": "left",
+				"text": "Hey.",
+				"name_left": "Romra"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "Hello.",
+				"name_right": "Quest"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "left",
+				"text": "Can I ask you a question?",
+				"name_left": "Romra"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "Already have, but go ahead.",
+				"name_right": "Quest"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "left",
+				"text": "What are you?",
+				"name_left": "Romra"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "What do you mean?",
+				"name_right": "Quest"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "left",
+				"text": "I know that Scien is the head of the Knights of Static and that Lacirtcele is a member of the Elemental Offense Sqaud...",
+				"name_left": "Romra"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "left",
+				"text": "...and I was wondering if you had a special rank, since you were requested by the king himself.",
+				"name_left": "Romra"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "Of course I do!",
+				"name_right": "Quest"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "I am the High Mage of the Static Castle!",
+				"name_right": "Quest"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "And I am also the Head of Artifact Research in the Territory of Static!",
+				"name_right": "Quest"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "I doubt anyone in the land of Bipole knows more about the Artifacts than I do!",
+				"name_right": "Quest"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "left",
+				"text": "Artifacts?",
+				"name_left": "Romra"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "Yes, most of the general population knows not of their existence.",
+				"name_right": "Quest"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "They are powerful relics created by the Gods to guide us mortals.",
+				"name_right": "Quest"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "Though we do not know where any of them are now, they are hiding somewhere, waiting for someone to discover them!",
+				"name_right": "Quest"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "Surely you've heard of the legends about the Holy Itucher?",
+				"name_right": "Quest"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "left",
+				"text": "Yeah, I've heard of it.",
+				"name_left": "Romra"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "According to my research, the Holy Itucher exists, and it is located somewhere on this continent!",
+				"name_right": "Quest"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "left",
+				"text": "What would you do if you ever found it?",
+				"name_left": "Romra"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "Of course, I would analyze it to it's fullest extent.",
+				"name_right": "Quest"
+			},
+			{
+				"left": "romra",
+				"right": "quest",
+				"speaker": "right",
+				"text": "Although, I believe it is inevitable that I would fall into the temptation of trying out its powers.",
+				"name_right": "Quest"
+			},
+			{
+				"instant_level_ups": [
+					{
+						"unit": "Quest",
+						"amount": 1
+					},
+					{
+						"unit": "Romra",
+						"amount": 1
+					}
+				]
+			}
+		]
 	},
 	{
 		"startchapter": "Chapter04"

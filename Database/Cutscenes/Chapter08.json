@@ -312,20 +312,18 @@
 		"text": "Nolavillia, I wonder what it's like...",
 		"name_left": "Healia"
 	},
-	{},
+	{
+		"left": "wob",
+		"speaker": "left",
+		"text": "Nolavillia? Sounds fun, I'm going.",
+		"name_left": "Wob"
+	},
 	{
 		"left": "wodahs",
 		"speaker": "left",
 		"text": "Guess I'm going to Nolavillia now.",
 		"name_left": "Wodahs"
 	},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
 	{
 		"left": "proton",
 		"speaker": "left",

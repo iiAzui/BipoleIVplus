@@ -16,9 +16,231 @@
 		"left": "elif",
 		"text": "???: So behold! The founder of the Sci-Triptych Sectoral Board: I, Elif!"
 	},
-	{},
-	{},
-	{},
+	{
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "omegaxuirist",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Proton"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Proton...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "What have I done...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Proton"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "I... I killed them...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "So... many...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "And... for what?",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "They aren't even here any more...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "It...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Was it...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "All pointless?",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Hah...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "It's so stupid...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "How...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Why...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "I don't even hate this world anymore...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "After all... what is there left to hate?",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Disappointment...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "No matter what... it never ends well...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "I thought I could at least protect them...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Why...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "I just...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "I didn't even protect them...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "I just... made it worse...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Would it have been the right choice...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "...to let them be destroyed ealier to save the others?",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Proton...",
+		"name_left": "Omega"
+	},
+	{
+		"left": "omegaxuirist",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Did I make the right choice?",
+		"name_left": "Omega"
+	},
+	{
+		"text": "[Omega and Proton leveled up!]",
+		"instant_level_ups": [
+			{
+				"unit": "Omega",
+				"amount": 4
+			},
+			{
+				"unit": "Proton",
+				"amount": 4
+			}
+		]
+	},
 	{
 		"text": "(...)",
 		"startchapter": "Chapter24a"

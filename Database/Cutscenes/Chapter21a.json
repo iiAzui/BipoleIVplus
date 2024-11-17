@@ -17,7 +17,6 @@
 		"text": "It seems there is another Xuirist camp here, but we must proceed.",
 		"name_left": "Proton"
 	},
-	{},
 	{
 		"left": "break",
 		"speaker": "left",
@@ -73,9 +72,52 @@
 		"name_left": "Proton"
 	},
 	{
-		"left": "proton",
+		"left": "wob",
+		"right": "proton",
+		"speaker": "right",
+		"text": "What is it?",
+		"name_right": "Proton"
+	},
+	{
+		"left": "wob",
+		"right": "proton",
+		"speaker": "left",
+		"text": "He isn't like the other Xuirists, he's not evil.",
+		"name_left": "Wob"
+	},
+	{
+		"left": "wob",
+		"right": "proton",
+		"speaker": "left",
+		"text": "Don't you he could work with us to help retrieve the Itucher and live a better life?",
+		"name_left": "Wob"
+	},
+	{
+		"text": "[Recruit Omega] (Q) Recruit (W) Do not recruit"
+	},
+	{
+		"left": "wob",
 		"right": "omegaxuirist",
-		"text": "(Proton executes Omega)"
+		"speaker": "right",
+		"text": "What reason do I have to keep living? Everything I've fought for is gone.",
+		"name_right": "Omega"
+	},
+	{
+		"left": "wob",
+		"right": "omegaxuirist",
+		"speaker": "left",
+		"text": "I've almost lost everything, but I've found purpose in life. If you don't at least try, you'll never find out.",
+		"name_left": "Wob"
+	},
+	{
+		"left": "wob",
+		"right": "omegaxuirist",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Omega"
+	},
+	{
+		"text": "[Omega has joined your party]"
 	},
 	{
 		"left": "proton",
@@ -162,8 +204,6 @@
 	{
 		"text": "[Fiyghtrr has joined your party]"
 	},
-	{},
-	{},
 	{
 		"left": "proton",
 		"right": "xuirurth",
@@ -244,144 +284,6 @@
 	{
 		"text": "[Xuirurth joined your party!]"
 	},
-	{},
-	{},
-	{
-		"text": "[Bonus Conversation Unlocked]"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "left",
-		"text": "So, we're finally going to get the Itucher...",
-		"name_left": "Wodahs"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "left",
-		"text": "I thought you would've been more excited.",
-		"name_left": "Wodahs"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "right",
-		"text": "...",
-		"name_right": "Repins"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "right",
-		"text": "I'm still processing the fact it's actually happening...",
-		"name_right": "Repins"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "right",
-		"text": "And what I'll do once I return home...",
-		"name_right": "Repins"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "left",
-		"text": "Where is your home anyways? You've never told me where you're from.",
-		"name_left": "Wodahs"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "right",
-		"text": "I'm from Quad, but I moved to Static after the genocide.",
-		"name_right": "Repins"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "right",
-		"text": "I haven't been to either in years, though.",
-		"name_right": "Repins"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "left",
-		"text": "You should come back to Static every once in a while. If you want, you could probably join with a good rank the army since you've helped us get the Itucher.",
-		"name_left": "Wodahs"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "left",
-		"text": "Probably won't be able to join the EOS though, Erif's already got the fire element covered and probably won't retire anytime soon.",
-		"name_left": "Wodahs"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "right",
-		"text": "Erif?",
-		"name_right": "Repins"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "left",
-		"text": "Huh, you know her?",
-		"name_left": "Wodahs"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "left",
-		"text": "Red hair, sword user, literally hot, won't stop talking about the Quad Genocide, has two brothers...",
-		"name_left": "Wodahs"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "right",
-		"text": "Yeah, I've met her before.",
-		"name_right": "Repins"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "left",
-		"text": "Hmm... that means you've got ties to multiple EOS members.",
-		"name_left": "Wodahs"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "left",
-		"text": "You could definitely get some promotions in the army with that.",
-		"name_left": "Wodahs"
-	},
-	{
-		"left": "wodahs",
-		"right": "repins",
-		"speaker": "right",
-		"text": "...",
-		"name_right": "Repins"
-	},
-	{
-		"text": "[Wodahs and Repins leveled up!]",
-		"instant_level_ups": [
-			{
-				"unit": "Wodahs",
-				"amount": 3
-			},
-			{
-				"unit": "Repins",
-				"amount": 3
-			}
-		]
-	},
-	{},
 	{
 		"left": "proton",
 		"speaker": "left",

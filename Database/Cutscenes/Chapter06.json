@@ -160,6 +160,85 @@
 		"battle": "Chapter06"
 	},
 	{
-		"startchapter": "Chapter07"
+		"text": "[Bonus Conversation Unlocked]"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperiv",
+		"speaker": "left",
+		"text": "Greetings.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperiv",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Tnemecalper IV"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperiv",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Proton"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperiv",
+		"speaker": "right",
+		"text": "...",
+		"name_right": "Tnemecalper IV"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperiv",
+		"speaker": "right",
+		"text": "360[N/A]SCOPE",
+		"name_right": "Tnemecalper IV"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperiv",
+		"speaker": "right",
+		"text": ":pogchamp:",
+		"name_right": "Tnemecalper IV"
+	},
+	{
+		"left": "proton",
+		"right": "tnemecalperiv",
+		"speaker": "left",
+		"text": "Okay I'm not doing this.",
+		"name_left": "Proton"
+	},
+	{
+		"left": "tnemecalperiv",
+		"text": "(Proton walks away)"
+	},
+	{
+		"left": "tnemecalperiv",
+		"speaker": "left",
+		"text": "...",
+		"name_left": "Tnemecalper IV"
+	},
+	{
+		"left": "tnemecalperiv",
+		"speaker": "left",
+		"text": "gg no re",
+		"name_left": "Tnemecalper IV"
+	},
+	{
+		"text": "[Proton and Tnemecalper IV leveled up!]",
+		"startchapter": "Chapter07",
+		"instant_level_ups": [
+			{
+				"unit": "Proton",
+				"amount": 1
+			},
+			{
+				"unit": "Tnemecalper IV",
+				"amount": 1
+			}
+		]
 	}
 ]

@@ -435,7 +435,6 @@
 			}
 		]
 	},
-	{},
 	{
 		"text": "[Bonus Conversation Unlocked]"
 	},
@@ -494,8 +493,6 @@
 			}
 		]
 	},
-	{},
-	{},
 	{
 		"startchapter": "Chapter21a"
 	}
